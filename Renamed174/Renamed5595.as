@@ -28,7 +28,7 @@ package Renamed4312
       
       public static const Renamed5599:int = -471022967;
       
-      public static const Renamed5364:int = 1211186637;
+      public static const CodecRegisterer4:int = 1211186637;
       
       public static const Renamed5601:int = -1968445033;
       

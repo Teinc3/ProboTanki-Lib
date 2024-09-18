@@ -1,6 +1,6 @@
 package Renamed206
 {
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    
    public class Renamed6103
    {
@@ -8,7 +8,7 @@ package Renamed206
       
       private var _name:String;
       
-      private var _position:Renamed603;
+      private var _position:3DPositionVector;
       
       private var _score:Number;
       
@@ -18,7 +18,7 @@ package Renamed206
       
       private var Renamed6105:Vector.<String>;
       
-      public function Renamed6103(param1:int = 0, param2:String = null, param3:Renamed603 = null, param4:Number = 0, param5:Number = 0, param6:Renamed5125 = null, param7:Vector.<String> = null)
+      public function Renamed6103(param1:int = 0, param2:String = null, param3:3DPositionVector = null, param4:Number = 0, param5:Number = 0, param6:Renamed5125 = null, param7:Vector.<String> = null)
       {
          super();
          this._id = param1;
@@ -50,12 +50,12 @@ package Renamed206
          this._name = param1;
       }
       
-      public function get position() : Renamed603
+      public function get position() : 3DPositionVector
       {
          return this._position;
       }
       
-      public function set position(param1:Renamed603) : void
+      public function set position(param1:3DPositionVector) : void
       {
          this._position = param1;
       }

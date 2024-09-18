@@ -6,7 +6,7 @@ package scpacker.networking.protocol.codec.custom
    import alternativa.osgi.service.clientlog.IClientLog;
    import flash.utils.ByteArray;
    import platform.client.fp10.core.resource.types.SoundResource;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class CodecDominationSounds implements ICodec
    {
@@ -32,7 +32,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed10681:ICodec;
       
-      public function CodecDominationSounds(param1:Renamed536)
+      public function CodecDominationSounds(param1:CodecRegisterer)
       {
          super();
          this.Renamed10672 = param1.getCodec("scpacker.networking.protocol.codec.custom.ResourceGetterCodec");

@@ -6,7 +6,7 @@ package scpacker.networking.protocol.codec.custom
    import flash.utils.ByteArray;
    import projects.tanks.client.battleservice.model.statistics.Renamed2737;
    import projects.tanks.client.users.services.chatmoderator.ChatModeratorLevel;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class CodecUserInfo implements ICodec
    {
@@ -26,7 +26,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed10576:ICodec;
       
-      public function CodecUserInfo(param1:Renamed536)
+      public function CodecUserInfo(param1:CodecRegisterer)
       {
          super();
          this.Renamed10627 = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecChatModeratorLevel");

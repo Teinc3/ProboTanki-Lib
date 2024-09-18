@@ -39,7 +39,7 @@ package Renamed50
       
       private static const Renamed9796:Renamed922 = new Renamed922();
       
-      private static const Renamed3116:Vector3 = new Vector3();
+      private static const localHitPoint:Vector3 = new Vector3();
       
       private static const Renamed7200:Vector3 = new Vector3();
       
@@ -334,9 +334,9 @@ package Renamed50
       {
          var _loc1_:Tank = this.currentTarget.tank;
          var _loc2_:Tank = this.Renamed3110.Renamed696().tank;
-         Renamed3116.copy(this.Renamed9798.position);
-         Renamed668.globalToLocal(this.currentTarget,Renamed3116);
-         this.effects.Renamed9811(Renamed9802(_loc2_,_loc1_),_loc1_,Renamed3116);
+         localHitPoint.copy(this.Renamed9798.position);
+         Renamed668.globalToLocal(this.currentTarget,localHitPoint);
+         this.effects.Renamed9811(Renamed9802(_loc2_,_loc1_),_loc1_,localHitPoint);
       }
       
       private function Renamed9813(param1:int) : void

@@ -3,7 +3,7 @@ package Renamed77
    import Renamed7273.Renamed7289;
    import Renamed7273.Renamed7296;
    import Renamed7273.Renamed7304;
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import alternativa.object.ClientObject;
    import alternativa.osgi.OSGi;
    import alternativa.protocol.ICodec;
@@ -50,7 +50,7 @@ package Renamed77
          this.protocolBuffer = new ProtocolBuffer(_loc2_,_loc2_,new OptionalMap());
       }
       
-      public function Renamed7192(param1:ClientObject, param2:Renamed603) : void
+      public function Renamed7192(param1:ClientObject, param2:3DPositionVector) : void
       {
          this.network.send(new Renamed7304(param1.id,param2));
       }

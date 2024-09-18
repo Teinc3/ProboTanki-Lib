@@ -1,6 +1,6 @@
 package alternativa.tanks.models.tank
 {
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import alternativa.tanks.battle.Renamed768;
    import alternativa.tanks.battle.objects.tank.Tank;
    import flash.utils.getTimer;
@@ -13,9 +13,9 @@ package alternativa.tanks.models.tank
       
       private var Renamed2724:uint;
       
-      private var Renamed2725:Renamed603;
+      private var Renamed2725:3DPositionVector;
       
-      private var Renamed2726:Renamed603;
+      private var Renamed2726:3DPositionVector;
       
       private var Renamed2727:int;
       
@@ -40,7 +40,7 @@ package alternativa.tanks.models.tank
          }
       }
       
-      private function Renamed2729() : Renamed603
+      private function Renamed2729() : 3DPositionVector
       {
          return this.Renamed2725;
       }
@@ -59,7 +59,7 @@ package alternativa.tanks.models.tank
          return false;
       }
       
-      public function Renamed2734(param1:Renamed603, param2:Renamed603) : void
+      public function Renamed2734(param1:3DPositionVector, param2:3DPositionVector) : void
       {
          this.Renamed2724 = getTimer();
          this.Renamed2725 = param1;

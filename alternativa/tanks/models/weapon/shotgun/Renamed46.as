@@ -21,7 +21,7 @@ package alternativa.tanks.models.weapon.shotgun
    import alternativa.tanks.models.weapon.Renamed43;
    import alternativa.tanks.models.weapon.Renamed3046;
    import Renamed58.Renamed59;
-   import Renamed349.Renamed3105;
+   import Renamed349.TargetHitInfo;
    import Renamed74.Renamed3436;
    import scpacker.tanks.WeaponsManager;
    
@@ -60,7 +60,7 @@ package alternativa.tanks.models.weapon.shotgun
          return new Renamed2720();
       }
       
-      public function Renamed3444(param1:ClientObject, param2:Vector3, param3:Vector.<Renamed3105>) : void
+      public function Renamed3444(param1:ClientObject, param2:Vector3, param3:Vector.<TargetHitInfo>) : void
       {
          this.Renamed3445(param1);
          this.Renamed3446(param1,param3);
@@ -91,10 +91,10 @@ package alternativa.tanks.models.weapon.shotgun
          Renamed921.Renamed1055(_loc3_.Renamed1020(),_loc3_.Renamed1071(),this.Renamed3077);
       }
       
-      private function Renamed3446(param1:ClientObject, param2:Vector.<Renamed3105>) : void
+      private function Renamed3446(param1:ClientObject, param2:Vector.<TargetHitInfo>) : void
       {
          var _loc13_:Tank = null;
-         var _loc3_:Renamed3105 = null;
+         var _loc3_:TargetHitInfo = null;
          var _loc4_:Renamed2407 = null;
          var _loc5_:Tank = null;
          var _loc6_:Vector3 = null;
@@ -113,10 +113,10 @@ package alternativa.tanks.models.weapon.shotgun
          for each(_loc3_ in param2)
          {
             _loc5_ = _loc4_.getTankData(_loc3_.target).tank;
-            _loc6_ = Renamed668.Renamed681(_loc3_.Renamed3116);
+            _loc6_ = Renamed668.Renamed681(_loc3_.localHitPoint);
             Renamed668.localToGlobal(_loc5_.Renamed696(),_loc6_);
             _loc7_ = _loc11_.Renamed3447(_loc6_.distanceTo(this.Renamed3077.Renamed689));
-            _loc5_.Renamed1029(_loc6_,Renamed668.Renamed681(_loc3_.direction),_loc10_ * _loc7_ * _loc3_.Renamed3448);
+            _loc5_.Renamed1029(_loc6_,Renamed668.Renamed681(_loc3_.direction),_loc10_ * _loc7_ * _loc3_.numberHits);
          }
       }
    }

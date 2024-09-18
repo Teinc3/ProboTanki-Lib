@@ -215,8 +215,8 @@ package Renamed4312
             case Renamed5595.Renamed5597:
                this.initMarket(param1);
                break;
-            case Renamed5595.Renamed5364:
-               this.Renamed5365();
+            case Renamed5595.CodecRegisterer4:
+               this.CodecRegisterer5();
                break;
             case Renamed5595.Renamed5598:
                this.initMounted(param1);
@@ -404,7 +404,7 @@ package Renamed4312
          Model.popObject();
       }
       
-      private function Renamed5365() : void
+      private function CodecRegisterer5() : void
       {
          var _loc2_:IGameObject = null;
          var _loc3_:IGameObject = null;

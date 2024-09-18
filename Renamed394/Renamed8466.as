@@ -1,6 +1,6 @@
 package Renamed394
 {
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import Renamed489.Renamed8460;
    import Renamed489.Renamed8461;
    import alternativa.math.Vector3;
@@ -8,7 +8,7 @@ package Renamed394
    import alternativa.tanks.battle.events.Renamed869;
    import alternativa.tanks.battle.events.BattleEventDispatcher;
    import alternativa.tanks.battle.objects.tank.Tank;
-   import Renamed349.Renamed3105;
+   import Renamed349.TargetHitInfo;
    import projects.tanks.client.battlefield.models.tankparts.weapons.common.Renamed667;
    
    public class Renamed4690 extends Renamed8461 implements Renamed8460, Renamed3074
@@ -34,7 +34,7 @@ package Renamed394
       }
       
       [Obfuscation(rename="false")]
-      public function Renamed3114(param1:Renamed603, param2:Vector.<Renamed3105>) : void
+      public function Renamed3114(param1:3DPositionVector, param2:Vector.<TargetHitInfo>) : void
       {
          this.Renamed8462().Renamed3125(Renamed668.Renamed681(param1),param2);
       }
@@ -77,7 +77,7 @@ package Renamed394
          var _loc3_:Vector.<Renamed667> = new Vector.<Renamed667>();
          if(param1 != null)
          {
-            (_loc4_ = Renamed668.Renamed694(param1)).Renamed3116 = Renamed668.Renamed678(param2);
+            (_loc4_ = Renamed668.Renamed694(param1)).localHitPoint = Renamed668.Renamed678(param2);
             _loc3_.push(_loc4_);
          }
          return _loc3_;

@@ -1,29 +1,29 @@
 package Renamed194
 {
-   public class Renamed5918
+   public class DamageType
    {
-      public static const NORMAL:Renamed5918 = new Renamed5918(0,"NORMAL");
+      public static const NORMAL:DamageType = new DamageType(0,"NORMAL");
       
-      public static const CRITICAL:Renamed5918 = new Renamed5918(1,"CRITICAL");
+      public static const CRITICAL:DamageType = new DamageType(1,"CRITICAL");
       
-      public static const FATAL:Renamed5918 = new Renamed5918(2,"FATAL");
+      public static const FATAL:DamageType = new DamageType(2,"FATAL");
       
-      public static const HEAL:Renamed5918 = new Renamed5918(3,"HEAL");
+      public static const HEAL:DamageType = new DamageType(3,"HEAL");
       
       private var _value:int;
       
       private var _name:String;
       
-      public function Renamed5918(param1:int, param2:String)
+      public function DamageType(param1:int, param2:String)
       {
          super();
          this._value = param1;
          this._name = param2;
       }
       
-      public static function get values() : Vector.<Renamed5918>
+      public static function get values() : Vector.<DamageType>
       {
-         var _loc1_:Vector.<Renamed5918> = new Vector.<Renamed5918>();
+         var _loc1_:Vector.<DamageType> = new Vector.<DamageType>();
          _loc1_.push(NORMAL);
          _loc1_.push(CRITICAL);
          _loc1_.push(FATAL);

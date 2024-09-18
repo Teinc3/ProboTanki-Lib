@@ -8,14 +8,14 @@ package projects.tanks.client.garage.models.item.kit
       
       private var _image:ImageResource;
       
-      private var Renamed4320:Vector.<KitItem>;
+      private var ProtectionContexts0:Vector.<KitItem>;
       
       public function Renamed4317(param1:int = 0, param2:ImageResource = null, param3:Vector.<KitItem> = null)
       {
          super();
          this.Renamed4319 = param1;
          this._image = param2;
-         this.Renamed4320 = param3;
+         this.ProtectionContexts0 = param3;
       }
       
       public function get discountInPercent() : int
@@ -40,12 +40,12 @@ package projects.tanks.client.garage.models.item.kit
       
       public function get kitItems() : Vector.<KitItem>
       {
-         return this.Renamed4320;
+         return this.ProtectionContexts0;
       }
       
       public function set kitItems(param1:Vector.<KitItem>) : void
       {
-         this.Renamed4320 = param1;
+         this.ProtectionContexts0 = param1;
       }
       
       public function toString() : String

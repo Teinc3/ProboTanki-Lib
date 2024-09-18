@@ -1,17 +1,17 @@
 package Renamed140
 {
-   import Renamed189.AbstractPacket;
+   import AbstractPackets.AbstractPacket;
    import alternativa.osgi.OSGi;
    import alternativa.osgi.service.logging.LogService;
    import flash.utils.Dictionary;
    
-   public class Renamed4936
+   public class ModelHolder
    {
       public static var logService:LogService;
       
       private static var modelById:Dictionary;
       
-      public function Renamed4936()
+      public function ModelHolder()
       {
          super();
          modelById = new Dictionary();
@@ -28,7 +28,7 @@ package Renamed140
       
       public function invoke(param1:AbstractPacket) : void
       {
-         var _loc2_:Object = modelById[param1.Renamed4883()];
+         var _loc2_:Object = modelById[param1.getCorrespondingModel()];
          if(_loc2_ == null)
          {
             return;

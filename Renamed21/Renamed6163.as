@@ -1,6 +1,6 @@
 package Renamed21
 {
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import Renamed304.Renamed4903;
    import Renamed304.Renamed6177;
    import Renamed304.Renamed6178;
@@ -67,12 +67,12 @@ package Renamed21
          this.network.send(new Renamed4918(param1));
       }
       
-      public function Renamed3497(param1:int, param2:Renamed603) : void
+      public function Renamed3497(param1:int, param2:3DPositionVector) : void
       {
          this.network.send(new Renamed6177(param1,param2));
       }
       
-      public function Renamed3498(param1:int, param2:ClientObject, param3:int, param4:Renamed603, param5:Renamed603, param6:Renamed603) : void
+      public function Renamed3498(param1:int, param2:ClientObject, param3:int, param4:3DPositionVector, param5:3DPositionVector, param6:3DPositionVector) : void
       {
          this.network.send(new Renamed6178(param1,param2.id,param3,param4,param5,param6));
       }

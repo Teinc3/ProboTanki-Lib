@@ -2,7 +2,7 @@ package Renamed494
 {
    public class Renamed9648
    {
-      public static const Renamed5364:int = -324155151;
+      public static const CodecRegisterer4:int = -324155151;
       
       public static const Renamed9651:int = 552006706;
       

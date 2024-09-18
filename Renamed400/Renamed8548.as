@@ -1,7 +1,7 @@
 package Renamed400
 {
-   import Renamed189.AbstractPacket;
-   import Renamed602.Renamed603;
+   import AbstractPackets.AbstractPacket;
+   import Renamed602.3DPositionVector;
    
    public class Renamed8548 extends AbstractPacket
    {
@@ -9,28 +9,28 @@ package Renamed400
       
       public var Renamed7527:int;
       
-      public var Renamed1530:Renamed603;
+      public var Renamed1530:3DPositionVector;
       
-      public var Renamed3116:Renamed603;
+      public var localHitPoint:3DPositionVector;
       
-      public function Renamed8548(param1:int = 0, param2:int = 0, param3:Renamed603 = null, param4:Renamed603 = null)
+      public function Renamed8548(param1:int = 0, param2:int = 0, param3:3DPositionVector = null, param4:3DPositionVector = null)
       {
          super();
          this.time = param1;
          this.Renamed7527 = param2;
          this.Renamed1530 = param3;
-         this.Renamed3116 = param4;
-         Renamed1258(param1);
-         Renamed4880("scpacker.networking.protocol.codec.primitive.IntCodec");
-         Renamed1258(param2);
-         Renamed4880("scpacker.networking.protocol.codec.primitive.ShortCodec");
-         Renamed1258(param3);
-         Renamed4880("scpacker.networking.protocol.codec.custom.CodecVector3d");
-         Renamed1258(param4);
-         Renamed4880("scpacker.networking.protocol.codec.custom.CodecVector3d");
+         this.localHitPoint = param4;
+         addObjToAbsPacket(param1);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.primitive.IntCodec");
+         addObjToAbsPacket(param2);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.primitive.ShortCodec");
+         addObjToAbsPacket(param3);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.custom.CodecVector3d");
+         addObjToAbsPacket(param4);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.custom.CodecVector3d");
       }
       
-      override public function Renamed4881(param1:Object, param2:int) : void
+      override public function Implement(param1:Object, param2:int) : void
       {
          switch(param2)
          {
@@ -41,19 +41,19 @@ package Renamed400
                this.Renamed7527 = param1 as int;
                break;
             case 2:
-               this.Renamed1530 = param1 as Renamed603;
+               this.Renamed1530 = param1 as 3DPositionVector;
                break;
             case 3:
-               this.Renamed3116 = param1 as Renamed603;
+               this.localHitPoint = param1 as 3DPositionVector;
          }
       }
       
-      override public function Renamed4882() : AbstractPacket
+      override public function getReference() : AbstractPacket
       {
          return new Renamed8548();
       }
       
-      override public function Renamed4883() : int
+      override public function getCorrespondingModel() : int
       {
          return 55;
       }

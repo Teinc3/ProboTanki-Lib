@@ -1,6 +1,6 @@
 package Renamed70
 {
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import alternativa.math.Vector3;
    import alternativa.object.ClientObject;
    import alternativa.osgi.OSGi;
@@ -61,7 +61,7 @@ package Renamed70
       }
       
       [Obfuscation(rename="false")]
-      public function fire(param1:ClientObject, param2:int, param3:int, param4:Renamed603) : void
+      public function fire(param1:ClientObject, param2:int, param3:int, param4:3DPositionVector) : void
       {
          var _loc5_:Renamed10243 = null;
          if(battleService.Renamed646())
@@ -131,7 +131,7 @@ package Renamed70
       {
          var _loc4_:Tank = null;
          var _loc5_:ClientObject = null;
-         var _loc6_:Renamed603 = null;
+         var _loc6_:3DPositionVector = null;
          if(battleService.Renamed646())
          {
             _loc4_ = param2.tank;

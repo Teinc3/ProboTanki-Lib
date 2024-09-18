@@ -3,7 +3,7 @@ package scpacker.networking.protocol.codec.custom
    import Renamed5811.ICodec;
    import Renamed326.Renamed7757;
    import flash.utils.ByteArray;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class VectorCodecBattleMine implements ICodec
    {
@@ -11,7 +11,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed5009:Boolean;
       
-      public function VectorCodecBattleMine(param1:Renamed536)
+      public function VectorCodecBattleMine(param1:CodecRegisterer)
       {
          super();
          this.elementCodec = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecBattleMine");

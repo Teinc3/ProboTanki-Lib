@@ -1,10 +1,10 @@
 package Renamed4594
 {
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    
    public interface Renamed4595
    {
-      function Renamed5492(param1:int, param2:Renamed603) : void;
+      function Renamed5492(param1:int, param2:3DPositionVector) : void;
       
       function Renamed5498(param1:int, param2:int, param3:String) : void;
       

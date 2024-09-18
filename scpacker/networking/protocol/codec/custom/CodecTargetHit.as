@@ -1,13 +1,13 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import Renamed5811.ICodec;
    import alternativa.osgi.OSGi;
    import alternativa.osgi.service.clientlog.IClientLog;
    import alternativa.tanks.services.tankregistry.TankUsersRegistry;
-   import Renamed349.Renamed3105;
+   import Renamed349.TargetHitInfo;
    import flash.utils.ByteArray;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class CodecTargetHit implements ICodec
    {
@@ -15,32 +15,32 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed2775:TankUsersRegistry;
       
-      private var Renamed10732:ICodec;
+      private var diectionCodec:ICodec;
       
-      private var Renamed10733:ICodec;
+      private var localHitPointCodec:ICodec;
       
-      private var Renamed10734:ICodec;
+      private var numberHitsCodec:ICodec;
       
-      private var Renamed10735:ICodec;
+      private var targetCodec:ICodec;
       
-      public function CodecTargetHit(param1:Renamed536)
+      public function CodecTargetHit(param1:CodecRegisterer)
       {
          super();
          this.Renamed2775 = TankUsersRegistry(OSGi.getInstance().getService(TankUsersRegistry));
-         this.Renamed10732 = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecVector3d");
-         this.Renamed10733 = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecVector3d");
-         this.Renamed10734 = param1.getCodec("scpacker.networking.protocol.codec.primitive.ByteCodec");
-         this.Renamed10735 = param1.getCodec("scpacker.networking.protocol.codec.primitive.StringCodec");
+         this.diectionCodec = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecVector3d");
+         this.localHitPointCodec = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecVector3d");
+         this.numberHitsCodec = param1.getCodec("scpacker.networking.protocol.codec.primitive.ByteCodec");
+         this.targetCodec = param1.getCodec("scpacker.networking.protocol.codec.primitive.StringCodec");
       }
       
       public function decode(param1:ByteArray) : Object
       {
-         var _loc2_:Renamed3105 = new Renamed3105();
-         _loc2_.direction = this.Renamed10732.decode(param1) as Renamed603;
-         _loc2_.Renamed3116 = this.Renamed10733.decode(param1) as Renamed603;
-         _loc2_.Renamed3448 = this.Renamed10734.decode(param1) as int;
-         _loc2_.target = this.Renamed2775.Renamed695(this.Renamed10735.decode(param1) as String);
-         return _loc2_;
+         var thInfo:TargetHitInfo = new TargetHitInfo();
+         thInfo.direction = this.diectionCodec.decode(param1) as 3DPositionVector;
+         thInfo.localHitPoint = this.localHitPointCodec.decode(param1) as 3DPositionVector;
+         thInfo.numberHits = this.numberHitsCodec.decode(param1) as int;
+         thInfo.target = this.Renamed2775.Renamed695(this.targetCodec.decode(param1) as String);
+         return thInfo;
       }
       
       public function encode(param1:ByteArray, param2:Object) : int
@@ -50,11 +50,11 @@ package scpacker.networking.protocol.codec.custom
          {
             throw new Error("Object is null. Use @ProtocolOptional annotation.");
          }
-         var _loc4_:Renamed3105 = Renamed3105(param2);
-         _loc3_ += this.Renamed10732.encode(param1,_loc4_.direction);
-         _loc3_ += this.Renamed10733.encode(param1,_loc4_.Renamed3116);
-         _loc3_ += this.Renamed10734.encode(param1,_loc4_.Renamed3448);
-         return _loc3_ + this.Renamed10735.encode(param1,_loc4_.target);
+         var thInfo:TargetHitInfo = TargetHitInfo(param2);
+         _loc3_ += this.diectionCodec.encode(param1,thInfo.direction);
+         _loc3_ += this.localHitPointCodec.encode(param1,thInfo.localHitPoint);
+         _loc3_ += this.numberHitsCodec.encode(param1,thInfo.numberHits);
+         return _loc3_ + this.targetCodec.encode(param1,thInfo.target);
       }
    }
 }

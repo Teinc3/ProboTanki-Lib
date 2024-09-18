@@ -3,7 +3,7 @@ package scpacker.networking.protocol.codec.custom
    import Renamed5811.ICodec;
    import flash.utils.ByteArray;
    import projects.tanks.client.achievements.model.achievements.Renamed2072;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class VectorCodecAchievement implements ICodec
    {
@@ -11,7 +11,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed5009:Boolean;
       
-      public function VectorCodecAchievement(param1:Renamed536)
+      public function VectorCodecAchievement(param1:CodecRegisterer)
       {
          super();
          this.elementCodec = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecAchievement");

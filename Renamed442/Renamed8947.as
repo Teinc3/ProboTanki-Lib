@@ -36,8 +36,8 @@ package Renamed442
             case Renamed8936.Renamed8937:
                this.Renamed8946();
                break;
-            case Renamed8936.Renamed5364:
-               this.Renamed5365(param1);
+            case Renamed8936.CodecRegisterer4:
+               this.CodecRegisterer5(param1);
          }
       }
       
@@ -67,7 +67,7 @@ package Renamed442
          this.Renamed8945.clearAllMessages();
       }
       
-      private function Renamed5365(param1:Object) : void
+      private function CodecRegisterer5(param1:Object) : void
       {
          this.Renamed8945.objectUnloaded();
       }

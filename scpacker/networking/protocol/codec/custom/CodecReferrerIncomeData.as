@@ -4,7 +4,7 @@ package scpacker.networking.protocol.codec.custom
    import alternativa.osgi.OSGi;
    import alternativa.osgi.service.clientlog.IClientLog;
    import flash.utils.ByteArray;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    import Renamed420.Renamed1806;
    
    public class CodecReferrerIncomeData implements ICodec
@@ -15,7 +15,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed10576:ICodec;
       
-      public function CodecReferrerIncomeData(param1:Renamed536)
+      public function CodecReferrerIncomeData(param1:CodecRegisterer)
       {
          super();
          this.Renamed10709 = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");

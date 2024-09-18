@@ -1,6 +1,6 @@
 package Renamed214
 {
-   import Renamed189.AbstractPacket;
+   import AbstractPackets.AbstractPacket;
    import platform.client.fp10.core.resource.Resource;
    
    public class Renamed6226 extends AbstractPacket
@@ -14,13 +14,13 @@ package Renamed214
          super();
          this.text = param1;
          this.sound = param2;
-         Renamed1258(param1);
-         Renamed4880("scpacker.networking.protocol.codec.primitive.StringCodec");
-         Renamed1258(param2);
-         Renamed4880("scpacker.networking.protocol.codec.custom.ResourceGetterCodec");
+         addObjToAbsPacket(param1);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.primitive.StringCodec");
+         addObjToAbsPacket(param2);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.custom.ResourceGetterCodec");
       }
       
-      override public function Renamed4881(param1:Object, param2:int) : void
+      override public function Implement(param1:Object, param2:int) : void
       {
          switch(param2)
          {
@@ -32,12 +32,12 @@ package Renamed214
          }
       }
       
-      override public function Renamed4882() : AbstractPacket
+      override public function getReference() : AbstractPacket
       {
          return new Renamed6226();
       }
       
-      override public function Renamed4883() : int
+      override public function getCorrespondingModel() : int
       {
          return 65;
       }

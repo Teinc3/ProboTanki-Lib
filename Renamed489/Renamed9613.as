@@ -1,6 +1,6 @@
 package Renamed489
 {
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import alternativa.osgi.OSGi;
    import alternativa.protocol.ICodec;
    import alternativa.protocol.IProtocol;
@@ -72,12 +72,12 @@ package Renamed489
          this.network.send(new Renamed4846(param1));
       }
       
-      public function Renamed3114(param1:int, param2:Renamed603, param3:Vector.<Renamed667>) : void
+      public function Renamed3114(param1:int, param2:3DPositionVector, param3:Vector.<Renamed667>) : void
       {
          this.network.send(new Renamed9076(param1,param2,param3));
       }
       
-      public function Renamed8465(param1:int, param2:Renamed603) : void
+      public function Renamed8465(param1:int, param2:3DPositionVector) : void
       {
          this.network.send(new Renamed9077(param1,param2));
       }

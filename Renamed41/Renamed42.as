@@ -1,7 +1,7 @@
 package Renamed41
 {
-   import Renamed194.Renamed5918;
-   import Renamed194.Renamed5920;
+   import Renamed194.DamageType;
+   import Renamed194.TargetTankDamage;
    import Renamed194.Renamed4564;
    import Renamed194.Renamed5927;
    import Renamed279.Renamed4609;
@@ -26,9 +26,9 @@ package Renamed41
       }
       
       [Obfuscation(rename="false")]
-      public function Renamed5925(param1:Vector.<Renamed5920>) : void
+      public function Renamed5925(param1:Vector.<TargetTankDamage>) : void
       {
-         var _loc2_:Renamed5920 = null;
+         var _loc2_:TargetTankDamage = null;
          var _loc3_:Tank = null;
          var _loc4_:Vector3 = null;
          var _loc5_:Object3D = null;
@@ -48,20 +48,20 @@ package Renamed41
                   _loc5_ = _loc3_.Renamed1075().Renamed1268();
                   _loc4_.reset(_loc5_.x,_loc5_.y,_loc5_.z);
                }
-               Renamed4609.start(_loc4_,this.Renamed8638(_loc2_),_loc2_.Renamed5923);
+               Renamed4609.start(_loc4_,this.Renamed8638(_loc2_),_loc2_.damageAmount);
             }
          }
       }
       
-      private function Renamed8638(param1:Renamed5920) : uint
+      private function Renamed8638(param1:TargetTankDamage) : uint
       {
-         switch(param1.Renamed5924)
+         switch(param1.damageType)
          {
-            case Renamed5918.FATAL:
+            case DamageType.FATAL:
                return ColorConstants.USER_TITLE_RED;
-            case Renamed5918.CRITICAL:
+            case DamageType.CRITICAL:
                return ColorConstants.USER_TITLE_YELLOW;
-            case Renamed5918.HEAL:
+            case DamageType.HEAL:
                return ColorConstants.GREEN_TEXT;
             default:
                return ColorConstants.WHITE;

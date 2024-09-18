@@ -1,7 +1,7 @@
 package alternativa.tanks.battle
 {
    import Renamed136.Renamed663;
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import alternativa.math.Matrix3;
    import alternativa.math.Vector3;
    import alternativa.physics.Body;
@@ -48,46 +48,46 @@ package alternativa.tanks.battle
          return param1 == Renamed663.BLUE ? Renamed663.RED : Renamed663.BLUE;
       }
       
-      public static function Renamed676(param1:Renamed603) : Boolean
+      public static function Renamed676(param1:3DPositionVector) : Boolean
       {
          return param1 != null && isFinite(param1.x) && isFinite(param1.y) && isFinite(param1.z);
       }
       
-      public static function Renamed677(param1:Vector3) : Renamed603
+      public static function Renamed677(param1:Vector3) : 3DPositionVector
       {
-         return new Renamed603(param1.x,param1.y,param1.z);
+         return new 3DPositionVector(param1.x,param1.y,param1.z);
       }
       
-      public static function Renamed678(param1:Vector3) : Renamed603
+      public static function Renamed678(param1:Vector3) : 3DPositionVector
       {
-         return param1 == null ? null : new Renamed603(param1.x,param1.y,param1.z);
+         return param1 == null ? null : new 3DPositionVector(param1.x,param1.y,param1.z);
       }
       
-      public static function Renamed679(param1:Vector3, param2:Renamed603) : void
-      {
-         param2.x = param1.x;
-         param2.y = param1.y;
-         param2.z = param1.z;
-      }
-      
-      public static function Renamed680(param1:Renamed603, param2:Renamed603) : void
+      public static function Renamed679(param1:Vector3, param2:3DPositionVector) : void
       {
          param2.x = param1.x;
          param2.y = param1.y;
          param2.z = param1.z;
       }
       
-      public static function Renamed681(param1:Renamed603) : Vector3
+      public static function Renamed680(param1:3DPositionVector, param2:3DPositionVector) : void
+      {
+         param2.x = param1.x;
+         param2.y = param1.y;
+         param2.z = param1.z;
+      }
+      
+      public static function Renamed681(param1:3DPositionVector) : Vector3
       {
          return new Vector3(param1.x,param1.y,param1.z);
       }
       
-      public static function Renamed682(param1:Renamed603) : Vector3
+      public static function Renamed682(param1:3DPositionVector) : Vector3
       {
          return param1 == null ? null : new Vector3(param1.x,param1.y,param1.z);
       }
       
-      public static function Renamed683(param1:Renamed603, param2:Vector3) : void
+      public static function Renamed683(param1:3DPositionVector, param2:Vector3) : void
       {
          param2.x = param1.x;
          param2.y = param1.y;
@@ -172,7 +172,7 @@ package alternativa.tanks.battle
          return _loc2_;
       }
       
-      public static function Renamed699(param1:Renamed603) : Boolean
+      public static function Renamed699(param1:3DPositionVector) : Boolean
       {
          return isNaN(param1.x) || isNaN(param1.y) || isNaN(param1.z);
       }
@@ -182,9 +182,9 @@ package alternativa.tanks.battle
          return param1.baseMatrix.m22 < Renamed673;
       }
       
-      public static function Renamed701(param1:Vector.<Vector3>) : Vector.<Renamed603>
+      public static function Renamed701(param1:Vector.<Vector3>) : Vector.<3DPositionVector>
       {
-         var _loc2_:Vector.<Renamed603> = new Vector.<Renamed603>(param1.length);
+         var _loc2_:Vector.<3DPositionVector> = new Vector.<3DPositionVector>(param1.length);
          var _loc3_:int = 0;
          while(_loc3_ < param1.length)
          {

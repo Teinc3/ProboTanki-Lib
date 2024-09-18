@@ -12,7 +12,7 @@ package Renamed2402
    import Renamed29.Renamed30;
    import Renamed3253.Renamed4589;
    import Renamed259.Renamed4600;
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import Renamed37.Renamed38;
    import Renamed306.Renamed2404;
    import Renamed306.Renamed1344;
@@ -169,17 +169,17 @@ package Renamed2402
             case Renamed5353.Renamed5161:
                this.Renamed5162(param1);
                break;
-            case Renamed5353.Renamed5360:
+            case Renamed5353.CodecRegisterer0:
                this.Renamed2871(param1);
                break;
-            case Renamed5353.Renamed5361:
+            case Renamed5353.CodecRegisterer1:
                this.Renamed2485(param1);
                break;
-            case Renamed5353.Renamed5362:
-               this.Renamed5363(param1);
+            case Renamed5353.CodecRegisterer2:
+               this.CodecRegisterer3(param1);
                break;
-            case Renamed5353.Renamed5364:
-               this.Renamed5365();
+            case Renamed5353.CodecRegisterer4:
+               this.CodecRegisterer5();
          }
       }
       
@@ -206,7 +206,7 @@ package Renamed2402
          _loc6_.left = ImageResource(resourceRegistry.getResource(Long.getLong(0,_loc4_.left)));
          _loc6_.right = ImageResource(resourceRegistry.getResource(Long.getLong(0,_loc4_.right)));
          _loc6_.top = ImageResource(resourceRegistry.getResource(Long.getLong(0,_loc4_.top)));
-         var _loc7_:Renamed2404 = new Renamed2404(new Renamed1344(_loc3_.dustAlpha,_loc3_.dustDensity,_loc3_.dustFarDistance,_loc3_.dustNearDistance,MultiframeImageResource(resourceRegistry.getResource(Long.getLong(0,_loc2_.dustParticle))),_loc3_.dustSize),new Renamed2405(_loc3_.angleX,_loc3_.angleZ,_loc3_.lightColor,_loc3_.shadowColor),new Renamed2406(_loc3_.fogAlpha,_loc3_.fogColor,_loc3_.farLimit,_loc3_.nearLimit),_loc3_.gravity,resourceRegistry.getResource(Long.getLong(0,_loc2_.mapId)) as MapResource,new Renamed603(10,3,0),_loc3_.skyboxRevolutionSpeed,_loc6_,_loc3_.ssaoColor);
+         var _loc7_:Renamed2404 = new Renamed2404(new Renamed1344(_loc3_.dustAlpha,_loc3_.dustDensity,_loc3_.dustFarDistance,_loc3_.dustNearDistance,MultiframeImageResource(resourceRegistry.getResource(Long.getLong(0,_loc2_.dustParticle))),_loc3_.dustSize),new Renamed2405(_loc3_.angleX,_loc3_.angleZ,_loc3_.lightColor,_loc3_.shadowColor),new Renamed2406(_loc3_.fogAlpha,_loc3_.fogColor,_loc3_.farLimit,_loc3_.nearLimit),_loc3_.gravity,resourceRegistry.getResource(Long.getLong(0,_loc2_.mapId)) as MapResource,new 3DPositionVector(10,3,0),_loc3_.skyboxRevolutionSpeed,_loc6_,_loc3_.ssaoColor);
          var _loc8_:IGameObject = this.Renamed121.createObject(Long.getLong(0,_loc2_.mapId),GameClass(gameTypeRegistry.getClass(Long.getLong(150325,6843660))),"BattlefieldModel object");
          Model.object = _loc8_;
          this.Renamed5348.putInitParams(_loc7_);
@@ -299,13 +299,13 @@ package Renamed2402
          (_loc11_ = new ClientTank()).health = _loc2_.health;
          _loc11_.incarnationId = _loc2_.incarnation;
          _loc11_.self = _loc2_.tank_id == this.userPropertiesService.userId;
-         _loc11_.spawnState = Renamed5340.Renamed5366(_loc2_.state);
+         _loc11_.spawnState = Renamed5340.CodecRegisterer6(_loc2_.state);
          _loc11_.tankSpecification = _loc9_;
          _loc11_.tankState = _loc10_;
-         _loc11_.teamType = Renamed5340.Renamed5367(_loc2_.team_type);
+         _loc11_.teamType = Renamed5340.CodecRegisterer7(_loc2_.team_type);
          var _loc12_:ClientObject = new ClientObject(_loc2_.tank_id,new ClientClass(_loc2_.tank_id,null,_loc2_.tank_id),_loc2_.tank_id,null);
          this.Renamed2969.initObject(_loc12_,_loc2_.mass,_loc8_,_loc2_.impact_force,_loc2_.kickback,_loc2_.turretTurnAcceleration,_loc2_.turret_turn_speed,_loc2_.nickname);
-         WeaponsManager.Renamed5368(_loc12_,_loc2_.turret_id,JSON.parse(_loc2_.sfxData),_loc8_.turretObject);
+         WeaponsManager.CodecRegisterer8(_loc12_,_loc2_.turret_id,JSON.parse(_loc2_.sfxData),_loc8_.turretObject);
          this.Renamed2969.Renamed2871(_loc12_,_loc11_,_loc8_);
          this.Renamed5350.objectLoaded();
       }
@@ -321,7 +321,7 @@ package Renamed2402
          {
             _loc5_ = new Renamed5338();
             _loc6_ = WeaponsManager.getObjectFor(_loc4_.id);
-            _loc5_.Renamed5369 = Tanks3DSResource(resourceRegistry.getResource(Long.getLong(0,_loc4_.resourceId)));
+            _loc5_.CodecRegisterer9 = Tanks3DSResource(resourceRegistry.getResource(Long.getLong(0,_loc4_.resourceId)));
             _loc5_.cordResource = ImageResource(resourceRegistry.getResource(Long.getLong(0,_loc3_.cordResource)));
             _loc5_.lifeTimeMs = _loc4_.lifeTimeMs;
             _loc5_.parachuteInnerResource = Tanks3DSResource(resourceRegistry.getResource(Long.getLong(0,_loc3_.parachuteInnerResource)));
@@ -347,7 +347,7 @@ package Renamed2402
          {
             (_loc5_ = new BattleBonus()).id = _loc4_.id;
             _loc5_.objectId = _loc4_.id;
-            _loc5_.position = new Renamed603(_loc4_.position.x,_loc4_.position.y,_loc4_.position.z);
+            _loc5_.position = new 3DPositionVector(_loc4_.position.x,_loc4_.position.y,_loc4_.position.z);
             _loc5_.timeFromAppearing = _loc4_.timeFromAppearing;
             _loc5_.timeLife = _loc4_.timeLife;
             _loc5_.object = WeaponsManager.getObjectFor(_loc5_.id.split("_")[0]);
@@ -356,7 +356,7 @@ package Renamed2402
          this.Renamed5342.Renamed2482(_loc3_);
       }
       
-      private function Renamed5363(param1:Object) : void
+      private function CodecRegisterer3(param1:Object) : void
       {
          this.Renamed5342.Renamed2484(WeaponsManager.getObjectFor(param1.bonusId.split("_")[0]),param1.bonusId,param1.position);
       }
@@ -371,7 +371,7 @@ package Renamed2402
          this.Renamed5342.Renamed2486(param1.bonusId);
       }
       
-      private function Renamed5365() : void
+      private function CodecRegisterer5() : void
       {
          var _loc2_:ClientObject = null;
          var _loc3_:Renamed18 = null;

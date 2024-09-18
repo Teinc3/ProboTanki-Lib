@@ -1,6 +1,6 @@
 package Renamed65
 {
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import Renamed468.Renamed4903;
    import Renamed468.Renamed4904;
    import Renamed468.Renamed8411;
@@ -74,7 +74,7 @@ package Renamed65
          this.network = Network(OSGi.getInstance().getService(Network));
       }
       
-      public function Renamed3496(param1:int, param2:int, param3:int, param4:Renamed603) : void
+      public function Renamed3496(param1:int, param2:int, param3:int, param4:3DPositionVector) : void
       {
          this.network.send(new Renamed4918(param1,param2,param3,param4));
       }
@@ -84,12 +84,12 @@ package Renamed65
          this.network.send(new Renamed4904(param1,1));
       }
       
-      public function Renamed10177(param1:int, param2:int, param3:Renamed603) : void
+      public function Renamed10177(param1:int, param2:int, param3:3DPositionVector) : void
       {
          this.network.send(new Renamed8409(param1,param2,param3));
       }
       
-      public function Renamed10176(param1:int, param2:int, param3:ClientObject, param4:Renamed603, param5:Renamed603) : void
+      public function Renamed10176(param1:int, param2:int, param3:ClientObject, param4:3DPositionVector, param5:3DPositionVector) : void
       {
          this.network.send(new Renamed8411(param1,param2,param3.id,param4,param5));
       }

@@ -1,8 +1,8 @@
-package Renamed432
+package ProtectionContexts
 {
    import flash.utils.ByteArray;
    
-   public interface Renamed8866
+   public interface IProtectionContext
    {
       function encrypt(param1:ByteArray) : void;
       

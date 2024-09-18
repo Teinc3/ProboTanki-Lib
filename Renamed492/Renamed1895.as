@@ -14,13 +14,13 @@ package Renamed1804
    import flash.text.TextFormat;
    import flash.text.TextFormatAlign;
    
-   public class Renamed1895 extends CellRenderer
+   public class AbstractPackets5 extends CellRenderer
    {
       protected var nicon:DisplayObject;
       
       private var sicon:DisplayObject;
       
-      public function Renamed1895()
+      public function AbstractPackets5()
       {
          super();
       }

@@ -3,7 +3,7 @@ package Renamed56
    import Renamed9.Renamed4921;
    import Renamed9.Renamed10;
    import Renamed9.Renamed11;
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import alternativa.math.Vector3;
    import alternativa.object.ClientObject;
    import alternativa.osgi.OSGi;
@@ -71,11 +71,11 @@ package Renamed56
          return _loc2_.Renamed3159(param1);
       }
       
-      private static function Renamed10107(param1:Vector.<Renamed603>) : Vector.<Vector3>
+      private static function Renamed10107(param1:Vector.<3DPositionVector>) : Vector.<Vector3>
       {
          var _loc2_:Vector.<Vector3> = null;
          var _loc3_:int = 0;
-         var _loc4_:Renamed603 = null;
+         var _loc4_:3DPositionVector = null;
          if(param1 != null)
          {
             _loc2_ = new Vector.<Vector3>(param1.length);
@@ -149,7 +149,7 @@ package Renamed56
       }
       
       [Obfuscation(rename="false")]
-      public function fire(param1:ClientObject, param2:Renamed603, param3:Vector.<String>, param4:Vector.<Renamed603>) : void
+      public function fire(param1:ClientObject, param2:3DPositionVector, param3:Vector.<String>, param4:Vector.<3DPositionVector>) : void
       {
          var _loc5_:Vector.<Vector3> = null;
          var _loc6_:Vector.<Body> = null;
@@ -237,10 +237,10 @@ package Renamed56
       public function Renamed3444(param1:int, param2:Vector3, param3:Vector.<Body>, param4:Vector.<Vector3>) : void
       {
          var _loc5_:Vector.<String> = null;
-         var _loc6_:Vector.<Renamed603> = null;
+         var _loc6_:Vector.<3DPositionVector> = null;
          var _loc7_:Vector.<int> = null;
-         var _loc8_:Vector.<Renamed603> = null;
-         var _loc9_:Vector.<Renamed603> = null;
+         var _loc8_:Vector.<3DPositionVector> = null;
+         var _loc9_:Vector.<3DPositionVector> = null;
          var _loc10_:int = 0;
          var _loc11_:Body = null;
          var _loc12_:Vector3 = null;
@@ -250,10 +250,10 @@ package Renamed56
          if(_loc15_ > 0)
          {
             _loc5_ = new Vector.<String>(_loc15_);
-            _loc6_ = new Vector.<Renamed603>(_loc15_);
+            _loc6_ = new Vector.<3DPositionVector>(_loc15_);
             _loc7_ = new Vector.<int>(_loc15_);
-            _loc8_ = new Vector.<Renamed603>(_loc15_);
-            _loc9_ = new Vector.<Renamed603>(_loc15_);
+            _loc8_ = new Vector.<3DPositionVector>(_loc15_);
+            _loc9_ = new Vector.<3DPositionVector>(_loc15_);
             _loc10_ = 0;
             while(_loc10_ < _loc15_)
             {
@@ -271,7 +271,7 @@ package Renamed56
                _loc10_++;
             }
          }
-         var _loc16_:Renamed603 = Renamed668.Renamed678(param2);
+         var _loc16_:3DPositionVector = Renamed668.Renamed678(param2);
          this.Renamed2432.dispatchEvent(Renamed869.Renamed871);
          server.Renamed3496(param1,_loc16_,_loc5_,_loc6_,_loc7_,_loc8_,_loc9_);
       }

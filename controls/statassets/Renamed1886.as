@@ -34,7 +34,7 @@ package controls.statassets
             _loc2_.height = 18;
             _loc2_.Renamed4042 = _loc3_;
             addChild(_loc2_);
-            _loc2_.addEventListener(MouseEvent.CLICK,this.Renamed1892);
+            _loc2_.addEventListener(MouseEvent.CLICK,this.AbstractPackets2);
             _loc3_++;
          }
          this.draw();
@@ -57,14 +57,14 @@ package controls.statassets
          }
       }
       
-      protected function Renamed1892(param1:MouseEvent) : void
+      protected function AbstractPackets2(param1:MouseEvent) : void
       {
          var _loc2_:Renamed4041 = param1.currentTarget as Renamed4041;
          this.Renamed4044 = _loc2_.Renamed4042;
          if(this.Renamed4044 != this.Renamed4045)
          {
             this.draw();
-            dispatchEvent(new Renamed1888(Renamed1888.Renamed1891,0,0,this.Renamed4044));
+            dispatchEvent(new Renamed1888(Renamed1888.AbstractPackets1,0,0,this.Renamed4044));
             this.Renamed4045 = this.Renamed4044;
          }
       }

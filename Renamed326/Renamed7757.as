@@ -1,6 +1,6 @@
 package Renamed326
 {
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    
    public class Renamed7757
    {
@@ -10,9 +10,9 @@ package Renamed326
       
       private var Renamed7760:String;
       
-      private var _position:Renamed603;
+      private var _position:3DPositionVector;
       
-      public function Renamed7757(param1:Boolean = false, param2:String = null, param3:String = null, param4:Renamed603 = null)
+      public function Renamed7757(param1:Boolean = false, param2:String = null, param3:String = null, param4:3DPositionVector = null)
       {
          super();
          this.Renamed7758 = param1;
@@ -51,12 +51,12 @@ package Renamed326
          this.Renamed7760 = param1;
       }
       
-      public function get position() : Renamed603
+      public function get position() : 3DPositionVector
       {
          return this._position;
       }
       
-      public function set position(param1:Renamed603) : void
+      public function set position(param1:3DPositionVector) : void
       {
          this._position = param1;
       }

@@ -5,7 +5,7 @@ package scpacker.networking.protocol.codec.custom
    import alternativa.osgi.service.clientlog.IClientLog;
    import flash.utils.ByteArray;
    import projects.tanks.client.entrance.model.entrance.externalentrance.SocialNetworkEntranceParams;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class CodecSocialNetworkEntranceParams implements ICodec
    {
@@ -15,7 +15,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed10714:ICodec;
       
-      public function CodecSocialNetworkEntranceParams(param1:Renamed536)
+      public function CodecSocialNetworkEntranceParams(param1:CodecRegisterer)
       {
          super();
          this.Renamed10713 = param1.getCodec("scpacker.networking.protocol.codec.primitive.StringCodec");

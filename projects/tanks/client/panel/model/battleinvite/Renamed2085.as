@@ -13,23 +13,23 @@ package projects.tanks.client.panel.model.battleinvite
    {
       private var _protocol:IProtocol;
       
-      protected var server:Renamed4323;
+      protected var server:ProtectionContexts3;
       
       private var client:Renamed2084;
       
       private var modelId:Long;
       
-      private var Renamed4324:Long;
+      private var ProtectionContexts4:Long;
       
-      private var Renamed4325:ICodec;
+      private var ProtectionContexts5:ICodec;
       
-      private var Renamed4326:Long;
+      private var ProtectionContexts6:Long;
       
-      private var Renamed4327:ICodec;
+      private var ProtectionContexts7:ICodec;
       
-      private var Renamed4328:ICodec;
+      private var ProtectionContexts8:ICodec;
       
-      private var Renamed4329:Long;
+      private var ProtectionContexts9:Long;
       
       private var Renamed4330:ICodec;
       
@@ -58,9 +58,9 @@ package projects.tanks.client.panel.model.battleinvite
          this._protocol = IProtocol(OSGi.getInstance().getService(IProtocol));
          this.client = Renamed2084(this);
          this.modelId = Long.getLong(0,300050004);
-         this.Renamed4324 = Long.getLong(0,300050009);
-         this.Renamed4326 = Long.getLong(0,300050010);
-         this.Renamed4329 = Long.getLong(0,300050011);
+         this.ProtectionContexts4 = Long.getLong(0,300050009);
+         this.ProtectionContexts6 = Long.getLong(0,300050010);
+         this.ProtectionContexts9 = Long.getLong(0,300050011);
          this.Renamed4331 = Long.getLong(0,300050012);
          this.Renamed4333 = Long.getLong(0,300050013);
          this.Renamed4335 = Long.getLong(0,300050014);
@@ -72,22 +72,22 @@ package projects.tanks.client.panel.model.battleinvite
       
       protected function initCodecs() : void
       {
-         this.server = new Renamed4323(IModel(this));
+         this.server = new ProtectionContexts3(IModel(this));
          var _loc1_:ModelRegistry = ModelRegistry(OSGi.getInstance().getService(ModelRegistry));
       }
       
-      protected function getInitParam() : Renamed4321
+      protected function getInitParam() : ProtectionContexts1
       {
-         return Renamed4321(initParams[Model.object]);
+         return ProtectionContexts1(initParams[Model.object]);
       }
       
       override public function invoke(param1:Long, param2:ProtocolBuffer) : void
       {
          switch(param1)
          {
-            case this.Renamed4324:
-            case this.Renamed4326:
-            case this.Renamed4329:
+            case this.ProtectionContexts4:
+            case this.ProtectionContexts6:
+            case this.ProtectionContexts9:
             case this.Renamed4331:
             case this.Renamed4333:
             case this.Renamed4335:

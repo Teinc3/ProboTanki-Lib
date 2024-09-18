@@ -1,7 +1,7 @@
 package Renamed311
 {
    import Renamed136.Renamed663;
-   import Renamed189.AbstractPacket;
+   import AbstractPackets.AbstractPacket;
    import projects.tanks.client.battleselect.model.info.BattleInfoUser;
    
    public class Renamed7641 extends AbstractPacket
@@ -18,15 +18,15 @@ package Renamed311
          this.battleId = param1;
          this.user = param2;
          this.team = param3;
-         Renamed1258(param1);
-         Renamed4880("scpacker.networking.protocol.codec.primitive.StringCodec");
-         Renamed1258(param2);
-         Renamed4880("scpacker.networking.protocol.codec.custom.CodecBattleInfoUser");
-         Renamed1258(param3);
-         Renamed4880("scpacker.networking.protocol.codec.custom.CodecBattleTeam");
+         addObjToAbsPacket(param1);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.primitive.StringCodec");
+         addObjToAbsPacket(param2);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.custom.CodecBattleInfoUser");
+         addObjToAbsPacket(param3);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.custom.CodecBattleTeam");
       }
       
-      override public function Renamed4881(param1:Object, param2:int) : void
+      override public function Implement(param1:Object, param2:int) : void
       {
          switch(param2)
          {
@@ -41,12 +41,12 @@ package Renamed311
          }
       }
       
-      override public function Renamed4882() : AbstractPacket
+      override public function getReference() : AbstractPacket
       {
          return new Renamed7641();
       }
       
-      override public function Renamed4883() : int
+      override public function getCorrespondingModel() : int
       {
          return 33;
       }

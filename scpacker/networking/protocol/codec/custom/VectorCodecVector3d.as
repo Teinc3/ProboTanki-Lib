@@ -1,10 +1,10 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import Renamed5811.Renamed9342;
    import Renamed5811.ICodec;
    import flash.utils.ByteArray;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class VectorCodecVector3d extends Renamed9342 implements ICodec
    {
@@ -12,7 +12,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed5009:Boolean;
       
-      public function VectorCodecVector3d(param1:Renamed536)
+      public function VectorCodecVector3d(param1:CodecRegisterer)
       {
          super();
          this.elementCodec = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecVector3d");
@@ -25,11 +25,11 @@ package scpacker.networking.protocol.codec.custom
             return null;
          }
          var _loc2_:int = param1.readInt();
-         var _loc3_:Vector.<Renamed603> = new Vector.<Renamed603>(_loc2_,true);
+         var _loc3_:Vector.<3DPositionVector> = new Vector.<3DPositionVector>(_loc2_,true);
          var _loc4_:int = 0;
          while(_loc4_ < _loc2_)
          {
-            _loc3_[_loc4_] = Renamed603(this.elementCodec.decode(param1));
+            _loc3_[_loc4_] = 3DPositionVector(this.elementCodec.decode(param1));
             _loc4_++;
          }
          return _loc3_;
@@ -42,7 +42,7 @@ package scpacker.networking.protocol.codec.custom
          {
             return _loc3_;
          }
-         var _loc4_:Vector.<Renamed603> = Vector.<Renamed603>(param2);
+         var _loc4_:Vector.<3DPositionVector> = Vector.<3DPositionVector>(param2);
          var _loc5_:int = int(_loc4_.length);
          param1.writeInt(_loc5_);
          var _loc6_:int = 0;

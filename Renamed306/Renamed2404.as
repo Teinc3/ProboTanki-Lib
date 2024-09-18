@@ -1,6 +1,6 @@
 package Renamed306
 {
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import projects.tanks.clients.flash.resources.resource.MapResource;
    
    public class Renamed2404
@@ -15,7 +15,7 @@ package Renamed306
       
       private var Renamed7547:MapResource;
       
-      private var Renamed7548:Renamed603;
+      private var Renamed7548:3DPositionVector;
       
       private var Renamed7549:Number;
       
@@ -23,7 +23,7 @@ package Renamed306
       
       private var Renamed7551:int;
       
-      public function Renamed2404(param1:Renamed1344 = null, param2:Renamed2405 = null, param3:Renamed2406 = null, param4:Number = 0, param5:MapResource = null, param6:Renamed603 = null, param7:Number = 0, param8:Renamed2521 = null, param9:int = 0)
+      public function Renamed2404(param1:Renamed1344 = null, param2:Renamed2405 = null, param3:Renamed2406 = null, param4:Number = 0, param5:MapResource = null, param6:3DPositionVector = null, param7:Number = 0, param8:Renamed2521 = null, param9:int = 0)
       {
          super();
          this.Renamed7543 = param1;
@@ -87,12 +87,12 @@ package Renamed306
          this.Renamed7547 = param1;
       }
       
-      public function get Renamed2499() : Renamed603
+      public function get Renamed2499() : 3DPositionVector
       {
          return this.Renamed7548;
       }
       
-      public function set Renamed2499(param1:Renamed603) : void
+      public function set Renamed2499(param1:3DPositionVector) : void
       {
          this.Renamed7548 = param1;
       }

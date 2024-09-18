@@ -94,7 +94,7 @@ package scpacker.tanks
          _loc7_.initObject(param2,param3,param4,param5,param6);
       }
       
-      public static function Renamed5368(param1:ClientObject, param2:String, param3:Object, param4:IGameObject) : void
+      public static function CodecRegisterer8(param1:ClientObject, param2:String, param3:Object, param4:IGameObject) : void
       {
          initBCSH(param3,param4);
          initLighting(param3,param4);

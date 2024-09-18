@@ -3,7 +3,7 @@ package scpacker.networking.protocol.codec.custom
    import Renamed5811.ICodec;
    import flash.utils.ByteArray;
    import projects.tanks.client.panel.model.socialnetwork.SocialNetworkPanelParams;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class VectorCodecSocialNetworkPanelParams implements ICodec
    {
@@ -11,7 +11,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed5009:Boolean;
       
-      public function VectorCodecSocialNetworkPanelParams(param1:Renamed536)
+      public function VectorCodecSocialNetworkPanelParams(param1:CodecRegisterer)
       {
          super();
          this.elementCodec = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecSocialNetworkPanelParams");

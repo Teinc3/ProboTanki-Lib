@@ -2,24 +2,24 @@ package projects.tanks.client.panel.model.battleinvite
 {
    import platform.client.fp10.core.resource.types.SoundResource;
    
-   public class Renamed4321
+   public class ProtectionContexts1
    {
-      private var Renamed4322:SoundResource;
+      private var ProtectionContexts2:SoundResource;
       
-      public function Renamed4321(param1:SoundResource = null)
+      public function ProtectionContexts1(param1:SoundResource = null)
       {
          super();
-         this.Renamed4322 = param1;
+         this.ProtectionContexts2 = param1;
       }
       
       public function get Renamed2087() : SoundResource
       {
-         return this.Renamed4322;
+         return this.ProtectionContexts2;
       }
       
       public function set Renamed2087(param1:SoundResource) : void
       {
-         this.Renamed4322 = param1;
+         this.ProtectionContexts2 = param1;
       }
       
       public function toString() : String

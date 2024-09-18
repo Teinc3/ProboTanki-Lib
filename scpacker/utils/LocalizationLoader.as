@@ -13,7 +13,7 @@ package scpacker.utils
    import platform.client.core.general.resourcelocale.format.LocalizedFileFormat;
    import platform.client.core.general.resourcelocale.format.StringPair;
    import platform.client.fp10.core.resource.BatchImageConstructor;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class LocalizationLoader
    {
@@ -42,7 +42,7 @@ package scpacker.utils
       
       protected function onLoadingComplete(param1:Event) : void
       {
-         var _loc2_:Renamed536 = Renamed536(OSGi.getInstance().getService(Renamed536));
+         var _loc2_:CodecRegisterer = CodecRegisterer(OSGi.getInstance().getService(CodecRegisterer));
          var _loc3_:ByteArray = URLLoader(param1.target).data;
          _loc3_.uncompress();
          this.Renamed10777 = LocalizedFileFormat(_loc2_.getCodec("scpacker.networking.protocol.codec.custom.CodecLocaleStruct").decode(_loc3_));

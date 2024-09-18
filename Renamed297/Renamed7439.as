@@ -1,6 +1,6 @@
 package Renamed297
 {
-   import Renamed189.AbstractPacket;
+   import AbstractPackets.AbstractPacket;
    import projects.tanks.client.battlefield.models.bonus.battle.Renamed7400;
    
    public class Renamed7439 extends AbstractPacket
@@ -11,11 +11,11 @@ package Renamed297
       {
          super();
          this.Renamed7440 = param1;
-         Renamed1258(param1);
-         Renamed4880("scpacker.networking.protocol.codec.custom.VectorCodecBonusSpawnData");
+         addObjToAbsPacket(param1);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.custom.VectorCodecBonusSpawnData");
       }
       
-      override public function Renamed4881(param1:Object, param2:int) : void
+      override public function Implement(param1:Object, param2:int) : void
       {
          switch(param2)
          {
@@ -24,12 +24,12 @@ package Renamed297
          }
       }
       
-      override public function Renamed4882() : AbstractPacket
+      override public function getReference() : AbstractPacket
       {
          return new Renamed7439();
       }
       
-      override public function Renamed4883() : int
+      override public function getCorrespondingModel() : int
       {
          return 41;
       }

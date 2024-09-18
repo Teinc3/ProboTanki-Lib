@@ -3,7 +3,7 @@ package scpacker.networking.protocol.codec.custom
    import Renamed4808.Renamed5536;
    import Renamed5811.ICodec;
    import flash.utils.ByteArray;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class VectorCodecDailyQuestInfo implements ICodec
    {
@@ -11,7 +11,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed5009:Boolean;
       
-      public function VectorCodecDailyQuestInfo(param1:Renamed536)
+      public function VectorCodecDailyQuestInfo(param1:CodecRegisterer)
       {
          super();
          this.elementCodec = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecDailyQuestInfo");

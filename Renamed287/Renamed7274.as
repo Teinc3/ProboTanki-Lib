@@ -1,7 +1,7 @@
 package Renamed7273
 {
-   import Renamed189.AbstractPacket;
-   import Renamed602.Renamed603;
+   import AbstractPackets.AbstractPacket;
+   import Renamed602.3DPositionVector;
    
    public class Renamed7274 extends AbstractPacket
    {
@@ -9,23 +9,23 @@ package Renamed7273
       
       public var targetTank:String;
       
-      public var localSpotPosition:Renamed603;
+      public var localSpotPosition:3DPositionVector;
       
-      public function Renamed7274(param1:String = "", param2:String = "", param3:Renamed603 = null)
+      public function Renamed7274(param1:String = "", param2:String = "", param3:3DPositionVector = null)
       {
          super();
          this.shooterId = param1;
          this.targetTank = param2;
          this.localSpotPosition = param3;
-         Renamed1258(param1);
-         Renamed4880("scpacker.networking.protocol.codec.primitive.StringCodec");
-         Renamed1258(param2);
-         Renamed4880("scpacker.networking.protocol.codec.primitive.StringCodec");
-         Renamed1258(param3);
-         Renamed4880("scpacker.networking.protocol.codec.custom.CodecVector3d");
+         addObjToAbsPacket(param1);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.primitive.StringCodec");
+         addObjToAbsPacket(param2);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.primitive.StringCodec");
+         addObjToAbsPacket(param3);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.custom.CodecVector3d");
       }
       
-      override public function Renamed4881(param1:Object, param2:int) : void
+      override public function Implement(param1:Object, param2:int) : void
       {
          switch(param2)
          {
@@ -36,16 +36,16 @@ package Renamed7273
                this.targetTank = param1 as String;
                break;
             case 2:
-               this.localSpotPosition = param1 as Renamed603;
+               this.localSpotPosition = param1 as 3DPositionVector;
          }
       }
       
-      override public function Renamed4882() : AbstractPacket
+      override public function getReference() : AbstractPacket
       {
          return new Renamed7274();
       }
       
-      override public function Renamed4883() : int
+      override public function getCorrespondingModel() : int
       {
          return 50;
       }

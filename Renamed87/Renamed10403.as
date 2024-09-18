@@ -8,7 +8,7 @@ package Renamed87
    import Renamed1.Renamed3193;
    import Renamed1.set;
    import Renamed1.Renamed3266;
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import alternativa.engine3d.core.Sorting;
    import alternativa.engine3d.materials.Material;
    import alternativa.engine3d.materials.TextureMaterial;
@@ -272,7 +272,7 @@ package Renamed87
             {
                this.Renamed10370 = new Vector.<Renamed7757>();
             }
-            this.Renamed10370.push(new Renamed7757(false,param1,param5,new Renamed603(param2,param3,param4)));
+            this.Renamed10370.push(new Renamed7757(false,param1,param5,new 3DPositionVector(param2,param3,param4)));
          }
          else
          {

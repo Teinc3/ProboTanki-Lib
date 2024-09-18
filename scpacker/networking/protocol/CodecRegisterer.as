@@ -130,21 +130,21 @@ package scpacker.networking.protocol
    import scpacker.networking.protocol.codec.primitive.LongCodec;
    import scpacker.networking.protocol.codec.primitive.ShortCodec;
    import scpacker.networking.protocol.codec.primitive.StringCodec;
-   import Renamed432.PrimitiveProtectionContext;
-   import Renamed432.Renamed8867;
-   import Renamed432.Renamed8866;
+   import ProtectionContexts.PrimitiveProtectionContext;
+   import ProtectionContexts.XorProtectionContext;
+   import ProtectionContexts.IProtectionContext;
    
-   public class Renamed536
+   public class CodecRegisterer
    {
-      private var Renamed10530:Dictionary;
+      private var registeredCodecsDict:Dictionary;
       
-      private var context:Renamed8866;
+      private var context:IProtectionContext;
       
       private var Renamed10531:Boolean = false;
       
-      public function Renamed536()
+      public function CodecRegisterer()
       {
-         this.Renamed10530 = new Dictionary();
+         this.registeredCodecsDict = new Dictionary();
          this.context = new PrimitiveProtectionContext();
          super();
          this.registerCodecForType(new BooleanCodec());
@@ -277,24 +277,24 @@ package scpacker.networking.protocol
       
       public function hashReceived(param1:Vector.<int>) : void
       {
-         this.context = new Renamed8867(param1);
+         this.context = new XorProtectionContext(param1);
          Network(OSGi.getInstance().getService(Network)).send(new Renamed8598(ILocaleService(OSGi.getInstance().getService(ILocaleService)).language));
          this.Renamed10531 = true;
       }
       
-      public function Renamed5816() : Renamed8866
+      public function getProtectionContext() : IProtectionContext
       {
          return this.context;
       }
       
       public function registerCodecForType(param1:ICodec) : void
       {
-         this.Renamed10530[getQualifiedClassName(param1).replace("::",".")] = param1;
+         this.registeredCodecsDict[getQualifiedClassName(param1).replace("::",".")] = param1;
       }
       
       public function getCodec(param1:String) : ICodec
       {
-         return this.Renamed10530[param1];
+         return this.registeredCodecsDict[param1];
       }
       
       public function get Renamed10532() : Boolean

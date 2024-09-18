@@ -1,6 +1,6 @@
 package alternativa.tanks.models.tank
 {
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import alternativa.math.Vector3;
    import Renamed461.Renamed2772;
    
@@ -36,14 +36,14 @@ package alternativa.tanks.models.tank
          param2.control = param1.control;
       }
       
-      public static function Renamed680(param1:Renamed603, param2:Renamed603) : void
+      public static function Renamed680(param1:3DPositionVector, param2:3DPositionVector) : void
       {
          param2.x = param1.x;
          param2.y = param1.y;
          param2.z = param1.z;
       }
       
-      public static function Renamed2733(param1:Vector3, param2:Renamed603) : Number
+      public static function Renamed2733(param1:Vector3, param2:3DPositionVector) : Number
       {
          var _loc3_:Number = param1.x - param2.x;
          var _loc4_:Number = param1.y - param2.y;
@@ -68,19 +68,19 @@ package alternativa.tanks.models.tank
       
       private static function Renamed2997(param1:Renamed2772, param2:Renamed2772) : Boolean
       {
-         var _loc3_:Renamed603 = param2.orientation;
-         var _loc4_:Renamed603 = param1.orientation;
+         var _loc3_:3DPositionVector = param2.orientation;
+         var _loc4_:3DPositionVector = param1.orientation;
          return Math.abs(_loc4_.x - _loc3_.x) < Renamed2993 && Math.abs(_loc4_.y - _loc3_.y) < Renamed2993 && Math.abs(_loc4_.z - _loc3_.z) < Renamed2993;
       }
       
       private static function Renamed2999(param1:Renamed2772, param2:Renamed2772) : Boolean
       {
-         var _loc3_:Renamed603 = param2.angularVelocity;
-         var _loc4_:Renamed603 = param1.angularVelocity;
+         var _loc3_:3DPositionVector = param2.angularVelocity;
+         var _loc4_:3DPositionVector = param1.angularVelocity;
          return Math.abs(_loc4_.x - _loc3_.x) < Renamed2995 && Math.abs(_loc4_.y - _loc3_.y) < Renamed2995 && Math.abs(_loc4_.z - _loc3_.z) < Renamed2995;
       }
       
-      private static function Renamed3000(param1:Renamed603, param2:Renamed603) : Number
+      private static function Renamed3000(param1:3DPositionVector, param2:3DPositionVector) : Number
       {
          var _loc3_:Number = param1.x - param2.x;
          var _loc4_:Number = param1.y - param2.y;
@@ -88,14 +88,14 @@ package alternativa.tanks.models.tank
          return _loc3_ * _loc3_ + _loc4_ * _loc4_ + _loc5_ * _loc5_;
       }
       
-      private static function Renamed3001(param1:Renamed603, param2:Renamed603) : Number
+      private static function Renamed3001(param1:3DPositionVector, param2:3DPositionVector) : Number
       {
          var _loc3_:Number = length(param1);
          var _loc4_:Number = length(param2);
          return (param1.x * param2.x + param1.y * param2.y + param1.z * param2.z) / _loc3_ / _loc4_;
       }
       
-      private static function length(param1:Renamed603) : Number
+      private static function length(param1:3DPositionVector) : Number
       {
          return Math.sqrt(param1.x * param1.x + param1.y * param1.y + param1.z * param1.z);
       }
@@ -117,8 +117,8 @@ package alternativa.tanks.models.tank
       
       private static function Renamed3004(param1:Renamed2772, param2:Renamed2772) : String
       {
-         var _loc3_:Renamed603 = param2.orientation;
-         var _loc4_:Renamed603 = param1.orientation;
+         var _loc3_:3DPositionVector = param2.orientation;
+         var _loc4_:3DPositionVector = param1.orientation;
          return "ori: [X:" + Math.abs(_loc4_.x - _loc3_.x) + "/" + Renamed2993 + "];[Y:" + Math.abs(_loc4_.x - _loc3_.x) + "/" + Renamed2993 + "];[Z:" + Math.abs(_loc4_.x - _loc3_.x) + "/" + Renamed2993 + "]";
       }
       
@@ -129,8 +129,8 @@ package alternativa.tanks.models.tank
       
       private static function Renamed3006(param1:Renamed2772, param2:Renamed2772) : String
       {
-         var _loc3_:Renamed603 = param2.angularVelocity;
-         var _loc4_:Renamed603 = param1.angularVelocity;
+         var _loc3_:3DPositionVector = param2.angularVelocity;
+         var _loc4_:3DPositionVector = param1.angularVelocity;
          return "oV: [X:" + Math.abs(_loc4_.x - _loc3_.x) + "/" + Renamed2995 + "];[Y:" + Math.abs(_loc4_.x - _loc3_.x) + "/" + Renamed2995 + "];[Z:" + Math.abs(_loc4_.x - _loc3_.x) + "/" + Renamed2995 + "]";
       }
    }

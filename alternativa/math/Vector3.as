@@ -1,6 +1,6 @@
 package alternativa.math
 {
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import flash.geom.Vector3D;
    import flash.utils.getQualifiedClassName;
    
@@ -339,9 +339,9 @@ package alternativa.math
          this.z -= _loc2_ * param1.z;
       }
       
-      public function toVector3d() : Renamed603
+      public function toVector3d() : 3DPositionVector
       {
-         return new Renamed603(this.x,this.y,this.z);
+         return new 3DPositionVector(this.x,this.y,this.z);
       }
    }
 }

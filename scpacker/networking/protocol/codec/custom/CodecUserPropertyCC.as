@@ -3,7 +3,7 @@ package scpacker.networking.protocol.codec.custom
    import Renamed5811.ICodec;
    import flash.utils.ByteArray;
    import projects.tanks.client.panel.model.profile.userproperty.UserPropertyCC;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class CodecUserPropertyCC implements ICodec
    {
@@ -41,7 +41,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed10756:ICodec;
       
-      public function CodecUserPropertyCC(param1:Renamed536)
+      public function CodecUserPropertyCC(param1:CodecRegisterer)
       {
          super();
          this.Renamed10746 = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");

@@ -5,7 +5,7 @@ package scpacker.networking.protocol.codec.custom
    import alternativa.osgi.service.clientlog.IClientLog;
    import Renamed312.Renamed1585;
    import flash.utils.ByteArray;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class CodecBattleLimits implements ICodec
    {
@@ -15,7 +15,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed10584:ICodec;
       
-      public function CodecBattleLimits(param1:Renamed536)
+      public function CodecBattleLimits(param1:CodecRegisterer)
       {
          super();
          this.Renamed10583 = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");

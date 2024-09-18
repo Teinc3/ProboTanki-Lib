@@ -15,7 +15,7 @@ package projects.tanks.clients.flash.commonsflash
    import Renamed330.Renamed4477;
    import Renamed341.Renamed4478;
    import Renamed350.Renamed4449;
-   import Renamed404.Renamed1899;
+   import Renamed404.AbstractPackets9;
    import platform.client.fp10.core.model.ObjectLoadListener;
    import platform.client.fp10.core.model.ObjectUnloadListener;
    import platform.client.fp10.core.registry.ModelRegistry;
@@ -200,17 +200,17 @@ package projects.tanks.clients.flash.commonsflash
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            Renamed1899.localeService = ILocaleService(param1);
+            AbstractPackets9.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return Renamed1899.localeService;
+            return AbstractPackets9.localeService;
          });
          osgi.injectService(LogService,function(param1:Object):void
          {
-            Renamed1899.logService = LogService(param1);
+            AbstractPackets9.logService = LogService(param1);
          },function():LogService
          {
-            return Renamed1899.logService;
+            return AbstractPackets9.logService;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {

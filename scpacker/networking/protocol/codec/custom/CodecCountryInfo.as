@@ -3,7 +3,7 @@ package scpacker.networking.protocol.codec.custom
    import Renamed5811.ICodec;
    import flash.utils.ByteArray;
    import Renamed371.Renamed2242;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class CodecCountryInfo implements ICodec
    {
@@ -11,7 +11,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed10652:ICodec;
       
-      public function CodecCountryInfo(param1:Renamed536)
+      public function CodecCountryInfo(param1:CodecRegisterer)
       {
          super();
          this.Renamed10651 = param1.getCodec("scpacker.networking.protocol.codec.primitive.StringCodec");

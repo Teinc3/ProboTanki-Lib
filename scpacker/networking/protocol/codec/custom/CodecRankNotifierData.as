@@ -5,7 +5,7 @@ package scpacker.networking.protocol.codec.custom
    import alternativa.osgi.service.clientlog.IClientLog;
    import flash.utils.ByteArray;
    import projects.tanks.client.tanksservices.model.notifier.rank.RankNotifierData;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class CodecRankNotifierData implements ICodec
    {
@@ -15,7 +15,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed10607:ICodec;
       
-      public function CodecRankNotifierData(param1:Renamed536)
+      public function CodecRankNotifierData(param1:CodecRegisterer)
       {
          super();
          this.Renamed10708 = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");

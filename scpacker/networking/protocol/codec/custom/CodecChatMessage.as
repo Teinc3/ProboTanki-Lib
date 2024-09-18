@@ -6,7 +6,7 @@ package scpacker.networking.protocol.codec.custom
    import flash.utils.ByteArray;
    import projects.tanks.client.chat.types.ChatMessage;
    import projects.tanks.client.chat.types.UserStatus;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class CodecChatMessage implements ICodec
    {
@@ -14,34 +14,34 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed10635:ICodec;
       
-      private var Renamed10636:ICodec;
+      private var sourceStatusCodec:ICodec;
       
       private var Renamed10637:ICodec;
       
-      private var Renamed10638:ICodec;
+      private var targetStatusCodec:ICodec;
       
-      private var Renamed10639:ICodec;
+      private var textCodec:ICodec;
       
-      private var Renamed10640:ICodec;
+      private var warningCodec:ICodec;
       
-      public function CodecChatMessage(param1:Renamed536)
+      public function CodecChatMessage(param1:CodecRegisterer)
       {
          super();
-         this.Renamed10636 = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecUserStatus");
+         this.sourceStatusCodec = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecUserStatus");
          this.Renamed10637 = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");
-         this.Renamed10638 = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecUserStatus");
-         this.Renamed10639 = param1.getCodec("scpacker.networking.protocol.codec.primitive.StringCodec");
-         this.Renamed10640 = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");
+         this.targetStatusCodec = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecUserStatus");
+         this.textCodec = param1.getCodec("scpacker.networking.protocol.codec.primitive.StringCodec");
+         this.warningCodec = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");
       }
       
       public function decode(param1:ByteArray) : Object
       {
          var _loc2_:ChatMessage = new ChatMessage();
-         _loc2_.sourceUserStatus = this.Renamed10636.decode(param1) as UserStatus;
+         _loc2_.sourceUserStatus = this.sourceStatusCodec.decode(param1) as UserStatus;
          _loc2_.system = this.Renamed10637.decode(param1) as Boolean;
-         _loc2_.targetUserStatus = this.Renamed10638.decode(param1) as UserStatus;
-         _loc2_.text = this.Renamed10639.decode(param1) as String;
-         _loc2_.warning = this.Renamed10640.decode(param1) as Boolean;
+         _loc2_.targetUserStatus = this.targetStatusCodec.decode(param1) as UserStatus;
+         _loc2_.text = this.textCodec.decode(param1) as String;
+         _loc2_.warning = this.warningCodec.decode(param1) as Boolean;
          return _loc2_;
       }
       
@@ -52,11 +52,11 @@ package scpacker.networking.protocol.codec.custom
             throw new Error("Object is null. Use @ProtocolOptional annotation.");
          }
          var _loc3_:ChatMessage = ChatMessage(param2);
-         this.Renamed10636.encode(param1,_loc3_.sourceUserStatus);
+         this.sourceStatusCodec.encode(param1,_loc3_.sourceUserStatus);
          this.Renamed10637.encode(param1,_loc3_.system);
-         this.Renamed10638.encode(param1,_loc3_.targetUserStatus);
-         this.Renamed10639.encode(param1,_loc3_.text);
-         this.Renamed10640.encode(param1,_loc3_.warning);
+         this.targetStatusCodec.encode(param1,_loc3_.targetUserStatus);
+         this.textCodec.encode(param1,_loc3_.text);
+         this.warningCodec.encode(param1,_loc3_.warning);
          return 4;
       }
    }

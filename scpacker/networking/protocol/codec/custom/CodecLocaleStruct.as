@@ -7,7 +7,7 @@ package scpacker.networking.protocol.codec.custom
    import platform.client.core.general.resourcelocale.format.ImagePair;
    import platform.client.core.general.resourcelocale.format.LocalizedFileFormat;
    import platform.client.core.general.resourcelocale.format.StringPair;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class CodecLocaleStruct implements ICodec
    {
@@ -17,7 +17,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed6557:ICodec;
       
-      public function CodecLocaleStruct(param1:Renamed536)
+      public function CodecLocaleStruct(param1:CodecRegisterer)
       {
          super();
          this.Renamed6553 = param1.getCodec("scpacker.networking.protocol.codec.custom.VectorCodecImagePair");

@@ -21,7 +21,7 @@ package alternativa.tanks.gui
       [Inject]
       public static var localeService:ILocaleService;
       
-      private static const Renamed1908:Class = Renamed1898;
+      private static const Renamed1908:Class = AbstractPackets8;
       
       private static const Renamed1909:BitmapData = new Renamed1908().bitmapData;
       

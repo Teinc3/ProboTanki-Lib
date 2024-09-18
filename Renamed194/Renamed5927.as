@@ -42,7 +42,7 @@ package Renamed194
          switch(param1)
          {
             case this.Renamed5928:
-               this.client.Renamed5925(this.Renamed5929.decode(param2) as Vector.<Renamed5920>);
+               this.client.Renamed5925(this.Renamed5929.decode(param2) as Vector.<TargetTankDamage>);
          }
       }
       

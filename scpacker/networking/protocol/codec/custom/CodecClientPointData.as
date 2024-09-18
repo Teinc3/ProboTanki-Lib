@@ -2,12 +2,12 @@ package scpacker.networking.protocol.codec.custom
 {
    import Renamed206.Renamed6103;
    import Renamed206.Renamed5125;
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import Renamed5811.ICodec;
    import alternativa.osgi.OSGi;
    import alternativa.osgi.service.clientlog.IClientLog;
    import flash.utils.ByteArray;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class CodecClientPointData implements ICodec
    {
@@ -27,7 +27,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed10646:ICodec;
       
-      public function CodecClientPointData(param1:Renamed536)
+      public function CodecClientPointData(param1:CodecRegisterer)
       {
          super();
          this.Renamed8880 = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");
@@ -44,7 +44,7 @@ package scpacker.networking.protocol.codec.custom
          var _loc2_:Renamed6103 = new Renamed6103();
          _loc2_.id = this.Renamed8880.decode(param1) as int;
          _loc2_.name = this.Renamed10015.decode(param1) as String;
-         _loc2_.position = this.Renamed10535.decode(param1) as Renamed603;
+         _loc2_.position = this.Renamed10535.decode(param1) as 3DPositionVector;
          _loc2_.score = this.Renamed10574.decode(param1) as Number;
          _loc2_.Renamed6106 = this.Renamed10644.decode(param1) as Number;
          _loc2_.state = this.Renamed10645.decode(param1) as Renamed5125;

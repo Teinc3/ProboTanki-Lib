@@ -5,7 +5,7 @@ package scpacker.networking.protocol.codec.custom
    import alternativa.osgi.service.clientlog.IClientLog;
    import flash.utils.ByteArray;
    import platform.client.core.general.resourcelocale.format.StringPair;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class CodecStringPair implements ICodec
    {
@@ -15,7 +15,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed6550:ICodec;
       
-      public function CodecStringPair(param1:Renamed536)
+      public function CodecStringPair(param1:CodecRegisterer)
       {
          super();
          this.Renamed6549 = param1.getCodec("scpacker.networking.protocol.codec.primitive.StringCodec");

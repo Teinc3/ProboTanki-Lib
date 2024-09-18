@@ -1,6 +1,6 @@
 package alternativa.tanks.models.weapon.shaft
 {
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import Renamed301.Renamed3043;
    import Renamed301.Renamed3044;
    import Renamed479.Renamed3148;
@@ -97,11 +97,11 @@ package alternativa.tanks.models.weapon.shaft
       
       private static function Renamed3162(param1:Vector3, param2:Vector.<Body>, param3:Vector.<Vector3>) : Renamed3142
       {
-         var _loc4_:Vector.<Renamed603> = null;
+         var _loc4_:Vector.<3DPositionVector> = null;
          var _loc5_:Vector.<String> = null;
          var _loc6_:Vector.<int> = null;
-         var _loc7_:Vector.<Renamed603> = null;
-         var _loc8_:Vector.<Renamed603> = null;
+         var _loc7_:Vector.<3DPositionVector> = null;
+         var _loc8_:Vector.<3DPositionVector> = null;
          var _loc9_:uint = 0;
          var _loc10_:int = 0;
          var _loc11_:Body = null;
@@ -110,11 +110,11 @@ package alternativa.tanks.models.weapon.shaft
          if(param2 != null && param2.length > 0)
          {
             _loc9_ = param2.length;
-            _loc4_ = new Vector.<Renamed603>(_loc9_);
+            _loc4_ = new Vector.<3DPositionVector>(_loc9_);
             _loc5_ = new Vector.<String>(_loc9_);
             _loc6_ = new Vector.<int>(_loc9_);
-            _loc7_ = new Vector.<Renamed603>(_loc9_);
-            _loc8_ = new Vector.<Renamed603>(_loc9_);
+            _loc7_ = new Vector.<3DPositionVector>(_loc9_);
+            _loc8_ = new Vector.<3DPositionVector>(_loc9_);
             _loc10_ = 0;
             while(_loc10_ < _loc9_)
             {
@@ -157,7 +157,7 @@ package alternativa.tanks.models.weapon.shaft
       }
       
       [Obfuscation(rename="false")]
-      public function fire(param1:ClientObject, param2:Renamed603, param3:Vector.<String>, param4:Vector.<Renamed603>, param5:Number) : void
+      public function fire(param1:ClientObject, param2:3DPositionVector, param3:Vector.<String>, param4:Vector.<3DPositionVector>, param5:Number) : void
       {
          var _loc6_:Vector.<Vector3> = null;
          var _loc7_:Vector.<Body> = null;

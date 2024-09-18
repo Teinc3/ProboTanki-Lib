@@ -1,6 +1,6 @@
 package Renamed352
 {
-   import Renamed189.AbstractPacket;
+   import AbstractPackets.AbstractPacket;
    
    public class Renamed4310 extends AbstractPacket
    {
@@ -16,15 +16,15 @@ package Renamed352
          this.uid = param1;
          this.password = param2;
          this.rememberMe = param3;
-         Renamed1258(param1);
-         Renamed4880("scpacker.networking.protocol.codec.primitive.StringCodec");
-         Renamed1258(param2);
-         Renamed4880("scpacker.networking.protocol.codec.primitive.StringCodec");
-         Renamed1258(param3);
-         Renamed4880("scpacker.networking.protocol.codec.primitive.BooleanCodec");
+         addObjToAbsPacket(param1);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.primitive.StringCodec");
+         addObjToAbsPacket(param2);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.primitive.StringCodec");
+         addObjToAbsPacket(param3);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.primitive.BooleanCodec");
       }
       
-      override public function Renamed4881(param1:Object, param2:int) : void
+      override public function Implement(param1:Object, param2:int) : void
       {
          switch(param2)
          {
@@ -39,12 +39,12 @@ package Renamed352
          }
       }
       
-      override public function Renamed4882() : AbstractPacket
+      override public function getReference() : AbstractPacket
       {
          return new Renamed4310();
       }
       
-      override public function Renamed4883() : int
+      override public function getCorrespondingModel() : int
       {
          return 8;
       }

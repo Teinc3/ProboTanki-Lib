@@ -5,7 +5,7 @@ package scpacker.networking.protocol.codec.custom
    import alternativa.osgi.service.clientlog.IClientLog;
    import flash.utils.ByteArray;
    import projects.tanks.client.panel.model.dailyquest.Renamed4365;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class CodecDailyQuestPrizeInfo implements ICodec
    {
@@ -15,7 +15,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed10015:ICodec;
       
-      public function CodecDailyQuestPrizeInfo(param1:Renamed536)
+      public function CodecDailyQuestPrizeInfo(param1:CodecRegisterer)
       {
          super();
          this.Renamed10659 = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");

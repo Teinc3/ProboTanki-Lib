@@ -3,7 +3,7 @@ package scpacker.networking.protocol.codec.custom
    import Renamed5811.ICodec;
    import flash.utils.ByteArray;
    import projects.tanks.client.panel.model.premiumaccount.alert.PremiumAccountAlertCC;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class CodecPremiumAccountAlertCC implements ICodec
    {
@@ -17,7 +17,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed10703:ICodec;
       
-      public function CodecPremiumAccountAlertCC(param1:Renamed536)
+      public function CodecPremiumAccountAlertCC(param1:CodecRegisterer)
       {
          super();
          this.Renamed10699 = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");

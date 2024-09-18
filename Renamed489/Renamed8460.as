@@ -1,7 +1,7 @@
 package Renamed489
 {
-   import Renamed602.Renamed603;
-   import Renamed349.Renamed3105;
+   import Renamed602.3DPositionVector;
+   import Renamed349.TargetHitInfo;
    
    public interface Renamed8460
    {
@@ -9,7 +9,7 @@ package Renamed489
       
       function Renamed4862() : void;
       
-      function Renamed3114(param1:Renamed603, param2:Vector.<Renamed3105>) : void;
+      function Renamed3114(param1:3DPositionVector, param2:Vector.<TargetHitInfo>) : void;
    }
 }
 

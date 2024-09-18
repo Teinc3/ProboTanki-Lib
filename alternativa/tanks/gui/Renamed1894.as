@@ -91,14 +91,14 @@ package alternativa.tanks.gui
          removeEventListener(Event.ADDED_TO_STAGE,this.ConfigUI);
          this.Renamed1889 = 1;
          this.list.rowHeight = 20;
-         this.list.setStyle("cellRenderer",Renamed1890);
+         this.list.setStyle("cellRenderer",AbstractPackets0);
          this.list.dataProvider = this.dp;
          this.list.focusEnabled = false;
          ConfigureScroll.configScrollList(this.list,ScrollArrowDownGreen,ScrollArrowUpGreen,ScrollTrackGreen,ScrollThumbSkinGreen);
          addChild(this.header);
          addChild(this.list);
          this.list.y = 20;
-         this.header.addEventListener(Renamed1888.Renamed1891,this.Renamed1892);
+         this.header.addEventListener(Renamed1888.AbstractPackets1,this.AbstractPackets2);
       }
       
       override public function set height(param1:Number) : void
@@ -161,9 +161,9 @@ package alternativa.tanks.gui
          this.dp.invalidate();
       }
       
-      protected function Renamed1892(param1:Renamed1888) : void
+      protected function AbstractPackets2(param1:Renamed1888) : void
       {
-         this.Renamed1889 = param1.Renamed1893;
+         this.Renamed1889 = param1.AbstractPackets3;
          this.clear();
          this.width = this._width;
       }

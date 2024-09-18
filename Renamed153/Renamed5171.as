@@ -1,6 +1,6 @@
 package Renamed5154
 {
-   import Renamed189.AbstractPacket;
+   import AbstractPackets.AbstractPacket;
    
    public class Renamed5170 extends AbstractPacket
    {
@@ -10,11 +10,11 @@ package Renamed5154
       {
          super();
          this.itemId = param1;
-         Renamed1258(param1);
-         Renamed4880("scpacker.networking.protocol.codec.primitive.StringCodec");
+         addObjToAbsPacket(param1);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.primitive.StringCodec");
       }
       
-      override public function Renamed4881(param1:Object, param2:int) : void
+      override public function Implement(param1:Object, param2:int) : void
       {
          switch(param2)
          {
@@ -23,12 +23,12 @@ package Renamed5154
          }
       }
       
-      override public function Renamed4882() : AbstractPacket
+      override public function getReference() : AbstractPacket
       {
          return new Renamed5170();
       }
       
-      override public function Renamed4883() : int
+      override public function getCorrespondingModel() : int
       {
          return 43;
       }

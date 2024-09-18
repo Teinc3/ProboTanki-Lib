@@ -5,7 +5,7 @@ package Renamed404
    import flash.globalization.DateTimeFormatter;
    import projects.tanks.clients.fp10.libraries.TanksLocale;
    
-   public class Renamed1899
+   public class AbstractPackets9
    {
       [Inject]
       public static var localeService:ILocaleService;
@@ -19,7 +19,7 @@ package Renamed404
       
       private static var Renamed8572:DateTimeFormatter;
       
-      public function Renamed1899()
+      public function AbstractPackets9()
       {
          super();
       }

@@ -35,7 +35,7 @@ package Renamed325
       public function objectLoaded(param1:ClientObject) : void
       {
          var _loc2_:BattleBonusData = new BattleBonusData();
-         _loc2_.boxMesh = this.Renamed7753(getInitParam().Renamed5369);
+         _loc2_.boxMesh = this.Renamed7753(getInitParam().CodecRegisterer9);
          _loc2_.parachuteOuterMesh = this.Renamed7753(getInitParam().parachuteResource);
          _loc2_.parachuteInnerMesh = this.Renamed7753(getInitParam().parachuteInnerResource);
          _loc2_.cordsMaterial = Renamed1368.getMaterial(getInitParam().cordResource.data);

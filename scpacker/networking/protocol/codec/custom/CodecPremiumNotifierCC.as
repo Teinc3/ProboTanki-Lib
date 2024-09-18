@@ -3,13 +3,13 @@ package scpacker.networking.protocol.codec.custom
    import Renamed5811.ICodec;
    import flash.utils.ByteArray;
    import projects.tanks.client.tanksservices.model.notifier.premium.PremiumNotifierCC;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class CodecPremiumNotifierCC implements ICodec
    {
       private var Renamed10704:ICodec;
       
-      public function CodecPremiumNotifierCC(param1:Renamed536)
+      public function CodecPremiumNotifierCC(param1:CodecRegisterer)
       {
          super();
          this.Renamed10704 = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");

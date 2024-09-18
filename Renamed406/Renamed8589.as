@@ -6,7 +6,7 @@ package Renamed406
    import Renamed385.Renamed4886;
    import platform.client.fp10.core.model.impl.Model;
    import platform.loading.DispatcherModel;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    import scpacker.server.models.locale.LocalizationLoader;
    import scpacker.utils.ResourcesLoader;
    
@@ -36,13 +36,13 @@ package Renamed406
       {
          switch(param1.getPacketId())
          {
-            case Renamed8593.Renamed8594:
-               this.Renamed8595(param1);
+            case EntrancePacketIDs.hash:
+               this.setHash(param1);
                break;
-            case Renamed8593.Renamed8596:
+            case EntrancePacketIDs.Renamed8596:
                this.loadDependencies(param1);
                break;
-            case Renamed8593.Renamed8597:
+            case EntrancePacketIDs.Renamed8597:
                this.onResourceLoaded();
          }
       }
@@ -59,9 +59,9 @@ package Renamed406
          this.Renamed5655.objectLoadedPost();
       }
       
-      private function Renamed8595(param1:Object) : void
+      private function setHash(param1:Object) : void
       {
-         Renamed536(OSGi.getInstance().getService(Renamed536)).hashReceived(param1.protectionData);
+         CodecRegisterer(OSGi.getInstance().getService(CodecRegisterer)).hashReceived(param1.protectionData);
       }
    }
 }

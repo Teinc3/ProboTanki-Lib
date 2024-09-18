@@ -1,12 +1,12 @@
 package Renamed489
 {
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import alternativa.osgi.OSGi;
    import alternativa.protocol.ICodec;
    import alternativa.protocol.IProtocol;
    import alternativa.protocol.ProtocolBuffer;
    import alternativa.types.Long;
-   import Renamed349.Renamed3105;
+   import Renamed349.TargetHitInfo;
    import platform.client.fp10.core.model.IModel;
    import platform.client.fp10.core.model.impl.Model;
    
@@ -58,7 +58,7 @@ package Renamed489
                this.client.Renamed4862();
                break;
             case this.Renamed9614:
-               this.client.Renamed3114(Renamed603(this.Renamed9615.decode(param2)),this.Renamed9616.decode(param2) as Vector.<Renamed3105>);
+               this.client.Renamed3114(3DPositionVector(this.Renamed9615.decode(param2)),this.Renamed9616.decode(param2) as Vector.<TargetHitInfo>);
          }
       }
       

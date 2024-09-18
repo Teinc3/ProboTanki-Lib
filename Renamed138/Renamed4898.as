@@ -1,6 +1,6 @@
 package Renamed4292
 {
-   import Renamed189.AbstractPacket;
+   import AbstractPackets.AbstractPacket;
    import projects.tanks.client.entrance.model.entrance.externalentrance.SocialNetworkEntranceParams;
    
    public class Renamed4898 extends AbstractPacket
@@ -11,11 +11,11 @@ package Renamed4292
       {
          super();
          this.socialNetworkParams = param1;
-         Renamed1258(param1);
-         Renamed4880("scpacker.networking.protocol.codec.custom.VectorCodecSocialNetworkEntranceParams");
+         addObjToAbsPacket(param1);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.custom.VectorCodecSocialNetworkEntranceParams");
       }
       
-      override public function Renamed4881(param1:Object, param2:int) : void
+      override public function Implement(param1:Object, param2:int) : void
       {
          switch(param2)
          {
@@ -24,12 +24,12 @@ package Renamed4292
          }
       }
       
-      override public function Renamed4882() : AbstractPacket
+      override public function getReference() : AbstractPacket
       {
          return new Renamed4898();
       }
       
-      override public function Renamed4883() : int
+      override public function getCorrespondingModel() : int
       {
          return 3;
       }

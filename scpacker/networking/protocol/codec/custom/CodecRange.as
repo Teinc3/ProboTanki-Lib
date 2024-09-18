@@ -5,7 +5,7 @@ package scpacker.networking.protocol.codec.custom
    import alternativa.osgi.service.clientlog.IClientLog;
    import flash.utils.ByteArray;
    import projects.tanks.client.battleservice.Renamed1586;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class CodecRange implements ICodec
    {
@@ -15,7 +15,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed10707:ICodec;
       
-      public function CodecRange(param1:Renamed536)
+      public function CodecRange(param1:CodecRegisterer)
       {
          super();
          this.Renamed10706 = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");

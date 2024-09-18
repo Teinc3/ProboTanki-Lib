@@ -5,7 +5,7 @@ package scpacker.networking.protocol.codec.custom
    import alternativa.osgi.service.clientlog.IClientLog;
    import flash.utils.ByteArray;
    import projects.tanks.client.tanksservices.model.notifier.uid.UidNotifierData;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class Renamed10528 implements ICodec
    {
@@ -15,7 +15,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed10607:ICodec;
       
-      public function Renamed10528(param1:Renamed536)
+      public function Renamed10528(param1:CodecRegisterer)
       {
          super();
          this.Renamed10745 = param1.getCodec("scpacker.networking.protocol.codec.primitive.StringCodec");

@@ -3,7 +3,7 @@ package alternativa.tanks.battle.objects.tank
    import Renamed136.Renamed663;
    import Renamed211.Renamed908;
    import Renamed1.Renamed909;
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import Renamed838.Renamed910;
    import Renamed838.Renamed911;
    import Renamed838.Renamed840;
@@ -270,7 +270,7 @@ package alternativa.tanks.battle.objects.tank
          this.Renamed982.Renamed1002();
       }
       
-      private static function Renamed1003(param1:BodyState, param2:Renamed603, param3:Renamed603, param4:Renamed603, param5:Renamed603) : void
+      private static function Renamed1003(param1:BodyState, param2:3DPositionVector, param3:3DPositionVector, param4:3DPositionVector, param5:3DPositionVector) : void
       {
          Renamed668.Renamed679(param1.position,param2);
          var _loc6_:Quaternion = param1.orientation;
@@ -889,7 +889,7 @@ package alternativa.tanks.battle.objects.tank
          return this.Renamed696().state.velocity.length();
       }
       
-      public function Renamed1106(param1:Renamed603, param2:Renamed603, param3:Renamed603, param4:Renamed603) : void
+      public function Renamed1106(param1:3DPositionVector, param2:3DPositionVector, param3:3DPositionVector, param4:3DPositionVector) : void
       {
          var _loc5_:Body = this.Renamed982.body;
          var _loc6_:BodyState = _loc5_.state;
@@ -927,12 +927,12 @@ package alternativa.tanks.battle.objects.tank
          this.Renamed980.Renamed1110(param1);
       }
       
-      public function Renamed1111(param1:Renamed603, param2:Renamed603, param3:Renamed603, param4:Renamed603) : void
+      public function Renamed1111(param1:3DPositionVector, param2:3DPositionVector, param3:3DPositionVector, param4:3DPositionVector) : void
       {
          Renamed1003(this.Renamed982.body.state,param1,param2,param3,param4);
       }
       
-      public function Renamed1112(param1:Renamed603, param2:Renamed603, param3:Renamed603, param4:Renamed603) : void
+      public function Renamed1112(param1:3DPositionVector, param2:3DPositionVector, param3:3DPositionVector, param4:3DPositionVector) : void
       {
          Renamed1003(this.Renamed982.body.prevState,param1,param2,param3,param4);
       }

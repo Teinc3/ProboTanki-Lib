@@ -5,7 +5,7 @@ package alternativa.tanks.gui
    import flash.display.Sprite;
    import forms.ColorConstants;
    import forms.userlabel.UserLabel;
-   import Renamed404.Renamed1899;
+   import Renamed404.AbstractPackets9;
    import projects.tanks.clients.fp10.libraries.TanksLocale;
    
    public class Renamed1743 extends Sprite
@@ -53,7 +53,7 @@ package alternativa.tanks.gui
          this.Renamed1901 = new UserLabel(param1);
          this.Renamed1901.x = this.Renamed1900.textWidth + 2;
          addChild(this.Renamed1901);
-         this.dateLabel.text = localeService.getText(TanksLocale.TEXT_PRESENT_INFO_DATE_LABEL) + " " + Renamed1899.Renamed1902(param2) + " " + Renamed1899.formatTime(param2);
+         this.dateLabel.text = localeService.getText(TanksLocale.TEXT_PRESENT_INFO_DATE_LABEL) + " " + AbstractPackets9.Renamed1902(param2) + " " + AbstractPackets9.formatTime(param2);
          this.messageLabel.text = param3;
       }
       

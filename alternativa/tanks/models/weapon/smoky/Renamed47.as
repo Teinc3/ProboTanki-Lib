@@ -3,7 +3,7 @@ package alternativa.tanks.models.weapon.smoky
    import Renamed21.Renamed3488;
    import Renamed21.Renamed22;
    import Renamed250.Renamed3489;
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import Renamed301.Renamed3043;
    import Renamed301.Renamed3044;
    import alternativa.math.Vector3;
@@ -95,7 +95,7 @@ package alternativa.tanks.models.weapon.smoky
       }
       
       [Obfuscation(rename="false")]
-      public function Renamed3493(param1:ClientObject, param2:Renamed603) : void
+      public function Renamed3493(param1:ClientObject, param2:3DPositionVector) : void
       {
          var _loc3_:Renamed3476 = this.weapons[param1];
          if(_loc3_ != null)
@@ -105,7 +105,7 @@ package alternativa.tanks.models.weapon.smoky
       }
       
       [Obfuscation(rename="false")]
-      public function Renamed3494(param1:ClientObject, param2:ClientObject, param3:Renamed603, param4:Number, param5:Boolean) : void
+      public function Renamed3494(param1:ClientObject, param2:ClientObject, param3:3DPositionVector, param4:Number, param5:Boolean) : void
       {
          var _loc6_:Tank = null;
          var _loc7_:Vector3 = null;

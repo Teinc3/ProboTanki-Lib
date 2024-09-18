@@ -215,8 +215,8 @@ package Renamed224
       public function addToScene() : void
       {
          var _loc1_:Renamed610 = battleService.Renamed621();
-         _loc1_.Renamed1258(this.skin);
-         _loc1_.Renamed1258(this.lightSource);
+         _loc1_.addObjToAbsPacket(this.skin);
+         _loc1_.addObjToAbsPacket(this.lightSource);
       }
       
       public function get state() : Renamed5410

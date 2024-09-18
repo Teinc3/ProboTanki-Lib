@@ -1,8 +1,8 @@
-package Renamed432
+package ProtectionContexts
 {
    import flash.utils.ByteArray;
    
-   public class PrimitiveProtectionContext implements Renamed8866
+   public class PrimitiveProtectionContext implements IProtectionContext
    {
       public function PrimitiveProtectionContext()
       {

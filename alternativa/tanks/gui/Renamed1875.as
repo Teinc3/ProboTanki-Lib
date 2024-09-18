@@ -6,15 +6,15 @@ package alternativa.tanks.gui
    {
       public static const Renamed1876:String = "ReferalWindowEventSendMail";
       
-      public var Renamed1896:String;
+      public var AbstractPackets6:String;
       
-      public var Renamed1897:String;
+      public var AbstractPackets7:String;
       
       public function Renamed1875(param1:String, param2:String = "", param3:String = "")
       {
          super(param1);
-         this.Renamed1896 = param2;
-         this.Renamed1897 = param3;
+         this.AbstractPackets6 = param2;
+         this.AbstractPackets7 = param3;
       }
    }
 }

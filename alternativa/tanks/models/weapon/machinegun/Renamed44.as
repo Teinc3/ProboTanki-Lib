@@ -10,7 +10,7 @@ package alternativa.tanks.models.weapon.machinegun
    import alternativa.tanks.models.weapons.targeting.Renamed3071;
    import Renamed310.Renamed3120;
    import Renamed310.Renamed3121;
-   import Renamed349.Renamed3105;
+   import Renamed349.TargetHitInfo;
    import Renamed381.Renamed3045;
    import Renamed394.Renamed3074;
    import scpacker.tanks.WeaponsManager;
@@ -39,7 +39,7 @@ package alternativa.tanks.models.weapon.machinegun
          this.Renamed3123(param1).stop();
       }
       
-      public function Renamed3125(param1:ClientObject, param2:Vector3, param3:Vector.<Renamed3105>) : void
+      public function Renamed3125(param1:ClientObject, param2:Vector3, param3:Vector.<TargetHitInfo>) : void
       {
          this.Renamed3123(param1).Renamed3114(param2,param3);
       }

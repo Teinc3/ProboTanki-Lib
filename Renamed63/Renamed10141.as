@@ -108,8 +108,8 @@ package Renamed63
       {
          super.Renamed6065(param1,param2,param3,param4);
          var _loc5_:Renamed610 = battleService.Renamed621();
-         _loc5_.Renamed1258(this.sprite);
-         _loc5_.Renamed1258(this.Renamed10149);
+         _loc5_.addObjToAbsPacket(this.sprite);
+         _loc5_.addObjToAbsPacket(this.Renamed10149);
          _loc5_.Renamed1402(this.Renamed10149);
          _loc5_.Renamed636(this.Renamed10151);
       }

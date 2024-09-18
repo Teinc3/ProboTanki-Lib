@@ -1,6 +1,6 @@
 package projects.tanks.client.battlefield.models.bonus.battle
 {
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import platform.client.fp10.core.type.IGameObject;
    
    public class Renamed4159
@@ -11,9 +11,9 @@ package projects.tanks.client.battlefield.models.bonus.battle
       
       private var Renamed4161:int;
       
-      private var Renamed4162:Renamed603;
+      private var Renamed4162:3DPositionVector;
       
-      public function Renamed4159(param1:IGameObject = null, param2:String = null, param3:int = 0, param4:Renamed603 = null)
+      public function Renamed4159(param1:IGameObject = null, param2:String = null, param3:int = 0, param4:3DPositionVector = null)
       {
          super();
          this.Renamed4160 = param1;
@@ -52,12 +52,12 @@ package projects.tanks.client.battlefield.models.bonus.battle
          this.Renamed4161 = param1;
       }
       
-      public function get Renamed4165() : Renamed603
+      public function get Renamed4165() : 3DPositionVector
       {
          return this.Renamed4162;
       }
       
-      public function set Renamed4165(param1:Renamed603) : void
+      public function set Renamed4165(param1:3DPositionVector) : void
       {
          this.Renamed4162 = param1;
       }

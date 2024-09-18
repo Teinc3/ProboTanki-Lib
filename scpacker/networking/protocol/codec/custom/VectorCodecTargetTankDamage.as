@@ -1,9 +1,9 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import Renamed194.Renamed5920;
+   import Renamed194.TargetTankDamage;
    import Renamed5811.ICodec;
    import flash.utils.ByteArray;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class VectorCodecTargetTankDamage implements ICodec
    {
@@ -11,7 +11,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed5009:Boolean;
       
-      public function VectorCodecTargetTankDamage(param1:Renamed536)
+      public function VectorCodecTargetTankDamage(param1:CodecRegisterer)
       {
          super();
          this.elementCodec = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecTargetTankDamage");
@@ -20,11 +20,11 @@ package scpacker.networking.protocol.codec.custom
       public function decode(param1:ByteArray) : Object
       {
          var _loc2_:int = param1.readInt();
-         var _loc3_:Vector.<Renamed5920> = new Vector.<Renamed5920>(_loc2_,true);
+         var _loc3_:Vector.<TargetTankDamage> = new Vector.<TargetTankDamage>(_loc2_,true);
          var _loc4_:int = 0;
          while(_loc4_ < _loc2_)
          {
-            _loc3_[_loc4_] = Renamed5920(this.elementCodec.decode(param1));
+            _loc3_[_loc4_] = TargetTankDamage(this.elementCodec.decode(param1));
             _loc4_++;
          }
          return _loc3_;
@@ -37,7 +37,7 @@ package scpacker.networking.protocol.codec.custom
          {
             throw new Error("Object is null. Use @ProtocolOptional annotation.");
          }
-         var _loc4_:Vector.<Renamed5920> = Vector.<Renamed5920>(param2);
+         var _loc4_:Vector.<TargetTankDamage> = Vector.<TargetTankDamage>(param2);
          var _loc5_:int = int(_loc4_.length);
          var _loc6_:int = 0;
          while(_loc6_ < _loc5_)

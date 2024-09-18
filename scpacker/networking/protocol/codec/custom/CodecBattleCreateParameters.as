@@ -10,7 +10,7 @@ package scpacker.networking.protocol.codec.custom
    import projects.tanks.client.battleservice.Renamed1579;
    import projects.tanks.client.battleservice.Renamed1586;
    import projects.tanks.client.battleservice.Renamed1587;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class CodecBattleCreateParameters implements ICodec
    {
@@ -56,7 +56,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed10566:ICodec;
       
-      public function CodecBattleCreateParameters(param1:Renamed536)
+      public function CodecBattleCreateParameters(param1:CodecRegisterer)
       {
          super();
          this.Renamed10548 = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");

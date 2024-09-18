@@ -5,7 +5,7 @@ package alternativa.tanks.models.battle.battlefield
    import Renamed235.Renamed607;
    import Renamed1.Renamed608;
    import Renamed1.Renamed609;
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import Renamed2402.Renamed2403;
    import Renamed306.Renamed2404;
    import Renamed306.Renamed2405;
@@ -404,7 +404,7 @@ package alternativa.tanks.models.battle.battlefield
          }
       }
       
-      public function Renamed2484(param1:ClientObject, param2:String, param3:Renamed603) : void
+      public function Renamed2484(param1:ClientObject, param2:String, param3:3DPositionVector) : void
       {
          this.Renamed2483(param1,param2,param3,0);
       }
@@ -983,7 +983,7 @@ package alternativa.tanks.models.battle.battlefield
          server.Renamed2519(_loc2_);
       }
       
-      private function Renamed2483(param1:ClientObject, param2:String, param3:Renamed603, param4:int) : Bonus
+      private function Renamed2483(param1:ClientObject, param2:String, param3:3DPositionVector, param4:int) : Bonus
       {
          var _loc5_:Renamed2411 = Renamed2411(modelRegistry.getModelsByInterface(Renamed2400)[0]);
          var _loc6_:Bonus;

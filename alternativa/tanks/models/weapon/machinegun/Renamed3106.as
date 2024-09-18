@@ -15,7 +15,7 @@ package alternativa.tanks.models.weapon.machinegun
    import alternativa.tanks.models.tank.Renamed2408;
    import alternativa.tanks.models.weapon.Renamed664;
    import alternativa.tanks.models.weapon.Renamed3031;
-   import Renamed349.Renamed3105;
+   import Renamed349.TargetHitInfo;
    import Renamed373.Renamed665;
    import Renamed373.Renamed666;
    import Renamed381.Renamed3045;
@@ -90,7 +90,7 @@ package alternativa.tanks.models.weapon.machinegun
          this.Renamed3083 = this.lastTime + this.params.spinUpTime;
       }
       
-      public function Renamed3114(param1:Vector3, param2:Vector.<Renamed3105>) : void
+      public function Renamed3114(param1:Vector3, param2:Vector.<TargetHitInfo>) : void
       {
          this.Renamed3077 = this.Renamed3080.Renamed3087();
          this.Renamed3108 = null;
@@ -109,7 +109,7 @@ package alternativa.tanks.models.weapon.machinegun
          else
          {
             _loc3_ = true;
-            this.Renamed3108 = Renamed668.Renamed681(param2[0].Renamed3116);
+            this.Renamed3108 = Renamed668.Renamed681(param2[0].localHitPoint);
             this.target = Renamed2407(OSGi.getInstance().getService(Renamed2408)).getTank(param2[0].target);
          }
          this.Renamed3117(_loc3_);
@@ -155,7 +155,7 @@ package alternativa.tanks.models.weapon.machinegun
             this.params.started = false;
             this.start();
             this.Renamed3083 = this.lastTime + this.params.spinUpTime * (1 - this.params.state);
-            this.Renamed3114(this.Renamed3077.direction,new Vector.<Renamed3105>());
+            this.Renamed3114(this.Renamed3077.direction,new Vector.<TargetHitInfo>());
          }
       }
       

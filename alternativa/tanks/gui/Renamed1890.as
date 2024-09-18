@@ -1,6 +1,6 @@
 package alternativa.tanks.gui
 {
-   import Renamed1804.Renamed1895;
+   import Renamed1804.AbstractPackets5;
    import controls.Money;
    import controls.base.LabelBase;
    import controls.statassets.Renamed1883;
@@ -12,9 +12,9 @@ package alternativa.tanks.gui
    import forms.ColorConstants;
    import forms.userlabel.UserLabel;
    
-   public class Renamed1890 extends Renamed1895
+   public class AbstractPackets0 extends AbstractPackets5
    {
-      public function Renamed1890()
+      public function AbstractPackets0()
       {
          super();
       }

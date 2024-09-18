@@ -1,7 +1,7 @@
 package Renamed4611
 {
    import Renamed136.Renamed663;
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import alternativa.osgi.OSGi;
    import alternativa.protocol.ICodec;
    import alternativa.protocol.IProtocol;
@@ -74,7 +74,7 @@ package Renamed4611
          switch(param1)
          {
             case this.Renamed6753:
-               this.client.Renamed5492(Renamed603(this.Renamed6755.decode(param2)),Renamed663(this.Renamed7259.decode(param2)));
+               this.client.Renamed5492(3DPositionVector(this.Renamed6755.decode(param2)),Renamed663(this.Renamed7259.decode(param2)));
                break;
             case this.Renamed6756:
                this.client.Renamed5498(Renamed663(this.Renamed7260.decode(param2)),String(this.Renamed6759.decode(param2)));

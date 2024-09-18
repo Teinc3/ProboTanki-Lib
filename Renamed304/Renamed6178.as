@@ -1,7 +1,7 @@
 package Renamed304
 {
-   import Renamed189.AbstractPacket;
-   import Renamed602.Renamed603;
+   import AbstractPackets.AbstractPacket;
+   import Renamed602.3DPositionVector;
    
    public class Renamed6178 extends AbstractPacket
    {
@@ -11,13 +11,13 @@ package Renamed304
       
       public var Renamed7527:int;
       
-      public var Renamed1530:Renamed603;
+      public var Renamed1530:3DPositionVector;
       
-      public var hitPoint:Renamed603;
+      public var hitPoint:3DPositionVector;
       
-      public var Renamed7528:Renamed603;
+      public var Renamed7528:3DPositionVector;
       
-      public function Renamed6178(param1:int = 0, param2:String = "", param3:int = 0, param4:Renamed603 = null, param5:Renamed603 = null, param6:Renamed603 = null)
+      public function Renamed6178(param1:int = 0, param2:String = "", param3:int = 0, param4:3DPositionVector = null, param5:3DPositionVector = null, param6:3DPositionVector = null)
       {
          super();
          this.Renamed6864 = param1;
@@ -26,21 +26,21 @@ package Renamed304
          this.Renamed1530 = param4;
          this.hitPoint = param5;
          this.Renamed7528 = param6;
-         Renamed1258(param1);
-         Renamed4880("scpacker.networking.protocol.codec.primitive.IntCodec");
-         Renamed1258(param2);
-         Renamed4880("scpacker.networking.protocol.codec.primitive.StringCodec");
-         Renamed1258(param3);
-         Renamed4880("scpacker.networking.protocol.codec.primitive.ShortCodec");
-         Renamed1258(param4);
-         Renamed4880("scpacker.networking.protocol.codec.custom.CodecVector3d");
-         Renamed1258(param5);
-         Renamed4880("scpacker.networking.protocol.codec.custom.CodecVector3d");
-         Renamed1258(param6);
-         Renamed4880("scpacker.networking.protocol.codec.custom.CodecVector3d");
+         addObjToAbsPacket(param1);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.primitive.IntCodec");
+         addObjToAbsPacket(param2);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.primitive.StringCodec");
+         addObjToAbsPacket(param3);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.primitive.ShortCodec");
+         addObjToAbsPacket(param4);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.custom.CodecVector3d");
+         addObjToAbsPacket(param5);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.custom.CodecVector3d");
+         addObjToAbsPacket(param6);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.custom.CodecVector3d");
       }
       
-      override public function Renamed4881(param1:Object, param2:int) : void
+      override public function Implement(param1:Object, param2:int) : void
       {
          switch(param2)
          {
@@ -54,22 +54,22 @@ package Renamed304
                this.Renamed7527 = param1 as int;
                break;
             case 3:
-               this.Renamed1530 = param1 as Renamed603;
+               this.Renamed1530 = param1 as 3DPositionVector;
                break;
             case 4:
-               this.hitPoint = param1 as Renamed603;
+               this.hitPoint = param1 as 3DPositionVector;
                break;
             case 5:
-               this.Renamed7528 = param1 as Renamed603;
+               this.Renamed7528 = param1 as 3DPositionVector;
          }
       }
       
-      override public function Renamed4882() : AbstractPacket
+      override public function getReference() : AbstractPacket
       {
          return new Renamed6178();
       }
       
-      override public function Renamed4883() : int
+      override public function getCorrespondingModel() : int
       {
          return 49;
       }

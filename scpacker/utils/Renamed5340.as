@@ -1,9 +1,9 @@
 package scpacker.utils
 {
    import Renamed136.Renamed663;
-   import Renamed194.Renamed5918;
+   import Renamed194.DamageType;
    import Renamed232.Renamed1582;
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import Renamed1614.Renamed1615;
    import alternativa.tanks.battle.objects.tank.Renamed841;
    import alternativa.tanks.models.battle.battlefield.Renamed2395;
@@ -22,7 +22,7 @@ package scpacker.utils
          super();
       }
       
-      public static function Renamed5367(param1:String) : Renamed663
+      public static function CodecRegisterer7(param1:String) : Renamed663
       {
          switch(param1.toLowerCase())
          {
@@ -198,29 +198,29 @@ package scpacker.utils
          }
       }
       
-      public static function Renamed10783(param1:String) : Renamed5918
+      public static function Renamed10783(param1:String) : DamageType
       {
          switch(param1)
          {
             case "NORMAL":
-               return Renamed5918.NORMAL;
+               return DamageType.NORMAL;
             case "CRITICAL":
-               return Renamed5918.CRITICAL;
+               return DamageType.CRITICAL;
             case "FATAL":
-               return Renamed5918.FATAL;
+               return DamageType.FATAL;
             case "HEAL":
-               return Renamed5918.HEAL;
+               return DamageType.HEAL;
             default:
-               return Renamed5918.NORMAL;
+               return DamageType.NORMAL;
          }
       }
       
-      public static function Renamed677(param1:Object) : Renamed603
+      public static function Renamed677(param1:Object) : 3DPositionVector
       {
-         return new Renamed603(param1.x,param1.y,param1.z);
+         return new 3DPositionVector(param1.x,param1.y,param1.z);
       }
       
-      public static function Renamed5366(param1:String) : Renamed841
+      public static function CodecRegisterer6(param1:String) : Renamed841
       {
          switch(param1)
          {

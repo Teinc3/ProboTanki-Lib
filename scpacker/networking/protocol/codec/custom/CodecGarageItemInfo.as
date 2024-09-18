@@ -11,7 +11,7 @@ package scpacker.networking.protocol.codec.custom
    import projects.tanks.client.commons.types.ItemCategoryEnum;
    import projects.tanks.client.commons.types.ItemViewCategoryEnum;
    import projects.tanks.client.panel.model.garage.GarageItemInfo;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class CodecGarageItemInfo extends Renamed4886 implements ICodec
    {
@@ -37,7 +37,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed10689:ICodec;
       
-      public function CodecGarageItemInfo(param1:Renamed536)
+      public function CodecGarageItemInfo(param1:CodecRegisterer)
       {
          super();
          this.Renamed10682 = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecItemCategoryEnum");

@@ -10,7 +10,7 @@ package Renamed17
    import Renamed4611.Renamed5435;
    import Renamed4611.Renamed4612;
    import Renamed4611.Renamed5436;
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import alternativa.engine3d.core.Object3D;
    import alternativa.engine3d.materials.TextureMaterial;
    import alternativa.engine3d.objects.BSP;
@@ -359,7 +359,7 @@ package Renamed17
       }
       
       [Obfuscation(rename="false")]
-      public function Renamed5492(param1:Renamed603, param2:Renamed663) : void
+      public function Renamed5492(param1:3DPositionVector, param2:Renamed663) : void
       {
          var _loc3_:Renamed4556 = this.Renamed5479(param2);
          this.Renamed5493(_loc3_);
@@ -523,7 +523,7 @@ package Renamed17
          _loc3_.x = _loc4_.x;
          _loc3_.y = _loc4_.y;
          _loc3_.z = _loc4_.z;
-         battleService.Renamed621().Renamed1258(_loc3_);
+         battleService.Renamed621().addObjToAbsPacket(_loc3_);
          var _loc5_:Renamed665 = battleService.Renamed619().Renamed692();
          var _loc6_:Renamed5398 = new Renamed5398(_loc4_,this.Renamed114.Renamed5502(),this,_loc5_);
          this.Renamed5461.push(_loc6_);

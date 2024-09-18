@@ -6,7 +6,7 @@ package scpacker.networking.protocol.codec.custom
    import flash.utils.ByteArray;
    import projects.tanks.client.tanksservices.model.notifier.battle.BattleNotifierData;
    import projects.tanks.client.tanksservices.types.battle.BattleInfoData;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class CodecBattleNotifierData implements ICodec
    {
@@ -16,7 +16,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed10607:ICodec;
       
-      public function CodecBattleNotifierData(param1:Renamed536)
+      public function CodecBattleNotifierData(param1:CodecRegisterer)
       {
          super();
          this.Renamed10606 = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecBattleInfoData");

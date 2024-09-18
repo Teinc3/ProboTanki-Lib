@@ -4,7 +4,7 @@ package Renamed61
    import Renamed15.Renamed5076;
    import Renamed17.MessageColor;
    import Renamed1.Renamed7055;
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import alternativa.math.Vector3;
    import alternativa.object.ClientObject;
    import alternativa.osgi.OSGi;
@@ -53,7 +53,7 @@ package Renamed61
          var _loc3_:ISpace = null;
          var _loc4_:IGameObject = null;
          var _loc5_:Renamed2553 = null;
-         var _loc6_:Renamed603 = Renamed7055.Renamed694(param1);
+         var _loc6_:3DPositionVector = Renamed7055.Renamed694(param1);
          var _loc7_:Vector3 = new Vector3(_loc6_.x,_loc6_.y,_loc6_.z + 300);
          var _loc8_:String = userInfoService.Renamed2300(param1.id);
          if(_loc8_ != null)

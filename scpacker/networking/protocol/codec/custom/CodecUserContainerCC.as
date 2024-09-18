@@ -3,13 +3,13 @@ package scpacker.networking.protocol.codec.custom
    import Renamed5811.ICodec;
    import flash.utils.ByteArray;
    import projects.tanks.client.users.model.friends.container.UserContainerCC;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class CodecUserContainerCC implements ICodec
    {
       private var Renamed10740:ICodec;
       
-      public function CodecUserContainerCC(param1:Renamed536)
+      public function CodecUserContainerCC(param1:CodecRegisterer)
       {
          super();
          this.Renamed10740 = param1.getCodec("scpacker.networking.protocol.codec.complex.VectorCodecString");

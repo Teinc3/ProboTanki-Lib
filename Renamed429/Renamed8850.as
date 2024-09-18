@@ -1,6 +1,6 @@
 package Renamed429
 {
-   import Renamed189.AbstractPacket;
+   import AbstractPackets.AbstractPacket;
    import Renamed206.Renamed5125;
    
    public class Renamed8850 extends AbstractPacket
@@ -14,13 +14,13 @@ package Renamed429
          super();
          this.pointId = param1;
          this.state = param2;
-         Renamed1258(param1);
-         Renamed4880("scpacker.networking.protocol.codec.primitive.IntCodec");
-         Renamed1258(param2);
-         Renamed4880("scpacker.networking.protocol.codec.custom.CodecControlPointState");
+         addObjToAbsPacket(param1);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.primitive.IntCodec");
+         addObjToAbsPacket(param2);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.custom.CodecControlPointState");
       }
       
-      override public function Renamed4881(param1:Object, param2:int) : void
+      override public function Implement(param1:Object, param2:int) : void
       {
          switch(param2)
          {
@@ -32,12 +32,12 @@ package Renamed429
          }
       }
       
-      override public function Renamed4882() : AbstractPacket
+      override public function getReference() : AbstractPacket
       {
          return new Renamed8850();
       }
       
-      override public function Renamed4883() : int
+      override public function getCorrespondingModel() : int
       {
          return 60;
       }

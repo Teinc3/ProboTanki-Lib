@@ -5,7 +5,7 @@ package scpacker.networking.protocol.codec.custom
    import flash.utils.ByteArray;
    import platform.client.fp10.core.registry.ResourceRegistry;
    import platform.client.fp10.core.resource.Resource;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class ResourceGetterCodec implements ICodec
    {
@@ -13,7 +13,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var longCodec:ICodec;
       
-      public function ResourceGetterCodec(param1:Renamed536, param2:ResourceRegistry)
+      public function ResourceGetterCodec(param1:CodecRegisterer, param2:ResourceRegistry)
       {
          super();
          this.resourceRegistry = param2;

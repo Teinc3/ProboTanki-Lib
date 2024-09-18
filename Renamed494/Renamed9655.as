@@ -85,8 +85,8 @@ package Renamed494
             case Renamed9648.Renamed5604:
                this.select(param1);
                break;
-            case Renamed9648.Renamed5364:
-               this.Renamed5365();
+            case Renamed9648.CodecRegisterer4:
+               this.CodecRegisterer5();
          }
       }
       
@@ -191,7 +191,7 @@ package Renamed494
          }
       }
       
-      private function Renamed5365() : void
+      private function CodecRegisterer5() : void
       {
          var _loc2_:IGameObject = null;
          var _loc3_:IGameObject = null;

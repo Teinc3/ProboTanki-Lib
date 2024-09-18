@@ -1,6 +1,6 @@
 package Renamed50
 {
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import alternativa.math.Vector3;
    import alternativa.object.ClientObject;
    import alternativa.osgi.OSGi;
@@ -21,7 +21,7 @@ package Renamed50
    import alternativa.tanks.models.tank.Renamed2408;
    import alternativa.tanks.models.weapon.Renamed43;
    import alternativa.tanks.models.weapon.shared.Renamed3150;
-   import Renamed349.Renamed3105;
+   import Renamed349.TargetHitInfo;
    import flash.utils.Dictionary;
    import scpacker.tanks.WeaponsManager;
    import Renamed82.Renamed774;
@@ -39,7 +39,7 @@ package Renamed50
       
       private var Renamed669:Vector3;
       
-      private var Renamed3116:Renamed603;
+      private var localHitPoint:3DPositionVector;
       
       private var Renamed2546:Dictionary;
       
@@ -48,7 +48,7 @@ package Renamed50
       public function Renamed51()
       {
          this.Renamed669 = new Vector3();
-         this.Renamed3116 = new Renamed603();
+         this.localHitPoint = new 3DPositionVector();
          this.Renamed2546 = new Dictionary();
          super();
          this.Renamed2432 = new Renamed902(battleEventDispatcher,this);
@@ -72,7 +72,7 @@ package Renamed50
       }
       
       [Obfuscation(rename="false")]
-      public function Renamed1554(param1:ClientObject, param2:Renamed8544, param3:Renamed3105) : void
+      public function Renamed1554(param1:ClientObject, param2:Renamed8544, param3:TargetHitInfo) : void
       {
          this.Renamed9819(param1,param2,param3);
       }
@@ -143,11 +143,11 @@ package Renamed50
          server.Renamed9824(param1,_loc4_.incarnation,Renamed668.Renamed677(_loc3_.state.position),this.Renamed9822(param2));
       }
       
-      private function Renamed9819(param1:ClientObject, param2:Renamed8544, param3:Renamed3105) : void
+      private function Renamed9819(param1:ClientObject, param2:Renamed8544, param3:TargetHitInfo) : void
       {
          var _loc4_:Tank = null;
          var _loc5_:Vector3 = null;
-         var _loc6_:Renamed603 = null;
+         var _loc6_:3DPositionVector = null;
          var _loc7_:Renamed9820 = this.Renamed9821(param1);
          if(_loc7_ != null)
          {
@@ -161,7 +161,7 @@ package Renamed50
             if(param2 == Renamed8544.IDLE || _loc4_ != null)
             {
                _loc5_ = this.Renamed669;
-               _loc6_ = param3.Renamed3116;
+               _loc6_ = param3.localHitPoint;
                _loc5_.reset(_loc6_.x,_loc6_.y,_loc6_.z);
                _loc7_.Renamed9825(param2,_loc4_,_loc5_);
             }
@@ -172,14 +172,14 @@ package Renamed50
          }
       }
       
-      private function Renamed9822(param1:RayHit) : Renamed603
+      private function Renamed9822(param1:RayHit) : 3DPositionVector
       {
          var _loc2_:Body = param1.shape.body;
          var _loc3_:Vector3 = Renamed668.Renamed669;
          _loc3_.copy(param1.position);
          Renamed668.globalToLocal(_loc2_,_loc3_);
-         Renamed668.Renamed679(_loc3_,this.Renamed3116);
-         return this.Renamed3116;
+         Renamed668.Renamed679(_loc3_,this.localHitPoint);
+         return this.localHitPoint;
       }
       
       private function Renamed2547(param1:Renamed884) : void

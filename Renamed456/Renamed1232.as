@@ -49,7 +49,7 @@ package Renamed456
       
       public function addToScene(param1:Renamed610) : void
       {
-         param1.Renamed1258(this.turret);
+         param1.addObjToAbsPacket(this.turret);
       }
       
       public function removeFromScene(param1:Renamed610) : void

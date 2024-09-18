@@ -1,12 +1,12 @@
 package scpacker.networking.protocol.codec.custom
 {
    import Renamed4611.Renamed5436;
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import Renamed5811.ICodec;
    import alternativa.osgi.OSGi;
    import alternativa.osgi.service.clientlog.IClientLog;
    import flash.utils.ByteArray;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class CodecClientFlag implements ICodec
    {
@@ -18,7 +18,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed10643:ICodec;
       
-      public function CodecClientFlag(param1:Renamed536)
+      public function CodecClientFlag(param1:CodecRegisterer)
       {
          super();
          this.Renamed10641 = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecVector3d");
@@ -29,9 +29,9 @@ package scpacker.networking.protocol.codec.custom
       public function decode(param1:ByteArray) : Object
       {
          var _loc2_:Renamed5436 = new Renamed5436();
-         _loc2_.Renamed5499 = this.Renamed10641.decode(param1) as Renamed603;
+         _loc2_.Renamed5499 = this.Renamed10641.decode(param1) as 3DPositionVector;
          _loc2_.Renamed5500 = this.Renamed10642.decode(param1) as String;
-         _loc2_.Renamed5406 = this.Renamed10643.decode(param1) as Renamed603;
+         _loc2_.Renamed5406 = this.Renamed10643.decode(param1) as 3DPositionVector;
          return _loc2_;
       }
       

@@ -1,7 +1,7 @@
 package Renamed79
 {
    import Renamed136.Renamed663;
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import alternativa.math.Matrix3;
    import alternativa.math.Vector3;
    import alternativa.object.ClientObject;
@@ -36,7 +36,7 @@ package Renamed79
       }
       
       [Obfuscation(rename="false")]
-      public function Renamed7299(param1:ClientObject, param2:ClientObject, param3:Renamed603) : void
+      public function Renamed7299(param1:ClientObject, param2:ClientObject, param3:3DPositionVector) : void
       {
          if(param2 == null || Renamed668.Renamed699(param3))
          {

@@ -158,7 +158,7 @@ package Renamed87
       {
          Renamed619().Renamed803(this);
          var _loc1_:Renamed610 = battleService.Renamed621();
-         _loc1_.Renamed1258(this.mesh);
+         _loc1_.addObjToAbsPacket(this.mesh);
          _loc1_.Renamed1287(this,0);
       }
       

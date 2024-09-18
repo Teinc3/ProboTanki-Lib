@@ -1,6 +1,6 @@
 package Renamed4281
 {
-   import Renamed189.AbstractPacket;
+   import AbstractPackets.AbstractPacket;
    import projects.tanks.client.entrance.model.entrance.captcha.CaptchaLocation;
    
    public class Renamed4289 extends AbstractPacket
@@ -11,11 +11,11 @@ package Renamed4281
       {
          super();
          this.location = param1;
-         Renamed1258(param1);
-         Renamed4880("scpacker.networking.protocol.codec.custom.CaptchaLocationCodec");
+         addObjToAbsPacket(param1);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.custom.CaptchaLocationCodec");
       }
       
-      override public function Renamed4881(param1:Object, param2:int) : void
+      override public function Implement(param1:Object, param2:int) : void
       {
          switch(param2)
          {
@@ -24,12 +24,12 @@ package Renamed4281
          }
       }
       
-      override public function Renamed4882() : AbstractPacket
+      override public function getReference() : AbstractPacket
       {
          return new Renamed4289();
       }
       
-      override public function Renamed4883() : int
+      override public function getCorrespondingModel() : int
       {
          return 6;
       }

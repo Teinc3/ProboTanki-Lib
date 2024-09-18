@@ -1,6 +1,6 @@
 package Renamed7581
 {
-   import Renamed189.AbstractPacket;
+   import AbstractPackets.AbstractPacket;
    import Renamed416.Renamed7589;
    
    public class Renamed5168 extends AbstractPacket
@@ -11,11 +11,11 @@ package Renamed7581
       {
          super();
          this.initParams = param1;
-         Renamed1258(param1);
-         Renamed4880("scpacker.networking.protocol.codec.custom.CodecAchievementCC");
+         addObjToAbsPacket(param1);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.custom.CodecAchievementCC");
       }
       
-      override public function Renamed4881(param1:Object, param2:int) : void
+      override public function Implement(param1:Object, param2:int) : void
       {
          switch(param2)
          {
@@ -24,12 +24,12 @@ package Renamed7581
          }
       }
       
-      override public function Renamed4882() : AbstractPacket
+      override public function getReference() : AbstractPacket
       {
          return new Renamed5168();
       }
       
-      override public function Renamed4883() : int
+      override public function getCorrespondingModel() : int
       {
          return 67;
       }

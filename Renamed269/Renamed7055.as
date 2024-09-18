@@ -1,6 +1,6 @@
 package Renamed1
 {
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import alternativa.engine3d.core.Object3D;
    import alternativa.engine3d.materials.TextureMaterial;
    import alternativa.object.ClientObject;
@@ -28,20 +28,20 @@ package Renamed1
       {
       }
       
-      public static function Renamed7057(param1:Renamed603, param2:int, param3:TextureMaterial) : void
+      public static function Renamed7057(param1:3DPositionVector, param2:int, param3:TextureMaterial) : void
       {
       }
       
-      private static function Renamed7058(param1:Renamed603, param2:int) : void
+      private static function Renamed7058(param1:3DPositionVector, param2:int) : void
       {
       }
       
-      public static function Renamed694(param1:ClientObject) : Renamed603
+      public static function Renamed694(param1:ClientObject) : 3DPositionVector
       {
          var _loc2_:Renamed2408 = Renamed2408(OSGi.getInstance().getService(Renamed2408));
          var _loc3_:Tank = _loc2_.getTankData(param1).tank;
          var _loc4_:Object3D = _loc3_.Renamed1075().Renamed1020();
-         return new Renamed603(_loc4_.x,_loc4_.y,_loc4_.z);
+         return new 3DPositionVector(_loc4_.x,_loc4_.y,_loc4_.z);
       }
    }
 }

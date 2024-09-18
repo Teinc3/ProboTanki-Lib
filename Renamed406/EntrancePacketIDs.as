@@ -1,6 +1,6 @@
 package Renamed406
 {
-   public class Renamed8593
+   public class EntrancePacketIDs
    {
       public static const Renamed8597:int = -1282173466;
       
@@ -8,13 +8,13 @@ package Renamed406
       
       public static const Renamed8596:int = -1797047325;
       
-      public static const Renamed8594:int = 2001736388;
+      public static const hash:int = 2001736388;
       
       public static const Renamed8603:int = -1864333717;
       
       public static const Renamed8604:int = -1807685988;
       
-      public function Renamed8593()
+      public function EntrancePacketIDs()
       {
          super();
       }

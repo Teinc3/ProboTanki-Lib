@@ -94,7 +94,7 @@ package Renamed291
       
       private function Renamed7392(param1:Renamed1875) : void
       {
-         var _loc2_:Vector.<String> = Vector.<String>(param1.Renamed1896.split(","));
+         var _loc2_:Vector.<String> = Vector.<String>(param1.AbstractPackets6.split(","));
          var _loc3_:Vector.<String> = Renamed7389(_loc2_);
          if(_loc3_.length > 0)
          {

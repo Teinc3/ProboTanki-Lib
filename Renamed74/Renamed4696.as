@@ -2,7 +2,7 @@ package Renamed74
 {
    import alternativa.math.Vector3;
    import alternativa.object.ClientObject;
-   import Renamed349.Renamed3105;
+   import Renamed349.TargetHitInfo;
    import platform.client.fp10.core.model.impl.Model;
    import platform.client.fp10.core.type.IGameObject;
    
@@ -19,14 +19,14 @@ package Renamed74
          this.impl = param2;
       }
       
-      public function Renamed3444(param1:ClientObject, param2:Vector3, param3:Vector.<Renamed3105>) : void
+      public function Renamed3444(param1:ClientObject, param2:Vector3, param3:Vector.<TargetHitInfo>) : void
       {
          var Renamed3693:ClientObject = param1;
          var Renamed4950:Vector3 = param2;
-         var Renamed4951:Vector.<Renamed3105> = param3;
+         var Renamed4951:Vector.<TargetHitInfo> = param3;
          var Renamed10264:ClientObject = Renamed3693;
          var Renamed8459:Vector3 = Renamed4950;
-         var Renamed10263:Vector.<Renamed3105> = Renamed4951;
+         var Renamed10263:Vector.<TargetHitInfo> = Renamed4951;
          try
          {
             Model.object = this.object;

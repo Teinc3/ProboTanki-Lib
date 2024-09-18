@@ -1,12 +1,12 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import Renamed5811.ICodec;
    import alternativa.osgi.OSGi;
    import alternativa.osgi.service.clientlog.IClientLog;
    import Renamed326.Renamed7757;
    import flash.utils.ByteArray;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class CodecBattleMine implements ICodec
    {
@@ -20,7 +20,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed10535:ICodec;
       
-      public function CodecBattleMine(param1:Renamed536)
+      public function CodecBattleMine(param1:CodecRegisterer)
       {
          super();
          this.Renamed10585 = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");
@@ -35,7 +35,7 @@ package scpacker.networking.protocol.codec.custom
          _loc2_.activated = true;
          _loc2_.mineId = this.Renamed10586.decode(param1) as String;
          _loc2_.ownerId = this.Renamed10587.decode(param1) as String;
-         _loc2_.position = this.Renamed10535.decode(param1) as Renamed603;
+         _loc2_.position = this.Renamed10535.decode(param1) as 3DPositionVector;
          return _loc2_;
       }
       

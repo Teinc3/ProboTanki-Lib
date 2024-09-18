@@ -1,6 +1,6 @@
 package Renamed442
 {
-   import Renamed189.AbstractPacket;
+   import AbstractPackets.AbstractPacket;
    
    public class Renamed8948 extends AbstractPacket
    {
@@ -9,16 +9,16 @@ package Renamed442
          super();
       }
       
-      override public function Renamed4881(param1:Object, param2:int) : void
+      override public function Implement(param1:Object, param2:int) : void
       {
       }
       
-      override public function Renamed4882() : AbstractPacket
+      override public function getReference() : AbstractPacket
       {
          return new Renamed8948();
       }
       
-      override public function Renamed4883() : int
+      override public function getCorrespondingModel() : int
       {
          return 28;
       }

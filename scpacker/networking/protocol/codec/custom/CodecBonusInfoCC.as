@@ -6,7 +6,7 @@ package scpacker.networking.protocol.codec.custom
    import flash.utils.ByteArray;
    import platform.client.fp10.core.resource.types.ImageResource;
    import projects.tanks.client.panel.model.bonus.showing.info.BonusInfoCC;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class CodecBonusInfoCC implements ICodec
    {
@@ -18,7 +18,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed10610:ICodec;
       
-      public function CodecBonusInfoCC(param1:Renamed536)
+      public function CodecBonusInfoCC(param1:CodecRegisterer)
       {
          super();
          this.Renamed10608 = param1.getCodec("scpacker.networking.protocol.codec.primitive.StringCodec");

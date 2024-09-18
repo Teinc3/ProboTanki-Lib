@@ -95,7 +95,7 @@ package alternativa.tanks.bonuses
       public function addToScene() : void
       {
          var _loc1_:Renamed610 = battleService.Renamed621();
-         _loc1_.Renamed1258(this.object);
+         _loc1_.addObjToAbsPacket(this.object);
          _loc1_.Renamed1377.add(this);
       }
       

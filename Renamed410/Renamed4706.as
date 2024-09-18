@@ -1,7 +1,7 @@
 package Renamed410
 {
    import Renamed137.Renamed2400;
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import Renamed292.Renamed7401;
    import Renamed292.Renamed4613;
    import alternativa.math.Vector3;
@@ -53,7 +53,7 @@ package Renamed410
          }
       }
       
-      private function Renamed5363(param1:IGameObject, param2:String, param3:Renamed603, param4:int) : void
+      private function CodecRegisterer3(param1:IGameObject, param2:String, param3:3DPositionVector, param4:int) : void
       {
          var _loc5_:Renamed2400 = null;
          var _loc6_:Bonus = null;
@@ -79,7 +79,7 @@ package Renamed410
          {
             for each(_loc2_ in param1)
             {
-               this.Renamed5363(_loc2_.Renamed4163,_loc2_.bonusId,_loc2_.Renamed4165,0);
+               this.CodecRegisterer3(_loc2_.Renamed4163,_loc2_.bonusId,_loc2_.Renamed4165,0);
             }
          }
       }
@@ -138,7 +138,7 @@ package Renamed410
          var _loc1_:Renamed4159 = null;
          for each(_loc1_ in getInitParam().bonuses)
          {
-            this.Renamed5363(_loc1_.Renamed4163,_loc1_.bonusId,_loc1_.Renamed4165,_loc1_.Renamed4164);
+            this.CodecRegisterer3(_loc1_.Renamed4163,_loc1_.bonusId,_loc1_.Renamed4165,_loc1_.Renamed4164);
          }
          this.Renamed7419 = getInitParam().Renamed7419;
          getInitParam().bonuses = null;

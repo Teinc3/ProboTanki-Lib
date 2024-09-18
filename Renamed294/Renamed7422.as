@@ -1,19 +1,19 @@
 package Renamed602
 {
-   public class Renamed603
+   public class 3DPositionVector
    {
       private var _x:Number;
       
       private var _y:Number;
       
-      private var Renamed7421:Number;
+      private var _z:Number;
       
-      public function Renamed603(param1:Number = 0, param2:Number = 0, param3:Number = 0)
+      public function 3DPositionVector(param1:Number = 0, param2:Number = 0, param3:Number = 0)
       {
          super();
          this._x = param1;
          this._y = param2;
-         this.Renamed7421 = param3;
+         this._z = param3;
       }
       
       public function get x() : Number
@@ -38,12 +38,12 @@ package Renamed602
       
       public function get z() : Number
       {
-         return this.Renamed7421;
+         return this._z;
       }
       
       public function set z(param1:Number) : void
       {
-         this.Renamed7421 = param1;
+         this._z = param1;
       }
       
       public function toString() : String

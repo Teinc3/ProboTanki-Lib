@@ -10,7 +10,7 @@ package scpacker.networking.protocol.codec.custom
    import platform.client.fp10.core.resource.types.MultiframeImageResource;
    import platform.client.fp10.core.resource.types.SoundResource;
    import projects.tanks.clients.flash.resources.resource.Tanks3DSResource;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class CodecBattleMineCC implements ICodec
    {
@@ -52,7 +52,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed10605:ICodec;
       
-      public function CodecBattleMineCC(param1:Renamed536)
+      public function CodecBattleMineCC(param1:CodecRegisterer)
       {
          super();
          this.Renamed10588 = param1.getCodec("scpacker.networking.protocol.codec.custom.ResourceGetterCodec");

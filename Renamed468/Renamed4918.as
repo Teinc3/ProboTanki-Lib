@@ -1,7 +1,7 @@
 package Renamed468
 {
-   import Renamed189.AbstractPacket;
-   import Renamed602.Renamed603;
+   import AbstractPackets.AbstractPacket;
+   import Renamed602.3DPositionVector;
    
    public class Renamed4918 extends AbstractPacket
    {
@@ -11,26 +11,26 @@ package Renamed468
       
       public var shotId:int;
       
-      public var shotDirection:Renamed603;
+      public var shotDirection:3DPositionVector;
       
-      public function Renamed4918(param1:int = 0, param2:int = 0, param3:int = 0, param4:Renamed603 = null)
+      public function Renamed4918(param1:int = 0, param2:int = 0, param3:int = 0, param4:3DPositionVector = null)
       {
          super();
          this.Renamed6864 = param1;
          this.barrel = param2;
          this.shotId = param3;
          this.shotDirection = param4;
-         Renamed1258(param1);
-         Renamed4880("scpacker.networking.protocol.codec.primitive.IntCodec");
-         Renamed1258(param2);
-         Renamed4880("scpacker.networking.protocol.codec.primitive.ByteCodec");
-         Renamed1258(param3);
-         Renamed4880("scpacker.networking.protocol.codec.primitive.IntCodec");
-         Renamed1258(param4);
-         Renamed4880("scpacker.networking.protocol.codec.custom.CodecVector3d");
+         addObjToAbsPacket(param1);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.primitive.IntCodec");
+         addObjToAbsPacket(param2);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.primitive.ByteCodec");
+         addObjToAbsPacket(param3);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.primitive.IntCodec");
+         addObjToAbsPacket(param4);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.custom.CodecVector3d");
       }
       
-      override public function Renamed4881(param1:Object, param2:int) : void
+      override public function Implement(param1:Object, param2:int) : void
       {
          switch(param2)
          {
@@ -44,16 +44,16 @@ package Renamed468
                this.shotId = param1 as int;
                break;
             case 3:
-               this.shotDirection = param1 as Renamed603;
+               this.shotDirection = param1 as 3DPositionVector;
          }
       }
       
-      override public function Renamed4882() : AbstractPacket
+      override public function getReference() : AbstractPacket
       {
          return new Renamed4918();
       }
       
-      override public function Renamed4883() : int
+      override public function getCorrespondingModel() : int
       {
          return 51;
       }

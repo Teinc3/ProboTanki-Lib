@@ -1,8 +1,8 @@
 package scpacker.networking
 {
-   import Renamed140.Renamed4936;
-   import Renamed189.AbstractPacket;
-   import Renamed189.Renamed5817;
+   import Renamed140.ModelHolder;
+   import AbstractPackets.AbstractPacket;
+   import AbstractPackets.AbstractPacketManager;
    import alternativa.osgi.OSGi;
    import alternativa.osgi.service.display.IDisplay;
    import alternativa.tanks.bg.IBackgroundService;
@@ -16,15 +16,15 @@ package scpacker.networking
    import platform.client.fp10.core.network.handler.OnConnectionClosedServiceListener;
    import platform.client.fp10.core.service.errormessage.IErrorMessageService;
    import platform.client.fp10.core.service.errormessage.errors.ConnectionClosedError;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class Network
    {
-      public static var Renamed10516:Renamed4936;
+      public static var modelHolder:ModelHolder;
       
-      public static var Renamed5812:Renamed536;
+      public static var codecRegisterer:CodecRegisterer;
       
-      private static var Renamed10517:Renamed5817;
+      private static var absPacketManager:AbstractPacketManager;
       
       private var socket:Socket;
       
@@ -34,7 +34,7 @@ package scpacker.networking
       
       private var Renamed10519:Boolean = true;
       
-      private var Renamed5815:ByteArray;
+      private var packetByteArray:ByteArray;
       
       private var rawDataBuffer:ByteArray;
       
@@ -42,23 +42,23 @@ package scpacker.networking
       
       public function Network()
       {
-         this.Renamed5815 = new ByteArray();
+         this.packetByteArray = new ByteArray();
          this.rawDataBuffer = new ByteArray();
          this.dataBuffer = new ByteArray();
          super();
          this.socket = new Socket();
-         Renamed10517 = new Renamed5817();
-         Renamed10516 = new Renamed4936();
-         OSGi.getInstance().registerService(Renamed4936,Renamed10516);
-         OSGi.getInstance().registerService(Renamed5817,Renamed10517);
-         OSGi.getInstance().registerService(Renamed536,Renamed5812 = new Renamed536());
+         absPacketManager = new AbstractPacketManager();
+         modelHolder = new ModelHolder();
+         OSGi.getInstance().registerService(ModelHolder,modelHolder);
+         OSGi.getInstance().registerService(AbstractPacketManager,absPacketManager);
+         OSGi.getInstance().registerService(CodecRegisterer,codecRegisterer = new CodecRegisterer());
       }
       
       public function connect(param1:String, param2:int) : void
       {
-         var _loc3_:Renamed536 = Renamed536(OSGi.getInstance().getService(Renamed536));
+         var _loc3_:CodecRegisterer = CodecRegisterer(OSGi.getInstance().getService(CodecRegisterer));
          _loc3_.init();
-         new Renamed10520().start(OSGi.getInstance());
+         new ModelAbsPacketFiller().start(OSGi.getInstance());
          this.socket.connect(param1,param2);
          this.socket.addEventListener(ProgressEvent.SOCKET_DATA,this.onDataSocket);
          this.socket.addEventListener(Event.CONNECT,this.onConnected);
@@ -95,15 +95,15 @@ package scpacker.networking
       private function onDataSocket(param1:Event) : void
       {
          this.socket.readBytes(this.dataBuffer,this.dataBuffer.length);
-         this.Renamed10521();
+         this.processData();
       }
       
-      private function Renamed10521() : void
+      private function processData() : void
       {
-         var Renamed10522:int = 0;
-         var Renamed10523:int = 0;
-         var Renamed10524:int = 0;
-         var Renamed8774:AbstractPacket = null;
+         var totalPacketLen:int = 0;
+         var packetID:int = 0;
+         var currPacketLen:int = 0;
+         var absPacket:AbstractPacket = null;
          this.dataBuffer.position = this.currentPacketPosition;
          if(this.dataBuffer.bytesAvailable == 0)
          {
@@ -111,33 +111,33 @@ package scpacker.networking
          }
          while(true)
          {
-            if(this.dataBuffer.bytesAvailable < AbstractPacket.Renamed5813)
+            if(this.dataBuffer.bytesAvailable < AbstractPacket.const_8)
             {
                return;
             }
-            Renamed10522 = this.dataBuffer.readInt();
-            Renamed10523 = this.dataBuffer.readInt();
-            Renamed10524 = Renamed10522 - AbstractPacket.Renamed5813;
-            if(this.dataBuffer.bytesAvailable < Renamed10524)
+            totalPacketLen = this.dataBuffer.readInt();
+            packetID = this.dataBuffer.readInt();
+            currPacketLen = totalPacketLen - AbstractPacket.const_8;
+            if(this.dataBuffer.bytesAvailable < currPacketLen)
             {
                return;
             }
-            if(Renamed10524 > 0)
+            if(currPacketLen > 0)
             {
-               this.dataBuffer.readBytes(this.Renamed5815,0,Renamed10524);
+               this.dataBuffer.readBytes(this.packetByteArray,0,currPacketLen);
             }
             try
             {
-               Renamed5812.Renamed5816().decrypt(this.Renamed5815);
-               Renamed8774 = Renamed10517.Renamed5820(Renamed10523);
-               Renamed8774.unwrap(this.Renamed5815);
-               Renamed10516.invoke(Renamed8774);
+               codecRegisterer.getProtectionContext().decrypt(this.packetByteArray);
+               absPacket = absPacketManager.getAbsPacket(packetID);
+               absPacket.unwrap(this.packetByteArray);
+               modelHolder.invoke(absPacket);
             }
             catch(e:Error)
             {
-               OSGi.clientLog.log("net","error packet %1 packetLength %2 packetId %3 \n\n %4",Renamed8774,Renamed10522,Renamed10523,e.getStackTrace());
+               OSGi.clientLog.log("net","error packet %1 packetLength %2 packetId %3 \n\n %4",absPacket,totalPacketLen,packetID,e.getStackTrace());
             }
-            this.Renamed5815.clear();
+            this.packetByteArray.clear();
             if(this.dataBuffer.bytesAvailable == 0)
             {
                break;

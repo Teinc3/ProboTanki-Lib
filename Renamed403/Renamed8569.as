@@ -1,6 +1,6 @@
 package Renamed403
 {
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import Renamed306.Renamed7540;
    import Renamed306.Renamed4629;
    import Renamed306.Renamed1344;
@@ -37,7 +37,7 @@ package Renamed403
          return getInitParam().gravity;
       }
       
-      public function Renamed8563() : Renamed603
+      public function Renamed8563() : 3DPositionVector
       {
          return getInitParam().Renamed2499;
       }

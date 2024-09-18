@@ -1,6 +1,6 @@
 package Renamed403
 {
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import Renamed306.Renamed1344;
    import Renamed306.Renamed2521;
    import Renamed306.Renamed2405;
@@ -18,7 +18,7 @@ package Renamed403
       
       function Renamed831() : Number;
       
-      function Renamed8563() : Renamed603;
+      function Renamed8563() : 3DPositionVector;
       
       function Renamed8564() : Number;
       

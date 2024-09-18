@@ -1,16 +1,16 @@
 package Renamed4611
 {
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    
    public class Renamed5436
    {
-      private var Renamed6773:Renamed603;
+      private var Renamed6773:3DPositionVector;
       
       private var Renamed6774:String;
       
-      private var Renamed6775:Renamed603;
+      private var Renamed6775:3DPositionVector;
       
-      public function Renamed5436(param1:Renamed603 = null, param2:String = null, param3:Renamed603 = null)
+      public function Renamed5436(param1:3DPositionVector = null, param2:String = null, param3:3DPositionVector = null)
       {
          super();
          this.Renamed6773 = param1;
@@ -18,12 +18,12 @@ package Renamed4611
          this.Renamed6775 = param3;
       }
       
-      public function get Renamed5499() : Renamed603
+      public function get Renamed5499() : 3DPositionVector
       {
          return this.Renamed6773;
       }
       
-      public function set Renamed5499(param1:Renamed603) : void
+      public function set Renamed5499(param1:3DPositionVector) : void
       {
          this.Renamed6773 = param1;
       }
@@ -38,12 +38,12 @@ package Renamed4611
          this.Renamed6774 = param1;
       }
       
-      public function get Renamed5406() : Renamed603
+      public function get Renamed5406() : 3DPositionVector
       {
          return this.Renamed6775;
       }
       
-      public function set Renamed5406(param1:Renamed603) : void
+      public function set Renamed5406(param1:3DPositionVector) : void
       {
          this.Renamed6775 = param1;
       }

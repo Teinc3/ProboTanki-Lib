@@ -1,44 +1,44 @@
 package Renamed7249
 {
    import Renamed136.Renamed663;
-   import Renamed189.AbstractPacket;
-   import Renamed602.Renamed603;
+   import AbstractPackets.AbstractPacket;
+   import Renamed602.3DPositionVector;
    
    public class Renamed9330 extends AbstractPacket
    {
-      public var position:Renamed603;
+      public var position:3DPositionVector;
       
       public var flagTeam:Renamed663;
       
-      public function Renamed9330(param1:Renamed603 = null, param2:Renamed663 = null)
+      public function Renamed9330(param1:3DPositionVector = null, param2:Renamed663 = null)
       {
          super();
          this.position = param1;
          this.flagTeam = param2;
-         Renamed1258(param1);
-         Renamed4880("scpacker.networking.protocol.codec.custom.CodecVector3d");
-         Renamed1258(param2);
-         Renamed4880("scpacker.networking.protocol.codec.custom.CodecBattleTeam");
+         addObjToAbsPacket(param1);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.custom.CodecVector3d");
+         addObjToAbsPacket(param2);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.custom.CodecBattleTeam");
       }
       
-      override public function Renamed4881(param1:Object, param2:int) : void
+      override public function Implement(param1:Object, param2:int) : void
       {
          switch(param2)
          {
             case 0:
-               this.position = param1 as Renamed603;
+               this.position = param1 as 3DPositionVector;
                break;
             case 1:
                this.flagTeam = param1 as Renamed663;
          }
       }
       
-      override public function Renamed4882() : AbstractPacket
+      override public function getReference() : AbstractPacket
       {
          return new Renamed9330();
       }
       
-      override public function Renamed4883() : int
+      override public function getCorrespondingModel() : int
       {
          return 42;
       }

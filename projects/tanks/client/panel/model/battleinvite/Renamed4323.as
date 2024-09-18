@@ -14,7 +14,7 @@ package projects.tanks.client.panel.model.battleinvite
    import platform.client.fp10.core.model.IModel;
    import scpacker.networking.Network;
    
-   public class Renamed4323
+   public class ProtectionContexts3
    {
       private var protocol:IProtocol;
       
@@ -38,7 +38,7 @@ package projects.tanks.client.panel.model.battleinvite
       
       private var network:Network;
       
-      public function Renamed4323(param1:IModel)
+      public function ProtectionContexts3(param1:IModel)
       {
          this.Renamed4344 = Long.getLong(0,300050006);
          this.Renamed4346 = Long.getLong(0,300050007);

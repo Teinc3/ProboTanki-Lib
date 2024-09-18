@@ -8,7 +8,7 @@ package scpacker.networking.protocol.codec.custom
    import flash.utils.ByteArray;
    import platform.client.fp10.core.resource.types.ImageResource;
    import projects.tanks.client.panel.model.dailyquest.Renamed4365;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class CodecDailyQuestInfo implements ICodec
    {
@@ -30,7 +30,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed10658:ICodec;
       
-      public function CodecDailyQuestInfo(param1:Renamed536)
+      public function CodecDailyQuestInfo(param1:CodecRegisterer)
       {
          super();
          this.Renamed10653 = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");

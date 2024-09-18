@@ -176,15 +176,15 @@ package Renamed4553
          this.Renamed5088.x = param2.x;
          this.Renamed5088.y = param2.y;
          this.Renamed5088.z = param2.z;
-         param1.Renamed1258(this.Renamed5088);
+         param1.addObjToAbsPacket(this.Renamed5088);
          this.Renamed5093.x = param2.x;
          this.Renamed5093.y = param2.y;
          this.Renamed5093.z = param2.z + Renamed5086;
-         param1.Renamed1258(this.Renamed5093);
+         param1.addObjToAbsPacket(this.Renamed5093);
          this.lightSource.x = param2.x;
          this.lightSource.y = param2.y;
          this.lightSource.z = param2.z + Renamed5086;
-         param1.Renamed1258(this.lightSource);
+         param1.addObjToAbsPacket(this.lightSource);
       }
       
       public function Renamed5120() : void

@@ -49,7 +49,7 @@ package alternativa.init
    import Renamed343.Renamed534;
    import Renamed360.Renamed535;
    import projects.tanks.clients.flash.commons.models.gpu.GPUCapabilities;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class BattlefieldModelActivator implements IBundleActivator
    {
@@ -148,7 +148,7 @@ package alternativa.init
       
       private function Renamed541() : void
       {
-         var _loc1_:Renamed536 = Renamed536(this.osgi.getService(Renamed536));
+         var _loc1_:CodecRegisterer = CodecRegisterer(this.osgi.getService(CodecRegisterer));
          _loc1_.registerCodecForType(new Renamed535());
       }
       

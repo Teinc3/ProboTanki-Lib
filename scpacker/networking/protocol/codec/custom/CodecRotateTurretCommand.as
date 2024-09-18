@@ -4,7 +4,7 @@ package scpacker.networking.protocol.codec.custom
    import alternativa.osgi.OSGi;
    import alternativa.osgi.service.clientlog.IClientLog;
    import flash.utils.ByteArray;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    import Renamed461.Renamed2773;
    
    public class CodecRotateTurretCommand implements ICodec
@@ -15,7 +15,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed10691:ICodec;
       
-      public function CodecRotateTurretCommand(param1:Renamed536)
+      public function CodecRotateTurretCommand(param1:CodecRegisterer)
       {
          super();
          this.Renamed10712 = param1.getCodec("scpacker.networking.protocol.codec.primitive.FloatCodec");

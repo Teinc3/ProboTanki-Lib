@@ -1,14 +1,14 @@
 package com.alternativaplatform.projects.tanks.client.commons.types
 {
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    
    public class TankState
    {
       public var health:int;
       
-      public var position:Renamed603;
+      public var position:3DPositionVector;
       
-      public var orientation:Renamed603;
+      public var orientation:3DPositionVector;
       
       public var turretAngle:int;
       

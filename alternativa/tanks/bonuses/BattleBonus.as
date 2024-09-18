@@ -133,7 +133,7 @@ package alternativa.tanks.bonuses
          this.lightSource.x = origin.x;
          this.lightSource.y = origin.y;
          this.lightSource.z = origin.z;
-         this.battleService.Renamed621().Renamed1258(this.lightSource);
+         this.battleService.Renamed621().addObjToAbsPacket(this.lightSource);
       }
       
       public function spawn(param1:Vector3, param2:int, param3:Number, param4:Function) : void

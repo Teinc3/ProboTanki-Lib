@@ -6,7 +6,7 @@ package scpacker.networking.protocol.codec.custom
    import flash.utils.ByteArray;
    import projects.tanks.client.battleservice.Renamed1587;
    import projects.tanks.client.panel.model.battleinvite.BattleInviteMessage;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class CodecBattleInviteMessage implements ICodec
    {
@@ -34,7 +34,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed10582:ICodec;
       
-      public function CodecBattleInviteMessage(param1:Renamed536)
+      public function CodecBattleInviteMessage(param1:CodecRegisterer)
       {
          super();
          this.Renamed10578 = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");

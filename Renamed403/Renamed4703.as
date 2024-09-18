@@ -1,6 +1,6 @@
 package Renamed403
 {
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import Renamed306.Renamed1344;
    import Renamed306.Renamed2521;
    import Renamed306.Renamed2405;
@@ -83,9 +83,9 @@ package Renamed403
          return Renamed2142;
       }
       
-      public function Renamed8563() : Renamed603
+      public function Renamed8563() : 3DPositionVector
       {
-         var Renamed2142:Renamed603 = null;
+         var Renamed2142:3DPositionVector = null;
          try
          {
             Model.object = this.object;

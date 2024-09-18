@@ -6,7 +6,7 @@ package scpacker.networking.protocol.codec.custom
    import alternativa.osgi.service.clientlog.IClientLog;
    import flash.utils.ByteArray;
    import projects.tanks.client.battleservice.model.statistics.Renamed2737;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class CodecStatisticsTeamCC implements ICodec
    {
@@ -20,7 +20,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed10731:ICodec;
       
-      public function CodecStatisticsTeamCC(param1:Renamed536)
+      public function CodecStatisticsTeamCC(param1:CodecRegisterer)
       {
          super();
          this.Renamed10728 = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");

@@ -29,12 +29,12 @@ package Renamed358
          this.Renamed8155 = param6;
       }
       
-      public function get Renamed5369() : Tanks3DSResource
+      public function get CodecRegisterer9() : Tanks3DSResource
       {
          return this.Renamed8150;
       }
       
-      public function set Renamed5369(param1:Tanks3DSResource) : void
+      public function set CodecRegisterer9(param1:Tanks3DSResource) : void
       {
          this.Renamed8150 = param1;
       }
@@ -92,7 +92,7 @@ package Renamed358
       public function toString() : String
       {
          var _loc1_:String = "BonusCommonCC [";
-         _loc1_ += "boxResource = " + this.Renamed5369 + " ";
+         _loc1_ += "boxResource = " + this.CodecRegisterer9 + " ";
          _loc1_ += "cordResource = " + this.cordResource + " ";
          _loc1_ += "parachuteInnerResource = " + this.parachuteInnerResource + " ";
          _loc1_ += "parachuteResource = " + this.parachuteResource + " ";

@@ -3,7 +3,7 @@ package Renamed72
    import Renamed31.Renamed6812;
    import Renamed31.Renamed32;
    import Renamed31.Renamed33;
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import alternativa.math.Vector3;
    import alternativa.object.ClientObject;
    import alternativa.osgi.OSGi;
@@ -150,15 +150,15 @@ package Renamed72
       
       public function onTick(param1:Renamed990, param2:Vector.<Body>, param3:Vector.<Number>, param4:Vector.<Vector3>, param5:int) : void
       {
-         var _loc6_:Vector.<Renamed603> = null;
-         var _loc7_:Vector.<Renamed603> = null;
+         var _loc6_:Vector.<3DPositionVector> = null;
+         var _loc7_:Vector.<3DPositionVector> = null;
          var _loc8_:int = 0;
          var _loc9_:Body = null;
          if(param1 == this.weapons[this.Renamed2369])
          {
             this.Renamed9504(param2);
-            _loc6_ = new Vector.<Renamed603>(param2.length);
-            _loc7_ = new Vector.<Renamed603>(param2.length);
+            _loc6_ = new Vector.<3DPositionVector>(param2.length);
+            _loc7_ = new Vector.<3DPositionVector>(param2.length);
             _loc8_ = 0;
             while(_loc8_ < param2.length)
             {

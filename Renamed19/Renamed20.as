@@ -1,6 +1,6 @@
 package Renamed19
 {
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import Renamed301.Renamed3043;
    import Renamed301.Renamed3044;
    import alternativa.math.Vector3;
@@ -129,7 +129,7 @@ package Renamed19
       }
       
       [Obfuscation(rename="false")]
-      public function Renamed3493(param1:ClientObject, param2:Renamed603) : void
+      public function Renamed3493(param1:ClientObject, param2:3DPositionVector) : void
       {
          var _loc3_:Renamed5874 = this.weapons[param1];
          if(_loc3_ != null)
@@ -139,7 +139,7 @@ package Renamed19
       }
       
       [Obfuscation(rename="false")]
-      public function Renamed3494(param1:ClientObject, param2:ClientObject, param3:Renamed603) : void
+      public function Renamed3494(param1:ClientObject, param2:ClientObject, param3:3DPositionVector) : void
       {
          var _loc4_:Renamed2408 = null;
          var _loc5_:Tank = null;
@@ -172,10 +172,10 @@ package Renamed19
       {
          var _loc4_:Vector3 = param2.clone();
          Renamed668.globalToLocal(param3,_loc4_);
-         var _loc5_:Renamed603 = Renamed668.Renamed677(_loc4_);
+         var _loc5_:3DPositionVector = Renamed668.Renamed677(_loc4_);
          var _loc6_:Tank = param3.tank;
          var _loc7_:int = _loc6_.incarnation;
-         var _loc8_:Renamed603 = Renamed668.Renamed677(param3.state.position);
+         var _loc8_:3DPositionVector = Renamed668.Renamed677(param3.state.position);
          this.Renamed2432.dispatchEvent(Renamed869.Renamed871);
          server.Renamed5877(param1,_loc5_,_loc6_.Renamed695(),_loc7_,_loc8_,Renamed668.Renamed677(param2));
       }

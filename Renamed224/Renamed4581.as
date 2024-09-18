@@ -19,7 +19,7 @@ package Renamed224
    import Renamed4594.Renamed6342;
    import Renamed4594.Renamed4595;
    import Renamed4594.Renamed6343;
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import alternativa.engine3d.core.Object3D;
    import alternativa.engine3d.lights.OmniLight;
    import alternativa.engine3d.materials.TextureMaterial;
@@ -250,7 +250,7 @@ package Renamed224
       }
       
       [Obfuscation(rename="false")]
-      public function Renamed5492(param1:int, param2:Renamed603) : void
+      public function Renamed5492(param1:int, param2:3DPositionVector) : void
       {
          var _loc3_:Renamed4578 = this.flags[param1];
          this.Renamed6353(_loc3_);
@@ -614,7 +614,7 @@ package Renamed224
          }
       }
       
-      private function Renamed6362(param1:Renamed603) : void
+      private function Renamed6362(param1:3DPositionVector) : void
       {
          var _loc2_:BitmapData = getInitParam().Renamed6363.data.clone();
          var _loc3_:Matrix = new Matrix();
@@ -627,11 +627,11 @@ package Renamed224
          _loc5_.x = param1.x;
          _loc5_.y = param1.y;
          _loc5_.z = param1.z + Renamed4554.Renamed5086;
-         battleService.Renamed621().Renamed1258(_loc5_);
+         battleService.Renamed621().addObjToAbsPacket(_loc5_);
          this.initLight(param1);
       }
       
-      private function initLight(param1:Renamed603) : void
+      private function initLight(param1:3DPositionVector) : void
       {
          var _loc2_:Renamed3820 = Renamed4730.Renamed3822(Renamed1587.CP);
          var _loc3_:Renamed3823 = _loc2_.Renamed5102(Renamed663.BLUE);
@@ -641,7 +641,7 @@ package Renamed224
          _loc4_.x = param1.x;
          _loc4_.y = param1.y;
          _loc4_.z = param1.z + Renamed4554.Renamed5086;
-         battleService.Renamed621().Renamed1258(_loc4_);
+         battleService.Renamed621().addObjToAbsPacket(_loc4_);
       }
       
       private function Renamed5471(param1:Renamed663, param2:Renamed6342, param3:BitmapData, param4:Tanks3DSResource) : void
@@ -675,7 +675,7 @@ package Renamed224
          this.flags[_loc9_.getId()] = _loc9_;
       }
       
-      private function Renamed5501(param1:Tanks3DSResource, param2:Renamed603) : void
+      private function Renamed5501(param1:Tanks3DSResource, param2:3DPositionVector) : void
       {
          var _loc3_:Object3D = Renamed5098(param1);
          var _loc4_:Vector3 = Renamed668.Renamed681(param2);
@@ -683,7 +683,7 @@ package Renamed224
          _loc3_.x = _loc4_.x;
          _loc3_.y = _loc4_.y;
          _loc3_.z = _loc4_.z;
-         battleService.Renamed621().Renamed1258(_loc3_);
+         battleService.Renamed621().addObjToAbsPacket(_loc3_);
          var _loc5_:Renamed665 = battleService.Renamed619().Renamed692();
          var _loc6_:Renamed6330 = new Renamed6330(_loc4_,this.Renamed114.Renamed5502(),400,this,_loc5_);
          this.Renamed5461.push(_loc6_);

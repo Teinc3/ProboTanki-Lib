@@ -8,7 +8,7 @@ package scpacker.networking.protocol.codec.custom
    import alternativa.osgi.OSGi;
    import alternativa.osgi.service.clientlog.IClientLog;
    import flash.utils.ByteArray;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class CodecControlPointsCC implements ICodec
    {
@@ -26,7 +26,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed10543:ICodec;
       
-      public function CodecControlPointsCC(param1:Renamed536)
+      public function CodecControlPointsCC(param1:CodecRegisterer)
       {
          super();
          this.Renamed10647 = param1.getCodec("scpacker.networking.protocol.codec.primitive.FloatCodec");

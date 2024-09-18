@@ -1,6 +1,6 @@
 package Renamed74
 {
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import alternativa.math.Vector3;
    import alternativa.object.ClientObject;
    import alternativa.tanks.battle.Renamed668;
@@ -8,7 +8,7 @@ package Renamed74
    import alternativa.tanks.battle.events.BattleEventDispatcher;
    import Renamed349.Renamed8069;
    import Renamed349.Renamed4665;
-   import Renamed349.Renamed3105;
+   import Renamed349.TargetHitInfo;
    import projects.tanks.client.battlefield.models.tankparts.weapons.common.Renamed667;
    
    public class Renamed75 extends Renamed8069 implements Renamed4665, Renamed76
@@ -22,7 +22,7 @@ package Renamed74
       }
       
       [Obfuscation(rename="false")]
-      public function Renamed3454(param1:ClientObject, param2:Renamed603, param3:Vector.<Renamed3105>) : void
+      public function Renamed3454(param1:ClientObject, param2:3DPositionVector, param3:Vector.<TargetHitInfo>) : void
       {
          var _loc4_:Renamed3436 = Renamed3436(object.event(Renamed3436));
          _loc4_.Renamed3444(param1,Renamed668.Renamed681(param2),param3);

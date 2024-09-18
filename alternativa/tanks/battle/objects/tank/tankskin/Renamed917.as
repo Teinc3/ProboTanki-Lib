@@ -130,7 +130,7 @@ package alternativa.tanks.battle.objects.tank.tankskin
       public function addToScene() : void
       {
          var _loc1_:Renamed610 = battleService.Renamed621();
-         _loc1_.Renamed1258(this.Renamed1242);
+         _loc1_.addObjToAbsPacket(this.Renamed1242);
          _loc1_.Renamed1259(this.Renamed1245);
          _loc1_.Renamed1260(this.Renamed1252);
       }

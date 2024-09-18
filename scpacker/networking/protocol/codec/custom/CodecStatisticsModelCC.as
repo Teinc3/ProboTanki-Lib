@@ -8,7 +8,7 @@ package scpacker.networking.protocol.codec.custom
    import flash.utils.ByteArray;
    import projects.tanks.client.battleservice.Renamed1587;
    import projects.tanks.client.battleservice.model.statistics.Renamed4220;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class CodecStatisticsModelCC implements ICodec
    {
@@ -44,7 +44,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed10727:ICodec;
       
-      public function CodecStatisticsModelCC(param1:Renamed536)
+      public function CodecStatisticsModelCC(param1:CodecRegisterer)
       {
          super();
          this.Renamed10550 = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecBattleMode");

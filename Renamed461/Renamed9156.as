@@ -1,20 +1,20 @@
 package Renamed461
 {
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    
    public class Renamed2772
    {
-      private var Renamed9153:Renamed603;
+      private var Renamed9153:3DPositionVector;
       
       private var Renamed9154:int;
       
-      private var Renamed9155:Renamed603;
+      private var Renamed9155:3DPositionVector;
       
-      private var Renamed2827:Renamed603;
+      private var Renamed2827:3DPositionVector;
       
-      private var _position:Renamed603;
+      private var _position:3DPositionVector;
       
-      public function Renamed2772(param1:Renamed603 = null, param2:int = 0, param3:Renamed603 = null, param4:Renamed603 = null, param5:Renamed603 = null)
+      public function Renamed2772(param1:3DPositionVector = null, param2:int = 0, param3:3DPositionVector = null, param4:3DPositionVector = null, param5:3DPositionVector = null)
       {
          super();
          this.Renamed9153 = param1;
@@ -24,12 +24,12 @@ package Renamed461
          this._position = param5;
       }
       
-      public function get angularVelocity() : Renamed603
+      public function get angularVelocity() : 3DPositionVector
       {
          return this.Renamed9153;
       }
       
-      public function set angularVelocity(param1:Renamed603) : void
+      public function set angularVelocity(param1:3DPositionVector) : void
       {
          this.Renamed9153 = param1;
       }
@@ -44,32 +44,32 @@ package Renamed461
          this.Renamed9154 = param1;
       }
       
-      public function get Renamed2904() : Renamed603
+      public function get Renamed2904() : 3DPositionVector
       {
          return this.Renamed9155;
       }
       
-      public function set Renamed2904(param1:Renamed603) : void
+      public function set Renamed2904(param1:3DPositionVector) : void
       {
          this.Renamed9155 = param1;
       }
       
-      public function get orientation() : Renamed603
+      public function get orientation() : 3DPositionVector
       {
          return this.Renamed2827;
       }
       
-      public function set orientation(param1:Renamed603) : void
+      public function set orientation(param1:3DPositionVector) : void
       {
          this.Renamed2827 = param1;
       }
       
-      public function get position() : Renamed603
+      public function get position() : 3DPositionVector
       {
          return this._position;
       }
       
-      public function set position(param1:Renamed603) : void
+      public function set position(param1:3DPositionVector) : void
       {
          this._position = param1;
       }

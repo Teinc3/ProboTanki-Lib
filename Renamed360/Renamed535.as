@@ -1,6 +1,6 @@
 package Renamed360
 {
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import Renamed5811.ICodec;
    import flash.utils.ByteArray;
    import flash.utils.IDataInput;
@@ -57,10 +57,10 @@ package Renamed360
       {
          var _loc2_:int = param1.readByte();
          var _loc3_:Renamed8157 = new Renamed8157(this.Renamed8168(param1,Renamed8165),Renamed8165);
-         var _loc4_:Renamed603 = this.Renamed8169(_loc3_,Renamed8161,1);
-         var _loc5_:Renamed603 = this.Renamed8169(_loc3_,Renamed8162,Renamed8159);
-         var _loc6_:Renamed603 = this.Renamed8169(_loc3_,Renamed8163,1);
-         var _loc7_:Renamed603 = this.Renamed8169(_loc3_,Renamed8164,Renamed8160);
+         var _loc4_:3DPositionVector = this.Renamed8169(_loc3_,Renamed8161,1);
+         var _loc5_:3DPositionVector = this.Renamed8169(_loc3_,Renamed8162,Renamed8159);
+         var _loc6_:3DPositionVector = this.Renamed8169(_loc3_,Renamed8163,1);
+         var _loc7_:3DPositionVector = this.Renamed8169(_loc3_,Renamed8164,Renamed8160);
          return new Renamed2772(_loc7_,_loc2_,_loc6_,_loc5_,_loc4_);
       }
       
@@ -76,15 +76,15 @@ package Renamed360
          return _loc3_;
       }
       
-      private function Renamed8169(param1:Renamed8157, param2:int, param3:Number) : Renamed603
+      private function Renamed8169(param1:Renamed8157, param2:int, param3:Number) : 3DPositionVector
       {
          var _loc4_:Number = (param1.read(param2) - (1 << param2 - 1)) * param3;
          var _loc5_:Number = (param1.read(param2) - (1 << param2 - 1)) * param3;
          var _loc6_:Number = (param1.read(param2) - (1 << param2 - 1)) * param3;
-         return new Renamed603(_loc4_,_loc5_,_loc6_);
+         return new 3DPositionVector(_loc4_,_loc5_,_loc6_);
       }
       
-      private function Renamed8166(param1:Renamed8157, param2:Renamed603, param3:int, param4:Number) : void
+      private function Renamed8166(param1:Renamed8157, param2:3DPositionVector, param3:int, param4:Number) : void
       {
          var _loc5_:* = 1 << param3 - 1;
          param1.write(param3,this.Renamed8170(param2.x,_loc5_,param4));

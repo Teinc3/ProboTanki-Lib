@@ -1,12 +1,12 @@
 package scpacker.networking.protocol.codec.custom
 {
    import Renamed4594.Renamed6340;
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import Renamed5811.ICodec;
    import alternativa.osgi.OSGi;
    import alternativa.osgi.service.clientlog.IClientLog;
    import flash.utils.ByteArray;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class CodecAssaultBase implements ICodec
    {
@@ -16,7 +16,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed10535:ICodec;
       
-      public function CodecAssaultBase(param1:Renamed536)
+      public function CodecAssaultBase(param1:CodecRegisterer)
       {
          super();
          this.Renamed8880 = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");
@@ -27,7 +27,7 @@ package scpacker.networking.protocol.codec.custom
       {
          var _loc2_:Renamed6340 = new Renamed6340();
          _loc2_.id = this.Renamed8880.decode(param1) as int;
-         _loc2_.position = this.Renamed10535.decode(param1) as Renamed603;
+         _loc2_.position = this.Renamed10535.decode(param1) as 3DPositionVector;
          return _loc2_;
       }
       

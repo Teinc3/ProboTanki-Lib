@@ -73,7 +73,7 @@ package Renamed70
       override public function Renamed6065(param1:Renamed664, param2:Vector3, param3:Body, param4:int = -1) : void
       {
          super.Renamed6065(param1,param2,param3,param4);
-         battleService.Renamed621().Renamed1258(this.sprite);
+         battleService.Renamed621().addObjToAbsPacket(this.sprite);
          battleService.Renamed636(this.Renamed9474);
       }
       

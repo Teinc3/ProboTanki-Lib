@@ -34,25 +34,25 @@ package Renamed202
       
       private var Renamed6029:ICodec;
       
-      private var Renamed6030:Long;
+      private var 3DPositionVector0:Long;
       
-      private var Renamed6031:ICodec;
+      private var 3DPositionVector1:ICodec;
       
-      private var Renamed6032:ICodec;
+      private var 3DPositionVector2:ICodec;
       
-      private var Renamed6033:Long;
+      private var 3DPositionVector3:Long;
       
-      private var Renamed6034:ICodec;
+      private var 3DPositionVector4:ICodec;
       
-      private var Renamed6035:ICodec;
+      private var 3DPositionVector5:ICodec;
       
-      private var Renamed6036:Long;
+      private var 3DPositionVector6:Long;
       
-      private var Renamed6037:ICodec;
+      private var 3DPositionVector7:ICodec;
       
-      private var Renamed6038:ICodec;
+      private var 3DPositionVector8:ICodec;
       
-      private var Renamed6039:ICodec;
+      private var 3DPositionVector9:ICodec;
       
       private var Renamed6040:Long;
       
@@ -65,9 +65,9 @@ package Renamed202
          this.modelId = Long.getLong(183455729,-2099733819);
          this.Renamed6024 = Long.getLong(1367071399,-1702461867);
          this.Renamed6027 = Long.getLong(1479921566,-1347191967);
-         this.Renamed6030 = Long.getLong(1581597391,-963196943);
-         this.Renamed6033 = Long.getLong(1345957775,1774893408);
-         this.Renamed6036 = Long.getLong(386945968,-373481329);
+         this.3DPositionVector0 = Long.getLong(1581597391,-963196943);
+         this.3DPositionVector3 = Long.getLong(1345957775,1774893408);
+         this.3DPositionVector6 = Long.getLong(386945968,-373481329);
          this.Renamed6040 = Long.getLong(184857581,1110813993);
          super();
          this.initCodecs();
@@ -94,14 +94,14 @@ package Renamed202
             case this.Renamed6027:
                this.client.Renamed5744(Renamed4207(this.Renamed6028.decode(param2)),Renamed663(this.Renamed6029.decode(param2)));
                break;
-            case this.Renamed6030:
-               this.client.Renamed5745(this.Renamed6031.decode(param2) as Vector.<Renamed4207>,Renamed663(this.Renamed6032.decode(param2)));
+            case this.3DPositionVector0:
+               this.client.Renamed5745(this.3DPositionVector1.decode(param2) as Vector.<Renamed4207>,Renamed663(this.3DPositionVector2.decode(param2)));
                break;
-            case this.Renamed6033:
-               this.client.Renamed6021(this.Renamed6034.decode(param2) as Vector.<Renamed4207>,this.Renamed6035.decode(param2) as Vector.<Renamed4207>);
+            case this.3DPositionVector3:
+               this.client.Renamed6021(this.3DPositionVector4.decode(param2) as Vector.<Renamed4207>,this.3DPositionVector5.decode(param2) as Vector.<Renamed4207>);
                break;
-            case this.Renamed6036:
-               this.client.userConnect(String(this.Renamed6037.decode(param2)),this.Renamed6038.decode(param2) as Vector.<Renamed2737>,Renamed663(this.Renamed6039.decode(param2)));
+            case this.3DPositionVector6:
+               this.client.userConnect(String(this.3DPositionVector7.decode(param2)),this.3DPositionVector8.decode(param2) as Vector.<Renamed2737>,Renamed663(this.3DPositionVector9.decode(param2)));
                break;
             case this.Renamed6040:
                this.client.Renamed5747(String(this.Renamed6041.decode(param2)));

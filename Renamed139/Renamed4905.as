@@ -3,7 +3,7 @@ package Renamed9
    import Renamed267.Renamed4902;
    import Renamed267.Renamed4903;
    import Renamed267.Renamed4904;
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import alternativa.osgi.OSGi;
    import alternativa.protocol.ICodec;
    import alternativa.protocol.IProtocol;
@@ -59,7 +59,7 @@ package Renamed9
          this.network = Network(OSGi.getInstance().getService(Network));
       }
       
-      public function Renamed3496(param1:int, param2:Renamed603, param3:Vector.<String>, param4:Vector.<Renamed603>, param5:Vector.<int>, param6:Vector.<Renamed603>, param7:Vector.<Renamed603>) : void
+      public function Renamed3496(param1:int, param2:3DPositionVector, param3:Vector.<String>, param4:Vector.<3DPositionVector>, param5:Vector.<int>, param6:Vector.<3DPositionVector>, param7:Vector.<3DPositionVector>) : void
       {
          this.network.send(new Renamed4918(param1,param2,param3,param4,param5,param6,param7));
       }

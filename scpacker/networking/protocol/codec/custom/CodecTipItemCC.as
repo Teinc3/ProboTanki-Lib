@@ -6,7 +6,7 @@ package scpacker.networking.protocol.codec.custom
    import Renamed341.Renamed7433;
    import flash.utils.ByteArray;
    import platform.client.fp10.core.resource.types.LocalizedImageResource;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class CodecTipItemCC implements ICodec
    {
@@ -14,7 +14,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed10688:ICodec;
       
-      public function CodecTipItemCC(param1:Renamed536)
+      public function CodecTipItemCC(param1:CodecRegisterer)
       {
          super();
          this.Renamed10688 = param1.getCodec("scpacker.networking.protocol.codec.custom.ResourceGetterCodec");

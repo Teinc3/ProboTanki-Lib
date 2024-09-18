@@ -15,7 +15,7 @@ package Renamed226
    import alternativa.tanks.models.weapon.Renamed664;
    import alternativa.tanks.models.weapon.Renamed921;
    import alternativa.tanks.models.weapon.shotgun.Renamed3438;
-   import Renamed349.Renamed3105;
+   import Renamed349.TargetHitInfo;
    import Renamed74.Renamed3436;
    
    public class Renamed4583 extends Renamed6375 implements Renamed6374, Renamed3432, Renamed3436
@@ -49,7 +49,7 @@ package Renamed226
          Renamed4585(param1.removeParams(Renamed4585)).close();
       }
       
-      public function Renamed3444(param1:ClientObject, param2:Vector3, param3:Vector.<Renamed3105>) : void
+      public function Renamed3444(param1:ClientObject, param2:Vector3, param3:Vector.<TargetHitInfo>) : void
       {
          this.Renamed3166(param1,param2);
       }

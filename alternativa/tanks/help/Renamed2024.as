@@ -1,7 +1,7 @@
 package alternativa.tanks.help
 {
    import alternativa.osgi.service.locale.ILocaleService;
-   import Renamed404.Renamed1899;
+   import Renamed404.AbstractPackets9;
    import projects.tanks.clients.fp10.libraries.TanksLocale;
    
    public class Renamed2024
@@ -27,11 +27,11 @@ package alternativa.tanks.help
             _loc2_ = param1.getTime() - new Date().getTime();
             if(_loc2_ < Renamed2026)
             {
-               _loc3_ = localeService.getText(TanksLocale.TEXT_PREMIUM_COMPLETION_IN) + Renamed1899.formatTime(param1);
+               _loc3_ = localeService.getText(TanksLocale.TEXT_PREMIUM_COMPLETION_IN) + AbstractPackets9.formatTime(param1);
             }
             else
             {
-               _loc3_ = localeService.getText(TanksLocale.TEXT_PREMIUM_COMPLETION) + Renamed1899.Renamed1902(param1);
+               _loc3_ = localeService.getText(TanksLocale.TEXT_PREMIUM_COMPLETION) + AbstractPackets9.Renamed1902(param1);
             }
          }
          return _loc3_;

@@ -1,6 +1,6 @@
 package Renamed6836
 {
-   import Renamed189.AbstractPacket;
+   import AbstractPackets.AbstractPacket;
    import platform.client.models.commons.types.ValidationStatus;
    
    public class Renamed7135 extends AbstractPacket
@@ -11,11 +11,11 @@ package Renamed6836
       {
          super();
          this.status = param1;
-         Renamed1258(param1);
-         Renamed4880("scpacker.networking.protocol.codec.custom.CodecValidationStatus");
+         addObjToAbsPacket(param1);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.custom.CodecValidationStatus");
       }
       
-      override public function Renamed4881(param1:Object, param2:int) : void
+      override public function Implement(param1:Object, param2:int) : void
       {
          switch(param2)
          {
@@ -24,12 +24,12 @@ package Renamed6836
          }
       }
       
-      override public function Renamed4882() : AbstractPacket
+      override public function getReference() : AbstractPacket
       {
          return new Renamed7135();
       }
       
-      override public function Renamed4883() : int
+      override public function getCorrespondingModel() : int
       {
          return 35;
       }

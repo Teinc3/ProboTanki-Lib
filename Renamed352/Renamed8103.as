@@ -1,6 +1,6 @@
 package Renamed352
 {
-   import Renamed189.AbstractPacket;
+   import AbstractPackets.AbstractPacket;
    import platform.client.fp10.core.resource.Resource;
    
    public class Renamed8103 extends AbstractPacket
@@ -20,17 +20,17 @@ package Renamed352
          this.enableRequiredEmail = param2;
          this.maxPasswordLength = param3;
          this.minPasswordLength = param4;
-         Renamed1258(param1);
-         Renamed4880("scpacker.networking.protocol.codec.custom.ResourceGetterCodec");
-         Renamed1258(param2);
-         Renamed4880("scpacker.networking.protocol.codec.primitive.BooleanCodec");
-         Renamed1258(param3);
-         Renamed4880("scpacker.networking.protocol.codec.primitive.IntCodec");
-         Renamed1258(param4);
-         Renamed4880("scpacker.networking.protocol.codec.primitive.IntCodec");
+         addObjToAbsPacket(param1);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.custom.ResourceGetterCodec");
+         addObjToAbsPacket(param2);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.primitive.BooleanCodec");
+         addObjToAbsPacket(param3);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.primitive.IntCodec");
+         addObjToAbsPacket(param4);
+         addCodecToAbsPacket("scpacker.networking.protocol.codec.primitive.IntCodec");
       }
       
-      override public function Renamed4881(param1:Object, param2:int) : void
+      override public function Implement(param1:Object, param2:int) : void
       {
          switch(param2)
          {
@@ -48,12 +48,12 @@ package Renamed352
          }
       }
       
-      override public function Renamed4882() : AbstractPacket
+      override public function getReference() : AbstractPacket
       {
          return new Renamed8103();
       }
       
-      override public function Renamed4883() : int
+      override public function getCorrespondingModel() : int
       {
          return 8;
       }

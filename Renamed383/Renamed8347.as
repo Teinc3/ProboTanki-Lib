@@ -25,15 +25,15 @@ package Renamed383
       
       private var Renamed8345:ICodec;
       
-      private var Renamed6030:Long;
+      private var 3DPositionVector0:Long;
       
       private var Renamed8346:ICodec;
       
-      private var Renamed6036:Long;
+      private var 3DPositionVector6:Long;
       
-      private var Renamed6037:ICodec;
+      private var 3DPositionVector7:ICodec;
       
-      private var Renamed6038:ICodec;
+      private var 3DPositionVector8:ICodec;
       
       private var Renamed6040:Long;
       
@@ -45,8 +45,8 @@ package Renamed383
          this.client = Renamed4683(this);
          this.modelId = Long.getLong(575618390,177970779);
          this.Renamed6027 = Long.getLong(965223943,535616065);
-         this.Renamed6030 = Long.getLong(2010192701,-2134483217);
-         this.Renamed6036 = Long.getLong(825794462,-1556026223);
+         this.3DPositionVector0 = Long.getLong(2010192701,-2134483217);
+         this.3DPositionVector6 = Long.getLong(825794462,-1556026223);
          this.Renamed6040 = Long.getLong(329840042,1301345271);
          super();
          this.initCodecs();
@@ -70,11 +70,11 @@ package Renamed383
             case this.Renamed6027:
                this.client.Renamed5744(Renamed4207(this.Renamed8345.decode(param2)));
                break;
-            case this.Renamed6030:
+            case this.3DPositionVector0:
                this.client.Renamed5745(this.Renamed8346.decode(param2) as Vector.<Renamed4207>);
                break;
-            case this.Renamed6036:
-               this.client.userConnect(String(this.Renamed6037.decode(param2)),this.Renamed6038.decode(param2) as Vector.<Renamed2737>);
+            case this.3DPositionVector6:
+               this.client.userConnect(String(this.3DPositionVector7.decode(param2)),this.3DPositionVector8.decode(param2) as Vector.<Renamed2737>);
                break;
             case this.Renamed6040:
                this.client.Renamed5747(String(this.Renamed6041.decode(param2)));

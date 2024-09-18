@@ -18,7 +18,7 @@ package alternativa.tanks.models.tank
    import Renamed264.Renamed508;
    import Renamed264.Renamed509;
    import Renamed1.Renamed909;
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import Renamed479.Renamed2753;
    import Renamed479.Renamed2754;
    import Renamed479.Renamed2755;
@@ -144,7 +144,7 @@ package alternativa.tanks.models.tank
       
       private static const Renamed2778:Number = 135;
       
-      private static const Renamed2779:Renamed603 = new Renamed603(0,0,0);
+      private static const Renamed2779:3DPositionVector = new 3DPositionVector(0,0,0);
       
       private static const Renamed2780:int = 5;
       
@@ -194,13 +194,13 @@ package alternativa.tanks.models.tank
       
       private var Renamed2802:int;
       
-      private var Renamed2803:Renamed603;
+      private var Renamed2803:3DPositionVector;
       
-      private var Renamed2804:Renamed603;
+      private var Renamed2804:3DPositionVector;
       
-      private var Renamed2805:Renamed603;
+      private var Renamed2805:3DPositionVector;
       
-      private var Renamed2806:Renamed603;
+      private var Renamed2806:3DPositionVector;
       
       private var Renamed2807:Renamed2735;
       
@@ -243,13 +243,13 @@ package alternativa.tanks.models.tank
       public function Renamed2407()
       {
          this.Renamed1235 = new Renamed1231();
-         this.Renamed2825 = new Renamed2772(new Renamed603(0,0,0),0,new Renamed603(0,0,0),new Renamed603(0,0,0),new Renamed603(0,0,0));
+         this.Renamed2825 = new Renamed2772(new 3DPositionVector(0,0,0),0,new 3DPositionVector(0,0,0),new 3DPositionVector(0,0,0),new 3DPositionVector(0,0,0));
          this.Renamed2826 = new Renamed2773(0,0);
          this.Renamed2546 = new Dictionary();
-         this.Renamed2803 = new Renamed603(0,0,0);
-         this.Renamed2804 = new Renamed603(0,0,0);
-         this.Renamed2805 = new Renamed603(0,0,0);
-         this.Renamed2806 = new Renamed603(0,0,0);
+         this.Renamed2803 = new 3DPositionVector(0,0,0);
+         this.Renamed2804 = new 3DPositionVector(0,0,0);
+         this.Renamed2805 = new 3DPositionVector(0,0,0);
+         this.Renamed2806 = new 3DPositionVector(0,0,0);
          this.Renamed2827 = new Quaternion();
          this.Renamed2828 = new Quaternion();
          this.Renamed2829 = new Vector3();
@@ -257,7 +257,7 @@ package alternativa.tanks.models.tank
          this.Renamed1522 = new Vector3();
          this.Renamed2808 = new Vector3();
          this.Renamed1299 = new RayHit();
-         this.Renamed2821 = new Renamed2772(new Renamed603(0,0,0),0,new Renamed603(0,0,0),new Renamed603(0,0,0),new Renamed603(0,0,0));
+         this.Renamed2821 = new Renamed2772(new 3DPositionVector(0,0,0),0,new 3DPositionVector(0,0,0),new 3DPositionVector(0,0,0),new 3DPositionVector(0,0,0));
          super();
          this.Renamed2817 = new Renamed2742();
          this.Renamed2432 = new Renamed902(battleEventDispatcher,this);
@@ -404,7 +404,7 @@ package alternativa.tanks.models.tank
          this.Renamed2845(param1,param3,param2.control);
       }
       
-      public function Renamed2852(param1:ClientObject, param2:Renamed603, param3:Renamed603, param4:Renamed603, param5:Renamed603, param6:int) : void
+      public function Renamed2852(param1:ClientObject, param2:3DPositionVector, param3:3DPositionVector, param4:3DPositionVector, param5:3DPositionVector, param6:int) : void
       {
          var _loc7_:Tank = this.getTank(param1);
          if(_loc7_ != null)
@@ -685,7 +685,7 @@ package alternativa.tanks.models.tank
          battleService.Renamed619().Renamed815(_loc2_);
       }
       
-      private function Renamed2889(param1:ClientObject, param2:Renamed603, param3:Renamed603) : void
+      private function Renamed2889(param1:ClientObject, param2:3DPositionVector, param3:3DPositionVector) : void
       {
          this.Renamed2852(param1,param2,param3,Renamed2779,Renamed2779,0);
          this.getTank(param1).Renamed696().saveState();
@@ -909,14 +909,14 @@ package alternativa.tanks.models.tank
          return Renamed2722(param1.getParams(Renamed2722));
       }
       
-      private function Renamed2903(param1:Number, param2:Vector3, param3:Renamed603, param4:Renamed603) : void
+      private function Renamed2903(param1:Number, param2:Vector3, param3:3DPositionVector, param4:3DPositionVector) : void
       {
          param4.x = param2.x + (param3.x - param2.x) * param1;
          param4.y = param2.y + (param3.y - param2.y) * param1;
          param4.z = param2.z + (param3.z - param2.z) * param1;
       }
       
-      private function Renamed2905(param1:Number, param2:Quaternion, param3:Renamed603, param4:Renamed603) : void
+      private function Renamed2905(param1:Number, param2:Quaternion, param3:3DPositionVector, param4:3DPositionVector) : void
       {
          this.Renamed2827.setFromEulerAnglesXYZ(param3.x,param3.y,param3.z);
          this.Renamed2828.slerp(param2,this.Renamed2827,param1);
@@ -989,7 +989,7 @@ package alternativa.tanks.models.tank
          }
       }
       
-      public function Renamed2909(param1:Renamed603, param2:Renamed603) : void
+      public function Renamed2909(param1:3DPositionVector, param2:3DPositionVector) : void
       {
          this.Renamed2812.Renamed2910(param1,param2);
          this.Renamed2911();
@@ -1012,7 +1012,7 @@ package alternativa.tanks.models.tank
          }
       }
       
-      public function spawn(param1:ClientObject, param2:Renamed663, param3:Renamed603, param4:Renamed603, param5:int, param6:int) : void
+      public function spawn(param1:ClientObject, param2:Renamed663, param3:3DPositionVector, param4:3DPositionVector, param5:int, param6:int) : void
       {
          var _loc7_:int = 0;
          var _loc8_:Renamed2722 = null;

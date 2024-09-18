@@ -5,7 +5,7 @@ package Renamed94
    import Renamed7273.Renamed7294;
    import Renamed7273.Renamed7302;
    import Renamed7273.Renamed7305;
-   import Renamed602.Renamed603;
+   import Renamed602.3DPositionVector;
    import alternativa.osgi.OSGi;
    import alternativa.protocol.ICodec;
    import alternativa.protocol.IProtocol;
@@ -83,7 +83,7 @@ package Renamed94
          this.network.send(new Renamed7305());
       }
       
-      public function Renamed3172(param1:int, param2:Renamed603, param3:Vector.<String>, param4:Vector.<Renamed603>, param5:Vector.<int>, param6:Vector.<Renamed603>, param7:Vector.<Renamed603>) : void
+      public function Renamed3172(param1:int, param2:3DPositionVector, param3:Vector.<String>, param4:Vector.<3DPositionVector>, param5:Vector.<int>, param6:Vector.<3DPositionVector>, param7:Vector.<3DPositionVector>) : void
       {
          this.network.send(new Renamed7294(param1,param2,param3,param4,param5,param6,param7));
       }
@@ -93,7 +93,7 @@ package Renamed94
          this.network.send(new Renamed7306(param1));
       }
       
-      public function Renamed3174(param1:int, param2:Renamed603, param3:Vector.<String>, param4:Vector.<Renamed603>, param5:Vector.<int>, param6:Vector.<Renamed603>, param7:Vector.<Renamed603>) : void
+      public function Renamed3174(param1:int, param2:3DPositionVector, param3:Vector.<String>, param4:Vector.<3DPositionVector>, param5:Vector.<int>, param6:Vector.<3DPositionVector>, param7:Vector.<3DPositionVector>) : void
       {
          this.network.send(new Renamed7292(param1,param2,param3,param4,param5,param6,param7));
       }

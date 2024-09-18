@@ -2,7 +2,7 @@ package scpacker.networking.protocol.codec.custom
 {
    import Renamed5811.ICodec;
    import flash.utils.ByteArray;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    import Renamed420.Renamed8195;
    
    public class CodecReferrerPanelCC implements ICodec
@@ -11,7 +11,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed10711:ICodec;
       
-      public function CodecReferrerPanelCC(param1:Renamed536)
+      public function CodecReferrerPanelCC(param1:CodecRegisterer)
       {
          super();
          this.Renamed10710 = param1.getCodec("scpacker.networking.protocol.codec.primitive.StringCodec");

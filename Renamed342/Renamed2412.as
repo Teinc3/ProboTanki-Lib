@@ -240,7 +240,7 @@ package Renamed342
          }
          for each(_loc4_ in this.Renamed7978.Renamed8000())
          {
-            _loc3_.Renamed1258(_loc4_);
+            _loc3_.addObjToAbsPacket(_loc4_);
          }
          this.Renamed1354.calculateBounds();
          _loc3_.Renamed1417(this.Renamed1354);

@@ -6,7 +6,7 @@ package scpacker.networking.protocol.codec.custom
    import alternativa.osgi.service.clientlog.IClientLog;
    import flash.utils.ByteArray;
    import platform.client.fp10.core.resource.types.SoundResource;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class CodecCaptureTheFlagSoundFX implements ICodec
    {
@@ -28,7 +28,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed10547:ICodec;
       
-      public function CodecCaptureTheFlagSoundFX(param1:Renamed536)
+      public function CodecCaptureTheFlagSoundFX(param1:CodecRegisterer)
       {
          super();
          this.Renamed10619 = param1.getCodec("scpacker.networking.protocol.codec.custom.ResourceGetterCodec");

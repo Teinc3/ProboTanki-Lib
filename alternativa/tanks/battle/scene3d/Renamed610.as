@@ -335,7 +335,7 @@ package alternativa.tanks.battle.scene3d
       
       public function Renamed1259(param1:Renamed1232) : void
       {
-         this.Renamed1258(param1.Renamed1020());
+         this.addObjToAbsPacket(param1.Renamed1020());
       }
       
       public function Renamed1261(param1:Renamed1232) : void
@@ -501,7 +501,7 @@ package alternativa.tanks.battle.scene3d
          return Math.sqrt(_loc2_ * _loc2_ + _loc3_ * _loc3_ + _loc4_ * _loc4_);
       }
       
-      public function Renamed1258(param1:Object3D) : void
+      public function addObjToAbsPacket(param1:Object3D) : void
       {
          this.Renamed1355.addChild(param1);
          if(param1.name != Renamed1230.Renamed690 && param1.name != Renamed1230.TANK_PART)

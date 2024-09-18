@@ -6,7 +6,7 @@ package scpacker.networking.protocol.codec.custom
    import flash.utils.ByteArray;
    import projects.tanks.client.chat.models.chat.chat.ChatCC;
    import projects.tanks.client.users.services.chatmoderator.ChatModeratorLevel;
-   import scpacker.networking.protocol.Renamed536;
+   import scpacker.networking.protocol.CodecRegisterer;
    
    public class CodecChatCC implements ICodec
    {
@@ -36,7 +36,7 @@ package scpacker.networking.protocol.codec.custom
       
       private var Renamed10634:ICodec;
       
-      public function CodecChatCC(param1:Renamed536)
+      public function CodecChatCC(param1:CodecRegisterer)
       {
          super();
          this.Renamed10623 = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");
