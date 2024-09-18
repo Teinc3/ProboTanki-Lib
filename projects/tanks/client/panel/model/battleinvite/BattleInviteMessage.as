@@ -1,6 +1,6 @@
 package projects.tanks.client.panel.model.battleinvite
 {
-   import projects.tanks.client.battleservice.§final package import§;
+   import projects.tanks.client.battleservice.Renamed1587;
    
    public class BattleInviteMessage
    {
@@ -14,7 +14,7 @@ package projects.tanks.client.panel.model.battleinvite
       
       private var _mapName:String;
       
-      private var _mode:§final package import§;
+      private var _mode:Renamed1587;
       
       private var _noSuppliesBattle:Boolean;
       
@@ -26,7 +26,7 @@ package projects.tanks.client.panel.model.battleinvite
       
       private var _url:String;
       
-      public function BattleInviteMessage(param1:Boolean = false, param2:Boolean = false, param3:String = null, param4:String = null, param5:String = null, param6:§final package import§ = null, param7:Boolean = false, param8:Boolean = false, param9:Boolean = false, param10:int = 0, param11:String = null)
+      public function BattleInviteMessage(param1:Boolean = false, param2:Boolean = false, param3:String = null, param4:String = null, param5:String = null, param6:Renamed1587 = null, param7:Boolean = false, param8:Boolean = false, param9:Boolean = false, param10:int = 0, param11:String = null)
       {
          super();
          this._availableRank = param1;
@@ -92,12 +92,12 @@ package projects.tanks.client.panel.model.battleinvite
          this._mapName = param1;
       }
       
-      public function get mode() : §final package import§
+      public function get mode() : Renamed1587
       {
          return this._mode;
       }
       
-      public function set mode(param1:§final package import§) : void
+      public function set mode(param1:Renamed1587) : void
       {
          this._mode = param1;
       }

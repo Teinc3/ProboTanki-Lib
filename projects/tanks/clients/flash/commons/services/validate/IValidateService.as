@@ -4,7 +4,7 @@ package projects.tanks.clients.flash.commons.services.validate
    {
       function isEmailValid(param1:String) : Boolean;
       
-      function §,!4§(param1:String) : Boolean;
+      function Renamed4471(param1:String) : Boolean;
       
       function isUidValid(param1:String) : Boolean;
       

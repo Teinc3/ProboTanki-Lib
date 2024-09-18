@@ -170,10 +170,10 @@ package fl.controls
       
       public function set scrollTargetName(param1:String) : void
       {
-         var §0!O§:String = param1;
+         var Renamed4046:String = param1;
          try
          {
-            scrollTarget = parent.getChildByName(§0!O§) as TextField;
+            scrollTarget = parent.getChildByName(Renamed4046) as TextField;
          }
          catch(error:Error)
          {

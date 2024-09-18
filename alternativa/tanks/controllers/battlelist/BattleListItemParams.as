@@ -1,9 +1,9 @@
 package alternativa.tanks.controllers.battlelist
 {
    import platform.client.fp10.core.type.IGameObject;
-   import projects.tanks.client.battleselect.model.item.§5!9§;
-   import projects.tanks.client.battleservice.§<#p§;
-   import projects.tanks.client.battleservice.§final package import§;
+   import projects.tanks.client.battleselect.model.item.Renamed1620;
+   import projects.tanks.client.battleservice.Renamed1586;
+   import projects.tanks.client.battleservice.Renamed1587;
    
    public class BattleListItemParams
    {
@@ -11,7 +11,7 @@ package alternativa.tanks.controllers.battlelist
       
       public var battleItemGO:IGameObject;
       
-      public var battleMode:§final package import§;
+      public var battleMode:Renamed1587;
       
       public var id:String;
       
@@ -33,19 +33,19 @@ package alternativa.tanks.controllers.battlelist
       
       public var nmap:String;
       
-      public var rankRange:§<#p§;
+      public var rankRange:Renamed1586;
       
       public var accessible:Boolean;
       
       public var noSupplies:Boolean;
       
-      public var suspicionLevel:§5!9§;
+      public var suspicionLevel:Renamed1620;
       
       public var proBattle:Boolean;
       
-      public var §9!@§:Boolean;
+      public var Renamed1624:Boolean;
       
-      public var §;9§:String;
+      public var Renamed1625:String;
       
       public var additionalCrystalsPercent:int;
       

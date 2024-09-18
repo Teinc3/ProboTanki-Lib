@@ -1,8 +1,8 @@
 package controls.base
 {
-   import controls.checkbox.§""R§;
+   import controls.checkbox.Renamed3966;
    
-   public class TankCheckBoxBase extends §""R§
+   public class TankCheckBoxBase extends Renamed3966
    {
       private var _labelBase:LabelBase;
       

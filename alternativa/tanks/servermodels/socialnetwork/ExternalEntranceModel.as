@@ -8,17 +8,17 @@ package alternativa.tanks.servermodels.socialnetwork
    import flash.net.navigateToURL;
    import platform.client.fp10.core.model.ObjectLoadListener;
    import projects.tanks.client.entrance.model.entrance.externalentrance.SocialNetworkEntranceParams;
-   import projects.tanks.client.entrance.model.entrance.externalentrance.§native catch while§;
-   import projects.tanks.client.entrance.model.entrance.externalentrance.§static for case§;
+   import projects.tanks.client.entrance.model.entrance.externalentrance.Renamed3562;
+   import projects.tanks.client.entrance.model.entrance.externalentrance.Renamed3563;
    import projects.tanks.clients.flash.commons.services.nameutils.SocialNetworkNameUtils;
    import projects.tanks.clients.fp10.libraries.TanksLocale;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.alertservices.IAlertService;
-   import services.alertservice.§get const use§;
+   import services.alertservice.Renamed1616;
    
-   public class ExternalEntranceModel extends §static for case§ implements §native catch while§, ObjectLoadListener, IExternalEntranceModel
+   public class ExternalEntranceModel extends Renamed3563 implements Renamed3562, ObjectLoadListener, IExternalEntranceModel
    {
       [Inject]
-      public static var §7#L§:IExternalEntranceService;
+      public static var Renamed3564:IExternalEntranceService;
       
       [Inject]
       public static var clientFacade:IEntranceClientFacade;
@@ -54,7 +54,7 @@ package alternativa.tanks.servermodels.socialnetwork
       
       public function login(param1:String, param2:String) : void
       {
-         server.§finally var while§(param1,param2);
+         server.Renamed3565(param1,param2);
       }
       
       public function startExternalRegisterUser(param1:String, param2:Boolean, param3:String) : void
@@ -74,7 +74,7 @@ package alternativa.tanks.servermodels.socialnetwork
       private function startExternalEnter(param1:String, param2:Boolean, param3:String) : void
       {
          this._socialNetworkId = param1;
-         server.§static package try§(param2,param3);
+         server.Renamed3566(param2,param3);
          goToURL(this.getAuthorizationUrl(param1));
       }
       
@@ -93,7 +93,7 @@ package alternativa.tanks.servermodels.socialnetwork
       
       public function finishExternalRegisterUser(param1:String, param2:String) : void
       {
-         server.§ "P§(param1,param2);
+         server.Renamed3567(param1,param2);
       }
       
       public function objectLoaded() : void
@@ -101,7 +101,7 @@ package alternativa.tanks.servermodels.socialnetwork
          var _loc1_:SocialNetworkEntranceParams = null;
          for each(_loc1_ in getInitParam().socialNetworkParams)
          {
-            §7#L§.setEnabled(_loc1_.snId,true);
+            Renamed3564.setEnabled(_loc1_.snId,true);
          }
       }
       
@@ -110,29 +110,29 @@ package alternativa.tanks.servermodels.socialnetwork
          if(this.isSendStartRegisterFacade)
          {
             this.isSendStartRegisterFacade = false;
-            clientFacade.§&#I§(this._socialNetworkId);
+            clientFacade.Renamed3568(this._socialNetworkId);
          }
          if(this.isSendStartLoginFacade)
          {
             this.isSendStartLoginFacade = false;
-            clientFacade.§null package default§(this._socialNetworkId);
+            clientFacade.Renamed3569(this._socialNetworkId);
          }
       }
       
       public function wrongPassword() : void
       {
-         clientFacade.§switch for dynamic§();
+         clientFacade.Renamed3570();
       }
       
       public function validationFailed() : void
       {
-         alertService.showAlert(localeService.getText(TanksLocale.TEXT_ALERT_ERROR_EXTERNAL_ENTER),Vector.<String>([localeService.getText(§get const use§.OK)]));
+         alertService.showAlert(localeService.getText(TanksLocale.TEXT_ALERT_ERROR_EXTERNAL_ENTER),Vector.<String>([localeService.getText(Renamed1616.OK)]));
          clientFacade.externalValidationFailed();
       }
       
       public function linkAlreadyExists() : void
       {
-         alertService.showAlert(localeService.getText(TanksLocale.TEXT_ALERT_GAME_ACCOUNT_ALREADY_LINKED,SocialNetworkNameUtils.makeSocialNetworkNameFromId(this._socialNetworkId)),Vector.<String>([localeService.getText(§get const use§.OK)]));
+         alertService.showAlert(localeService.getText(TanksLocale.TEXT_ALERT_GAME_ACCOUNT_ALREADY_LINKED,SocialNetworkNameUtils.makeSocialNetworkNameFromId(this._socialNetworkId)),Vector.<String>([localeService.getText(Renamed1616.OK)]));
          clientFacade.externalLinkAlreadyExists();
       }
    }

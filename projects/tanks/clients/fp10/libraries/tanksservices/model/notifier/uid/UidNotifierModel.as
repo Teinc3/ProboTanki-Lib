@@ -2,14 +2,14 @@ package projects.tanks.clients.fp10.libraries.tanksservices.model.notifier.uid
 {
    import alternativa.types.Long;
    import flash.utils.Dictionary;
-   import projects.tanks.client.tanksservices.model.notifier.uid.§+!@§;
-   import projects.tanks.client.tanksservices.model.notifier.uid.§<!o§;
+   import projects.tanks.client.tanksservices.model.notifier.uid.Renamed4409;
+   import projects.tanks.client.tanksservices.model.notifier.uid.Renamed4405;
    import projects.tanks.client.tanksservices.model.notifier.uid.UidNotifierData;
    import projects.tanks.clients.fp10.libraries.tanksservices.model.UserRefresh;
    import projects.tanks.clients.fp10.libraries.tanksservices.model.listener.UserNotifier;
    import projects.tanks.clients.fp10.libraries.tanksservices.model.notifier.UserInfoConsumer;
    
-   public class UidNotifierModel extends §+!@§ implements §<!o§, UserRefresh
+   public class UidNotifierModel extends Renamed4409 implements Renamed4405, UserRefresh
    {
       private var data:Dictionary;
       

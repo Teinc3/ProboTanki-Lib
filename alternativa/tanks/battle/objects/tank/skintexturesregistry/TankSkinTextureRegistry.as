@@ -1,13 +1,13 @@
 package alternativa.tanks.battle.objects.tank.skintexturesregistry
 {
-   import alternativa.tanks.battle.objects.tank.tankskin.§function else§;
+   import alternativa.tanks.battle.objects.tank.tankskin.Renamed1168;
    import flash.display.BitmapData;
    
    public interface TankSkinTextureRegistry
    {
-      function getTexture(param1:§function else§, param2:BitmapData) : BitmapData;
+      function getTexture(param1:Renamed1168, param2:BitmapData) : BitmapData;
       
-      function §const for set§(param1:§function else§, param2:BitmapData) : void;
+      function Renamed1169(param1:Renamed1168, param2:BitmapData) : void;
       
       function clear() : void;
    }

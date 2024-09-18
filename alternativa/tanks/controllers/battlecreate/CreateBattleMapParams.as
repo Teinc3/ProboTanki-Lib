@@ -1,8 +1,8 @@
 package alternativa.tanks.controllers.battlecreate
 {
-   import §?"a§.§finally for do§;
+   import Renamed1614.Renamed1615;
    import platform.client.fp10.core.resource.types.ImageResource;
-   import projects.tanks.client.battleservice.§final package import§;
+   import projects.tanks.client.battleservice.Renamed1587;
    
    public class CreateBattleMapParams
    {
@@ -20,7 +20,7 @@ package alternativa.tanks.controllers.battlecreate
       
       public var maxPeople:int;
       
-      public var battleModes:Vector.<§final package import§>;
+      public var battleModes:Vector.<Renamed1587>;
       
       public var themeName:String;
       
@@ -32,7 +32,7 @@ package alternativa.tanks.controllers.battlecreate
       
       public var previewResource:ImageResource;
       
-      public var theme:§finally for do§;
+      public var theme:Renamed1615;
       
       public var additionalCrystalsPercent:int;
       

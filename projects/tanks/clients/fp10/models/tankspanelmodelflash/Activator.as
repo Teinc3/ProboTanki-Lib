@@ -1,34 +1,34 @@
 package projects.tanks.clients.fp10.models.tankspanelmodelflash
 {
-   import §!#^§.§#"'§;
-   import §"#p§.§set for override§;
-   import §"f§.§+#O§;
-   import §"f§.§with for import§;
-   import §#$#§.§`";§;
-   import §&#`§.§2!6§;
-   import §+"C§.§79§;
-   import §-A§.§ !e§;
-   import §4#U§.§5[§;
-   import §48§.§%"$§;
-   import §48§.§false catch static§;
-   import §7#C§.§=b§;
-   import §8"Y§.§!#J§;
-   import §;!w§.§!"A§;
-   import §>#m§.§&!b§;
-   import §?#7§.§3@§;
-   import §@#3§.§"!y§;
-   import §[!#§.§try for const§;
-   import §`U§.§ "n§;
-   import §`U§.§6"§;
-   import §`U§.§else catch null§;
-   import §`U§.§use set extends§;
+   import Renamed145.Renamed2175;
+   import Renamed2081.Renamed2083;
+   import Renamed1959.Renamed4797;
+   import Renamed1959.Renamed1961;
+   import Renamed151.Renamed4798;
+   import Renamed191.Renamed4799;
+   import Renamed4800.Renamed4801;
+   import Renamed218.Renamed4802;
+   import Renamed245.Renamed2282;
+   import Renamed248.Renamed4803;
+   import Renamed248.Renamed4804;
+   import Renamed266.Renamed2217;
+   import Renamed4805.Renamed4806;
+   import Renamed291.Renamed4807;
+   import Renamed4808.Renamed4809;
+   import Renamed2170.Renamed2171;
+   import Renamed303.Renamed1962;
+   import Renamed466.Renamed4810;
+   import Renamed504.Renamed4811;
+   import Renamed504.Renamed4812;
+   import Renamed504.Renamed4813;
+   import Renamed504.Renamed4814;
    import alternativa.osgi.OSGi;
    import alternativa.osgi.bundle.IBundleActivator;
    import alternativa.osgi.service.clientlog.IClientLog;
    import alternativa.osgi.service.display.IDisplay;
    import alternativa.osgi.service.locale.ILocaleService;
    import alternativa.tanks.blur.IBlurService;
-   import alternativa.tanks.gui.§@#r§;
+   import alternativa.tanks.gui.Renamed1907;
    import alternativa.tanks.gui.CongratulationsWindowPresent;
    import alternativa.tanks.gui.CongratulationsWindowWithBanner;
    import alternativa.tanks.gui.NewsAlertWindow;
@@ -55,10 +55,10 @@ package projects.tanks.clients.fp10.models.tankspanelmodelflash
    import alternativa.tanks.gui.friends.list.renderer.HeaderAcceptedList;
    import alternativa.tanks.gui.premiumaccount.PremiumAccountWelcomeAlert;
    import alternativa.tanks.gui.presents.NewPresentsAlert;
-   import alternativa.tanks.gui.settings.§"#Y§;
+   import alternativa.tanks.gui.settings.Renamed1969;
    import alternativa.tanks.gui.settings.SettingsWindow;
    import alternativa.tanks.help.IHelpService;
-   import alternativa.tanks.help.§break case§;
+   import alternativa.tanks.help.Renamed2024;
    import alternativa.tanks.model.achievement.AchievementModel;
    import alternativa.tanks.model.achievement.IAchievement;
    import alternativa.tanks.model.bonus.showing.image.BonusImageShowingModel;
@@ -86,55 +86,55 @@ package projects.tanks.clients.fp10.models.tankspanelmodelflash
    import alternativa.tanks.model.premiumaccount.notification.PremiumCompleteNotification;
    import alternativa.tanks.model.presents.NewPresentsShowingModel;
    import alternativa.tanks.model.settings.SettingsModel;
-   import alternativa.tanks.model.shop.§>"E§;
+   import alternativa.tanks.model.shop.Renamed2239;
    import alternativa.tanks.model.shop.items.crystallitem.CrystalPackageItem;
    import alternativa.tanks.model.shop.items.premuimitem.PremiumPackageItem;
    import alternativa.tanks.model.socialnetwork.SocialNetworkPanelModel;
    import alternativa.tanks.model.useremailandpassword.IUserEmailAndPassword;
    import alternativa.tanks.model.useremailandpassword.PasswordService;
    import alternativa.tanks.model.useremailandpassword.UserEmailAndPasswordModel;
-   import alternativa.tanks.model.useremailandpassword.§do for import§;
-   import alternativa.tanks.model.useremailandpassword.§else for super§;
-   import alternativa.tanks.model.userproperties.§%!g§;
+   import alternativa.tanks.model.useremailandpassword.Renamed2296;
+   import alternativa.tanks.model.useremailandpassword.Renamed2297;
+   import alternativa.tanks.model.userproperties.Renamed2298;
    import alternativa.tanks.model.userproperties.IUserProperties;
    import alternativa.tanks.model.userproperties.UserPropertiesModel;
-   import alternativa.tanks.model.userproperties.§use for finally§;
+   import alternativa.tanks.model.userproperties.Renamed2299;
    import alternativa.tanks.newbieservice.NewbieUserService;
    import alternativa.tanks.servermodels.loginbyhash.LoginByHashModel;
    import alternativa.tanks.service.IEntranceClientFacade;
    import alternativa.tanks.service.IExternalEntranceService;
    import alternativa.tanks.service.achievement.IAchievementService;
-   import alternativa.tanks.service.achievement.§finally for extends§;
+   import alternativa.tanks.service.achievement.Renamed567;
    import alternativa.tanks.service.country.CountryService;
    import alternativa.tanks.service.dailyquest.DailyQuestNotifierService;
-   import alternativa.tanks.service.dailyquest.§include set set§;
+   import alternativa.tanks.service.dailyquest.Renamed3660;
    import alternativa.tanks.service.dialogs.IDialogsService;
-   import alternativa.tanks.service.fps.§ v§;
+   import alternativa.tanks.service.fps.Renamed570;
    import alternativa.tanks.service.money.IMoneyService;
-   import alternativa.tanks.service.money.§for var true§;
+   import alternativa.tanks.service.money.Renamed571;
    import alternativa.tanks.service.notificationcategories.INotificationGarageCategoriesService;
-   import alternativa.tanks.service.notificationcategories.§]"S§;
+   import alternativa.tanks.service.notificationcategories.Renamed572;
    import alternativa.tanks.service.panel.IPanelView;
-   import alternativa.tanks.service.panel.§continue var implements§;
-   import alternativa.tanks.service.settings.§;!Y§;
+   import alternativa.tanks.service.panel.Renamed573;
+   import alternativa.tanks.service.settings.Renamed574;
    import alternativa.tanks.service.settings.ISettingsService;
    import alternativa.tanks.service.settings.keybinding.KeysBindingService;
-   import alternativa.tanks.service.settings.keybinding.§const const catch§;
+   import alternativa.tanks.service.settings.keybinding.Renamed3769;
    import alternativa.tanks.service.socialnetwork.ISocialNetworkPanelService;
    import alternativa.tanks.tracker.ITrackerService;
    import alternativa.tanks.view.forms.freeuids.FreeUidsForm;
    import alternativa.types.Long;
-   import §break set function§.§'!`§;
-   import §class const var§.§?#L§;
-   import §const package each§.§,#§;
-   import §for const native§.§#"6§;
-   import §for package case§.§5!^§;
-   import §function set dynamic§.§""'§;
-   import §function set dynamic§.§3!`§;
-   import §function set dynamic§.§7"t§;
-   import §function set dynamic§.§for const with§;
-   import §function set dynamic§.§switch import§;
-   import §in set dynamic§.§function for set§;
+   import Renamed313.Renamed2155;
+   import Renamed331.Renamed4815;
+   import Renamed336.Renamed2088;
+   import Renamed367.Renamed2113;
+   import Renamed371.Renamed4816;
+   import Renamed376.Renamed4817;
+   import Renamed376.Renamed4818;
+   import Renamed376.Renamed4819;
+   import Renamed376.Renamed4820;
+   import Renamed376.Renamed4821;
+   import Renamed395.Renamed4822;
    import platform.client.fp10.core.model.IObjectLoadListener;
    import platform.client.fp10.core.model.ObjectLoadListener;
    import platform.client.fp10.core.model.ObjectLoadPostListener;
@@ -144,18 +144,18 @@ package projects.tanks.clients.fp10.models.tankspanelmodelflash
    import platform.client.fp10.core.registry.ResourceRegistry;
    import platform.client.fp10.core.service.address.AddressService;
    import platform.clients.fp10.libraries.alternativapartners.service.IPartnerService;
-   import projects.tanks.client.panel.model.battleinvite.§class set function§;
+   import projects.tanks.client.panel.model.battleinvite.Renamed2084;
    import projects.tanks.client.panel.model.bonus.showing.image.IBonusImageShowingModelBase;
    import projects.tanks.client.panel.model.bonus.showing.info.IBonusInfoModelBase;
    import projects.tanks.client.panel.model.bonus.showing.items.IBonusItemModelBase;
    import projects.tanks.client.panel.model.bonus.showing.items.IBonusItemsShowingModelBase;
-   import projects.tanks.client.panel.model.dailyquest.§35§;
+   import projects.tanks.client.panel.model.dailyquest.Renamed4351;
    import projects.tanks.client.panel.model.garage.rankupsupplybonus.IRankUpSupplyBonusModelBase;
    import projects.tanks.client.panel.model.news.item.INewsItemModelBase;
    import projects.tanks.client.panel.model.news.showing.INewsShowingModelBase;
-   import projects.tanks.client.panel.model.premiumaccount.alert.§3"l§;
+   import projects.tanks.client.panel.model.premiumaccount.alert.Renamed2168;
    import projects.tanks.client.panel.model.profile.userproperty.IUserPropertyModelBase;
-   import projects.tanks.client.panel.model.socialnetwork.§8k§;
+   import projects.tanks.client.panel.model.socialnetwork.Renamed2275;
    import projects.tanks.clients.flash.commons.services.battlelinkactivator.BattleLinkActivatorService;
    import projects.tanks.clients.flash.commons.services.battlelinkactivator.IBattleLinkActivatorService;
    import projects.tanks.clients.flash.commons.services.notification.INotificationService;
@@ -176,15 +176,15 @@ package projects.tanks.clients.fp10.models.tankspanelmodelflash
    import projects.tanks.clients.fp10.libraries.tanksservices.service.storage.IStorageService;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.user.IUserInfoService;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.userproperties.IUserPropertiesService;
-   import §return const for§.§4#a§;
+   import Renamed413.Renamed3659;
    import services.contextmenu.IContextMenuService;
-   import §set catch if§.§import var true§;
-   import §set static§.§else catch with§;
-   import §static final§.§4!y§;
-   import §try const return§.§break implements§;
-   import §try const return§.§native const get§;
-   import §try const return§.§override set null§;
-   import §use for class§.§default package with§;
+   import Renamed416.Renamed2074;
+   import Renamed419.Renamed1963;
+   import Renamed420.Renamed4823;
+   import Renamed445.Renamed1964;
+   import Renamed445.Renamed4824;
+   import Renamed445.Renamed4825;
+   import Renamed450.Renamed4826;
    import utils.TimeFormatter;
    
    public class Activator implements IBundleActivator
@@ -351,10 +351,10 @@ package projects.tanks.clients.fp10.models.tankspanelmodelflash
          });
          osgi.injectService(INotificationSoundService,function(param1:Object):void
          {
-            BattleInviteModel.§import for for§ = INotificationSoundService(param1);
+            BattleInviteModel.Renamed2086 = INotificationSoundService(param1);
          },function():INotificationSoundService
          {
-            return BattleInviteModel.§import for for§;
+            return BattleInviteModel.Renamed2086;
          });
          osgi.injectService(IBattleInviteService,function(param1:Object):void
          {
@@ -449,17 +449,17 @@ package projects.tanks.clients.fp10.models.tankspanelmodelflash
          });
          osgi.injectService(IPanelView,function(param1:Object):void
          {
-            §for var true§.panelView = IPanelView(param1);
+            Renamed571.panelView = IPanelView(param1);
          },function():IPanelView
          {
-            return §for var true§.panelView;
+            return Renamed571.panelView;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §continue var implements§.display = IDisplay(param1);
+            Renamed573.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §continue var implements§.display;
+            return Renamed573.display;
          });
          osgi.injectService(ILobbyLayoutService,function(param1:Object):void
          {
@@ -484,10 +484,10 @@ package projects.tanks.clients.fp10.models.tankspanelmodelflash
          });
          osgi.injectService(IStorageService,function(param1:Object):void
          {
-            §]"S§.storageService = IStorageService(param1);
+            Renamed572.storageService = IStorageService(param1);
          },function():IStorageService
          {
-            return §]"S§.storageService;
+            return Renamed572.storageService;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
@@ -526,59 +526,59 @@ package projects.tanks.clients.fp10.models.tankspanelmodelflash
          });
          osgi.injectService(IHelpService,function(param1:Object):void
          {
-            §finally for extends§.helpService = IHelpService(param1);
+            Renamed567.helpService = IHelpService(param1);
          },function():IHelpService
          {
-            return §finally for extends§.helpService;
+            return Renamed567.helpService;
          });
          osgi.injectService(IClientLog,function(param1:Object):void
          {
-            §finally for extends§.clientLog = IClientLog(param1);
+            Renamed567.clientLog = IClientLog(param1);
          },function():IClientLog
          {
-            return §finally for extends§.clientLog;
+            return Renamed567.clientLog;
          });
          osgi.injectService(ModelRegistry,function(param1:Object):void
          {
-            §finally for extends§.modelRegister = ModelRegistry(param1);
+            Renamed567.modelRegister = ModelRegistry(param1);
          },function():ModelRegistry
          {
-            return §finally for extends§.modelRegister;
+            return Renamed567.modelRegister;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §finally for extends§.display = IDisplay(param1);
+            Renamed567.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §finally for extends§.display;
+            return Renamed567.display;
          });
          osgi.injectService(ISettingsService,function(param1:Object):void
          {
-            §finally for extends§.settingsService = ISettingsService(param1);
+            Renamed567.settingsService = ISettingsService(param1);
          },function():ISettingsService
          {
-            return §finally for extends§.settingsService;
+            return Renamed567.settingsService;
          });
          osgi.injectService(ILobbyLayoutService,function(param1:Object):void
          {
-            §finally for extends§.lobbyLayoutService = ILobbyLayoutService(param1);
+            Renamed567.lobbyLayoutService = ILobbyLayoutService(param1);
          },function():ILobbyLayoutService
          {
-            return §finally for extends§.lobbyLayoutService;
+            return Renamed567.lobbyLayoutService;
          });
          osgi.injectService(IPartnerService,function(param1:Object):void
          {
-            §finally for extends§.partnersService = IPartnerService(param1);
+            Renamed567.partnersService = IPartnerService(param1);
          },function():IPartnerService
          {
-            return §finally for extends§.partnersService;
+            return Renamed567.partnersService;
          });
          osgi.injectService(IPanelView,function(param1:Object):void
          {
-            §finally for extends§.panelView = IPanelView(param1);
+            Renamed567.panelView = IPanelView(param1);
          },function():IPanelView
          {
-            return §finally for extends§.panelView;
+            return Renamed567.panelView;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
@@ -820,10 +820,10 @@ package projects.tanks.clients.fp10.models.tankspanelmodelflash
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            § v§.§break package with§ = IDisplay(param1);
+            Renamed570.Renamed3672 = IDisplay(param1);
          },function():IDisplay
          {
-            return § v§.§break package with§;
+            return Renamed570.Renamed3672;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
@@ -960,31 +960,31 @@ package projects.tanks.clients.fp10.models.tankspanelmodelflash
          });
          osgi.injectService(PasswordService,function(param1:Object):void
          {
-            SettingsModel.§true const native§ = PasswordService(param1);
+            SettingsModel.Renamed2181 = PasswordService(param1);
          },function():PasswordService
          {
-            return SettingsModel.§true const native§;
+            return SettingsModel.Renamed2181;
          });
          osgi.injectService(IStorageService,function(param1:Object):void
          {
-            §;!Y§.storageService = IStorageService(param1);
+            Renamed574.storageService = IStorageService(param1);
          },function():IStorageService
          {
-            return §;!Y§.storageService;
+            return Renamed574.storageService;
          });
          osgi.injectService(IBattleInviteService,function(param1:Object):void
          {
-            §;!Y§.battleInviteService = IBattleInviteService(param1);
+            Renamed574.battleInviteService = IBattleInviteService(param1);
          },function():IBattleInviteService
          {
-            return §;!Y§.battleInviteService;
+            return Renamed574.battleInviteService;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §"#Y§.localeService = ILocaleService(param1);
+            Renamed1969.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §"#Y§.localeService;
+            return Renamed1969.localeService;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
@@ -1009,108 +1009,108 @@ package projects.tanks.clients.fp10.models.tankspanelmodelflash
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §"!y§.display = IDisplay(param1);
+            Renamed1962.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §"!y§.display;
+            return Renamed1962.display;
          });
          osgi.injectService(IPartnerService,function(param1:Object):void
          {
-            §"!y§.partnersService = IPartnerService(param1);
+            Renamed1962.partnersService = IPartnerService(param1);
          },function():IPartnerService
          {
-            return §"!y§.partnersService;
+            return Renamed1962.partnersService;
          });
          osgi.injectService(ISocialNetworkPanelService,function(param1:Object):void
          {
-            §"!y§.socialNetworkService = ISocialNetworkPanelService(param1);
+            Renamed1962.socialNetworkService = ISocialNetworkPanelService(param1);
          },function():ISocialNetworkPanelService
          {
-            return §"!y§.socialNetworkService;
+            return Renamed1962.socialNetworkService;
          });
          osgi.injectService(IExternalEntranceService,function(param1:Object):void
          {
-            §"!y§.§7#L§ = IExternalEntranceService(param1);
+            Renamed1962.Renamed3564 = IExternalEntranceService(param1);
          },function():IExternalEntranceService
          {
-            return §"!y§.§7#L§;
+            return Renamed1962.Renamed3564;
          });
          osgi.injectService(IValidateService,function(param1:Object):void
          {
-            §"!y§.validateService = IValidateService(param1);
+            Renamed1962.validateService = IValidateService(param1);
          },function():IValidateService
          {
-            return §"!y§.validateService;
+            return Renamed1962.validateService;
          });
          osgi.injectService(IHelpService,function(param1:Object):void
          {
-            §"!y§.helperService = IHelpService(param1);
+            Renamed1962.helperService = IHelpService(param1);
          },function():IHelpService
          {
-            return §"!y§.helperService;
+            return Renamed1962.helperService;
          });
          osgi.injectService(ISettingsService,function(param1:Object):void
          {
-            §with for import§.settingsService = ISettingsService(param1);
+            Renamed1961.settingsService = ISettingsService(param1);
          },function():ISettingsService
          {
-            return §with for import§.settingsService;
+            return Renamed1961.settingsService;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §with for import§.localeService = ILocaleService(param1);
+            Renamed1961.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §with for import§.localeService;
+            return Renamed1961.localeService;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §+#O§.display = IDisplay(param1);
+            Renamed4797.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §+#O§.display;
+            return Renamed4797.display;
          });
          osgi.injectService(KeysBindingService,function(param1:Object):void
          {
-            §native const get§.§5!$§ = KeysBindingService(param1);
+            Renamed4824.Renamed719 = KeysBindingService(param1);
          },function():KeysBindingService
          {
-            return §native const get§.§5!$§;
+            return Renamed4824.Renamed719;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §native const get§.localeService = ILocaleService(param1);
+            Renamed4824.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §native const get§.localeService;
+            return Renamed4824.localeService;
          });
          osgi.injectService(FullscreenService,function(param1:Object):void
          {
-            §break implements§.§in package continue§ = FullscreenService(param1);
+            Renamed1964.Renamed3844 = FullscreenService(param1);
          },function():FullscreenService
          {
-            return §break implements§.§in package continue§;
+            return Renamed1964.Renamed3844;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §break implements§.display = IDisplay(param1);
+            Renamed1964.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §break implements§.display;
+            return Renamed1964.display;
          });
          osgi.injectService(KeysBindingService,function(param1:Object):void
          {
-            §override set null§.§5!$§ = KeysBindingService(param1);
+            Renamed4825.Renamed719 = KeysBindingService(param1);
          },function():KeysBindingService
          {
-            return §override set null§.§5!$§;
+            return Renamed4825.Renamed719;
          });
          osgi.injectService(IBattleInviteService,function(param1:Object):void
          {
-            §else catch with§.battleInviteService = IBattleInviteService(param1);
+            Renamed1963.battleInviteService = IBattleInviteService(param1);
          },function():IBattleInviteService
          {
-            return §else catch with§.battleInviteService;
+            return Renamed1963.battleInviteService;
          });
          osgi.injectService(IPanelView,function(param1:Object):void
          {
@@ -1170,94 +1170,94 @@ package projects.tanks.clients.fp10.models.tankspanelmodelflash
          });
          osgi.injectService(DailyQuestNotifierService,function(param1:Object):void
          {
-            §try for const§.§while var const§ = DailyQuestNotifierService(param1);
+            Renamed4810.Renamed4827 = DailyQuestNotifierService(param1);
          },function():DailyQuestNotifierService
          {
-            return §try for const§.§while var const§;
+            return Renamed4810.Renamed4827;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §use set extends§.localeService = ILocaleService(param1);
+            Renamed4814.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §use set extends§.localeService;
+            return Renamed4814.localeService;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §6"§.localeService = ILocaleService(param1);
+            Renamed4812.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §6"§.localeService;
+            return Renamed4812.localeService;
          });
          osgi.injectService(IMoneyService,function(param1:Object):void
          {
-            §6"§.moneyService = IMoneyService(param1);
+            Renamed4812.moneyService = IMoneyService(param1);
          },function():IMoneyService
          {
-            return §6"§.moneyService;
+            return Renamed4812.moneyService;
          });
          osgi.injectService(DailyQuestNotifierService,function(param1:Object):void
          {
-            §6"§.§2!M§ = DailyQuestNotifierService(param1);
+            Renamed4812.Renamed3661 = DailyQuestNotifierService(param1);
          },function():DailyQuestNotifierService
          {
-            return §6"§.§2!M§;
+            return Renamed4812.Renamed3661;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            § "n§.localeService = ILocaleService(param1);
+            Renamed4811.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return § "n§.localeService;
+            return Renamed4811.localeService;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §else catch null§.localeService = ILocaleService(param1);
+            Renamed4813.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §else catch null§.localeService;
+            return Renamed4813.localeService;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §%"$§.localeService = ILocaleService(param1);
+            Renamed4803.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §%"$§.localeService;
+            return Renamed4803.localeService;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §false catch static§.localeService = ILocaleService(param1);
+            Renamed4804.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §false catch static§.localeService;
+            return Renamed4804.localeService;
          });
          osgi.injectService(IMoneyService,function(param1:Object):void
          {
-            §false catch static§.moneyService = IMoneyService(param1);
+            Renamed4804.moneyService = IMoneyService(param1);
          },function():IMoneyService
          {
-            return §false catch static§.moneyService;
+            return Renamed4804.moneyService;
          });
          osgi.injectService(DailyQuestNotifierService,function(param1:Object):void
          {
-            §include set set§.§2!M§ = DailyQuestNotifierService(param1);
+            Renamed3660.Renamed3661 = DailyQuestNotifierService(param1);
          },function():DailyQuestNotifierService
          {
-            return §include set set§.§2!M§;
+            return Renamed3660.Renamed3661;
          });
          osgi.injectService(IPanelView,function(param1:Object):void
          {
-            §switch import§.panelView = IPanelView(param1);
+            Renamed4821.panelView = IPanelView(param1);
          },function():IPanelView
          {
-            return §switch import§.panelView;
+            return Renamed4821.panelView;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §@#r§.localeService = ILocaleService(param1);
+            Renamed1907.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §@#r§.localeService;
+            return Renamed1907.localeService;
          });
          osgi.injectService(IFriendActionService,function(param1:Object):void
          {
@@ -1401,10 +1401,10 @@ package projects.tanks.clients.fp10.models.tankspanelmodelflash
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §const const catch§.localeService = ILocaleService(param1);
+            Renamed3769.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §const const catch§.localeService;
+            return Renamed3769.localeService;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
@@ -1499,59 +1499,59 @@ package projects.tanks.clients.fp10.models.tankspanelmodelflash
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §!#J§.localeService = ILocaleService(param1);
+            Renamed4806.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §!#J§.localeService;
+            return Renamed4806.localeService;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §=b§.display = IDisplay(param1);
+            Renamed2217.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §=b§.display;
+            return Renamed2217.display;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §=b§.localeService = ILocaleService(param1);
+            Renamed2217.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §=b§.localeService;
+            return Renamed2217.localeService;
          });
          osgi.injectService(IValidateService,function(param1:Object):void
          {
-            §=b§.validateService = IValidateService(param1);
+            Renamed2217.validateService = IValidateService(param1);
          },function():IValidateService
          {
-            return §=b§.validateService;
+            return Renamed2217.validateService;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §2!6§.localeService = ILocaleService(param1);
+            Renamed4799.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §2!6§.localeService;
+            return Renamed4799.localeService;
          });
          osgi.injectService(NewbieUserService,function(param1:Object):void
          {
-            §2!6§.§finally var var§ = NewbieUserService(param1);
+            Renamed4799.Renamed4828 = NewbieUserService(param1);
          },function():NewbieUserService
          {
-            return §2!6§.§finally var var§;
+            return Renamed4799.Renamed4828;
          });
          osgi.injectService(ILobbyLayoutService,function(param1:Object):void
          {
-            § !e§.lobbyLayoutService = ILobbyLayoutService(param1);
+            Renamed4802.lobbyLayoutService = ILobbyLayoutService(param1);
          },function():ILobbyLayoutService
          {
-            return § !e§.lobbyLayoutService;
+            return Renamed4802.lobbyLayoutService;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §break case§.localeService = ILocaleService(param1);
+            Renamed2024.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §break case§.localeService;
+            return Renamed2024.localeService;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
@@ -1562,115 +1562,115 @@ package projects.tanks.clients.fp10.models.tankspanelmodelflash
          });
          osgi.injectService(ITimeUnitService,function(param1:Object):void
          {
-            CrystalPackageItem.§&J§ = ITimeUnitService(param1);
+            CrystalPackageItem.Renamed2271 = ITimeUnitService(param1);
          },function():ITimeUnitService
          {
-            return CrystalPackageItem.§&J§;
+            return CrystalPackageItem.Renamed2271;
          });
          osgi.injectService(ITimeUnitService,function(param1:Object):void
          {
-            PremiumPackageItem.§&J§ = ITimeUnitService(param1);
+            PremiumPackageItem.Renamed2271 = ITimeUnitService(param1);
          },function():ITimeUnitService
          {
-            return PremiumPackageItem.§&J§;
+            return PremiumPackageItem.Renamed2271;
          });
          osgi.injectService(CountryService,function(param1:Object):void
          {
-            §`";§.§"!b§ = CountryService(param1);
+            Renamed4798.Renamed2243 = CountryService(param1);
          },function():CountryService
          {
-            return §`";§.§"!b§;
+            return Renamed4798.Renamed2243;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §`";§.localeService = ILocaleService(param1);
+            Renamed4798.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §`";§.localeService;
+            return Renamed4798.localeService;
          });
          osgi.injectService(CountryService,function(param1:Object):void
          {
-            §default package with§.§"!b§ = CountryService(param1);
+            Renamed4826.Renamed2243 = CountryService(param1);
          },function():CountryService
          {
-            return §default package with§.§"!b§;
+            return Renamed4826.Renamed2243;
          });
          osgi.injectService(ILobbyLayoutService,function(param1:Object):void
          {
-            §default package with§.lobbyLayoutService = ILobbyLayoutService(param1);
+            Renamed4826.lobbyLayoutService = ILobbyLayoutService(param1);
          },function():ILobbyLayoutService
          {
-            return §default package with§.lobbyLayoutService;
+            return Renamed4826.lobbyLayoutService;
          });
          osgi.injectService(CountryService,function(param1:Object):void
          {
-            §>"E§.§"!b§ = CountryService(param1);
+            Renamed2239.Renamed2243 = CountryService(param1);
          },function():CountryService
          {
-            return §>"E§.§"!b§;
+            return Renamed2239.Renamed2243;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §>"E§.localeService = ILocaleService(param1);
+            Renamed2239.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §>"E§.localeService;
+            return Renamed2239.localeService;
          });
          osgi.injectService(ILobbyLayoutService,function(param1:Object):void
          {
-            §>"E§.lobbyLayoutService = ILobbyLayoutService(param1);
+            Renamed2239.lobbyLayoutService = ILobbyLayoutService(param1);
          },function():ILobbyLayoutService
          {
-            return §>"E§.lobbyLayoutService;
+            return Renamed2239.lobbyLayoutService;
          });
          osgi.injectService(ModelRegistry,function(param1:Object):void
          {
-            §!"A§.modelRegister = ModelRegistry(param1);
+            Renamed4807.modelRegister = ModelRegistry(param1);
          },function():ModelRegistry
          {
-            return §!"A§.modelRegister;
+            return Renamed4807.modelRegister;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §!"A§.localeService = ILocaleService(param1);
+            Renamed4807.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §!"A§.localeService;
+            return Renamed4807.localeService;
          });
          osgi.injectService(IDialogsService,function(param1:Object):void
          {
-            §!"A§.dialogService = IDialogsService(param1);
+            Renamed4807.dialogService = IDialogsService(param1);
          },function():IDialogsService
          {
-            return §!"A§.dialogService;
+            return Renamed4807.dialogService;
          });
          osgi.injectService(IPanelView,function(param1:Object):void
          {
-            §!"A§.panelView = IPanelView(param1);
+            Renamed4807.panelView = IPanelView(param1);
          },function():IPanelView
          {
-            return §!"A§.panelView;
+            return Renamed4807.panelView;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §!"A§.display = IDisplay(param1);
+            Renamed4807.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §!"A§.display;
+            return Renamed4807.display;
          });
          osgi.injectService(IDialogWindowsDispatcherService,function(param1:Object):void
          {
-            §!"A§.dialogWindowsDispatcherService = IDialogWindowsDispatcherService(param1);
+            Renamed4807.dialogWindowsDispatcherService = IDialogWindowsDispatcherService(param1);
          },function():IDialogWindowsDispatcherService
          {
-            return §!"A§.dialogWindowsDispatcherService;
+            return Renamed4807.dialogWindowsDispatcherService;
          });
          osgi.injectService(IUserPropertiesService,function(param1:Object):void
          {
-            §!"A§.userPropertiesService = IUserPropertiesService(param1);
+            Renamed4807.userPropertiesService = IUserPropertiesService(param1);
          },function():IUserPropertiesService
          {
-            return §!"A§.userPropertiesService;
+            return Renamed4807.userPropertiesService;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
@@ -1681,13 +1681,13 @@ package projects.tanks.clients.fp10.models.tankspanelmodelflash
          });
          modelRegister = osgi.getService(ModelRegistry) as ModelRegistry;
          modelRegisterAdapt = osgi.getService(ModelRegistry) as ModelRegistry;
-         modelRegister.add(new AvailableItemsModel(),Vector.<Class>([§#"6§]));
+         modelRegister.add(new AvailableItemsModel(),Vector.<Class>([Renamed2113]));
          modelRegister.add(new NewsShowingModel(),Vector.<Class>([INewsShowingModelBase,IObjectLoadListener]));
          modelRegisterAdapt.registerAdapt(News,NewsAdapt);
          modelRegisterAdapt.registerEvents(News,NewsEvents);
          modelRegister.add(new NewsItemModel(),Vector.<Class>([INewsItemModelBase,News]));
          modelRegister.register(Long.getLong(0,300050051),Long.getLong(0,300050031));
-         modelRegister.add(new AchievementModel(),Vector.<Class>([§import var true§,IAchievement,IObjectLoadListener]));
+         modelRegister.add(new AchievementModel(),Vector.<Class>([Renamed2074,IAchievement,IObjectLoadListener]));
          modelRegister.add(new RankUpSupplyBonusModel(),Vector.<Class>([IRankUpSupplyBonusModelBase]));
          modelRegister.add(new BonusInfoModel(),Vector.<Class>([IBonusInfoModelBase,BonusInfo]));
          modelRegisterAdapt.registerAdapt(BonusInfo,BonusInfoAdapt);
@@ -1697,29 +1697,29 @@ package projects.tanks.clients.fp10.models.tankspanelmodelflash
          modelRegisterAdapt.registerAdapt(BonusItem,BonusItemAdapt);
          modelRegisterAdapt.registerEvents(BonusItem,BonusItemEvents);
          modelRegister.add(new BonusImageShowingModel(),Vector.<Class>([IBonusImageShowingModelBase,IObjectLoadListener]));
-         modelRegister.add(new §include set set§(),Vector.<Class>([§4#a§,ObjectLoadPostListener,ObjectUnloadPostListener]));
-         modelRegisterAdapt.registerAdapt(§""'§,§for const with§);
-         modelRegisterAdapt.registerEvents(§""'§,§3!`§);
-         modelRegister.add(new §7"t§(),Vector.<Class>([§35§,§""'§]));
-         modelRegister.add(new §switch import§(),Vector.<Class>([§&!b§,ObjectLoadPostListener,ObjectUnloadPostListener]));
-         modelRegister.add(new §function for set§(),Vector.<Class>([§?#L§]));
-         modelRegister.add(new PanelModel(),Vector.<Class>([§'!`§,IObjectLoadListener]));
-         modelRegister.add(new PremiumAccountAlertModel(),Vector.<Class>([§3"l§,ObjectLoadListener,ObjectUnloadListener]));
+         modelRegister.add(new Renamed3660(),Vector.<Class>([Renamed3659,ObjectLoadPostListener,ObjectUnloadPostListener]));
+         modelRegisterAdapt.registerAdapt(Renamed4817,Renamed4820);
+         modelRegisterAdapt.registerEvents(Renamed4817,Renamed4818);
+         modelRegister.add(new Renamed4819(),Vector.<Class>([Renamed4351,Renamed4817]));
+         modelRegister.add(new Renamed4821(),Vector.<Class>([Renamed4809,ObjectLoadPostListener,ObjectUnloadPostListener]));
+         modelRegister.add(new Renamed4822(),Vector.<Class>([Renamed4815]));
+         modelRegister.add(new PanelModel(),Vector.<Class>([Renamed2155,IObjectLoadListener]));
+         modelRegister.add(new PremiumAccountAlertModel(),Vector.<Class>([Renamed2168,ObjectLoadListener,ObjectUnloadListener]));
          modelRegister.add(new UserPropertiesModel(),Vector.<Class>([IUserPropertyModelBase,IObjectLoadListener,IUserProperties]));
-         modelRegisterAdapt.registerAdapt(IUserProperties,§use for finally§);
-         modelRegisterAdapt.registerEvents(IUserProperties,§%!g§);
-         modelRegister.add(new SettingsModel(),Vector.<Class>([§#"'§,IObjectLoadListener]));
-         modelRegister.add(new FriendsLoaderModel(),Vector.<Class>([§,#§,ObjectLoadPostListener,ObjectUnloadListener]));
-         modelRegister.add(new SocialNetworkPanelModel(),Vector.<Class>([§8k§,ObjectLoadListener,ObjectUnloadListener]));
-         modelRegister.add(new UserEmailAndPasswordModel(),Vector.<Class>([§5[§,IUserEmailAndPassword,IObjectLoadListener]));
-         modelRegisterAdapt.registerAdapt(IUserEmailAndPassword,§do for import§);
-         modelRegisterAdapt.registerEvents(IUserEmailAndPassword,§else for super§);
-         modelRegister.add(new NewPresentsShowingModel(),Vector.<Class>([§3@§]));
-         modelRegister.add(new DonationAlertModel(),Vector.<Class>([§set for override§]));
-         modelRegister.add(new BattleInviteModel(),Vector.<Class>([§class set function§,ObjectLoadListener,ObjectUnloadListener]));
-         modelRegister.add(new § !e§(),Vector.<Class>([§79§,ObjectUnloadListener]));
-         modelRegister.add(new §default package with§(),Vector.<Class>([§5!^§,ObjectLoadListener,ObjectUnloadListener]));
-         modelRegister.add(new §!"A§(),Vector.<Class>([§4!y§,IObjectLoadListener]));
+         modelRegisterAdapt.registerAdapt(IUserProperties,Renamed2299);
+         modelRegisterAdapt.registerEvents(IUserProperties,Renamed2298);
+         modelRegister.add(new SettingsModel(),Vector.<Class>([Renamed2175,IObjectLoadListener]));
+         modelRegister.add(new FriendsLoaderModel(),Vector.<Class>([Renamed2088,ObjectLoadPostListener,ObjectUnloadListener]));
+         modelRegister.add(new SocialNetworkPanelModel(),Vector.<Class>([Renamed2275,ObjectLoadListener,ObjectUnloadListener]));
+         modelRegister.add(new UserEmailAndPasswordModel(),Vector.<Class>([Renamed2282,IUserEmailAndPassword,IObjectLoadListener]));
+         modelRegisterAdapt.registerAdapt(IUserEmailAndPassword,Renamed2296);
+         modelRegisterAdapt.registerEvents(IUserEmailAndPassword,Renamed2297);
+         modelRegister.add(new NewPresentsShowingModel(),Vector.<Class>([Renamed2171]));
+         modelRegister.add(new DonationAlertModel(),Vector.<Class>([Renamed2083]));
+         modelRegister.add(new BattleInviteModel(),Vector.<Class>([Renamed2084,ObjectLoadListener,ObjectUnloadListener]));
+         modelRegister.add(new Renamed4802(),Vector.<Class>([Renamed4801,ObjectUnloadListener]));
+         modelRegister.add(new Renamed4826(),Vector.<Class>([Renamed4816,ObjectLoadListener,ObjectUnloadListener]));
+         modelRegister.add(new Renamed4807(),Vector.<Class>([Renamed4823,IObjectLoadListener]));
       }
       
       public function stop(param1:OSGi) : void

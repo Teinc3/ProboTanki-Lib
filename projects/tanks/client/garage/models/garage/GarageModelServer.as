@@ -1,8 +1,8 @@
 package projects.tanks.client.garage.models.garage
 {
-   import §>"O§.§ I§;
-   import §>"O§.§"#A§;
-   import §>"O§.§1! §;
+   import Renamed4312.Renamed4313;
+   import Renamed4312.Renamed4314;
+   import Renamed4312.Renamed4315;
    import alternativa.osgi.OSGi;
    import alternativa.protocol.ICodec;
    import alternativa.protocol.IProtocol;
@@ -79,22 +79,22 @@ package projects.tanks.client.garage.models.garage
       
       public function itemBought(param1:IGameObject, param2:int, param3:int) : void
       {
-         this.network.send(new § I§(param1.name,param2,param3));
+         this.network.send(new Renamed4313(param1.name,param2,param3));
       }
       
       public function itemMounted(param1:IGameObject) : void
       {
-         this.network.send(new §"#A§(param1.name));
+         this.network.send(new Renamed4314(param1.name));
       }
       
       public function kitBought(param1:IGameObject, param2:int) : void
       {
-         this.network.send(new §1! §(param1.name,param2));
+         this.network.send(new Renamed4315(param1.name,param2));
       }
       
       public function nextModificationBought(param1:IGameObject, param2:int) : void
       {
-         this.network.send(new § I§(param1.name,1,param2));
+         this.network.send(new Renamed4313(param1.name,1,param2));
       }
       
       public function readyToReload() : void

@@ -145,7 +145,7 @@ package alternativa.tanks.view.battleinfo.dm
       
       public function updateInitParams(param1:BattleInfoDmParams) : void
       {
-         this._battleInfo.setUp(param1.battleName,param1.minRank,param1.maxRank,param1.scoreLimit,param1.timeLimitInSec,false,false,param1.battleUrl,param1.battleMode,param1.noSupplies,param1.withoutBonuses,param1.upgradesDisabled,param1.proBattle,param1.withoutCrystals,param1.reArmor,false,param1.§8z§,param1.§;9§);
+         this._battleInfo.setUp(param1.battleName,param1.minRank,param1.maxRank,param1.scoreLimit,param1.timeLimitInSec,false,false,param1.battleUrl,param1.battleMode,param1.noSupplies,param1.withoutBonuses,param1.upgradesDisabled,param1.proBattle,param1.withoutCrystals,param1.reArmor,false,param1.Renamed3642,param1.Renamed1625);
          this._battleInfo.setClanName(param1.clanName,param1.clanLink);
          this._battleInfo.setPreview(param1.previewResource.data);
          this._dataProviderList = new DataProvider();

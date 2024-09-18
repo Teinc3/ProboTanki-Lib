@@ -11,9 +11,9 @@ package alternativa.tanks.model.item.kit
       
       function getPriceWithoutDiscount() : int;
       
-      function §set super§() : int;
+      function Renamed2136() : int;
       
-      function §static if§() : int;
+      function Renamed2137() : int;
       
       function getItems() : Vector.<KitItem>;
       

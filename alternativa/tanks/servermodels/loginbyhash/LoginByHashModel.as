@@ -3,10 +3,10 @@ package alternativa.tanks.servermodels.loginbyhash
    import alternativa.tanks.service.IEntranceClientFacade;
    import flash.net.SharedObject;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.storage.IStorageService;
-   import §var set dynamic§.§ "e§;
-   import §var set dynamic§.§var catch get§;
+   import Renamed455.Renamed3553;
+   import Renamed455.Renamed3554;
    
-   public class LoginByHashModel extends §var catch get§ implements ILoginByHash, § "e§
+   public class LoginByHashModel extends Renamed3554 implements ILoginByHash, Renamed3553
    {
       [Inject]
       public static var clientFacade:IEntranceClientFacade;

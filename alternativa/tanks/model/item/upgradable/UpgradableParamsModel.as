@@ -5,7 +5,7 @@ package alternativa.tanks.model.item.upgradable
    import alternativa.tanks.model.item.properties.ItemPropertyValue;
    import alternativa.tanks.service.item.ItemService;
    import alternativa.tanks.service.itempropertyparams.ItemPropertyParamsService;
-   import alternativa.tanks.service.itempropertyparams.§else package implements§;
+   import alternativa.tanks.service.itempropertyparams.Renamed1710;
    import controls.timer.CountDownTimer;
    import platform.client.fp10.core.model.ObjectLoadPostListener;
    import platform.client.fp10.core.model.ObjectUnloadListener;
@@ -78,7 +78,7 @@ package alternativa.tanks.model.item.upgradable
          var _loc2_:UpgradeableItemData = null;
          var _loc3_:UpgradableItemPropertyValue = null;
          var _loc4_:Vector.<UpgradableItemPropertyValue> = new Vector.<UpgradableItemPropertyValue>();
-         var _loc5_:Boolean = itemService.§!"p§(object) && itemService.hasNextModification(object);
+         var _loc5_:Boolean = itemService.Renamed1704(object) && itemService.hasNextModification(object);
          for each(_loc1_ in getInitParam().properties)
          {
             _loc3_ = new UpgradableItemPropertyValue(_loc1_,_loc5_);
@@ -96,10 +96,10 @@ package alternativa.tanks.model.item.upgradable
          var _loc3_:GaragePropertyData = null;
          var _loc4_:int = 0;
          var _loc5_:UpgradeableItemData = null;
-         if(itemService.§!"p§(object) && itemService.getModificationIndex(object) == 0)
+         if(itemService.Renamed1704(object) && itemService.getModificationIndex(object) == 0)
          {
             _loc1_ = new Vector.<UpgradeableItemData>();
-            for each(_loc2_ in itemService.§;#U§(object))
+            for each(_loc2_ in itemService.Renamed1706(object))
             {
                Model.object = _loc2_;
                _loc1_.push(this.data());
@@ -124,7 +124,7 @@ package alternativa.tanks.model.item.upgradable
       {
          var _loc1_:UpgradableItemPropertyValue = null;
          var _loc2_:String = itemService.getName(object);
-         if(itemService.§!"p§(object))
+         if(itemService.Renamed1704(object))
          {
             _loc2_ += " M" + itemService.getModificationIndex(object);
          }
@@ -136,10 +136,10 @@ package alternativa.tanks.model.item.upgradable
       
       private function compare(param1:UpgradableItemPropertyValue, param2:UpgradableItemPropertyValue) : Number
       {
-         var _loc3_:§else package implements§ = propertyService.getParams(param1.getProperty());
-         var _loc4_:§else package implements§ = propertyService.getParams(param2.getProperty());
-         var _loc5_:int = _loc3_ != null ? int(_loc3_.§switch const else§) : int(0);
-         var _loc6_:int = _loc4_ != null ? int(_loc4_.§switch const else§) : int(0);
+         var _loc3_:Renamed1710 = propertyService.getParams(param1.getProperty());
+         var _loc4_:Renamed1710 = propertyService.getParams(param2.getProperty());
+         var _loc5_:int = _loc3_ != null ? int(_loc3_.Renamed2154) : int(0);
+         var _loc6_:int = _loc4_ != null ? int(_loc4_.Renamed2154) : int(0);
          if(_loc5_ < _loc6_)
          {
             return -1;

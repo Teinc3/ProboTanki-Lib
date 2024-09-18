@@ -1,7 +1,7 @@
 package alternativa.tanks.view.battleinfo
 {
    import platform.client.fp10.core.resource.types.ImageResource;
-   import projects.tanks.client.battleservice.§final package import§;
+   import projects.tanks.client.battleservice.Renamed1587;
    
    public class BattleInfoBaseParams
    {
@@ -9,7 +9,7 @@ package alternativa.tanks.view.battleinfo
       
       public var battleUrl:String;
       
-      public var battleMode:§final package import§;
+      public var battleMode:Renamed1587;
       
       public var clanLink:String;
       
@@ -53,9 +53,9 @@ package alternativa.tanks.view.battleinfo
       
       public var battleItemId:String;
       
-      public var §8z§:Boolean;
+      public var Renamed3642:Boolean;
       
-      public var §;9§:String;
+      public var Renamed1625:String;
       
       public function BattleInfoBaseParams()
       {

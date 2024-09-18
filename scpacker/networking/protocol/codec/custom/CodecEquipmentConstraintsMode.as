@@ -1,7 +1,7 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import §1!R§.§throw package static§;
-   import §[" §.ICodec;
+   import Renamed232.Renamed1582;
+   import Renamed5811.ICodec;
    import flash.utils.ByteArray;
    
    public class CodecEquipmentConstraintsMode implements ICodec
@@ -13,21 +13,21 @@ package scpacker.networking.protocol.codec.custom
       
       public function decode(param1:ByteArray) : Object
       {
-         var _loc2_:§throw package static§ = null;
+         var _loc2_:Renamed1582 = null;
          var _loc3_:int = param1.readInt();
          switch(_loc3_)
          {
             case 0:
-               _loc2_ = §throw package static§.NONE;
+               _loc2_ = Renamed1582.NONE;
                break;
             case 1:
-               _loc2_ = §throw package static§.HORNET_RAILGUN;
+               _loc2_ = Renamed1582.HORNET_RAILGUN;
                break;
             case 2:
-               _loc2_ = §throw package static§.WASP_RAILGUN;
+               _loc2_ = Renamed1582.WASP_RAILGUN;
                break;
             case 3:
-               _loc2_ = §throw package static§.HORNET_WASP_RAILGUN;
+               _loc2_ = Renamed1582.HORNET_WASP_RAILGUN;
          }
          return _loc2_;
       }

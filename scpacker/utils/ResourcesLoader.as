@@ -5,7 +5,7 @@ package scpacker.utils
    import platform.client.core.general.spaces.loading.dispatcher.types.ObjectsDependencies;
    import platform.client.fp10.core.model.impl.Model;
    import platform.client.fp10.core.registry.ResourceRegistry;
-   import platform.client.fp10.core.resource.§7"'§;
+   import platform.client.fp10.core.resource.Renamed4105;
    import platform.client.fp10.core.resource.Resource;
    import platform.client.fp10.core.resource.ResourceInfo;
    import platform.client.fp10.core.type.impl.GameObject;
@@ -88,11 +88,11 @@ package scpacker.utils
          var _loc6_:int = int(param1.type);
          var _loc7_:Long = Long.getLong(param1.versionhigh,param1.versionlow);
          var _loc8_:Boolean = Boolean(param1.lazy);
-         var _loc9_:Vector.<§7"'§> = new Vector.<§7"'§>();
+         var _loc9_:Vector.<Renamed4105> = new Vector.<Renamed4105>();
          _loc2_ = 0;
          for each(_loc10_ in param1.fileNames)
          {
-            _loc9_.push(new §7"'§(_loc10_,0));
+            _loc9_.push(new Renamed4105(_loc10_,0));
          }
          _loc11_ = null;
          if(_loc6_ == 10)

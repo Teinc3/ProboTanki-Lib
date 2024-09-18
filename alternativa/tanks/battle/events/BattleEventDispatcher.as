@@ -2,15 +2,15 @@ package alternativa.tanks.battle.events
 {
    public interface BattleEventDispatcher
    {
-      function §set for each§(param1:Class, param2:§throw package continue§) : void;
+      function Renamed539(param1:Class, param2:Renamed511) : void;
       
-      function §7!3§(param1:Class, param2:§throw package continue§) : void;
+      function Renamed866(param1:Class, param2:Renamed511) : void;
       
       function dispatchEvent(param1:Object) : void;
       
-      function §"#L§(param1:Object) : void;
+      function Renamed867(param1:Object) : void;
       
-      function §5#6§() : void;
+      function Renamed868() : void;
    }
 }
 

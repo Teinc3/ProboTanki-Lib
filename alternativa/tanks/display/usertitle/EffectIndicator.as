@@ -1,7 +1,7 @@
 package alternativa.tanks.display.usertitle
 {
-   import §!!v§.§,Q§;
-   import §7"j§.§""&§;
+   import Renamed142.Renamed1626;
+   import Renamed1.Renamed1450;
    import alternativa.tanks.display.EffectBlinkerUtil;
    import flash.display.Bitmap;
    import flash.display.BitmapData;
@@ -35,9 +35,9 @@ package alternativa.tanks.display.usertitle
       
       private static const iconNitroCls:Class = EffectIndicator_iconNitroCls;
       
-      private static const §package class§:Class = §9#6§;
+      private static const Renamed1628:Class = Renamed1629;
       
-      private static const §super var if§:BitmapData = Bitmap(new §package class§()).bitmapData;
+      private static const Renamed1630:BitmapData = Bitmap(new Renamed1628()).bitmapData;
       
       private static var matrix:Matrix = new Matrix();
       
@@ -53,7 +53,7 @@ package alternativa.tanks.display.usertitle
       
       private var finishTime:int;
       
-      private var blinker:§""&§;
+      private var blinker:Renamed1450;
       
       private var alpha:Number = 1;
       
@@ -92,11 +92,11 @@ package alternativa.tanks.display.usertitle
       private static function initIcons() : void
       {
          icons = new Dictionary();
-         icons[§,Q§.§&B§] = Bitmap(new iconHealthCls()).bitmapData;
-         icons[§,Q§.ARMOR] = Bitmap(new iconArmorCls()).bitmapData;
-         icons[§,Q§.§switch finally§] = Bitmap(new iconPowerCls()).bitmapData;
-         icons[§,Q§.§`!o§] = Bitmap(new iconNitroCls()).bitmapData;
-         iconRect = BitmapData(icons[§,Q§.§&B§]).rect;
+         icons[Renamed1626.Renamed1627] = Bitmap(new iconHealthCls()).bitmapData;
+         icons[Renamed1626.ARMOR] = Bitmap(new iconArmorCls()).bitmapData;
+         icons[Renamed1626.Renamed1631] = Bitmap(new iconPowerCls()).bitmapData;
+         icons[Renamed1626.Renamed1632] = Bitmap(new iconNitroCls()).bitmapData;
+         iconRect = BitmapData(icons[Renamed1626.Renamed1627]).rect;
       }
       
       public function get effectId() : int
@@ -150,7 +150,7 @@ package alternativa.tanks.display.usertitle
             return;
          }
          this.state |= STATE_HIDING;
-         this.blinker.§5z§(0);
+         this.blinker.Renamed1633(0);
          if(!this.blinking)
          {
             this.blinkingStartTime = 0;
@@ -197,7 +197,7 @@ package alternativa.tanks.display.usertitle
          {
             this.updateBlinking(param1,param2,param3);
          }
-         if(this.effectId == §,Q§.§&B§ && param1 > this.finishTime)
+         if(this.effectId == Renamed1626.Renamed1627 && param1 > this.finishTime)
          {
             this.hide();
          }
@@ -212,7 +212,7 @@ package alternativa.tanks.display.usertitle
          var _loc4_:Number = NaN;
          if(this.blinking)
          {
-            _loc4_ = this.blinker.§default while§(param1,param2);
+            _loc4_ = this.blinker.Renamed1452(param1,param2);
             if(_loc4_ != this.alpha)
             {
                this.alpha = _loc4_;
@@ -226,7 +226,7 @@ package alternativa.tanks.display.usertitle
          }
          else
          {
-            this.blinker.§5z§(EffectBlinkerUtil.MIN_VALUE);
+            this.blinker.Renamed1633(EffectBlinkerUtil.MIN_VALUE);
             this.blinker.init(param1);
             this.blinking = true;
          }
@@ -243,7 +243,7 @@ package alternativa.tanks.display.usertitle
       
       private function getIndicatorIcon() : BitmapData
       {
-         return this._effectId == §,Q§.ARMOR && this.effectLevel == UNKILLABLE_EFFECT_LEVEL ? §super var if§ : this.icon;
+         return this._effectId == Renamed1626.ARMOR && this.effectLevel == UNKILLABLE_EFFECT_LEVEL ? Renamed1630 : this.icon;
       }
    }
 }

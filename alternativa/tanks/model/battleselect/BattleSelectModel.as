@@ -2,7 +2,7 @@ package alternativa.tanks.model.battleselect
 {
    import alternativa.osgi.service.logging.LogService;
    import alternativa.tanks.controllers.battlelist.BattleByURLNotFoundEvent;
-   import alternativa.tanks.service.battle.§final package throw§;
+   import alternativa.tanks.service.battle.Renamed2077;
    import alternativa.tanks.service.battleinfo.IBattleInfoFormService;
    import alternativa.tanks.service.battlelist.BattleListFormServiceEvent;
    import alternativa.tanks.service.battlelist.IBattleListFormService;
@@ -28,7 +28,7 @@ package alternativa.tanks.model.battleselect
       
       public static const CHANNEL:String = "BattleSelectModel";
       
-      private var battleFriendNotificator:§final package throw§;
+      private var battleFriendNotificator:Renamed2077;
       
       public function BattleSelectModel()
       {
@@ -37,8 +37,8 @@ package alternativa.tanks.model.battleselect
       
       public function objectLoadedPost() : void
       {
-         this.battleFriendNotificator = new §final package throw§();
-         battleListFormService.§in for finally§();
+         this.battleFriendNotificator = new Renamed2077();
+         battleListFormService.Renamed2078();
          battleListFormService.addEventListener(BattleListFormServiceEvent.BATTLE_SELECTED,this.onBattleSelected);
          battleListFormService.addEventListener(BattleByURLNotFoundEvent.BATTLE_BY_URL_NOT_FOUND,this.onBattleByURLNotFound);
          trackerService.trackEvent("battleList","init","");
@@ -51,7 +51,7 @@ package alternativa.tanks.model.battleselect
          battleInfoFormService.destroy();
          battleListFormService.removeEventListener(BattleListFormServiceEvent.BATTLE_SELECTED,this.onBattleSelected);
          battleListFormService.removeEventListener(BattleByURLNotFoundEvent.BATTLE_BY_URL_NOT_FOUND,this.onBattleByURLNotFound);
-         battleListFormService.§&w§();
+         battleListFormService.Renamed2079();
       }
       
       private function onBattleSelected(param1:BattleListFormServiceEvent) : void

@@ -8,15 +8,15 @@ package alternativa.tanks.services.tankregistry
       
       function removeUser(param1:ClientObject) : void;
       
-      function §set var extends§() : int;
+      function Renamed2858() : int;
       
-      function § !c§() : Vector.<ClientObject>;
+      function Renamed2895() : Vector.<ClientObject>;
       
-      function §if for with§(param1:String) : ClientObject;
+      function Renamed695(param1:String) : ClientObject;
       
-      function §extends set import§() : ClientObject;
+      function Renamed3833() : ClientObject;
       
-      function §[#V§() : Boolean;
+      function Renamed3834() : Boolean;
    }
 }
 

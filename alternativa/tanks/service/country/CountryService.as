@@ -1,22 +1,22 @@
 package alternativa.tanks.service.country
 {
    import flash.events.IEventDispatcher;
-   import §for package case§.§for else§;
-   import §for package case§.§get var use§;
+   import Renamed371.Renamed2242;
+   import Renamed371.Renamed3644;
    
    public interface CountryService extends IEventDispatcher
    {
-      function §&[§(param1:§get var use§) : void;
+      function Renamed3645(param1:Renamed3644) : void;
       
-      function §[!S§() : Vector.<§for else§>;
+      function Renamed2255() : Vector.<Renamed2242>;
       
-      function §1#A§() : String;
+      function Renamed2257() : String;
       
-      function §2"l§(param1:String) : void;
+      function Renamed3646(param1:String) : void;
       
-      function §in package var§(param1:String) : void;
+      function Renamed2254(param1:String) : void;
       
-      function §?"=§() : Boolean;
+      function Renamed2251() : Boolean;
    }
 }
 

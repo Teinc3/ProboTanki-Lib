@@ -1,6 +1,6 @@
 package alternativa.tanks.gui
 {
-   import §0#<§.§6<§;
+   import Renamed1687.Renamed1688;
    import alternativa.osgi.service.clientlog.IClientLog;
    import alternativa.osgi.service.locale.ILocaleService;
    import alternativa.tanks.gui.category.CategoryButtonsList;
@@ -32,9 +32,9 @@ package alternativa.tanks.gui
    import projects.tanks.clients.fp10.libraries.tanksservices.service.battle.IBattleInfoService;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.layout.ILobbyLayoutService;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.userproperties.IUserPropertiesService;
-   import services.alertservice.§get const use§;
+   import services.alertservice.Renamed1616;
    
-   public class GarageWindow extends Sprite implements §else set include§
+   public class GarageWindow extends Sprite implements Renamed1689
    {
       [Inject]
       public static var localeService:ILocaleService;
@@ -106,13 +106,13 @@ package alternativa.tanks.gui
       
       private var _garageListController:GarageListController;
       
-      public var §#"_§:Vector.<§1#^§>;
+      public var Renamed1690:Vector.<Renamed1691>;
       
       public function GarageWindow(param1:Tanks3DSResource, param2:Boolean)
       {
          this.buttonSize = new Point(104,33);
          super();
-         this.§#"_§ = new Vector.<§1#^§>();
+         this.Renamed1690 = new Vector.<Renamed1691>();
          this._itemsInWarehouse = new Vector.<IGameObject>();
          this._itemsInStore = new Vector.<IGameObject>();
          this.windowSize = new Point(880,737);
@@ -163,7 +163,7 @@ package alternativa.tanks.gui
          this._garageListController = null;
          this._garageList = null;
          this._categoryButtons = null;
-         this.§&#=§();
+         this.Renamed1692();
       }
       
       private function setEvents() : void
@@ -172,13 +172,13 @@ package alternativa.tanks.gui
          this._garageList.addEventListener(PartsListEvent.ITEM_DOUBLE_CLICK,this.onGarageItemDoubleClick);
          this.itemInfoPanel.buyButton.addEventListener(MouseEvent.CLICK,this.onButtonBuyClick);
          this.itemInfoPanel.equipButton.addEventListener(MouseEvent.CLICK,this.onButtonEquipClick);
-         this.itemInfoPanel.§^!&§.addEventListener(MouseEvent.CLICK,this.§]#Z§);
+         this.itemInfoPanel.Renamed1693.addEventListener(MouseEvent.CLICK,this.Renamed1694);
       }
       
-      private function §&#=§() : void
+      private function Renamed1692() : void
       {
-         var _loc1_:§1#^§ = null;
-         for each(_loc1_ in this.§#"_§)
+         var _loc1_:Renamed1691 = null;
+         for each(_loc1_ in this.Renamed1690)
          {
             _loc1_.removeListener();
          }
@@ -224,12 +224,12 @@ package alternativa.tanks.gui
          this._garageListController.updateDiscount(param1);
       }
       
-      public function §>#f§() : IGameObject
+      public function Renamed1695() : IGameObject
       {
          return this.selectedItem;
       }
       
-      public function § P§() : ItemInfoPanel
+      public function Renamed1696() : ItemInfoPanel
       {
          return this.itemInfoPanel;
       }
@@ -237,9 +237,9 @@ package alternativa.tanks.gui
       private function onGarageItemDoubleClick(param1:PartsListEvent) : void
       {
          this.onSelectGarageListItem(param1);
-         if(this.selectedItem.hasModel(§6<§))
+         if(this.selectedItem.hasModel(Renamed1688))
          {
-            §6<§(this.selectedItem.adapt(§6<§)).handleDoubleClickOnItemPreview();
+            Renamed1688(this.selectedItem.adapt(Renamed1688)).handleDoubleClickOnItemPreview();
             return;
          }
          if(this.itemInfoPanel.equipButton.visible && this.itemInfoPanel.equipButton.getState() == ButtonStates.UP)
@@ -250,27 +250,27 @@ package alternativa.tanks.gui
          {
             this.onButtonBuyClickInternal();
          }
-         else if(this.itemInfoPanel.§^!&§.visible && this.itemInfoPanel.§^!&§.getState() == ButtonStates.UP)
+         else if(this.itemInfoPanel.Renamed1693.visible && this.itemInfoPanel.Renamed1693.getState() == ButtonStates.UP)
          {
-            this.§4"$§();
+            this.Renamed1697();
          }
       }
       
-      private function §4"$§() : void
+      private function Renamed1697() : void
       {
-         alertService.showAlert(localeService.getText(TanksLocale.TEXT_PRESENT_WILL_BE_REMOVED_ALERT),Vector.<String>([§get const use§.OK,§get const use§.CANCEL]));
-         alertService.addEventListener(AlertServiceEvent.ALERT_BUTTON_PRESSED,this.§finally package return§);
+         alertService.showAlert(localeService.getText(TanksLocale.TEXT_PRESENT_WILL_BE_REMOVED_ALERT),Vector.<String>([Renamed1616.OK,Renamed1616.CANCEL]));
+         alertService.addEventListener(AlertServiceEvent.ALERT_BUTTON_PRESSED,this.Renamed1698);
       }
       
-      private function §]#Z§(param1:MouseEvent) : void
+      private function Renamed1694(param1:MouseEvent) : void
       {
-         this.§4"$§();
+         this.Renamed1697();
       }
       
-      private function §finally package return§(param1:AlertServiceEvent) : void
+      private function Renamed1698(param1:AlertServiceEvent) : void
       {
-         alertService.removeEventListener(AlertServiceEvent.ALERT_BUTTON_PRESSED,this.§finally package return§);
-         if(param1.typeButton == §get const use§.OK)
+         alertService.removeEventListener(AlertServiceEvent.ALERT_BUTTON_PRESSED,this.Renamed1698);
+         if(param1.typeButton == Renamed1616.OK)
          {
             dispatchEvent(new GarageWindowEvent(GarageWindowEvent.DELETE_PRESENT,this.selectedItem));
             this.removeItemFromDepot(this.selectedItem);
@@ -343,11 +343,11 @@ package alternativa.tanks.gui
       
       public function initStore(param1:Vector.<IGameObject>) : void
       {
-         this.§`"C§(param1);
+         this.Renamed1699(param1);
          this._garageListController.initStore(param1);
       }
       
-      private function §`"C§(param1:Vector.<IGameObject>) : void
+      private function Renamed1699(param1:Vector.<IGameObject>) : void
       {
          var _loc2_:IGameObject = null;
          var _loc3_:int = 0;
@@ -359,28 +359,28 @@ package alternativa.tanks.gui
          while(_loc8_ < _loc7_)
          {
             _loc2_ = param1[_loc8_];
-            if(itemService.§2"J§(_loc2_) && itemService.canBuy(_loc2_) && itemService.§[#e§(_loc2_))
+            if(itemService.Renamed1700(_loc2_) && itemService.canBuy(_loc2_) && itemService.Renamed1701(_loc2_))
             {
                _loc3_ = itemService.getTimeLeftInSeconds(_loc2_);
                _loc4_ = 2592000;
-               if(!itemService.§>#J§(_loc2_) && _loc3_ > 0 && _loc3_ <= _loc4_)
+               if(!itemService.Renamed1702(_loc2_) && _loc3_ > 0 && _loc3_ <= _loc4_)
                {
                   _loc5_ = uint(_loc3_ * 1000);
                   _loc6_ = new CountDownTimer();
                   _loc6_.start(_loc5_ + getTimer());
-                  this.§#"_§.push(new §1#^§(_loc2_,_loc6_,this));
+                  this.Renamed1690.push(new Renamed1691(_loc2_,_loc6_,this));
                }
             }
             _loc8_++;
          }
       }
       
-      public function §3#4§(param1:IGameObject) : void
+      public function Renamed1703(param1:IGameObject) : void
       {
          var _loc2_:IGameObject = null;
-         if(itemService.§!"p§(this.selectedItem))
+         if(itemService.Renamed1704(this.selectedItem))
          {
-            _loc2_ = itemService.§6#y§(param1);
+            _loc2_ = itemService.Renamed1705(param1);
             if(_loc2_ != null)
             {
                this.updateDiscount(_loc2_);
@@ -407,7 +407,7 @@ package alternativa.tanks.gui
       public function removeAllModifications(param1:IGameObject) : void
       {
          var _loc2_:IGameObject = null;
-         var _loc3_:Vector.<IGameObject> = itemService.§;#U§(param1);
+         var _loc3_:Vector.<IGameObject> = itemService.Renamed1706(param1);
          for each(_loc2_ in _loc3_)
          {
             if(this.isItemInDepot(_loc2_))
@@ -578,9 +578,9 @@ package alternativa.tanks.gui
          this._garageListController.updateSelection();
       }
       
-      public function §break catch break§() : Vector.<§1#^§>
+      public function Renamed1707() : Vector.<Renamed1691>
       {
-         return this.§#"_§;
+         return this.Renamed1690;
       }
       
       public function updateCount(param1:IGameObject) : void

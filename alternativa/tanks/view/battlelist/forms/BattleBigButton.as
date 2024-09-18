@@ -1,7 +1,7 @@
 package alternativa.tanks.view.battlelist.forms
 {
    import alternativa.tanks.service.money.IMoneyService;
-   import alternativa.tanks.service.money.§continue set switch§;
+   import alternativa.tanks.service.money.Renamed1919;
    import assets.Diamond;
    import controls.base.BigButtonBase;
    import controls.base.LabelBase;
@@ -9,7 +9,7 @@ package alternativa.tanks.view.battlelist.forms
    import flash.events.Event;
    import flash.filters.DropShadowFilter;
    
-   public class BattleBigButton extends BigButtonBase implements §continue set switch§
+   public class BattleBigButton extends BigButtonBase implements Renamed1919
    {
       [Inject]
       public static var moneyService:IMoneyService;

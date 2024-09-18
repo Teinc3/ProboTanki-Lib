@@ -1,6 +1,6 @@
 package alternativa.tanks.view.battlelist
 {
-   import §0#b§.§return package in§;
+   import Renamed223.Renamed1925;
    import alternativa.tanks.controllers.battlelist.BattleListItemParams;
    import alternativa.tanks.controllers.battlelist.IBattleListViewControllerCallBack;
    import alternativa.tanks.gui.CrystalLabel;
@@ -36,9 +36,9 @@ package alternativa.tanks.view.battlelist
    import forms.ColorConstants;
    import forms.ConfigureScroll;
    import platform.client.fp10.core.type.IGameObject;
-   import projects.tanks.client.battleselect.model.item.§5!9§;
-   import projects.tanks.client.battleservice.§<#p§;
-   import projects.tanks.client.battleservice.§final package import§;
+   import projects.tanks.client.battleselect.model.item.Renamed1620;
+   import projects.tanks.client.battleservice.Renamed1586;
+   import projects.tanks.client.battleservice.Renamed1587;
    
    public class BattleListView extends Sprite implements IBattleListView
    {
@@ -117,14 +117,14 @@ package alternativa.tanks.view.battlelist
          this._showCreateBattleFormButton.visible = !param1;
          addChild(this._showCreateBattleFormButton);
          this._battleModeItems = new Vector.<BattleModeCheckBox>();
-         this.createBattleModeCheckBox(§final package import§.DM);
-         this.createBattleModeCheckBox(§final package import§.TDM);
-         this.createBattleModeCheckBox(§final package import§.CTF);
-         this.createBattleModeCheckBox(§final package import§.CP);
+         this.createBattleModeCheckBox(Renamed1587.DM);
+         this.createBattleModeCheckBox(Renamed1587.TDM);
+         this.createBattleModeCheckBox(Renamed1587.CTF);
+         this.createBattleModeCheckBox(Renamed1587.CP);
          this.onResize();
       }
       
-      private function createBattleModeCheckBox(param1:§final package import§) : void
+      private function createBattleModeCheckBox(param1:Renamed1587) : void
       {
          var _loc2_:BattleModeCheckBox = new BattleModeCheckBox(param1);
          addChild(_loc2_);
@@ -145,10 +145,10 @@ package alternativa.tanks.view.battlelist
             this._container.addChild(this);
             this._lockedMapsHelper = new LockedMapsHelper(this._locale.battleSelectLockedMapHelperName,this._locale.battleSelectLockedMapHelperArrowLength);
             helpService.registerHelper(this.HELPER_GROUP_KEY,this.HELPER_NOT_AVAILABLE,this._lockedMapsHelper,false);
-            this.getBattleModeCheckBox(§final package import§.DM).isPressed = param1;
-            this.getBattleModeCheckBox(§final package import§.TDM).isPressed = param2;
-            this.getBattleModeCheckBox(§final package import§.CTF).isPressed = param3;
-            this.getBattleModeCheckBox(§final package import§.CP).isPressed = param4;
+            this.getBattleModeCheckBox(Renamed1587.DM).isPressed = param1;
+            this.getBattleModeCheckBox(Renamed1587.TDM).isPressed = param2;
+            this.getBattleModeCheckBox(Renamed1587.CTF).isPressed = param3;
+            this.getBattleModeCheckBox(Renamed1587.CP).isPressed = param4;
          }
       }
       
@@ -255,17 +255,17 @@ package alternativa.tanks.view.battlelist
          }
       }
       
-      public function lockFilter(param1:§final package import§) : void
+      public function lockFilter(param1:Renamed1587) : void
       {
          this.getBattleModeCheckBox(param1).lock = true;
       }
       
-      public function unLockFilter(param1:§final package import§) : void
+      public function unLockFilter(param1:Renamed1587) : void
       {
          this.getBattleModeCheckBox(param1).lock = false;
       }
       
-      private function getBattleModeCheckBox(param1:§final package import§) : BattleModeCheckBox
+      private function getBattleModeCheckBox(param1:Renamed1587) : BattleModeCheckBox
       {
          var _loc2_:BattleModeCheckBox = null;
          var _loc3_:int = int(this._battleModeItems.length);
@@ -375,24 +375,24 @@ package alternativa.tanks.view.battlelist
          var _loc17_:int = int(_loc16_ * 0.55);
          if(param2.proBattle)
          {
-            if(param2.§9!@§)
+            if(param2.Renamed1624)
             {
-               (_loc15_ = new Bitmap(§return package in§.§dynamic for use§(_loc14_,param1))).y = 3;
+               (_loc15_ = new Bitmap(Renamed1925.Renamed3929(_loc14_,param1))).y = 3;
                _loc15_.x = -2;
                _loc12_.addChild(_loc15_);
             }
             else
             {
-               (_loc15_ = new Bitmap(§return package in§.§="L§(_loc14_,param1))).y = 3;
+               (_loc15_ = new Bitmap(Renamed1925.Renamed1926(_loc14_,param1))).y = 3;
                _loc15_.x = -2;
                _loc12_.addChild(_loc15_);
             }
          }
          _loc3_ = new LabelBase();
          _loc3_.size = 12;
-         if(param2.suspicionLevel != §5!9§.NONE)
+         if(param2.suspicionLevel != Renamed1620.NONE)
          {
-            _loc5_ = this.§final var package§(param2.suspicionLevel);
+            _loc5_ = this.Renamed3930(param2.suspicionLevel);
          }
          else
          {
@@ -498,11 +498,11 @@ package alternativa.tanks.view.battlelist
          return _loc12_;
       }
       
-      private function §final var package§(param1:§5!9§) : uint
+      private function Renamed3930(param1:Renamed1620) : uint
       {
          switch(param1)
          {
-            case §5!9§.HIGH:
+            case Renamed1620.HIGH:
                return ColorConstants.BATTLE_SUSPICIOUS_HIGH;
             default:
                return ColorConstants.BATTLE_SUSPICIOUS_LOW;
@@ -584,13 +584,13 @@ package alternativa.tanks.view.battlelist
          {
             _loc3_ = this._dataProvider.getItemAt(_loc6_);
             _loc4_ = _loc3_.dat;
-            _loc5_ = this.getItem(_loc4_.id,param2,_loc4_.battleItemGO,_loc4_.dmatch,_loc4_.reds,_loc4_.blues,_loc4_.friendsReds,_loc4_.friendsBlues,_loc4_.all,_loc4_.friends,_loc4_.maxPeople,_loc4_.nmap,_loc4_.accessible,_loc4_.proBattle,_loc4_.noSupplies,_loc4_.suspicionLevel,_loc4_.rankRange,_loc4_.§9!@§,_loc4_.§;9§,_loc4_.additionalCrystalsPercent);
+            _loc5_ = this.getItem(_loc4_.id,param2,_loc4_.battleItemGO,_loc4_.dmatch,_loc4_.reds,_loc4_.blues,_loc4_.friendsReds,_loc4_.friendsBlues,_loc4_.all,_loc4_.friends,_loc4_.maxPeople,_loc4_.nmap,_loc4_.accessible,_loc4_.proBattle,_loc4_.noSupplies,_loc4_.suspicionLevel,_loc4_.rankRange,_loc4_.Renamed1624,_loc4_.Renamed1625,_loc4_.additionalCrystalsPercent);
             this._dataProvider.replaceItemAt(_loc5_,_loc6_);
             this._dataProvider.invalidateItemAt(_loc6_);
          }
       }
       
-      public function updateSuspicious(param1:String, param2:§5!9§) : void
+      public function updateSuspicious(param1:String, param2:Renamed1620) : void
       {
          var _loc3_:Object = null;
          var _loc4_:BattleListItemParams = null;
@@ -600,7 +600,7 @@ package alternativa.tanks.view.battlelist
          {
             _loc3_ = this._dataProvider.getItemAt(_loc6_);
             _loc4_ = _loc3_.dat;
-            _loc5_ = this.getItem(_loc4_.id,_loc4_.gamename,_loc4_.battleItemGO,_loc4_.dmatch,_loc4_.reds,_loc4_.blues,_loc4_.friendsReds,_loc4_.friendsBlues,_loc4_.all,_loc4_.friends,_loc4_.maxPeople,_loc4_.nmap,_loc4_.accessible,_loc4_.proBattle,_loc4_.noSupplies,param2,_loc4_.rankRange,_loc4_.§9!@§,_loc4_.§;9§,_loc4_.additionalCrystalsPercent);
+            _loc5_ = this.getItem(_loc4_.id,_loc4_.gamename,_loc4_.battleItemGO,_loc4_.dmatch,_loc4_.reds,_loc4_.blues,_loc4_.friendsReds,_loc4_.friendsBlues,_loc4_.all,_loc4_.friends,_loc4_.maxPeople,_loc4_.nmap,_loc4_.accessible,_loc4_.proBattle,_loc4_.noSupplies,param2,_loc4_.rankRange,_loc4_.Renamed1624,_loc4_.Renamed1625,_loc4_.additionalCrystalsPercent);
             this._dataProvider.replaceItemAt(_loc5_,_loc6_);
             this._dataProvider.invalidateItemAt(_loc6_);
             this.sortBattleList();
@@ -617,7 +617,7 @@ package alternativa.tanks.view.battlelist
          {
             _loc6_ = this._dataProvider.getItemAt(_loc9_);
             _loc7_ = _loc6_.dat;
-            _loc8_ = this.getItem(_loc7_.id,_loc7_.gamename,_loc7_.battleItemGO,_loc7_.dmatch,param2,param3,param4,param5,_loc7_.all,_loc7_.friends,_loc7_.maxPeople,_loc7_.nmap,_loc7_.accessible,_loc7_.proBattle,_loc7_.noSupplies,_loc7_.suspicionLevel,_loc7_.rankRange,_loc7_.§9!@§,_loc7_.§;9§,_loc7_.additionalCrystalsPercent);
+            _loc8_ = this.getItem(_loc7_.id,_loc7_.gamename,_loc7_.battleItemGO,_loc7_.dmatch,param2,param3,param4,param5,_loc7_.all,_loc7_.friends,_loc7_.maxPeople,_loc7_.nmap,_loc7_.accessible,_loc7_.proBattle,_loc7_.noSupplies,_loc7_.suspicionLevel,_loc7_.rankRange,_loc7_.Renamed1624,_loc7_.Renamed1625,_loc7_.additionalCrystalsPercent);
             this._dataProvider.replaceItemAt(_loc8_,_loc9_);
             this._dataProvider.invalidateItemAt(_loc9_);
          }
@@ -633,7 +633,7 @@ package alternativa.tanks.view.battlelist
          {
             _loc4_ = this._dataProvider.getItemAt(_loc7_);
             _loc5_ = _loc4_.dat;
-            _loc6_ = this.getItem(_loc5_.id,_loc5_.gamename,_loc5_.battleItemGO,_loc5_.dmatch,_loc5_.reds,_loc5_.blues,_loc5_.friendsReds,_loc5_.friendsBlues,param2,param3,_loc5_.maxPeople,_loc5_.nmap,_loc5_.accessible,_loc5_.proBattle,_loc5_.noSupplies,_loc5_.suspicionLevel,_loc5_.rankRange,_loc5_.§9!@§,_loc5_.§;9§,_loc5_.additionalCrystalsPercent);
+            _loc6_ = this.getItem(_loc5_.id,_loc5_.gamename,_loc5_.battleItemGO,_loc5_.dmatch,_loc5_.reds,_loc5_.blues,_loc5_.friendsReds,_loc5_.friendsBlues,param2,param3,_loc5_.maxPeople,_loc5_.nmap,_loc5_.accessible,_loc5_.proBattle,_loc5_.noSupplies,_loc5_.suspicionLevel,_loc5_.rankRange,_loc5_.Renamed1624,_loc5_.Renamed1625,_loc5_.additionalCrystalsPercent);
             this._dataProvider.replaceItemAt(_loc6_,_loc7_);
             this._dataProvider.invalidateItemAt(_loc7_);
          }
@@ -649,7 +649,7 @@ package alternativa.tanks.view.battlelist
          {
             _loc6_ = this._dataProvider.getItemAt(_loc9_);
             _loc7_ = _loc6_.dat;
-            _loc8_ = this.getItem(_loc7_.id,_loc7_.gamename,_loc7_.battleItemGO,_loc7_.dmatch,param2,param3,param4,param5,_loc7_.all,_loc7_.friends,_loc7_.maxPeople,_loc7_.nmap,_loc7_.accessible,_loc7_.proBattle,_loc7_.noSupplies,_loc7_.suspicionLevel,_loc7_.rankRange,_loc7_.§9!@§,_loc7_.§;9§,_loc7_.additionalCrystalsPercent);
+            _loc8_ = this.getItem(_loc7_.id,_loc7_.gamename,_loc7_.battleItemGO,_loc7_.dmatch,param2,param3,param4,param5,_loc7_.all,_loc7_.friends,_loc7_.maxPeople,_loc7_.nmap,_loc7_.accessible,_loc7_.proBattle,_loc7_.noSupplies,_loc7_.suspicionLevel,_loc7_.rankRange,_loc7_.Renamed1624,_loc7_.Renamed1625,_loc7_.additionalCrystalsPercent);
             this._dataProvider.replaceItemAt(_loc8_,_loc9_);
             this._dataProvider.invalidateItemAt(_loc9_);
          }
@@ -659,7 +659,7 @@ package alternativa.tanks.view.battlelist
       {
          var _loc2_:Object = null;
          var _loc3_:BattleListItemParams = null;
-         var _loc4_:§<#p§ = null;
+         var _loc4_:Renamed1586 = null;
          var _loc5_:Boolean = false;
          var _loc6_:Object = null;
          var _loc7_:int = int(this._dataProvider.length);
@@ -668,9 +668,9 @@ package alternativa.tanks.view.battlelist
          {
             _loc2_ = this._dataProvider.getItemAt(_loc8_);
             _loc3_ = _loc2_.dat;
-            _loc4_ = §<#p§(_loc3_.rankRange);
+            _loc4_ = Renamed1586(_loc3_.rankRange);
             _loc5_ = param1 >= _loc4_.min && param1 <= _loc4_.max;
-            _loc6_ = this.getItem(_loc3_.id,_loc3_.gamename,_loc3_.battleItemGO,_loc3_.dmatch,_loc3_.reds,_loc3_.blues,_loc3_.friendsReds,_loc3_.friendsBlues,_loc3_.all,_loc3_.friends,_loc3_.maxPeople,_loc3_.nmap,_loc5_,_loc3_.proBattle,_loc3_.noSupplies,_loc3_.suspicionLevel,_loc3_.rankRange,_loc3_.§9!@§,_loc3_.§;9§,_loc3_.additionalCrystalsPercent);
+            _loc6_ = this.getItem(_loc3_.id,_loc3_.gamename,_loc3_.battleItemGO,_loc3_.dmatch,_loc3_.reds,_loc3_.blues,_loc3_.friendsReds,_loc3_.friendsBlues,_loc3_.all,_loc3_.friends,_loc3_.maxPeople,_loc3_.nmap,_loc5_,_loc3_.proBattle,_loc3_.noSupplies,_loc3_.suspicionLevel,_loc3_.rankRange,_loc3_.Renamed1624,_loc3_.Renamed1625,_loc3_.additionalCrystalsPercent);
             this._dataProvider.replaceItemAt(_loc6_,_loc8_);
             this._dataProvider.invalidateItemAt(_loc8_);
             _loc8_++;
@@ -678,7 +678,7 @@ package alternativa.tanks.view.battlelist
          this.sortBattleList();
       }
       
-      private function getItem(param1:String, param2:String, param3:IGameObject, param4:Boolean, param5:int, param6:int, param7:int, param8:int, param9:int, param10:int, param11:int, param12:String, param13:Boolean, param14:Boolean, param15:Boolean, param16:§5!9§, param17:§<#p§, param18:Boolean, param19:String, param20:int) : Object
+      private function getItem(param1:String, param2:String, param3:IGameObject, param4:Boolean, param5:int, param6:int, param7:int, param8:int, param9:int, param10:int, param11:int, param12:String, param13:Boolean, param14:Boolean, param15:Boolean, param16:Renamed1620, param17:Renamed1586, param18:Boolean, param19:String, param20:int) : Object
       {
          var _loc21_:BattleListItemParams;
          (_loc21_ = new BattleListItemParams()).gamename = param2;
@@ -698,8 +698,8 @@ package alternativa.tanks.view.battlelist
          _loc21_.noSupplies = param15;
          _loc21_.proBattle = param14;
          _loc21_.suspicionLevel = param16;
-         _loc21_.§9!@§ = param18;
-         _loc21_.§;9§ = param19;
+         _loc21_.Renamed1624 = param18;
+         _loc21_.Renamed1625 = param19;
          _loc21_.additionalCrystalsPercent = param20;
          var _loc22_:Object;
          (_loc22_ = new Object()).id = param1;
@@ -719,7 +719,7 @@ package alternativa.tanks.view.battlelist
          return _loc22_;
       }
       
-      private function §>I§(param1:String, param2:Boolean, param3:String) : String
+      private function Renamed1623(param1:String, param2:Boolean, param3:String) : String
       {
          if(param2)
          {

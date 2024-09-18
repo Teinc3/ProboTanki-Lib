@@ -1,17 +1,17 @@
 package alternativa.tanks.model.shop
 {
-   import §7#C§.§=b§;
-   import §7#C§.SendPromoCodeEvent;
+   import Renamed266.Renamed2217;
+   import Renamed266.SendPromoCodeEvent;
    import alternativa.osgi.OSGi;
    import alternativa.osgi.service.locale.ILocaleService;
    import alternativa.tanks.service.panel.IPanelView;
-   import §each set import§.§'4§;
+   import Renamed348.Renamed2218;
    import flash.events.Event;
-   import §native const with§.§each for case§;
+   import Renamed401.Renamed2219;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.dialogs.IDialogsService;
    import scpacker.networking.Network;
-   import §with set while§.§1"X§;
-   import §with set while§.§extends const include§;
+   import Renamed464.Renamed2220;
+   import Renamed464.Renamed2221;
    
    public class ShopModel
    {
@@ -25,7 +25,7 @@ package alternativa.tanks.model.shop
       
       private var window:ShopWindow;
       
-      private var form:§=b§;
+      private var form:Renamed2217;
       
       public function ShopModel()
       {
@@ -45,25 +45,25 @@ package alternativa.tanks.model.shop
          ShopWindow.haveDoubleCrystalls = _loc2_.have_double_crystals;
          this.window = new ShopWindow();
          var _loc3_:Object = JSON.parse(_loc2_.data);
-         var _loc4_:String = this.§for catch const§(this.localeService.language);
-         var _loc5_:§each for case§ = new §each for case§();
+         var _loc4_:String = this.Renamed2222(this.localeService.language);
+         var _loc5_:Renamed2219 = new Renamed2219();
          var _loc6_:Array = _loc3_.categories;
          for each(_loc7_ in _loc6_)
          {
-            _loc5_.§4D§(_loc7_.category_id,_loc7_.header_text[_loc4_],_loc7_.description[_loc4_]);
+            _loc5_.Renamed2223(_loc7_.category_id,_loc7_.header_text[_loc4_],_loc7_.description[_loc4_]);
          }
          _loc8_ = _loc3_.items;
          for each(_loc9_ in _loc8_)
          {
             this.window.addItem(_loc9_.category_id,_loc9_.item_id,_loc9_.additional_data,_loc5_);
          }
-         this.window.§with set case§(_loc5_);
-         this.panelView.§+#,§().buttonBar.setEnablePaymentButton(false);
-         this.window.addEventListener(§'4§.EVENT_TYPE,this.onSelectItem);
+         this.window.Renamed2224(_loc5_);
+         this.panelView.Renamed2160().buttonBar.setEnablePaymentButton(false);
+         this.window.addEventListener(Renamed2218.EVENT_TYPE,this.onSelectItem);
          this.window.addEventListener(Event.CLOSE,this.onClose);
       }
       
-      private function §for catch const§(param1:String) : String
+      private function Renamed2222(param1:String) : String
       {
          switch(param1)
          {
@@ -80,38 +80,38 @@ package alternativa.tanks.model.shop
       private function onClose(param1:Event) : void
       {
          this.dialogsService.removeDialog(this.window);
-         this.panelView.§+#,§().buttonBar.setEnablePaymentButton(true);
+         this.panelView.Renamed2160().buttonBar.setEnablePaymentButton(true);
          this.window = null;
       }
       
-      private function §,A§(param1:SendPromoCodeEvent) : void
+      private function Renamed2225(param1:SendPromoCodeEvent) : void
       {
-         this.network.send(new §extends const include§(param1.§""4§()));
+         this.network.send(new Renamed2221(param1.Renamed2226()));
       }
       
-      public function §"#9§() : void
+      public function Renamed2227() : void
       {
-         this.form.§do set if§();
+         this.form.Renamed2228();
       }
       
-      public function §override catch final§() : void
+      public function Renamed2229() : void
       {
-         this.form.§override set in§();
+         this.form.Renamed2230();
       }
       
-      private function onSelectItem(param1:§'4§) : void
+      private function onSelectItem(param1:Renamed2218) : void
       {
-         var _loc2_:String = this.window.header.§[1§.selectedItem.code;
+         var _loc2_:String = this.window.header.Renamed2231.selectedItem.code;
          if(param1.item.indexOf("promo") != -1)
          {
-            this.form = new §=b§();
-            this.form.addEventListener(SendPromoCodeEvent.§dynamic catch true§,this.§,A§);
-            this.window.§with set case§(this.form);
+            this.form = new Renamed2217();
+            this.form.addEventListener(SendPromoCodeEvent.Renamed2232,this.Renamed2225);
+            this.window.Renamed2224(this.form);
             return;
          }
          if(_loc2_.indexOf("RU") != -1)
          {
-            this.dialogsService.addDialog(new §1#w§(param1.item,this.send));
+            this.dialogsService.addDialog(new Renamed2233(param1.item,this.send));
             return;
          }
          this.send(param1.item,"");
@@ -119,7 +119,7 @@ package alternativa.tanks.model.shop
       
       private function send(param1:String, param2:String) : *
       {
-         this.network.send(new §1"X§(param1,param2));
+         this.network.send(new Renamed2220(param1,param2));
       }
    }
 }

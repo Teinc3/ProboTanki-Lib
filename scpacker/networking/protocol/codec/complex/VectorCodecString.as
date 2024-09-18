@@ -1,10 +1,10 @@
 package scpacker.networking.protocol.codec.complex
 {
-   import §[" §.§#""§;
-   import §[" §.ICodec;
+   import Renamed5811.Renamed9342;
+   import Renamed5811.ICodec;
    import flash.utils.ByteArray;
    
-   public class VectorCodecString extends §#""§ implements ICodec
+   public class VectorCodecString extends Renamed9342 implements ICodec
    {
       private var elementCodec:ICodec;
       
@@ -17,7 +17,7 @@ package scpacker.networking.protocol.codec.complex
       public function encode(param1:ByteArray, param2:Object) : int
       {
          var _loc3_:int = 1;
-         if(§%"s§(param1,param2))
+         if(Renamed9344(param1,param2))
          {
             return _loc3_;
          }
@@ -35,7 +35,7 @@ package scpacker.networking.protocol.codec.complex
       
       public function decode(param1:ByteArray) : Object
       {
-         if(§each catch else§(param1))
+         if(Renamed9343(param1))
          {
             return null;
          }

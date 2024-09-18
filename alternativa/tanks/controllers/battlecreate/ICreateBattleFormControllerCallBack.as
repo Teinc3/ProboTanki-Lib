@@ -1,6 +1,6 @@
 package alternativa.tanks.controllers.battlecreate
 {
-   import projects.tanks.client.battleservice.§final package import§;
+   import projects.tanks.client.battleservice.Renamed1587;
    
    public interface ICreateBattleFormControllerCallBack
    {
@@ -22,11 +22,11 @@ package alternativa.tanks.controllers.battlecreate
       
       function onBattleNameOutFocus() : void;
       
-      function onSelected(param1:§final package import§) : void;
+      function onSelected(param1:Renamed1587) : void;
       
-      function §>#"§() : void;
+      function Renamed1608() : void;
       
-      function §[#a§() : void;
+      function Renamed1610() : void;
    }
 }
 

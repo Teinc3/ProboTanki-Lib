@@ -37,7 +37,7 @@ package alternativa.tanks.view.forms
    public class LoginForm extends Sprite
    {
       [Inject]
-      public static var §7#L§:IExternalEntranceService;
+      public static var Renamed3564:IExternalEntranceService;
       
       [Inject]
       public static var display:IDisplay;
@@ -151,23 +151,23 @@ package alternativa.tanks.view.forms
          this.playButton.y = this._windowHeight - this.playButton.height - this._margin;
          this.bg.addChild(this.playButton);
          this.captchaSection = this.injector.instantiate(CaptchaSection);
-         if(§7#L§.§%"I§ || §7#L§.§package set default§)
+         if(Renamed3564.Renamed3602 || Renamed3564.Renamed3603)
          {
             this.snPanel = new ExternalEntranceForm(this._windowWidth - 40,85,this.localeService.getText(TextConst.STRING_CHECK_PASSWORK_FORM_LOGIN_VIA));
             addChild(this.snPanel);
             this.snPanel.y = this.bg.y + this.bg.height - 15;
             this.snPanel.x = this.bg.x + (this._windowWidth - this.snPanel.width) / 2;
-            if(§7#L§.§%"I§)
+            if(Renamed3564.Renamed3602)
             {
-               this.snPanel.§]!R§.addEventListener(MouseEvent.CLICK,this.onVkButtonClick);
+               this.snPanel.Renamed3932.addEventListener(MouseEvent.CLICK,this.onVkButtonClick);
             }
-            if(§7#L§.§package set default§)
+            if(Renamed3564.Renamed3603)
             {
-               this.snPanel.§9H§.addEventListener(MouseEvent.CLICK,this.onFbButtonClick);
+               this.snPanel.Renamed3933.addEventListener(MouseEvent.CLICK,this.onFbButtonClick);
             }
-            if(§7#L§.§final get§)
+            if(Renamed3564.Renamed3604)
             {
-               this.snPanel.§function package else§.addEventListener(MouseEvent.CLICK,this.§default var var§);
+               this.snPanel.Renamed3934.addEventListener(MouseEvent.CLICK,this.Renamed3935);
             }
          }
          addChild(this.bg);
@@ -197,17 +197,17 @@ package alternativa.tanks.view.forms
          this.removeLoginButtonPressedEvenListeners();
          this._notAllowedShowDelayTimerTimer.removeEventListener(TimerEvent.TIMER_COMPLETE,this.onCallsignCheckTimerComplete);
          this._notAllowedShowDelayTimerTimer.stop();
-         if(§7#L§.§%"I§)
+         if(Renamed3564.Renamed3602)
          {
-            this.snPanel.§]!R§.removeEventListener(MouseEvent.CLICK,this.onVkButtonClick);
+            this.snPanel.Renamed3932.removeEventListener(MouseEvent.CLICK,this.onVkButtonClick);
          }
-         if(§7#L§.§package set default§)
+         if(Renamed3564.Renamed3603)
          {
-            this.snPanel.§9H§.removeEventListener(MouseEvent.CLICK,this.onFbButtonClick);
+            this.snPanel.Renamed3933.removeEventListener(MouseEvent.CLICK,this.onFbButtonClick);
          }
-         if(§7#L§.§final get§)
+         if(Renamed3564.Renamed3604)
          {
-            this.snPanel.§function package else§.removeEventListener(MouseEvent.CLICK,this.§default var var§);
+            this.snPanel.Renamed3934.removeEventListener(MouseEvent.CLICK,this.Renamed3935);
          }
       }
       
@@ -221,7 +221,7 @@ package alternativa.tanks.view.forms
          dispatchEvent(new StartExternalEntranceEvent(StartExternalEntranceEvent.START_LOGIN,"facebook",this.rememberMe));
       }
       
-      private function §default var var§(param1:MouseEvent) : void
+      private function Renamed3935(param1:MouseEvent) : void
       {
          dispatchEvent(new StartExternalEntranceEvent(StartExternalEntranceEvent.START_LOGIN,"google",this.rememberMe));
       }
@@ -372,12 +372,12 @@ package alternativa.tanks.view.forms
       
       public function get rememberMe() : Boolean
       {
-         return this.checkRemember.§ !w§;
+         return this.checkRemember.Renamed1878;
       }
       
       public function set remember(param1:Boolean) : void
       {
-         this.checkRemember.§ !w§ = param1;
+         this.checkRemember.Renamed1878 = param1;
       }
       
       public function get windowWidth() : int

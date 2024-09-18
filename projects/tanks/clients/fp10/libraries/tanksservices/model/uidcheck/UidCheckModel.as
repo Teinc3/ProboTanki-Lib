@@ -1,13 +1,13 @@
 package projects.tanks.clients.fp10.libraries.tanksservices.model.uidcheck
 {
-   import §7!S§.§#!d§;
-   import §7!S§.§3!y§;
+   import Renamed265.Renamed4506;
+   import Renamed265.Renamed4507;
    import alternativa.osgi.OSGi;
    import platform.client.fp10.core.model.ObjectLoadListener;
    import platform.client.fp10.core.model.ObjectUnloadListener;
    import platform.client.models.commons.types.ValidationStatus;
    
-   public class UidCheckModel extends §3!y§ implements §#!d§, ObjectLoadListener, ObjectUnloadListener, UidCheckService
+   public class UidCheckModel extends Renamed4507 implements Renamed4506, ObjectLoadListener, ObjectUnloadListener, UidCheckService
    {
       private var validateCallback:Function;
       
@@ -53,7 +53,7 @@ package projects.tanks.clients.fp10.libraries.tanksservices.model.uidcheck
       public function validate(param1:String, param2:Function) : void
       {
          this.validateCallback = param2;
-         server.§<#V§(param1);
+         server.Renamed4508(param1);
       }
    }
 }

@@ -19,29 +19,29 @@ package controls.base
    
    public class TankInput extends DiscreteSprite
    {
-      private static const §final var var§:Class = §@%§;
+      private static const Renamed3967:Class = Renamed3968;
       
-      private static const §try var class§:Class = §else set package§;
+      private static const Renamed3969:Class = Renamed3970;
       
-      private static const leftClass:Class = §,"x§;
+      private static const leftClass:Class = Renamed3971;
       
-      private static const §implements for each§:Class = §2j§;
+      private static const Renamed3972:Class = Renamed3973;
       
-      private static const rightClass:Class = §var for for§;
+      private static const rightClass:Class = Renamed3974;
       
-      private static const §set catch dynamic§:Class = §9"V§;
+      private static const Renamed3975:Class = Renamed3976;
       
-      public static const §5Y§:int = 5;
+      public static const Renamed3977:int = 5;
       
-      public static const §?##§:int = 30;
+      public static const Renamed3978:int = 30;
       
-      public static const §get package null§:int = 212;
+      public static const Renamed3979:int = 212;
       
-      private static const §-"m§:int = 3;
+      private static const Renamed3980:int = 3;
       
-      private static const §3#V§:int = 7;
+      private static const Renamed3981:int = 7;
       
-      private static const §continue for get§:RegExp = /^(\w*) (\d*),(\d*),(\d*),(\d*)$/;
+      private static const Renamed3982:RegExp = /^(\w*) (\d*),(\d*),(\d*),(\d*)$/;
       
       public var textField:TextField;
       
@@ -57,29 +57,29 @@ package controls.base
       {
          this.format = TanksFontService.getTextFormat(12);
          this.bg = new DiscreteSprite();
-         this.§while package try§ = new Shape();
-         this.§[#<§ = new Shape();
-         this.§'#"§ = new Shape();
+         this.Renamed3983 = new Shape();
+         this.Renamed3984 = new Shape();
+         this.Renamed3985 = new Shape();
          this.bmpLeft = new leftClass().bitmapData;
-         this.bmpCenter = new §final var var§().bitmapData;
+         this.bmpCenter = new Renamed3967().bitmapData;
          this.bmpRight = new rightClass().bitmapData;
-         this.bmpLeftWrong = new §implements for each§().bitmapData;
-         this.bmpCenterWrong = new §try var class§().bitmapData;
-         this.bmpRightWrong = new §set catch dynamic§().bitmapData;
+         this.bmpLeftWrong = new Renamed3972().bitmapData;
+         this.bmpCenterWrong = new Renamed3969().bitmapData;
+         this.bmpRightWrong = new Renamed3975().bitmapData;
          super();
          addChild(this.bg);
-         this.bg.addChild(this.§while package try§);
-         this.bg.addChild(this.§[#<§);
-         this.bg.addChild(this.§'#"§);
-         this.§return var true§();
-         this.height = §?##§;
-         this.width = §get package null§;
+         this.bg.addChild(this.Renamed3983);
+         this.bg.addChild(this.Renamed3984);
+         this.bg.addChild(this.Renamed3985);
+         this.Renamed3986();
+         this.height = Renamed3978;
+         this.width = Renamed3979;
       }
       
-      private function §return var true§() : void
+      private function Renamed3986() : void
       {
          var _loc1_:String = Capabilities.version;
-         var _loc2_:Object = §continue for get§.exec(_loc1_);
+         var _loc2_:Object = Renamed3982.exec(_loc1_);
          if(_loc2_ != null && Number(_loc2_[2] + "." + _loc2_[3]) < 10.1)
          {
             this.textField = new TextFieldUtf8();
@@ -93,9 +93,9 @@ package controls.base
          this.textField.gridFitType = GridFitType.PIXEL;
          this.textField.embedFonts = TanksFontService.isEmbedFonts();
          this.textField.type = TextFieldType.INPUT;
-         this.textField.x = §-"m§;
-         this.textField.y = §3#V§;
-         this.§native const if§();
+         this.textField.x = Renamed3980;
+         this.textField.y = Renamed3981;
+         this.Renamed3987();
          this.textField.sharpness = FontParamsUtil.SHARPNESS_TANK_INPUT_BASE;
          this.textField.thickness = FontParamsUtil.THICKNESS_TANK_INPUT_BASE;
          this.textField.addEventListener(MouseEvent.MOUSE_OVER,this.onMouseOver);
@@ -103,9 +103,9 @@ package controls.base
          addChild(this.textField);
       }
       
-      private function §native const if§() : void
+      private function Renamed3987() : void
       {
-         this.textField.height = this._height - 2 * §5Y§;
+         this.textField.height = this._height - 2 * Renamed3977;
       }
       
       private function onMouseOver(param1:MouseEvent) : void
@@ -147,17 +147,17 @@ package controls.base
       override public function set height(param1:Number) : void
       {
          this._height = Math.ceil(param1);
-         this.§native const if§();
+         this.Renamed3987();
          this.draw();
       }
       
       public function set align(param1:String) : void
       {
          this.format.align = param1;
-         this.§&!0§();
+         this.Renamed3988();
       }
       
-      private function §&!0§() : void
+      private function Renamed3988() : void
       {
          this.textField.defaultTextFormat = this.format;
          this.textField.setTextFormat(this.format);
@@ -218,27 +218,27 @@ package controls.base
       
       private function draw() : void
       {
-         var _loc1_:Graphics = this.§while package try§.graphics;
+         var _loc1_:Graphics = this.Renamed3983.graphics;
          _loc1_.clear();
          _loc1_.beginBitmapFill(this._valid ? this.bmpLeft : this.bmpLeftWrong);
-         _loc1_.drawRect(0,0,§5Y§,this._height);
+         _loc1_.drawRect(0,0,Renamed3977,this._height);
          _loc1_.endFill();
-         this.§while package try§.x = 0;
-         this.§while package try§.y = 0;
-         var _loc2_:Graphics = this.§[#<§.graphics;
+         this.Renamed3983.x = 0;
+         this.Renamed3983.y = 0;
+         var _loc2_:Graphics = this.Renamed3984.graphics;
          _loc2_.clear();
          _loc2_.beginBitmapFill(this._valid ? this.bmpCenter : this.bmpCenterWrong);
-         _loc2_.drawRect(0,0,this._width - 2 * §5Y§,this._height);
+         _loc2_.drawRect(0,0,this._width - 2 * Renamed3977,this._height);
          _loc2_.endFill();
-         this.§[#<§.x = §5Y§;
-         this.§[#<§.y = 0;
-         var _loc3_:Graphics = this.§'#"§.graphics;
+         this.Renamed3984.x = Renamed3977;
+         this.Renamed3984.y = 0;
+         var _loc3_:Graphics = this.Renamed3985.graphics;
          _loc3_.clear();
          _loc3_.beginBitmapFill(this._valid ? this.bmpRight : this.bmpRightWrong);
-         _loc3_.drawRect(0,0,§5Y§,this._height);
+         _loc3_.drawRect(0,0,Renamed3977,this._height);
          _loc3_.endFill();
-         this.§'#"§.x = this._width - §5Y§;
-         this.§'#"§.y = 0;
+         this.Renamed3985.x = this._width - Renamed3977;
+         this.Renamed3985.y = 0;
       }
    }
 }

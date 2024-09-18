@@ -9,7 +9,7 @@ package alternativa.tanks.servermodels.registartion.password
    import projects.tanks.client.entrance.model.entrance.registration.IRegistrationModelBase;
    import projects.tanks.client.entrance.model.entrance.registration.RegistrationModelBase;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.alertservices.IAlertService;
-   import services.alertservice.§get const use§;
+   import services.alertservice.Renamed1616;
    import utils.preview.IImageResource;
    import utils.preview.ImageResourceLoadingWrapper;
    
@@ -52,7 +52,7 @@ package alternativa.tanks.servermodels.registartion.password
       
       public function enteredUidIsFree() : void
       {
-         facade.§6W§();
+         facade.Renamed3557();
       }
       
       public function anchorRegistration() : void
@@ -61,22 +61,22 @@ package alternativa.tanks.servermodels.registartion.password
       
       public function enteredUidIsBusy(param1:Vector.<String>) : void
       {
-         facade.§="r§(param1);
+         facade.Renamed3558(param1);
       }
       
       public function enteredUidIsIncorrect() : void
       {
-         facade.§8![§();
+         facade.Renamed3559();
       }
       
       public function passwordIsIncorrect() : void
       {
-         facade.§4,§();
+         facade.Renamed3560();
       }
       
       public function registrationFailed() : void
       {
-         alertService.showAlert("Registration failed. Try again.",Vector.<String>([localeService.getText(§get const use§.OK)]));
+         alertService.showAlert("Registration failed. Try again.",Vector.<String>([localeService.getText(Renamed1616.OK)]));
       }
       
       public function register(param1:String, param2:String, param3:String, param4:Boolean, param5:String, param6:String, param7:String, param8:String) : void
@@ -93,7 +93,7 @@ package alternativa.tanks.servermodels.registartion.password
       {
          if(facade != null)
          {
-            facade.§^!-§ = param1.data;
+            facade.Renamed3561 = param1.data;
          }
       }
    }

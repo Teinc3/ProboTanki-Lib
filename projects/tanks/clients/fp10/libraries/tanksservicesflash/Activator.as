@@ -1,11 +1,11 @@
 package projects.tanks.clients.fp10.libraries.tanksservicesflash
 {
-   import § !a§.§+!P§;
-   import §,"i§.§static var get§;
-   import §7!S§.§#!d§;
-   import §9v§.§do var finally§;
-   import §?"O§.§return const super§;
-   import §^"!§.§#!?§;
+   import Renamed135.Renamed4496;
+   import Renamed4533.Renamed4534;
+   import Renamed265.Renamed4506;
+   import Renamed290.Renamed4535;
+   import Renamed4498.Renamed4500;
+   import Renamed4489.Renamed4490;
    import alternativa.osgi.OSGi;
    import alternativa.osgi.bundle.IBundleActivator;
    import alternativa.osgi.service.display.IDisplay;
@@ -15,24 +15,24 @@ package projects.tanks.clients.fp10.libraries.tanksservicesflash
    import alternativa.tanks.help.IHelpService;
    import alternativa.tanks.loader.ILoaderWindowService;
    import alternativa.tanks.model.friends.loader.FriendsLoaderModel;
-   import alternativa.tanks.newbieservice.§^#-§;
-   import §implements const catch§.§case catch return§;
-   import §import implements§.§#"Y§;
+   import alternativa.tanks.newbieservice.Renamed583;
+   import Renamed386.Renamed4502;
+   import Renamed393.Renamed4495;
    import platform.client.fp10.core.model.ObjectLoadListener;
    import platform.client.fp10.core.model.ObjectUnloadListener;
    import platform.client.fp10.core.registry.ModelRegistry;
-   import projects.tanks.client.tanksservices.model.notifier.battle.§85§;
-   import projects.tanks.client.tanksservices.model.notifier.online.§4"q§;
+   import projects.tanks.client.tanksservices.model.notifier.battle.Renamed4388;
+   import projects.tanks.client.tanksservices.model.notifier.online.Renamed4393;
    import projects.tanks.client.tanksservices.model.notifier.premium.IPremiumNotifierModelBase;
-   import projects.tanks.client.tanksservices.model.notifier.rank.§set var include§;
-   import projects.tanks.client.tanksservices.model.notifier.uid.§<!o§;
-   import projects.tanks.client.users.model.friends.§0U§;
-   import projects.tanks.clients.fp10.libraries.tanksservices.model.§;#W§;
+   import projects.tanks.client.tanksservices.model.notifier.rank.Renamed4401;
+   import projects.tanks.client.tanksservices.model.notifier.uid.Renamed4405;
+   import projects.tanks.client.users.model.friends.Renamed4414;
+   import projects.tanks.clients.fp10.libraries.tanksservices.model.Renamed4483;
    import projects.tanks.clients.fp10.libraries.tanksservices.model.FriendsModel;
    import projects.tanks.clients.fp10.libraries.tanksservices.model.IFriends;
    import projects.tanks.clients.fp10.libraries.tanksservices.model.UserRefresh;
-   import projects.tanks.clients.fp10.libraries.tanksservices.model.§^"Q§;
-   import projects.tanks.clients.fp10.libraries.tanksservices.model.§else const with§;
+   import projects.tanks.clients.fp10.libraries.tanksservices.model.Renamed4486;
+   import projects.tanks.clients.fp10.libraries.tanksservices.model.Renamed4484;
    import projects.tanks.clients.fp10.libraries.tanksservices.model.friends.accepted.FriendsAcceptedModel;
    import projects.tanks.clients.fp10.libraries.tanksservices.model.friends.acceptednotificator.FriendsAcceptedNotificatorModel;
    import projects.tanks.clients.fp10.libraries.tanksservices.model.friends.incoming.FriendsIncomingModel;
@@ -40,15 +40,15 @@ package projects.tanks.clients.fp10.libraries.tanksservicesflash
    import projects.tanks.clients.fp10.libraries.tanksservices.model.friends.outgoing.FriendsOutgoingModel;
    import projects.tanks.clients.fp10.libraries.tanksservices.model.listener.UserNotifier;
    import projects.tanks.clients.fp10.libraries.tanksservices.model.listener.UserNotifierModel;
-   import projects.tanks.clients.fp10.libraries.tanksservices.model.listener.§case const finally§;
-   import projects.tanks.clients.fp10.libraries.tanksservices.model.listener.§false set finally§;
+   import projects.tanks.clients.fp10.libraries.tanksservices.model.listener.Renamed4504;
+   import projects.tanks.clients.fp10.libraries.tanksservices.model.listener.Renamed4505;
    import projects.tanks.clients.fp10.libraries.tanksservices.model.notifier.battle.BattleLinkData;
    import projects.tanks.clients.fp10.libraries.tanksservices.model.notifier.battle.BattleNotifierModel;
    import projects.tanks.clients.fp10.libraries.tanksservices.model.notifier.online.OnlineNotifierModel;
    import projects.tanks.clients.fp10.libraries.tanksservices.model.notifier.premium.PremiumNotifierModel;
    import projects.tanks.clients.fp10.libraries.tanksservices.model.notifier.rank.RankNotifierModel;
    import projects.tanks.clients.fp10.libraries.tanksservices.model.notifier.uid.UidNotifierModel;
-   import projects.tanks.clients.fp10.libraries.tanksservices.model.§true catch false§;
+   import projects.tanks.clients.fp10.libraries.tanksservices.model.Renamed4485;
    import projects.tanks.clients.fp10.libraries.tanksservices.model.uidcheck.UidCheckModel;
    import projects.tanks.clients.fp10.libraries.tanksservices.model.uidcheck.UidCheckService;
    import projects.tanks.clients.fp10.libraries.tanksservices.model.uidcheck.UidCheckServiceAdapt;
@@ -76,7 +76,7 @@ package projects.tanks.clients.fp10.libraries.tanksservicesflash
    import projects.tanks.clients.fp10.libraries.tanksservices.utils.AlertUtils;
    import projects.tanks.clients.fp10.libraries.tanksservices.utils.BattleFormatUtil;
    import services.buttonbar.IButtonBarService;
-   import §static var throw§.§="o§;
+   import Renamed427.Renamed4492;
    
    public class Activator implements IBundleActivator
    {
@@ -319,10 +319,10 @@ package projects.tanks.clients.fp10.libraries.tanksservicesflash
          });
          osgi.injectService(IBattleInviteService,function(param1:Object):void
          {
-            §do var finally§.battleInviteService = IBattleInviteService(param1);
+            Renamed4535.battleInviteService = IBattleInviteService(param1);
          },function():IBattleInviteService
          {
-            return §do var finally§.battleInviteService;
+            return Renamed4535.battleInviteService;
          });
          osgi.injectService(IOnlineNotifierService,function(param1:Object):void
          {
@@ -340,35 +340,35 @@ package projects.tanks.clients.fp10.libraries.tanksservicesflash
          });
          osgi.injectService(IStorageService,function(param1:Object):void
          {
-            §^#-§.storageService = IStorageService(param1);
+            Renamed583.storageService = IStorageService(param1);
          },function():IStorageService
          {
-            return §^#-§.storageService;
+            return Renamed583.storageService;
          });
          modelRegister = osgi.getService(ModelRegistry) as ModelRegistry;
          modelRegisterAdapt = osgi.getService(ModelRegistry) as ModelRegistry;
-         modelRegister.add(new UidCheckModel(),Vector.<Class>([§#!d§,ObjectLoadListener,ObjectUnloadListener,UidCheckService]));
+         modelRegister.add(new UidCheckModel(),Vector.<Class>([Renamed4506,ObjectLoadListener,ObjectUnloadListener,UidCheckService]));
          modelRegisterAdapt.registerAdapt(UidCheckService,UidCheckServiceAdapt);
          modelRegisterAdapt.registerEvents(UidCheckService,UidCheckServiceEvents);
-         modelRegister.add(new §do var finally§(),Vector.<Class>([§static var get§,ObjectLoadListener,ObjectUnloadListener]));
+         modelRegister.add(new Renamed4535(),Vector.<Class>([Renamed4534,ObjectLoadListener,ObjectUnloadListener]));
          modelRegister.add(new PremiumNotifierModel(),Vector.<Class>([IPremiumNotifierModelBase,ObjectLoadListener,ObjectUnloadListener]));
-         modelRegister.add(new FriendsAcceptedNotificatorModel(),Vector.<Class>([§="o§,ObjectLoadListener,ObjectUnloadListener]));
-         modelRegister.add(new FriendsIncomingModel(),Vector.<Class>([§#"Y§,ObjectLoadListener]));
-         modelRegister.add(new FriendsAcceptedModel(),Vector.<Class>([§#!?§,ObjectLoadListener]));
-         modelRegister.add(new FriendsIncomingNotificatorModel(),Vector.<Class>([§+!P§,ObjectLoadListener,ObjectUnloadListener]));
-         modelRegister.add(new FriendsOutgoingModel(),Vector.<Class>([§return const super§,ObjectLoadListener]));
-         modelRegisterAdapt.registerAdapt(IFriends,§else const with§);
-         modelRegisterAdapt.registerEvents(IFriends,§true catch false§);
-         modelRegister.add(new FriendsModel(),Vector.<Class>([§0U§,ObjectLoadListener,ObjectUnloadListener,IFriends]));
-         modelRegisterAdapt.registerAdapt(UserRefresh,§^"Q§);
-         modelRegisterAdapt.registerEvents(UserRefresh,§;#W§);
-         modelRegister.add(new RankNotifierModel(),Vector.<Class>([§set var include§,UserRefresh]));
-         modelRegister.add(new OnlineNotifierModel(),Vector.<Class>([§4"q§,UserRefresh]));
-         modelRegister.add(new UidNotifierModel(),Vector.<Class>([§<!o§,UserRefresh]));
-         modelRegister.add(new BattleNotifierModel(),Vector.<Class>([§85§,UserRefresh,ObjectLoadListener,ObjectUnloadListener]));
-         modelRegisterAdapt.registerAdapt(UserNotifier,§false set finally§);
-         modelRegisterAdapt.registerEvents(UserNotifier,§case const finally§);
-         modelRegister.add(new UserNotifierModel(),Vector.<Class>([§case catch return§,UserNotifier,ObjectLoadListener,ObjectUnloadListener]));
+         modelRegister.add(new FriendsAcceptedNotificatorModel(),Vector.<Class>([Renamed4492,ObjectLoadListener,ObjectUnloadListener]));
+         modelRegister.add(new FriendsIncomingModel(),Vector.<Class>([Renamed4495,ObjectLoadListener]));
+         modelRegister.add(new FriendsAcceptedModel(),Vector.<Class>([Renamed4490,ObjectLoadListener]));
+         modelRegister.add(new FriendsIncomingNotificatorModel(),Vector.<Class>([Renamed4496,ObjectLoadListener,ObjectUnloadListener]));
+         modelRegister.add(new FriendsOutgoingModel(),Vector.<Class>([Renamed4500,ObjectLoadListener]));
+         modelRegisterAdapt.registerAdapt(IFriends,Renamed4484);
+         modelRegisterAdapt.registerEvents(IFriends,Renamed4485);
+         modelRegister.add(new FriendsModel(),Vector.<Class>([Renamed4414,ObjectLoadListener,ObjectUnloadListener,IFriends]));
+         modelRegisterAdapt.registerAdapt(UserRefresh,Renamed4486);
+         modelRegisterAdapt.registerEvents(UserRefresh,Renamed4483);
+         modelRegister.add(new RankNotifierModel(),Vector.<Class>([Renamed4401,UserRefresh]));
+         modelRegister.add(new OnlineNotifierModel(),Vector.<Class>([Renamed4393,UserRefresh]));
+         modelRegister.add(new UidNotifierModel(),Vector.<Class>([Renamed4405,UserRefresh]));
+         modelRegister.add(new BattleNotifierModel(),Vector.<Class>([Renamed4388,UserRefresh,ObjectLoadListener,ObjectUnloadListener]));
+         modelRegisterAdapt.registerAdapt(UserNotifier,Renamed4505);
+         modelRegisterAdapt.registerEvents(UserNotifier,Renamed4504);
+         modelRegister.add(new UserNotifierModel(),Vector.<Class>([Renamed4502,UserNotifier,ObjectLoadListener,ObjectUnloadListener]));
       }
       
       public function stop(param1:OSGi) : void

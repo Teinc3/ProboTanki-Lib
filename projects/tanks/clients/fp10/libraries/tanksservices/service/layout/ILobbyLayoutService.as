@@ -8,7 +8,7 @@ package projects.tanks.clients.fp10.libraries.tanksservices.service.layout
       
       function showBattleSelect() : void;
       
-      function §for const const§() : void;
+      function Renamed2158() : void;
       
       function showPayment() : void;
       
@@ -32,7 +32,7 @@ package projects.tanks.clients.fp10.libraries.tanksservices.service.layout
       
       function setBattleReady(param1:Boolean) : void;
       
-      function § #8§() : void;
+      function Renamed4456() : void;
    }
 }
 

@@ -3,8 +3,8 @@ package alternativa.tanks.utils
    import alternativa.engine3d.core.Object3D;
    import alternativa.engine3d.materials.TextureMaterial;
    import alternativa.math.Vector3;
-   import alternativa.tanks.engine3d.§throw const switch§;
-   import alternativa.tanks.engine3d.§try set break§;
+   import alternativa.tanks.engine3d.Renamed843;
+   import alternativa.tanks.engine3d.Renamed1650;
    import alternativa.utils.TextureMaterialRegistry;
    import flash.display.BitmapData;
    import flash.filters.BitmapFilter;
@@ -21,17 +21,17 @@ package alternativa.tanks.utils
          super();
       }
       
-      public static function getTextureAnimationFromResource(param1:TextureMaterialRegistry, param2:MultiframeImageResource) : §throw const switch§
+      public static function getTextureAnimationFromResource(param1:TextureMaterialRegistry, param2:MultiframeImageResource) : Renamed843
       {
-         var _loc3_:§throw const switch§ = getTextureAnimation(param1,param2.data,param2.frameWidth,param2.frameHeight,param2.numFrames);
+         var _loc3_:Renamed843 = getTextureAnimation(param1,param2.data,param2.frameWidth,param2.frameHeight,param2.numFrames);
          _loc3_.fps = param2.fps;
          return _loc3_;
       }
       
-      public static function getFilteredTextureAnimationFromResource(param1:TextureMaterialRegistry, param2:MultiframeImageResource, param3:BitmapFilter) : §throw const switch§
+      public static function getFilteredTextureAnimationFromResource(param1:TextureMaterialRegistry, param2:MultiframeImageResource, param3:BitmapFilter) : Renamed843
       {
          var _loc4_:BitmapData = createFilteredImage(param2.data,param3);
-         var _loc5_:§throw const switch§;
+         var _loc5_:Renamed843;
          (_loc5_ = getTextureAnimation(param1,_loc4_,param2.frameWidth,param2.frameHeight,param2.numFrames)).fps = param2.fps;
          return _loc5_;
       }
@@ -68,20 +68,20 @@ package alternativa.tanks.utils
          param1.rotationZ = param3.z;
       }
       
-      public static function getTextureAnimation(param1:TextureMaterialRegistry, param2:BitmapData, param3:int, param4:int, param5:int = 0, param6:Boolean = true) : §throw const switch§
+      public static function getTextureAnimation(param1:TextureMaterialRegistry, param2:BitmapData, param3:int, param4:int, param5:int = 0, param6:Boolean = true) : Renamed843
       {
          var _loc7_:TextureMaterial = param1.getMaterial(param2,param6);
-         var _loc8_:Vector.<§try set break§> = getUVFramesFromTexture(param2,param3,param4,param5);
-         return new §throw const switch§(_loc7_,_loc8_);
+         var _loc8_:Vector.<Renamed1650> = getUVFramesFromTexture(param2,param3,param4,param5);
+         return new Renamed843(_loc7_,_loc8_);
       }
       
-      public static function getSquareUVFramesFromTexture(param1:BitmapData, param2:int = 0) : Vector.<§try set break§>
+      public static function getSquareUVFramesFromTexture(param1:BitmapData, param2:int = 0) : Vector.<Renamed1650>
       {
          var _loc3_:int = param1.height;
          return getUVFramesFromTexture(param1,_loc3_,_loc3_,param2);
       }
       
-      public static function getUVFramesFromTexture(param1:BitmapData, param2:int, param3:int, param4:int = 0) : Vector.<§try set break§>
+      public static function getUVFramesFromTexture(param1:BitmapData, param2:int, param3:int, param4:int = 0) : Vector.<Renamed1650>
       {
          var _loc20_:* = undefined;
          var _loc5_:int = 0;
@@ -100,7 +100,7 @@ package alternativa.tanks.utils
          {
             _loc16_ = param4;
          }
-         var _loc17_:Vector.<§try set break§> = new Vector.<§try set break§>(_loc16_);
+         var _loc17_:Vector.<Renamed1650> = new Vector.<Renamed1650>(_loc16_);
          var _loc18_:int = 0;
          var _loc19_:int = 0;
          while(_loc19_ < _loc15_)
@@ -113,7 +113,7 @@ package alternativa.tanks.utils
                _loc8_ = _loc7_ * _loc11_;
                _loc9_ = _loc8_ + _loc11_;
                _loc20_ = _loc18_++;
-               _loc17_[_loc20_] = new §try set break§(_loc8_ / _loc10_,_loc5_ / _loc13_,_loc9_ / _loc10_,_loc6_ / _loc13_);
+               _loc17_[_loc20_] = new Renamed1650(_loc8_ / _loc10_,_loc5_ / _loc13_,_loc9_ / _loc10_,_loc6_ / _loc13_);
                if(_loc18_ == _loc16_)
                {
                   return _loc17_;

@@ -31,7 +31,7 @@ package alternativa.tanks.view.forms
       
       private static const MARGIN:int = 20;
       
-      private static const §throw const implements§:int = 10;
+      private static const Renamed3936:int = 10;
       
       [Inject]
       public var localeService:ILocaleService;
@@ -93,8 +93,8 @@ package alternativa.tanks.view.forms
             infoLink = new LabelBase();
             infoLink.htmlText = infoLinkContent;
             infoLink.x = int(this._windowWidth / 2 - infoLink.width / 2);
-            infoLink.y = nextElementY + §throw const implements§;
-            nextElementY = infoLink.y + infoLink.height + §throw const implements§;
+            infoLink.y = nextElementY + Renamed3936;
+            nextElementY = infoLink.y + infoLink.height + Renamed3936;
             addChild(infoLink);
          }
          else

@@ -1,15 +1,15 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import §[" §.ICodec;
+   import Renamed5811.ICodec;
    import flash.utils.ByteArray;
-   import projects.tanks.client.panel.model.dailyquest.§native const in§;
-   import scpacker.networking.protocol.§?"s§;
+   import projects.tanks.client.panel.model.dailyquest.Renamed4365;
+   import scpacker.networking.protocol.Renamed536;
    
    public class VectorCodecDailyQuestPrizeInfo implements ICodec
    {
       private var elementCodec:ICodec;
       
-      public function VectorCodecDailyQuestPrizeInfo(param1:§?"s§)
+      public function VectorCodecDailyQuestPrizeInfo(param1:Renamed536)
       {
          super();
          this.elementCodec = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecDailyQuestPrizeInfo");
@@ -18,11 +18,11 @@ package scpacker.networking.protocol.codec.custom
       public function decode(param1:ByteArray) : Object
       {
          var _loc2_:int = param1.readInt();
-         var _loc3_:Vector.<§native const in§> = new Vector.<§native const in§>(_loc2_,true);
+         var _loc3_:Vector.<Renamed4365> = new Vector.<Renamed4365>(_loc2_,true);
          var _loc4_:int = 0;
          while(_loc4_ < _loc2_)
          {
-            _loc3_[_loc4_] = §native const in§(this.elementCodec.decode(param1));
+            _loc3_[_loc4_] = Renamed4365(this.elementCodec.decode(param1));
             _loc4_++;
          }
          return _loc3_;
@@ -34,7 +34,7 @@ package scpacker.networking.protocol.codec.custom
          {
             throw new Error("Object is null. Use @ProtocolOptional annotation.");
          }
-         var _loc3_:Vector.<§native const in§> = Vector.<§native const in§>(param2);
+         var _loc3_:Vector.<Renamed4365> = Vector.<Renamed4365>(param2);
          var _loc4_:int = int(_loc3_.length);
          param1.writeInt(_loc4_);
          var _loc5_:int = 0;

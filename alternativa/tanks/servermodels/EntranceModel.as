@@ -36,8 +36,8 @@ package alternativa.tanks.servermodels
       
       public function objectLoadedPost() : void
       {
-         serverFacade.§^#r§ = object;
-         clientFacade.§^#r§ = object;
+         serverFacade.Renamed3539 = object;
+         clientFacade.Renamed3539 = object;
          IServerCaptcha(modelRegistry.getModelsByInterface(IServerCaptcha)[0]).bindFacade(clientFacade);
       }
       
@@ -48,7 +48,7 @@ package alternativa.tanks.servermodels
       
       public function objectUnloadedPost() : void
       {
-         clientFacade.§<!K§();
+         clientFacade.Renamed3540();
       }
    }
 }

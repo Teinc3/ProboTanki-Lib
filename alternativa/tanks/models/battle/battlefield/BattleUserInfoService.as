@@ -4,17 +4,17 @@ package alternativa.tanks.models.battle.battlefield
    
    public interface BattleUserInfoService
    {
-      function §include for package§(param1:String) : String;
+      function Renamed2300(param1:String) : String;
       
-      function §try set set§(param1:String) : int;
+      function Renamed2301(param1:String) : int;
       
-      function §final catch switch§(param1:String) : Boolean;
+      function Renamed2302(param1:String) : Boolean;
       
-      function §if const with§(param1:String) : ChatModeratorLevel;
+      function Renamed2303(param1:String) : ChatModeratorLevel;
       
-      function §catch for with§(param1:§ #^§) : void;
+      function Renamed2304(param1:Renamed2305) : void;
       
-      function §8"J§(param1:§ #^§) : void;
+      function Renamed2306(param1:Renamed2305) : void;
    }
 }
 

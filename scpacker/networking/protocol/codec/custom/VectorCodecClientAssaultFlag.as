@@ -1,17 +1,17 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import §5""§.§`"'§;
-   import §[" §.ICodec;
+   import Renamed4594.Renamed6342;
+   import Renamed5811.ICodec;
    import flash.utils.ByteArray;
-   import scpacker.networking.protocol.§?"s§;
+   import scpacker.networking.protocol.Renamed536;
    
    public class VectorCodecClientAssaultFlag implements ICodec
    {
       private var elementCodec:ICodec;
       
-      private var §?"_§:Boolean;
+      private var Renamed5009:Boolean;
       
-      public function VectorCodecClientAssaultFlag(param1:§?"s§)
+      public function VectorCodecClientAssaultFlag(param1:Renamed536)
       {
          super();
          this.elementCodec = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecClientAssaultFlag");
@@ -20,11 +20,11 @@ package scpacker.networking.protocol.codec.custom
       public function decode(param1:ByteArray) : Object
       {
          var _loc2_:int = param1.readInt();
-         var _loc3_:Vector.<§`"'§> = new Vector.<§`"'§>(_loc2_,true);
+         var _loc3_:Vector.<Renamed6342> = new Vector.<Renamed6342>(_loc2_,true);
          var _loc4_:int = 0;
          while(_loc4_ < _loc2_)
          {
-            _loc3_[_loc4_] = §`"'§(this.elementCodec.decode(param1));
+            _loc3_[_loc4_] = Renamed6342(this.elementCodec.decode(param1));
             _loc4_++;
          }
          return _loc3_;
@@ -36,7 +36,7 @@ package scpacker.networking.protocol.codec.custom
          {
             throw new Error("Object is null. Use @ProtocolOptional annotation.");
          }
-         var _loc3_:Vector.<§`"'§> = Vector.<§`"'§>(param2);
+         var _loc3_:Vector.<Renamed6342> = Vector.<Renamed6342>(param2);
          var _loc4_:int = int(_loc3_.length);
          param1.writeInt(_loc4_);
          var _loc5_:int = 0;

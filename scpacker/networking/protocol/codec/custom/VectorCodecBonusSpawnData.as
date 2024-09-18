@@ -1,17 +1,17 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import §[" §.ICodec;
+   import Renamed5811.ICodec;
    import flash.utils.ByteArray;
-   import projects.tanks.client.battlefield.models.bonus.battle.§1§;
-   import scpacker.networking.protocol.§?"s§;
+   import projects.tanks.client.battlefield.models.bonus.battle.Renamed7400;
+   import scpacker.networking.protocol.Renamed536;
    
    public class VectorCodecBonusSpawnData implements ICodec
    {
       private var elementCodec:ICodec;
       
-      private var §?"_§:Boolean;
+      private var Renamed5009:Boolean;
       
-      public function VectorCodecBonusSpawnData(param1:§?"s§)
+      public function VectorCodecBonusSpawnData(param1:Renamed536)
       {
          super();
          this.elementCodec = param1.getCodec("scpacker.networking.protocol.codec.primitive.StringCodec");
@@ -20,11 +20,11 @@ package scpacker.networking.protocol.codec.custom
       public function decode(param1:ByteArray) : Object
       {
          var _loc2_:int = param1.readInt();
-         var _loc3_:Vector.<§1#1§> = new Vector.<§1#1§>(_loc2_,true);
+         var _loc3_:Vector.<Renamed4159> = new Vector.<Renamed4159>(_loc2_,true);
          var _loc4_:int = 0;
          while(_loc4_ < _loc2_)
          {
-            _loc3_[_loc4_] = §1#1§(this.elementCodec.decode(param1));
+            _loc3_[_loc4_] = Renamed4159(this.elementCodec.decode(param1));
             _loc4_++;
          }
          return _loc3_;
@@ -36,7 +36,7 @@ package scpacker.networking.protocol.codec.custom
          {
             throw new Error("Object is null. Use @ProtocolOptional annotation.");
          }
-         var _loc3_:Vector.<§1#1§> = Vector.<§1#1§>(param2);
+         var _loc3_:Vector.<Renamed4159> = Vector.<Renamed4159>(param2);
          var _loc4_:int = int(_loc3_.length);
          param1.writeInt(_loc4_);
          var _loc5_:int = 0;

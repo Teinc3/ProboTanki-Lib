@@ -1,51 +1,51 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import §[" §.ICodec;
+   import Renamed5811.ICodec;
    import alternativa.osgi.OSGi;
    import alternativa.osgi.service.clientlog.IClientLog;
    import flash.utils.ByteArray;
-   import projects.tanks.client.battleservice.model.statistics.§in for for§;
+   import projects.tanks.client.battleservice.model.statistics.Renamed2737;
    import projects.tanks.client.users.services.chatmoderator.ChatModeratorLevel;
-   import scpacker.networking.protocol.§?"s§;
+   import scpacker.networking.protocol.Renamed536;
    
    public class CodecUserInfo implements ICodec
    {
       public static var log:IClientLog = IClientLog(OSGi.getInstance().getService(IClientLog));
       
-      private var §break var import§:ICodec;
+      private var Renamed10627:ICodec;
       
-      private var §static var use§:ICodec;
+      private var Renamed10744:ICodec;
       
-      private var §0[§:ICodec;
+      private var Renamed10573:ICodec;
       
-      private var §,!k§:ICodec;
+      private var Renamed10708:ICodec;
       
-      private var §each package do§:ICodec;
+      private var Renamed10574:ICodec;
       
-      private var §"#$§:ICodec;
+      private var Renamed10745:ICodec;
       
-      private var §try set use§:ICodec;
+      private var Renamed10576:ICodec;
       
-      public function CodecUserInfo(param1:§?"s§)
+      public function CodecUserInfo(param1:Renamed536)
       {
          super();
-         this.§break var import§ = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecChatModeratorLevel");
-         this.§static var use§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");
-         this.§0[§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");
-         this.§,!k§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.ByteCodec");
-         this.§each package do§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");
-         this.§"#$§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.StringCodec");
+         this.Renamed10627 = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecChatModeratorLevel");
+         this.Renamed10744 = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");
+         this.Renamed10573 = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");
+         this.Renamed10708 = param1.getCodec("scpacker.networking.protocol.codec.primitive.ByteCodec");
+         this.Renamed10574 = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");
+         this.Renamed10745 = param1.getCodec("scpacker.networking.protocol.codec.primitive.StringCodec");
       }
       
       public function decode(param1:ByteArray) : Object
       {
-         var _loc2_:§in for for§ = new §in for for§();
-         _loc2_.chatModeratorLevel = this.§break var import§.decode(param1) as ChatModeratorLevel;
-         _loc2_.deaths = this.§static var use§.decode(param1) as int;
-         _loc2_.kills = this.§0[§.decode(param1) as int;
-         _loc2_.rank = this.§,!k§.decode(param1) as int;
-         _loc2_.score = this.§each package do§.decode(param1) as int;
-         _loc2_.uid = this.§"#$§.decode(param1) as String;
+         var _loc2_:Renamed2737 = new Renamed2737();
+         _loc2_.chatModeratorLevel = this.Renamed10627.decode(param1) as ChatModeratorLevel;
+         _loc2_.deaths = this.Renamed10744.decode(param1) as int;
+         _loc2_.kills = this.Renamed10573.decode(param1) as int;
+         _loc2_.rank = this.Renamed10708.decode(param1) as int;
+         _loc2_.score = this.Renamed10574.decode(param1) as int;
+         _loc2_.uid = this.Renamed10745.decode(param1) as String;
          _loc2_.user = _loc2_.uid;
          return _loc2_;
       }
@@ -56,13 +56,13 @@ package scpacker.networking.protocol.codec.custom
          {
             throw new Error("Object is null. Use @ProtocolOptional annotation.");
          }
-         var _loc3_:§in for for§ = §in for for§(param2);
-         this.§break var import§.encode(param1,_loc3_.chatModeratorLevel);
-         this.§static var use§.encode(param1,_loc3_.deaths);
-         this.§0[§.encode(param1,_loc3_.kills);
-         this.§,!k§.encode(param1,_loc3_.rank);
-         this.§each package do§.encode(param1,_loc3_.score);
-         this.§"#$§.encode(param1,_loc3_.uid);
+         var _loc3_:Renamed2737 = Renamed2737(param2);
+         this.Renamed10627.encode(param1,_loc3_.chatModeratorLevel);
+         this.Renamed10744.encode(param1,_loc3_.deaths);
+         this.Renamed10573.encode(param1,_loc3_.kills);
+         this.Renamed10708.encode(param1,_loc3_.rank);
+         this.Renamed10574.encode(param1,_loc3_.score);
+         this.Renamed10745.encode(param1,_loc3_.uid);
          return 4;
       }
    }

@@ -1,6 +1,6 @@
 package alternativa.tanks.gui.friends.battleLink
 {
-   import §0#b§.§return package in§;
+   import Renamed223.Renamed1925;
    import alternativa.osgi.service.locale.ILocaleService;
    import alternativa.tanks.gui.friends.list.renderer.FriendsAcceptedListRenderer;
    import alternativa.tanks.locale.constants.TextConst;
@@ -60,7 +60,7 @@ package alternativa.tanks.gui.friends.battleLink
          this._availableBattleIcon.y = (FriendsAcceptedListRenderer.ROW_HEIGHT - this._availableBattleIcon.height) / 2;
          this._availableBattleIcon.visible = false;
          addChild(this._availableBattleIcon);
-         this._noSuppliesIcon = new Bitmap(§return package in§.§="L§(true,false));
+         this._noSuppliesIcon = new Bitmap(Renamed1925.Renamed1926(true,false));
          this._noSuppliesIcon.visible = false;
          this._noSuppliesIcon.y = (FriendsAcceptedListRenderer.ROW_HEIGHT - this._noSuppliesIcon.height) / 2;
          addChild(this._noSuppliesIcon);

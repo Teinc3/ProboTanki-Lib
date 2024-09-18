@@ -44,12 +44,12 @@ package alternativa.tanks.model.item.temporary
       
       public function getStopDate() : Date
       {
-         return new Date(new Date().getTime() + temporaryItemService.§native const set§(object));
+         return new Date(new Date().getTime() + temporaryItemService.Renamed2146(object));
       }
       
       public function getTimeRemainingInMSec() : Number
       {
-         return temporaryItemService.§native const set§(object);
+         return temporaryItemService.Renamed2146(object);
       }
       
       public function startTiming(param1:int) : void
@@ -59,12 +59,12 @@ package alternativa.tanks.model.item.temporary
       
       private function startTemporaryItem(param1:IGameObject, param2:int) : void
       {
-         temporaryItemService.§try in§(param1,param2);
+         temporaryItemService.Renamed2147(param1,param2);
       }
       
       private function stopTemporaryItem(param1:IGameObject) : void
       {
-         temporaryItemService.§-",§(param1);
+         temporaryItemService.Renamed2148(param1);
       }
    }
 }

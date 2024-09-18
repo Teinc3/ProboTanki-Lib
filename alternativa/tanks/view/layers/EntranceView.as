@@ -3,13 +3,13 @@ package alternativa.tanks.view.layers
    import alternativa.osgi.service.locale.ILocaleService;
    import alternativa.tanks.locale.constants.TextConst;
    import alternativa.tanks.view.StandAloneCaptchaForm;
-   import alternativa.tanks.view.forms.§!"z§;
+   import alternativa.tanks.view.forms.Renamed558;
    import alternativa.tanks.view.forms.ExternalRegistrationForm;
    import alternativa.tanks.view.forms.LinkExternalLoginForm;
    import alternativa.tanks.view.forms.LoginForm;
    import alternativa.tanks.view.forms.PasswordRestoreForm;
    import alternativa.tanks.view.forms.RegistrationForm;
-   import alternativa.tanks.view.forms.§case do§;
+   import alternativa.tanks.view.forms.Renamed559;
    import alternativa.tanks.view.forms.primitives.Alert;
    import flash.display.Bitmap;
    import flash.display.DisplayObject;
@@ -20,7 +20,7 @@ package alternativa.tanks.view.layers
    import projects.tanks.clients.flash.commons.services.timeunit.ITimeUnitService;
    import projects.tanks.clients.fp10.libraries.TanksLocale;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.alertservices.IAlertService;
-   import services.alertservice.§get const use§;
+   import services.alertservice.Renamed1616;
    
    public class EntranceView extends Sprite
    {
@@ -31,7 +31,7 @@ package alternativa.tanks.view.layers
       public static var alertService:IAlertService;
       
       [Inject]
-      public static var §&J§:ITimeUnitService;
+      public static var Renamed2271:ITimeUnitService;
       
       [Inject]
       public var injector:IInjector;
@@ -55,7 +55,7 @@ package alternativa.tanks.view.layers
       
       public function showInviteForm() : void
       {
-         this.changeViewTo(new §case do§());
+         this.changeViewTo(new Renamed559());
       }
       
       public function showLoginForm(param1:String, param2:Boolean, param3:Boolean, param4:String = null) : void
@@ -77,7 +77,7 @@ package alternativa.tanks.view.layers
       public function showAlertServerIsHalt() : void
       {
          this.removeAllForms();
-         alertService.showAlert(localeService.getText(TanksLocale.TEXT_SERVER_IS_RESTARTING_LOGIN_TEXT),Vector.<String>([localeService.getText(§get const use§.OK)]));
+         alertService.showAlert(localeService.getText(TanksLocale.TEXT_SERVER_IS_RESTARTING_LOGIN_TEXT),Vector.<String>([localeService.getText(Renamed1616.OK)]));
       }
       
       public function showAlertServerIsFrozen() : void
@@ -116,7 +116,7 @@ package alternativa.tanks.view.layers
       
       public function showChangeEmailAndPassword(param1:String) : void
       {
-         var _loc2_:§!"z§ = this.injector.instantiate(§!"z§);
+         var _loc2_:Renamed558 = this.injector.instantiate(Renamed558);
          _loc2_.email = param1;
          this.changeViewTo(_loc2_);
       }
@@ -210,7 +210,7 @@ package alternativa.tanks.view.layers
       {
          this.alert = new Alert();
          this.alert.addEventListener(AlertEvent.ALERT_BUTTON_PRESSED,this.goToLoginAfterAlertClosed);
-         this.alert.showAlert(param1,Vector.<String>([§get const use§.OK]));
+         this.alert.showAlert(param1,Vector.<String>([Renamed1616.OK]));
          this.changeViewTo(this.alert);
       }
       
@@ -226,8 +226,8 @@ package alternativa.tanks.view.layers
          var _loc5_:String = localeService.getText(TextConst.STRING_YOU_WERE_KICKED_LOGIN_TEXT);
          this.alert.addEventListener(AlertEvent.ALERT_BUTTON_PRESSED,this.goToLoginAfterAlertClosed);
          _loc5_ = _loc5_.replace("{0}",param1);
-         _loc5_ = _loc5_.replace("{1}",§&J§.§&!1§(param2,param3,param4));
-         this.alert.showAlert(_loc5_,Vector.<String>([§get const use§.OK]));
+         _loc5_ = _loc5_.replace("{1}",Renamed2271.Renamed3953(param2,param3,param4));
+         this.alert.showAlert(_loc5_,Vector.<String>([Renamed1616.OK]));
          this.changeViewTo(this.alert);
       }
    }

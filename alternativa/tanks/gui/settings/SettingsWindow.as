@@ -1,8 +1,8 @@
 package alternativa.tanks.gui.settings
 {
-   import §"f§.§[#-§;
-   import §"f§.§with for import§;
-   import §@#3§.§"!y§;
+   import Renamed1959.Renamed1960;
+   import Renamed1959.Renamed1961;
+   import Renamed303.Renamed1962;
    import alternativa.osgi.service.locale.ILocaleService;
    import alternativa.tanks.help.IHelpService;
    import controls.TankWindow;
@@ -13,8 +13,8 @@ package alternativa.tanks.gui.settings
    import platform.clients.fp10.libraries.alternativapartners.service.IPartnerService;
    import projects.tanks.clients.fp10.libraries.TanksLocale;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.dialogs.gui.DialogWindow;
-   import §set static§.§else catch with§;
-   import §try const return§.§break implements§;
+   import Renamed419.Renamed1963;
+   import Renamed445.Renamed1964;
    
    public class SettingsWindow extends DialogWindow
    {
@@ -27,13 +27,13 @@ package alternativa.tanks.gui.settings
       [Inject]
       public static var partnersService:IPartnerService;
       
-      public static const §7E§:int = WINDOW_HEIGHT - 2 * WINDOW_MARGIN - 2 * §switch package try§ - MARGIN;
+      public static const Renamed1965:int = WINDOW_HEIGHT - 2 * WINDOW_MARGIN - 2 * Renamed1966 - MARGIN;
       
-      public static const §each package null§:int = WINDOW_WIDTH - 2 * WINDOW_MARGIN;
+      public static const Renamed1967:int = WINDOW_WIDTH - 2 * WINDOW_MARGIN;
       
       public static const WINDOW_MARGIN:int = 12;
       
-      public static const §switch package try§:int = 33;
+      public static const Renamed1966:int = 33;
       
       public static const BUTTON_WIDTH:int = 104;
       
@@ -45,76 +45,76 @@ package alternativa.tanks.gui.settings
       
       private var closeButton:DefaultButtonBase;
       
-      private var §return set implements§:§"#Y§;
+      private var Renamed1968:Renamed1969;
       
-      private var §include for import§:Dictionary;
+      private var Renamed1970:Dictionary;
       
-      private var §9"w§:§with for import§ = null;
+      private var Renamed1971:Renamed1961 = null;
       
       public function SettingsWindow(param1:String, param2:Boolean, param3:Boolean, param4:Boolean, param5:String, param6:String)
       {
          var _loc7_:TankWindow = null;
          var _loc8_:Boolean = false;
-         var _loc9_:§"!y§ = null;
-         this.§include for import§ = new Dictionary();
+         var _loc9_:Renamed1962 = null;
+         this.Renamed1970 = new Dictionary();
          super();
          (_loc7_ = new TankWindow(WINDOW_WIDTH,WINDOW_HEIGHT)).headerLang = localeService.getText(TanksLocale.TEXT_GUI_LANG);
          _loc7_.header = TankWindowHeader.SETTINGS;
          addChild(_loc7_);
-         this.§return set implements§ = new §"#Y§();
-         this.§return set implements§.§<!Q§(§const const const§.GAME);
-         this.§return set implements§.§<!Q§(§const const const§.GRAPHIC);
+         this.Renamed1968 = new Renamed1969();
+         this.Renamed1968.Renamed1972(Renamed1958.GAME);
+         this.Renamed1968.Renamed1972(Renamed1958.GRAPHIC);
          _loc8_ = !partnersService.isRunningInsidePartnerEnvironment() || param4;
          if(_loc8_)
          {
-            this.§return set implements§.§<!Q§(§const const const§.ACCOUNT);
+            this.Renamed1968.Renamed1972(Renamed1958.ACCOUNT);
          }
-         this.§return set implements§.§<!Q§(§const const const§.CONTROL);
-         this.§return set implements§.§ !Y§(§const const const§.GAME);
-         this.§return set implements§.x = this.§return set implements§.y = WINDOW_MARGIN;
-         this.§return set implements§.addEventListener(SelectTabEvent.§@=§,this.§`#D§);
-         addChild(this.§return set implements§);
-         var _loc10_:§[#-§;
-         (_loc10_ = new §[#-§()).y = this.§return set implements§.y + this.§return set implements§.height + MARGIN;
+         this.Renamed1968.Renamed1972(Renamed1958.CONTROL);
+         this.Renamed1968.Renamed1973(Renamed1958.GAME);
+         this.Renamed1968.x = this.Renamed1968.y = WINDOW_MARGIN;
+         this.Renamed1968.addEventListener(SelectTabEvent.Renamed1957,this.Renamed1974);
+         addChild(this.Renamed1968);
+         var _loc10_:Renamed1960;
+         (_loc10_ = new Renamed1960()).y = this.Renamed1968.y + this.Renamed1968.height + MARGIN;
          _loc10_.x = WINDOW_MARGIN;
-         this.§include for import§[§const const const§.GRAPHIC] = _loc10_;
-         var _loc11_:§else catch with§;
-         (_loc11_ = new §else catch with§(param3)).y = this.§return set implements§.y + this.§return set implements§.height + MARGIN;
+         this.Renamed1970[Renamed1958.GRAPHIC] = _loc10_;
+         var _loc11_:Renamed1963;
+         (_loc11_ = new Renamed1963(param3)).y = this.Renamed1968.y + this.Renamed1968.height + MARGIN;
          _loc11_.x = WINDOW_MARGIN;
-         this.§include for import§[§const const const§.GAME] = _loc11_;
+         this.Renamed1970[Renamed1958.GAME] = _loc11_;
          if(_loc8_)
          {
-            (_loc9_ = new §"!y§(param1,param2,param4,param5,param6)).y = this.§return set implements§.y + this.§return set implements§.height + MARGIN;
+            (_loc9_ = new Renamed1962(param1,param2,param4,param5,param6)).y = this.Renamed1968.y + this.Renamed1968.height + MARGIN;
             _loc9_.x = WINDOW_MARGIN;
-            this.§include for import§[§const const const§.ACCOUNT] = _loc9_;
+            this.Renamed1970[Renamed1958.ACCOUNT] = _loc9_;
          }
-         var _loc12_:§break implements§;
-         (_loc12_ = new §break implements§()).y = this.§return set implements§.y + this.§return set implements§.height + MARGIN;
+         var _loc12_:Renamed1964;
+         (_loc12_ = new Renamed1964()).y = this.Renamed1968.y + this.Renamed1968.height + MARGIN;
          _loc12_.x = WINDOW_MARGIN;
-         this.§include for import§[§const const const§.CONTROL] = _loc12_;
-         this.§return set implements§.§ !Y§(§const const const§.GAME);
+         this.Renamed1970[Renamed1958.CONTROL] = _loc12_;
+         this.Renamed1968.Renamed1973(Renamed1958.GAME);
          this.closeButton = new DefaultButtonBase();
          addChild(this.closeButton);
          this.closeButton.label = localeService.getText(TanksLocale.TEXT_CLOSE_LABEL);
          this.closeButton.x = WINDOW_WIDTH - this.closeButton.width - WINDOW_MARGIN;
          this.closeButton.y = WINDOW_HEIGHT - this.closeButton.height - WINDOW_MARGIN;
-         this.closeButton.addEventListener(MouseEvent.CLICK,this.§class in§);
+         this.closeButton.addEventListener(MouseEvent.CLICK,this.Renamed1975);
          _loc7_.height = WINDOW_HEIGHT;
       }
       
-      private function §`#D§(param1:SelectTabEvent) : void
+      private function Renamed1974(param1:SelectTabEvent) : void
       {
-         if(this.§9"w§ != null && contains(this.§9"w§))
+         if(this.Renamed1971 != null && contains(this.Renamed1971))
          {
-            this.§9"w§.hide();
-            removeChild(this.§9"w§);
+            this.Renamed1971.hide();
+            removeChild(this.Renamed1971);
          }
-         var _loc2_:§with for import§ = this.§include for import§[param1.getSelectedCategory()];
+         var _loc2_:Renamed1961 = this.Renamed1970[param1.getSelectedCategory()];
          if(_loc2_ != null)
          {
-            this.§9"w§ = _loc2_;
-            addChild(this.§9"w§);
-            this.§9"w§.show();
+            this.Renamed1971 = _loc2_;
+            addChild(this.Renamed1971);
+            this.Renamed1971.show();
          }
       }
       
@@ -123,34 +123,34 @@ package alternativa.tanks.gui.settings
          dialogService.addDialog(this);
       }
       
-      private function §class in§(param1:MouseEvent = null) : void
+      private function Renamed1975(param1:MouseEvent = null) : void
       {
-         this.§default set use§();
+         this.Renamed1976();
       }
       
-      private function §default set use§() : void
+      private function Renamed1976() : void
       {
          helperService.hideAllHelpers();
-         dispatchEvent(new SettingsWindowEvent(SettingsWindowEvent.§[#5§));
+         dispatchEvent(new SettingsWindowEvent(SettingsWindowEvent.Renamed1977));
       }
       
-      public function §<9§() : §"!y§
+      public function Renamed1978() : Renamed1962
       {
-         return this.§include for import§[§const const const§.ACCOUNT];
+         return this.Renamed1970[Renamed1958.ACCOUNT];
       }
       
       override protected function cancelKeyPressed() : void
       {
-         this.§default set use§();
+         this.Renamed1976();
       }
       
       public function destroy() : void
       {
-         var _loc1_:§with for import§ = null;
-         this.closeButton.removeEventListener(MouseEvent.CLICK,this.§class in§);
-         this.§return set implements§.removeEventListener(SelectTabEvent.§@=§,this.§`#D§);
-         this.§return set implements§.destroy();
-         for each(_loc1_ in this.§include for import§)
+         var _loc1_:Renamed1961 = null;
+         this.closeButton.removeEventListener(MouseEvent.CLICK,this.Renamed1975);
+         this.Renamed1968.removeEventListener(SelectTabEvent.Renamed1957,this.Renamed1974);
+         this.Renamed1968.destroy();
+         for each(_loc1_ in this.Renamed1970)
          {
             _loc1_.destroy();
          }

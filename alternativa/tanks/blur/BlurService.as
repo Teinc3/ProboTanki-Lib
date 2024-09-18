@@ -1,6 +1,6 @@
 package alternativa.tanks.blur
 {
-   import alternativa.init.§<!Y§;
+   import alternativa.init.Renamed0;
    import alternativa.osgi.service.display.IDisplay;
    import alternativa.tanks.help.IHelpService;
    import flash.display.Sprite;
@@ -8,7 +8,7 @@ package alternativa.tanks.blur
    
    public class BlurService implements IBlurService
    {
-      private var §each var break§:Boolean;
+      private var Renamed1439:Boolean;
       
       private var mainContainerService:IDisplay;
       
@@ -17,22 +17,22 @@ package alternativa.tanks.blur
       public function BlurService()
       {
          super();
-         this.mainContainerService = IDisplay(§<!Y§.osgi.getService(IDisplay));
+         this.mainContainerService = IDisplay(Renamed0.osgi.getService(IDisplay));
          this.overlay = new Sprite();
          this.overlay.mouseEnabled = true;
-         this.§each var break§ = false;
+         this.Renamed1439 = false;
       }
       
       public function blur() : void
       {
          var _loc1_:IHelpService = null;
-         if(!this.§each var break§)
+         if(!this.Renamed1439)
          {
-            this.§each var break§ = true;
+            this.Renamed1439 = true;
             this.mainContainerService.dialogsLayer.addChildAt(this.overlay,0);
             this.mainContainerService.stage.addEventListener(Event.RESIZE,this.onStageResize);
             this.redrawOverlay();
-            _loc1_ = §<!Y§.osgi.getService(IHelpService) as IHelpService;
+            _loc1_ = Renamed0.osgi.getService(IHelpService) as IHelpService;
             _loc1_.pushState();
             _loc1_.hideAllHelpers();
             _loc1_.lock();
@@ -42,12 +42,12 @@ package alternativa.tanks.blur
       public function unblur() : void
       {
          var _loc1_:IHelpService = null;
-         if(this.§each var break§)
+         if(this.Renamed1439)
          {
-            this.§each var break§ = false;
+            this.Renamed1439 = false;
             this.mainContainerService.dialogsLayer.removeChild(this.overlay);
             this.mainContainerService.stage.removeEventListener(Event.RESIZE,this.onStageResize);
-            _loc1_ = §<!Y§.osgi.getService(IHelpService) as IHelpService;
+            _loc1_ = Renamed0.osgi.getService(IHelpService) as IHelpService;
             _loc1_.popState();
             _loc1_.unlock();
          }

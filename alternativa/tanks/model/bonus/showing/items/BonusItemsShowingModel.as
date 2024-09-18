@@ -97,7 +97,7 @@ package alternativa.tanks.model.bonus.showing.items
       
       private function addDialog(param1:DisplayObject) : void
       {
-         dialogsService.§!!n§(param1);
+         dialogsService.Renamed1686(param1);
       }
       
       private function removeDialog(param1:DisplayObject) : void

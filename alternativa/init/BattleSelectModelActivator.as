@@ -4,12 +4,12 @@ package alternativa.init
    import alternativa.osgi.bundle.IBundleActivator;
    import alternativa.tanks.service.battle.BattleUserInfoService;
    import alternativa.tanks.service.battle.IBattleUserInfoService;
-   import alternativa.tanks.service.battlecreate.§ #-§;
+   import alternativa.tanks.service.battlecreate.Renamed542;
    import alternativa.tanks.service.battlecreate.IBattleCreateFormService;
    import alternativa.tanks.service.battleinfo.IBattleInfoFormService;
-   import alternativa.tanks.service.battleinfo.§override set const§;
+   import alternativa.tanks.service.battleinfo.Renamed543;
    import alternativa.tanks.service.battlelist.IBattleListFormService;
-   import alternativa.tanks.service.battlelist.§while for do§;
+   import alternativa.tanks.service.battlelist.Renamed544;
    
    public class BattleSelectModelActivator implements IBundleActivator
    {
@@ -20,9 +20,9 @@ package alternativa.init
       
       public function start(param1:OSGi) : void
       {
-         param1.registerService(IBattleCreateFormService,new § #-§());
-         param1.registerService(IBattleListFormService,new §while for do§());
-         param1.registerService(IBattleInfoFormService,new §override set const§());
+         param1.registerService(IBattleCreateFormService,new Renamed542());
+         param1.registerService(IBattleListFormService,new Renamed544());
+         param1.registerService(IBattleInfoFormService,new Renamed543());
          param1.registerService(IBattleUserInfoService,new BattleUserInfoService());
       }
       

@@ -190,7 +190,7 @@ package alternativa.math
          param2.z = this.m20 * param1.x + this.m21 * param1.y + this.m22 * param1.z + this.m23;
       }
       
-      public function §native const default§(param1:Number, param2:Number, param3:Number, param4:Vector3) : void
+      public function Renamed600(param1:Number, param2:Number, param3:Number, param4:Vector3) : void
       {
          param4.x = this.m00 * param1 + this.m01 * param2 + this.m02 * param3 + this.m03;
          param4.y = this.m10 * param1 + this.m11 * param2 + this.m12 * param3 + this.m13;
@@ -283,7 +283,7 @@ package alternativa.math
          }
       }
       
-      public function §in package const§(param1:Vector3) : void
+      public function Renamed597(param1:Vector3) : void
       {
          this.getAxis(0,param1);
       }
@@ -411,7 +411,7 @@ package alternativa.math
          return this;
       }
       
-      public function §9!A§(param1:Object3D) : void
+      public function Renamed601(param1:Object3D) : void
       {
          this.setMatrix(param1.x,param1.y,param1.z,param1.rotationX,param1.rotationY,param1.rotationZ);
       }

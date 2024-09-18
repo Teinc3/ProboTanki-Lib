@@ -1,8 +1,8 @@
 package projects.tanks.clients.flash.commons.models.layout.notify
 {
    import alternativa.tanks.loader.ILoaderWindowService;
-   import §else const super§.§2"I§;
-   import §else const super§.§5"'§;
+   import Renamed350.Renamed4449;
+   import Renamed350.Renamed4450;
    import flash.utils.clearTimeout;
    import flash.utils.setTimeout;
    import projects.tanks.client.commons.models.layout.LayoutState;
@@ -10,7 +10,7 @@ package projects.tanks.clients.flash.commons.models.layout.notify
    import projects.tanks.clients.flash.commons.services.layout.LobbyLayoutServiceEvent;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.layout.ILobbyLayoutService;
    
-   public class LobbyLayoutNotifyModel extends §5"'§ implements §2"I§, ILobbyLayoutNotify
+   public class LobbyLayoutNotifyModel extends Renamed4450 implements Renamed4449, ILobbyLayoutNotify
    {
       [Inject]
       public static var lobbyLayoutService:ILobbyLayoutService;

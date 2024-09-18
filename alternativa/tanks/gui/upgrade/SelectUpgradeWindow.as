@@ -168,7 +168,7 @@ package alternativa.tanks.gui.upgrade
       private function speedUp(param1:int) : void
       {
          var _loc2_:UpgradableItemPropertyValue = this.properties[param1];
-         if(moneyService.§while package dynamic§(_loc2_.getSpeedUpCost()))
+         if(moneyService.Renamed1617(_loc2_.getSpeedUpCost()))
          {
             this.okButtons[param1].enabled = false;
             dispatchEvent(new ItemPropertyUpgradeEvent(ItemPropertyUpgradeEvent.SPEED_UP,_loc2_));
@@ -207,7 +207,7 @@ package alternativa.tanks.gui.upgrade
          var _loc5_:CrystalButton = null;
          var _loc6_:BigButton1 = null;
          var _loc7_:UpgradableItemPropertyValue = this.properties[param1];
-         if(moneyService.§while package dynamic§(_loc7_.getCost()))
+         if(moneyService.Renamed1617(_loc7_.getCost()))
          {
             _loc2_ = this.infos[param1];
             _loc3_ = new CountDownTimer();

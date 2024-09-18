@@ -2,7 +2,7 @@ package alternativa.tanks.view.battlelist
 {
    import flash.display.Bitmap;
    import flash.display.BitmapData;
-   import projects.tanks.client.battleservice.§final package import§;
+   import projects.tanks.client.battleservice.Renamed1587;
    
    public class BattleModeIcons
    {
@@ -27,21 +27,21 @@ package alternativa.tanks.view.battlelist
          super();
       }
       
-      public static function getIcon(param1:§final package import§) : BitmapData
+      public static function getIcon(param1:Renamed1587) : BitmapData
       {
          var _loc2_:BitmapData = null;
          switch(param1)
          {
-            case §final package import§.DM:
+            case Renamed1587.DM:
                _loc2_ = dmIconBitmapData;
                break;
-            case §final package import§.TDM:
+            case Renamed1587.TDM:
                _loc2_ = tdmIconBitmapData;
                break;
-            case §final package import§.CTF:
+            case Renamed1587.CTF:
                _loc2_ = ctfIconBitmapData;
                break;
-            case §final package import§.CP:
+            case Renamed1587.CP:
                _loc2_ = cpIconBitmapData;
          }
          return _loc2_;

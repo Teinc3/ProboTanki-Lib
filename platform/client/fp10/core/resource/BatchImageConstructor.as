@@ -13,19 +13,19 @@ package platform.client.fp10.core.resource
    {
       public var images:Vector.<BitmapData>;
       
-      private var §default set var§:Vector.<ByteArray>;
+      private var Renamed4097:Vector.<ByteArray>;
       
       private var loaders:Dictionary;
       
-      private var §each catch break§:int;
+      private var Renamed4098:int;
       
       private var override:int;
       
-      private var §]!#§:int;
+      private var Renamed4099:int;
       
-      private var §continue var each§:Boolean;
+      private var Renamed4100:Boolean;
       
-      private var §true package switch§:int;
+      private var Renamed4101:int;
       
       public function BatchImageConstructor()
       {
@@ -33,9 +33,9 @@ package platform.client.fp10.core.resource
          super();
       }
       
-      public function §default var implements§(param1:Vector.<ByteArray>, param2:int) : void
+      public function Renamed4102(param1:Vector.<ByteArray>, param2:int) : void
       {
-         if(this.§continue var each§)
+         if(this.Renamed4100)
          {
             throw new Error("Already running");
          }
@@ -43,16 +43,16 @@ package platform.client.fp10.core.resource
          {
             throw new ArgumentError("Parameter imageDatas is null");
          }
-         this.§default set var§ = param1;
-         this.§each catch break§ = param2;
-         this.§continue var each§ = true;
+         this.Renamed4097 = param1;
+         this.Renamed4098 = param2;
+         this.Renamed4100 = true;
          this.images = new Vector.<BitmapData>(param1.length);
-         this.§true package switch§ = 0;
+         this.Renamed4101 = 0;
          this.override = 0;
-         this.§]!#§ = 0;
+         this.Renamed4099 = 0;
          if(param1.length > 0)
          {
-            this.§include package use§();
+            this.Renamed4103();
          }
          else
          {
@@ -60,15 +60,15 @@ package platform.client.fp10.core.resource
          }
       }
       
-      private function §include package use§() : void
+      private function Renamed4103() : void
       {
          var _loc1_:ImageLoader = null;
-         while(this.override < this.§each catch break§ && this.§]!#§ < this.§default set var§.length)
+         while(this.override < this.Renamed4098 && this.Renamed4099 < this.Renamed4097.length)
          {
-            _loc1_ = this.createLoader(this.§]!#§);
+            _loc1_ = this.createLoader(this.Renamed4099);
             this.loaders[_loc1_] = true;
             ++this.override;
-            ++this.§]!#§;
+            ++this.Renamed4099;
          }
       }
       
@@ -76,16 +76,16 @@ package platform.client.fp10.core.resource
       {
          var _loc2_:ImageLoader = ImageLoader(LoaderInfo(param1.target).loader);
          --this.override;
-         ++this.§true package switch§;
+         ++this.Renamed4101;
          delete this.loaders[_loc2_];
          this.images[_loc2_.index] = Bitmap(_loc2_.content).bitmapData;
-         if(this.§true package switch§ == this.§default set var§.length)
+         if(this.Renamed4101 == this.Renamed4097.length)
          {
             this.complete();
          }
          else
          {
-            this.§include package use§();
+            this.Renamed4103();
          }
       }
       
@@ -93,14 +93,14 @@ package platform.client.fp10.core.resource
       {
          var _loc2_:ImageLoader = new ImageLoader(param1);
          _loc2_.contentLoaderInfo.addEventListener(Event.COMPLETE,this.onImageComplete);
-         _loc2_.loadBytes(this.§default set var§[this.§]!#§]);
+         _loc2_.loadBytes(this.Renamed4097[this.Renamed4099]);
          return _loc2_;
       }
       
       private function complete() : void
       {
-         this.§continue var each§ = false;
-         this.§default set var§ = null;
+         this.Renamed4100 = false;
+         this.Renamed4097 = null;
          dispatchEvent(new Event(Event.COMPLETE));
       }
    }

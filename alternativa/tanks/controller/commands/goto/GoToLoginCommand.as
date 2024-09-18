@@ -3,8 +3,8 @@ package alternativa.tanks.controller.commands.goto
    import alternativa.tanks.controller.events.showform.ShowLoginFormEvent;
    import alternativa.tanks.model.EntranceServerParamsModel;
    import alternativa.tanks.model.EntranceUrlParamsModel;
-   import alternativa.tanks.service.§each const each§;
-   import alternativa.tanks.service.§each package super§;
+   import alternativa.tanks.service.Renamed554;
+   import alternativa.tanks.service.Renamed555;
    import org.robotlegs.mvcs.Command;
    
    public class GoToLoginCommand extends Command
@@ -13,13 +13,13 @@ package alternativa.tanks.controller.commands.goto
       public var entranceUrlParamsModel:EntranceUrlParamsModel;
       
       [Inject]
-      public var sharedObjectsService:§each package super§;
+      public var sharedObjectsService:Renamed555;
       
       [Inject]
       public var serverParamsModel:EntranceServerParamsModel;
       
       [Inject]
-      public var captchaService:§each const each§;
+      public var captchaService:Renamed554;
       
       public function GoToLoginCommand()
       {
@@ -37,7 +37,7 @@ package alternativa.tanks.controller.commands.goto
          {
             _loc1_ = this.captchaService.loginCaptchaEnabled;
          }
-         dispatch(new ShowLoginFormEvent(this.entranceUrlParamsModel.passedCallsign || this.sharedObjectsService.§+"d§,true,_loc1_,this.entranceUrlParamsModel.passedPassword));
+         dispatch(new ShowLoginFormEvent(this.entranceUrlParamsModel.passedCallsign || this.sharedObjectsService.Renamed1567,true,_loc1_,this.entranceUrlParamsModel.passedPassword));
       }
    }
 }

@@ -44,7 +44,7 @@ package alternativa.tanks.gui.tankpreview
       [Inject]
       public static var lobbyLayoutService:ILobbyLayoutService;
       
-      private static const §-#;§:Number = -1;
+      private static const Renamed1995:Number = -1;
       
       private static const INITIAL_CAMERA_DIRECTION:Number = -150;
       
@@ -54,13 +54,13 @@ package alternativa.tanks.gui.tankpreview
       
       private static const CAMERA_DISTANCE:Number = -730;
       
-      private static const §throw const true§:Number = 0.7;
+      private static const Renamed1996:Number = 0.7;
       
-      private static const §'#z§:Number = 13;
+      private static const Renamed1997:Number = 13;
       
-      private static const §`#Z§:Number = 2.5;
+      private static const Renamed1998:Number = 2.5;
       
-      private static const §include set try§:Vector3D = new Vector3D(0,0,-1);
+      private static const Renamed1999:Vector3D = new Vector3D(0,0,-1);
       
       private var innerBevel:TankWindowInner;
       
@@ -68,7 +68,7 @@ package alternativa.tanks.gui.tankpreview
       
       private var rootContainer:Object3DContainer;
       
-      private var §in set break§:Object3DContainer;
+      private var Renamed2000:Object3DContainer;
       
       private var cameraContainer:Object3DContainer;
       
@@ -118,8 +118,8 @@ package alternativa.tanks.gui.tankpreview
          addChild(this.camera.view);
          this.cameraContainer = new Object3DContainer();
          this.rootContainer.addChild(this.cameraContainer);
-         this.§in set break§ = new Object3DContainer();
-         this.rootContainer.addChild(this.§in set break§);
+         this.Renamed2000 = new Object3DContainer();
+         this.rootContainer.addChild(this.Renamed2000);
          this.cameraContainer.addChild(this.camera);
          this.cameraContainer.rotationX = CAMERA_ANGLE * Math.PI / 180;
          this.camera.z = CAMERA_DISTANCE;
@@ -163,7 +163,7 @@ package alternativa.tanks.gui.tankpreview
                _loc4_ = new BSP();
                _loc4_.createTree(_loc2_);
                _loc4_.matrix = _loc2_.matrix;
-               this.§in set break§.addChild(_loc4_);
+               this.Renamed2000.addChild(_loc4_);
             }
             _loc6_++;
          }
@@ -172,7 +172,7 @@ package alternativa.tanks.gui.tankpreview
       private function onAddedToStage(param1:Event) : void
       {
          removeEventListener(Event.ADDED_TO_STAGE,this.onAddedToStage);
-         addEventListener(Event.ENTER_FRAME,this.onEnterFrame,false,§-#;§);
+         addEventListener(Event.ENTER_FRAME,this.onEnterFrame,false,Renamed1995);
          this.initStateMachine();
          if(GPUCapabilities.gpuEnabled)
          {
@@ -267,7 +267,7 @@ package alternativa.tanks.gui.tankpreview
             {
                this.tank.removeChild(this.shadow);
             }
-            this.shadow = this.§true catch use§(Mesh(this._hull.objects[0]),§include set try§,§`#Z§,§'#z§,§throw const true§);
+            this.shadow = this.Renamed2001(Mesh(this._hull.objects[0]),Renamed1999,Renamed1998,Renamed1997,Renamed1996);
             this.tank.addChildAt(this.shadow,0);
             if(!GPUCapabilities.gpuEnabled)
             {
@@ -282,7 +282,7 @@ package alternativa.tanks.gui.tankpreview
          this.height = param2;
          this.adjustInnerBevel(param1,param2);
          this.adjustView3D(param1,param2);
-         this.§##L§();
+         this.Renamed2002();
          if(!GPUCapabilities.gpuEnabled)
          {
             this.camera.render();
@@ -305,7 +305,7 @@ package alternativa.tanks.gui.tankpreview
          this.camera.view.y = WINDOW_MARGIN;
       }
       
-      private function §##L§() : void
+      private function Renamed2002() : void
       {
          if(GPUCapabilities.gpuEnabled)
          {
@@ -318,7 +318,7 @@ package alternativa.tanks.gui.tankpreview
          }
       }
       
-      private function §true catch use§(param1:Mesh, param2:Vector3D, param3:Number, param4:int, param5:Number, param6:uint = 0) : Mesh
+      private function Renamed2001(param1:Mesh, param2:Vector3D, param3:Number, param4:int, param5:Number, param6:uint = 0) : Mesh
       {
          var _loc7_:Wrapper = null;
          var _loc8_:Vertex = null;

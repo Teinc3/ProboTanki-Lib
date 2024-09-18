@@ -1,54 +1,54 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import §,#a§.§'"P§;
-   import §,#a§.§each package default§;
-   import §;"?§.§#">§;
-   import §[" §.ICodec;
+   import Renamed206.Renamed6103;
+   import Renamed206.Renamed5125;
+   import Renamed602.Renamed603;
+   import Renamed5811.ICodec;
    import alternativa.osgi.OSGi;
    import alternativa.osgi.service.clientlog.IClientLog;
    import flash.utils.ByteArray;
-   import scpacker.networking.protocol.§?"s§;
+   import scpacker.networking.protocol.Renamed536;
    
    public class CodecClientPointData implements ICodec
    {
       public static var log:IClientLog = IClientLog(OSGi.getInstance().getService(IClientLog));
       
-      private var §default set native§:ICodec;
+      private var Renamed8880:ICodec;
       
-      private var §+#!§:ICodec;
+      private var Renamed10015:ICodec;
       
-      private var §static var true§:ICodec;
+      private var Renamed10535:ICodec;
       
-      private var §each package do§:ICodec;
+      private var Renamed10574:ICodec;
       
-      private var §return for final§:ICodec;
+      private var Renamed10644:ICodec;
       
-      private var §>!L§:ICodec;
+      private var Renamed10645:ICodec;
       
-      private var §for catch with§:ICodec;
+      private var Renamed10646:ICodec;
       
-      public function CodecClientPointData(param1:§?"s§)
+      public function CodecClientPointData(param1:Renamed536)
       {
          super();
-         this.§default set native§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");
-         this.§+#!§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.StringCodec");
-         this.§static var true§ = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecVector3d");
-         this.§each package do§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.FloatCodec");
-         this.§return for final§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.FloatCodec");
-         this.§>!L§ = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecControlPointState");
-         this.§for catch with§ = param1.getCodec("scpacker.networking.protocol.codec.complex.VectorCodecString");
+         this.Renamed8880 = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");
+         this.Renamed10015 = param1.getCodec("scpacker.networking.protocol.codec.primitive.StringCodec");
+         this.Renamed10535 = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecVector3d");
+         this.Renamed10574 = param1.getCodec("scpacker.networking.protocol.codec.primitive.FloatCodec");
+         this.Renamed10644 = param1.getCodec("scpacker.networking.protocol.codec.primitive.FloatCodec");
+         this.Renamed10645 = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecControlPointState");
+         this.Renamed10646 = param1.getCodec("scpacker.networking.protocol.codec.complex.VectorCodecString");
       }
       
       public function decode(param1:ByteArray) : Object
       {
-         var _loc2_:§'"P§ = new §'"P§();
-         _loc2_.id = this.§default set native§.decode(param1) as int;
-         _loc2_.name = this.§+#!§.decode(param1) as String;
-         _loc2_.position = this.§static var true§.decode(param1) as §#">§;
-         _loc2_.score = this.§each package do§.decode(param1) as Number;
-         _loc2_.§while import§ = this.§return for final§.decode(param1) as Number;
-         _loc2_.state = this.§>!L§.decode(param1) as §each package default§;
-         _loc2_.§import case§ = this.§for catch with§.decode(param1) as Vector.<String>;
+         var _loc2_:Renamed6103 = new Renamed6103();
+         _loc2_.id = this.Renamed8880.decode(param1) as int;
+         _loc2_.name = this.Renamed10015.decode(param1) as String;
+         _loc2_.position = this.Renamed10535.decode(param1) as Renamed603;
+         _loc2_.score = this.Renamed10574.decode(param1) as Number;
+         _loc2_.Renamed6106 = this.Renamed10644.decode(param1) as Number;
+         _loc2_.state = this.Renamed10645.decode(param1) as Renamed5125;
+         _loc2_.Renamed6107 = this.Renamed10646.decode(param1) as Vector.<String>;
          return _loc2_;
       }
       
@@ -58,14 +58,14 @@ package scpacker.networking.protocol.codec.custom
          {
             throw new Error("Object is null. Use @ProtocolOptional annotation.");
          }
-         var _loc3_:§'"P§ = §'"P§(param2);
-         this.§default set native§.encode(param1,_loc3_.id);
-         this.§+#!§.encode(param1,_loc3_.name);
-         this.§static var true§.encode(param1,_loc3_.position);
-         this.§each package do§.encode(param1,_loc3_.score);
-         this.§return for final§.encode(param1,_loc3_.§while import§);
-         this.§>!L§.encode(param1,_loc3_.state);
-         this.§for catch with§.encode(param1,_loc3_.§import case§);
+         var _loc3_:Renamed6103 = Renamed6103(param2);
+         this.Renamed8880.encode(param1,_loc3_.id);
+         this.Renamed10015.encode(param1,_loc3_.name);
+         this.Renamed10535.encode(param1,_loc3_.position);
+         this.Renamed10574.encode(param1,_loc3_.score);
+         this.Renamed10644.encode(param1,_loc3_.Renamed6106);
+         this.Renamed10645.encode(param1,_loc3_.state);
+         this.Renamed10646.encode(param1,_loc3_.Renamed6107);
          return 4;
       }
    }

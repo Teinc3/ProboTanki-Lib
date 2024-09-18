@@ -1,7 +1,7 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import §?"a§.§finally for do§;
-   import §[" §.ICodec;
+   import Renamed1614.Renamed1615;
+   import Renamed5811.ICodec;
    import flash.utils.ByteArray;
    
    public class CodecMapTheme implements ICodec
@@ -13,30 +13,30 @@ package scpacker.networking.protocol.codec.custom
       
       public function decode(param1:ByteArray) : Object
       {
-         var _loc2_:§finally for do§ = null;
+         var _loc2_:Renamed1615 = null;
          var _loc3_:int = param1.readInt();
          switch(_loc3_)
          {
             case 0:
-               _loc2_ = §finally for do§.SUMMER;
+               _loc2_ = Renamed1615.SUMMER;
                break;
             case 1:
-               _loc2_ = §finally for do§.WINTER;
+               _loc2_ = Renamed1615.WINTER;
                break;
             case 2:
-               _loc2_ = §finally for do§.SPACE;
+               _loc2_ = Renamed1615.SPACE;
                break;
             case 3:
-               _loc2_ = §finally for do§.SUMMER_DAY;
+               _loc2_ = Renamed1615.SUMMER_DAY;
                break;
             case 4:
-               _loc2_ = §finally for do§.SUMMER_NIGHT;
+               _loc2_ = Renamed1615.SUMMER_NIGHT;
                break;
             case 5:
-               _loc2_ = §finally for do§.WINTER_DAY;
+               _loc2_ = Renamed1615.WINTER_DAY;
                break;
             case 6:
-               _loc2_ = §finally for do§.WINTER_NIGHT;
+               _loc2_ = Renamed1615.WINTER_NIGHT;
          }
          return _loc2_;
       }

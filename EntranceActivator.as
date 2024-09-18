@@ -1,6 +1,6 @@
 package
 {
-   import alternativa.init.§<!Y§;
+   import alternativa.init.Renamed0;
    import alternativa.init.BattleSelectModelActivator;
    import alternativa.init.GarageModelActivator;
    import alternativa.init.PanelModelActivator;
@@ -43,7 +43,7 @@ package
       
       public function start(param1:OSGi) : void
       {
-         new §<!Y§().start(param1);
+         new Renamed0().start(param1);
          new ProtocolActivator().start(param1);
          new ClientActivator().start(param1);
          new platform.clients.fp10.libraries.alternativaclientflash.Activator().start(param1);

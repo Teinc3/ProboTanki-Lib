@@ -3,11 +3,11 @@ package alternativa.tanks.model.achievement
    import alternativa.tanks.service.achievement.IAchievementService;
    import flash.geom.Point;
    import platform.client.fp10.core.model.IObjectLoadListener;
-   import projects.tanks.client.achievements.model.achievements.§null package extends§;
-   import §set catch if§.§false var class§;
-   import §set catch if§.§import var true§;
+   import projects.tanks.client.achievements.model.achievements.Renamed2072;
+   import Renamed416.Renamed2073;
+   import Renamed416.Renamed2074;
    
-   public class AchievementModel extends §false var class§ implements §import var true§, IAchievement, IObjectLoadListener
+   public class AchievementModel extends Renamed2073 implements Renamed2074, IAchievement, IObjectLoadListener
    {
       [Inject]
       public static var achievementService:IAchievementService;
@@ -17,12 +17,12 @@ package alternativa.tanks.model.achievement
          super();
       }
       
-      public function completeAchievement(param1:§null package extends§, param2:String, param3:int) : void
+      public function completeAchievement(param1:Renamed2072, param2:String, param3:int) : void
       {
          achievementService.completeAchievement(param1,param2,param3);
       }
       
-      public function activateAchievement(param1:§null package extends§) : void
+      public function activateAchievement(param1:Renamed2072) : void
       {
          achievementService.activateAchievement(param1);
       }
@@ -69,7 +69,7 @@ package alternativa.tanks.model.achievement
       
       public function objectLoaded() : void
       {
-         achievementService.§get const import§(getInitParam().§false catch super§);
+         achievementService.Renamed2075(getInitParam().Renamed2076);
       }
       
       public function objectLoadedPost() : void

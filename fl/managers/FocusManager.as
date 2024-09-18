@@ -144,7 +144,7 @@ package fl.managers
          var focusable:IFocusManagerComponent = null;
          var io:InteractiveObject = null;
          var doc:DisplayObjectContainer = null;
-         var §final package§:int = 0;
+         var Renamed2143:int = 0;
          var child:DisplayObject = null;
          var o:DisplayObject = param1;
          var skipTopLevel:Boolean = param2;
@@ -182,21 +182,21 @@ package fl.managers
             o.addEventListener(Event.TAB_CHILDREN_CHANGE,tabChildrenChangeHandler);
             if(doc is Stage || doc.parent is Stage || doc.tabChildren)
             {
-               §final package§ = 0;
-               while(§final package§ < doc.numChildren)
+               Renamed2143 = 0;
+               while(Renamed2143 < doc.numChildren)
                {
                   try
                   {
-                     child = doc.getChildAt(§final package§);
+                     child = doc.getChildAt(Renamed2143);
                      if(child != null)
                      {
-                        addFocusables(doc.getChildAt(§final package§));
+                        addFocusables(doc.getChildAt(Renamed2143));
                      }
                   }
                   catch(error:SecurityError)
                   {
                   }
-                  §final package§++;
+                  Renamed2143++;
                }
             }
          }

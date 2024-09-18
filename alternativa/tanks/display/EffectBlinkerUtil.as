@@ -1,7 +1,7 @@
 package alternativa.tanks.display
 {
-   import §!!v§.§,Q§;
-   import §7"j§.§""&§;
+   import Renamed142.Renamed1626;
+   import Renamed1.Renamed1450;
    
    public class EffectBlinkerUtil
    {
@@ -28,7 +28,7 @@ package alternativa.tanks.display
          super();
       }
       
-      public static function createBlinker(param1:int) : §""&§
+      public static function createBlinker(param1:int) : Renamed1450
       {
          var _loc2_:int = 0;
          var _loc3_:int = int(EffectBlinkerUtil.INITIAL_BLINK_INTERVAL);
@@ -36,7 +36,7 @@ package alternativa.tanks.display
          var _loc5_:Number = Number(EffectBlinkerUtil.MIN_VALUE);
          var _loc6_:Number = Number(EffectBlinkerUtil.MAX_VALUE);
          var _loc7_:Number = Number(EffectBlinkerUtil.SPEED_COEFF);
-         if(param1 == §,Q§.§&B§)
+         if(param1 == Renamed1626.Renamed1627)
          {
             _loc2_ = int(EffectBlinkerUtil.FIRST_AID_BLINK_INTERVAL_DECREMENT);
          }
@@ -44,12 +44,12 @@ package alternativa.tanks.display
          {
             _loc2_ = int(EffectBlinkerUtil.BLINK_INTERVAL_DECREMENT);
          }
-         return new §""&§(_loc3_,_loc4_,_loc2_,_loc5_,_loc6_,_loc7_);
+         return new Renamed1450(_loc3_,_loc4_,_loc2_,_loc5_,_loc6_,_loc7_);
       }
       
       public static function getBlinkingPeriod(param1:int) : int
       {
-         if(param1 == §,Q§.§&B§)
+         if(param1 == Renamed1626.Renamed1627)
          {
             return EffectBlinkerUtil.FIRST_AID_WARNING_PERIOD;
          }

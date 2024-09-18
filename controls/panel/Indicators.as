@@ -59,7 +59,7 @@ package controls.panel
       
       private var b_right:MovieClip;
       
-      private var §?#w§:DisplayObject;
+      private var Renamed4036:DisplayObject;
       
       private var timer:Timer;
       
@@ -182,15 +182,15 @@ package controls.panel
          this.progress = this._progress;
       }
       
-      public function get §^#8§() : DisplayObject
+      public function get Renamed4037() : DisplayObject
       {
-         return this.§?#w§;
+         return this.Renamed4036;
       }
       
-      public function set §^#8§(param1:DisplayObject) : void
+      public function set Renamed4037(param1:DisplayObject) : void
       {
-         this.§?#w§ = param1;
-         addChild(this.§?#w§);
+         this.Renamed4036 = param1;
+         addChild(this.Renamed4036);
          this.width = this._width;
       }
    }

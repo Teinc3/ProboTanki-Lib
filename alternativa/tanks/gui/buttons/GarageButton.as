@@ -2,9 +2,9 @@ package alternativa.tanks.gui.buttons
 {
    import alternativa.osgi.service.locale.ILocaleService;
    import alternativa.tanks.gui.CrystalLabel;
-   import alternativa.tanks.gui.icons.§override var for§;
+   import alternativa.tanks.gui.icons.Renamed1920;
    import alternativa.tanks.service.money.IMoneyService;
-   import alternativa.tanks.service.money.§continue set switch§;
+   import alternativa.tanks.service.money.Renamed1919;
    import base.DiscreteSprite;
    import controls.base.ThreeLineBigButton;
    import controls.labels.MouseDisabledLabel;
@@ -15,7 +15,7 @@ package alternativa.tanks.gui.buttons
    import projects.tanks.clients.fp10.libraries.TanksLocale;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.premium.PremiumService;
    
-   public class GarageButton extends ThreeLineBigButton implements §continue set switch§
+   public class GarageButton extends ThreeLineBigButton implements Renamed1919
    {
       [Inject]
       public static var localeService:ILocaleService;
@@ -50,7 +50,7 @@ package alternativa.tanks.gui.buttons
          this.fullPriceLabel = new CrystalLabel();
          this.rankLabel = new MouseDisabledLabel();
          this.rankIcon = new SmallRankIcon();
-         this.premiumIcon = §override var for§.createSmallInstance();
+         this.premiumIcon = Renamed1920.createSmallInstance();
          this.thirdRow = new DiscreteSprite();
          this.priceLabel = new CrystalLabel();
          this.discountLabel = new MouseDisabledLabel();

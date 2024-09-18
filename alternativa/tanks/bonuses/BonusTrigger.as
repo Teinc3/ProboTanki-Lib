@@ -7,11 +7,11 @@ package alternativa.tanks.bonuses
    import alternativa.physics.PhysicsMaterial;
    import alternativa.physics.collision.CollisionShape;
    import alternativa.physics.collision.primitives.CollisionBox;
-   import alternativa.tanks.battle.§`§;
-   import alternativa.tanks.battle.§else package false§;
-   import §for set super§.§super const continue§;
+   import alternativa.tanks.battle.Renamed804;
+   import alternativa.tanks.battle.Renamed832;
+   import Renamed373.Renamed666;
    
-   public class BonusTrigger extends §else package false§ implements §`§
+   public class BonusTrigger extends Renamed832 implements Renamed804
    {
       private var bonus:BattleBonus;
       
@@ -22,17 +22,17 @@ package alternativa.tanks.bonuses
          super();
          this.bonus = param1;
          var _loc2_:Number = BonusConst.BONUS_HALF_SIZE;
-         this.collisionBox = new CollisionBox(new Vector3(_loc2_,_loc2_,_loc2_),§super const continue§.§try var continue§,PhysicsMaterial.DEFAULT_MATERIAL);
+         this.collisionBox = new CollisionBox(new Vector3(_loc2_,_loc2_,_loc2_),Renamed666.Renamed1449,PhysicsMaterial.DEFAULT_MATERIAL);
       }
       
       public function enable() : void
       {
-         §'x§().§;!+§(this);
+         Renamed619().Renamed803(this);
       }
       
       public function disable() : void
       {
-         §'x§().§final const in§(this);
+         Renamed619().Renamed805(this);
       }
       
       public function update(param1:Matrix4) : void
@@ -63,7 +63,7 @@ package alternativa.tanks.bonuses
          while(_loc3_ < param1.numCollisionShapes)
          {
             _loc2_ = param1.collisionShapes[_loc3_];
-            if(§'x§().§const const true§().testCollision(_loc2_,this.collisionBox))
+            if(Renamed619().Renamed692().testCollision(_loc2_,this.collisionBox))
             {
                this.bonus.onTriggerActivated();
                return;

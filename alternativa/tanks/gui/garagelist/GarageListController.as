@@ -1,7 +1,7 @@
 package alternativa.tanks.gui.garagelist
 {
-   import §4=§.§3!&§;
-   import alternativa.tanks.gui.§1#^§;
+   import Renamed249.Renamed1927;
+   import alternativa.tanks.gui.Renamed1691;
    import alternativa.tanks.gui.category.CategoryButtonsList;
    import alternativa.tanks.gui.category.CategoryButtonsListEvent;
    import alternativa.tanks.model.item.kit.GarageKit;
@@ -63,7 +63,7 @@ package alternativa.tanks.gui.garagelist
       
       private var _currentShowingCategory:ItemViewCategoryEnum;
       
-      private var §case for while§:§3!&§;
+      private var Renamed1928:Renamed1927;
       
       private var _updateVisibilityDiscountIndicatorsTimeoutId:uint;
       
@@ -107,7 +107,7 @@ package alternativa.tanks.gui.garagelist
          while(_loc3_ >= 0)
          {
             _loc2_ = this._garageList.getItemAt(_loc3_);
-            if(itemService.§static set default§(_loc2_) && this.isItemInStore(_loc2_))
+            if(itemService.Renamed1768(_loc2_) && this.isItemInStore(_loc2_))
             {
                this._garageList.updateShowLockPremium(_loc2_,!premiumService.hasPremium());
             }
@@ -131,11 +131,11 @@ package alternativa.tanks.gui.garagelist
          while(_loc4_ < _loc3_)
          {
             _loc1_ = _loc2_[_loc4_];
-            if(notificationGarageCategoriesService.§do for finally§(_loc1_))
+            if(notificationGarageCategoriesService.Renamed1929(_loc1_))
             {
                if(this._currentShowingCategory == _loc1_)
                {
-                  notificationGarageCategoriesService.§[n§(_loc1_);
+                  notificationGarageCategoriesService.Renamed1930(_loc1_);
                }
                else
                {
@@ -196,9 +196,9 @@ package alternativa.tanks.gui.garagelist
          while(_loc4_ < _loc3_)
          {
             _loc1_ = this._itemsInDepot[_loc4_];
-            if(itemService.§!"p§(_loc1_))
+            if(itemService.Renamed1704(_loc1_))
             {
-               if(_loc1_ == itemService.§case const else§(_loc1_))
+               if(_loc1_ == itemService.Renamed1931(_loc1_))
                {
                   _loc2_.push(_loc1_);
                }
@@ -230,18 +230,18 @@ package alternativa.tanks.gui.garagelist
          var _loc1_:IGameObject = null;
          var _loc2_:Vector.<KitItem> = null;
          var _loc3_:KitItem = null;
-         this.§case for while§ = new §3!&§();
+         this.Renamed1928 = new Renamed1927();
          var _loc4_:int = int(this._itemsInStore.length);
          var _loc5_:int = 0;
          while(_loc5_ < _loc4_)
          {
             _loc1_ = this._itemsInStore[_loc5_];
-            if(itemService.§2"J§(_loc1_))
+            if(itemService.Renamed1700(_loc1_))
             {
                _loc2_ = GarageKit(_loc1_.adapt(GarageKit)).getItems();
                for each(_loc3_ in _loc2_)
                {
-                  this.§case for while§.put(_loc3_.item,_loc1_);
+                  this.Renamed1928.put(_loc3_.item,_loc1_);
                }
             }
             _loc5_++;
@@ -251,11 +251,11 @@ package alternativa.tanks.gui.garagelist
       public function updateKitsContainsItem(param1:IGameObject) : void
       {
          var _loc2_:IGameObject = null;
-         if(this.§case for while§ == null)
+         if(this.Renamed1928 == null)
          {
             return;
          }
-         var _loc3_:Vector.<IGameObject> = this.§case for while§.getValues(param1);
+         var _loc3_:Vector.<IGameObject> = this.Renamed1928.getValues(param1);
          var _loc4_:int = int(_loc3_.length - 1);
          while(_loc4_ >= 0)
          {
@@ -304,15 +304,15 @@ package alternativa.tanks.gui.garagelist
          while(_loc6_ < _loc5_)
          {
             _loc1_ = this._itemsInStore[_loc6_];
-            if(itemService.§!"p§(_loc1_))
+            if(itemService.Renamed1704(_loc1_))
             {
-               if(itemService.§static set default§(_loc1_))
+               if(itemService.Renamed1768(_loc1_))
                {
                   _loc4_.push(_loc1_);
                }
                else
                {
-                  _loc2_ = itemService.§case const else§(_loc1_);
+                  _loc2_ = itemService.Renamed1931(_loc1_);
                   if(_loc2_ == null && itemService.getModificationIndex(_loc1_) == 0)
                   {
                      _loc4_.push(_loc1_);
@@ -403,7 +403,7 @@ package alternativa.tanks.gui.garagelist
          while(_loc5_ < _loc4_)
          {
             _loc3_ = param1[_loc5_];
-            if(itemService.§,!S§(_loc3_))
+            if(itemService.Renamed1774(_loc3_))
             {
                _loc2_ = _loc3_;
                break;
@@ -416,7 +416,7 @@ package alternativa.tanks.gui.garagelist
       private function resetNotificationCategory(param1:ItemViewCategoryEnum) : void
       {
          this._categoryButtons.hideNewItemIndicator(param1);
-         notificationGarageCategoriesService.§[n§(param1);
+         notificationGarageCategoriesService.Renamed1930(param1);
       }
       
       private function selectAndScrollToItemInCategory(param1:IGameObject) : void
@@ -443,16 +443,16 @@ package alternativa.tanks.gui.garagelist
          else
          {
             _loc3_.rank = this.determineShowingRankIndex(param1);
-            _loc3_.showLockPremium = itemService.§static set default§(param1) && !premiumService.hasPremium();
+            _loc3_.showLockPremium = itemService.Renamed1768(param1) && !premiumService.hasPremium();
             _loc3_.discount = itemService.getDiscount(param1);
          }
-         _loc3_.installed = itemService.§,!S§(param1);
+         _loc3_.installed = itemService.Renamed1774(param1);
          _loc3_.garageElement = param2;
          _loc3_.count = itemService.getCount(param1);
          _loc3_.preview = itemService.getPreviewResource(param1);
          _loc3_.sort = itemService.getPosition(param1);
          _loc3_.timerDiscount = this.getEndDiscountTimer(param1,param2);
-         if(itemService.§while try§(param1))
+         if(itemService.Renamed1760(param1))
          {
             _loc3_.appearanceTime = PresentItem(param1.adapt(PresentItem)).getDate().time;
          }
@@ -467,9 +467,9 @@ package alternativa.tanks.gui.garagelist
          {
             _loc3_ = itemService.getDiscount(param1);
          }
-         else if(itemService.§!"p§(param1) && itemService.hasNextModification(param1))
+         else if(itemService.Renamed1704(param1) && itemService.hasNextModification(param1))
          {
-            _loc2_ = itemService.§override const class§(param1);
+            _loc2_ = itemService.Renamed1932(param1);
             _loc3_ = itemService.getDiscount(_loc2_);
          }
          return _loc3_;
@@ -477,8 +477,8 @@ package alternativa.tanks.gui.garagelist
       
       private function determineShowingRankIndex(param1:IGameObject) : int
       {
-         var _loc2_:int = itemService.§,$!§(param1);
-         var _loc3_:int = itemService.§[!@§(param1);
+         var _loc2_:int = itemService.Renamed1764(param1);
+         var _loc3_:int = itemService.Renamed1763(param1);
          var _loc4_:int = userPropertiesService.rank;
          if(_loc4_ < _loc2_)
          {
@@ -493,18 +493,18 @@ package alternativa.tanks.gui.garagelist
       
       private function getEndDiscountTimer(param1:IGameObject, param2:Boolean) : CountDownTimer
       {
-         if(itemService.§2"J§(param1))
+         if(itemService.Renamed1700(param1))
          {
             return this.getEndDiscountTimerForKit(param1);
          }
          var _loc3_:IGameObject = param1;
-         if(itemService.§!"p§(param1) && param2)
+         if(itemService.Renamed1704(param1) && param2)
          {
             if(!itemService.hasNextModification(param1))
             {
                return null;
             }
-            _loc3_ = itemService.§override const class§(param1);
+            _loc3_ = itemService.Renamed1932(param1);
          }
          return itemService.getEndDiscountTimer(_loc3_);
       }
@@ -512,8 +512,8 @@ package alternativa.tanks.gui.garagelist
       private function getEndDiscountTimerForKit(param1:IGameObject) : CountDownTimer
       {
          var _loc2_:CountDownTimer = null;
-         var _loc3_:§1#^§ = null;
-         var _loc4_:Vector.<§1#^§> = garageService.§!E§().§break catch break§();
+         var _loc3_:Renamed1691 = null;
+         var _loc4_:Vector.<Renamed1691> = garageService.Renamed1933().Renamed1707();
          var _loc5_:int = int(_loc4_.length);
          var _loc6_:int = 0;
          while(_loc6_ < _loc5_)
@@ -538,7 +538,7 @@ package alternativa.tanks.gui.garagelist
          while(_loc6_ < _loc5_)
          {
             _loc3_ = param1[_loc6_];
-            if(itemService.§^#x§(_loc3_) == param2)
+            if(itemService.Renamed1934(_loc3_) == param2)
             {
                _loc4_.push(_loc3_);
             }
@@ -591,7 +591,7 @@ package alternativa.tanks.gui.garagelist
          itemService.addItem(param1);
          this._itemsInDepot.push(param1);
          this.updateVisibilityDiscountIndicatorsWithDelay();
-         if(this._currentShowingCategory == itemService.§^#x§(param1))
+         if(this._currentShowingCategory == itemService.Renamed1934(param1))
          {
             this._garageList.addItem(this.createData(param1,true));
             this._garageList.sort();
@@ -621,7 +621,7 @@ package alternativa.tanks.gui.garagelist
             return;
          }
          this._itemsInStore.push(param1);
-         if(this._currentShowingCategory == itemService.§^#x§(param1))
+         if(this._currentShowingCategory == itemService.Renamed1934(param1))
          {
             this._garageList.addItem(this.createData(param1,false));
             this._garageList.sort();
@@ -642,12 +642,12 @@ package alternativa.tanks.gui.garagelist
          {
             this._garageList.deleteItem(param1);
          }
-         if(itemService.§2"J§(param1))
+         if(itemService.Renamed1700(param1))
          {
             _loc2_ = GarageKit(param1.adapt(GarageKit)).getItems();
             for each(_loc3_ in _loc2_)
             {
-               this.§case for while§.remove(_loc3_.item,param1);
+               this.Renamed1928.remove(_loc3_.item,param1);
             }
          }
       }
@@ -709,19 +709,19 @@ package alternativa.tanks.gui.garagelist
       {
          var _loc2_:IGameObject = null;
          var _loc3_:IGameObject = param1;
-         if(itemService.§!"p§(param1))
+         if(itemService.Renamed1704(param1))
          {
-            _loc2_ = itemService.§case const else§(param1);
+            _loc2_ = itemService.Renamed1931(param1);
             if(_loc2_ != null)
             {
                _loc3_ = _loc2_;
             }
             else
             {
-               _loc3_ = itemService.§0",§(param1);
+               _loc3_ = itemService.Renamed1935(param1);
             }
          }
-         this.showCategory(itemService.§^#x§(_loc3_),_loc3_);
+         this.showCategory(itemService.Renamed1934(_loc3_),_loc3_);
       }
       
       public function updateSelection() : void
@@ -742,10 +742,10 @@ package alternativa.tanks.gui.garagelist
             this._garageList.updateDiscountAndCost(param1,itemService.getDiscount(param1),itemService.getEndDiscountTimer(param1),itemService.getPrice(param1));
             return;
          }
-         if(itemService.§!"p§(param1))
+         if(itemService.Renamed1704(param1))
          {
-            _loc2_ = itemService.§case const else§(param1);
-            if(_loc2_ != null && itemService.§override const class§(_loc2_) == param1)
+            _loc2_ = itemService.Renamed1931(param1);
+            if(_loc2_ != null && itemService.Renamed1932(_loc2_) == param1)
             {
                this._garageList.updateDiscountWithTimer(_loc2_,itemService.getDiscount(param1),itemService.getEndDiscountTimer(param1));
             }
@@ -774,7 +774,7 @@ package alternativa.tanks.gui.garagelist
          {
             _loc1_ = _loc3_[_loc5_];
             _loc2_ = false;
-            if(_loc1_ != ItemViewCategoryEnum.KIT && !notificationGarageCategoriesService.§do for finally§(_loc1_))
+            if(_loc1_ != ItemViewCategoryEnum.KIT && !notificationGarageCategoriesService.Renamed1929(_loc1_))
             {
                if(this.hasAvailableTemporaryDiscounts(_loc1_))
                {
@@ -837,7 +837,7 @@ package alternativa.tanks.gui.garagelist
                _loc4_ = this.getEndDiscountTimer(param1,param2);
             }
          }
-         else if(userPropertiesService.rank >= itemService.§,$!§(param1))
+         else if(userPropertiesService.rank >= itemService.Renamed1764(param1))
          {
             _loc4_ = itemService.getEndDiscountTimer(param1);
          }

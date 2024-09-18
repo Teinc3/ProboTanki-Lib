@@ -4,13 +4,13 @@ package alternativa.tanks.services.battleinput
    
    public interface BattleInputService extends IEventDispatcher
    {
-      function lock(param1:§class const while§) : void;
+      function lock(param1:Renamed2410) : void;
       
-      function unlock(param1:§class const while§) : void;
+      function unlock(param1:Renamed2410) : void;
       
-      function §false set true§() : Boolean;
+      function Renamed728() : Boolean;
       
-      function §false override§() : Boolean;
+      function Renamed3805() : Boolean;
    }
 }
 

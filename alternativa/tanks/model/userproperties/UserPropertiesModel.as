@@ -76,7 +76,7 @@ package alternativa.tanks.model.userproperties
          this._hasDoubleCrystal = getInitParam().hasDoubleCrystal;
          this.setHasDoubleCrystal(this._hasDoubleCrystal);
          this.updateRatingAndPlace(this._startRating,this._place);
-         var _loc2_:MainPanel = panelView.§+#,§();
+         var _loc2_:MainPanel = panelView.Renamed2160();
          _loc2_.rang = this._rank;
          this.updateScore(this._score);
          _loc2_.playerInfo.playerName = this._name;
@@ -107,7 +107,7 @@ package alternativa.tanks.model.userproperties
       {
          var _loc2_:int = this._score;
          this._score = param1;
-         panelView.§+#,§().playerInfo.updateScore(param1,this._nextScore);
+         panelView.Renamed2160().playerInfo.updateScore(param1,this._nextScore);
          this.updateProgress();
          if(param1 != _loc2_)
          {
@@ -123,7 +123,7 @@ package alternativa.tanks.model.userproperties
          this._nextScore = param4;
          this._currentRankScore = param3;
          var _loc7_:MainPanel;
-         (_loc7_ = panelView.§+#,§()).rang = param1;
+         (_loc7_ = panelView.Renamed2160()).rang = param1;
          _loc7_.playerInfo.updateScore(this._score,param4);
          display.systemUILayer.addChild(new UpdateRankNotice(param1,param5));
          helpService.hideAllHelpers();
@@ -145,13 +145,13 @@ package alternativa.tanks.model.userproperties
          {
             _loc1_ = 10000;
          }
-         panelView.§+#,§().playerInfo.progress = _loc1_;
+         panelView.Renamed2160().playerInfo.progress = _loc1_;
       }
       
       public function updateRatingAndPlace(param1:Number, param2:int) : void
       {
          this._place = param2;
-         var _loc3_:PlayerInfo = panelView.§+#,§().playerInfo;
+         var _loc3_:PlayerInfo = panelView.Renamed2160().playerInfo;
          if(this._startRating < param1)
          {
             _loc3_.ratingChange = 1;
@@ -206,19 +206,19 @@ package alternativa.tanks.model.userproperties
       public function setHasDoubleCrystal(param1:Boolean) : void
       {
          this._hasDoubleCrystal = param1;
-         panelView.§+#,§().hasDoubleCrystal = param1;
+         panelView.Renamed2160().hasDoubleCrystal = param1;
       }
       
       public function changeCrystal(param1:int) : void
       {
-         moneyService.§class catch§(param1);
+         moneyService.Renamed2097(param1);
       }
       
       public function updateUid(param1:String) : void
       {
          this._name = param1;
          this._id = param1;
-         panelView.§+#,§().playerInfo.playerName = param1;
+         panelView.Renamed2160().playerInfo.playerName = param1;
       }
    }
 }

@@ -36,7 +36,7 @@ package alternativa.engine3d.loaders
       
       private static const CHUNK_FACESMATERIAL:int = 16688;
       
-      private static const §const set static§:int = 16720;
+      private static const Renamed506:int = 16720;
       
       private static const CHUNK_MAPPINGCOORDS:int = 16704;
       
@@ -294,8 +294,8 @@ package alternativa.engine3d.loaders
             case CHUNK_FACESMATERIAL:
                this.parseSurface(param1);
                break;
-            case §const set static§:
-               this.§"#H§(param1);
+            case Renamed506:
+               this.Renamed507(param1);
          }
          this.parseFacesChunk(param1,_loc4_.nextChunkPosition,param3 - _loc4_.size);
       }
@@ -317,7 +317,7 @@ package alternativa.engine3d.loaders
          }
       }
       
-      private function §"#H§(param1:ObjectData) : void
+      private function Renamed507(param1:ObjectData) : void
       {
          var _loc2_:int = param1.faces.length / 3;
          var _loc3_:int = 0;

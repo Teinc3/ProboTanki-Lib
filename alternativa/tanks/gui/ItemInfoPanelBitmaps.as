@@ -129,17 +129,17 @@ package alternativa.tanks.gui
       
       public static const shaftResistance:BitmapData = new shaftResistanceClass().bitmapData;
       
-      private static const §do for native§:Class = §set package do§;
+      private static const Renamed1783:Class = Renamed1784;
       
-      public static const §6!c§:BitmapData = new §do for native§().bitmapData;
+      public static const Renamed1785:BitmapData = new Renamed1783().bitmapData;
       
-      private static const §throw extends§:Class = §return default§;
+      private static const Renamed1786:Class = Renamed1787;
       
-      public static const §?P§:BitmapData = new §throw extends§().bitmapData;
+      public static const Renamed1788:BitmapData = new Renamed1786().bitmapData;
       
-      private static const §else return§:Class = §case const super§;
+      private static const Renamed1789:Class = Renamed1790;
       
-      public static const §override for override§:BitmapData = new §else return§().bitmapData;
+      public static const Renamed1791:BitmapData = new Renamed1789().bitmapData;
       
       private static const shaftFireRateClass:Class = ItemInfoPanelBitmaps_shaftFireRateClass;
       
@@ -185,39 +185,39 @@ package alternativa.tanks.gui
       
       public static const backIcon:BitmapData = new backIconClass().bitmapData;
       
-      private static const §default catch catch§:Class = §throw var implements§;
+      private static const Renamed1792:Class = Renamed1793;
       
-      public static const §false package override§:BitmapData = new §default catch catch§().bitmapData;
+      public static const Renamed1748:BitmapData = new Renamed1792().bitmapData;
       
-      public static const §function set include§:BitmapData = FlipBitmapDataUtils.flipH(§false package override§);
+      public static const Renamed1750:BitmapData = FlipBitmapDataUtils.flipH(Renamed1748);
       
-      private static const §function const var§:Class = §super set try§;
+      private static const Renamed1794:Class = Renamed1795;
       
-      public static const §]#"§:BitmapData = new §function const var§().bitmapData;
+      public static const Renamed1749:BitmapData = new Renamed1794().bitmapData;
       
-      public static const §if const override§:BitmapData = FlipBitmapDataUtils.flipW(§]#"§);
+      public static const Renamed1757:BitmapData = FlipBitmapDataUtils.flipW(Renamed1749);
       
-      private static const §include for return§:Class = §!p§;
+      private static const Renamed1796:Class = Renamed1797;
       
-      public static const §case for static§:BitmapData = new §include for return§().bitmapData;
+      public static const Renamed1751:BitmapData = new Renamed1796().bitmapData;
       
-      public static const §get catch return§:BitmapData = FlipBitmapDataUtils.flipH(§case for static§);
+      public static const Renamed1752:BitmapData = FlipBitmapDataUtils.flipH(Renamed1751);
       
-      private static const §override package null§:Class = §if package continue§;
+      private static const Renamed1798:Class = Renamed1799;
       
-      public static const §5#j§:BitmapData = new §override package null§().bitmapData;
+      public static const Renamed1753:BitmapData = new Renamed1798().bitmapData;
       
-      public static const §set var while§:BitmapData = FlipBitmapDataUtils.flipH(§5#j§);
+      public static const Renamed1754:BitmapData = FlipBitmapDataUtils.flipH(Renamed1753);
       
-      private static const §with implements§:Class = §super catch finally§;
+      private static const Renamed1800:Class = Renamed1801;
       
-      public static const §null const in§:BitmapData = new §with implements§().bitmapData;
+      public static const Renamed1780:BitmapData = new Renamed1800().bitmapData;
       
-      private static const §@!f§:Class = §try package with§;
+      private static const Renamed1802:Class = Renamed1803;
       
-      public static const §var try§:BitmapData = new §@!f§().bitmapData;
+      public static const Renamed1755:BitmapData = new Renamed1802().bitmapData;
       
-      public static const §=!4§:BitmapData = FlipBitmapDataUtils.flipH(§var try§);
+      public static const Renamed1756:BitmapData = FlipBitmapDataUtils.flipH(Renamed1755);
       
       public function ItemInfoPanelBitmaps()
       {

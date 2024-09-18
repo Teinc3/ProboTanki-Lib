@@ -2,14 +2,14 @@ package alternativa.tanks.controller.commands.captcha
 {
    import alternativa.tanks.controller.events.CheckCaptchaAnswerEvent;
    import alternativa.tanks.controller.events.LoginEvent;
-   import alternativa.tanks.service.§each const each§;
+   import alternativa.tanks.service.Renamed554;
    import org.robotlegs.mvcs.Command;
    import projects.tanks.client.entrance.model.entrance.captcha.CaptchaLocation;
    
    public class CheckLoginFormCaptchaCommand extends Command
    {
       [Inject]
-      public var captchaService:§each const each§;
+      public var captchaService:Renamed554;
       
       [Inject]
       public var event:LoginEvent;

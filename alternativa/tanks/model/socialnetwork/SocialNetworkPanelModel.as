@@ -8,15 +8,15 @@ package alternativa.tanks.model.socialnetwork
    import flash.net.navigateToURL;
    import platform.client.fp10.core.model.ObjectLoadListener;
    import platform.client.fp10.core.model.ObjectUnloadListener;
-   import projects.tanks.client.panel.model.socialnetwork.§8k§;
+   import projects.tanks.client.panel.model.socialnetwork.Renamed2275;
    import projects.tanks.client.panel.model.socialnetwork.SocialNetworkPanelParams;
-   import projects.tanks.client.panel.model.socialnetwork.§throw set catch§;
+   import projects.tanks.client.panel.model.socialnetwork.Renamed2276;
    import projects.tanks.clients.flash.commons.services.nameutils.SocialNetworkNameUtils;
    import projects.tanks.clients.fp10.libraries.TanksLocale;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.alertservices.IAlertService;
-   import services.alertservice.§get const use§;
+   import services.alertservice.Renamed1616;
    
-   public class SocialNetworkPanelModel extends §throw set catch§ implements §8k§, ObjectLoadListener, ObjectUnloadListener
+   public class SocialNetworkPanelModel extends Renamed2276 implements Renamed2275, ObjectLoadListener, ObjectUnloadListener
    {
       [Inject]
       public static var socialNetworkService:ISocialNetworkPanelService;
@@ -35,8 +35,8 @@ package alternativa.tanks.model.socialnetwork
       public function objectLoaded() : void
       {
          socialNetworkService.passwordCreated = getInitParam().passwordCreated;
-         socialNetworkService.§6o§ = this.getLinkExists("vkontakte");
-         socialNetworkService.§3"V§ = this.getLinkExists("facebook");
+         socialNetworkService.Renamed2277 = this.getLinkExists("vkontakte");
+         socialNetworkService.Renamed2278 = this.getLinkExists("facebook");
          socialNetworkService.googleLinkExists = this.getLinkExists("google");
          socialNetworkService.addEventListener(SocialNetworkServiceEvent.CREATE_LINK,this.onCreateLink);
          socialNetworkService.addEventListener(SocialNetworkServiceEvent.UNLINK,this.onUnlink);
@@ -52,11 +52,11 @@ package alternativa.tanks.model.socialnetwork
       {
          if(socialNetworkService.passwordCreated)
          {
-            server.§+"'§(param1.socialNetworkId);
+            server.Renamed2279(param1.socialNetworkId);
          }
          else
          {
-            alertService.showAlert(localeService.getText(TanksLocale.TEXT_ALERT_ACCOUNT_CANT_BE_UNLINKED,SocialNetworkNameUtils.makeSocialNetworkNameFromId(param1.socialNetworkId)),Vector.<String>([localeService.getText(§get const use§.OK)]));
+            alertService.showAlert(localeService.getText(TanksLocale.TEXT_ALERT_ACCOUNT_CANT_BE_UNLINKED,SocialNetworkNameUtils.makeSocialNetworkNameFromId(param1.socialNetworkId)),Vector.<String>([localeService.getText(Renamed1616.OK)]));
          }
       }
       
@@ -105,24 +105,24 @@ package alternativa.tanks.model.socialnetwork
       
       public function validationFailed() : void
       {
-         alertService.showAlert(localeService.getText(TanksLocale.TEXT_ALERT_ACCOUNT_LINKING_ERROR),Vector.<String>([localeService.getText(§get const use§.OK)]));
+         alertService.showAlert(localeService.getText(TanksLocale.TEXT_ALERT_ACCOUNT_LINKING_ERROR),Vector.<String>([localeService.getText(Renamed1616.OK)]));
       }
       
       public function linkAlreadyExists(param1:String) : void
       {
-         alertService.showAlert(localeService.getText(TanksLocale.TEXT_ALERT_ACCOUNT_ALREADY_LINKED,SocialNetworkNameUtils.makeSocialNetworkNameFromId(param1)),Vector.<String>([localeService.getText(§get const use§.OK)]));
+         alertService.showAlert(localeService.getText(TanksLocale.TEXT_ALERT_ACCOUNT_ALREADY_LINKED,SocialNetworkNameUtils.makeSocialNetworkNameFromId(param1)),Vector.<String>([localeService.getText(Renamed1616.OK)]));
       }
       
       public function linkCreated(param1:String) : void
       {
-         socialNetworkService.§class const throw§(param1);
-         alertService.showAlert(localeService.getText(TanksLocale.TEXT_ALERT_ACCOUNT_SUCCESS_LINKED),Vector.<String>([localeService.getText(§get const use§.OK)]));
+         socialNetworkService.Renamed2280(param1);
+         alertService.showAlert(localeService.getText(TanksLocale.TEXT_ALERT_ACCOUNT_SUCCESS_LINKED),Vector.<String>([localeService.getText(Renamed1616.OK)]));
       }
       
       public function unlinkSuccess(param1:String) : void
       {
-         socialNetworkService.§>#u§(param1);
-         alertService.showAlert(localeService.getText(TanksLocale.TEXT_ALERT_ACCOUNT_UNLINKED,SocialNetworkNameUtils.makeSocialNetworkNameFromId(param1)),Vector.<String>([localeService.getText(§get const use§.OK)]));
+         socialNetworkService.Renamed2281(param1);
+         alertService.showAlert(localeService.getText(TanksLocale.TEXT_ALERT_ACCOUNT_UNLINKED,SocialNetworkNameUtils.makeSocialNetworkNameFromId(param1)),Vector.<String>([localeService.getText(Renamed1616.OK)]));
       }
    }
 }

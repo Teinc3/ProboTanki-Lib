@@ -153,7 +153,7 @@ package fl.managers
       
       public static function registerInstance(param1:UIComponent) : void
       {
-         var §0!O§:Class = null;
+         var Renamed4046:Class = null;
          var defaultStyles:Object = null;
          var styleToClasses:Object = null;
          var n:String = null;
@@ -167,23 +167,23 @@ package fl.managers
          if(inst.classToInstancesDict[classDef] == null)
          {
             inst.classToInstancesDict[classDef] = new Dictionary(true);
-            §0!O§ = classDef;
+            Renamed4046 = classDef;
             while(defaultStyles == null)
             {
-               if(§0!O§["getStyleDefinition"] != null)
+               if(Renamed4046["getStyleDefinition"] != null)
                {
-                  defaultStyles = §0!O§["getStyleDefinition"]();
+                  defaultStyles = Renamed4046["getStyleDefinition"]();
                   break;
                }
                try
                {
-                  §0!O§ = instance.loaderInfo.applicationDomain.getDefinition(getQualifiedSuperclassName(§0!O§)) as Class;
+                  Renamed4046 = instance.loaderInfo.applicationDomain.getDefinition(getQualifiedSuperclassName(Renamed4046)) as Class;
                }
                catch(err:Error)
                {
                   try
                   {
-                     §0!O§ = getDefinitionByName(getQualifiedSuperclassName(§0!O§)) as Class;
+                     Renamed4046 = getDefinitionByName(getQualifiedSuperclassName(Renamed4046)) as Class;
                   }
                   catch(e:Error)
                   {

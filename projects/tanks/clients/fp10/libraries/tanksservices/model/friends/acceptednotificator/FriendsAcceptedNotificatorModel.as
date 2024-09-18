@@ -6,10 +6,10 @@ package projects.tanks.clients.fp10.libraries.tanksservices.model.friends.accept
    import projects.tanks.client.users.model.friends.container.UserContainerCC;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.friend.IFriendInfoService;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.friend.NewFriendRemoveEvent;
-   import §static var throw§.§="o§;
-   import §static var throw§.§function var try§;
+   import Renamed427.Renamed4492;
+   import Renamed427.Renamed4493;
    
-   public class FriendsAcceptedNotificatorModel extends §function var try§ implements §="o§, ObjectLoadListener, ObjectUnloadListener
+   public class FriendsAcceptedNotificatorModel extends Renamed4493 implements Renamed4492, ObjectLoadListener, ObjectUnloadListener
    {
       [Inject]
       public static var logService:LogService;

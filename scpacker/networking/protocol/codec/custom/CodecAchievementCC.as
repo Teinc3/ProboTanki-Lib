@@ -1,29 +1,29 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import §[" §.ICodec;
+   import Renamed5811.ICodec;
    import alternativa.osgi.OSGi;
    import alternativa.osgi.service.clientlog.IClientLog;
    import flash.utils.ByteArray;
-   import projects.tanks.client.achievements.model.achievements.§null package extends§;
-   import scpacker.networking.protocol.§?"s§;
-   import §set catch if§.§false for else§;
+   import projects.tanks.client.achievements.model.achievements.Renamed2072;
+   import scpacker.networking.protocol.Renamed536;
+   import Renamed416.Renamed7589;
    
    public class CodecAchievementCC implements ICodec
    {
       public static var log:IClientLog = IClientLog(OSGi.getInstance().getService(IClientLog));
       
-      private var §import package catch§:ICodec;
+      private var Renamed10534:ICodec;
       
-      public function CodecAchievementCC(param1:§?"s§)
+      public function CodecAchievementCC(param1:Renamed536)
       {
          super();
-         this.§import package catch§ = param1.getCodec("scpacker.networking.protocol.codec.custom.VectorCodecAchievement");
+         this.Renamed10534 = param1.getCodec("scpacker.networking.protocol.codec.custom.VectorCodecAchievement");
       }
       
       public function decode(param1:ByteArray) : Object
       {
-         var _loc2_:§false for else§ = new §false for else§();
-         _loc2_.§false catch super§ = this.§import package catch§.decode(param1) as Vector.<§null package extends§>;
+         var _loc2_:Renamed7589 = new Renamed7589();
+         _loc2_.Renamed2076 = this.Renamed10534.decode(param1) as Vector.<Renamed2072>;
          return _loc2_;
       }
       
@@ -33,8 +33,8 @@ package scpacker.networking.protocol.codec.custom
          {
             throw new Error("Object is null. Use @ProtocolOptional annotation.");
          }
-         var _loc3_:§false for else§ = §false for else§(param2);
-         this.§import package catch§.encode(param1,_loc3_.§false catch super§);
+         var _loc3_:Renamed7589 = Renamed7589(param2);
+         this.Renamed10534.encode(param1,_loc3_.Renamed2076);
          return 4;
       }
    }

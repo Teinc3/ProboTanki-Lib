@@ -2,9 +2,9 @@ package alternativa.tanks.services.ping
 {
    public interface PingService
    {
-      function §package package function§() : Number;
+      function Renamed3828() : Number;
       
-      function §=!K§(param1:Number) : void;
+      function Renamed3829(param1:Number) : void;
    }
 }
 

@@ -21,11 +21,11 @@ package assets.icons
       
       public static const PAYD:int = 8;
       
-      public static const §do for case§:int = 9;
+      public static const Renamed3957:int = 9;
       
-      public static const §import set super§:int = 10;
+      public static const Renamed3916:int = 10;
       
-      public static const §in catch throw§:int = 11;
+      public static const Renamed3958:int = 11;
       
       public function BattleInfoIcons()
       {

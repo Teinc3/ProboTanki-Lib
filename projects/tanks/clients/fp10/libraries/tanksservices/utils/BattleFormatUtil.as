@@ -1,6 +1,6 @@
 package projects.tanks.clients.fp10.libraries.tanksservices.utils
 {
-   import §1!R§.§throw package static§;
+   import Renamed232.Renamed1582;
    import alternativa.osgi.service.locale.ILocaleService;
    import projects.tanks.clients.fp10.libraries.TanksLocale;
    
@@ -14,42 +14,42 @@ package projects.tanks.clients.fp10.libraries.tanksservices.utils
          super();
       }
       
-      public function §8z§(param1:§throw package static§, param2:Boolean) : Boolean
+      public function Renamed3642(param1:Renamed1582, param2:Boolean) : Boolean
       {
-         return param2 || param1 != §throw package static§.NONE;
+         return param2 || param1 != Renamed1582.NONE;
       }
       
-      public function §<!C§(param1:§throw package static§, param2:Boolean) : String
+      public function Renamed3643(param1:Renamed1582, param2:Boolean) : String
       {
          if(param2)
          {
-            return this.§break for return§();
+            return this.Renamed1607();
          }
          switch(param1)
          {
-            case §throw package static§.NONE:
+            case Renamed1582.NONE:
                return "";
-            case §throw package static§.HORNET_RAILGUN:
+            case Renamed1582.HORNET_RAILGUN:
                return localeService.getText(TanksLocale.TEXT_FORMAT_NAME_XP);
-            case §throw package static§.WASP_RAILGUN:
+            case Renamed1582.WASP_RAILGUN:
                return localeService.getText(TanksLocale.TEXT_FORMAT_NAME_BR);
-            case §throw package static§.HORNET_WASP_RAILGUN:
+            case Renamed1582.HORNET_WASP_RAILGUN:
                return localeService.getText(TanksLocale.TEXT_FORMAT_NAME_XPBR);
             default:
                return "";
          }
       }
       
-      public function §]%§(param1:§throw package static§) : String
+      public function Renamed1606(param1:Renamed1582) : String
       {
-         if(param1 == §throw package static§.NONE)
+         if(param1 == Renamed1582.NONE)
          {
             return localeService.getText(TanksLocale.TEXT_FORMAT_NAME_NONE);
          }
-         return this.§<!C§(param1,false);
+         return this.Renamed3643(param1,false);
       }
       
-      public function §break for return§() : String
+      public function Renamed1607() : String
       {
          return localeService.getText(TanksLocale.TEXT_FORMAT_NAME_PARKOUR);
       }

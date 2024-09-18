@@ -8,7 +8,7 @@ package platform.client.core.general.spaces.loading.dispatcher
    import alternativa.protocol.info.TypeCodecInfo;
    import alternativa.types.Long;
    import flash.utils.ByteArray;
-   import §null catch class§.§9"k§;
+   import Renamed406.Renamed4089;
    import platform.client.fp10.core.model.IModel;
    import scpacker.networking.Network;
    
@@ -37,7 +37,7 @@ package platform.client.core.general.spaces.loading.dispatcher
       
       public function dependeciesLoaded(param1:int) : void
       {
-         Network(OSGi.getInstance().getService(Network)).send(new §9"k§(param1));
+         Network(OSGi.getInstance().getService(Network)).send(new Renamed4089(param1));
       }
    }
 }

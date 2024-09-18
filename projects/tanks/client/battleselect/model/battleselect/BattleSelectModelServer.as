@@ -1,6 +1,6 @@
 package projects.tanks.client.battleselect.model.battleselect
 {
-   import §^2§.§7"K§;
+   import Renamed494.Renamed4168;
    import alternativa.osgi.OSGi;
    import alternativa.protocol.ICodec;
    import alternativa.protocol.IProtocol;
@@ -47,7 +47,7 @@ package projects.tanks.client.battleselect.model.battleselect
       
       public function onSelect(param1:String) : void
       {
-         Network(OSGi.getInstance().getService(Network)).send(new §7"K§(param1));
+         Network(OSGi.getInstance().getService(Network)).send(new Renamed4168(param1));
       }
       
       public function search(param1:String) : void

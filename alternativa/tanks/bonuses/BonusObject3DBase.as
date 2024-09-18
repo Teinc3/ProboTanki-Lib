@@ -1,13 +1,13 @@
 package alternativa.tanks.bonuses
 {
-   import §@"]§.§with super§;
+   import Renamed1342.Renamed1448;
    import alternativa.engine3d.core.Object3D;
    import alternativa.math.Matrix4;
    import alternativa.math.Vector3;
    import alternativa.tanks.battle.BattleService;
-   import alternativa.tanks.battle.scene3d.§[!r§;
+   import alternativa.tanks.battle.scene3d.Renamed610;
    
-   public class BonusObject3DBase implements Object3DWrapper, §with super§
+   public class BonusObject3DBase implements Object3DWrapper, Renamed1448
    {
       [Inject]
       public static var battleService:BattleService;
@@ -94,16 +94,16 @@ package alternativa.tanks.bonuses
       
       public function addToScene() : void
       {
-         var _loc1_:§[!r§ = battleService.§3l§();
-         _loc1_.§with catch with§(this.object);
-         _loc1_.§,_§.add(this);
+         var _loc1_:Renamed610 = battleService.Renamed621();
+         _loc1_.Renamed1258(this.object);
+         _loc1_.Renamed1377.add(this);
       }
       
       public function removeFromScene() : void
       {
-         var _loc1_:§[!r§ = battleService.§3l§();
+         var _loc1_:Renamed610 = battleService.Renamed621();
          _loc1_.removeObject(this.object);
-         _loc1_.§,_§.remove(this);
+         _loc1_.Renamed1377.remove(this);
       }
       
       public function addZ(param1:Number) : void

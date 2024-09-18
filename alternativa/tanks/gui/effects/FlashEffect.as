@@ -34,7 +34,7 @@ package alternativa.tanks.gui.effects
       
       public function flash(param1:DisplayObject) : void
       {
-         this.numFrames = Math.ceil(fpsService.§,"Q§() * this.EFFECT_TIME);
+         this.numFrames = Math.ceil(fpsService.Renamed1654() * this.EFFECT_TIME);
          this.A = 4 / (this.numFrames * this.numFrames);
          this.target = param1;
          param1.addEventListener(Event.ENTER_FRAME,this.onFrame);

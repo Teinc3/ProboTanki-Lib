@@ -51,7 +51,7 @@ package alternativa.tanks.model.shop.bugreport
          this.errorLabel.text = localeService.getText(TanksLocale.TEXT_PAYMENT_BUG_REPORT_INFO);
          this.errorButton = new DefaultButtonBase();
          this.errorButton.label = localeService.getText(TanksLocale.TEXT_PAYMENT_BUTTON_SEND_BUG_REPORT_TEXT);
-         this.errorButton.addEventListener(MouseEvent.CLICK,this.§switch§);
+         this.errorButton.addEventListener(MouseEvent.CLICK,this.Renamed2266);
          addChild(this.errorButton);
          this.errorButton.y = SPACE_MODULE;
          this._height = 45;
@@ -61,7 +61,7 @@ package alternativa.tanks.model.shop.bugreport
          this.errorLabel.x = this.errorIcon.x + this.errorIcon.width + WINDOW_MARGIN;
       }
       
-      private function §switch§(param1:MouseEvent) : void
+      private function Renamed2266(param1:MouseEvent) : void
       {
          navigateToURL(new URLRequest("https://t.me/kl_nazariy"),"_blank");
       }

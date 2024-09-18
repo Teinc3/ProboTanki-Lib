@@ -1,13 +1,13 @@
 package alternativa.tanks.bonuses
 {
-   import §7"j§.§""&§;
+   import Renamed1.Renamed1450;
    import alternativa.tanks.battle.BattleService;
-   import alternativa.tanks.battle.scene3d.§else if§;
-   import §extends for const§.§1Q§;
-   import §extends for const§.§["D§;
+   import alternativa.tanks.battle.scene3d.Renamed919;
+   import Renamed356.Renamed1443;
+   import Renamed356.Renamed1444;
    import flash.utils.getTimer;
    
-   public class RemovalAnimation extends §["D§ implements §else if§
+   public class RemovalAnimation extends Renamed1444 implements Renamed919
    {
       [Inject]
       public static var battleService:BattleService;
@@ -38,9 +38,9 @@ package alternativa.tanks.bonuses
       
       private var started:Boolean;
       
-      public function RemovalAnimation(param1:§1Q§)
+      public function RemovalAnimation(param1:Renamed1443)
       {
-         this.blinker = new §""&§(MAX_BLINK_INTERVAL,MIN_BLINK_INTERVAL,BLINK_INTERVAL_DECREMENT,MIN_ALPHA,1,ALPHA_SPEED_COEFF);
+         this.blinker = new Renamed1450(MAX_BLINK_INTERVAL,MIN_BLINK_INTERVAL,BLINK_INTERVAL_DECREMENT,MIN_ALPHA,1,ALPHA_SPEED_COEFF);
          super(param1);
       }
       
@@ -54,13 +54,13 @@ package alternativa.tanks.bonuses
          this.canRemove = false;
          if(param2 < REMOVAL_WARNING_THRESHOLD)
          {
-            this.blinker.§`!"§(MIN_BLINK_INTERVAL + (MAX_BLINK_INTERVAL - MIN_BLINK_INTERVAL) * param2 / REMOVAL_WARNING_THRESHOLD);
+            this.blinker.Renamed1451(MIN_BLINK_INTERVAL + (MAX_BLINK_INTERVAL - MIN_BLINK_INTERVAL) * param2 / REMOVAL_WARNING_THRESHOLD);
          }
          else
          {
-            this.blinker.§`!"§(MAX_BLINK_INTERVAL);
+            this.blinker.Renamed1451(MAX_BLINK_INTERVAL);
          }
-         battleService.§3l§().§9"N§(this,0);
+         battleService.Renamed621().Renamed1287(this,0);
          param1.onPickup.addOnce(this.onBonusPickup);
          param1.onRemove.addOnce(this.onBonusRemove);
       }
@@ -103,7 +103,7 @@ package alternativa.tanks.bonuses
       
       private function blink(param1:int, param2:int) : void
       {
-         var _loc3_:Number = this.blinker.§default while§(param1,param2);
+         var _loc3_:Number = this.blinker.Renamed1452(param1,param2);
          this.bonusMesh.setAlpha(_loc3_);
          if(this.canRemove && param1 >= this.startTime + REMOVAL_WARNING_THRESHOLD && _loc3_ == MIN_ALPHA)
          {
@@ -138,7 +138,7 @@ package alternativa.tanks.bonuses
       
       private function destroy() : void
       {
-         battleService.§3l§().§0!n§(this,0);
+         battleService.Renamed621().Renamed1289(this,0);
          if(this.bonusMesh != null)
          {
             this.bonusMesh.removeFromScene();

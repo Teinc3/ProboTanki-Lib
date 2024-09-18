@@ -5,25 +5,25 @@ package alternativa.tanks.services.battlegui
    
    public interface BattleGUIService extends IEventDispatcher
    {
-      function §native const import§() : DisplayObjectContainer;
+      function Renamed2492() : DisplayObjectContainer;
       
-      function §break catch true§() : DisplayObjectContainer;
+      function Renamed2575() : DisplayObjectContainer;
       
-      function §get final§() : DisplayObjectContainer;
+      function Renamed3795() : DisplayObjectContainer;
       
       function hide() : void;
       
       function show() : void;
       
-      function §import var try§(param1:int) : void;
+      function Renamed3796(param1:int) : void;
       
-      function §in catch static§() : int;
+      function Renamed3797() : int;
       
-      function §get set use§(param1:int) : void;
+      function Renamed3798(param1:int) : void;
       
-      function §9"n§() : int;
+      function Renamed2641() : int;
       
-      function §break var implements§() : void;
+      function Renamed3799() : void;
    }
 }
 

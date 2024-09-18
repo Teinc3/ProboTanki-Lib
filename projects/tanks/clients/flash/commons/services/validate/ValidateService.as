@@ -2,7 +2,7 @@ package projects.tanks.clients.flash.commons.services.validate
 {
    public class ValidateService implements IValidateService
    {
-      public static const §use package continue§:String = "[a-z0-9A-Z]";
+      public static const Renamed4472:String = "[a-z0-9A-Z]";
       
       public static const EMAIL_PATTERN:RegExp = /^[a-zA-Z0-9]([\-\_\.]?[a-zA-Z0-9\*]+)*@[a-zA-Z0-9]([\-\_\.]?[a-zA-Z0-9*]+)*\.[a-zA-Z]{2,}$/i;
       
@@ -38,9 +38,9 @@ package projects.tanks.clients.flash.commons.services.validate
          return param1.match(NOT_ALLOWED_PATTERN_FOR_LOGIN).length == 0;
       }
       
-      public function §,!4§(param1:String) : Boolean
+      public function Renamed4471(param1:String) : Boolean
       {
-         return param1.search(§use package continue§) == 0;
+         return param1.search(Renamed4472) == 0;
       }
       
       public function isChinaCardIdValid(param1:String) : Boolean

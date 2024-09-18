@@ -4,13 +4,13 @@ package alternativa.tanks.services.battlereadiness
    {
       function reset() : void;
       
-      function §#!`§() : void;
+      function Renamed2514() : void;
       
-      function §3"W§() : void;
+      function Renamed2507() : void;
       
       function isBattleReady() : Boolean;
       
-      function §for for continue§() : Boolean;
+      function Renamed3022() : Boolean;
    }
 }
 

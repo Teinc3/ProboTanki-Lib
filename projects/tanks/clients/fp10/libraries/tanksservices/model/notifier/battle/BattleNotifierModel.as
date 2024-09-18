@@ -2,15 +2,15 @@ package projects.tanks.clients.fp10.libraries.tanksservices.model.notifier.battl
 {
    import alternativa.types.Long;
    import flash.utils.Dictionary;
-   import projects.tanks.client.tanksservices.model.notifier.battle.§5_§;
-   import projects.tanks.client.tanksservices.model.notifier.battle.§85§;
+   import projects.tanks.client.tanksservices.model.notifier.battle.Renamed4386;
+   import projects.tanks.client.tanksservices.model.notifier.battle.Renamed4388;
    import projects.tanks.client.tanksservices.model.notifier.battle.BattleNotifierData;
    import projects.tanks.clients.fp10.libraries.tanksservices.model.UserRefresh;
    import projects.tanks.clients.fp10.libraries.tanksservices.model.listener.UserNotifier;
    import projects.tanks.clients.fp10.libraries.tanksservices.model.notifier.UserInfoConsumer;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.notifier.battle.IBattleNotifierService;
    
-   public class BattleNotifierModel extends §5_§ implements §85§, UserRefresh
+   public class BattleNotifierModel extends Renamed4386 implements Renamed4388, UserRefresh
    {
       [Inject]
       public static var battleNotifierService:IBattleNotifierService;

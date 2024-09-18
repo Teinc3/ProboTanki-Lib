@@ -5,7 +5,7 @@ package alternativa.tanks.controller.commands
    import alternativa.tanks.model.EntranceServerParamsModel;
    import alternativa.tanks.model.EntranceUrlParamsModel;
    import alternativa.tanks.service.IEntranceServerFacade;
-   import alternativa.tanks.service.§each package super§;
+   import alternativa.tanks.service.Renamed555;
    import org.robotlegs.mvcs.Command;
    import platform.clients.fp10.libraries.alternativapartners.service.IPartnerService;
    
@@ -18,7 +18,7 @@ package alternativa.tanks.controller.commands
       public var urlParams:EntranceUrlParamsModel;
       
       [Inject]
-      public var sharedObjectsService:§each package super§;
+      public var sharedObjectsService:Renamed555;
       
       [Inject]
       public var serverParams:EntranceServerParamsModel;
@@ -47,13 +47,13 @@ package alternativa.tanks.controller.commands
             _loc1_ = this.urlParams.entranceHash || this.sharedObjectsService.entranceHash;
             this.serverFacade.loginByHash(_loc1_);
          }
-         else if(this.sharedObjectsService.§use catch switch§)
+         else if(this.sharedObjectsService.Renamed1566)
          {
             dispatch(new NavigationEvent(NavigationEvent.GO_TO_LOGIN_FORM));
          }
          else
          {
-            this.sharedObjectsService.§use catch switch§ = true;
+            this.sharedObjectsService.Renamed1566 = true;
             dispatch(new NavigationEvent(NavigationEvent.GO_TO_REGISTRATION_FORM));
          }
       }

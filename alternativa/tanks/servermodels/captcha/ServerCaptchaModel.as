@@ -1,15 +1,15 @@
 package alternativa.tanks.servermodels.captcha
 {
-   import §2!8§.§]"9§;
-   import projects.tanks.client.entrance.model.entrance.captcha.§'"p§;
-   import projects.tanks.client.entrance.model.entrance.captcha.§3#n§;
+   import Renamed236.Renamed2178;
+   import projects.tanks.client.entrance.model.entrance.captcha.Renamed3545;
+   import projects.tanks.client.entrance.model.entrance.captcha.Renamed3546;
    import projects.tanks.client.entrance.model.entrance.captcha.CaptchaLocation;
    
-   public class ServerCaptchaModel extends §3#n§ implements §'"p§, IServerCaptcha
+   public class ServerCaptchaModel extends Renamed3546 implements Renamed3545, IServerCaptcha
    {
-      private var clientFacade:§]"9§;
+      private var clientFacade:Renamed2178;
       
-      private var §+!#§:Vector.<CaptchaLocation>;
+      private var Renamed3547:Vector.<CaptchaLocation>;
       
       public function ServerCaptchaModel()
       {
@@ -18,17 +18,17 @@ package alternativa.tanks.servermodels.captcha
       
       public function showCaptcha(param1:CaptchaLocation, param2:Vector.<int>) : void
       {
-         this.clientFacade.§5#C§(param1,param2);
+         this.clientFacade.Renamed2210(param1,param2);
       }
       
       public function captchaCorrect(param1:CaptchaLocation) : void
       {
-         this.clientFacade.§false var return§(param1);
+         this.clientFacade.Renamed2214(param1);
       }
       
       public function captchaFailed(param1:CaptchaLocation, param2:Vector.<int>) : void
       {
-         this.clientFacade.§!#!§(param1,param2);
+         this.clientFacade.Renamed2216(param1,param2);
       }
       
       public function checkCaptcha(param1:String, param2:CaptchaLocation) : void
@@ -43,13 +43,13 @@ package alternativa.tanks.servermodels.captcha
       
       public function objectLoaded() : void
       {
-         this.§+!#§ = getInitParam().§if final§;
+         this.Renamed3547 = getInitParam().Renamed3548;
       }
       
-      public function bindFacade(param1:§]"9§) : void
+      public function bindFacade(param1:Renamed2178) : void
       {
          this.clientFacade = param1;
-         param1.§""Q§(this.§+!#§);
+         param1.Renamed2213(this.Renamed3547);
       }
       
       public function unbindFacade() : void

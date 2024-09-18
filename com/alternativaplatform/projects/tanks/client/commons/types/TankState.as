@@ -1,14 +1,14 @@
 package com.alternativaplatform.projects.tanks.client.commons.types
 {
-   import §;"?§.§#">§;
+   import Renamed602.Renamed603;
    
    public class TankState
    {
       public var health:int;
       
-      public var position:§#">§;
+      public var position:Renamed603;
       
-      public var orientation:§#">§;
+      public var orientation:Renamed603;
       
       public var turretAngle:int;
       

@@ -26,7 +26,7 @@ package alternativa.tanks.view.forms
       public static var localeService:ILocaleService;
       
       [Inject]
-      public static var §7#L§:IExternalEntranceService;
+      public static var Renamed3564:IExternalEntranceService;
       
       [Inject]
       public var injector:IInjector;
@@ -161,23 +161,23 @@ package alternativa.tanks.view.forms
             this._registrationCommonElementsSection.y = this._goToLoginPage.y + this._goToLoginPage.height - 3;
          }
          this._window.height = this._registrationCommonElementsSection.y + this._registrationCommonElementsSection.height + this._border;
-         if(§7#L§.§%"I§ || §7#L§.§package set default§)
+         if(Renamed3564.Renamed3602 || Renamed3564.Renamed3603)
          {
             this._externalForm = new ExternalEntranceForm(this._windowWidth - 20,85,localeService.getText(TextConst.STRING_REGISTER_FORM_REGISTER_VIA));
             addChild(this._externalForm);
             this._externalForm.y = this._window.y + this._window.height - 15;
             this._externalForm.x = this._window.x + (this._windowWidth - this._externalForm.width) / 2;
-            if(§7#L§.§%"I§)
+            if(Renamed3564.Renamed3602)
             {
-               this._externalForm.§]!R§.addEventListener(MouseEvent.CLICK,this.onClickVkButton);
+               this._externalForm.Renamed3932.addEventListener(MouseEvent.CLICK,this.onClickVkButton);
             }
-            if(§7#L§.§package set default§)
+            if(Renamed3564.Renamed3603)
             {
-               this._externalForm.§9H§.addEventListener(MouseEvent.CLICK,this.onClickFbButton);
+               this._externalForm.Renamed3933.addEventListener(MouseEvent.CLICK,this.onClickFbButton);
             }
-            if(§7#L§.§final get§)
+            if(Renamed3564.Renamed3604)
             {
-               this._externalForm.§function package else§.addEventListener(MouseEvent.CLICK,this.§]!Q§);
+               this._externalForm.Renamed3934.addEventListener(MouseEvent.CLICK,this.Renamed3937);
             }
          }
          addChild(this._window);
@@ -194,7 +194,7 @@ package alternativa.tanks.view.forms
          dispatchEvent(new StartExternalEntranceEvent(StartExternalEntranceEvent.START_REGISTRATION,"facebook",this.rememberMe));
       }
       
-      private function §]!Q§(param1:MouseEvent) : void
+      private function Renamed3937(param1:MouseEvent) : void
       {
          dispatchEvent(new StartExternalEntranceEvent(StartExternalEntranceEvent.START_REGISTRATION,"google",this.rememberMe));
       }
@@ -217,17 +217,17 @@ package alternativa.tanks.view.forms
          stage.removeEventListener(Event.RESIZE,this.alignYourself);
          if(this._externalForm != null)
          {
-            if(§7#L§.§package set default§)
+            if(Renamed3564.Renamed3603)
             {
-               this._externalForm.§9H§.removeEventListener(MouseEvent.CLICK,this.onClickFbButton);
+               this._externalForm.Renamed3933.removeEventListener(MouseEvent.CLICK,this.onClickFbButton);
             }
-            if(§7#L§.§%"I§)
+            if(Renamed3564.Renamed3602)
             {
-               this._externalForm.§]!R§.removeEventListener(MouseEvent.CLICK,this.onClickVkButton);
+               this._externalForm.Renamed3932.removeEventListener(MouseEvent.CLICK,this.onClickVkButton);
             }
-            if(§7#L§.§final get§)
+            if(Renamed3564.Renamed3604)
             {
-               this._externalForm.§function package else§.removeEventListener(MouseEvent.CLICK,this.§]!Q§);
+               this._externalForm.Renamed3934.removeEventListener(MouseEvent.CLICK,this.Renamed3937);
             }
          }
       }

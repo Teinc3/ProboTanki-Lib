@@ -1,16 +1,16 @@
 package projects.tanks.client.battleselect.model.battleselect.create
 {
-   import §break for null§.§'B§;
+   import Renamed312.Renamed1585;
    
    public class BattleCreateCC
    {
       private var _battleCreationDisabled:Boolean;
       
-      private var _battlesLimits:Vector.<§'B§>;
+      private var _battlesLimits:Vector.<Renamed1585>;
       
       private var _maxRangeLength:int;
       
-      public function BattleCreateCC(param1:Boolean = false, param2:Vector.<§'B§> = null, param3:int = 0)
+      public function BattleCreateCC(param1:Boolean = false, param2:Vector.<Renamed1585> = null, param3:int = 0)
       {
          super();
          this._battleCreationDisabled = param1;
@@ -28,12 +28,12 @@ package projects.tanks.client.battleselect.model.battleselect.create
          this._battleCreationDisabled = param1;
       }
       
-      public function get battlesLimits() : Vector.<§'B§>
+      public function get battlesLimits() : Vector.<Renamed1585>
       {
          return this._battlesLimits;
       }
       
-      public function set battlesLimits(param1:Vector.<§'B§>) : void
+      public function set battlesLimits(param1:Vector.<Renamed1585>) : void
       {
          this._battlesLimits = param1;
       }

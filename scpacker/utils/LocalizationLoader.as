@@ -13,17 +13,17 @@ package scpacker.utils
    import platform.client.core.general.resourcelocale.format.LocalizedFileFormat;
    import platform.client.core.general.resourcelocale.format.StringPair;
    import platform.client.fp10.core.resource.BatchImageConstructor;
-   import scpacker.networking.protocol.§?"s§;
+   import scpacker.networking.protocol.Renamed536;
    
    public class LocalizationLoader
    {
       public static var localeService:ILocaleService;
       
-      private var §with const implements§:LocalizedFileFormat;
+      private var Renamed10777:LocalizedFileFormat;
       
-      private var §>#;§:BatchImageConstructor;
+      private var Renamed10778:BatchImageConstructor;
       
-      private var §break const static§:Function;
+      private var Renamed10779:Function;
       
       public function LocalizationLoader()
       {
@@ -31,9 +31,9 @@ package scpacker.utils
          localeService = ILocaleService(OSGi.getInstance().getService(ILocaleService));
       }
       
-      public function §try package while§(param1:String, param2:Function) : void
+      public function Renamed3(param1:String, param2:Function) : void
       {
-         this.§break const static§ = param2;
+         this.Renamed10779 = param2;
          var _loc3_:CacheURLLoader = new CacheURLLoader();
          _loc3_.dataFormat = URLLoaderDataFormat.BINARY;
          _loc3_.addEventListener(Event.COMPLETE,this.onLoadingComplete);
@@ -42,48 +42,48 @@ package scpacker.utils
       
       protected function onLoadingComplete(param1:Event) : void
       {
-         var _loc2_:§?"s§ = §?"s§(OSGi.getInstance().getService(§?"s§));
+         var _loc2_:Renamed536 = Renamed536(OSGi.getInstance().getService(Renamed536));
          var _loc3_:ByteArray = URLLoader(param1.target).data;
          _loc3_.uncompress();
-         this.§with const implements§ = LocalizedFileFormat(_loc2_.getCodec("scpacker.networking.protocol.codec.custom.CodecLocaleStruct").decode(_loc3_));
-         this.§class set false§();
+         this.Renamed10777 = LocalizedFileFormat(_loc2_.getCodec("scpacker.networking.protocol.codec.custom.CodecLocaleStruct").decode(_loc3_));
+         this.Renamed10780();
       }
       
-      private function §class set false§() : void
+      private function Renamed10780() : void
       {
          var _loc1_:StringPair = null;
-         if(this.§with const implements§.strings != null)
+         if(this.Renamed10777.strings != null)
          {
-            for each(_loc1_ in this.§with const implements§.strings)
+            for each(_loc1_ in this.Renamed10777.strings)
             {
                localeService.setText(_loc1_.key,_loc1_.value);
             }
          }
-         if(this.§with const implements§.images != null && this.§with const implements§.images.length > 0)
+         if(this.Renamed10777.images != null && this.Renamed10777.images.length > 0)
          {
-            this.§override catch finally§();
+            this.Renamed8530();
          }
-         this.§break const static§();
+         this.Renamed10779();
       }
       
-      private function §override catch finally§() : void
+      private function Renamed8530() : void
       {
          var _loc2_:ImagePair = null;
          var _loc1_:Vector.<ByteArray> = new Vector.<ByteArray>();
-         for each(_loc2_ in this.§with const implements§.images)
+         for each(_loc2_ in this.Renamed10777.images)
          {
             _loc1_.push(_loc2_.value);
          }
-         this.§>#;§ = new BatchImageConstructor();
-         this.§>#;§.addEventListener(Event.COMPLETE,this.§<"E§);
-         this.§>#;§.§default var implements§(_loc1_,5);
+         this.Renamed10778 = new BatchImageConstructor();
+         this.Renamed10778.addEventListener(Event.COMPLETE,this.Renamed10781);
+         this.Renamed10778.Renamed4102(_loc1_,5);
       }
       
-      private function §<"E§(param1:Event) : void
+      private function Renamed10781(param1:Event) : void
       {
-         var _loc2_:Vector.<BitmapData> = this.§>#;§.images;
-         this.§>#;§ = null;
-         var _loc3_:Vector.<ImagePair> = this.§with const implements§.images;
+         var _loc2_:Vector.<BitmapData> = this.Renamed10778.images;
+         this.Renamed10778 = null;
+         var _loc3_:Vector.<ImagePair> = this.Renamed10777.images;
          var _loc4_:int = 0;
          while(_loc4_ < _loc2_.length)
          {

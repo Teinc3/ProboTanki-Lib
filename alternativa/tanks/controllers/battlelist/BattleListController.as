@@ -12,9 +12,9 @@ package alternativa.tanks.controllers.battlelist
    import flash.utils.getTimer;
    import flash.utils.setTimeout;
    import platform.client.fp10.core.type.IGameObject;
-   import projects.tanks.client.battleselect.model.item.§5!9§;
-   import projects.tanks.client.battleservice.§<#p§;
-   import projects.tanks.client.battleservice.§final package import§;
+   import projects.tanks.client.battleselect.model.item.Renamed1620;
+   import projects.tanks.client.battleservice.Renamed1586;
+   import projects.tanks.client.battleservice.Renamed1587;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.battle.IBattleInfoService;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.layout.ILobbyLayoutService;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.storage.IStorageService;
@@ -66,9 +66,9 @@ package alternativa.tanks.controllers.battlelist
       
       private var _filterByCpBattle:Boolean;
       
-      private var §>>§:Boolean;
+      private var Renamed1621:Boolean;
       
-      private var _currentLockedBattleMode:§final package import§;
+      private var _currentLockedBattleMode:Renamed1587;
       
       private var _view:IBattleListView;
       
@@ -114,14 +114,14 @@ package alternativa.tanks.controllers.battlelist
          this._filterByTdmBattle = getBoolean(FILTER_BY_TDM,true);
          this._filterByCtfBattle = getBoolean(FILTER_BY_CTF,true);
          this._filterByCpBattle = getBoolean(FILTER_BY_CP,true);
-         this.§>>§ = getBoolean(FILTER_BY_AS,true);
-         if(!this._filterByDmBattle && !this._filterByTdmBattle && !this._filterByCtfBattle && !this._filterByCpBattle && !this.§>>§)
+         this.Renamed1621 = getBoolean(FILTER_BY_AS,true);
+         if(!this._filterByDmBattle && !this._filterByTdmBattle && !this._filterByCtfBattle && !this._filterByCpBattle && !this.Renamed1621)
          {
             this._filterByDmBattle = true;
             this._filterByTdmBattle = true;
             this._filterByCtfBattle = true;
             this._filterByCpBattle = true;
-            this.§>>§ = true;
+            this.Renamed1621 = true;
          }
          this.updatePressedBattleMode();
       }
@@ -143,7 +143,7 @@ package alternativa.tanks.controllers.battlelist
       
       public function showForm() : void
       {
-         this._view.show(this._filterByDmBattle,this._filterByTdmBattle,this._filterByCtfBattle,this._filterByCpBattle,this.§>>§);
+         this._view.show(this._filterByDmBattle,this._filterByTdmBattle,this._filterByCtfBattle,this._filterByCpBattle,this.Renamed1621);
          this.setEvents();
       }
       
@@ -203,7 +203,7 @@ package alternativa.tanks.controllers.battlelist
                   this._view.createItem(_loc5_,true);
                   if(_loc5_.id == battleInfoFormService.getBattleItemId())
                   {
-                     battleInfoFormService.§3o§();
+                     battleInfoFormService.Renamed1622();
                   }
                }
             }
@@ -222,7 +222,7 @@ package alternativa.tanks.controllers.battlelist
          }
          if(_lastShowedItem == this._selectedItem)
          {
-            battleInfoFormService.§3o§();
+            battleInfoFormService.Renamed1622();
          }
          _lastShowedItem = this._selectedItem;
       }
@@ -290,16 +290,16 @@ package alternativa.tanks.controllers.battlelist
          userPropertiesService.removeEventListener(UserPropertiesServiceEvent.UPDATE_RANK,this.onUpdateRank);
       }
       
-      public function battleItemRecord(param1:IGameObject, param2:§final package import§, param3:String, param4:Boolean = true, param5:int = 0, param6:int = 0, param7:int = 0, param8:int = 0, param9:int = 0, param10:int = 0, param11:int = 0, param12:String = "", param13:§<#p§ = null, param14:Boolean = false, param15:Boolean = false, param16:§5!9§ = null, param17:Boolean = false, param18:Boolean = false, param19:String = "", param20:int = 0) : void
+      public function battleItemRecord(param1:IGameObject, param2:Renamed1587, param3:String, param4:Boolean = true, param5:int = 0, param6:int = 0, param7:int = 0, param8:int = 0, param9:int = 0, param10:int = 0, param11:int = 0, param12:String = "", param13:Renamed1586 = null, param14:Boolean = false, param15:Boolean = false, param16:Renamed1620 = null, param17:Boolean = false, param18:Boolean = false, param19:String = "", param20:int = 0) : void
       {
          var _loc21_:BattleListItemParams = new BattleListItemParams();
          if(param15)
          {
-            _loc21_.gamename = "[Private] " + this.§>I§(param3,param18,param19);
+            _loc21_.gamename = "[Private] " + this.Renamed1623(param3,param18,param19);
          }
          else
          {
-            _loc21_.gamename = this.§>I§(param3,param18,param19);
+            _loc21_.gamename = this.Renamed1623(param3,param18,param19);
          }
          _loc21_.battleItemGO = param1;
          _loc21_.battleMode = param2;
@@ -319,8 +319,8 @@ package alternativa.tanks.controllers.battlelist
          _loc21_.proBattle = param17;
          _loc21_.suspicionLevel = param16;
          _loc21_.friends = Math.max(param10,param8 + param7);
-         _loc21_.§9!@§ = param18;
-         _loc21_.§;9§ = param19;
+         _loc21_.Renamed1624 = param18;
+         _loc21_.Renamed1625 = param19;
          _loc21_.additionalCrystalsPercent = param20;
          if(this._isItemsPacketJoinSuccess)
          {
@@ -336,7 +336,7 @@ package alternativa.tanks.controllers.battlelist
          }
       }
       
-      private function §>I§(param1:String, param2:Boolean, param3:String) : String
+      private function Renamed1623(param1:String, param2:Boolean, param3:String) : String
       {
          if(param2)
          {
@@ -345,27 +345,27 @@ package alternativa.tanks.controllers.battlelist
          return param1;
       }
       
-      private function isVisibleItem(param1:§final package import§) : Boolean
+      private function isVisibleItem(param1:Renamed1587) : Boolean
       {
-         if(param1 == §final package import§.DM)
+         if(param1 == Renamed1587.DM)
          {
             return this._filterByDmBattle;
          }
-         if(param1 == §final package import§.TDM)
+         if(param1 == Renamed1587.TDM)
          {
             return this._filterByTdmBattle;
          }
-         if(param1 == §final package import§.CTF)
+         if(param1 == Renamed1587.CTF)
          {
             return this._filterByCtfBattle;
          }
-         if(param1 == §final package import§.CP)
+         if(param1 == Renamed1587.CP)
          {
             return this._filterByCpBattle;
          }
-         if(param1 == §final package import§.AS)
+         if(param1 == Renamed1587.AS)
          {
-            return this.§>>§;
+            return this.Renamed1621;
          }
          return true;
       }
@@ -395,7 +395,7 @@ package alternativa.tanks.controllers.battlelist
          this.updateName(param1,"[Private] " + param2);
       }
       
-      public function updateSuspicious(param1:String, param2:§5!9§) : void
+      public function updateSuspicious(param1:String, param2:Renamed1620) : void
       {
          var _loc3_:BattleListItemParams = BattleSelectVectorUtil.findElementInVector(this._allItems,param1);
          _loc3_.suspicionLevel = param2;
@@ -498,28 +498,28 @@ package alternativa.tanks.controllers.battlelist
          return param1.maxPeople - Math.max(param1.all,param1.reds + param1.blues);
       }
       
-      public function onBattleModeChange(param1:§final package import§, param2:Boolean) : void
+      public function onBattleModeChange(param1:Renamed1587, param2:Boolean) : void
       {
          switch(param1)
          {
-            case §final package import§.DM:
+            case Renamed1587.DM:
                this._filterByDmBattle = param2;
                storeBoolean(FILTER_BY_DM,param2);
                break;
-            case §final package import§.TDM:
+            case Renamed1587.TDM:
                this._filterByTdmBattle = param2;
                storeBoolean(FILTER_BY_TDM,param2);
                break;
-            case §final package import§.CTF:
+            case Renamed1587.CTF:
                this._filterByCtfBattle = param2;
                storeBoolean(FILTER_BY_CTF,param2);
                break;
-            case §final package import§.CP:
+            case Renamed1587.CP:
                this._filterByCpBattle = param2;
                storeBoolean(FILTER_BY_CP,param2);
                break;
-            case §final package import§.AS:
-               this.§>>§ = param2;
+            case Renamed1587.AS:
+               this.Renamed1621 = param2;
                storeBoolean(FILTER_BY_AS,param2);
          }
          if(param2)
@@ -533,7 +533,7 @@ package alternativa.tanks.controllers.battlelist
          this.updatePressedBattleMode();
       }
       
-      private function showBattleByType(param1:§final package import§) : void
+      private function showBattleByType(param1:Renamed1587) : void
       {
          var _loc2_:int = 0;
          var _loc3_:int = int(this._allItems.length);
@@ -558,7 +558,7 @@ package alternativa.tanks.controllers.battlelist
          }
       }
       
-      private function hideBattleByType(param1:§final package import§) : void
+      private function hideBattleByType(param1:Renamed1587) : void
       {
          var _loc2_:int = 0;
          var _loc3_:int = int(this._allItems.length);
@@ -592,22 +592,22 @@ package alternativa.tanks.controllers.battlelist
          if(this._filterByDmBattle && !this._filterByTdmBattle && !this._filterByCtfBattle && !this._filterByCpBattle)
          {
             _loc1_ = true;
-            this.lockBattleMode(§final package import§.DM);
+            this.lockBattleMode(Renamed1587.DM);
          }
          if(!this._filterByDmBattle && this._filterByTdmBattle && !this._filterByCtfBattle && !this._filterByCpBattle)
          {
             _loc1_ = true;
-            this.lockBattleMode(§final package import§.TDM);
+            this.lockBattleMode(Renamed1587.TDM);
          }
          if(!this._filterByDmBattle && !this._filterByTdmBattle && this._filterByCtfBattle && !this._filterByCpBattle)
          {
             _loc1_ = true;
-            this.lockBattleMode(§final package import§.CTF);
+            this.lockBattleMode(Renamed1587.CTF);
          }
          if(!this._filterByDmBattle && !this._filterByTdmBattle && !this._filterByCtfBattle && this._filterByCpBattle)
          {
             _loc1_ = true;
-            this.lockBattleMode(§final package import§.CP);
+            this.lockBattleMode(Renamed1587.CP);
          }
          if(!_loc1_)
          {
@@ -615,7 +615,7 @@ package alternativa.tanks.controllers.battlelist
          }
       }
       
-      private function lockBattleMode(param1:§final package import§) : void
+      private function lockBattleMode(param1:Renamed1587) : void
       {
          this.unLockCurrentBattleMode();
          this._currentLockedBattleMode = param1;

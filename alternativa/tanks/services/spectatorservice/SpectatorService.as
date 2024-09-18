@@ -2,9 +2,9 @@ package alternativa.tanks.services.spectatorservice
 {
    public interface SpectatorService
    {
-      function §break switch§() : Boolean;
+      function Renamed2550() : Boolean;
       
-      function §include for native§(param1:Boolean) : void;
+      function Renamed3831(param1:Boolean) : void;
    }
 }
 

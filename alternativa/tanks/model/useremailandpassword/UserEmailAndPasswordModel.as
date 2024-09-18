@@ -1,7 +1,7 @@
 package alternativa.tanks.model.useremailandpassword
 {
-   import §4#U§.§5[§;
-   import §4#U§.§[#N§;
+   import Renamed245.Renamed2282;
+   import Renamed245.Renamed2283;
    import alternativa.osgi.OSGi;
    import alternativa.osgi.service.display.IDisplay;
    import alternativa.tanks.service.panel.IPanelView;
@@ -11,7 +11,7 @@ package alternativa.tanks.model.useremailandpassword
    import platform.client.fp10.core.model.ObjectUnloadListener;
    import services.alertservice.Alert;
    
-   public class UserEmailAndPasswordModel extends §[#N§ implements §5[§, ObjectLoadListener, ObjectUnloadListener, IUserEmailAndPassword, PasswordService
+   public class UserEmailAndPasswordModel extends Renamed2283 implements Renamed2282, ObjectLoadListener, ObjectUnloadListener, IUserEmailAndPassword, PasswordService
    {
       [Inject]
       public static var display:IDisplay;
@@ -23,15 +23,15 @@ package alternativa.tanks.model.useremailandpassword
       public static var socialNetworkPanelService:ISocialNetworkPanelService;
       
       [Inject]
-      public static var §null import§:ISettingsService;
+      public static var Renamed2284:ISettingsService;
       
       private var _email:String;
       
       private var unconfirmedEmail:String;
       
-      private var §super each§:Function;
+      private var Renamed2186:Function;
       
-      private var §break var final§:Function;
+      private var Renamed2285:Function;
       
       public function UserEmailAndPasswordModel()
       {
@@ -56,7 +56,7 @@ package alternativa.tanks.model.useremailandpassword
       
       public function emailConfirmed(param1:String) : void
       {
-         §null import§.§use for throw§(param1,true);
+         Renamed2284.Renamed2286(param1,true);
          this._email = param1;
       }
       
@@ -65,27 +65,27 @@ package alternativa.tanks.model.useremailandpassword
          display.dialogsLayer.addChild(new Alert(Alert.ERROR_PASSWORD_CHANGE));
       }
       
-      public function §6!B§() : void
+      public function Renamed2287() : void
       {
-         this.§4!=§(this.§super each§,true);
+         this.Renamed2288(this.Renamed2186,true);
       }
       
-      public function §each package each§() : void
+      public function Renamed2289() : void
       {
-         this.§4!=§(this.§super each§,false);
+         this.Renamed2288(this.Renamed2186,false);
       }
       
-      public function §finally package package§() : void
+      public function Renamed2290() : void
       {
-         this.§4!=§(this.§break var final§,false);
+         this.Renamed2288(this.Renamed2285,false);
       }
       
-      public function §use catch use§() : void
+      public function Renamed2291() : void
       {
-         this.§4!=§(this.§break var final§,true);
+         this.Renamed2288(this.Renamed2285,true);
       }
       
-      private function §4!=§(param1:Function, param2:Boolean) : *
+      private function Renamed2288(param1:Function, param2:Boolean) : *
       {
          if(Boolean(param1))
          {
@@ -105,9 +105,9 @@ package alternativa.tanks.model.useremailandpassword
       
       public function changeEmail(param1:String) : void
       {
-         §null import§.§use for throw§(param1,false);
+         Renamed2284.Renamed2286(param1,false);
          this.unconfirmedEmail = param1;
-         server.§<U§(param1);
+         server.Renamed2292(param1);
       }
       
       public function getEmail() : String
@@ -117,35 +117,35 @@ package alternativa.tanks.model.useremailandpassword
       
       public function sendChangeInstruction() : void
       {
-         server.§#!2§();
+         server.Renamed2293();
       }
       
-      public function §package catch else§(param1:Function) : void
+      public function Renamed2196(param1:Function) : void
       {
-         this.§break var final§ = param1;
-         server.§="x§();
+         this.Renamed2285 = param1;
+         server.Renamed2294();
       }
       
-      public function §-#f§(param1:String) : void
+      public function Renamed2204(param1:String) : void
       {
-         server.§-#f§(param1);
+         server.Renamed2204(param1);
       }
       
-      public function §true const package§(param1:String, param2:Function) : void
+      public function Renamed2198(param1:String, param2:Function) : void
       {
-         this.§super each§ = param2;
-         server.§in const include§(param1);
+         this.Renamed2186 = param2;
+         server.Renamed2295(param1);
       }
       
-      public function §false set get§(param1:String, param2:String) : void
+      public function Renamed2182(param1:String, param2:String) : void
       {
-         server.§false set get§(param1,param2);
+         server.Renamed2182(param1,param2);
       }
       
       public function objectLoaded() : void
       {
          this._email = getInitParam().email;
-         §null import§.§use for throw§(this._email,getInitParam().emailConfirmed);
+         Renamed2284.Renamed2286(this._email,getInitParam().emailConfirmed);
          OSGi.getInstance().registerService(PasswordService,this);
       }
       

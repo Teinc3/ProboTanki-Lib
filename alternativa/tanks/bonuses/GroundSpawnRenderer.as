@@ -1,11 +1,11 @@
 package alternativa.tanks.bonuses
 {
    import alternativa.tanks.battle.BattleService;
-   import alternativa.tanks.battle.scene3d.§else if§;
-   import §extends for const§.§1Q§;
-   import §extends for const§.§["D§;
+   import alternativa.tanks.battle.scene3d.Renamed919;
+   import Renamed356.Renamed1443;
+   import Renamed356.Renamed1444;
    
-   public class GroundSpawnRenderer extends §["D§ implements §else if§
+   public class GroundSpawnRenderer extends Renamed1444 implements Renamed919
    {
       [Inject]
       public static var battleService:BattleService;
@@ -16,7 +16,7 @@ package alternativa.tanks.bonuses
       
       private var param:Number;
       
-      public function GroundSpawnRenderer(param1:§1Q§)
+      public function GroundSpawnRenderer(param1:Renamed1443)
       {
          super(param1);
       }
@@ -28,7 +28,7 @@ package alternativa.tanks.bonuses
          param1.onRemove.add(this.destroy);
          param1.onPickup.add(this.destroy);
          param1.onDestroy.add(this.destroy);
-         battleService.§3l§().§9"N§(this,0);
+         battleService.Renamed621().Renamed1287(this,0);
       }
       
       public function render(param1:int, param2:int) : void
@@ -50,13 +50,13 @@ package alternativa.tanks.bonuses
       
       private function startFlashAnimation() : void
       {
-         var _loc1_:SpawnFlashRenderer = SpawnFlashRenderer(battleService.§class while§().getObject(SpawnFlashRenderer));
+         var _loc1_:SpawnFlashRenderer = SpawnFlashRenderer(battleService.Renamed618().getObject(SpawnFlashRenderer));
          _loc1_.start(this.bonus);
       }
       
       private function destroy() : void
       {
-         battleService.§3l§().§0!n§(this,0);
+         battleService.Renamed621().Renamed1289(this,0);
          this.bonus.onRemove.remove(this.destroy);
          this.bonus.onPickup.remove(this.destroy);
          this.bonus.onDestroy.remove(this.destroy);

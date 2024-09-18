@@ -19,7 +19,7 @@ package alternativa.tanks.controller.commands
       
       override public function execute() : void
       {
-         this.entranceGateway.§switch package function§(this.sendMessageEvent.emailAddress);
+         this.entranceGateway.Renamed1569(this.sendMessageEvent.emailAddress);
       }
    }
 }

@@ -17,12 +17,12 @@ package alternativa.tanks.model.panel
    import alternativa.tanks.help.ScoreHelper;
    import alternativa.tanks.model.shop.ShopModel;
    import alternativa.tanks.service.achievement.IAchievementService;
-   import alternativa.tanks.service.fps.§ v§;
+   import alternativa.tanks.service.fps.Renamed570;
    import alternativa.tanks.service.fps.FPSService;
    import alternativa.tanks.service.money.IMoneyService;
    import alternativa.tanks.service.panel.IPanelView;
-   import §break set function§.§'!`§;
-   import §break set function§.§1# §;
+   import Renamed313.Renamed2155;
+   import Renamed313.Renamed2156;
    import controls.RedButton;
    import controls.base.DefaultButtonBase;
    import controls.buttons.h30px.GreenMediumButton;
@@ -51,9 +51,9 @@ package alternativa.tanks.model.panel
    import projects.tanks.clients.fp10.libraries.tanksservices.utils.KeyUpListenerPriority;
    import scpacker.networking.Network;
    import services.alertservice.Alert;
-   import services.alertservice.§get const use§;
+   import services.alertservice.Renamed1616;
    
-   public class PanelModel extends §1# § implements §'!`§
+   public class PanelModel extends Renamed2156 implements Renamed2155
    {
       [Inject]
       public static var panelView:IPanelView;
@@ -95,7 +95,7 @@ package alternativa.tanks.model.panel
       
       private var panel:MainPanel;
       
-      private var §@!;§:String;
+      private var Renamed2157:String;
       
       private var settingsWindow:SettingsWindow;
       
@@ -180,32 +180,32 @@ package alternativa.tanks.model.panel
          }
          else
          {
-            lobbyLayoutService.§for const const§();
+            lobbyLayoutService.Renamed2158();
          }
       }
       
       public function objectLoaded() : void
       {
-         panelView.§break const const§(true,false,false,false,true);
-         this.panel = panelView.§+#,§();
+         panelView.Renamed2159(true,false,false,false,true);
+         this.panel = panelView.Renamed2160();
          this.showPanel();
          this.addListeners();
          this.updateNavigationLock(null);
          lobbyLayoutService.addEventListener(LobbyLayoutServiceEvent.BEGIN_LAYOUT_SWITCH,this.updateNavigationLock);
          lobbyLayoutService.addEventListener(LobbyLayoutServiceEvent.END_LAYOUT_SWITCH,this.updateNavigationLock);
-         § v§(OSGi.getInstance().getService(FPSService)).start();
+         Renamed570(OSGi.getInstance().getService(FPSService)).start();
       }
       
       public function objectLoadedPost() : void
       {
          achievementService.setGarageBuyButtonTargetPoint(new Point(0,0));
-         this.§[5§();
+         this.Renamed2161();
          display.stage.addEventListener(KeyboardEvent.KEY_DOWN,this.onKey);
       }
       
-      private function §[5§() : void
+      private function Renamed2161() : void
       {
-         var _loc1_:Boolean = Boolean(this.panel.buttonBar.§!#T§());
+         var _loc1_:Boolean = Boolean(this.panel.buttonBar.Renamed2162());
          var _loc2_:int = 465 + 13 * 2 + 110 + 60;
          var _loc3_:RankBarHelper = new RankBarHelper(0.5,_loc2_,60);
          var _loc4_:RatingIndicatorHelper = new RatingIndicatorHelper(1,_loc2_,75 - (_loc1_ ? 180 : 90));
@@ -353,7 +353,7 @@ package alternativa.tanks.model.panel
       public function _showMessage(param1:String) : void
       {
          var _loc2_:Alert = new Alert();
-         _loc2_.showAlert(param1,Vector.<String>([§get const use§.OK]));
+         _loc2_.showAlert(param1,Vector.<String>([Renamed1616.OK]));
       }
       
       private function showPanel() : void
@@ -374,10 +374,10 @@ package alternativa.tanks.model.panel
       private function onButtonBarButtonClick(param1:MainButtonBarEvents) : void
       {
          achievementService.hideAllBubbles(false);
-         this.§@!;§ = param1.typeButton;
-         if(Boolean(lobbyLayoutService.inBattle()) && this.§static const each§(param1.typeButton) && !lobbyLayoutService.isWindowOpenOverBattle())
+         this.Renamed2157 = param1.typeButton;
+         if(Boolean(lobbyLayoutService.inBattle()) && this.Renamed2163(param1.typeButton) && !lobbyLayoutService.isWindowOpenOverBattle())
          {
-            this.§throw package get§();
+            this.Renamed2164();
          }
          else
          {
@@ -385,29 +385,29 @@ package alternativa.tanks.model.panel
          }
       }
       
-      private function §static const each§(param1:String) : Boolean
+      private function Renamed2163(param1:String) : Boolean
       {
          return [MainButtonBarEvents.BATTLE,MainButtonBarEvents.GARAGE].indexOf(param1) >= 0;
       }
       
-      private function §throw package get§() : void
+      private function Renamed2164() : void
       {
-         var _loc1_:String = this.§use set case§();
+         var _loc1_:String = this.Renamed2165();
          var _loc2_:Vector.<Sprite> = new Vector.<Sprite>();
          var _loc3_:* = new GreenMediumButton();
-         _loc3_.label = §get const use§.YES;
+         _loc3_.label = Renamed1616.YES;
          _loc2_.push(_loc3_);
          var _loc4_:*;
-         (_loc4_ = new RedButton()).label = §get const use§.NO;
+         (_loc4_ = new RedButton()).label = Renamed1616.NO;
          _loc2_.push(_loc4_);
          var _loc5_:*;
-         (_loc5_ = new DefaultButtonBase()).label = §get const use§.CANCEL;
+         (_loc5_ = new DefaultButtonBase()).label = Renamed1616.CANCEL;
          _loc2_.push(_loc5_);
-         alertService.§switch const true§(_loc1_,Vector.<String>([§get const use§.YES,§get const use§.NO,§get const use§.CANCEL]),_loc2_);
+         alertService.Renamed2166(_loc1_,Vector.<String>([Renamed1616.YES,Renamed1616.NO,Renamed1616.CANCEL]),_loc2_);
          alertService.addEventListener(AlertServiceEvent.ALERT_BUTTON_PRESSED,this.onQuitBattleDialogButtonPressed);
       }
       
-      private function §use set case§() : String
+      private function Renamed2165() : String
       {
          return localeService.getText(TanksLocale.TEXT_ALERT_STAY_IN_BATTLE);
       }
@@ -417,20 +417,20 @@ package alternativa.tanks.model.panel
          alertService.removeEventListener(AlertServiceEvent.ALERT_BUTTON_PRESSED,this.onQuitBattleDialogButtonPressed);
          switch(param1.typeButton)
          {
-            case §get const use§.CANCEL:
+            case Renamed1616.CANCEL:
                this.setButtonState(LayoutState.BATTLE);
                break;
-            case §get const use§.NO:
-               lobbyLayoutService.exitFromBattleToState(this.§catch set for§());
+            case Renamed1616.NO:
+               lobbyLayoutService.exitFromBattleToState(this.Renamed2167());
                break;
-            case §get const use§.YES:
+            case Renamed1616.YES:
                this.changeState();
          }
       }
       
-      private function §catch set for§() : LayoutState
+      private function Renamed2167() : LayoutState
       {
-         switch(this.§@!;§)
+         switch(this.Renamed2157)
          {
             case MainButtonBarEvents.GARAGE:
                return LayoutState.GARAGE;
@@ -441,7 +441,7 @@ package alternativa.tanks.model.panel
       
       private function changeState() : void
       {
-         switch(this.§@!;§)
+         switch(this.Renamed2157)
          {
             case MainButtonBarEvents.BATTLE:
                lobbyLayoutService.showBattleSelect();
@@ -480,7 +480,7 @@ package alternativa.tanks.model.panel
       
       private function onAlertButtonPressed(param1:AlertEvent) : void
       {
-         if(param1.typeButton == §get const use§.YES)
+         if(param1.typeButton == Renamed1616.YES)
          {
             StartupSettings.closeApplication();
             IStorageService(OSGi.getInstance().getService(IStorageService)).getStorage().data.userHash = null;

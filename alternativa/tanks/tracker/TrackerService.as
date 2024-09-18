@@ -12,7 +12,7 @@ package alternativa.tanks.tracker
    {
       private static var clientLog:IClientLog;
       
-      private static var §2"P§:Dictionary;
+      private static var Renamed3881:Dictionary;
       
       private var commands:Vector.<TrackerCommand>;
       
@@ -29,8 +29,8 @@ package alternativa.tanks.tracker
          {
             this.commands = new Vector.<TrackerCommand>();
             this.timer = new Timer(1000);
-            this.timer.addEventListener(TimerEvent.TIMER,this.§#!h§);
-            §2"P§ = new Dictionary();
+            this.timer.addEventListener(TimerEvent.TIMER,this.Renamed3882);
+            Renamed3881 = new Dictionary();
             this.trackPageView("initTracker");
          }
       }
@@ -41,7 +41,7 @@ package alternativa.tanks.tracker
          if(this.available)
          {
             _loc2_ = getTimer() / 100;
-            §2"P§[param1] = _loc2_;
+            Renamed3881[param1] = _loc2_;
             this.commands.push(new TrackerCommand("GATrackPageView","/" + param1));
             this.timer.start();
          }
@@ -53,7 +53,7 @@ package alternativa.tanks.tracker
          if(this.available)
          {
             _loc4_ = getTimer() / 100;
-            §2"P§[param2] = _loc4_;
+            Renamed3881[param2] = _loc4_;
             this.commands.push(new TrackerCommand("GATrackEvent",param1,param2,param3));
             this.timer.start();
          }
@@ -65,9 +65,9 @@ package alternativa.tanks.tracker
          if(this.available)
          {
             _loc4_ = getTimer() / 100;
-            if(§2"P§[param3] != null)
+            if(Renamed3881[param3] != null)
             {
-               this.trackEvent(param1,param2 + "<=" + param3,String((_loc4_ - §2"P§[param3]) / 10));
+               this.trackEvent(param1,param2 + "<=" + param3,String((_loc4_ - Renamed3881[param3]) / 10));
             }
             else
             {
@@ -76,7 +76,7 @@ package alternativa.tanks.tracker
          }
       }
       
-      private function §#!h§(param1:TimerEvent) : void
+      private function Renamed3882(param1:TimerEvent) : void
       {
          var _loc3_:TrackerCommand = null;
          var _loc4_:Boolean = false;

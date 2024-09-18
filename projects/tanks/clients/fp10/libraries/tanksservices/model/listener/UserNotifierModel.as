@@ -2,8 +2,8 @@ package projects.tanks.clients.fp10.libraries.tanksservices.model.listener
 {
    import alternativa.osgi.OSGi;
    import alternativa.types.Long;
-   import §implements const catch§.§[!a§;
-   import §implements const catch§.§case catch return§;
+   import Renamed386.Renamed4501;
+   import Renamed386.Renamed4502;
    import platform.client.fp10.core.model.ObjectLoadListener;
    import platform.client.fp10.core.model.ObjectUnloadListener;
    import projects.tanks.clients.fp10.libraries.tanksservices.model.UserRefresh;
@@ -11,7 +11,7 @@ package projects.tanks.clients.fp10.libraries.tanksservices.model.listener
    import projects.tanks.clients.fp10.libraries.tanksservices.service.user.IUserInfoService;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.userproperties.IUserPropertiesService;
    
-   public class UserNotifierModel extends §[!a§ implements §case catch return§, UserNotifier, ObjectLoadListener, ObjectUnloadListener
+   public class UserNotifierModel extends Renamed4501 implements Renamed4502, UserNotifier, ObjectLoadListener, ObjectUnloadListener
    {
       [Inject]
       public static var userInfoService:IUserInfoService;
@@ -47,7 +47,7 @@ package projects.tanks.clients.fp10.libraries.tanksservices.model.listener
             UserRefresh(modelRegistry.getModel(Long.getLong(60229216,350352129))).remove(_loc2_);
             UserRefresh(modelRegistry.getModel(Long.getLong(990863444,376077627))).remove(_loc2_);
          }
-         server.§use const const§(param1);
+         server.Renamed4503(param1);
       }
       
       public function hasDataConsumer(param1:String) : Boolean

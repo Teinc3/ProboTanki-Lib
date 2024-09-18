@@ -1,6 +1,6 @@
 package
 {
-   import §7"j§.§!"_§;
+   import Renamed1.Renamed2;
    import alternativa.ClientConfigurator;
    import alternativa.osgi.OSGi;
    import alternativa.osgi.service.display.IDisplay;
@@ -55,19 +55,19 @@ package
          new ClientConfigurator().start(this.container,new LauncherParams(),new ConnectionParameters(param1.parameters["ip"],Vector.<int>([param1.parameters["port"]]),null,param1.parameters["resources"],false,false),null);
          _loc3_ = new LocaleService(param1.parameters["lang"],"en");
          OSGi.getInstance().registerService(ILocaleService,_loc3_);
-         new LocalizationLoader().§try package while§(param1.parameters["resources"] + "/localized.data_" + _loc3_.language + "?rand=" + Math.random(),this.activate);
+         new LocalizationLoader().Renamed3(param1.parameters["resources"] + "/localized.data_" + _loc3_.language + "?rand=" + Math.random(),this.activate);
       }
       
       private function activate() : void
       {
          new EntranceActivator().start(OSGi.getInstance());
-         new §finally for include§().start(OSGi.getInstance());
+         new Renamed4().start(OSGi.getInstance());
          ILoaderWindowService(OSGi.getInstance().getService(ILoaderWindowService)).showLoaderWindow();
          var _loc1_:GPUCapabilities = new GPUCapabilities(IDisplay(OSGi.getInstance().getService(IDisplay)).stage);
-         _loc1_.addEventListener(Event.COMPLETE,this.§+!!§);
+         _loc1_.addEventListener(Event.COMPLETE,this.Renamed5);
          _loc1_.detect();
          StartupSettings.preLauncher = Sprite(parent.parent.parent);
-         this.§catch const true§();
+         this.Renamed6();
       }
       
       public function SUPER(param1:Stage, param2:DisplayObjectContainer, param3:LoaderInfo = null) : void
@@ -78,7 +78,7 @@ package
          this.activateAllModels(param3);
       }
       
-      private function §+!!§(param1:Event) : void
+      private function Renamed5(param1:Event) : void
       {
          OSGi.clientLog.log("GPUDetection","GPU detection completed, %1",GPUCapabilities.gpuEnabled);
          this.serverNormal();
@@ -86,12 +86,12 @@ package
       
       private function serverNormal() : void
       {
-         §!"_§.init();
+         Renamed2.init();
          var _loc1_:ServerConnectionService = new ServerConnectionServiceImpl();
          _loc1_.connect();
       }
       
-      private function §catch const true§() : void
+      private function Renamed6() : void
       {
          var _loc1_:ISpace = new Space(Long.getLong(884380667,214),null,null,false);
          var _loc2_:ISpace = new Space(Long.getLong(59235923,646943),null,null,false);

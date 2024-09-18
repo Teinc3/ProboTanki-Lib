@@ -20,7 +20,7 @@ package projects.tanks.clients.flash.commons.services.notification
       public static var display:IDisplay;
       
       [Inject]
-      public static var §import for for§:INotificationSoundService;
+      public static var Renamed2086:INotificationSoundService;
       
       protected static const GAP:int = 11;
       
@@ -155,7 +155,7 @@ package projects.tanks.clients.flash.commons.services.notification
             "ease":Linear.easeNone,
             "onComplete":this.onCompleteShow
          });
-         §import for for§.playNotificationSound();
+         Renamed2086.playNotificationSound();
       }
       
       private function onCompleteShow() : void

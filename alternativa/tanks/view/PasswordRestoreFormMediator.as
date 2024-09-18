@@ -25,7 +25,7 @@ package alternativa.tanks.view
       
       override public function onRegister() : void
       {
-         addViewListener(PasswordRestoreCaptchaEvent.CAPTCHA,this.§!]§,PasswordRestoreCaptchaEvent);
+         addViewListener(PasswordRestoreCaptchaEvent.CAPTCHA,this.Renamed3889,PasswordRestoreCaptchaEvent);
          addViewListener(NavigationEvent.GO_TO_LOGIN_FORM,dispatch,NavigationEvent);
          addViewListener(RefreshCaptchaClickedEvent.CLICKED,this.onRefreshCaptchaClicked,RefreshCaptchaClickedEvent);
          addContextListener(PasswordRestoreResultEvent.EMAIL_DOES_NOT_EXISTS,this.onEmailDoesNotExists,PasswordRestoreResultEvent);
@@ -34,10 +34,10 @@ package alternativa.tanks.view
          addContextListener(CaptchaAnswerIsIncorrectEvent.EVENT_TYPE,this.onCaptchaFailed);
       }
       
-      private function §!]§(param1:PasswordRestoreCaptchaEvent) : void
+      private function Renamed3889(param1:PasswordRestoreCaptchaEvent) : void
       {
          var _loc2_:SendRestoreEmailMessageEvent = new SendRestoreEmailMessageEvent(param1.getEmail());
-         dispatch(new CheckCaptchaAnswerEvent(param1.§#"b§(),CaptchaLocation.RESTORE_PASSWORD_FORM,_loc2_));
+         dispatch(new CheckCaptchaAnswerEvent(param1.Renamed1576(),CaptchaLocation.RESTORE_PASSWORD_FORM,_loc2_));
       }
       
       private function onMessageHaveBeenSent(param1:PasswordRestoreResultEvent) : void

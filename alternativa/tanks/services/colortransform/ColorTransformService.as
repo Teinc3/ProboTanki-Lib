@@ -6,15 +6,15 @@ package alternativa.tanks.services.colortransform
    {
       function setColorTransform(param1:ColorTransform) : void;
       
-      function §,#3§() : ColorTransform;
+      function Renamed3813() : ColorTransform;
       
-      function §!# §(param1:§4$"§) : void;
+      function Renamed538(param1:Renamed1682) : void;
       
-      function §,"q§(param1:ColorTransform, param2:ColorTransform, param3:ColorTransform, param4:ColorTransform) : void;
+      function Renamed3814(param1:ColorTransform, param2:ColorTransform, param3:ColorTransform, param4:ColorTransform) : void;
       
-      function §each for package§() : ColorTransform;
+      function Renamed3815() : ColorTransform;
       
-      function §8"g§() : ColorTransform;
+      function Renamed3816() : ColorTransform;
    }
 }
 

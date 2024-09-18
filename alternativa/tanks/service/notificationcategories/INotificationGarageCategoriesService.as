@@ -6,13 +6,13 @@ package alternativa.tanks.service.notificationcategories
    
    public interface INotificationGarageCategoriesService extends IEventDispatcher
    {
-      function §native const else§(param1:Vector.<GarageItemInfo>) : void;
+      function Renamed2115(param1:Vector.<GarageItemInfo>) : void;
       
-      function §^!L§(param1:ItemViewCategoryEnum) : void;
+      function Renamed2173(param1:ItemViewCategoryEnum) : void;
       
-      function §do for finally§(param1:ItemViewCategoryEnum) : Boolean;
+      function Renamed1929(param1:ItemViewCategoryEnum) : Boolean;
       
-      function §[n§(param1:ItemViewCategoryEnum) : void;
+      function Renamed1930(param1:ItemViewCategoryEnum) : void;
    }
 }
 

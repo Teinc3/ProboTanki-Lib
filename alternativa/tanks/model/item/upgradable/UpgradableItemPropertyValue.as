@@ -7,9 +7,9 @@ package alternativa.tanks.model.item.upgradable
    import alternativa.tanks.model.item.upgradable.calculators.UpgradeLinearCalculator;
    import alternativa.tanks.service.item.ItemService;
    import alternativa.tanks.service.item.upgradable.speedup.SpeedUpCostCalculatorService;
-   import alternativa.tanks.service.itempropertyparams.§8!+§;
+   import alternativa.tanks.service.itempropertyparams.Renamed2149;
    import alternativa.tanks.service.itempropertyparams.ItemPropertyParamsService;
-   import alternativa.tanks.service.itempropertyparams.§else package implements§;
+   import alternativa.tanks.service.itempropertyparams.Renamed1710;
    import projects.tanks.client.garage.models.item.properties.ItemGarageProperty;
    import projects.tanks.client.garage.models.item.properties.ItemProperty;
    import projects.tanks.client.garage.models.item.upgradeable.types.GaragePropertyData;
@@ -40,7 +40,7 @@ package alternativa.tanks.model.item.upgradable
       
       public function UpgradableItemPropertyValue(param1:GaragePropertyData, param2:Boolean)
       {
-         var _loc3_:§else package implements§ = null;
+         var _loc3_:Renamed1710 = null;
          var _loc4_:PropertyData = null;
          var _loc5_:Vector.<GaragePropertyCalculator> = null;
          var _loc6_:Number = NaN;
@@ -53,9 +53,9 @@ package alternativa.tanks.model.item.upgradable
          this.isDiscountForNextModification = param2;
          _loc3_ = propertyParamsService.getParams(param1.property);
          var _loc9_:Vector.<ItemProperty> = _loc3_.getProperties();
-         switch(_loc3_.§catch package implements§())
+         switch(_loc3_.Renamed2150())
          {
-            case §8!+§.§1!_§:
+            case Renamed2149.Renamed2151:
                _loc5_ = new Vector.<GaragePropertyCalculator>();
                for each(_loc4_ in param1.properties)
                {
@@ -70,7 +70,7 @@ package alternativa.tanks.model.item.upgradable
                }
                this.valueCalculator = new RangePropertyCalculator(_loc5_[0],_loc5_[1]);
                break;
-            case §8!+§.§[2§:
+            case Renamed2149.Renamed2152:
                _loc6_ = 0;
                _loc7_ = 0;
                for each(_loc4_ in param1.properties)
@@ -81,7 +81,7 @@ package alternativa.tanks.model.item.upgradable
                      _loc7_ += _loc4_.finalValue;
                   }
                }
-               _loc8_ = _loc3_.§>8§();
+               _loc8_ = _loc3_.Renamed2153();
                _loc6_ *= _loc8_;
                _loc7_ *= _loc8_;
                this.valueCalculator = new GaragePropertyCalculator(_loc6_,_loc7_,this.data.maxLevel);

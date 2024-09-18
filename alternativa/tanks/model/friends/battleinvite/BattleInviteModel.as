@@ -11,8 +11,8 @@ package alternativa.tanks.model.friends.battleinvite
    import platform.client.fp10.core.resource.types.SoundResource;
    import projects.tanks.client.commons.models.layout.LayoutState;
    import projects.tanks.client.panel.model.battleinvite.BattleInviteMessage;
-   import projects.tanks.client.panel.model.battleinvite.§class set function§;
-   import projects.tanks.client.panel.model.battleinvite.§default package override§;
+   import projects.tanks.client.panel.model.battleinvite.Renamed2084;
+   import projects.tanks.client.panel.model.battleinvite.Renamed2085;
    import projects.tanks.clients.flash.commons.services.battlelinkactivator.BattleLinkActivatorServiceEvent;
    import projects.tanks.clients.flash.commons.services.battlelinkactivator.BattleLinkAliveEvent;
    import projects.tanks.clients.flash.commons.services.battlelinkactivator.IBattleLinkActivatorService;
@@ -30,9 +30,9 @@ package alternativa.tanks.model.friends.battleinvite
    import projects.tanks.clients.fp10.libraries.tanksservices.service.layout.ILobbyLayoutService;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.user.IUserInfoLabelUpdater;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.user.IUserInfoService;
-   import services.alertservice.§get const use§;
+   import services.alertservice.Renamed1616;
    
-   public class BattleInviteModel extends §default package override§ implements §class set function§, ObjectLoadListener, ObjectUnloadListener
+   public class BattleInviteModel extends Renamed2085 implements Renamed2084, ObjectLoadListener, ObjectUnloadListener
    {
       [Inject]
       public static var battleInviteService:IBattleInviteService;
@@ -68,7 +68,7 @@ package alternativa.tanks.model.friends.battleinvite
       public static var friendInfoService:IFriendInfoService;
       
       [Inject]
-      public static var §import for for§:INotificationSoundService;
+      public static var Renamed2086:INotificationSoundService;
       
       private var inviteList:Dictionary;
       
@@ -140,10 +140,10 @@ package alternativa.tanks.model.friends.battleinvite
       public function objectLoaded() : void
       {
          this.inviteList = new Dictionary();
-         var _loc1_:SoundResource = getInitParam().§in package case§;
+         var _loc1_:SoundResource = getInitParam().Renamed2087;
          if(_loc1_ != null && _loc1_.isLoaded)
          {
-            §import for for§.notificationSound = getInitParam().§in package case§.sound;
+            Renamed2086.notificationSound = getInitParam().Renamed2087.sound;
          }
          battleInviteService.addEventListener(BattleInviteServiceEvent.INVITE,this.onBattleInvite);
          battleInviteService.addEventListener(BattleInviteServiceEvent.ACCEPT,this.onAccept);
@@ -170,7 +170,7 @@ package alternativa.tanks.model.friends.battleinvite
             }
             else
             {
-               alertService.showAlert(localeService.getText(TextConst.STRING_ALERT_INVITE_TO_BATTLE_IS_UNAVAILABLE_RANK),Vector.<String>([localeService.getText(§get const use§.YES),localeService.getText(§get const use§.NO)]));
+               alertService.showAlert(localeService.getText(TextConst.STRING_ALERT_INVITE_TO_BATTLE_IS_UNAVAILABLE_RANK),Vector.<String>([localeService.getText(Renamed1616.YES),localeService.getText(Renamed1616.NO)]));
                alertService.addEventListener(AlertServiceEvent.ALERT_BUTTON_PRESSED,this.onBattleInviteAlertClick);
             }
          }
@@ -190,11 +190,11 @@ package alternativa.tanks.model.friends.battleinvite
       private function onBattleInviteAlertClick(param1:AlertServiceEvent) : void
       {
          alertService.removeEventListener(AlertServiceEvent.ALERT_BUTTON_PRESSED,this.onBattleInviteAlertClick);
-         if(param1.typeButton == localeService.getText(§get const use§.YES))
+         if(param1.typeButton == localeService.getText(Renamed1616.YES))
          {
             this.sendInviteToServer();
          }
-         else if(param1.typeButton == localeService.getText(§get const use§.NO) && dialogWindowsDispatcherService.isOpen())
+         else if(param1.typeButton == localeService.getText(Renamed1616.NO) && dialogWindowsDispatcherService.isOpen())
          {
             blurService.blur();
          }
@@ -251,7 +251,7 @@ package alternativa.tanks.model.friends.battleinvite
          {
             return;
          }
-         alertService.showAlert(localeService.getText(TextConst.STRING_BATTLE_CANNOT_BE_FOUND_ALERT),Vector.<String>([localeService.getText(§get const use§.OK)]));
+         alertService.showAlert(localeService.getText(TextConst.STRING_BATTLE_CANNOT_BE_FOUND_ALERT),Vector.<String>([localeService.getText(Renamed1616.OK)]));
          server.reject(this.userId);
       }
       

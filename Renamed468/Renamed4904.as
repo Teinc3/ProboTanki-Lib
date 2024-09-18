@@ -1,0 +1,50 @@
+package Renamed468
+{
+   import Renamed189.AbstractPacket;
+   
+   public class Renamed4904 extends AbstractPacket
+   {
+      public var Renamed6864:int;
+      
+      public var barrel:int;
+      
+      public function Renamed4904(param1:int = 0, param2:int = 0)
+      {
+         super();
+         this.Renamed6864 = param1;
+         this.barrel = param2;
+         Renamed1258(param1);
+         Renamed4880("scpacker.networking.protocol.codec.primitive.IntCodec");
+         Renamed1258(param2);
+         Renamed4880("scpacker.networking.protocol.codec.primitive.ByteCodec");
+      }
+      
+      override public function Renamed4881(param1:Object, param2:int) : void
+      {
+         switch(param2)
+         {
+            case 0:
+               this.Renamed6864 = param1 as int;
+               break;
+            case 1:
+               this.barrel = param1 as int;
+         }
+      }
+      
+      override public function Renamed4882() : AbstractPacket
+      {
+         return new Renamed4904();
+      }
+      
+      override public function Renamed4883() : int
+      {
+         return 51;
+      }
+      
+      override public function getPacketId() : int
+      {
+         return -1805942142;
+      }
+   }
+}
+

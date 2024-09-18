@@ -2,11 +2,11 @@ package alternativa.tanks.gui.buttons
 {
    import alternativa.tanks.gui.CrystalLabel;
    import alternativa.tanks.service.money.IMoneyService;
-   import alternativa.tanks.service.money.§continue set switch§;
+   import alternativa.tanks.service.money.Renamed1919;
    import controls.base.ThreeLineBigButton;
    import flash.events.Event;
    
-   public class CrystalButton extends ThreeLineBigButton implements §continue set switch§
+   public class CrystalButton extends ThreeLineBigButton implements Renamed1919
    {
       [Inject]
       public static var moneyService:IMoneyService;

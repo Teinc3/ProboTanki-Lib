@@ -1,6 +1,6 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import §[" §.ICodec;
+   import Renamed5811.ICodec;
    import flash.utils.ByteArray;
    import platform.client.models.commons.types.ValidationStatus;
    

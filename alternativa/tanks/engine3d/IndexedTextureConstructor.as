@@ -11,7 +11,7 @@ package alternativa.tanks.engine3d
          super();
       }
       
-      public function §%!c§() : void
+      public function Renamed1634() : void
       {
          if(texture != null)
          {

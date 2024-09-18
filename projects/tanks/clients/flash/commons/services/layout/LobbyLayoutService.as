@@ -1,6 +1,6 @@
 package projects.tanks.clients.flash.commons.services.layout
 {
-   import §&V§.§,"-§;
+   import Renamed193.Renamed4455;
    import alternativa.osgi.service.locale.ILocaleService;
    import alternativa.startup.StartupSettings;
    import alternativa.tanks.locale.constants.TextConst;
@@ -21,7 +21,7 @@ package projects.tanks.clients.flash.commons.services.layout
    import projects.tanks.clients.fp10.libraries.tanksservices.service.storage.IStorageService;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.user.IUserInfoService;
    import services.alertservice.Alert;
-   import services.alertservice.§get const use§;
+   import services.alertservice.Renamed1616;
    
    public class LobbyLayoutService extends EventDispatcher implements ILobbyLayoutService
    {
@@ -67,7 +67,7 @@ package projects.tanks.clients.flash.commons.services.layout
       private static function onQuitGameDialogButtonPressed(param1:AlertServiceEvent) : void
       {
          alertService.removeEventListener(AlertServiceEvent.ALERT_BUTTON_PRESSED,onQuitGameDialogButtonPressed);
-         if(param1.typeButton == §get const use§.YES)
+         if(param1.typeButton == Renamed1616.YES)
          {
             clearHash();
             if(ExternalInterface.available)
@@ -97,9 +97,9 @@ package projects.tanks.clients.flash.commons.services.layout
          ILobbyLayout(modelRegistry.getModelsByInterface(ILobbyLayout)[0]).switchBattleSelect();
       }
       
-      public function §for const const§() : void
+      public function Renamed2158() : void
       {
-         dispatchEvent(new §,"-§(§,"-§.SWITCH_STARTED));
+         dispatchEvent(new Renamed4455(Renamed4455.SWITCH_STARTED));
       }
       
       public function showPayment() : void
@@ -117,7 +117,7 @@ package projects.tanks.clients.flash.commons.services.layout
          return ILobbyLayoutNotify(modelRegistry.getModelsByInterface(ILobbyLayoutNotify)[0]).getCurrentState();
       }
       
-      public function § #8§() : void
+      public function Renamed4456() : void
       {
          if(this.getCurrentState() == LayoutState.BATTLE_SELECT)
          {

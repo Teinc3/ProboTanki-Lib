@@ -48,7 +48,7 @@ package alternativa.tanks.service.dialogs
          }
       }
       
-      public function §!!n§(param1:DisplayObject) : void
+      public function Renamed1686(param1:DisplayObject) : void
       {
          if(this.dialogs.length == 0)
          {

@@ -1,6 +1,6 @@
 package scpacker.networking.protocol.codec.primitive
 {
-   import §[" §.ICodec;
+   import Renamed5811.ICodec;
    import alternativa.types.Long;
    import flash.utils.ByteArray;
    

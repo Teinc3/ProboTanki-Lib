@@ -1,18 +1,18 @@
 package alternativa.tanks.models.battle.gui.chat
 {
-   import § !g§.§class for case§;
+   import Renamed136.Renamed663;
    import alternativa.osgi.service.display.IDisplay;
    import alternativa.tanks.model.ChatSettingsTracker;
    import alternativa.tanks.services.battlegui.BattleGUIService;
    import flash.events.KeyboardEvent;
    import flash.ui.Keyboard;
-   import §for for class§.ChatModelBase;
-   import §for for class§.IChatModelBase;
+   import Renamed368.ChatModelBase;
+   import Renamed368.IChatModelBase;
    import platform.client.fp10.core.model.ObjectLoadListener;
    import platform.client.fp10.core.model.ObjectUnloadListener;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.battle.IBattleInfoService;
    
-   public class ChatModel extends ChatModelBase implements IChatModelBase, §finally else§, ObjectLoadListener, ObjectUnloadListener
+   public class ChatModel extends ChatModelBase implements IChatModelBase, Renamed2566, ObjectLoadListener, ObjectUnloadListener
    {
       [Inject]
       public static var display:IDisplay;
@@ -21,77 +21,77 @@ package alternativa.tanks.models.battle.gui.chat
       public static var battleInfoService:IBattleInfoService;
       
       [Inject]
-      public static var §]!W§:BattleGUIService;
+      public static var Renamed2423:BattleGUIService;
       
-      private var §9"§:§3"Q§;
+      private var Renamed2567:Renamed2568;
       
-      private var §true var§:String;
+      private var Renamed2569:String;
       
-      private var §?"g§:§=+§;
+      private var Renamed2570:Renamed2571;
       
-      private var §`"^§:ChatSettingsTracker;
+      private var Renamed2572:ChatSettingsTracker;
       
       public function ChatModel()
       {
          super();
-         this.§9"§ = new §3"Q§();
+         this.Renamed2567 = new Renamed2568();
       }
       
       [Obfuscation(rename="false")]
       public function objectLoaded() : void
       {
-         this.§9"§.clear();
-         this.§9"§.locked = false;
-         this.§9"§.addEventListener(§!&§.SEND_MESSAGE,this.§break var default§);
-         §]!W§.§break catch true§().addChild(this.§9"§);
+         this.Renamed2567.clear();
+         this.Renamed2567.locked = false;
+         this.Renamed2567.addEventListener(Renamed2573.SEND_MESSAGE,this.Renamed2574);
+         Renamed2423.Renamed2575().addChild(this.Renamed2567);
          display.stage.addEventListener(KeyboardEvent.KEY_UP,this.onKeyUp);
-         this.§true var§ = "";
-         this.§?"g§ = new §=+§(this.§9"§);
-         this.§`"^§ = new ChatSettingsTracker(this.§9"§);
+         this.Renamed2569 = "";
+         this.Renamed2570 = new Renamed2571(this.Renamed2567);
+         this.Renamed2572 = new ChatSettingsTracker(this.Renamed2567);
       }
       
       [Obfuscation(rename="false")]
       public function objectUnloaded() : void
       {
-         this.§9"§.removeEventListener(§!&§.SEND_MESSAGE,this.§break var default§);
-         this.§9"§.clear();
-         if(this.§9"§.parent != null)
+         this.Renamed2567.removeEventListener(Renamed2573.SEND_MESSAGE,this.Renamed2574);
+         this.Renamed2567.clear();
+         if(this.Renamed2567.parent != null)
          {
-            this.§9"§.parent.removeChild(this.§9"§);
+            this.Renamed2567.parent.removeChild(this.Renamed2567);
          }
-         this.§?"g§.close();
-         this.§`"^§.close();
+         this.Renamed2570.close();
+         this.Renamed2572.close();
          display.stage.removeEventListener(KeyboardEvent.KEY_UP,this.onKeyUp);
       }
       
       [Obfuscation(rename="false")]
-      public function addMessage(param1:String, param2:String, param3:§class for case§) : void
+      public function addMessage(param1:String, param2:String, param3:Renamed663) : void
       {
-         this.§class const super§(param1,param2,param3);
+         this.Renamed2576(param1,param2,param3);
       }
       
       [Obfuscation(rename="false")]
-      public function §native include§(param1:String, param2:String, param3:§class for case§) : void
+      public function Renamed2577(param1:String, param2:String, param3:Renamed663) : void
       {
-         this.§class const super§(param1,param2,param3,true);
+         this.Renamed2576(param1,param2,param3,true);
       }
       
-      private function §class const super§(param1:String, param2:String, param3:§class for case§, param4:Boolean = false) : void
+      private function Renamed2576(param1:String, param2:String, param3:Renamed663, param4:Boolean = false) : void
       {
          var _loc5_:* = param1 == null;
-         this.§9"§.§-#]§(param1,param3,param2 + "\n",param4,_loc5_);
+         this.Renamed2567.Renamed2578(param1,param3,param2 + "\n",param4,_loc5_);
       }
       
       [Obfuscation(rename="false")]
-      public function §native set else§(param1:String, param2:String) : void
+      public function Renamed2579(param1:String, param2:String) : void
       {
-         this.§9"§.§-#]§(null,§class for case§.NONE,param2 + "\n",true,true);
+         this.Renamed2567.Renamed2578(null,Renamed663.NONE,param2 + "\n",true,true);
       }
       
       [Obfuscation(rename="false")]
-      public function §use package throw§(param1:String) : void
+      public function Renamed2580(param1:String) : void
       {
-         this.§9"§.§use package throw§(param1);
+         this.Renamed2567.Renamed2580(param1);
       }
       
       private function onKeyUp(param1:KeyboardEvent) : void
@@ -100,26 +100,26 @@ package alternativa.tanks.models.battle.gui.chat
          {
             if(battleInfoService.isSpectatorMode())
             {
-               this.§9"§.§8"O§(this.§true var§);
+               this.Renamed2567.Renamed2581(this.Renamed2569);
             }
-            this.§9"§.§^#`§();
+            this.Renamed2567.Renamed2582();
          }
       }
       
-      private function §break var default§(param1:§!&§) : void
+      private function Renamed2574(param1:Renamed2573) : void
       {
-         server.sendMessage(param1.message,param1.§7"W§);
+         server.sendMessage(param1.message,param1.Renamed2583);
       }
       
       [Obfuscation(rename="false")]
-      public function §0"'§(param1:String) : void
+      public function Renamed2584(param1:String) : void
       {
-         this.§true var§ = param1;
+         this.Renamed2569 = param1;
       }
       
-      public function §]#6§() : §3"Q§
+      public function Renamed2585() : Renamed2568
       {
-         return this.§9"§;
+         return this.Renamed2567;
       }
    }
 }

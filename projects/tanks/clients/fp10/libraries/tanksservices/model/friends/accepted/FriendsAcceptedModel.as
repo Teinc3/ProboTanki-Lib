@@ -1,13 +1,13 @@
 package projects.tanks.clients.fp10.libraries.tanksservices.model.friends.accepted
 {
-   import §^"!§.§#!?§;
-   import §^"!§.§%#W§;
+   import Renamed4489.Renamed4490;
+   import Renamed4489.Renamed4491;
    import platform.client.fp10.core.model.ObjectLoadListener;
    import projects.tanks.client.users.model.friends.container.UserContainerCC;
    import projects.tanks.clients.fp10.libraries.tanksservices.model.friends.FriendState;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.friend.IFriendInfoService;
    
-   public class FriendsAcceptedModel extends §%#W§ implements §#!?§, ObjectLoadListener
+   public class FriendsAcceptedModel extends Renamed4491 implements Renamed4490, ObjectLoadListener
    {
       [Inject]
       public static var friendsInfoService:IFriendInfoService;

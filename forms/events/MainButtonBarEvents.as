@@ -34,7 +34,7 @@ package forms.events
       
       public static const FRIENDS:String = "Friends";
       
-      public static const §<w§:String = "DailyQuests";
+      public static const Renamed4050:String = "DailyQuests";
       
       public static const PANEL_BUTTON_PRESSED:String = "Close";
       
@@ -44,7 +44,7 @@ package forms.events
       
       public function MainButtonBarEvents(param1:int)
       {
-         this.types = new Array(ADDMONEY,RATING,CHALLENGE,BATTLE,GARAGE,STAT,SETTINGS,SOUND,HELP,CLOSE,BUGS,EXCHANGE,REFERAL,FRIENDS,§<w§);
+         this.types = new Array(ADDMONEY,RATING,CHALLENGE,BATTLE,GARAGE,STAT,SETTINGS,SOUND,HELP,CLOSE,BUGS,EXCHANGE,REFERAL,FRIENDS,Renamed4050);
          super(MainButtonBarEvents.PANEL_BUTTON_PRESSED,true,false);
          this._typeButton = this.types[param1 - 1];
       }

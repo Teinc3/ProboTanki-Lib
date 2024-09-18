@@ -1,7 +1,7 @@
 package projects.tanks.clients.flash.commons.models.battlelinkactivator
 {
-   import §=!+§.§class package import§;
-   import §=!+§.§dynamic catch super§;
+   import Renamed298.Renamed4447;
+   import Renamed298.Renamed4448;
    import alternativa.osgi.service.locale.ILocaleService;
    import alternativa.tanks.locale.constants.TextConst;
    import platform.client.fp10.core.model.ObjectLoadListener;
@@ -13,9 +13,9 @@ package projects.tanks.clients.flash.commons.models.battlelinkactivator
    import projects.tanks.clients.fp10.libraries.tanksservices.service.layout.ILobbyLayoutService;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.storage.IStorageService;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.userproperties.IUserPropertiesService;
-   import services.alertservice.§get const use§;
+   import services.alertservice.Renamed1616;
    
-   public class BattleLinkActivatorModel extends §class package import§ implements §dynamic catch super§, ObjectLoadListener, ObjectUnloadListener
+   public class BattleLinkActivatorModel extends Renamed4447 implements Renamed4448, ObjectLoadListener, ObjectUnloadListener
    {
       [Inject]
       public static var battleLinkActivatorService:IBattleLinkActivatorService;
@@ -70,7 +70,7 @@ package projects.tanks.clients.flash.commons.models.battlelinkactivator
          var _loc1_:String = userPropertyService.userName;
          if(storageService.getStorage().data.showAlertDeadBattle == _loc1_ + "_true")
          {
-            alertService.showAlert(localeService.getText(TextConst.STRING_BATTLE_CANNOT_BE_FOUND_ALERT),Vector.<String>([localeService.getText(§get const use§.OK)]));
+            alertService.showAlert(localeService.getText(TextConst.STRING_BATTLE_CANNOT_BE_FOUND_ALERT),Vector.<String>([localeService.getText(Renamed1616.OK)]));
             storageService.getStorage().data.showAlertDeadBattle = _loc1_ + "_false";
          }
       }

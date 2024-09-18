@@ -1,11 +1,11 @@
 package alternativa.tanks.model.shop.items.base
 {
-   import §extends for catch§.§0#O§;
+   import Renamed355.Renamed2267;
    import flash.display.Bitmap;
    import flash.events.MouseEvent;
-   import §var package override§.§native for implements§;
+   import Renamed454.Renamed2268;
    
-   public class ButtonItemBase extends §native for implements§
+   public class ButtonItemBase extends Renamed2268
    {
       private static const DOWN_PIXELS:int = 1;
       
@@ -15,14 +15,14 @@ package alternativa.tanks.model.shop.items.base
       
       protected var previousY:int;
       
-      public function ButtonItemBase(param1:§0#O§)
+      public function ButtonItemBase(param1:Renamed2267)
       {
          super();
          this.initAndAppendSkin(param1);
          this.init();
       }
       
-      private function initAndAppendSkin(param1:§0#O§) : void
+      private function initAndAppendSkin(param1:Renamed2267) : void
       {
          this.normalState = new Bitmap(param1.normalState);
          this.overState = new Bitmap(param1.overState);
@@ -40,7 +40,7 @@ package alternativa.tanks.model.shop.items.base
          addEventListener(MouseEvent.MOUSE_UP,this.onMouseEvent);
       }
       
-      public function setSkin(param1:§0#O§) : void
+      public function setSkin(param1:Renamed2267) : void
       {
          removeChild(this.normalState);
          removeChild(this.overState);

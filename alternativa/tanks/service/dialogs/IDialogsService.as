@@ -6,7 +6,7 @@ package alternativa.tanks.service.dialogs
    {
       function addDialog(param1:DisplayObject) : void;
       
-      function §!!n§(param1:DisplayObject) : void;
+      function Renamed1686(param1:DisplayObject) : void;
       
       function removeDialog(param1:DisplayObject) : void;
    }

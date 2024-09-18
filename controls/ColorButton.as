@@ -30,7 +30,7 @@ package controls
    import assets.button.button_red_UP_CENTER;
    import assets.button.button_red_UP_LEFT;
    import assets.button.button_red_UP_RIGHT;
-   import base.§[#X§;
+   import base.Renamed3959;
    import flash.display.BitmapData;
    import flash.events.Event;
    import flash.events.MouseEvent;
@@ -40,7 +40,7 @@ package controls
    import flash.text.TextFormatAlign;
    import fonts.TanksFontService;
    
-   public class ColorButton extends §[#X§
+   public class ColorButton extends Renamed3959
    {
       public static const DEFAULT:String = "def";
       

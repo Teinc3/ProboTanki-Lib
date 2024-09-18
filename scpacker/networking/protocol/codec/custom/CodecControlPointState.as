@@ -1,7 +1,7 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import §,#a§.§each package default§;
-   import §[" §.ICodec;
+   import Renamed206.Renamed5125;
+   import Renamed5811.ICodec;
    import flash.utils.ByteArray;
    
    public class CodecControlPointState implements ICodec
@@ -13,18 +13,18 @@ package scpacker.networking.protocol.codec.custom
       
       public function decode(param1:ByteArray) : Object
       {
-         var _loc2_:§each package default§ = null;
+         var _loc2_:Renamed5125 = null;
          var _loc3_:int = param1.readInt();
          switch(_loc3_)
          {
             case 0:
-               _loc2_ = §each package default§.RED;
+               _loc2_ = Renamed5125.RED;
                break;
             case 1:
-               _loc2_ = §each package default§.BLUE;
+               _loc2_ = Renamed5125.BLUE;
                break;
             case 2:
-               _loc2_ = §each package default§.NEUTRAL;
+               _loc2_ = Renamed5125.NEUTRAL;
          }
          return _loc2_;
       }

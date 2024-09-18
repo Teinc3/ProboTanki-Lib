@@ -1,8 +1,8 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import §[" §.ICodec;
+   import Renamed5811.ICodec;
    import flash.utils.ByteArray;
-   import projects.tanks.client.battleservice.§final package import§;
+   import projects.tanks.client.battleservice.Renamed1587;
    
    public class CodecBattleMode implements ICodec
    {
@@ -13,24 +13,24 @@ package scpacker.networking.protocol.codec.custom
       
       public function decode(param1:ByteArray) : Object
       {
-         var _loc2_:§final package import§ = null;
+         var _loc2_:Renamed1587 = null;
          var _loc3_:int = param1.readInt();
          switch(_loc3_)
          {
             case 0:
-               _loc2_ = §final package import§.DM;
+               _loc2_ = Renamed1587.DM;
                break;
             case 1:
-               _loc2_ = §final package import§.TDM;
+               _loc2_ = Renamed1587.TDM;
                break;
             case 2:
-               _loc2_ = §final package import§.CTF;
+               _loc2_ = Renamed1587.CTF;
                break;
             case 3:
-               _loc2_ = §final package import§.CP;
+               _loc2_ = Renamed1587.CP;
                break;
             case 4:
-               _loc2_ = §final package import§.AS;
+               _loc2_ = Renamed1587.AS;
          }
          return _loc2_;
       }

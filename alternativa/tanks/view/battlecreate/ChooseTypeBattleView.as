@@ -4,11 +4,11 @@ package alternativa.tanks.view.battlecreate
    import controls.TypeBattleButton;
    import flash.display.Sprite;
    import flash.events.MouseEvent;
-   import projects.tanks.client.battleservice.§final package import§;
+   import projects.tanks.client.battleservice.Renamed1587;
    
    public class ChooseTypeBattleView extends Sprite
    {
-      private const §<#5§:int = 400;
+      private const Renamed3897:int = 400;
       
       private var _battleTypesButton:Array;
       
@@ -18,7 +18,7 @@ package alternativa.tanks.view.battlecreate
       
       private var _buttonLabelsName:Vector.<String>;
       
-      private var §,"?§:Vector.<String>;
+      private var Renamed3898:Vector.<String>;
       
       private var _componentWidth:Number = 0;
       
@@ -29,7 +29,7 @@ package alternativa.tanks.view.battlecreate
          super();
          this._callBack = param3;
          this._buttonLabelsName = param1;
-         this.§,"?§ = param2;
+         this.Renamed3898 = param2;
          this.init();
       }
       
@@ -37,7 +37,7 @@ package alternativa.tanks.view.battlecreate
       {
       }
       
-      public function setAvailableTypesBattle(param1:Vector.<§final package import§>) : void
+      public function setAvailableTypesBattle(param1:Vector.<Renamed1587>) : void
       {
          var _loc2_:TypeBattleButton = null;
          var _loc3_:Object = null;
@@ -126,19 +126,19 @@ package alternativa.tanks.view.battlecreate
                }
                _loc5_++;
             }
-            this.§3"T§();
+            this.Renamed3899();
          }
       }
       
-      private function §3"T§() : void
+      private function Renamed3899() : void
       {
          var _loc1_:int = 0;
-         var _loc2_:* = this._componentWidth > this.§<#5§;
+         var _loc2_:* = this._componentWidth > this.Renamed3897;
          var _loc3_:int = 0;
          while(_loc3_ < this._battleTypesButton.length)
          {
             _loc1_ = int(this._battleTypesButton[_loc3_].id);
-            TypeBattleButton(this._battleTypesButton[_loc3_]["button"]).label = _loc2_ ? this._buttonLabelsName[_loc1_] : this.§,"?§[_loc1_];
+            TypeBattleButton(this._battleTypesButton[_loc3_]["button"]).label = _loc2_ ? this._buttonLabelsName[_loc1_] : this.Renamed3898[_loc1_];
             _loc3_++;
          }
       }
@@ -150,11 +150,11 @@ package alternativa.tanks.view.battlecreate
       
       private function onClickButton(param1:MouseEvent) : void
       {
-         var _loc2_:§final package import§ = §final package import§((param1.currentTarget as TypeBattleButton).data);
+         var _loc2_:Renamed1587 = Renamed1587((param1.currentTarget as TypeBattleButton).data);
          this._callBack.onClickTypeBattleButton(_loc2_);
       }
       
-      public function setTypeBattle(param1:§final package import§) : void
+      public function setTypeBattle(param1:Renamed1587) : void
       {
          var _loc2_:TypeBattleButton = null;
          if(this._selectedButton != null)
@@ -165,7 +165,7 @@ package alternativa.tanks.view.battlecreate
          while(_loc3_ < this._battleTypesButton.length)
          {
             _loc2_ = this._battleTypesButton[_loc3_].button;
-            if(param1 == §final package import§(_loc2_.data))
+            if(param1 == Renamed1587(_loc2_.data))
             {
                this._selectedButton = _loc2_;
                this._selectedButton.enabled = false;
@@ -174,9 +174,9 @@ package alternativa.tanks.view.battlecreate
          }
       }
       
-      public function getSelectedBattleMode() : §final package import§
+      public function getSelectedBattleMode() : Renamed1587
       {
-         return §final package import§(this._selectedButton.data);
+         return Renamed1587(this._selectedButton.data);
       }
    }
 }

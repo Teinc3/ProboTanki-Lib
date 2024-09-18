@@ -1,8 +1,8 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import §[" §.ICodec;
+   import Renamed5811.ICodec;
    import flash.utils.ByteArray;
-   import projects.tanks.client.battleselect.model.item.§5!9§;
+   import projects.tanks.client.battleselect.model.item.Renamed1620;
    
    public class CodecBattleSuspicionLevel implements ICodec
    {
@@ -13,18 +13,18 @@ package scpacker.networking.protocol.codec.custom
       
       public function decode(param1:ByteArray) : Object
       {
-         var _loc2_:§5!9§ = null;
+         var _loc2_:Renamed1620 = null;
          var _loc3_:int = param1.readInt();
          switch(_loc3_)
          {
             case 0:
-               _loc2_ = §5!9§.NONE;
+               _loc2_ = Renamed1620.NONE;
                break;
             case 1:
-               _loc2_ = §5!9§.LOW;
+               _loc2_ = Renamed1620.LOW;
                break;
             case 2:
-               _loc2_ = §5!9§.HIGH;
+               _loc2_ = Renamed1620.HIGH;
          }
          return _loc2_;
       }

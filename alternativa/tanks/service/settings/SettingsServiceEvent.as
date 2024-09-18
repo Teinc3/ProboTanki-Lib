@@ -6,17 +6,17 @@ package alternativa.tanks.service.settings
    {
       public static const SETTINGS_CHANGED:String = "SettingsServiceEvent.SETTINGS_CHANGED";
       
-      private var §switch var for§:§[!;§;
+      private var Renamed3727:Renamed2069;
       
-      public function SettingsServiceEvent(param1:String, param2:§[!;§)
+      public function SettingsServiceEvent(param1:String, param2:Renamed2069)
       {
          super(param1,true,false);
-         this.§switch var for§ = param2;
+         this.Renamed3727 = param2;
       }
       
-      public function §native set catch§() : §[!;§
+      public function Renamed2070() : Renamed2069
       {
-         return this.§switch var for§;
+         return this.Renamed3727;
       }
    }
 }

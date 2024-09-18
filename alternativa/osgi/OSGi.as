@@ -1,6 +1,6 @@
 package alternativa.osgi
 {
-   import alternativa.osgi.bundle.§;!o§;
+   import alternativa.osgi.bundle.Renamed604;
    import alternativa.osgi.bundle.IBundleActivator;
    import alternativa.osgi.catalogs.ServiceInfo;
    import alternativa.osgi.catalogs.ServicesCatalog;
@@ -63,7 +63,7 @@ package alternativa.osgi
          return _loc3_;
       }
       
-      public function installBundle(param1:§;!o§) : void
+      public function installBundle(param1:Renamed604) : void
       {
          var _loc2_:int = 0;
          var _loc3_:IBundleActivator = null;
@@ -72,9 +72,9 @@ package alternativa.osgi
             throw new Error("Bundle " + param1.name + " is already installed");
          }
          this.logger.debug("Installing bundle: " + param1.name);
-         this.logger.debug("Bundle activators: " + param1.§8#B§);
+         this.logger.debug("Bundle activators: " + param1.Renamed605);
          this.bundleDescriptors[param1.name] = param1;
-         var _loc4_:Vector.<IBundleActivator> = param1.§8#B§;
+         var _loc4_:Vector.<IBundleActivator> = param1.Renamed605;
          if(_loc4_ != null)
          {
             _loc2_ = 0;
@@ -104,12 +104,12 @@ package alternativa.osgi
          {
             throw new ArgumentError("Bundle name is null");
          }
-         var _loc4_:§;!o§ = this.bundleDescriptors[param1];
+         var _loc4_:Renamed604 = this.bundleDescriptors[param1];
          if(_loc4_ == null)
          {
             throw new Error("Bundle " + param1 + " not found");
          }
-         var _loc5_:Vector.<IBundleActivator> = _loc4_.§8#B§;
+         var _loc5_:Vector.<IBundleActivator> = _loc4_.Renamed605;
          if(_loc5_ != null)
          {
             _loc2_ = 0;
@@ -199,10 +199,10 @@ package alternativa.osgi
          return this.services.getService(param1,param2);
       }
       
-      public function get bundleList() : Vector.<§;!o§>
+      public function get bundleList() : Vector.<Renamed604>
       {
-         var _loc1_:§;!o§ = null;
-         var _loc2_:Vector.<§;!o§> = new Vector.<§;!o§>();
+         var _loc1_:Renamed604 = null;
+         var _loc2_:Vector.<Renamed604> = new Vector.<Renamed604>();
          for each(_loc1_ in this.bundleDescriptors)
          {
             _loc2_.push(_loc1_);

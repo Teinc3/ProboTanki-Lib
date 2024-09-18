@@ -1,11 +1,11 @@
 package alternativa.tanks.bonuses
 {
    import alternativa.tanks.battle.BattleService;
-   import alternativa.tanks.battle.scene3d.§else if§;
-   import §extends for const§.§1Q§;
-   import §extends for const§.§["D§;
+   import alternativa.tanks.battle.scene3d.Renamed919;
+   import Renamed356.Renamed1443;
+   import Renamed356.Renamed1444;
    
-   public class SpawnAnimation extends §["D§ implements §else if§
+   public class SpawnAnimation extends Renamed1444 implements Renamed919
    {
       [Inject]
       public static var battleService:BattleService;
@@ -16,7 +16,7 @@ package alternativa.tanks.bonuses
       
       private var alpha:Number = 0;
       
-      public function SpawnAnimation(param1:§1Q§)
+      public function SpawnAnimation(param1:Renamed1443)
       {
          super(param1);
       }
@@ -26,7 +26,7 @@ package alternativa.tanks.bonuses
          this.bonus = param1;
          this.alpha = 0;
          param1.onDestroy.add(this.destroy);
-         battleService.§3l§().§9"N§(this,0);
+         battleService.Renamed621().Renamed1287(this,0);
       }
       
       public function render(param1:int, param2:int) : void
@@ -45,7 +45,7 @@ package alternativa.tanks.bonuses
       
       private function destroy() : void
       {
-         battleService.§3l§().§0!n§(this,0);
+         battleService.Renamed621().Renamed1289(this,0);
          this.bonus.onDestroy.remove(this.destroy);
          this.bonus = null;
          recycle();

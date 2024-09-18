@@ -4,11 +4,11 @@ package alternativa.tanks.service.garage
    
    public interface GarageService
    {
-      function §!E§() : GarageWindow;
+      function Renamed1933() : GarageWindow;
       
-      function §8c§(param1:GarageWindow) : void;
+      function Renamed2096(param1:GarageWindow) : void;
       
-      function §<#h§() : void;
+      function Renamed2098() : void;
    }
 }
 

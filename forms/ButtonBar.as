@@ -1,11 +1,11 @@
 package forms
 {
-   import §]@§.§3#D§;
+   import Renamed484.Renamed4047;
    import alternativa.osgi.service.clientlog.IClientLog;
    import alternativa.osgi.service.locale.ILocaleService;
    import alternativa.tanks.locale.constants.TextConst;
-   import controls.base.§2#w§;
-   import controls.base.§?Y§;
+   import controls.base.Renamed3992;
+   import controls.base.Renamed3989;
    import controls.base.MainPanelBattlesButtonBase;
    import controls.base.MainPanelGarageButtonBase;
    import controls.friends.FriendsButton;
@@ -53,9 +53,9 @@ package forms
       
       public var addButton:MainPanelAccountButton;
       
-      public var addButton2:§<b§;
+      public var addButton2:Renamed7;
       
-      private var §?d§:§3#D§;
+      private var Renamed4048:Renamed4047;
       
       private var _soundOn:Boolean = true;
       
@@ -83,9 +83,9 @@ package forms
          this.soundButton = new MainPanelSoundButton();
          this.helpButton = new MainPanelHelpButton();
          this.closeButton = new CloseOrBackButton();
-         this.addButton = new §2#w§();
-         this.addButton2 = new §?Y§();
-         this.§?d§ = new §3#D§();
+         this.addButton = new Renamed3992();
+         this.addButton2 = new Renamed3989();
+         this.Renamed4048 = new Renamed4047();
          this._linkMode = new Array();
          super();
          this._isFirstBattleMode = param3;
@@ -108,10 +108,10 @@ package forms
          this.garageButton.label = localeService.getText(TextConst.MAIN_PANEL_BUTTON_GARAGE);
          this.garageButton.addEventListener(MouseEvent.CLICK,this.listClick);
          addChild(this.friendsButton);
-         this.§?d§.label = localeService.getText(TanksLocale.§]#i§);
-         this.§?d§.type = 15;
-         this.§?d§.addEventListener(MouseEvent.CLICK,this.listClick);
-         addChild(this.§?d§);
+         this.Renamed4048.label = localeService.getText(TanksLocale.Renamed4049);
+         this.Renamed4048.type = 15;
+         this.Renamed4048.addEventListener(MouseEvent.CLICK,this.listClick);
+         addChild(this.Renamed4048);
          this.friendsButton.type = 14;
          this.friendsButton.label = localeService.getText(TextConst.MAIN_PANEL_BUTTON_FRIENDS);
          this.friendsButton.addEventListener(MouseEvent.CLICK,this.listClick);
@@ -162,9 +162,9 @@ package forms
       
       public function draw() : void
       {
-         this.§?d§.visible = this.§!#T§();
-         this.§?d§.x = this.addButton.x + this.addButton.width + 7;
-         this.friendsButton.x = this.§?d§.x + (this.§?d§.visible ? this.§?d§.width : 0);
+         this.Renamed4048.visible = this.Renamed2162();
+         this.Renamed4048.x = this.addButton.x + this.addButton.width + 7;
+         this.friendsButton.x = this.Renamed4048.x + (this.Renamed4048.visible ? this.Renamed4048.width : 0);
          this.battlesButton.x = this.friendsButton.x + this.friendsButton.width;
          this.garageButton.x = this.battlesButton.x + this.battlesButton.width;
          this.referalsButton.x = this.garageButton.x + this.garageButton.width + 6;
@@ -200,7 +200,7 @@ package forms
          this.soundIcon.gotoAndStop(this.soundOn ? 1 : 2);
       }
       
-      public function §!#T§() : Boolean
+      public function Renamed2162() : Boolean
       {
          return userPropertiesService.rank >= 4;
       }

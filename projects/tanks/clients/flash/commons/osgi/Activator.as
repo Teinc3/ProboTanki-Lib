@@ -9,12 +9,12 @@ package projects.tanks.clients.flash.commons.osgi
    import projects.tanks.clients.flash.commons.services.layout.LobbyLayoutService;
    import projects.tanks.clients.flash.commons.services.notification.INotificationService;
    import projects.tanks.clients.flash.commons.services.notification.NotificationService;
-   import projects.tanks.clients.flash.commons.services.notification.sound.§>"2§;
+   import projects.tanks.clients.flash.commons.services.notification.sound.Renamed4453;
    import projects.tanks.clients.flash.commons.services.notification.sound.INotificationSoundService;
    import projects.tanks.clients.flash.commons.services.serverhalt.IServerHaltService;
    import projects.tanks.clients.flash.commons.services.serverhalt.ServerHaltService;
    import projects.tanks.clients.flash.commons.services.timeunit.ITimeUnitService;
-   import projects.tanks.clients.flash.commons.services.timeunit.§throw catch else§;
+   import projects.tanks.clients.flash.commons.services.timeunit.Renamed4454;
    import projects.tanks.clients.flash.commons.services.validate.IValidateService;
    import projects.tanks.clients.flash.commons.services.validate.ValidateService;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.fullscreen.FullscreenService;
@@ -37,8 +37,8 @@ package projects.tanks.clients.flash.commons.osgi
          param1.registerService(INotificationService,new NotificationService(_loc2_));
          param1.registerService(IServerHaltService,new ServerHaltService());
          param1.registerService(IValidateService,new ValidateService());
-         param1.registerService(INotificationSoundService,new §>"2§());
-         param1.registerService(ITimeUnitService,new §throw catch else§());
+         param1.registerService(INotificationSoundService,new Renamed4453());
+         param1.registerService(ITimeUnitService,new Renamed4454());
          var _loc3_:IDisplay = IDisplay(OSGi.getInstance().getService(IDisplay));
          var _loc4_:ILauncherParams = ILauncherParams(OSGi.getInstance().getService(ILauncherParams));
          var _loc5_:FullscreenServiceImpl = new FullscreenServiceImpl(_loc3_);

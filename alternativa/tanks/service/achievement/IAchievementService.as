@@ -1,7 +1,7 @@
 package alternativa.tanks.service.achievement
 {
    import flash.geom.Point;
-   import projects.tanks.client.achievements.model.achievements.§null package extends§;
+   import projects.tanks.client.achievements.model.achievements.Renamed2072;
    
    public interface IAchievementService
    {
@@ -21,15 +21,15 @@ package alternativa.tanks.service.achievement
       
       function privateAchievementBubbleIsNotNeededAnymore() : void;
       
-      function completeAchievement(param1:§null package extends§, param2:String, param3:int) : void;
+      function completeAchievement(param1:Renamed2072, param2:String, param3:int) : void;
       
-      function activateAchievement(param1:§null package extends§) : void;
+      function activateAchievement(param1:Renamed2072) : void;
       
-      function §get const import§(param1:Vector.<§null package extends§>) : void;
+      function Renamed2075(param1:Vector.<Renamed2072>) : void;
       
-      function §finally for true§() : void;
+      function Renamed3607() : void;
       
-      function §3%§() : void;
+      function Renamed3608() : void;
    }
 }
 

@@ -1,32 +1,32 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import §[" §.ICodec;
+   import Renamed5811.ICodec;
    import alternativa.osgi.OSGi;
    import alternativa.osgi.service.clientlog.IClientLog;
    import flash.utils.ByteArray;
-   import scpacker.networking.protocol.§?"s§;
-   import §with const throw§.§^v§;
+   import scpacker.networking.protocol.Renamed536;
+   import Renamed461.Renamed2773;
    
    public class CodecRotateTurretCommand implements ICodec
    {
       public static var log:IClientLog = IClientLog(OSGi.getInstance().getService(IClientLog));
       
-      private var §do case§:ICodec;
+      private var Renamed10712:ICodec;
       
-      private var §1#`§:ICodec;
+      private var Renamed10691:ICodec;
       
-      public function CodecRotateTurretCommand(param1:§?"s§)
+      public function CodecRotateTurretCommand(param1:Renamed536)
       {
          super();
-         this.§do case§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.FloatCodec");
-         this.§1#`§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.ByteCodec");
+         this.Renamed10712 = param1.getCodec("scpacker.networking.protocol.codec.primitive.FloatCodec");
+         this.Renamed10691 = param1.getCodec("scpacker.networking.protocol.codec.primitive.ByteCodec");
       }
       
       public function decode(param1:ByteArray) : Object
       {
-         var _loc2_:§^v§ = new §^v§();
-         _loc2_.angle = this.§do case§.decode(param1) as Number;
-         _loc2_.control = this.§1#`§.decode(param1) as int;
+         var _loc2_:Renamed2773 = new Renamed2773();
+         _loc2_.angle = this.Renamed10712.decode(param1) as Number;
+         _loc2_.control = this.Renamed10691.decode(param1) as int;
          return _loc2_;
       }
       
@@ -37,9 +37,9 @@ package scpacker.networking.protocol.codec.custom
          {
             throw new Error("Object is null. Use @ProtocolOptional annotation.");
          }
-         var _loc4_:§^v§ = §^v§(param2);
-         _loc3_ += this.§do case§.encode(param1,_loc4_.angle);
-         return _loc3_ + this.§1#`§.encode(param1,_loc4_.control);
+         var _loc4_:Renamed2773 = Renamed2773(param2);
+         _loc3_ += this.Renamed10712.encode(param1,_loc4_.angle);
+         return _loc3_ + this.Renamed10691.encode(param1,_loc4_.control);
       }
    }
 }

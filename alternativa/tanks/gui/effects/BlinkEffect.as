@@ -13,15 +13,15 @@ package alternativa.tanks.gui.effects
       
       private var displayObject:DisplayObject;
       
-      private var §override var do§:Number = 0.15;
+      private var Renamed1922:Number = 0.15;
       
-      private var §catch throw§:Number = 0.3;
+      private var Renamed1923:Number = 0.3;
       
       public function BlinkEffect(param1:Number = 0.15, param2:Number = 0.3)
       {
          super();
-         this.§override var do§ = param1;
-         this.§catch throw§ = param2;
+         this.Renamed1922 = param1;
+         this.Renamed1923 = param2;
       }
       
       public function start(param1:DisplayObject) : void
@@ -47,8 +47,8 @@ package alternativa.tanks.gui.effects
       {
          var _loc2_:int = 0;
          var _loc3_:int = 0;
-         _loc2_ = Math.ceil(this.§override var do§ * fpsService.§,"Q§());
-         _loc3_ = Math.ceil(this.§catch throw§ * fpsService.§,"Q§());
+         _loc2_ = Math.ceil(this.Renamed1922 * fpsService.Renamed1654());
+         _loc3_ = Math.ceil(this.Renamed1923 * fpsService.Renamed1654());
          ++this.state;
          if(this.state < _loc2_)
          {

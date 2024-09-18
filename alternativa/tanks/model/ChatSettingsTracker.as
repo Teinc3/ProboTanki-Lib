@@ -2,7 +2,7 @@ package alternativa.tanks.model
 {
    import alternativa.tanks.service.settings.ISettingsService;
    import alternativa.tanks.service.settings.SettingsServiceEvent;
-   import alternativa.tanks.service.settings.§[!;§;
+   import alternativa.tanks.service.settings.Renamed2069;
    
    public class ChatSettingsTracker
    {
@@ -21,7 +21,7 @@ package alternativa.tanks.model
       
       private function onSettingsAccepted(param1:SettingsServiceEvent) : void
       {
-         if(param1.§native set catch§() == §[!;§.§case for with§)
+         if(param1.Renamed2070() == Renamed2069.Renamed2071)
          {
             this.chat.setShowChat(settingsService.showChat);
          }

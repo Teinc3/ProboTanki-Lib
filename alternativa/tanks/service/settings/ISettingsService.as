@@ -30,7 +30,7 @@ package alternativa.tanks.service.settings
       
       function get shadows() : Boolean;
       
-      function get §catch package throw§() : Boolean;
+      function get Renamed2472() : Boolean;
       
       function get dust() : Boolean;
       
@@ -46,25 +46,25 @@ package alternativa.tanks.service.settings
       
       function get graphicsAutoQuality() : Boolean;
       
-      function get §super for false§() : Number;
+      function get Renamed3722() : Number;
       
-      function set §super for false§(param1:Number) : void;
+      function set Renamed3722(param1:Number) : void;
       
-      function §]l§() : void;
+      function Renamed2205() : void;
       
       function get mouseControl() : Boolean;
       
       function getEmail() : String;
       
-      function §use for throw§(param1:String, param2:Boolean) : void;
+      function Renamed2286(param1:String, param2:Boolean) : void;
       
-      function §4"H§() : Boolean;
+      function Renamed3723() : Boolean;
       
-      function §throw const dynamic§() : Boolean;
+      function Renamed3724() : Boolean;
       
-      function §switch throw§() : Boolean;
+      function Renamed2184() : Boolean;
       
-      function §0#v§(param1:Boolean) : void;
+      function Renamed3725(param1:Boolean) : void;
       
       function get mouseSensitivity() : int;
       
@@ -72,13 +72,13 @@ package alternativa.tanks.service.settings
       
       function get mouseYInverseShaftAim() : Boolean;
       
-      function get § Y§() : Boolean;
+      function get Renamed2195() : Boolean;
       
-      function set § Y§(param1:Boolean) : void;
+      function set Renamed2195(param1:Boolean) : void;
       
       function get showDamage() : Boolean;
       
-      function §for function§(param1:§[!;§, param2:Object) : void;
+      function Renamed3726(param1:Renamed2069, param2:Object) : void;
    }
 }
 

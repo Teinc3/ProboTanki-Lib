@@ -1,13 +1,13 @@
 package projects.tanks.clients.fp10.libraries.tanksservices.model.friends.outgoing
 {
-   import §?"O§.§9K§;
-   import §?"O§.§return const super§;
+   import Renamed4498.Renamed4499;
+   import Renamed4498.Renamed4500;
    import platform.client.fp10.core.model.ObjectLoadListener;
    import projects.tanks.client.users.model.friends.container.UserContainerCC;
    import projects.tanks.clients.fp10.libraries.tanksservices.model.friends.FriendState;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.friend.IFriendInfoService;
    
-   public class FriendsOutgoingModel extends §9K§ implements §return const super§, ObjectLoadListener
+   public class FriendsOutgoingModel extends Renamed4499 implements Renamed4500, ObjectLoadListener
    {
       [Inject]
       public static var friendsInfoService:IFriendInfoService;

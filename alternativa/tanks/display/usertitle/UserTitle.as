@@ -1,9 +1,9 @@
 package alternativa.tanks.display.usertitle
 {
-   import § !g§.§class for case§;
-   import §!!v§.§,Q§;
-   import §%3§.MessageColor;
-   import §-!!§.§6!<§;
+   import Renamed136.Renamed663;
+   import Renamed142.Renamed1626;
+   import Renamed17.MessageColor;
+   import Renamed211.Renamed908;
    import alternativa.engine3d.core.Clipping;
    import alternativa.engine3d.materials.TextureMaterial;
    import alternativa.engine3d.objects.Sprite3D;
@@ -67,7 +67,7 @@ package alternativa.tanks.display.usertitle
       
       private static const rankIcon:SmallRankIcon = new SmallRankIcon();
       
-      private static const inventoryItemTypes:Vector.<int> = Vector.<int>([§,Q§.§&B§,§,Q§.ARMOR,§,Q§.§switch finally§,§,Q§.§`!o§]);
+      private static const inventoryItemTypes:Vector.<int> = Vector.<int>([Renamed1626.Renamed1627,Renamed1626.ARMOR,Renamed1626.Renamed1631,Renamed1626.Renamed1632]);
       
       public static const ALPHA_SPEED:Number = 0.002;
       
@@ -103,7 +103,7 @@ package alternativa.tanks.display.usertitle
       
       private var indicatorsNumberChanged:Boolean;
       
-      private var teamType:§class for case§;
+      private var teamType:Renamed663;
       
       private var healthBarSkin:ProgressBarSkin;
       
@@ -119,7 +119,7 @@ package alternativa.tanks.display.usertitle
       
       private var zOffset:Number;
       
-      private var container:§6!<§;
+      private var container:Renamed908;
       
       private var resistanceLabel:Label;
       
@@ -135,9 +135,9 @@ package alternativa.tanks.display.usertitle
       
       private var tankObject:IGameObject;
       
-      public function UserTitle(param1:Number, param2:§6!<§, param3:int, param4:Boolean, param5:IGameObject = null)
+      public function UserTitle(param1:Number, param2:Renamed908, param3:int, param4:Boolean, param5:IGameObject = null)
       {
-         this.teamType = §class for case§.NONE;
+         this.teamType = Renamed663.NONE;
          this.healthBarSkin = ProgressBarSkin.HEALTHBAR_DM;
          this.resistanceLabel = new LabelBase();
          this.size = new Size2D();
@@ -208,7 +208,7 @@ package alternativa.tanks.display.usertitle
          }
       }
       
-      public function setTeamType(param1:§class for case§) : void
+      public function setTeamType(param1:Renamed663) : void
       {
          var _loc2_:ProgressBarSkin = null;
          if(this.teamType != param1)

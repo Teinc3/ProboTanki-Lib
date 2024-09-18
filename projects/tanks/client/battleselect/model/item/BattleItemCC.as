@@ -1,17 +1,17 @@
 package projects.tanks.client.battleselect.model.item
 {
-   import §1!R§.§throw package static§;
+   import Renamed232.Renamed1582;
    import platform.client.fp10.core.type.IGameObject;
-   import projects.tanks.client.battleservice.§<#p§;
-   import projects.tanks.client.battleservice.§final package import§;
+   import projects.tanks.client.battleservice.Renamed1586;
+   import projects.tanks.client.battleservice.Renamed1587;
    
    public class BattleItemCC
    {
       private var _battleId:String;
       
-      private var _battleMode:§final package import§;
+      private var _battleMode:Renamed1587;
       
-      private var §true set switch§:§throw package static§;
+      private var Renamed4171:Renamed1582;
       
       private var _map:IGameObject;
       
@@ -21,17 +21,17 @@ package projects.tanks.client.battleselect.model.item
       
       private var _noSuppliesBattle:Boolean;
       
-      private var §super package const§:Boolean;
+      private var Renamed4174:Boolean;
       
       private var _privateBattle:Boolean;
       
       private var _proBattle:Boolean;
       
-      private var _rankRange:§<#p§;
+      private var _rankRange:Renamed1586;
       
-      private var §else for do§:§5!9§;
+      private var Renamed4198:Renamed1620;
       
-      public function BattleItemCC(param1:String = null, param2:§final package import§ = null, param3:IGameObject = null, param4:int = 0, param5:String = null, param6:Boolean = false, param7:Boolean = false, param8:Boolean = false, param9:§<#p§ = null, param10:§5!9§ = null, param11:§throw package static§ = null, param12:Boolean = false)
+      public function BattleItemCC(param1:String = null, param2:Renamed1587 = null, param3:IGameObject = null, param4:int = 0, param5:String = null, param6:Boolean = false, param7:Boolean = false, param8:Boolean = false, param9:Renamed1586 = null, param10:Renamed1620 = null, param11:Renamed1582 = null, param12:Boolean = false)
       {
          super();
          this._battleId = param1;
@@ -43,9 +43,9 @@ package projects.tanks.client.battleselect.model.item
          this._privateBattle = param7;
          this._proBattle = param8;
          this._rankRange = param9;
-         this.§else for do§ = param10;
-         this.§true set switch§ = param11;
-         this.§super package const§ = param12;
+         this.Renamed4198 = param10;
+         this.Renamed4171 = param11;
+         this.Renamed4174 = param12;
       }
       
       public function get battleId() : String
@@ -58,24 +58,24 @@ package projects.tanks.client.battleselect.model.item
          this._battleId = param1;
       }
       
-      public function get battleMode() : §final package import§
+      public function get battleMode() : Renamed1587
       {
          return this._battleMode;
       }
       
-      public function set battleMode(param1:§final package import§) : void
+      public function set battleMode(param1:Renamed1587) : void
       {
          this._battleMode = param1;
       }
       
-      public function get equipmentConstraintsMode() : §throw package static§
+      public function get equipmentConstraintsMode() : Renamed1582
       {
-         return this.§true set switch§;
+         return this.Renamed4171;
       }
       
-      public function set equipmentConstraintsMode(param1:§throw package static§) : void
+      public function set equipmentConstraintsMode(param1:Renamed1582) : void
       {
-         this.§true set switch§ = param1;
+         this.Renamed4171 = param1;
       }
       
       public function get map() : IGameObject
@@ -120,12 +120,12 @@ package projects.tanks.client.battleselect.model.item
       
       public function get parkourMode() : Boolean
       {
-         return this.§super package const§;
+         return this.Renamed4174;
       }
       
       public function set parkourMode(param1:Boolean) : void
       {
-         this.§super package const§ = param1;
+         this.Renamed4174 = param1;
       }
       
       public function get privateBattle() : Boolean
@@ -148,24 +148,24 @@ package projects.tanks.client.battleselect.model.item
          this._proBattle = param1;
       }
       
-      public function get rankRange() : §<#p§
+      public function get rankRange() : Renamed1586
       {
          return this._rankRange;
       }
       
-      public function set rankRange(param1:§<#p§) : void
+      public function set rankRange(param1:Renamed1586) : void
       {
          this._rankRange = param1;
       }
       
-      public function get suspicionLevel() : §5!9§
+      public function get suspicionLevel() : Renamed1620
       {
-         return this.§else for do§;
+         return this.Renamed4198;
       }
       
-      public function set suspicionLevel(param1:§5!9§) : void
+      public function set suspicionLevel(param1:Renamed1620) : void
       {
-         this.§else for do§ = param1;
+         this.Renamed4198 = param1;
       }
       
       public function toString() : String

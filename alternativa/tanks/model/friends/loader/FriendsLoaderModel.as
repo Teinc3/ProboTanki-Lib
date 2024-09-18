@@ -3,15 +3,15 @@ package alternativa.tanks.model.friends.loader
    import alternativa.osgi.service.display.IDisplay;
    import alternativa.tanks.gui.friends.FriendsWindow;
    import alternativa.tanks.gui.friends.FriendsWindowState;
-   import §const package each§.§,#§;
-   import §const package each§.§1#>§;
+   import Renamed336.Renamed2088;
+   import Renamed336.Renamed2089;
    import forms.events.MainButtonBarEvents;
    import platform.client.fp10.core.model.ObjectLoadPostListener;
    import platform.client.fp10.core.model.ObjectUnloadListener;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.friend.IFriendInfoService;
    import services.buttonbar.IButtonBarService;
    
-   public class FriendsLoaderModel extends §1#>§ implements §,#§, ObjectLoadPostListener, ObjectUnloadListener
+   public class FriendsLoaderModel extends Renamed2089 implements Renamed2088, ObjectLoadPostListener, ObjectUnloadListener
    {
       [Inject]
       public static var display:IDisplay;

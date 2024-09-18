@@ -1,7 +1,7 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import §'!@§.§'"a§;
-   import §[" §.ICodec;
+   import Renamed194.Renamed5918;
+   import Renamed5811.ICodec;
    import flash.utils.ByteArray;
    
    public class CodecDamageIndicatorType implements ICodec
@@ -13,21 +13,21 @@ package scpacker.networking.protocol.codec.custom
       
       public function decode(param1:ByteArray) : Object
       {
-         var _loc2_:§'"a§ = null;
+         var _loc2_:Renamed5918 = null;
          var _loc3_:int = param1.readInt();
          switch(_loc3_)
          {
             case 0:
-               _loc2_ = §'"a§.NORMAL;
+               _loc2_ = Renamed5918.NORMAL;
                break;
             case 1:
-               _loc2_ = §'"a§.CRITICAL;
+               _loc2_ = Renamed5918.CRITICAL;
                break;
             case 2:
-               _loc2_ = §'"a§.FATAL;
+               _loc2_ = Renamed5918.FATAL;
                break;
             case 3:
-               _loc2_ = §'"a§.HEAL;
+               _loc2_ = Renamed5918.HEAL;
          }
          return _loc2_;
       }

@@ -1,51 +1,51 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import §,#a§.§'"P§;
-   import §,#a§.§7N§;
-   import §9p§.§break var finally§;
-   import §9p§.§var const final§;
-   import §[" §.ICodec;
+   import Renamed206.Renamed6103;
+   import Renamed206.Renamed6110;
+   import Renamed289.Renamed6109;
+   import Renamed289.Renamed5084;
+   import Renamed5811.ICodec;
    import alternativa.osgi.OSGi;
    import alternativa.osgi.service.clientlog.IClientLog;
    import flash.utils.ByteArray;
-   import scpacker.networking.protocol.§?"s§;
+   import scpacker.networking.protocol.Renamed536;
    
    public class CodecControlPointsCC implements ICodec
    {
       public static var log:IClientLog = IClientLog(OSGi.getInstance().getService(IClientLog));
       
-      private var §?!J§:ICodec;
+      private var Renamed10647:ICodec;
       
-      private var §include const var§:ICodec;
+      private var Renamed10648:ICodec;
       
-      private var §+^§:ICodec;
+      private var Renamed10649:ICodec;
       
-      private var §false set for§:ICodec;
+      private var Renamed10650:ICodec;
       
-      private var §]"]§:ICodec;
+      private var Renamed6814:ICodec;
       
-      private var §3$%§:ICodec;
+      private var Renamed10543:ICodec;
       
-      public function CodecControlPointsCC(param1:§?"s§)
+      public function CodecControlPointsCC(param1:Renamed536)
       {
          super();
-         this.§?!J§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.FloatCodec");
-         this.§include const var§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.FloatCodec");
-         this.§+^§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.FloatCodec");
-         this.§false set for§ = param1.getCodec("scpacker.networking.protocol.codec.custom.VectorCodecClientPointData");
-         this.§]"]§ = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecDominationResources");
-         this.§3$%§ = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecDominationSounds");
+         this.Renamed10647 = param1.getCodec("scpacker.networking.protocol.codec.primitive.FloatCodec");
+         this.Renamed10648 = param1.getCodec("scpacker.networking.protocol.codec.primitive.FloatCodec");
+         this.Renamed10649 = param1.getCodec("scpacker.networking.protocol.codec.primitive.FloatCodec");
+         this.Renamed10650 = param1.getCodec("scpacker.networking.protocol.codec.custom.VectorCodecClientPointData");
+         this.Renamed6814 = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecDominationResources");
+         this.Renamed10543 = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecDominationSounds");
       }
       
       public function decode(param1:ByteArray) : Object
       {
-         var _loc2_:§7N§ = new §7N§();
-         _loc2_.§'"K§ = this.§?!J§.decode(param1) as Number;
-         _loc2_.§;%§ = this.§include const var§.decode(param1) as Number;
-         _loc2_.§8!x§ = this.§+^§.decode(param1) as Number;
-         _loc2_.§-!H§ = this.§false set for§.decode(param1) as Vector.<§'"P§>;
-         _loc2_.resources = this.§]"]§.decode(param1) as §var const final§;
-         _loc2_.§3!P§ = this.§3$%§.decode(param1) as §break var finally§;
+         var _loc2_:Renamed6110 = new Renamed6110();
+         _loc2_.Renamed6116 = this.Renamed10647.decode(param1) as Number;
+         _loc2_.Renamed6117 = this.Renamed10648.decode(param1) as Number;
+         _loc2_.Renamed6118 = this.Renamed10649.decode(param1) as Number;
+         _loc2_.Renamed6119 = this.Renamed10650.decode(param1) as Vector.<Renamed6103>;
+         _loc2_.resources = this.Renamed6814.decode(param1) as Renamed5084;
+         _loc2_.Renamed974 = this.Renamed10543.decode(param1) as Renamed6109;
          return _loc2_;
       }
       
@@ -55,13 +55,13 @@ package scpacker.networking.protocol.codec.custom
          {
             throw new Error("Object is null. Use @ProtocolOptional annotation.");
          }
-         var _loc3_:§7N§ = §7N§(param2);
-         this.§?!J§.encode(param1,_loc3_.§'"K§);
-         this.§include const var§.encode(param1,_loc3_.§;%§);
-         this.§+^§.encode(param1,_loc3_.§8!x§);
-         this.§false set for§.encode(param1,_loc3_.§-!H§);
-         this.§]"]§.encode(param1,_loc3_.resources);
-         this.§3$%§.encode(param1,_loc3_.§3!P§);
+         var _loc3_:Renamed6110 = Renamed6110(param2);
+         this.Renamed10647.encode(param1,_loc3_.Renamed6116);
+         this.Renamed10648.encode(param1,_loc3_.Renamed6117);
+         this.Renamed10649.encode(param1,_loc3_.Renamed6118);
+         this.Renamed10650.encode(param1,_loc3_.Renamed6119);
+         this.Renamed6814.encode(param1,_loc3_.resources);
+         this.Renamed10543.encode(param1,_loc3_.Renamed974);
          return 4;
       }
    }

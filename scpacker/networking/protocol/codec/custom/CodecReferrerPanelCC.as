@@ -1,28 +1,28 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import §[" §.ICodec;
+   import Renamed5811.ICodec;
    import flash.utils.ByteArray;
-   import scpacker.networking.protocol.§?"s§;
-   import §static final§.§,"o§;
+   import scpacker.networking.protocol.Renamed536;
+   import Renamed420.Renamed8195;
    
    public class CodecReferrerPanelCC implements ICodec
    {
-      private var §break set try§:ICodec;
+      private var Renamed10710:ICodec;
       
-      private var §'#D§:ICodec;
+      private var Renamed10711:ICodec;
       
-      public function CodecReferrerPanelCC(param1:§?"s§)
+      public function CodecReferrerPanelCC(param1:Renamed536)
       {
          super();
-         this.§break set try§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.StringCodec");
-         this.§'#D§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.StringCodec");
+         this.Renamed10710 = param1.getCodec("scpacker.networking.protocol.codec.primitive.StringCodec");
+         this.Renamed10711 = param1.getCodec("scpacker.networking.protocol.codec.primitive.StringCodec");
       }
       
       public function decode(param1:ByteArray) : Object
       {
-         var _loc2_:§,"o§ = new §,"o§();
-         _loc2_.hash = this.§break set try§.decode(param1) as String;
-         _loc2_.host = this.§'#D§.decode(param1) as String;
+         var _loc2_:Renamed8195 = new Renamed8195();
+         _loc2_.hash = this.Renamed10710.decode(param1) as String;
+         _loc2_.host = this.Renamed10711.decode(param1) as String;
          return _loc2_;
       }
       
@@ -32,9 +32,9 @@ package scpacker.networking.protocol.codec.custom
          {
             throw new Error("Object is null. Use @ProtocolOptional annotation.");
          }
-         var _loc3_:§,"o§ = §,"o§(param2);
-         this.§break set try§.encode(param1,_loc3_.hash);
-         this.§'#D§.encode(param1,_loc3_.host);
+         var _loc3_:Renamed8195 = Renamed8195(param2);
+         this.Renamed10710.encode(param1,_loc3_.hash);
+         this.Renamed10711.encode(param1,_loc3_.host);
          return 4;
       }
    }

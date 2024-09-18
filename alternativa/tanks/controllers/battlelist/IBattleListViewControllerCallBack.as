@@ -1,6 +1,6 @@
 package alternativa.tanks.controllers.battlelist
 {
-   import projects.tanks.client.battleservice.§final package import§;
+   import projects.tanks.client.battleservice.Renamed1587;
    
    public interface IBattleListViewControllerCallBack
    {
@@ -10,7 +10,7 @@ package alternativa.tanks.controllers.battlelist
       
       function onBattleListItemChange(param1:String) : void;
       
-      function onBattleModeChange(param1:§final package import§, param2:Boolean) : void;
+      function onBattleModeChange(param1:Renamed1587, param2:Boolean) : void;
    }
 }
 

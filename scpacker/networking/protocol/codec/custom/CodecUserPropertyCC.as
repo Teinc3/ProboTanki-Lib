@@ -1,79 +1,79 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import §[" §.ICodec;
+   import Renamed5811.ICodec;
    import flash.utils.ByteArray;
    import projects.tanks.client.panel.model.profile.userproperty.UserPropertyCC;
-   import scpacker.networking.protocol.§?"s§;
+   import scpacker.networking.protocol.Renamed536;
    
    public class CodecUserPropertyCC implements ICodec
    {
-      private var §9#c§:ICodec;
+      private var Renamed10746:ICodec;
       
-      private var §try for try§:ICodec;
+      private var Renamed10747:ICodec;
       
-      private var §<"$§:ICodec;
+      private var Renamed10748:ICodec;
       
-      private var §?"]§:ICodec;
+      private var Renamed10749:ICodec;
       
-      private var §"a§:ICodec;
+      private var Renamed10750:ICodec;
       
-      private var §7#E§:ICodec;
+      private var Renamed10580:ICodec;
       
-      private var §get include§:ICodec;
+      private var Renamed10751:ICodec;
       
-      private var §default set native§:ICodec;
+      private var Renamed8880:ICodec;
       
-      private var §default finally§:ICodec;
+      private var Renamed10752:ICodec;
       
-      private var §false var true§:ICodec;
+      private var Renamed10753:ICodec;
       
-      private var §,!k§:ICodec;
+      private var Renamed10708:ICodec;
       
-      private var §each import§:ICodec;
+      private var Renamed10754:ICodec;
       
-      private var §each package do§:ICodec;
+      private var Renamed10574:ICodec;
       
-      private var §>!Y§:ICodec;
+      private var Renamed10572:ICodec;
       
-      private var §else var native§:ICodec;
+      private var Renamed10755:ICodec;
       
-      private var §"#$§:ICodec;
+      private var Renamed10745:ICodec;
       
-      private var § !5§:ICodec;
+      private var Renamed10756:ICodec;
       
-      public function CodecUserPropertyCC(param1:§?"s§)
+      public function CodecUserPropertyCC(param1:Renamed536)
       {
          super();
-         this.§9#c§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");
-         this.§try for try§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");
-         this.§"a§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");
-         this.§get include§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");
-         this.§default set native§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");
-         this.§default finally§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");
-         this.§false var true§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");
-         this.§,!k§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.ByteCodec");
-         this.§each import§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.FloatCodec");
-         this.§each package do§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");
-         this.§>!Y§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");
-         this.§"#$§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.StringCodec");
-         this.§ !5§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.StringCodec");
+         this.Renamed10746 = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");
+         this.Renamed10747 = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");
+         this.Renamed10750 = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");
+         this.Renamed10751 = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");
+         this.Renamed8880 = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");
+         this.Renamed10752 = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");
+         this.Renamed10753 = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");
+         this.Renamed10708 = param1.getCodec("scpacker.networking.protocol.codec.primitive.ByteCodec");
+         this.Renamed10754 = param1.getCodec("scpacker.networking.protocol.codec.primitive.FloatCodec");
+         this.Renamed10574 = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");
+         this.Renamed10572 = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");
+         this.Renamed10745 = param1.getCodec("scpacker.networking.protocol.codec.primitive.StringCodec");
+         this.Renamed10756 = param1.getCodec("scpacker.networking.protocol.codec.primitive.StringCodec");
       }
       
       public function decode(param1:ByteArray) : Object
       {
          var _loc2_:UserPropertyCC = new UserPropertyCC();
-         _loc2_.crystals = this.§9#c§.decode(param1) as int;
-         _loc2_.currentRankScore = this.§try for try§.decode(param1) as int;
-         _loc2_.durationCrystalAbonement = this.§"a§.decode(param1) as int;
-         _loc2_.hasDoubleCrystal = this.§get include§.decode(param1) as Boolean;
-         _loc2_.nextRankScore = this.§default finally§.decode(param1) as int;
-         _loc2_.place = this.§false var true§.decode(param1) as int;
-         _loc2_.rank = this.§,!k§.decode(param1) as int;
-         _loc2_.rating = this.§each import§.decode(param1) as Number;
-         _loc2_.score = this.§each package do§.decode(param1) as int;
-         _loc2_.serverNumber = this.§>!Y§.decode(param1) as int;
-         _loc2_.uid = _loc2_.id = this.§"#$§.decode(param1) as String;
-         _loc2_.userProfileUrl = this.§ !5§.decode(param1) as String;
+         _loc2_.crystals = this.Renamed10746.decode(param1) as int;
+         _loc2_.currentRankScore = this.Renamed10747.decode(param1) as int;
+         _loc2_.durationCrystalAbonement = this.Renamed10750.decode(param1) as int;
+         _loc2_.hasDoubleCrystal = this.Renamed10751.decode(param1) as Boolean;
+         _loc2_.nextRankScore = this.Renamed10752.decode(param1) as int;
+         _loc2_.place = this.Renamed10753.decode(param1) as int;
+         _loc2_.rank = this.Renamed10708.decode(param1) as int;
+         _loc2_.rating = this.Renamed10754.decode(param1) as Number;
+         _loc2_.score = this.Renamed10574.decode(param1) as int;
+         _loc2_.serverNumber = this.Renamed10572.decode(param1) as int;
+         _loc2_.uid = _loc2_.id = this.Renamed10745.decode(param1) as String;
+         _loc2_.userProfileUrl = this.Renamed10756.decode(param1) as String;
          return _loc2_;
       }
       
@@ -84,22 +84,22 @@ package scpacker.networking.protocol.codec.custom
             throw new Error("Object is null. Use @ProtocolOptional annotation.");
          }
          var _loc3_:UserPropertyCC = UserPropertyCC(param2);
-         this.§9#c§.encode(param1,_loc3_.crystals);
-         this.§try for try§.encode(param1,_loc3_.currentRankScore);
-         this.§<"$§.encode(param1,_loc3_.daysFromLastVisit);
-         this.§?"]§.encode(param1,_loc3_.daysFromRegistration);
-         this.§"a§.encode(param1,_loc3_.durationCrystalAbonement);
-         this.§7#E§.encode(param1,_loc3_.gameHost);
-         this.§get include§.encode(param1,_loc3_.hasDoubleCrystal);
-         this.§default finally§.encode(param1,_loc3_.nextRankScore);
-         this.§false var true§.encode(param1,_loc3_.place);
-         this.§,!k§.encode(param1,_loc3_.rank);
-         this.§each import§.encode(param1,_loc3_.rating);
-         this.§each package do§.encode(param1,_loc3_.score);
-         this.§>!Y§.encode(param1,_loc3_.serverNumber);
-         this.§else var native§.encode(param1,_loc3_.templateBattlePage);
-         this.§"#$§.encode(param1,_loc3_.uid);
-         this.§ !5§.encode(param1,_loc3_.userProfileUrl);
+         this.Renamed10746.encode(param1,_loc3_.crystals);
+         this.Renamed10747.encode(param1,_loc3_.currentRankScore);
+         this.Renamed10748.encode(param1,_loc3_.daysFromLastVisit);
+         this.Renamed10749.encode(param1,_loc3_.daysFromRegistration);
+         this.Renamed10750.encode(param1,_loc3_.durationCrystalAbonement);
+         this.Renamed10580.encode(param1,_loc3_.gameHost);
+         this.Renamed10751.encode(param1,_loc3_.hasDoubleCrystal);
+         this.Renamed10752.encode(param1,_loc3_.nextRankScore);
+         this.Renamed10753.encode(param1,_loc3_.place);
+         this.Renamed10708.encode(param1,_loc3_.rank);
+         this.Renamed10754.encode(param1,_loc3_.rating);
+         this.Renamed10574.encode(param1,_loc3_.score);
+         this.Renamed10572.encode(param1,_loc3_.serverNumber);
+         this.Renamed10755.encode(param1,_loc3_.templateBattlePage);
+         this.Renamed10745.encode(param1,_loc3_.uid);
+         this.Renamed10756.encode(param1,_loc3_.userProfileUrl);
          return 4;
       }
    }

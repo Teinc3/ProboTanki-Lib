@@ -1,7 +1,7 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import § !g§.§class for case§;
-   import §[" §.ICodec;
+   import Renamed136.Renamed663;
+   import Renamed5811.ICodec;
    import flash.utils.ByteArray;
    
    public class CodecBattleTeam implements ICodec
@@ -13,18 +13,18 @@ package scpacker.networking.protocol.codec.custom
       
       public function decode(param1:ByteArray) : Object
       {
-         var _loc2_:§class for case§ = null;
+         var _loc2_:Renamed663 = null;
          var _loc3_:int = param1.readInt();
          switch(_loc3_)
          {
             case 0:
-               _loc2_ = §class for case§.RED;
+               _loc2_ = Renamed663.RED;
                break;
             case 1:
-               _loc2_ = §class for case§.BLUE;
+               _loc2_ = Renamed663.BLUE;
                break;
             case 2:
-               _loc2_ = §class for case§.NONE;
+               _loc2_ = Renamed663.NONE;
          }
          return _loc2_;
       }

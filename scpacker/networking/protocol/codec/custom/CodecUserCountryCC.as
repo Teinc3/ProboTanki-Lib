@@ -1,33 +1,33 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import §[" §.ICodec;
+   import Renamed5811.ICodec;
    import flash.utils.ByteArray;
-   import §for package case§.§for else§;
-   import §for package case§.§get var use§;
-   import scpacker.networking.protocol.§?"s§;
+   import Renamed371.Renamed2242;
+   import Renamed371.Renamed3644;
+   import scpacker.networking.protocol.Renamed536;
    
    public class CodecUserCountryCC implements ICodec
    {
-      private var §%!F§:ICodec;
+      private var Renamed10741:ICodec;
       
-      private var §import var include§:ICodec;
+      private var Renamed10742:ICodec;
       
-      private var §,o§:ICodec;
+      private var Renamed10743:ICodec;
       
-      public function CodecUserCountryCC(param1:§?"s§)
+      public function CodecUserCountryCC(param1:Renamed536)
       {
          super();
-         this.§%!F§ = param1.getCodec("scpacker.networking.protocol.codec.custom.VectorCodecCountryInfo");
-         this.§import var include§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.StringCodec");
-         this.§,o§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");
+         this.Renamed10741 = param1.getCodec("scpacker.networking.protocol.codec.custom.VectorCodecCountryInfo");
+         this.Renamed10742 = param1.getCodec("scpacker.networking.protocol.codec.primitive.StringCodec");
+         this.Renamed10743 = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");
       }
       
       public function decode(param1:ByteArray) : Object
       {
-         var _loc2_:§get var use§ = new §get var use§();
-         _loc2_.§override for extends§ = this.§%!F§.decode(param1) as Vector.<§for else§>;
-         _loc2_.defaultCountryCode = this.§import var include§.decode(param1) as String;
-         _loc2_.§final var false§ = this.§,o§.decode(param1) as Boolean;
+         var _loc2_:Renamed3644 = new Renamed3644();
+         _loc2_.Renamed3652 = this.Renamed10741.decode(param1) as Vector.<Renamed2242>;
+         _loc2_.defaultCountryCode = this.Renamed10742.decode(param1) as String;
+         _loc2_.Renamed3651 = this.Renamed10743.decode(param1) as Boolean;
          return _loc2_;
       }
       
@@ -37,10 +37,10 @@ package scpacker.networking.protocol.codec.custom
          {
             throw new Error("Object is null. Use @ProtocolOptional annotation.");
          }
-         var _loc3_:§get var use§ = §get var use§(param2);
-         this.§%!F§.encode(param1,_loc3_.§override for extends§);
-         this.§import var include§.encode(param1,_loc3_.defaultCountryCode);
-         this.§,o§.encode(param1,_loc3_.§final var false§);
+         var _loc3_:Renamed3644 = Renamed3644(param2);
+         this.Renamed10741.encode(param1,_loc3_.Renamed3652);
+         this.Renamed10742.encode(param1,_loc3_.defaultCountryCode);
+         this.Renamed10743.encode(param1,_loc3_.Renamed3651);
          return 4;
       }
    }

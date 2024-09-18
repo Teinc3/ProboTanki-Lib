@@ -2,7 +2,7 @@ package alternativa.tanks.view.battlecreate
 {
    import alternativa.tanks.controllers.battlecreate.ICreateBattleFormControllerCallBack;
    import flash.display.BitmapData;
-   import projects.tanks.client.battleservice.§final package import§;
+   import projects.tanks.client.battleservice.Renamed1587;
    
    public interface ICreateBattleFormView
    {
@@ -36,7 +36,7 @@ package alternativa.tanks.view.battlecreate
       
       function setThemeInfo(param1:Array) : void;
       
-      function §true package default§(param1:Vector.<Object>) : void;
+      function Renamed1592(param1:Vector.<Object>) : void;
       
       function showThemeForMap() : void;
       
@@ -90,7 +90,7 @@ package alternativa.tanks.view.battlecreate
       
       function setNameAndIconDominationStepper() : void;
       
-      function §null var use§() : void;
+      function Renamed1599() : void;
       
       function get isPrivateBattle() : Boolean;
       
@@ -116,19 +116,19 @@ package alternativa.tanks.view.battlecreate
       
       function resetCheckBox() : void;
       
-      function setTypeBattle(param1:§final package import§) : void;
+      function setTypeBattle(param1:Renamed1587) : void;
       
-      function setAvailableTypesBattle(param1:Vector.<§final package import§>) : void;
+      function setAvailableTypesBattle(param1:Vector.<Renamed1587>) : void;
       
       function get isWithoutUpgrades() : Boolean;
       
-      function §super import§() : Object;
+      function Renamed1605() : Object;
       
-      function §+#i§() : void;
+      function Renamed1609() : void;
       
-      function §&#4§() : void;
+      function Renamed3917() : void;
       
-      function §0!A§(param1:int) : void;
+      function Renamed1613(param1:int) : void;
    }
 }
 

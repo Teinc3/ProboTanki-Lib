@@ -1,6 +1,6 @@
 package alternativa.tanks.gui
 {
-   import §^#l§.§,#l§;
+   import Renamed1804.Renamed1805;
    import alternativa.osgi.service.locale.ILocaleService;
    import assets.Diamond;
    import assets.icons.InputCheckIcon;
@@ -27,110 +27,110 @@ package alternativa.tanks.gui
    import flash.text.TextFieldType;
    import forms.registration.CallsignIconStates;
    import projects.tanks.clients.fp10.libraries.TanksLocale;
-   import §static final§.§continue package do§;
+   import Renamed420.Renamed1806;
    
    public class ReferralWindow extends Sprite
    {
       [Inject]
       public static var localeService:ILocaleService;
       
-      private static const §`"Z§:String = "tankiref.swf";
+      private static const Renamed1807:String = "tankiref.swf";
       
       private static const CHANNEL:String = "ReferralWindow";
       
-      private static const §final throw§:Class = §return package import§;
+      private static const Renamed1808:Class = Renamed1809;
       
-      private static const §include null§:BitmapData = new §final throw§().bitmapData;
+      private static const Renamed1810:BitmapData = new Renamed1808().bitmapData;
       
-      private static const §implements var var§:Class = §dynamic package super§;
+      private static const Renamed1811:Class = Renamed1812;
       
-      private static const §`!5§:BitmapData = new §implements var var§().bitmapData;
+      private static const Renamed1813:BitmapData = new Renamed1811().bitmapData;
       
-      private static const §3#b§:Class = §class const case§;
+      private static const Renamed1814:Class = Renamed1815;
       
-      private static const §5!=§:BitmapData = new §3#b§().bitmapData;
+      private static const Renamed1816:BitmapData = new Renamed1814().bitmapData;
       
-      private static const §]"'§:Class = §continue set extends§;
+      private static const Renamed1817:Class = Renamed1818;
       
-      private static const §class package null§:BitmapData = new §]"'§().bitmapData;
+      private static const Renamed1819:BitmapData = new Renamed1817().bitmapData;
       
-      private var §switch const switch§:§,#l§;
+      private var Renamed1820:Renamed1805;
       
-      private var §const catch for§:§,#l§;
+      private var Renamed1821:Renamed1805;
       
-      private var §continue package override§:§,#l§;
+      private var Renamed1822:Renamed1805;
       
       public var closeButton:DefaultButtonBase;
       
-      public var statButton:§8#k§;
+      public var statButton:Renamed1823;
       
-      private var §2"Q§:DefaultButtonBase;
+      private var Renamed1824:DefaultButtonBase;
       
-      private var §;v§:DefaultButtonBase;
+      private var Renamed1825:DefaultButtonBase;
       
       private var sendButton:DefaultButtonBase;
       
       private var window:TankWindow;
       
-      private var §%#U§:TankWindowInner;
+      private var Renamed1826:TankWindowInner;
       
-      private var §static set each§:TankWindowInner;
+      private var Renamed1827:TankWindowInner;
       
-      private var §extends package return§:TankWindowInner;
+      private var Renamed1828:TankWindowInner;
       
-      private var §2!S§:TankWindowInner;
+      private var Renamed1829:TankWindowInner;
       
-      private var §super set finally§:TankWindowInner;
+      private var Renamed1830:TankWindowInner;
       
-      private var §each var static§:TankWindowInner;
+      private var Renamed1831:TankWindowInner;
       
-      private var §in for implements§:Bitmap;
+      private var Renamed1832:Bitmap;
       
-      private var §continue static§:Bitmap;
+      private var Renamed1833:Bitmap;
       
-      public var § !k§:§#"M§;
+      public var Renamed1834:Renamed1835;
       
-      private var §3"H§:Sprite;
+      private var Renamed1836:Sprite;
       
-      private var §"d§:Sprite;
+      private var Renamed1837:Sprite;
       
-      private var §super for function§:Sprite;
+      private var Renamed1838:Sprite;
       
-      private var §override const super§:Sprite;
+      private var Renamed1839:Sprite;
       
-      private var §true set use§:Sprite;
+      private var Renamed1840:Sprite;
       
       private var banner:DisplayObject;
       
-      private var §package package each§:InputCheckIcon;
+      private var Renamed1841:InputCheckIcon;
       
       private var infoLabel:LabelBase;
       
-      private var §throw const break§:LabelBase;
+      private var Renamed1842:LabelBase;
       
-      private var §+"W§:TankInputBase;
+      private var Renamed1843:TankInputBase;
       
-      private var §each catch get§:TextArea;
+      private var Renamed1844:TextArea;
       
-      private var §case for in§:LabelBase;
+      private var Renamed1845:LabelBase;
       
-      public var §["[§:TankInputBase;
+      public var Renamed1846:TankInputBase;
       
-      private var §in package null§:LabelBase;
+      private var Renamed1847:LabelBase;
       
-      private var §super set override§:LabelBase;
+      private var Renamed1848:LabelBase;
       
-      private var §implements const set§:TankInputBase;
+      private var Renamed1849:TankInputBase;
       
-      private var §7"+§:TextArea;
+      private var Renamed1850:TextArea;
       
-      private var §import set final§:LabelBase;
+      private var Renamed1851:LabelBase;
       
-      private var §!"?§:LabelBase;
+      private var Renamed1852:LabelBase;
       
       private var crystalLabel:LabelBase;
       
-      private var §use var switch§:LabelBase;
+      private var Renamed1853:LabelBase;
       
       private var loader:Loader;
       
@@ -140,25 +140,25 @@ package alternativa.tanks.gui
       
       private const margin:int = 9;
       
-      private const §^#m§:int = 4;
+      private const Renamed1854:int = 4;
       
       private const space:int = 0;
       
       private var state:int;
       
-      private const §final class§:int = 0;
+      private const Renamed1855:int = 0;
       
-      private const §^#3§:int = 1;
+      private const Renamed1856:int = 1;
       
-      private const §break var switch§:int = 2;
+      private const Renamed1857:int = 2;
       
-      private const §!"v§:int = 3;
+      private const Renamed1858:int = 3;
       
-      private const §false catch function§:int = 4;
+      private const Renamed1859:int = 4;
       
-      private var §false var switch§:String;
+      private var Renamed1860:String;
       
-      private const §switch package continue§:int = 104;
+      private const Renamed1861:int = 104;
       
       public var crystalIcon:Diamond;
       
@@ -173,7 +173,7 @@ package alternativa.tanks.gui
          var userName:String = param1;
          var bannerCodeString:String = param2;
          var url:String = param3;
-         var §false var switch§:String = param4;
+         var Renamed1860:String = param4;
          var host:String = param5;
          var hash:String = param6;
          this.buttonSize = new Point(104,33);
@@ -181,64 +181,64 @@ package alternativa.tanks.gui
          tableLinkURL = null;
          super();
          this.userName = userName;
-         this.§false var switch§ = §false var switch§.split("\n\r").join("\n").split("\r\n").join("\n");
+         this.Renamed1860 = Renamed1860.split("\n\r").join("\n").split("\r\n").join("\n");
          this.window = new TankWindow();
          addChild(this.window);
          this.window.headerLang = localeService.getText(TanksLocale.TEXT_GUI_LANG);
          this.window.header = TankWindowHeader.REFERALS;
-         this.§switch const switch§ = new §,#l§();
-         this.§switch const switch§.icon = §5!=§;
-         addChild(this.§switch const switch§);
-         this.§switch const switch§.label = localeService.getText(TanksLocale.TEXT_REFERAL_WINDOW_BUTTON_GET_LINK_TEXT);
-         this.§switch const switch§.addEventListener(MouseEvent.CLICK,this.§-W§);
-         this.§const catch for§ = new §,#l§();
-         this.§const catch for§.icon = §class package null§;
-         addChild(this.§const catch for§);
-         this.§const catch for§.label = localeService.getText(TanksLocale.TEXT_REFERAL_WINDOW_BUTTON_GET_BANNER_TEXT);
-         this.§const catch for§.addEventListener(MouseEvent.CLICK,this.§continue switch§);
-         this.§continue package override§ = new §,#l§();
-         this.§continue package override§.icon = §`!5§;
-         addChild(this.§continue package override§);
-         this.§continue package override§.label = localeService.getText(TanksLocale.TEXT_REFERAL_WINDOW_BUTTON_INVITE_BY_EMAIL_TEXT);
-         this.§continue package override§.addEventListener(MouseEvent.CLICK,this.§,R§);
-         this.statButton = new §8#k§();
+         this.Renamed1820 = new Renamed1805();
+         this.Renamed1820.icon = Renamed1816;
+         addChild(this.Renamed1820);
+         this.Renamed1820.label = localeService.getText(TanksLocale.TEXT_REFERAL_WINDOW_BUTTON_GET_LINK_TEXT);
+         this.Renamed1820.addEventListener(MouseEvent.CLICK,this.Renamed1862);
+         this.Renamed1821 = new Renamed1805();
+         this.Renamed1821.icon = Renamed1819;
+         addChild(this.Renamed1821);
+         this.Renamed1821.label = localeService.getText(TanksLocale.TEXT_REFERAL_WINDOW_BUTTON_GET_BANNER_TEXT);
+         this.Renamed1821.addEventListener(MouseEvent.CLICK,this.Renamed1863);
+         this.Renamed1822 = new Renamed1805();
+         this.Renamed1822.icon = Renamed1813;
+         addChild(this.Renamed1822);
+         this.Renamed1822.label = localeService.getText(TanksLocale.TEXT_REFERAL_WINDOW_BUTTON_INVITE_BY_EMAIL_TEXT);
+         this.Renamed1822.addEventListener(MouseEvent.CLICK,this.Renamed1864);
+         this.statButton = new Renamed1823();
          addChild(this.statButton);
          this.statButton.label = localeService.getText(TanksLocale.TEXT_REFERAL_WINDOW_BUTTON_STATISTICS_TEXT);
-         this.statButton.addEventListener(MouseEvent.CLICK,this.§for set for§);
+         this.statButton.addEventListener(MouseEvent.CLICK,this.Renamed1865);
          this.closeButton = new DefaultButtonBase();
          addChild(this.closeButton);
          this.closeButton.label = localeService.getText(TanksLocale.TEXT_REFERAL_WINDOW_BUTTON_CLOSE_TEXT);
-         this.§each var static§ = new TankWindowInner(0,0,TankWindowInner.GREEN);
-         this.§each var static§.x = this.windowMargin;
-         this.§each var static§.y = this.windowMargin;
-         addChild(this.§each var static§);
-         this.§each var static§.visible = false;
-         this.§throw const break§ = new LabelBase();
-         this.§throw const break§.color = 381208;
-         this.§throw const break§.multiline = true;
-         this.§throw const break§.wordWrap = true;
-         addChild(this.§throw const break§);
-         this.§throw const break§.visible = false;
-         this.§%#U§ = new TankWindowInner(0,0,TankWindowInner.TRANSPARENT);
-         this.§%#U§.x = this.windowMargin;
-         addChild(this.§%#U§);
-         this.§%#U§.visible = false;
-         this.§3"H§ = new Sprite();
-         addChild(this.§3"H§);
-         this.§static set each§ = new TankWindowInner(0,0,TankWindowInner.GREEN);
-         this.§static set each§.x = this.windowMargin;
-         this.§static set each§.y = this.windowMargin;
-         this.§3"H§.addChild(this.§static set each§);
+         this.Renamed1831 = new TankWindowInner(0,0,TankWindowInner.GREEN);
+         this.Renamed1831.x = this.windowMargin;
+         this.Renamed1831.y = this.windowMargin;
+         addChild(this.Renamed1831);
+         this.Renamed1831.visible = false;
+         this.Renamed1842 = new LabelBase();
+         this.Renamed1842.color = 381208;
+         this.Renamed1842.multiline = true;
+         this.Renamed1842.wordWrap = true;
+         addChild(this.Renamed1842);
+         this.Renamed1842.visible = false;
+         this.Renamed1826 = new TankWindowInner(0,0,TankWindowInner.TRANSPARENT);
+         this.Renamed1826.x = this.windowMargin;
+         addChild(this.Renamed1826);
+         this.Renamed1826.visible = false;
+         this.Renamed1836 = new Sprite();
+         addChild(this.Renamed1836);
+         this.Renamed1827 = new TankWindowInner(0,0,TankWindowInner.GREEN);
+         this.Renamed1827.x = this.windowMargin;
+         this.Renamed1827.y = this.windowMargin;
+         this.Renamed1836.addChild(this.Renamed1827);
          headerBd = localeService.getImage(TanksLocale.IMAGE_REFERAL_WINDOW_HEADER_IMAGE);
-         this.§in for implements§ = new Bitmap(headerBd);
-         this.§3"H§.addChild(this.§in for implements§);
-         this.§continue static§ = new Bitmap(§include null§);
-         this.§3"H§.addChild(this.§continue static§);
+         this.Renamed1832 = new Bitmap(headerBd);
+         this.Renamed1836.addChild(this.Renamed1832);
+         this.Renamed1833 = new Bitmap(Renamed1810);
+         this.Renamed1836.addChild(this.Renamed1833);
          this.infoLabel = new LabelBase();
          this.infoLabel.color = 381208;
          this.infoLabel.multiline = true;
          this.infoLabel.wordWrap = true;
-         this.§3"H§.addChild(this.infoLabel);
+         this.Renamed1836.addChild(this.infoLabel);
          switch(localeService.language)
          {
             case "ru":
@@ -257,333 +257,333 @@ package alternativa.tanks.gui
                tableLinkURL = "";
          }
          this.infoLabel.htmlText = localeService.getText(TanksLocale.TEXT_REFERAL_WINDOW_INFO_TEXT,tableLinkURL);
-         this.§true set use§ = new Sprite();
-         addChild(this.§true set use§);
-         this.§extends package return§ = new TankWindowInner(0,0,TankWindowInner.GREEN);
-         this.§true set use§.addChild(this.§extends package return§);
-         this.§2!S§ = new TankWindowInner(0,0,TankWindowInner.GREEN);
-         this.§true set use§.addChild(this.§2!S§);
-         this.§super set finally§ = new TankWindowInner(0,0,TankWindowInner.GREEN);
-         this.§true set use§.addChild(this.§super set finally§);
-         this.§!"?§ = new LabelBase();
-         this.§!"?§.text = localeService.getText(TanksLocale.TEXT_REFERAL_WINDOW_COUNT_LABEL);
-         this.§true set use§.addChild(this.§!"?§);
-         this.§import set final§ = new LabelBase();
-         this.§import set final§.autoSize = TextFieldAutoSize.RIGHT;
-         this.§import set final§.color = 381208;
-         this.§import set final§.text = "0";
-         this.§true set use§.addChild(this.§import set final§);
-         this.§use var switch§ = new LabelBase();
-         this.§use var switch§.text = localeService.getText(TanksLocale.TEXT_REFERAL_WINDOW_SUMMARY_LABEL);
-         this.§true set use§.addChild(this.§use var switch§);
+         this.Renamed1840 = new Sprite();
+         addChild(this.Renamed1840);
+         this.Renamed1828 = new TankWindowInner(0,0,TankWindowInner.GREEN);
+         this.Renamed1840.addChild(this.Renamed1828);
+         this.Renamed1829 = new TankWindowInner(0,0,TankWindowInner.GREEN);
+         this.Renamed1840.addChild(this.Renamed1829);
+         this.Renamed1830 = new TankWindowInner(0,0,TankWindowInner.GREEN);
+         this.Renamed1840.addChild(this.Renamed1830);
+         this.Renamed1852 = new LabelBase();
+         this.Renamed1852.text = localeService.getText(TanksLocale.TEXT_REFERAL_WINDOW_COUNT_LABEL);
+         this.Renamed1840.addChild(this.Renamed1852);
+         this.Renamed1851 = new LabelBase();
+         this.Renamed1851.autoSize = TextFieldAutoSize.RIGHT;
+         this.Renamed1851.color = 381208;
+         this.Renamed1851.text = "0";
+         this.Renamed1840.addChild(this.Renamed1851);
+         this.Renamed1853 = new LabelBase();
+         this.Renamed1853.text = localeService.getText(TanksLocale.TEXT_REFERAL_WINDOW_SUMMARY_LABEL);
+         this.Renamed1840.addChild(this.Renamed1853);
          this.crystalIcon = new Diamond();
-         this.§true set use§.addChild(this.crystalIcon);
+         this.Renamed1840.addChild(this.crystalIcon);
          this.crystalLabel = new LabelBase();
          this.crystalLabel.autoSize = TextFieldAutoSize.RIGHT;
          this.crystalLabel.color = 381208;
          this.crystalLabel.text = "0";
-         this.§true set use§.addChild(this.crystalLabel);
-         this.§ !k§ = new §#"M§();
-         this.§true set use§.addChild(this.§ !k§);
-         this.§"d§ = new Sprite();
-         addChild(this.§"d§);
-         this.§+"W§ = new TankInputBase();
-         this.§+"W§.textField.type = TextFieldType.DYNAMIC;
-         this.§"d§.addChild(this.§+"W§);
-         this.§+"W§.textField.text = url;
-         this.§2"Q§ = new DefaultButtonBase();
-         this.§"d§.addChild(this.§2"Q§);
-         this.§2"Q§.width = 220;
-         this.§2"Q§.label = localeService.getText(TanksLocale.TEXT_REFERAL_WINDOW_BUTTON_COPY_LINK_TEXT);
-         this.§2"Q§.addEventListener(MouseEvent.CLICK,this.§catch package include§);
-         this.§super for function§ = new Sprite();
-         addChild(this.§super for function§);
+         this.Renamed1840.addChild(this.crystalLabel);
+         this.Renamed1834 = new Renamed1835();
+         this.Renamed1840.addChild(this.Renamed1834);
+         this.Renamed1837 = new Sprite();
+         addChild(this.Renamed1837);
+         this.Renamed1843 = new TankInputBase();
+         this.Renamed1843.textField.type = TextFieldType.DYNAMIC;
+         this.Renamed1837.addChild(this.Renamed1843);
+         this.Renamed1843.textField.text = url;
+         this.Renamed1824 = new DefaultButtonBase();
+         this.Renamed1837.addChild(this.Renamed1824);
+         this.Renamed1824.width = 220;
+         this.Renamed1824.label = localeService.getText(TanksLocale.TEXT_REFERAL_WINDOW_BUTTON_COPY_LINK_TEXT);
+         this.Renamed1824.addEventListener(MouseEvent.CLICK,this.Renamed1866);
+         this.Renamed1838 = new Sprite();
+         addChild(this.Renamed1838);
          context = new LoaderContext(false,ApplicationDomain.currentDomain);
          this.loader = new Loader();
-         bannerXmlPath = "http://" + host + "/" + §`"Z§ + "?hash=" + hash + "&server=" + host;
+         bannerXmlPath = "http://" + host + "/" + Renamed1807 + "?hash=" + hash + "&server=" + host;
          this.loader.load(new URLRequest(bannerXmlPath),context);
-         this.loader.contentLoaderInfo.addEventListener(Event.COMPLETE,this.§import package static§);
+         this.loader.contentLoaderInfo.addEventListener(Event.COMPLETE,this.Renamed1867);
          this.banner = new Sprite();
-         this.§super for function§.addChild(this.banner);
+         this.Renamed1838.addChild(this.banner);
          with(this.banner as Sprite)
          {
             graphics.beginFill(0,0.5);
             graphics.drawRect(0,0,bannerSize.x,bannerSize.y);
          }
-         this.§package package each§ = new InputCheckIcon();
-         this.§package package each§.gotoAndStop(CallsignIconStates.CALLSIGN_ICON_STATE_PROGRESS);
-         this.§super for function§.addChild(this.§package package each§);
-         this.§each catch get§ = new TextArea();
-         this.§each catch get§.tf.text = bannerCodeString;
-         this.§super for function§.addChild(this.§each catch get§);
-         this.§;v§ = new DefaultButtonBase();
-         this.§super for function§.addChild(this.§;v§);
-         this.§;v§.label = localeService.getText(TanksLocale.TEXT_REFERAL_WINDOW_BUTTON_COPY_BANNER_TEXT);
-         this.§;v§.addEventListener(MouseEvent.CLICK,this.§,d§);
-         this.§;v§.width = 200;
-         this.§override const super§ = new Sprite();
-         addChild(this.§override const super§);
-         this.§case for in§ = new LabelBase();
-         this.§case for in§.multiline = true;
-         this.§case for in§.wordWrap = true;
-         this.§case for in§.htmlText = localeService.getText(TanksLocale.TEXT_INVITATION_SENDER_NAME_LABEL_TEXT);
-         this.§override const super§.addChild(this.§case for in§);
-         this.§["[§ = new TankInputBase();
-         this.§["[§.textField.type = TextFieldType.INPUT;
-         this.§override const super§.addChild(this.§["[§);
-         this.§["[§.textField.text = userName;
-         this.§["[§.textField.addEventListener(Event.CHANGE,this.§^#n§);
-         this.§in package null§ = new LabelBase();
-         this.§in package null§.multiline = true;
-         this.§in package null§.wordWrap = true;
-         this.§in package null§.htmlText = localeService.getText(TanksLocale.TEXT_REFERAL_WINDOW_EMAIL_LABEL_TEXT);
-         this.§override const super§.addChild(this.§in package null§);
-         this.§implements const set§ = new TankInputBase();
-         this.§override const super§.addChild(this.§implements const set§);
-         this.§super set override§ = new LabelBase();
-         this.§super set override§.htmlText = localeService.getText(TanksLocale.TEXT_REFERAL_WINDOW_LETTER_LABEL_TEXT);
-         this.§override const super§.addChild(this.§super set override§);
-         this.§7"+§ = new TextArea();
-         this.§7"+§.tf.type = TextFieldType.DYNAMIC;
-         this.§7"+§.tf.text = this.§false var switch§.replace("%1",userName);
-         this.§override const super§.addChild(this.§7"+§);
+         this.Renamed1841 = new InputCheckIcon();
+         this.Renamed1841.gotoAndStop(CallsignIconStates.CALLSIGN_ICON_STATE_PROGRESS);
+         this.Renamed1838.addChild(this.Renamed1841);
+         this.Renamed1844 = new TextArea();
+         this.Renamed1844.tf.text = bannerCodeString;
+         this.Renamed1838.addChild(this.Renamed1844);
+         this.Renamed1825 = new DefaultButtonBase();
+         this.Renamed1838.addChild(this.Renamed1825);
+         this.Renamed1825.label = localeService.getText(TanksLocale.TEXT_REFERAL_WINDOW_BUTTON_COPY_BANNER_TEXT);
+         this.Renamed1825.addEventListener(MouseEvent.CLICK,this.Renamed1868);
+         this.Renamed1825.width = 200;
+         this.Renamed1839 = new Sprite();
+         addChild(this.Renamed1839);
+         this.Renamed1845 = new LabelBase();
+         this.Renamed1845.multiline = true;
+         this.Renamed1845.wordWrap = true;
+         this.Renamed1845.htmlText = localeService.getText(TanksLocale.TEXT_INVITATION_SENDER_NAME_LABEL_TEXT);
+         this.Renamed1839.addChild(this.Renamed1845);
+         this.Renamed1846 = new TankInputBase();
+         this.Renamed1846.textField.type = TextFieldType.INPUT;
+         this.Renamed1839.addChild(this.Renamed1846);
+         this.Renamed1846.textField.text = userName;
+         this.Renamed1846.textField.addEventListener(Event.CHANGE,this.Renamed1869);
+         this.Renamed1847 = new LabelBase();
+         this.Renamed1847.multiline = true;
+         this.Renamed1847.wordWrap = true;
+         this.Renamed1847.htmlText = localeService.getText(TanksLocale.TEXT_REFERAL_WINDOW_EMAIL_LABEL_TEXT);
+         this.Renamed1839.addChild(this.Renamed1847);
+         this.Renamed1849 = new TankInputBase();
+         this.Renamed1839.addChild(this.Renamed1849);
+         this.Renamed1848 = new LabelBase();
+         this.Renamed1848.htmlText = localeService.getText(TanksLocale.TEXT_REFERAL_WINDOW_LETTER_LABEL_TEXT);
+         this.Renamed1839.addChild(this.Renamed1848);
+         this.Renamed1850 = new TextArea();
+         this.Renamed1850.tf.type = TextFieldType.DYNAMIC;
+         this.Renamed1850.tf.text = this.Renamed1860.replace("%1",userName);
+         this.Renamed1839.addChild(this.Renamed1850);
          this.sendButton = new DefaultButtonBase();
-         this.§override const super§.addChild(this.sendButton);
+         this.Renamed1839.addChild(this.sendButton);
          this.sendButton.label = localeService.getText(TanksLocale.TEXT_REFERAL_WINDOW_BUTTON_SEND_TEXT);
-         this.sendButton.addEventListener(MouseEvent.CLICK,this.§use var§);
+         this.sendButton.addEventListener(MouseEvent.CLICK,this.Renamed1870);
          this.windowSize = new Point(468 + this.windowMargin * 2 + 4,492);
          this.window.width = this.windowSize.x;
          this.window.height = this.windowSize.y;
-         this.§each var static§.width = this.windowSize.x - this.windowMargin * 2;
-         this.§each var static§.height = 75;
-         this.§throw const break§.x = this.§each var static§.x + this.margin;
-         this.§throw const break§.y = this.§each var static§.y + this.margin;
-         this.§throw const break§.width = this.windowSize.x - this.windowMargin * 2 - this.margin * 2;
-         this.§%#U§.y = this.§each var static§.y + this.§each var static§.height + this.margin;
-         this.§%#U§.width = this.windowSize.x - this.windowMargin * 2;
-         this.§%#U§.height = this.windowSize.y - this.§switch package continue§ - this.margin - this.§%#U§.y;
-         this.§static set each§.width = this.windowSize.x - this.windowMargin * 2;
-         this.§static set each§.height = this.windowSize.y - this.windowMargin - this.§switch package continue§ - this.margin;
-         this.§in for implements§.x = this.§static set each§.x + int((this.§static set each§.width - this.§in for implements§.width) * 0.5);
-         this.§in for implements§.y = this.§static set each§.y + this.margin * 2;
-         this.§continue static§.x = this.§static set each§.x + int((this.§static set each§.width - this.§continue static§.width) * 0.5);
-         this.§continue static§.y = this.§static set each§.y + int(this.§static set each§.height * (1 - 0.618) - this.§continue static§.height * 0.5);
-         this.infoLabel.x = this.§static set each§.x + this.margin;
+         this.Renamed1831.width = this.windowSize.x - this.windowMargin * 2;
+         this.Renamed1831.height = 75;
+         this.Renamed1842.x = this.Renamed1831.x + this.margin;
+         this.Renamed1842.y = this.Renamed1831.y + this.margin;
+         this.Renamed1842.width = this.windowSize.x - this.windowMargin * 2 - this.margin * 2;
+         this.Renamed1826.y = this.Renamed1831.y + this.Renamed1831.height + this.margin;
+         this.Renamed1826.width = this.windowSize.x - this.windowMargin * 2;
+         this.Renamed1826.height = this.windowSize.y - this.Renamed1861 - this.margin - this.Renamed1826.y;
+         this.Renamed1827.width = this.windowSize.x - this.windowMargin * 2;
+         this.Renamed1827.height = this.windowSize.y - this.windowMargin - this.Renamed1861 - this.margin;
+         this.Renamed1832.x = this.Renamed1827.x + int((this.Renamed1827.width - this.Renamed1832.width) * 0.5);
+         this.Renamed1832.y = this.Renamed1827.y + this.margin * 2;
+         this.Renamed1833.x = this.Renamed1827.x + int((this.Renamed1827.width - this.Renamed1833.width) * 0.5);
+         this.Renamed1833.y = this.Renamed1827.y + int(this.Renamed1827.height * (1 - 0.618) - this.Renamed1833.height * 0.5);
+         this.infoLabel.x = this.Renamed1827.x + this.margin;
          this.infoLabel.width = this.windowSize.x - this.windowMargin * 2 - this.margin * 2;
-         this.infoLabel.y = this.§static set each§.y + this.§static set each§.height - this.infoLabel.height - this.margin * 2;
-         this.§!"?§.x = this.windowMargin;
-         this.§2!S§.width = 100;
-         this.§2!S§.height = 26;
-         this.§2!S§.x = this.§!"?§.x + this.§!"?§.width + this.margin;
-         this.§2!S§.y = this.windowMargin;
-         this.§import set final§.x = this.§2!S§.x + this.§2!S§.width - this.margin - this.§import set final§.width;
-         this.§!"?§.y = this.windowMargin + int((this.§2!S§.height - this.§!"?§.height) * 0.5);
-         this.§import set final§.y = this.§!"?§.y;
-         this.§super set finally§.width = 100;
-         this.§super set finally§.height = 26;
-         this.§super set finally§.x = this.windowSize.x - this.windowMargin - this.§super set finally§.width;
-         this.§super set finally§.y = this.windowMargin;
-         this.§use var switch§.x = this.§super set finally§.x - this.margin - this.§use var switch§.width;
+         this.infoLabel.y = this.Renamed1827.y + this.Renamed1827.height - this.infoLabel.height - this.margin * 2;
+         this.Renamed1852.x = this.windowMargin;
+         this.Renamed1829.width = 100;
+         this.Renamed1829.height = 26;
+         this.Renamed1829.x = this.Renamed1852.x + this.Renamed1852.width + this.margin;
+         this.Renamed1829.y = this.windowMargin;
+         this.Renamed1851.x = this.Renamed1829.x + this.Renamed1829.width - this.margin - this.Renamed1851.width;
+         this.Renamed1852.y = this.windowMargin + int((this.Renamed1829.height - this.Renamed1852.height) * 0.5);
+         this.Renamed1851.y = this.Renamed1852.y;
+         this.Renamed1830.width = 100;
+         this.Renamed1830.height = 26;
+         this.Renamed1830.x = this.windowSize.x - this.windowMargin - this.Renamed1830.width;
+         this.Renamed1830.y = this.windowMargin;
+         this.Renamed1853.x = this.Renamed1830.x - this.margin - this.Renamed1853.width;
          this.crystalIcon.x = this.windowSize.x - this.windowMargin - this.margin - this.crystalIcon.width;
          this.crystalLabel.x = this.crystalIcon.x - 2 - this.crystalLabel.width;
-         this.§use var switch§.y = this.windowMargin + int((this.§super set finally§.height - this.§use var switch§.height) * 0.5);
-         this.crystalLabel.y = this.§use var switch§.y;
-         this.crystalIcon.y = this.windowMargin + int((this.§super set finally§.height - this.crystalIcon.height) * 0.5);
-         this.§extends package return§.x = this.windowMargin;
-         this.§extends package return§.y = this.windowMargin + this.margin + this.§super set finally§.height - 3;
-         this.§extends package return§.width = this.windowSize.x - this.windowMargin * 2;
-         this.§extends package return§.height = this.windowSize.y - this.§extends package return§.y - this.§switch package continue§ - this.margin + 1;
-         this.§ !k§.x = this.windowMargin + this.§^#m§;
-         this.§ !k§.y = this.§extends package return§.y + this.§^#m§;
-         this.§+"W§.width = this.windowSize.x - this.windowMargin * 2 - this.margin * 2;
-         this.§+"W§.x = this.§%#U§.x + this.margin;
-         this.§+"W§.y = this.§%#U§.y + this.margin;
-         this.§2"Q§.x = this.windowSize.x - this.§2"Q§.width >> 1;
-         this.§2"Q§.y = this.§%#U§.y + this.margin * 2 + this.buttonSize.y;
+         this.Renamed1853.y = this.windowMargin + int((this.Renamed1830.height - this.Renamed1853.height) * 0.5);
+         this.crystalLabel.y = this.Renamed1853.y;
+         this.crystalIcon.y = this.windowMargin + int((this.Renamed1830.height - this.crystalIcon.height) * 0.5);
+         this.Renamed1828.x = this.windowMargin;
+         this.Renamed1828.y = this.windowMargin + this.margin + this.Renamed1830.height - 3;
+         this.Renamed1828.width = this.windowSize.x - this.windowMargin * 2;
+         this.Renamed1828.height = this.windowSize.y - this.Renamed1828.y - this.Renamed1861 - this.margin + 1;
+         this.Renamed1834.x = this.windowMargin + this.Renamed1854;
+         this.Renamed1834.y = this.Renamed1828.y + this.Renamed1854;
+         this.Renamed1843.width = this.windowSize.x - this.windowMargin * 2 - this.margin * 2;
+         this.Renamed1843.x = this.Renamed1826.x + this.margin;
+         this.Renamed1843.y = this.Renamed1826.y + this.margin;
+         this.Renamed1824.x = this.windowSize.x - this.Renamed1824.width >> 1;
+         this.Renamed1824.y = this.Renamed1826.y + this.margin * 2 + this.buttonSize.y;
          this.sendButton.x = this.windowSize.x - this.windowMargin - this.margin - this.buttonSize.x + 8;
-         this.sendButton.y = this.§%#U§.y + this.§%#U§.height - this.margin - this.buttonSize.y;
-         this.§case for in§.x = this.§%#U§.x + this.margin;
-         this.§["[§.y = this.§%#U§.y + this.margin;
-         this.§case for in§.width = 100;
-         this.§["[§.x = this.§case for in§.x + 100;
-         this.§case for in§.y = this.§["[§.y;
-         this.§["[§.width = this.windowSize.x - this.windowMargin - this.margin - this.§["[§.x;
-         this.§implements const set§.x = this.§["[§.x;
-         this.§implements const set§.y = Math.round(this.§["[§.y + this.§["[§.height + this.margin);
-         this.§implements const set§.width = this.windowSize.x - this.windowMargin - this.margin - this.§["[§.x;
-         this.§7"+§.x = this.§["[§.x;
-         this.§7"+§.y = Math.round(this.§implements const set§.y + this.§implements const set§.height + this.margin);
-         this.§7"+§.width = this.windowSize.x - this.windowMargin - this.margin - this.§["[§.x;
-         this.§7"+§.height = Math.round(this.§%#U§.y + this.§%#U§.height - this.§7"+§.y - this.margin * 2 - this.buttonSize.y);
-         this.§super set override§.x = this.§%#U§.x + this.margin;
-         this.§super set override§.y = this.§7"+§.y;
-         this.§super set override§.width = 100;
-         this.§in package null§.x = this.§%#U§.x + this.margin;
-         this.§in package null§.y = this.§implements const set§.y;
-         this.§in package null§.width = 100;
-         this.§7"+§.tf.type = TextFieldType.DYNAMIC;
-         this.§7"+§.text = §false var switch§.replace("{0}",userName);
-         this.§switch const switch§.x = (this.windowSize.x - this.§switch const switch§.width >> 1) + 3;
-         this.§switch const switch§.y = this.windowSize.y - this.§switch package continue§;
-         this.§continue package override§.x = this.windowMargin;
-         this.§continue package override§.y = this.windowSize.y - this.§switch package continue§;
-         this.§const catch for§.x = this.§switch const switch§.x + this.§switch const switch§.width - 4;
-         this.§const catch for§.y = this.windowSize.y - this.§switch package continue§;
+         this.sendButton.y = this.Renamed1826.y + this.Renamed1826.height - this.margin - this.buttonSize.y;
+         this.Renamed1845.x = this.Renamed1826.x + this.margin;
+         this.Renamed1846.y = this.Renamed1826.y + this.margin;
+         this.Renamed1845.width = 100;
+         this.Renamed1846.x = this.Renamed1845.x + 100;
+         this.Renamed1845.y = this.Renamed1846.y;
+         this.Renamed1846.width = this.windowSize.x - this.windowMargin - this.margin - this.Renamed1846.x;
+         this.Renamed1849.x = this.Renamed1846.x;
+         this.Renamed1849.y = Math.round(this.Renamed1846.y + this.Renamed1846.height + this.margin);
+         this.Renamed1849.width = this.windowSize.x - this.windowMargin - this.margin - this.Renamed1846.x;
+         this.Renamed1850.x = this.Renamed1846.x;
+         this.Renamed1850.y = Math.round(this.Renamed1849.y + this.Renamed1849.height + this.margin);
+         this.Renamed1850.width = this.windowSize.x - this.windowMargin - this.margin - this.Renamed1846.x;
+         this.Renamed1850.height = Math.round(this.Renamed1826.y + this.Renamed1826.height - this.Renamed1850.y - this.margin * 2 - this.buttonSize.y);
+         this.Renamed1848.x = this.Renamed1826.x + this.margin;
+         this.Renamed1848.y = this.Renamed1850.y;
+         this.Renamed1848.width = 100;
+         this.Renamed1847.x = this.Renamed1826.x + this.margin;
+         this.Renamed1847.y = this.Renamed1849.y;
+         this.Renamed1847.width = 100;
+         this.Renamed1850.tf.type = TextFieldType.DYNAMIC;
+         this.Renamed1850.text = Renamed1860.replace("{0}",userName);
+         this.Renamed1820.x = (this.windowSize.x - this.Renamed1820.width >> 1) + 3;
+         this.Renamed1820.y = this.windowSize.y - this.Renamed1861;
+         this.Renamed1822.x = this.windowMargin;
+         this.Renamed1822.y = this.windowSize.y - this.Renamed1861;
+         this.Renamed1821.x = this.Renamed1820.x + this.Renamed1820.width - 4;
+         this.Renamed1821.y = this.windowSize.y - this.Renamed1861;
          this.closeButton.x = this.windowSize.x - this.windowMargin - this.buttonSize.x + 8;
          this.closeButton.y = this.windowSize.y - this.windowMargin - this.buttonSize.y;
          this.statButton.x = this.windowMargin;
          this.statButton.y = this.closeButton.y;
          this.statButton.width = 240;
-         this.§native catch catch§();
-         this.§use native§();
-         this.state = this.§final class§;
-         this.§3"H§.visible = true;
+         this.Renamed1871();
+         this.Renamed1872();
+         this.state = this.Renamed1855;
+         this.Renamed1836.visible = true;
       }
       
-      public function §&"t§(param1:Vector.<§continue package do§>) : void
+      public function Renamed1873(param1:Vector.<Renamed1806>) : void
       {
          var _loc2_:int = 0;
-         this.§import set final§.text = param1.length.toString();
+         this.Renamed1851.text = param1.length.toString();
          var _loc3_:int = 0;
          while(_loc3_ < param1.length)
          {
-            _loc2_ += §continue package do§(param1[_loc3_]).income;
+            _loc2_ += Renamed1806(param1[_loc3_]).income;
             _loc3_++;
          }
          this.crystalLabel.text = _loc2_.toString();
          this.statButton.label = localeService.getText(TanksLocale.TEXT_REFERAL_WINDOW_BUTTON_STATISTICS_TEXT) + " " + _loc2_.toString();
-         this.§ !k§.§^"G§(param1);
-         this.§ !k§.width = this.windowSize.x - this.windowMargin * 2 - this.§^#m§ * 2 + 2;
-         this.§ !k§.height = this.windowSize.y - this.§extends package return§.y - this.§switch package continue§ - this.margin - this.§^#m§ * 2;
+         this.Renamed1834.Renamed1874(param1);
+         this.Renamed1834.width = this.windowSize.x - this.windowMargin * 2 - this.Renamed1854 * 2 + 2;
+         this.Renamed1834.height = this.windowSize.y - this.Renamed1828.y - this.Renamed1861 - this.margin - this.Renamed1854 * 2;
       }
       
-      private function §^#n§(param1:Event) : void
+      private function Renamed1869(param1:Event) : void
       {
-         if(this.§["[§.textField.text.length)
+         if(this.Renamed1846.textField.text.length)
          {
-            this.§7"+§.tf.text = this.§false var switch§.replace("{0}",this.§["[§.textField.text);
+            this.Renamed1850.tf.text = this.Renamed1860.replace("{0}",this.Renamed1846.textField.text);
          }
          else
          {
-            this.§7"+§.tf.text = this.§false var switch§.replace("{0}",this.userName);
+            this.Renamed1850.tf.text = this.Renamed1860.replace("{0}",this.userName);
          }
       }
       
-      private function §import package static§(param1:Event) : void
+      private function Renamed1867(param1:Event) : void
       {
-         this.§package package each§.gotoAndStop(CallsignIconStates.CALLSIGN_ICON_STATE_OFF);
-         this.§super for function§.removeChild(this.§package package each§);
-         this.§super for function§.removeChild(this.banner);
+         this.Renamed1841.gotoAndStop(CallsignIconStates.CALLSIGN_ICON_STATE_OFF);
+         this.Renamed1838.removeChild(this.Renamed1841);
+         this.Renamed1838.removeChild(this.banner);
          this.banner = this.loader as DisplayObject;
-         this.§super for function§.addChildAt(this.banner,0);
-         this.§native catch catch§();
+         this.Renamed1838.addChildAt(this.banner,0);
+         this.Renamed1871();
       }
       
-      private function §native catch catch§() : void
+      private function Renamed1871() : void
       {
-         this.banner.x = this.§%#U§.x + 2;
-         this.banner.y = this.§%#U§.y + 2;
-         this.§;v§.x = this.windowSize.x - this.§;v§.width >> 1;
-         this.§;v§.y = this.§%#U§.y + this.§%#U§.height - this.margin - this.buttonSize.y;
-         this.§each catch get§.x = this.windowMargin + this.margin;
-         this.§each catch get§.y = this.banner.y + this.banner.height + this.margin;
-         this.§each catch get§.width = this.windowSize.x - this.windowMargin * 2 - this.margin * 2;
-         this.§each catch get§.height = this.§;v§.y - this.margin - this.§each catch get§.y;
-         if(this.§super for function§.contains(this.§package package each§))
+         this.banner.x = this.Renamed1826.x + 2;
+         this.banner.y = this.Renamed1826.y + 2;
+         this.Renamed1825.x = this.windowSize.x - this.Renamed1825.width >> 1;
+         this.Renamed1825.y = this.Renamed1826.y + this.Renamed1826.height - this.margin - this.buttonSize.y;
+         this.Renamed1844.x = this.windowMargin + this.margin;
+         this.Renamed1844.y = this.banner.y + this.banner.height + this.margin;
+         this.Renamed1844.width = this.windowSize.x - this.windowMargin * 2 - this.margin * 2;
+         this.Renamed1844.height = this.Renamed1825.y - this.margin - this.Renamed1844.y;
+         if(this.Renamed1838.contains(this.Renamed1841))
          {
-            this.§package package each§.x = this.banner.x + int((this.bannerSize.x - this.§package package each§.width) * 0.5);
-            this.§package package each§.y = this.banner.y + int((this.bannerSize.y - this.§package package each§.height) * 0.5);
+            this.Renamed1841.x = this.banner.x + int((this.bannerSize.x - this.Renamed1841.width) * 0.5);
+            this.Renamed1841.y = this.banner.y + int((this.bannerSize.y - this.Renamed1841.height) * 0.5);
          }
       }
       
-      private function §use native§() : void
+      private function Renamed1872() : void
       {
-         this.§3"H§.visible = false;
-         this.§"d§.visible = false;
-         this.§super for function§.visible = false;
-         this.§override const super§.visible = false;
-         this.§true set use§.visible = false;
+         this.Renamed1836.visible = false;
+         this.Renamed1837.visible = false;
+         this.Renamed1838.visible = false;
+         this.Renamed1839.visible = false;
+         this.Renamed1840.visible = false;
       }
       
-      private function §for set for§(param1:MouseEvent) : void
+      private function Renamed1865(param1:MouseEvent) : void
       {
-         this.§switch const switch§.enabled = true;
-         this.§const catch for§.enabled = true;
-         this.§continue package override§.enabled = true;
+         this.Renamed1820.enabled = true;
+         this.Renamed1821.enabled = true;
+         this.Renamed1822.enabled = true;
          this.statButton.enable = false;
-         this.§use native§();
-         this.state = this.§false catch function§;
-         this.§true set use§.visible = true;
-         this.§each var static§.visible = false;
-         this.§%#U§.visible = false;
-         this.§throw const break§.visible = false;
+         this.Renamed1872();
+         this.state = this.Renamed1859;
+         this.Renamed1840.visible = true;
+         this.Renamed1831.visible = false;
+         this.Renamed1826.visible = false;
+         this.Renamed1842.visible = false;
       }
       
-      private function §-W§(param1:MouseEvent) : void
+      private function Renamed1862(param1:MouseEvent) : void
       {
-         this.§switch const switch§.enabled = false;
-         this.§const catch for§.enabled = true;
-         this.§continue package override§.enabled = true;
+         this.Renamed1820.enabled = false;
+         this.Renamed1821.enabled = true;
+         this.Renamed1822.enabled = true;
          this.statButton.enable = true;
-         this.§use native§();
-         this.state = this.§^#3§;
-         this.§"d§.visible = true;
-         this.§each var static§.visible = true;
-         this.§%#U§.visible = true;
-         this.§throw const break§.visible = true;
-         this.§throw const break§.text = localeService.getText(TanksLocale.TEXT_REFERAL_WINDOW_LINK_DESCRIPTION);
+         this.Renamed1872();
+         this.state = this.Renamed1856;
+         this.Renamed1837.visible = true;
+         this.Renamed1831.visible = true;
+         this.Renamed1826.visible = true;
+         this.Renamed1842.visible = true;
+         this.Renamed1842.text = localeService.getText(TanksLocale.TEXT_REFERAL_WINDOW_LINK_DESCRIPTION);
       }
       
-      private function §continue switch§(param1:MouseEvent) : void
+      private function Renamed1863(param1:MouseEvent) : void
       {
-         this.§switch const switch§.enabled = true;
-         this.§const catch for§.enabled = false;
-         this.§continue package override§.enabled = true;
+         this.Renamed1820.enabled = true;
+         this.Renamed1821.enabled = false;
+         this.Renamed1822.enabled = true;
          this.statButton.enable = true;
-         this.§use native§();
-         this.state = this.§break var switch§;
-         this.§super for function§.visible = true;
-         this.§each var static§.visible = true;
-         this.§%#U§.visible = true;
-         this.§throw const break§.visible = true;
-         this.§throw const break§.text = localeService.getText(TanksLocale.TEXT_REFERAL_WINDOW_BANNER_DESCRIPTION);
+         this.Renamed1872();
+         this.state = this.Renamed1857;
+         this.Renamed1838.visible = true;
+         this.Renamed1831.visible = true;
+         this.Renamed1826.visible = true;
+         this.Renamed1842.visible = true;
+         this.Renamed1842.text = localeService.getText(TanksLocale.TEXT_REFERAL_WINDOW_BANNER_DESCRIPTION);
       }
       
-      private function §,R§(param1:MouseEvent) : void
+      private function Renamed1864(param1:MouseEvent) : void
       {
-         this.§switch const switch§.enabled = true;
-         this.§const catch for§.enabled = true;
-         this.§continue package override§.enabled = false;
+         this.Renamed1820.enabled = true;
+         this.Renamed1821.enabled = true;
+         this.Renamed1822.enabled = false;
          this.statButton.enable = true;
-         this.§use native§();
-         this.state = this.§!"v§;
-         this.§override const super§.visible = true;
-         this.§each var static§.visible = true;
-         this.§%#U§.visible = true;
-         this.§throw const break§.visible = true;
-         this.§throw const break§.text = localeService.getText(TanksLocale.TEXT_REFERAL_WINDOW_MAIL_DESCRIPTION);
+         this.Renamed1872();
+         this.state = this.Renamed1858;
+         this.Renamed1839.visible = true;
+         this.Renamed1831.visible = true;
+         this.Renamed1826.visible = true;
+         this.Renamed1842.visible = true;
+         this.Renamed1842.text = localeService.getText(TanksLocale.TEXT_REFERAL_WINDOW_MAIL_DESCRIPTION);
       }
       
-      private function §catch package include§(param1:MouseEvent) : void
+      private function Renamed1866(param1:MouseEvent) : void
       {
-         System.setClipboard(this.§+"W§.textField.text);
+         System.setClipboard(this.Renamed1843.textField.text);
       }
       
-      private function §,d§(param1:MouseEvent) : void
+      private function Renamed1868(param1:MouseEvent) : void
       {
-         System.setClipboard(this.§each catch get§.tf.text);
+         System.setClipboard(this.Renamed1844.tf.text);
       }
       
-      private function §use var§(param1:MouseEvent) : void
+      private function Renamed1870(param1:MouseEvent) : void
       {
-         dispatchEvent(new §-0§(§-0§.§package package super§,this.§implements const set§.value,this.§7"+§.text));
+         dispatchEvent(new Renamed1875(Renamed1875.Renamed1876,this.Renamed1849.value,this.Renamed1850.text));
       }
       
-      public function §-#d§() : void
+      public function Renamed1877() : void
       {
-         if(this.§implements const set§ != null)
+         if(this.Renamed1849 != null)
          {
-            this.§implements const set§.value = "";
+            this.Renamed1849.value = "";
          }
       }
    }

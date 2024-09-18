@@ -7,7 +7,7 @@ package projects.tanks.clients.fp10.libraries.tanksservices.service.alertservice
    {
       function showAlert(param1:String, param2:Vector.<String>) : void;
       
-      function §switch const true§(param1:String, param2:Vector.<String>, param3:Vector.<Sprite>) : void;
+      function Renamed2166(param1:String, param2:Vector.<String>, param3:Vector.<Sprite>) : void;
       
       function showOkAlert(param1:String) : void;
       

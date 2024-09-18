@@ -16,7 +16,7 @@ package alternativa.tanks.view.forms.primitives
    import flash.ui.Keyboard;
    import forms.events.AlertEvent;
    import projects.tanks.clients.fp10.libraries.TanksLocale;
-   import services.alertservice.§get const use§;
+   import services.alertservice.Renamed1616;
    
    public class Alert extends Sprite
    {
@@ -105,7 +105,7 @@ package alternativa.tanks.view.forms.primitives
       public function init() : void
       {
          this.bgWindow.headerLang = localeService.getText(TextConst.GUI_LANG);
-         if(§get const use§.YES == null)
+         if(Renamed1616.YES == null)
          {
             this.fillButtonLabels();
          }
@@ -119,39 +119,39 @@ package alternativa.tanks.view.forms.primitives
       
       private function initStandardAlerts(param1:ILocaleService) : void
       {
-         this.alerts[ALERT_QUIT] = [param1.getText(TanksLocale.TEXT_ALERT_QUIT_TEXT),Vector.<String>([§get const use§.YES,§get const use§.NO])];
-         this.alerts[ALERT_CONFIRM_EMAIL] = [param1.getText(TanksLocale.TEXT_ALERT_EMAIL_CONFIRMED),Vector.<String>([§get const use§.YES])];
-         this.alerts[ERROR_FATAL] = [param1.getText(TanksLocale.TEXT_ERROR_FATAL),Vector.<String>([§get const use§.§9f§])];
-         this.alerts[ERROR_FATAL_DEBUG] = [param1.getText(TanksLocale.TEXT_ERROR_FATAL_DEBUG),Vector.<String>([§get const use§.SEND])];
-         this.alerts[ERROR_CALLSIGN_FIRST_SYMBOL] = [param1.getText(TanksLocale.TEXT_ERROR_CALLSIGN_WRONG_FIRST_SYMBOL),Vector.<String>([§get const use§.OK])];
-         this.alerts[ERROR_CALLSIGN_DEVIDE] = [param1.getText(TanksLocale.TEXT_ERROR_CALLSIGN_NOT_SINGLE_DEVIDERS),Vector.<String>([§get const use§.OK])];
-         this.alerts[ERROR_CALLSIGN_LAST_SYMBOL] = [param1.getText(TanksLocale.TEXT_ERROR_CALLSIGN_WRONG_LAST_SYMBOL),Vector.<String>([§get const use§.OK])];
-         this.alerts[ERROR_CALLSIGN_LENGTH] = [param1.getText(TanksLocale.TEXT_ERROR_CALLSIGN_LENGTH),Vector.<String>([§get const use§.OK])];
-         this.alerts[ERROR_CALLSIGN_UNIQUE] = [param1.getText(TanksLocale.TEXT_ERROR_CALLSIGN_NOT_UNIQUE),Vector.<String>([§get const use§.OK])];
-         this.alerts[ERROR_EMAIL_UNIQUE] = [param1.getText(TanksLocale.TEXT_ERROR_EMAIL_NOT_UNIQUE),Vector.<String>([§get const use§.OK])];
-         this.alerts[ERROR_EMAIL_INVALID] = [param1.getText(TanksLocale.TEXT_ERROR_EMAIL_INVALID),Vector.<String>([§get const use§.OK])];
-         this.alerts[ERROR_EMAIL_NOTFOUND] = [param1.getText(TanksLocale.TEXT_ERROR_EMAIL_NOT_FOUND),Vector.<String>([§get const use§.OK])];
-         this.alerts[ERROR_EMAIL_NOTSENDED] = [param1.getText(TanksLocale.TEXT_ERROR_EMAIL_NOT_SENDED),Vector.<String>([§get const use§.OK])];
-         this.alerts[ERROR_PASSWORD_INCORRECT] = [param1.getText(TanksLocale.TEXT_ERROR_PASSWORD_INCORRECT),Vector.<String>([§get const use§.OK])];
-         this.alerts[ERROR_PASSWORD_LENGTH] = [param1.getText(TanksLocale.TEXT_ERROR_PASSWORD_LENGTH),Vector.<String>([§get const use§.OK])];
-         this.alerts[ERROR_PASSWORD_CHANGE] = [param1.getText(TanksLocale.TEXT_ERROR_PASSWORD_CHANGE),Vector.<String>([§get const use§.OK])];
-         this.alerts[GARAGE_AVAILABLE] = [param1.getText(TanksLocale.TEXT_ALERT_GARAGE_AVAILABLE),Vector.<String>([§get const use§.GARAGE,§get const use§.CANCEL])];
-         this.alerts[ALERT_RECOVERY_LINK_SENDED] = [param1.getText(TanksLocale.TEXT_SETTINGS_CHANGE_PASSWORD_CONFIRMATION_SENT_TEXT),Vector.<String>([§get const use§.OK])];
-         this.alerts[ALERT_CHAT_PROCEED] = [param1.getText(TanksLocale.TEXT_ALERT_CHAT_PROCEED_EXTERNAL_LINK),Vector.<String>([§get const use§.CANCEL])];
-         this.alerts[CAPTCHA_INCORRECT] = [param1.getText(TanksLocale.TEXT_CAPTCHA_INCORRECT),Vector.<String>([§get const use§.OK])];
-         this.alerts[ERROR_CONFIRM_EMAIL] = [param1.getText(TanksLocale.TEXT_ALERT_EMAIL_CONFIRMED_WRONG_LINK),Vector.<String>([§get const use§.OK])];
+         this.alerts[ALERT_QUIT] = [param1.getText(TanksLocale.TEXT_ALERT_QUIT_TEXT),Vector.<String>([Renamed1616.YES,Renamed1616.NO])];
+         this.alerts[ALERT_CONFIRM_EMAIL] = [param1.getText(TanksLocale.TEXT_ALERT_EMAIL_CONFIRMED),Vector.<String>([Renamed1616.YES])];
+         this.alerts[ERROR_FATAL] = [param1.getText(TanksLocale.TEXT_ERROR_FATAL),Vector.<String>([Renamed1616.Renamed3951])];
+         this.alerts[ERROR_FATAL_DEBUG] = [param1.getText(TanksLocale.TEXT_ERROR_FATAL_DEBUG),Vector.<String>([Renamed1616.SEND])];
+         this.alerts[ERROR_CALLSIGN_FIRST_SYMBOL] = [param1.getText(TanksLocale.TEXT_ERROR_CALLSIGN_WRONG_FIRST_SYMBOL),Vector.<String>([Renamed1616.OK])];
+         this.alerts[ERROR_CALLSIGN_DEVIDE] = [param1.getText(TanksLocale.TEXT_ERROR_CALLSIGN_NOT_SINGLE_DEVIDERS),Vector.<String>([Renamed1616.OK])];
+         this.alerts[ERROR_CALLSIGN_LAST_SYMBOL] = [param1.getText(TanksLocale.TEXT_ERROR_CALLSIGN_WRONG_LAST_SYMBOL),Vector.<String>([Renamed1616.OK])];
+         this.alerts[ERROR_CALLSIGN_LENGTH] = [param1.getText(TanksLocale.TEXT_ERROR_CALLSIGN_LENGTH),Vector.<String>([Renamed1616.OK])];
+         this.alerts[ERROR_CALLSIGN_UNIQUE] = [param1.getText(TanksLocale.TEXT_ERROR_CALLSIGN_NOT_UNIQUE),Vector.<String>([Renamed1616.OK])];
+         this.alerts[ERROR_EMAIL_UNIQUE] = [param1.getText(TanksLocale.TEXT_ERROR_EMAIL_NOT_UNIQUE),Vector.<String>([Renamed1616.OK])];
+         this.alerts[ERROR_EMAIL_INVALID] = [param1.getText(TanksLocale.TEXT_ERROR_EMAIL_INVALID),Vector.<String>([Renamed1616.OK])];
+         this.alerts[ERROR_EMAIL_NOTFOUND] = [param1.getText(TanksLocale.TEXT_ERROR_EMAIL_NOT_FOUND),Vector.<String>([Renamed1616.OK])];
+         this.alerts[ERROR_EMAIL_NOTSENDED] = [param1.getText(TanksLocale.TEXT_ERROR_EMAIL_NOT_SENDED),Vector.<String>([Renamed1616.OK])];
+         this.alerts[ERROR_PASSWORD_INCORRECT] = [param1.getText(TanksLocale.TEXT_ERROR_PASSWORD_INCORRECT),Vector.<String>([Renamed1616.OK])];
+         this.alerts[ERROR_PASSWORD_LENGTH] = [param1.getText(TanksLocale.TEXT_ERROR_PASSWORD_LENGTH),Vector.<String>([Renamed1616.OK])];
+         this.alerts[ERROR_PASSWORD_CHANGE] = [param1.getText(TanksLocale.TEXT_ERROR_PASSWORD_CHANGE),Vector.<String>([Renamed1616.OK])];
+         this.alerts[GARAGE_AVAILABLE] = [param1.getText(TanksLocale.TEXT_ALERT_GARAGE_AVAILABLE),Vector.<String>([Renamed1616.GARAGE,Renamed1616.CANCEL])];
+         this.alerts[ALERT_RECOVERY_LINK_SENDED] = [param1.getText(TanksLocale.TEXT_SETTINGS_CHANGE_PASSWORD_CONFIRMATION_SENT_TEXT),Vector.<String>([Renamed1616.OK])];
+         this.alerts[ALERT_CHAT_PROCEED] = [param1.getText(TanksLocale.TEXT_ALERT_CHAT_PROCEED_EXTERNAL_LINK),Vector.<String>([Renamed1616.CANCEL])];
+         this.alerts[CAPTCHA_INCORRECT] = [param1.getText(TanksLocale.TEXT_CAPTCHA_INCORRECT),Vector.<String>([Renamed1616.OK])];
+         this.alerts[ERROR_CONFIRM_EMAIL] = [param1.getText(TanksLocale.TEXT_ALERT_EMAIL_CONFIRMED_WRONG_LINK),Vector.<String>([Renamed1616.OK])];
       }
       
       private function fillButtonLabels() : void
       {
-         §get const use§.YES = localeService.getText(TanksLocale.TEXT_ALERT_ANSWER_YES);
-         §get const use§.NO = localeService.getText(TanksLocale.TEXT_ALERT_ANSWER_NO);
-         §get const use§.OK = localeService.getText(TanksLocale.TEXT_ALERT_ANSWER_OK);
-         §get const use§.CANCEL = localeService.getText(TanksLocale.TEXT_ALERT_ANSWER_CANCEL);
-         §get const use§.SEND = localeService.getText(TanksLocale.TEXT_ALERT_ANSWER_SEND_BUG_REPORT);
-         §get const use§.§9f§ = localeService.getText(TanksLocale.TEXT_ALERT_ANSWER_RETURN_TO_BATTLE);
-         §get const use§.GARAGE = localeService.getText(TanksLocale.TEXT_ALERT_ANSWER_GO_TO_GARAGE);
-         §get const use§.§include for include§ = localeService.getText(TanksLocale.TEXT_ALERT_ANSWER_PROCEED);
+         Renamed1616.YES = localeService.getText(TanksLocale.TEXT_ALERT_ANSWER_YES);
+         Renamed1616.NO = localeService.getText(TanksLocale.TEXT_ALERT_ANSWER_NO);
+         Renamed1616.OK = localeService.getText(TanksLocale.TEXT_ALERT_ANSWER_OK);
+         Renamed1616.CANCEL = localeService.getText(TanksLocale.TEXT_ALERT_ANSWER_CANCEL);
+         Renamed1616.SEND = localeService.getText(TanksLocale.TEXT_ALERT_ANSWER_SEND_BUG_REPORT);
+         Renamed1616.Renamed3951 = localeService.getText(TanksLocale.TEXT_ALERT_ANSWER_RETURN_TO_BATTLE);
+         Renamed1616.GARAGE = localeService.getText(TanksLocale.TEXT_ALERT_ANSWER_GO_TO_GARAGE);
+         Renamed1616.Renamed3952 = localeService.getText(TanksLocale.TEXT_ALERT_ANSWER_PROCEED);
       }
       
       private function createOutput() : void
@@ -233,16 +233,16 @@ package alternativa.tanks.view.forms.primitives
          {
             if(isConfirmationKey(param1))
             {
-               _loc2_ = this.getFirstExistingLabel([§get const use§.OK,§get const use§.YES,§get const use§.GARAGE,§get const use§.§include for include§,§get const use§.SEND]);
+               _loc2_ = this.getFirstExistingLabel([Renamed1616.OK,Renamed1616.YES,Renamed1616.GARAGE,Renamed1616.Renamed3952,Renamed1616.SEND]);
             }
             else if(isCancelKey(param1))
             {
-               _loc2_ = this.getFirstExistingLabel([§get const use§.NO,§get const use§.CANCEL,§get const use§.§9f§]);
+               _loc2_ = this.getFirstExistingLabel([Renamed1616.NO,Renamed1616.CANCEL,Renamed1616.Renamed3951]);
             }
          }
          else
          {
-            _loc2_ = this.getFirstExistingLabel([§get const use§.YES,§get const use§.SEND,§get const use§.§9f§,§get const use§.OK,§get const use§.CANCEL]);
+            _loc2_ = this.getFirstExistingLabel([Renamed1616.YES,Renamed1616.SEND,Renamed1616.Renamed3951,Renamed1616.OK,Renamed1616.CANCEL]);
          }
          this.dispatchClickEventForButtonWithLabel(_loc2_);
       }

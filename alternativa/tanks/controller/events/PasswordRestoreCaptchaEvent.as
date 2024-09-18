@@ -17,7 +17,7 @@ package alternativa.tanks.controller.events
          this.email = param2;
       }
       
-      public function §#"b§() : String
+      public function Renamed1576() : String
       {
          return this.captchaAnswer;
       }

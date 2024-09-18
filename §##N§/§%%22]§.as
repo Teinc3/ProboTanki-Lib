@@ -1,7 +1,0 @@
-package §##N§
-{
-   public interface §%"]§
-   {
-      }
-}
-

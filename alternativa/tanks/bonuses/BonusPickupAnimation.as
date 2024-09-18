@@ -1,12 +1,12 @@
 package alternativa.tanks.bonuses
 {
    import alternativa.tanks.battle.BattleService;
-   import alternativa.tanks.battle.scene3d.§else if§;
-   import §extends for const§.§1Q§;
-   import §extends for const§.§["D§;
+   import alternativa.tanks.battle.scene3d.Renamed919;
+   import Renamed356.Renamed1443;
+   import Renamed356.Renamed1444;
    import flash.geom.ColorTransform;
    
-   public class BonusPickupAnimation extends §["D§ implements §else if§
+   public class BonusPickupAnimation extends Renamed1444 implements Renamed919
    {
       [Inject]
       public static var battleService:BattleService;
@@ -35,7 +35,7 @@ package alternativa.tanks.bonuses
       
       private var additiveValue:int;
       
-      public function BonusPickupAnimation(param1:§1Q§)
+      public function BonusPickupAnimation(param1:Renamed1443)
       {
          this.colorTransform = new ColorTransform();
          super(param1);
@@ -47,7 +47,7 @@ package alternativa.tanks.bonuses
          this.bonusMesh.setColorTransform(this.colorTransform);
          this.animationTime = PICKUP_ANIMATION_TIME;
          this.additiveValue = 0;
-         battleService.§3l§().§9"N§(this,0);
+         battleService.Renamed621().Renamed1287(this,0);
       }
       
       public function render(param1:int, param2:int) : void
@@ -99,7 +99,7 @@ package alternativa.tanks.bonuses
          this.bonusMesh.removeFromScene();
          this.bonusMesh.recycle();
          this.bonusMesh = null;
-         battleService.§3l§().§0!n§(this,0);
+         battleService.Renamed621().Renamed1289(this,0);
          recycle();
       }
    }

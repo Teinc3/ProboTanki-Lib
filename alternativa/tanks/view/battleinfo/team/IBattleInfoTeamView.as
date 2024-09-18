@@ -1,13 +1,13 @@
 package alternativa.tanks.view.battleinfo.team
 {
-   import § !g§.§class for case§;
+   import Renamed136.Renamed663;
    import alternativa.tanks.view.battleinfo.IBattleInfoView;
    
    public interface IBattleInfoTeamView extends IBattleInfoView
    {
       function updateInitParams(param1:BattleInfoTeamParams) : void;
       
-      function updateScore(param1:§class for case§, param2:int) : void;
+      function updateScore(param1:Renamed663, param2:int) : void;
       
       function removeUser(param1:String) : void;
       

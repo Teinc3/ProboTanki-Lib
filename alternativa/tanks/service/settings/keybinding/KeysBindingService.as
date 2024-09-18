@@ -4,19 +4,19 @@ package alternativa.tanks.service.settings.keybinding
    
    public interface KeysBindingService extends IEventDispatcher
    {
-      function §get set if§(param1:uint) : Boolean;
+      function Renamed3755(param1:uint) : Boolean;
       
-      function §class package package§(param1:§&7§, param2:uint, param3:int) : Boolean;
+      function Renamed3756(param1:Renamed717, param2:uint, param3:int) : Boolean;
       
-      function §&!<§(param1:uint) : §&7§;
+      function Renamed729(param1:uint) : Renamed717;
       
-      function §;"R§(param1:§&7§, param2:uint) : uint;
+      function Renamed3757(param1:Renamed717, param2:uint) : uint;
       
-      function §package for catch§(param1:§&7§) : Vector.<uint>;
+      function Renamed3758(param1:Renamed717) : Vector.<uint>;
       
-      function §finally package false§() : void;
+      function Renamed3759() : void;
       
-      function §get for override§(param1:uint) : String;
+      function Renamed3760(param1:uint) : String;
    }
 }
 

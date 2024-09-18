@@ -1,17 +1,17 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import §[" §.ICodec;
+   import Renamed5811.ICodec;
    import flash.utils.ByteArray;
    import projects.tanks.client.panel.model.garage.GarageItemInfo;
-   import scpacker.networking.protocol.§?"s§;
+   import scpacker.networking.protocol.Renamed536;
    
    public class VectorCodecGarageItemInfo implements ICodec
    {
       private var elementCodec:ICodec;
       
-      private var §?"_§:Boolean;
+      private var Renamed5009:Boolean;
       
-      public function VectorCodecGarageItemInfo(param1:§?"s§)
+      public function VectorCodecGarageItemInfo(param1:Renamed536)
       {
          super();
          this.elementCodec = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecGarageItemInfo");

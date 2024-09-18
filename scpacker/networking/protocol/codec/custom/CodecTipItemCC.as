@@ -1,29 +1,29 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import §[" §.ICodec;
+   import Renamed5811.ICodec;
    import alternativa.osgi.OSGi;
    import alternativa.osgi.service.clientlog.IClientLog;
-   import §do static§.§0!1§;
+   import Renamed341.Renamed7433;
    import flash.utils.ByteArray;
    import platform.client.fp10.core.resource.types.LocalizedImageResource;
-   import scpacker.networking.protocol.§?"s§;
+   import scpacker.networking.protocol.Renamed536;
    
    public class CodecTipItemCC implements ICodec
    {
       public static var log:IClientLog = IClientLog(OSGi.getInstance().getService(IClientLog));
       
-      private var §[!i§:ICodec;
+      private var Renamed10688:ICodec;
       
-      public function CodecTipItemCC(param1:§?"s§)
+      public function CodecTipItemCC(param1:Renamed536)
       {
          super();
-         this.§[!i§ = param1.getCodec("scpacker.networking.protocol.codec.custom.ResourceGetterCodec");
+         this.Renamed10688 = param1.getCodec("scpacker.networking.protocol.codec.custom.ResourceGetterCodec");
       }
       
       public function decode(param1:ByteArray) : Object
       {
-         var _loc2_:§0!1§ = new §0!1§();
-         _loc2_.preview = this.§[!i§.decode(param1) as LocalizedImageResource;
+         var _loc2_:Renamed7433 = new Renamed7433();
+         _loc2_.preview = this.Renamed10688.decode(param1) as LocalizedImageResource;
          return _loc2_;
       }
       
@@ -33,8 +33,8 @@ package scpacker.networking.protocol.codec.custom
          {
             throw new Error("Object is null. Use @ProtocolOptional annotation.");
          }
-         var _loc3_:§0!1§ = §0!1§(param2);
-         this.§[!i§.encode(param1,_loc3_.preview);
+         var _loc3_:Renamed7433 = Renamed7433(param2);
+         this.Renamed10688.encode(param1,_loc3_.preview);
          return 4;
       }
    }

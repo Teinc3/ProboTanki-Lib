@@ -19,7 +19,7 @@ package alternativa.tanks.gui.effects
       
       private var EFFECT_TIME:Number = 1.25;
       
-      private var §@!_§:Boolean = false;
+      private var Renamed1924:Boolean = false;
       
       public function GlowEffect()
       {
@@ -36,7 +36,7 @@ package alternativa.tanks.gui.effects
       {
          this.glowAlpha = param1.alpha;
          this.glowColor = param2;
-         this.glowDelta = 1 / (this.EFFECT_TIME * fpsService.§,"Q§());
+         this.glowDelta = 1 / (this.EFFECT_TIME * fpsService.Renamed1654());
          param1.addEventListener(Event.ENTER_FRAME,this.glowFrame);
       }
       
@@ -45,7 +45,7 @@ package alternativa.tanks.gui.effects
          var _loc2_:DisplayObject = param1.target as DisplayObject;
          var _loc3_:GlowFilter = new GlowFilter(this.glowColor,this.glowAlpha,6,6,4,1,false);
          _loc2_.filters = [_loc3_];
-         if(this.§@!_§)
+         if(this.Renamed1924)
          {
             this.glowAlpha += this.glowDelta;
          }
@@ -55,11 +55,11 @@ package alternativa.tanks.gui.effects
          }
          if(this.glowAlpha < 0)
          {
-            this.§@!_§ = true;
+            this.Renamed1924 = true;
          }
          else if(this.glowAlpha > 1)
          {
-            this.§@!_§ = false;
+            this.Renamed1924 = false;
          }
       }
    }

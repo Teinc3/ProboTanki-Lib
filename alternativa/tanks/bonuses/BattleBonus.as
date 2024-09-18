@@ -1,29 +1,29 @@
 package alternativa.tanks.bonuses
 {
-   import §7"j§.§break set switch§;
-   import §7"j§.§do set case§;
-   import §7"j§.§implements for break§;
+   import Renamed1.Renamed1440;
+   import Renamed1.Renamed1441;
+   import Renamed1.Renamed1442;
    import alternativa.engine3d.lights.OmniLight;
    import alternativa.math.Matrix3;
    import alternativa.math.Matrix4;
    import alternativa.math.Vector3;
    import alternativa.physics.collision.types.RayHit;
    import alternativa.tanks.battle.BattleService;
-   import alternativa.tanks.battle.§native var const§;
-   import alternativa.tanks.battle.§return const break§;
-   import alternativa.tanks.battle.scene3d.§else if§;
+   import alternativa.tanks.battle.Renamed793;
+   import alternativa.tanks.battle.Renamed790;
+   import alternativa.tanks.battle.scene3d.Renamed919;
    import alternativa.tanks.services.lightingeffects.ILightingEffectsService;
-   import §extends for const§.§1Q§;
-   import §extends for const§.§["D§;
-   import §for set super§.§!"N§;
-   import §for set super§.§super const continue§;
+   import Renamed356.Renamed1443;
+   import Renamed356.Renamed1444;
+   import Renamed373.Renamed665;
+   import Renamed373.Renamed666;
    import org1.osflash.signals.ISignal;
    import org1.osflash.signals.Signal;
    
-   public class BattleBonus extends §["D§ implements §return const break§, §native var const§, §else if§, Bonus
+   public class BattleBonus extends Renamed1444 implements Renamed790, Renamed793, Renamed919, Bonus
    {
       [Inject]
-      public static var §super package implements§:ILightingEffectsService;
+      public static var Renamed1445:ILightingEffectsService;
       
       private static const BIG_VALUE:Number = 10000000000;
       
@@ -93,7 +93,7 @@ package alternativa.tanks.bonuses
       
       private var globalLightIntensity:Number;
       
-      public function BattleBonus(param1:§1Q§)
+      public function BattleBonus(param1:Renamed1443)
       {
          this.onPickup = new Signal();
          this.onRemove = new Signal();
@@ -123,7 +123,7 @@ package alternativa.tanks.bonuses
       
       private function initLight() : void
       {
-         this.globalLightIntensity = §super package implements§.§set package include§();
+         this.globalLightIntensity = Renamed1445.Renamed1446();
          this.lightSource.color = this.data.lightColor;
          this.lightSource.attenuationBegin = this.data.attenuationBegin;
          this.lightSource.attenuationEnd = this.data.attenuationEnd;
@@ -133,7 +133,7 @@ package alternativa.tanks.bonuses
          this.lightSource.x = origin.x;
          this.lightSource.y = origin.y;
          this.lightSource.z = origin.z;
-         this.battleService.§3l§().§with catch with§(this.lightSource);
+         this.battleService.Renamed621().Renamed1258(this.lightSource);
       }
       
       public function spawn(param1:Vector3, param2:int, param3:Number, param4:Function) : void
@@ -189,7 +189,7 @@ package alternativa.tanks.bonuses
       
       private function startGroundSpawnAnimation() : void
       {
-         var _loc1_:GroundSpawnRenderer = GroundSpawnRenderer(this.battleService.§class while§().getObject(GroundSpawnRenderer));
+         var _loc1_:GroundSpawnRenderer = GroundSpawnRenderer(this.battleService.Renamed618().getObject(GroundSpawnRenderer));
          _loc1_.start(this);
       }
       
@@ -222,7 +222,7 @@ package alternativa.tanks.bonuses
             origin.addScaled(-BonusConst.BONUS_HALF_SIZE,Y1);
             P1.copy(param2);
             P1.addScaled(-BonusConst.BONUS_HALF_SIZE / param3.z,Y);
-            if(this.battleService.§'x§().§const const true§().raycastStatic(origin,Vector3.DOWN,§super const continue§.§finally catch while§,BIG_VALUE,null,_RayIntersection))
+            if(this.battleService.Renamed619().Renamed692().raycastStatic(origin,Vector3.DOWN,Renamed666.Renamed690,BIG_VALUE,null,_RayIntersection))
             {
                if(param2.z < _RayIntersection.position.z && _RayIntersection.position.z < P1.z)
                {
@@ -254,14 +254,14 @@ package alternativa.tanks.bonuses
       
       private function isUnderCeil(param1:Vector3) : Boolean
       {
-         var _loc2_:§!"N§ = this.battleService.§'x§().§const const true§();
-         return _loc2_.hasStaticHit(param1,Vector3.Z_AXIS,§super const continue§.§finally catch while§,BIG_VALUE);
+         var _loc2_:Renamed665 = this.battleService.Renamed619().Renamed692();
+         return _loc2_.hasStaticHit(param1,Vector3.Z_AXIS,Renamed666.Renamed690,BIG_VALUE);
       }
       
       private function getGroundPointAndNormal(param1:Vector3, param2:Vector3, param3:Vector3) : void
       {
-         var _loc4_:§!"N§ = this.battleService.§'x§().§const const true§();
-         if(_loc4_.raycastStatic(param1,Vector3.DOWN,§super const continue§.§finally catch while§,BIG_VALUE,null,_RayIntersection))
+         var _loc4_:Renamed665 = this.battleService.Renamed619().Renamed692();
+         if(_loc4_.raycastStatic(param1,Vector3.DOWN,Renamed666.Renamed690,BIG_VALUE,null,_RayIntersection))
          {
             param3.copy(_RayIntersection.normal);
             param2.copy(_RayIntersection.position);
@@ -290,18 +290,18 @@ package alternativa.tanks.bonuses
       
       private function playPickupSound() : void
       {
-         var _loc1_:§implements for break§ = null;
+         var _loc1_:Renamed1442 = null;
          if(this.data.pickupSound != null)
          {
-            _loc1_ = §implements for break§.create(this.data.pickupSound,0.5);
+            _loc1_ = Renamed1442.create(this.data.pickupSound,0.5);
             this.bonusMesh.readPosition(_bonusPosition);
-            this.battleService.§"#D§(§do set case§.create(_bonusPosition,_loc1_));
+            this.battleService.Renamed637(Renamed1441.create(_bonusPosition,_loc1_));
          }
       }
       
       private function startPickupAnimation() : void
       {
-         var _loc1_:BonusPickupAnimation = BonusPickupAnimation(this.battleService.§class while§().getObject(BonusPickupAnimation));
+         var _loc1_:BonusPickupAnimation = BonusPickupAnimation(this.battleService.Renamed618().getObject(BonusPickupAnimation));
          _loc1_.start(this.bonusMesh);
          this.bonusMesh = null;
       }
@@ -360,13 +360,13 @@ package alternativa.tanks.bonuses
       
       private function initRemovalAnimation(param1:int) : void
       {
-         var _loc2_:RemovalAnimation = RemovalAnimation(this.battleService.§class while§().getObject(RemovalAnimation));
+         var _loc2_:RemovalAnimation = RemovalAnimation(this.battleService.Renamed618().getObject(RemovalAnimation));
          _loc2_.init(this,param1);
       }
       
       private function startSpawnAnimation(param1:BattleService) : void
       {
-         var _loc2_:SpawnAnimation = SpawnAnimation(this.battleService.§class while§().getObject(SpawnAnimation));
+         var _loc2_:SpawnAnimation = SpawnAnimation(this.battleService.Renamed618().getObject(SpawnAnimation));
          _loc2_.start(this);
       }
       
@@ -375,9 +375,9 @@ package alternativa.tanks.bonuses
          if(!this.controllersActive)
          {
             this.controllersActive = true;
-            this.battleService.§'x§().§^c§(this);
-            this.battleService.§'x§().§,j§(this);
-            this.battleService.§3l§().§9"N§(this,0);
+            this.battleService.Renamed619().Renamed811(this);
+            this.battleService.Renamed619().Renamed829(this);
+            this.battleService.Renamed621().Renamed1287(this,0);
          }
       }
       
@@ -432,9 +432,9 @@ package alternativa.tanks.bonuses
          if(this.controllersActive)
          {
             this.controllersActive = false;
-            this.battleService.§'x§().§7`§(this);
-            this.battleService.§'x§().§]#r§(this);
-            this.battleService.§3l§().§0!n§(this,0);
+            this.battleService.Renamed619().Renamed826(this);
+            this.battleService.Renamed619().Renamed830(this);
+            this.battleService.Renamed621().Renamed1289(this,0);
          }
       }
       
@@ -443,7 +443,7 @@ package alternativa.tanks.bonuses
          var _loc1_:ParachuteDetachAnimation = null;
          if(this.parachute != null)
          {
-            _loc1_ = ParachuteDetachAnimation(this.battleService.§class while§().getObject(ParachuteDetachAnimation));
+            _loc1_ = ParachuteDetachAnimation(this.battleService.Renamed618().getObject(ParachuteDetachAnimation));
             _loc1_.start(this.parachute,this.cords,this.fallSpeed / 2);
             this.parachute = null;
             this.cords = null;
@@ -538,13 +538,13 @@ package alternativa.tanks.bonuses
       
       private function removeLight() : void
       {
-         var _loc1_:§break set switch§ = null;
+         var _loc1_:Renamed1440 = null;
          if(this.lightSource.parent != null)
          {
-            this.battleService.§3l§().removeObject(this.lightSource);
-            _loc1_ = §break set switch§(this.battleService.§class while§().getObject(§break set switch§));
+            this.battleService.Renamed621().removeObject(this.lightSource);
+            _loc1_ = Renamed1440(this.battleService.Renamed618().getObject(Renamed1440));
             _loc1_.init(this.lightSource,FADEOUT_TIME,FADEOUT_CURVE);
-            this.battleService.§3l§().§7"0§(_loc1_);
+            this.battleService.Renamed621().Renamed636(_loc1_);
          }
       }
    }

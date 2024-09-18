@@ -1,6 +1,6 @@
 package alternativa.tanks.view.battlecreate
 {
-   import §?"a§.§finally for do§;
+   import Renamed1614.Renamed1615;
    
    public interface ILocaleCreateBattleForm
    {
@@ -60,7 +60,7 @@ package alternativa.tanks.view.battlecreate
       
       function get checkBoxReArmorLabel() : String;
       
-      function getThemeName(param1:§finally for do§) : String;
+      function getThemeName(param1:Renamed1615) : String;
    }
 }
 

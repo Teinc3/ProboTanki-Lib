@@ -1,6 +1,6 @@
 package alternativa.tanks.services.targeting
 {
-   import §]#R§.§catch const var§;
+   import Renamed479.Renamed3840;
    
    public interface TargetingModeService
    {
@@ -10,15 +10,15 @@ package alternativa.tanks.services.targeting
       
       function tick() : void;
       
-      function §;"W§() : int;
+      function Renamed1024() : int;
       
-      function §`!G§(param1:§catch const var§) : void;
+      function Renamed3841(param1:Renamed3840) : void;
       
-      function §%"D§() : §catch const var§;
+      function Renamed3842() : Renamed3840;
       
-      function §8_§() : void;
+      function Renamed3408() : void;
       
-      function § #J§() : void;
+      function Renamed3409() : void;
    }
 }
 

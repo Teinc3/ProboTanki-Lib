@@ -45,7 +45,7 @@ package alternativa.tanks.model.item
                   if(_loc5_.hasModel(IItem))
                   {
                      _loc6_ += "\n" + itemService.getName(_loc5_);
-                     _loc6_ = (_loc6_ = (_loc6_ = (_loc6_ = _loc6_ += "\n" + itemService.getName(_loc5_) + ("   type: " + itemService.getCategory(_loc5_) + "\n")) + ("   description: " + itemService.getDescription(_loc5_) + "\n")) + ("   rankId: " + itemService.§,$!§(_loc5_) + "\n")) + ("   price: " + itemService.getPrice(_loc5_) + "\n");
+                     _loc6_ = (_loc6_ = (_loc6_ = (_loc6_ = _loc6_ += "\n" + itemService.getName(_loc5_) + ("   type: " + itemService.getCategory(_loc5_) + "\n")) + ("   description: " + itemService.getDescription(_loc5_) + "\n")) + ("   rankId: " + itemService.Renamed1764(_loc5_) + "\n")) + ("   price: " + itemService.getPrice(_loc5_) + "\n");
                   }
                }
                _loc3_++;

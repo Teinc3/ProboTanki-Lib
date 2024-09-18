@@ -4,13 +4,13 @@ package alternativa.tanks.services.mipmapping
    
    public interface MipMappingService
    {
-      function §9#u§() : Boolean;
+      function Renamed3826() : Boolean;
       
       function setMipMapping(param1:Boolean) : void;
       
-      function §7#p§() : void;
+      function Renamed3827() : void;
       
-      function §dynamic var extends§(param1:TextureMaterialRegistry) : void;
+      function Renamed540(param1:TextureMaterialRegistry) : void;
    }
 }
 

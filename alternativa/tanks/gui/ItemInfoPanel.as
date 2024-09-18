@@ -1,10 +1,10 @@
 package alternativa.tanks.gui
 {
-   import §0#<§.§6<§;
+   import Renamed1687.Renamed1688;
    import alternativa.osgi.service.clientlog.IClientLog;
    import alternativa.osgi.service.locale.ILocaleService;
-   import alternativa.tanks.gui.buttons.§0#j§;
-   import alternativa.tanks.gui.buttons.§6`§;
+   import alternativa.tanks.gui.buttons.Renamed1708;
+   import alternativa.tanks.gui.buttons.Renamed1709;
    import alternativa.tanks.gui.buttons.GarageButton;
    import alternativa.tanks.gui.effects.BlinkEffect;
    import alternativa.tanks.gui.effects.GlowEffect;
@@ -23,7 +23,7 @@ package alternativa.tanks.gui
    import alternativa.tanks.service.item.ItemService;
    import alternativa.tanks.service.item3d.ITank3DViewer;
    import alternativa.tanks.service.itempropertyparams.ItemPropertyParamsService;
-   import alternativa.tanks.service.itempropertyparams.§else package implements§;
+   import alternativa.tanks.service.itempropertyparams.Renamed1710;
    import alternativa.tanks.service.money.IMoneyService;
    import alternativa.tanks.service.panel.IPanelView;
    import alternativa.types.Long;
@@ -64,8 +64,8 @@ package alternativa.tanks.gui
    import projects.tanks.clients.fp10.libraries.tanksservices.service.layout.ILobbyLayoutService;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.userproperties.IUserPropertiesService;
    import projects.tanks.clients.fp10.libraries.tanksservices.utils.removeChildrenFrom;
-   import §throw var throw§.§>P§;
-   import §true catch final§.§#!q§;
+   import Renamed437.Renamed1711;
+   import Renamed438.Renamed1712;
    import utils.resource.IResourceLoadingComplete;
    import utils.resource.ResourceLoadingWrapper;
    
@@ -99,13 +99,13 @@ package alternativa.tanks.gui
       public static var lobbyLayoutService:ILobbyLayoutService;
       
       [Inject]
-      public static var §var set function§:ITank3DViewer;
+      public static var Renamed1713:ITank3DViewer;
       
       [Inject]
       public static var battleInfoService:IBattleInfoService;
       
       [Inject]
-      public static var §super set dynamic§:IDelayMountCategoryService;
+      public static var Renamed1714:IDelayMountCategoryService;
       
       public static const INVENTORY_MAX_VALUE:int = 9999;
       
@@ -125,7 +125,7 @@ package alternativa.tanks.gui
       
       private static const PREVIEW_OFFSET_X:int = 0;
       
-      private static const §in set each§:int = 10;
+      private static const Renamed1715:int = 10;
       
       public const margin:int = 11;
       
@@ -135,13 +135,13 @@ package alternativa.tanks.gui
       
       public var buyButton:GarageButton;
       
-      public var equipButton:§0#j§;
+      public var equipButton:Renamed1708;
       
       public var upgradeButton:UpgradeButton;
       
-      public var §^!&§:GreyBigButton;
+      public var Renamed1693:GreyBigButton;
       
-      private var §3"6§:GreyBigButton;
+      private var Renamed1716:GreyBigButton;
       
       private var itemNameLabel:LabelBase;
       
@@ -151,13 +151,13 @@ package alternativa.tanks.gui
       
       private var inner:TankWindowInner;
       
-      private var §[#O§:Bitmap;
+      private var Renamed1717:Bitmap;
       
-      private var §7=§:DiscreteSprite;
+      private var Renamed1718:DiscreteSprite;
       
-      private var §use set native§:Bitmap;
+      private var Renamed1719:Bitmap;
       
-      private var §while package true§:Bitmap;
+      private var Renamed1720:Bitmap;
       
       private var leftPreview:Bitmap;
       
@@ -165,7 +165,7 @@ package alternativa.tanks.gui
       
       private var topPreview:Bitmap;
       
-      private var propertiesParams:Vector.<§else package implements§>;
+      private var propertiesParams:Vector.<Renamed1710>;
       
       private var scrollPane:ScrollPane;
       
@@ -189,43 +189,43 @@ package alternativa.tanks.gui
       
       private var modTable:ModTable;
       
-      private var §`"n§:§#!q§;
+      private var Renamed1721:Renamed1712;
       
-      private var §in var default§:Sprite;
+      private var Renamed1722:Sprite;
       
-      private var §finally var package§:Bitmap;
+      private var Renamed1723:Bitmap;
       
-      private var §finally const super§:Bitmap;
+      private var Renamed1724:Bitmap;
       
-      private var §5l§:Bitmap;
+      private var Renamed1725:Bitmap;
       
-      private var §8!f§:Bitmap;
+      private var Renamed1726:Bitmap;
       
-      private var §each var throw§:Bitmap;
+      private var Renamed1727:Bitmap;
       
-      private var §+#A§:Bitmap;
+      private var Renamed1728:Bitmap;
       
-      private var §`"K§:Bitmap;
+      private var Renamed1729:Bitmap;
       
-      private var §+!O§:Bitmap;
+      private var Renamed1730:Bitmap;
       
-      private var §set for with§:Bitmap;
+      private var Renamed1731:Bitmap;
       
-      private var §false set native§:Bitmap;
+      private var Renamed1732:Bitmap;
       
-      private var §<!]§:Bitmap;
+      private var Renamed1733:Bitmap;
       
-      private var §import var native§:Bitmap;
+      private var Renamed1734:Bitmap;
       
-      private var §>#'§:Bitmap;
+      private var Renamed1735:Bitmap;
       
-      private var §null for each§:Shape;
+      private var Renamed1736:Shape;
       
-      private var §4!i§:Shape;
+      private var Renamed1737:Shape;
       
-      private var §2"J§:Boolean;
+      private var Renamed1700:Boolean;
       
-      private var §import for switch§:LabelBase;
+      private var Renamed1738:LabelBase;
       
       private var item:IGameObject;
       
@@ -241,13 +241,13 @@ package alternativa.tanks.gui
       
       private var minRankIndex:int;
       
-      private var §import for do§:Long;
+      private var Renamed1739:Long;
       
       private var _topPreviewLoadingId:Long;
       
-      private var §#F§:Long;
+      private var Renamed1740:Long;
       
-      private var §4I§:Long;
+      private var Renamed1741:Long;
       
       private var selectWindow:SelectUpgradeWindow;
       
@@ -255,19 +255,19 @@ package alternativa.tanks.gui
       
       private var enabledUpgrades:Boolean;
       
-      private var §class catch var§:§8!>§;
+      private var Renamed1742:Renamed1743;
       
-      private var §in set try§:DiscreteSprite;
+      private var Renamed1744:DiscreteSprite;
       
-      private var §2"1§:DiscreteSprite;
+      private var Renamed1745:DiscreteSprite;
       
       public function ItemInfoPanel(param1:Boolean, param2:int)
       {
          var _loc3_:TextFormat = null;
-         this.propertiesParams = new Vector.<§else package implements§>();
+         this.propertiesParams = new Vector.<Renamed1710>();
          this.blinkEffect = new BlinkEffect();
-         this.§in set try§ = new DiscreteSprite();
-         this.§2"1§ = new DiscreteSprite();
+         this.Renamed1744 = new DiscreteSprite();
+         this.Renamed1745 = new DiscreteSprite();
          super();
          this.enabledUpgrades = param1;
          this.size = new Point(400,300);
@@ -322,39 +322,39 @@ package alternativa.tanks.gui
          this.itemDescriptionLabel.mouseWheelEnabled = false;
          this.scrollContainer.addChild(this.itemDescriptionLabel);
          this.itemDescriptionLabel.x = HORIZONTAL_MARGIN - 3;
-         this.§7=§ = new DiscreteSprite();
-         this.scrollContainer.addChild(this.§7=§);
-         this.§class catch var§ = new §8!>§(this.areaRect2.width);
-         this.§class catch var§.x = 9;
-         this.§[#O§ = new Bitmap();
-         this.§use set native§ = new Bitmap();
-         this.§while package true§ = new Bitmap();
+         this.Renamed1718 = new DiscreteSprite();
+         this.scrollContainer.addChild(this.Renamed1718);
+         this.Renamed1742 = new Renamed1743(this.areaRect2.width);
+         this.Renamed1742.x = 9;
+         this.Renamed1717 = new Bitmap();
+         this.Renamed1719 = new Bitmap();
+         this.Renamed1720 = new Bitmap();
          this.leftPreview = new Bitmap();
          this.topPreview = new Bitmap();
          this.buyButton = new GarageButton();
          this.upgradeButton = new UpgradeButton();
          this.upgradeButton.addEventListener(MouseEvent.CLICK,this.onButtonUpgradeClick);
-         this.equipButton = new §0#j§();
+         this.equipButton = new Renamed1708();
          this.equipButton.label = localeService.getText(TanksLocale.TEXT_GARAGE_INFO_PANEL_BUTTON_EQUIP_TEXT);
-         this.§3"6§ = new GreyBigButton();
-         this.§3"6§.label = localeService.getText(TanksLocale.TEXT_FITTING_BUTTON_TEXT);
-         this.§3"6§.visible = false;
-         this.§3"6§.addEventListener(MouseEvent.CLICK,this.§dynamic catch package§);
-         addChild(this.§2"1§);
-         this.§^!&§ = new GreyBigButton();
-         this.§^!&§.label = localeService.getText(TanksLocale.TEXT_DELETE_PRESENT_BUTTON);
-         this.§^!&§.visible = false;
+         this.Renamed1716 = new GreyBigButton();
+         this.Renamed1716.label = localeService.getText(TanksLocale.TEXT_FITTING_BUTTON_TEXT);
+         this.Renamed1716.visible = false;
+         this.Renamed1716.addEventListener(MouseEvent.CLICK,this.Renamed1746);
+         addChild(this.Renamed1745);
+         this.Renamed1693 = new GreyBigButton();
+         this.Renamed1693.label = localeService.getText(TanksLocale.TEXT_DELETE_PRESENT_BUTTON);
+         this.Renamed1693.visible = false;
          this.buyButton.visible = false;
          this.upgradeButton.visible = false;
          this.equipButton.visible = false;
-         this.§2"1§.addChild(this.buyButton);
-         this.§2"1§.addChild(this.upgradeButton);
-         this.§2"1§.addChild(this.equipButton);
-         this.§2"1§.addChild(this.§3"6§);
-         this.§2"1§.addChild(this.§^!&§);
-         addChild(this.§in set try§);
+         this.Renamed1745.addChild(this.buyButton);
+         this.Renamed1745.addChild(this.upgradeButton);
+         this.Renamed1745.addChild(this.equipButton);
+         this.Renamed1745.addChild(this.Renamed1716);
+         this.Renamed1745.addChild(this.Renamed1693);
+         addChild(this.Renamed1744);
          this.inventoryNumStepper = new NumStepper();
-         this.§2"1§.addChild(this.inventoryNumStepper);
+         this.Renamed1745.addChild(this.inventoryNumStepper);
          this.inventoryNumStepper.value = 1;
          this.inventoryNumStepper.minValue = 1;
          this.inventoryNumStepper.maxValue = INVENTORY_MAX_VALUE;
@@ -371,20 +371,20 @@ package alternativa.tanks.gui
          this.propertiesPanelCenter.x = this.propertiesPanelLeft.width;
          this.propertiesPanel.x = HORIZONTAL_MARGIN;
          this.propertiesPanel.y = Math.round(VERTICAL_MARGIN * 2 + this.itemNameLabel.textHeight - 7);
-         this.§extends throw§();
+         this.Renamed1747();
          this.timeIndicator = new LabelBase();
          this.timeIndicator.size = 18;
          this.timeIndicator.color = 381208;
          this.modTable = new ModTable(this.areaRect2.width);
          this.modTable.x = HORIZONTAL_MARGIN;
-         this.§import for switch§ = new LabelBase();
-         this.§import for switch§.color = 16777215;
-         this.§import for switch§.align = TextFormatAlign.CENTER;
-         this.§import for switch§.size = 23;
-         this.§import for switch§.bold = true;
+         this.Renamed1738 = new LabelBase();
+         this.Renamed1738.color = 16777215;
+         this.Renamed1738.align = TextFormatAlign.CENTER;
+         this.Renamed1738.size = 23;
+         this.Renamed1738.bold = true;
          if(_loc5_ == "cn")
          {
-            this.§import for switch§.size = 20;
+            this.Renamed1738.size = 20;
          }
       }
       
@@ -402,43 +402,43 @@ package alternativa.tanks.gui
          return _loc4_;
       }
       
-      private function §extends throw§() : void
+      private function Renamed1747() : void
       {
-         this.§in var default§ = new Sprite();
-         this.§finally var package§ = new Bitmap(ItemInfoPanelBitmaps.§false package override§);
-         this.§in var default§.addChild(this.§finally var package§);
-         this.§finally const super§ = new Bitmap(ItemInfoPanelBitmaps.§]#"§);
-         this.§in var default§.addChild(this.§finally const super§);
-         this.§5l§ = new Bitmap(ItemInfoPanelBitmaps.§function set include§);
-         this.§in var default§.addChild(this.§5l§);
-         this.§finally const super§.x = this.§finally var package§.width;
-         this.§8!f§ = new Bitmap(ItemInfoPanelBitmaps.§case for static§);
-         this.§in var default§.addChild(this.§8!f§);
-         this.§each var throw§ = new Bitmap(ItemInfoPanelBitmaps.§get catch return§);
-         this.§in var default§.addChild(this.§each var throw§);
-         this.§import var native§ = new Bitmap(ItemInfoPanelBitmaps.§5#j§);
-         this.§in var default§.addChild(this.§import var native§);
-         this.§>#'§ = new Bitmap(ItemInfoPanelBitmaps.§set var while§);
-         this.§in var default§.addChild(this.§>#'§);
-         this.§false set native§ = new Bitmap(ItemInfoPanelBitmaps.§]#"§);
-         this.§in var default§.addChild(this.§false set native§);
-         this.§+#A§ = new Bitmap(ItemInfoPanelBitmaps.§var try§);
-         this.§in var default§.addChild(this.§+#A§);
-         this.§`"K§ = new Bitmap(ItemInfoPanelBitmaps.§=!4§);
-         this.§in var default§.addChild(this.§`"K§);
-         this.§<!]§ = new Bitmap(ItemInfoPanelBitmaps.§if const override§);
-         this.§in var default§.addChild(this.§<!]§);
-         this.§+!O§ = new Bitmap(ItemInfoPanelBitmaps.§case for static§);
-         this.§in var default§.addChild(this.§+!O§);
-         this.§set for with§ = new Bitmap(ItemInfoPanelBitmaps.§get catch return§);
-         this.§in var default§.addChild(this.§set for with§);
-         this.§null for each§ = new Shape();
-         this.§in var default§.addChild(this.§null for each§);
-         this.§4!i§ = new Shape();
-         this.§in var default§.addChild(this.§4!i§);
-         this.§in var default§.x = HORIZONTAL_MARGIN;
-         this.§`"n§ = new §#!q§(this.areaRect2.width);
-         this.§`"n§.x = HORIZONTAL_MARGIN;
+         this.Renamed1722 = new Sprite();
+         this.Renamed1723 = new Bitmap(ItemInfoPanelBitmaps.Renamed1748);
+         this.Renamed1722.addChild(this.Renamed1723);
+         this.Renamed1724 = new Bitmap(ItemInfoPanelBitmaps.Renamed1749);
+         this.Renamed1722.addChild(this.Renamed1724);
+         this.Renamed1725 = new Bitmap(ItemInfoPanelBitmaps.Renamed1750);
+         this.Renamed1722.addChild(this.Renamed1725);
+         this.Renamed1724.x = this.Renamed1723.width;
+         this.Renamed1726 = new Bitmap(ItemInfoPanelBitmaps.Renamed1751);
+         this.Renamed1722.addChild(this.Renamed1726);
+         this.Renamed1727 = new Bitmap(ItemInfoPanelBitmaps.Renamed1752);
+         this.Renamed1722.addChild(this.Renamed1727);
+         this.Renamed1734 = new Bitmap(ItemInfoPanelBitmaps.Renamed1753);
+         this.Renamed1722.addChild(this.Renamed1734);
+         this.Renamed1735 = new Bitmap(ItemInfoPanelBitmaps.Renamed1754);
+         this.Renamed1722.addChild(this.Renamed1735);
+         this.Renamed1732 = new Bitmap(ItemInfoPanelBitmaps.Renamed1749);
+         this.Renamed1722.addChild(this.Renamed1732);
+         this.Renamed1728 = new Bitmap(ItemInfoPanelBitmaps.Renamed1755);
+         this.Renamed1722.addChild(this.Renamed1728);
+         this.Renamed1729 = new Bitmap(ItemInfoPanelBitmaps.Renamed1756);
+         this.Renamed1722.addChild(this.Renamed1729);
+         this.Renamed1733 = new Bitmap(ItemInfoPanelBitmaps.Renamed1757);
+         this.Renamed1722.addChild(this.Renamed1733);
+         this.Renamed1730 = new Bitmap(ItemInfoPanelBitmaps.Renamed1751);
+         this.Renamed1722.addChild(this.Renamed1730);
+         this.Renamed1731 = new Bitmap(ItemInfoPanelBitmaps.Renamed1752);
+         this.Renamed1722.addChild(this.Renamed1731);
+         this.Renamed1736 = new Shape();
+         this.Renamed1722.addChild(this.Renamed1736);
+         this.Renamed1737 = new Shape();
+         this.Renamed1722.addChild(this.Renamed1737);
+         this.Renamed1722.x = HORIZONTAL_MARGIN;
+         this.Renamed1721 = new Renamed1712(this.areaRect2.width);
+         this.Renamed1721.x = HORIZONTAL_MARGIN;
       }
       
       public function destroy() : void
@@ -447,10 +447,10 @@ package alternativa.tanks.gui
          this.inner = null;
          this.leftPreview = null;
          this.topPreview = null;
-         this.§use set native§ = null;
-         this.§7=§ = null;
-         this.§[#O§ = null;
-         this.§while package true§ = null;
+         this.Renamed1719 = null;
+         this.Renamed1718 = null;
+         this.Renamed1717 = null;
+         this.Renamed1720 = null;
          this.item = null;
          this.itemNameLabel = null;
          this.itemDescriptionLabel = null;
@@ -460,21 +460,21 @@ package alternativa.tanks.gui
          this.propertiesPanelLeft = null;
          this.propertiesPanelCenter = null;
          this.propertiesPanelRight = null;
-         this.§in var default§ = null;
-         this.§finally var package§ = null;
-         this.§finally const super§ = null;
-         this.§5l§ = null;
-         this.§8!f§ = null;
+         this.Renamed1722 = null;
+         this.Renamed1723 = null;
+         this.Renamed1724 = null;
+         this.Renamed1725 = null;
+         this.Renamed1726 = null;
          this.area = null;
          this.areaRect = null;
          this.areaRect2 = null;
-         this.§2"1§ = null;
+         this.Renamed1745 = null;
          this.buyButton = null;
-         this.§3"6§.removeEventListener(MouseEvent.CLICK,this.§dynamic catch package§);
-         this.§3"6§ = null;
+         this.Renamed1716.removeEventListener(MouseEvent.CLICK,this.Renamed1746);
+         this.Renamed1716 = null;
          if(this.equipButton != null)
          {
-            this.equipButton.removeEventListener(§6`§.§super for while§,this.§1!N§);
+            this.equipButton.removeEventListener(Renamed1709.Renamed1758,this.Renamed1759);
             this.equipButton.hideTime();
             this.equipButton = null;
          }
@@ -483,22 +483,22 @@ package alternativa.tanks.gui
             this.upgradeButton.removeEventListener(MouseEvent.CLICK,this.onButtonUpgradeClick);
          }
          this.upgradeButton = null;
-         this.§import for do§ = null;
+         this.Renamed1739 = null;
          this.blinkEffect.stop();
          if(this.selectWindow)
          {
             dialogService.removeDialog(this.selectWindow);
             this.selectWindow = null;
          }
-         this.§class catch var§.destroy();
-         this.§class catch var§ = null;
-         this.§in set try§ = null;
+         this.Renamed1742.destroy();
+         this.Renamed1742 = null;
+         this.Renamed1744 = null;
       }
       
-      private function §dynamic catch package§(param1:MouseEvent) : void
+      private function Renamed1746(param1:MouseEvent) : void
       {
-         §>P§(this.item.adapt(§>P§)).fit();
-         this.§3"6§.enabled = false;
+         Renamed1711(this.item.adapt(Renamed1711)).fit();
+         this.Renamed1716.enabled = false;
       }
       
       private function confScroll() : void
@@ -523,7 +523,7 @@ package alternativa.tanks.gui
       
       private function hideIcons() : void
       {
-         var _loc1_:§else package implements§ = null;
+         var _loc1_:Renamed1710 = null;
          for each(_loc1_ in this.propertiesParams)
          {
             if(this.propertiesPanel.contains(_loc1_.icon))
@@ -535,7 +535,7 @@ package alternativa.tanks.gui
       
       private function showIcons() : void
       {
-         var _loc1_:§else package implements§ = null;
+         var _loc1_:Renamed1710 = null;
          for each(_loc1_ in this.propertiesParams)
          {
             if(!this.propertiesPanel.contains(_loc1_.icon))
@@ -547,11 +547,11 @@ package alternativa.tanks.gui
       
       public function onLoadingComplete(param1:Resource) : void
       {
-         if(this.§import for do§ == param1.id)
+         if(this.Renamed1739 == param1.id)
          {
-            if(!this.§2"J§ && !itemService.§while try§(this.item))
+            if(!this.Renamed1700 && !itemService.Renamed1760(this.item))
             {
-               this.§[#O§.bitmapData = ImageResource(param1).data;
+               this.Renamed1717.bitmapData = ImageResource(param1).data;
                this.resize(this.size.x,this.size.y);
             }
          }
@@ -561,21 +561,21 @@ package alternativa.tanks.gui
             this.showBitmap(this.topPreview);
             this.resize(this.size.x,this.size.y);
          }
-         if(this.§#F§ == param1.id)
+         if(this.Renamed1740 == param1.id)
          {
-            if(this.§2"J§)
+            if(this.Renamed1700)
             {
-               this.§use set native§.bitmapData = ImageResource(param1).data;
-               this.showBitmap(this.§use set native§);
+               this.Renamed1719.bitmapData = ImageResource(param1).data;
+               this.showBitmap(this.Renamed1719);
                this.resize(this.size.x,this.size.y);
             }
          }
-         if(this.§4I§ == param1.id)
+         if(this.Renamed1741 == param1.id)
          {
-            if(itemService.§while try§(this.item))
+            if(itemService.Renamed1760(this.item))
             {
-               this.§while package true§.bitmapData = ImageResource(param1).data;
-               this.showBitmap(this.§while package true§);
+               this.Renamed1720.bitmapData = ImageResource(param1).data;
+               this.showBitmap(this.Renamed1720);
                this.resize(this.size.x,this.size.y);
             }
          }
@@ -587,7 +587,7 @@ package alternativa.tanks.gui
          var _loc4_:Boolean = false;
          var _loc5_:int = 0;
          var _loc6_:ItemPropertyValue = null;
-         var _loc7_:§else package implements§ = null;
+         var _loc7_:Renamed1710 = null;
          var _loc8_:int = 0;
          var _loc9_:Vector.<IGameObject> = null;
          var _loc10_:Vector.<String> = null;
@@ -606,22 +606,22 @@ package alternativa.tanks.gui
          var _loc23_:PresentItem = null;
          var _loc24_:ImageResource = null;
          var _loc25_:ImageResource = null;
-         this.§use set native§.bitmapData = null;
-         this.§while package true§.bitmapData = null;
-         this.§[#O§.bitmapData = null;
-         if(!param2 && !itemService.§while try§(param1))
+         this.Renamed1719.bitmapData = null;
+         this.Renamed1720.bitmapData = null;
+         this.Renamed1717.bitmapData = null;
+         if(!param2 && !itemService.Renamed1760(param1))
          {
             this.updateUpgradeButton(param1);
          }
-         removeChildrenFrom(this.§7=§);
-         removeChildrenFrom(this.§in set try§);
-         this.§`#r§(param2,this.item,param1);
+         removeChildrenFrom(this.Renamed1718);
+         removeChildrenFrom(this.Renamed1744);
+         this.Renamed1761(param2,this.item,param1);
          if(this.item != param1)
          {
-            §var set function§.§3![§();
+            Renamed1713.Renamed1762();
             this.item = param1;
          }
-         if(param2 || !itemService.§!"p§(param1))
+         if(param2 || !itemService.Renamed1704(param1))
          {
             this.buyButton.setText(localeService.getText(TanksLocale.TEXT_GARAGE_INFO_PANEL_BUTTON_BUY_TEXT));
          }
@@ -630,58 +630,58 @@ package alternativa.tanks.gui
             this.buyButton.setText(localeService.getText(TanksLocale.TEXT_GARAGE_INFO_PANEL_BUTTON_BUY_TEXT) + " M" + (itemService.getModificationIndex(param1) + 1));
          }
          this.itemNameLabel.text = itemService.getName(param1);
-         this.itemDescriptionLabel.visible = !itemService.§while try§(param1);
+         this.itemDescriptionLabel.visible = !itemService.Renamed1760(param1);
          this.itemDescriptionLabel.htmlText = itemService.getDescription(param1);
          this.previewResource = itemService.getPreviewResource(param1);
-         if(itemService.§2"J§(param1))
+         if(itemService.Renamed1700(param1))
          {
             _loc3_ = GarageKit(param1.adapt(GarageKit)).getImage();
-            this.§#F§ = _loc3_.id;
+            this.Renamed1740 = _loc3_.id;
             if(_loc3_.isLazy && !_loc3_.isLoaded)
             {
                _loc3_.loadLazyResource(new ResourceLoadingWrapper(this));
             }
-            this.§use set native§.bitmapData = _loc3_.data;
-            if(this.§use set native§.bitmapData != null)
+            this.Renamed1719.bitmapData = _loc3_.data;
+            if(this.Renamed1719.bitmapData != null)
             {
-               this.showBitmap(this.§use set native§);
+               this.showBitmap(this.Renamed1719);
             }
             else
             {
-               removeDisplayObject(this.§use set native§);
+               removeDisplayObject(this.Renamed1719);
             }
          }
-         else if(itemService.§while try§(param1))
+         else if(itemService.Renamed1760(param1))
          {
             this.leftPreviewEnabled = false;
             _loc24_ = PresentItem(param1.adapt(PresentItem)).getImage();
-            this.§4I§ = _loc24_.id;
+            this.Renamed1741 = _loc24_.id;
             if(_loc24_.isLazy && !_loc24_.isLoaded)
             {
                _loc24_.loadLazyResource(new ResourceLoadingWrapper(this));
             }
-            this.§while package true§.bitmapData = _loc24_.data;
-            if(this.§while package true§.bitmapData != null)
+            this.Renamed1720.bitmapData = _loc24_.data;
+            if(this.Renamed1720.bitmapData != null)
             {
-               this.showBitmap(this.§while package true§);
+               this.showBitmap(this.Renamed1720);
             }
             else
             {
-               removeDisplayObject(this.§while package true§);
+               removeDisplayObject(this.Renamed1720);
             }
          }
          else
          {
             _loc25_ = itemService.getPreviewResource(param1);
-            this.§import for do§ = _loc25_.id;
+            this.Renamed1739 = _loc25_.id;
             if(_loc25_.isLazy && !_loc25_.isLoaded)
             {
                _loc25_.loadLazyResource(new ResourceLoadingWrapper(this));
             }
-            this.§[#O§.bitmapData = _loc25_.data;
+            this.Renamed1717.bitmapData = _loc25_.data;
          }
-         this.maxRankIndex = itemService.§[!@§(param1);
-         this.minRankIndex = itemService.§,$!§(param1);
+         this.maxRankIndex = itemService.Renamed1763(param1);
+         this.minRankIndex = itemService.Renamed1764(param1);
          this.hideIcons();
          this.itemCategory = itemService.getCategory(param1);
          this.itemPrice = itemService.getPrice(param1);
@@ -729,28 +729,28 @@ package alternativa.tanks.gui
                this.scrollContainer.removeChild(this.propertiesPanel);
             }
          }
-         if(itemService.§while try§(param1))
+         if(itemService.Renamed1760(param1))
          {
             _loc23_ = PresentItem(param1.adapt(PresentItem));
-            this.§class catch var§.update(_loc23_.getPresenterId(),_loc23_.getDate(),_loc23_.getText());
-            this.§7=§.addChild(this.§class catch var§);
+            this.Renamed1742.update(_loc23_.getPresenterId(),_loc23_.getDate(),_loc23_.getText());
+            this.Renamed1718.addChild(this.Renamed1742);
          }
          else
          {
-            this.§class catch var§.§true for class§();
+            this.Renamed1742.Renamed1765();
          }
-         if(itemService.§2"J§(param1))
+         if(itemService.Renamed1700(param1))
          {
-            this.§2"J§ = true;
-            this.§9#E§(param1);
+            this.Renamed1700 = true;
+            this.Renamed1766(param1);
          }
          else
          {
-            this.§2"J§ = false;
-            this.§break const final§();
-            if(this.scrollContainer.contains(this.§import for switch§))
+            this.Renamed1700 = false;
+            this.Renamed1767();
+            if(this.scrollContainer.contains(this.Renamed1738))
             {
-               this.scrollContainer.removeChild(this.§import for switch§);
+               this.scrollContainer.removeChild(this.Renamed1738);
             }
          }
          if(this.itemCategory == ItemCategoryEnum.ARMOR || this.itemCategory == ItemCategoryEnum.WEAPON)
@@ -760,7 +760,7 @@ package alternativa.tanks.gui
             this.propertiesPanelRight.bitmapData = ItemInfoPanelBitmaps.upgradeTableRight;
             this.showModTable();
             this.modTable.select(itemService.getModificationIndex(param1));
-            _loc9_ = itemService.§;#U§(param1);
+            _loc9_ = itemService.Renamed1706(param1);
             _loc10_ = new Vector.<String>(this.propertiesParams.length);
             if(_loc9_.length == 1)
             {
@@ -796,7 +796,7 @@ package alternativa.tanks.gui
                   _loc14_ = _loc13_.costLabel.width;
                }
                this.modTable.maxCostWidth = _loc14_;
-               _loc13_.rankIcon.setRank(itemService.§,$!§(_loc12_));
+               _loc13_.rankIcon.setRank(itemService.Renamed1764(_loc12_));
                _loc15_ = itemService.getUpgradableProperties(_loc12_);
                _loc5_ = 0;
                while(_loc5_ < _loc15_.length)
@@ -822,16 +822,16 @@ package alternativa.tanks.gui
             this.propertiesPanelRight.bitmapData = ItemInfoPanelBitmaps.propertiesRight;
             this.hideModTable();
          }
-         if(itemService.§while try§(param1))
+         if(itemService.Renamed1760(param1))
          {
-            this.§^!&§.visible = true;
-            this.§^!&§.enabled = true;
+            this.Renamed1693.visible = true;
+            this.Renamed1693.enabled = true;
             this.buyButton.visible = false;
             this.equipButton.visible = false;
          }
          else
          {
-            this.§^!&§.visible = false;
+            this.Renamed1693.visible = false;
             if(param2)
             {
                this.buyButton.visible = true;
@@ -861,7 +861,7 @@ package alternativa.tanks.gui
          }
          if(this.buyButton.visible)
          {
-            _loc16_ = getRequiredRank(userPropertiesService.rank,itemService.§,$!§(param1),itemService.§[!@§(param1));
+            _loc16_ = getRequiredRank(userPropertiesService.rank,itemService.Renamed1764(param1),itemService.Renamed1763(param1));
             _loc17_ = 1;
             if(this.isCountable)
             {
@@ -890,14 +890,14 @@ package alternativa.tanks.gui
                _loc19_ = itemService.getDiscount(param1);
                _loc17_ = this.inventoryNumStepper.value;
             }
-            else if(!param2 && itemService.§!"p§(param1))
+            else if(!param2 && itemService.Renamed1704(param1))
             {
                this.inventoryNumStepper.visible = false;
                this.inventoryNumStepper.enabled = false;
-               _loc21_ = itemService.§6#y§(param1);
+               _loc21_ = itemService.Renamed1705(param1);
                _loc18_ = itemService.getPrice(_loc21_);
                _loc19_ = itemService.getDiscount(_loc21_);
-               _loc22_ = itemService.§,$!§(_loc21_);
+               _loc22_ = itemService.Renamed1764(_loc21_);
                _loc16_ = userPropertiesService.rank >= _loc22_ ? int(_loc22_) : int(-_loc22_);
             }
             else
@@ -907,7 +907,7 @@ package alternativa.tanks.gui
                this.inventoryNumStepper.visible = false;
                this.inventoryNumStepper.enabled = false;
             }
-            this.buyButton.setInfo(_loc18_,_loc17_,_loc16_,itemService.§static set default§(param1));
+            this.buyButton.setInfo(_loc18_,_loc17_,_loc16_,itemService.Renamed1768(param1));
          }
          else
          {
@@ -928,48 +928,48 @@ package alternativa.tanks.gui
          {
             this.scrollContainer.removeChild(this.timeIndicator);
          }
-         if(!(this.§2"1§.visible = !param1.hasModel(§6<§)))
+         if(!(this.Renamed1745.visible = !param1.hasModel(Renamed1688)))
          {
-            §6<§(param1.event(§6<§)).updateActionElements(this.§in set try§);
+            Renamed1688(param1.event(Renamed1688)).updateActionElements(this.Renamed1744);
          }
       }
       
-      private function §9#E§(param1:IGameObject) : void
+      private function Renamed1766(param1:IGameObject) : void
       {
-         if(!this.scrollContainer.contains(this.§in var default§))
+         if(!this.scrollContainer.contains(this.Renamed1722))
          {
-            this.scrollContainer.addChild(this.§in var default§);
+            this.scrollContainer.addChild(this.Renamed1722);
          }
-         if(!this.scrollContainer.contains(this.§`"n§))
+         if(!this.scrollContainer.contains(this.Renamed1721))
          {
-            this.scrollContainer.addChild(this.§`"n§);
+            this.scrollContainer.addChild(this.Renamed1721);
          }
-         this.§`"n§.show(param1);
+         this.Renamed1721.show(param1);
       }
       
-      private function §break const final§() : void
+      private function Renamed1767() : void
       {
-         if(this.scrollContainer.contains(this.§in var default§))
+         if(this.scrollContainer.contains(this.Renamed1722))
          {
-            this.scrollContainer.removeChild(this.§in var default§);
+            this.scrollContainer.removeChild(this.Renamed1722);
          }
-         if(this.scrollContainer.contains(this.§`"n§))
+         if(this.scrollContainer.contains(this.Renamed1721))
          {
-            this.scrollContainer.removeChild(this.§`"n§);
+            this.scrollContainer.removeChild(this.Renamed1721);
          }
       }
       
       public function updateEquipButton() : void
       {
-         this.§1J§();
+         this.Renamed1769();
          if(Boolean(lobbyLayoutService.inBattle()) && !battleInfoService.reArmorEnabled)
          {
             this.equipButton.enabled = false;
             return;
          }
-         if(this.§else for else§())
+         if(this.Renamed1770())
          {
-            this.§for try§();
+            this.Renamed1771();
          }
          else
          {
@@ -978,18 +978,18 @@ package alternativa.tanks.gui
          }
       }
       
-      private function §else for else§() : Boolean
+      private function Renamed1770() : Boolean
       {
-         return itemService.§include for each§(this.item) && itemService.§null var continue§(this.item) && !itemService.§,!S§(this.item);
+         return itemService.Renamed1772(this.item) && itemService.Renamed1773(this.item) && !itemService.Renamed1774(this.item);
       }
       
-      private function §for try§() : void
+      private function Renamed1771() : void
       {
-         var _loc1_:CountDownTimer = §super set dynamic§.§+N§(this.item);
-         if(Boolean(lobbyLayoutService.inBattle()) && _loc1_.getRemainingSeconds() > 0 && !itemService.§,!S§(this.item))
+         var _loc1_:CountDownTimer = Renamed1714.Renamed1775(this.item);
+         if(Boolean(lobbyLayoutService.inBattle()) && _loc1_.getRemainingSeconds() > 0 && !itemService.Renamed1774(this.item))
          {
             this.equipButton.startTimer(_loc1_);
-            this.equipButton.addEventListener(§6`§.§super for while§,this.§1!N§);
+            this.equipButton.addEventListener(Renamed1709.Renamed1758,this.Renamed1759);
          }
          else
          {
@@ -998,9 +998,9 @@ package alternativa.tanks.gui
          }
       }
       
-      private function §1J§() : void
+      private function Renamed1769() : void
       {
-         if(this.§else for else§())
+         if(this.Renamed1770())
          {
             this.equipButton.label = localeService.getText(TanksLocale.TEXT_GARAGE_INFO_PANEL_BUTTON_EQUIP_TEXT);
          }
@@ -1010,25 +1010,25 @@ package alternativa.tanks.gui
          }
       }
       
-      private function §1!N§(param1:§6`§) : void
+      private function Renamed1759(param1:Renamed1709) : void
       {
          this.equipButton.enabled = true;
-         this.equipButton.removeEventListener(§6`§.§super for while§,this.§1!N§);
+         this.equipButton.removeEventListener(Renamed1709.Renamed1758,this.Renamed1759);
       }
       
-      private function §`#r§(param1:Boolean, param2:IGameObject, param3:IGameObject) : void
+      private function Renamed1761(param1:Boolean, param2:IGameObject, param3:IGameObject) : void
       {
          if(param1 && itemService.getCategory(param3) == ItemCategoryEnum.COLOR && !battleInfoService.isInBattle())
          {
-            this.§3"6§.visible = true;
+            this.Renamed1716.visible = true;
             if(param2 != param3)
             {
-               this.§3"6§.enabled = true;
+               this.Renamed1716.enabled = true;
             }
          }
          else
          {
-            this.§3"6§.visible = false;
+            this.Renamed1716.visible = false;
          }
       }
       
@@ -1040,7 +1040,7 @@ package alternativa.tanks.gui
          if(_loc3_.isUpgrading())
          {
             _loc2_ = _loc3_.getUpgradingValue();
-            if(moneyService.§while package dynamic§(_loc2_.getSpeedUpCost()))
+            if(moneyService.Renamed1617(_loc2_.getSpeedUpCost()))
             {
                dispatchEvent(new ItemPropertyUpgradeEvent(ItemPropertyUpgradeEvent.SPEED_UP,_loc2_));
             }
@@ -1053,7 +1053,7 @@ package alternativa.tanks.gui
       
       private function showSelectUpgradeWindow(param1:Vector.<UpgradableItemPropertyValue>) : void
       {
-         if(itemService.§!"p§(this.item))
+         if(itemService.Renamed1704(this.item))
          {
             this.selectWindow = new SelectUpgradeWindow(param1,itemService.getModificationIndex(this.item),itemService.hasNextModification(this.item));
          }
@@ -1120,7 +1120,7 @@ package alternativa.tanks.gui
       
       private function setButtonsPosition() : void
       {
-         var _loc1_:int = this.§in set try§.y;
+         var _loc1_:int = this.Renamed1744.y;
          if(this.buyButton.visible)
          {
             this.buyButton.y = _loc1_;
@@ -1140,15 +1140,15 @@ package alternativa.tanks.gui
             this.equipButton.y = _loc1_;
             this.equipButton.x = this.size.x - this.margin - BUTTON_SIZE.x;
          }
-         if(this.§3"6§.visible)
+         if(this.Renamed1716.visible)
          {
-            this.§3"6§.y = _loc1_;
-            this.§3"6§.x = this.size.x - this.margin - BUTTON_SIZE.x;
+            this.Renamed1716.y = _loc1_;
+            this.Renamed1716.x = this.size.x - this.margin - BUTTON_SIZE.x;
          }
          this.upgradeButton.y = _loc1_;
          this.upgradeButton.x = this.margin + BUTTON_SIZE.x + 15;
-         this.§^!&§.x = this.margin;
-         this.§^!&§.y = _loc1_;
+         this.Renamed1693.x = this.margin;
+         this.Renamed1693.y = _loc1_;
       }
       
       public function resize(param1:int, param2:int) : void
@@ -1219,35 +1219,35 @@ package alternativa.tanks.gui
          {
             this.itemDescriptionLabel.y = this.areaRect2.y + 24 - 7;
          }
-         if(this.§use set native§.bitmapData != null)
+         if(this.Renamed1719.bitmapData != null)
          {
-            this.§use set native§.y = this.itemNameLabel.y + this.itemNameLabel.height + VERTICAL_MARGIN - TOP_PREVIEW_WITH_NAME_PENETRATION_SIZE;
-            this.§use set native§.x = this.scrollContainer.width - this.§use set native§.width >> 1;
-            this.itemDescriptionLabel.y += this.§use set native§.bitmapData.height + VERTICAL_MARGIN - TOP_PREVIEW_WITH_NAME_PENETRATION_SIZE;
+            this.Renamed1719.y = this.itemNameLabel.y + this.itemNameLabel.height + VERTICAL_MARGIN - TOP_PREVIEW_WITH_NAME_PENETRATION_SIZE;
+            this.Renamed1719.x = this.scrollContainer.width - this.Renamed1719.width >> 1;
+            this.itemDescriptionLabel.y += this.Renamed1719.bitmapData.height + VERTICAL_MARGIN - TOP_PREVIEW_WITH_NAME_PENETRATION_SIZE;
          }
-         if(this.§while package true§.bitmapData != null)
+         if(this.Renamed1720.bitmapData != null)
          {
-            this.§while package true§.y = this.itemNameLabel.y + this.itemNameLabel.height + VERTICAL_MARGIN - TOP_PREVIEW_WITH_NAME_PENETRATION_SIZE;
-            this.§while package true§.x = this.scrollContainer.width - this.§while package true§.width >> 1;
-            this.itemDescriptionLabel.y += this.§while package true§.bitmapData.height + VERTICAL_MARGIN - TOP_PREVIEW_WITH_NAME_PENETRATION_SIZE;
+            this.Renamed1720.y = this.itemNameLabel.y + this.itemNameLabel.height + VERTICAL_MARGIN - TOP_PREVIEW_WITH_NAME_PENETRATION_SIZE;
+            this.Renamed1720.x = this.scrollContainer.width - this.Renamed1720.width >> 1;
+            this.itemDescriptionLabel.y += this.Renamed1720.bitmapData.height + VERTICAL_MARGIN - TOP_PREVIEW_WITH_NAME_PENETRATION_SIZE;
          }
          _loc3_ += VERTICAL_MARGIN + this.itemDescriptionLabel.textHeight - 4;
          var _loc14_:int = _loc3_;
-         var _loc15_:* = this.§[#O§.bitmapData != null;
+         var _loc15_:* = this.Renamed1717.bitmapData != null;
          if(_loc15_)
          {
-            this.§[#O§.x = PREVIEW_OFFSET_X;
+            this.Renamed1717.x = PREVIEW_OFFSET_X;
             if(_loc13_ > 0)
             {
-               this.§[#O§.y = this.propertiesPanel.y + this.propertiesPanel.height + VERTICAL_MARGIN;
+               this.Renamed1717.y = this.propertiesPanel.y + this.propertiesPanel.height + VERTICAL_MARGIN;
             }
             else
             {
-               this.§[#O§.y = this.areaRect2.y + 24;
+               this.Renamed1717.y = this.areaRect2.y + 24;
             }
-            this.itemDescriptionLabel.x = this.§[#O§.x + this.§[#O§.width + PREVIEW_OFFSET_X - 3;
+            this.itemDescriptionLabel.x = this.Renamed1717.x + this.Renamed1717.width + PREVIEW_OFFSET_X - 3;
             this.itemDescriptionLabel.width = this.areaRect2.width - this.itemDescriptionLabel.x - 3;
-            _loc3_ = Math.max(this.itemDescriptionLabel.y + 3 + this.itemDescriptionLabel.textHeight + VERTICAL_MARGIN,this.§[#O§.y + this.§[#O§.height + VERTICAL_MARGIN);
+            _loc3_ = Math.max(this.itemDescriptionLabel.y + 3 + this.itemDescriptionLabel.textHeight + VERTICAL_MARGIN,this.Renamed1717.y + this.Renamed1717.height + VERTICAL_MARGIN);
          }
          else
          {
@@ -1266,64 +1266,64 @@ package alternativa.tanks.gui
             this.areaRect.height = _loc16_;
             this.areaRect2.height = this.area.height - VERTICAL_MARGIN * 2;
          }
-         if(this.§2"J§)
+         if(this.Renamed1700)
          {
-            this.§native for finally§(this.§use set native§);
-            this.§in var default§.y = this.§use set native§.bitmapData != null && this.scrollContainer.contains(this.§use set native§) ? Number(int(this.§use set native§.height + this.itemNameLabel.height + §in set each§ * 2)) : Number(int(this.itemNameLabel.height) + §in set each§);
-            this.§`"n§.y = this.§in var default§.y;
-            this.itemDescriptionLabel.y = this.§in var default§.y + this.§`"n§.§'!Z§() + 10;
-            this.§5l§.x = this.areaRect2.width - this.§5l§.width;
-            this.§finally const super§.width = this.§5l§.x - this.§finally const super§.x;
-            this.§8!f§.y = this.§finally var package§.height;
-            this.§8!f§.height = this.§`"n§.§get set with§();
-            this.§each var throw§.y = this.§5l§.height;
-            this.§each var throw§.height = this.§8!f§.height;
-            this.§each var throw§.x = this.areaRect2.width - this.§each var throw§.width;
-            this.§import var native§.y = this.§8!f§.height + this.§finally var package§.height;
-            this.§>#'§.y = this.§import var native§.y;
-            this.§>#'§.x = this.§each var throw§.x;
-            this.§false set native§.x = this.§import var native§.width;
-            this.§false set native§.y = this.§>#'§.y;
-            this.§false set native§.width = this.§>#'§.x - this.§false set native§.x;
-            this.§+!O§.y = this.§false set native§.y + this.§false set native§.height;
-            this.§+!O§.height = this.§`"n§.§null for override§();
-            this.§set for with§.y = this.§+!O§.y;
-            this.§set for with§.height = this.§+!O§.height;
-            this.§set for with§.x = this.§each var throw§.x;
-            this.§+#A§.y = this.§+!O§.y + this.§+!O§.height;
-            this.§`"K§.y = this.§+#A§.y;
-            this.§`"K§.x = this.§>#'§.x;
-            this.§<!]§.y = this.§+#A§.y + this.§+#A§.height - this.§<!]§.height;
-            this.§<!]§.x = this.§+#A§.width;
-            this.§<!]§.width = this.§finally const super§.width;
-            _loc12_ = ItemInfoPanelBitmaps.§null const in§;
-            this.§null for each§.graphics.clear();
-            this.§null for each§.graphics.beginBitmapFill(_loc12_);
-            this.§null for each§.graphics.drawRect(this.§finally var package§.width,this.§finally var package§.height,this.§finally const super§.width,this.§8!f§.height);
-            this.§4!i§.graphics.clear();
-            this.§4!i§.graphics.beginBitmapFill(_loc12_);
-            this.§4!i§.graphics.drawRect(this.§import var native§.width,this.§import var native§.y + this.§import var native§.height,this.§<!]§.width,this.§+!O§.height);
+            this.Renamed1776(this.Renamed1719);
+            this.Renamed1722.y = this.Renamed1719.bitmapData != null && this.scrollContainer.contains(this.Renamed1719) ? Number(int(this.Renamed1719.height + this.itemNameLabel.height + Renamed1715 * 2)) : Number(int(this.itemNameLabel.height) + Renamed1715);
+            this.Renamed1721.y = this.Renamed1722.y;
+            this.itemDescriptionLabel.y = this.Renamed1722.y + this.Renamed1721.Renamed1777() + 10;
+            this.Renamed1725.x = this.areaRect2.width - this.Renamed1725.width;
+            this.Renamed1724.width = this.Renamed1725.x - this.Renamed1724.x;
+            this.Renamed1726.y = this.Renamed1723.height;
+            this.Renamed1726.height = this.Renamed1721.Renamed1778();
+            this.Renamed1727.y = this.Renamed1725.height;
+            this.Renamed1727.height = this.Renamed1726.height;
+            this.Renamed1727.x = this.areaRect2.width - this.Renamed1727.width;
+            this.Renamed1734.y = this.Renamed1726.height + this.Renamed1723.height;
+            this.Renamed1735.y = this.Renamed1734.y;
+            this.Renamed1735.x = this.Renamed1727.x;
+            this.Renamed1732.x = this.Renamed1734.width;
+            this.Renamed1732.y = this.Renamed1735.y;
+            this.Renamed1732.width = this.Renamed1735.x - this.Renamed1732.x;
+            this.Renamed1730.y = this.Renamed1732.y + this.Renamed1732.height;
+            this.Renamed1730.height = this.Renamed1721.Renamed1779();
+            this.Renamed1731.y = this.Renamed1730.y;
+            this.Renamed1731.height = this.Renamed1730.height;
+            this.Renamed1731.x = this.Renamed1727.x;
+            this.Renamed1728.y = this.Renamed1730.y + this.Renamed1730.height;
+            this.Renamed1729.y = this.Renamed1728.y;
+            this.Renamed1729.x = this.Renamed1735.x;
+            this.Renamed1733.y = this.Renamed1728.y + this.Renamed1728.height - this.Renamed1733.height;
+            this.Renamed1733.x = this.Renamed1728.width;
+            this.Renamed1733.width = this.Renamed1724.width;
+            _loc12_ = ItemInfoPanelBitmaps.Renamed1780;
+            this.Renamed1736.graphics.clear();
+            this.Renamed1736.graphics.beginBitmapFill(_loc12_);
+            this.Renamed1736.graphics.drawRect(this.Renamed1723.width,this.Renamed1723.height,this.Renamed1724.width,this.Renamed1726.height);
+            this.Renamed1737.graphics.clear();
+            this.Renamed1737.graphics.beginBitmapFill(_loc12_);
+            this.Renamed1737.graphics.drawRect(this.Renamed1734.width,this.Renamed1734.y + this.Renamed1734.height,this.Renamed1733.width,this.Renamed1730.height);
          }
-         if(Boolean(this.item) && itemService.§while try§(this.item))
+         if(Boolean(this.item) && itemService.Renamed1760(this.item))
          {
-            this.§class catch var§.y = this.§while package true§.bitmapData != null && this.scrollContainer.contains(this.§while package true§) ? Number(this.§while package true§.height + this.itemNameLabel.height + 20) : Number(this.itemNameLabel.height + 10);
-            this.§class catch var§.§import package switch§(this.areaRect2.width);
+            this.Renamed1742.y = this.Renamed1720.bitmapData != null && this.scrollContainer.contains(this.Renamed1720) ? Number(this.Renamed1720.height + this.itemNameLabel.height + 20) : Number(this.itemNameLabel.height + 10);
+            this.Renamed1742.Renamed1781(this.areaRect2.width);
          }
          this.area.graphics.clear();
          this.area.graphics.beginFill(16711680,0);
          this.area.graphics.drawRect(this.areaRect.x,this.areaRect.y,this.areaRect.width,this.areaRect.height);
          if(_loc15_)
          {
-            if(this.item != null && this.§[#O§ != null && this.§[#O§.parent == null)
+            if(this.item != null && this.Renamed1717 != null && this.Renamed1717.parent == null)
             {
-               this.showBitmap(this.§[#O§);
+               this.showBitmap(this.Renamed1717);
             }
          }
          else
          {
-            removeDisplayObject(this.§[#O§);
+            removeDisplayObject(this.Renamed1717);
          }
-         this.§in set try§.y = this.size.y - this.margin - BUTTON_SIZE.y + 1;
+         this.Renamed1744.y = this.size.y - this.margin - BUTTON_SIZE.y + 1;
          this.setButtonsPosition();
          this.scrollPane.setSize(param1 - this.margin * 2 - 2 + 6,param2 - this.margin - BOTTOM_MARGIN - 2 - MODULE_SPACING * 2);
          this.scrollPane.update();
@@ -1350,45 +1350,45 @@ package alternativa.tanks.gui
          }
       }
       
-      private function §native for finally§(param1:Bitmap) : void
+      private function Renamed1776(param1:Bitmap) : void
       {
-         if(this.§use set native§.height > 0)
+         if(this.Renamed1719.height > 0)
          {
-            param1.y += §in set each§;
-            this.§import for switch§.text = "-" + String(itemService.getDiscount(this.item)) + "%";
-            this.§import for switch§.filters = [new DropShadowFilter(1,45,0,0.7,1,1,1)];
-            this.§import for switch§.x = 302;
-            this.§import for switch§.y = int(this.itemNameLabel.height + §in set each§) + 168;
+            param1.y += Renamed1715;
+            this.Renamed1738.text = "-" + String(itemService.getDiscount(this.item)) + "%";
+            this.Renamed1738.filters = [new DropShadowFilter(1,45,0,0.7,1,1,1)];
+            this.Renamed1738.x = 302;
+            this.Renamed1738.y = int(this.itemNameLabel.height + Renamed1715) + 168;
             if(localeService.language == "cn")
             {
-               this.§import for switch§.x = 300;
+               this.Renamed1738.x = 300;
             }
-            if(!this.scrollContainer.contains(this.§import for switch§))
+            if(!this.scrollContainer.contains(this.Renamed1738))
             {
-               this.scrollContainer.addChild(this.§import for switch§);
+               this.scrollContainer.addChild(this.Renamed1738);
             }
             else
             {
-               this.scrollContainer.removeChild(this.§import for switch§);
-               this.scrollContainer.addChild(this.§import for switch§);
+               this.scrollContainer.removeChild(this.Renamed1738);
+               this.scrollContainer.addChild(this.Renamed1738);
             }
          }
       }
       
-      private function §extends for switch§(param1:Bitmap) : void
+      private function Renamed1782(param1:Bitmap) : void
       {
          this.hideBitmap(param1);
-         if(this.scrollContainer.contains(this.§import for switch§))
+         if(this.scrollContainer.contains(this.Renamed1738))
          {
-            this.scrollContainer.removeChild(this.§import for switch§);
+            this.scrollContainer.removeChild(this.Renamed1738);
          }
       }
       
       private function showBitmap(param1:Bitmap) : void
       {
-         if(param1.bitmapData != null && !this.§7=§.contains(param1))
+         if(param1.bitmapData != null && !this.Renamed1718.contains(param1))
          {
-            this.§7=§.addChild(param1);
+            this.Renamed1718.addChild(param1);
          }
       }
       
@@ -1451,7 +1451,7 @@ package alternativa.tanks.gui
          {
             _loc2_ = -this.itemPrice * _loc4_;
          }
-         this.buyButton.setInfo(itemService.getPrice(this.item),_loc4_,_loc3_,itemService.§static set default§(this.item));
+         this.buyButton.setInfo(itemService.getPrice(this.item),_loc4_,_loc3_,itemService.Renamed1768(this.item));
          this.setButtonsPosition();
       }
       
@@ -1490,7 +1490,7 @@ package alternativa.tanks.gui
          var _loc3_:ModInfoRow = null;
          var _loc4_:Vector.<ItemPropertyValue> = null;
          var _loc5_:int = 0;
-         if(itemService.§!"p§(this.item))
+         if(itemService.Renamed1704(this.item))
          {
             _loc2_ = itemService.getModificationIndex(this.item);
             _loc3_ = this.modTable.rows[_loc2_];

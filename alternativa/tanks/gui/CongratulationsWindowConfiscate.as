@@ -115,7 +115,7 @@ package alternativa.tanks.gui
          this.closeButton.addEventListener(MouseEvent.CLICK,this.closeBonusWindow);
          this.alignBonusWindow();
          display.stage.addEventListener(Event.RESIZE,this.alignBonusWindow);
-         dialogsService.§!!n§(this);
+         dialogsService.Renamed1686(this);
       }
       
       private function alignBonusWindow(param1:Event = null) : void

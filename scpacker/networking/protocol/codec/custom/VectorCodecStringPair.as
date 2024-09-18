@@ -1,17 +1,17 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import §[" §.ICodec;
+   import Renamed5811.ICodec;
    import flash.utils.ByteArray;
    import platform.client.core.general.resourcelocale.format.StringPair;
-   import scpacker.networking.protocol.§?"s§;
+   import scpacker.networking.protocol.Renamed536;
    
    public class VectorCodecStringPair implements ICodec
    {
       private var elementCodec:ICodec;
       
-      private var §?"_§:Boolean;
+      private var Renamed5009:Boolean;
       
-      public function VectorCodecStringPair(param1:§?"s§)
+      public function VectorCodecStringPair(param1:Renamed536)
       {
          super();
          this.elementCodec = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecStringPair");

@@ -10,7 +10,7 @@ package platform.client.fp10.core.resource.types
    import flash.net.URLLoaderDataFormat;
    import flash.net.URLRequest;
    import flash.utils.ByteArray;
-   import platform.client.fp10.core.resource.§7"'§;
+   import platform.client.fp10.core.resource.Renamed4105;
    import platform.client.fp10.core.resource.IResourceLoadingListener;
    import platform.client.fp10.core.resource.IResourceSerializationListener;
    import platform.client.fp10.core.resource.Resource;
@@ -51,23 +51,23 @@ package platform.client.fp10.core.resource.types
       
       private var _data:BitmapData;
       
-      private var §;6§:Boolean;
+      private var Renamed4111:Boolean;
       
-      private var §7!k§:String;
+      private var Renamed4112:String;
       
-      private var §switch package null§:int;
+      private var Renamed4113:int;
       
-      private var §true set throw§:String;
+      private var Renamed4114:String;
       
-      private var §,"§:String;
+      private var Renamed4115:String;
       
       public function LocalizedImageResource(param1:ResourceInfo)
       {
          super(param1);
-         this.§true set throw§ = localeService.language.toLowerCase();
-         this.§,"§ = localeService.defaultLanguage.toLowerCase();
-         this.§7!k§ = this.§@!T§();
-         this.§;6§ = param1.§2#'§(this.§7!k§ + "_alpha.jpg") != null;
+         this.Renamed4114 = localeService.language.toLowerCase();
+         this.Renamed4115 = localeService.defaultLanguage.toLowerCase();
+         this.Renamed4112 = this.Renamed4116();
+         this.Renamed4111 = param1.Renamed4108(this.Renamed4112 + "_alpha.jpg") != null;
       }
       
       public function get data() : BitmapData
@@ -166,7 +166,7 @@ package platform.client.fp10.core.resource.types
       {
          this.state = STATE_LOADING_DIFFUSE;
          this.loader = this.createLoader(true);
-         this.loader.load(new URLRequest(baseUrl + this.§4#$§()));
+         this.loader.load(new URLRequest(baseUrl + this.Renamed4117()));
          startTimeoutTracking();
          status = "Diffuse map requested";
       }
@@ -175,7 +175,7 @@ package platform.client.fp10.core.resource.types
       {
          this.state = STATE_LOADING_ALPHA;
          this.loader = this.createLoader(false);
-         this.loader.load(new URLRequest(baseUrl + this.§break import§()));
+         this.loader.load(new URLRequest(baseUrl + this.Renamed4118()));
          status = "Opacity map requested";
          startTimeoutTracking();
       }
@@ -184,8 +184,8 @@ package platform.client.fp10.core.resource.types
       {
          this.byteData = new ImageByteData();
          this.byteData.diffuseData = param1;
-         this.lastFileSize = resourceInfo.§2#'§(this.§4#$§()).§try package catch§;
-         if(this.§;6§)
+         this.lastFileSize = resourceInfo.Renamed4108(this.Renamed4117()).Renamed4109;
+         if(this.Renamed4111)
          {
             this.loadOpacityData();
          }
@@ -264,23 +264,23 @@ package platform.client.fp10.core.resource.types
          return _loc2_;
       }
       
-      private function §4#$§() : String
+      private function Renamed4117() : String
       {
-         return this.§7!k§ + ".jpg";
+         return this.Renamed4112 + ".jpg";
       }
       
-      private function §break import§() : String
+      private function Renamed4118() : String
       {
-         return this.§7!k§ + "_alpha.jpg";
+         return this.Renamed4112 + "_alpha.jpg";
       }
       
-      private function §@!T§() : String
+      private function Renamed4116() : String
       {
          var _loc1_:String = null;
-         var _loc2_:§7"'§ = resourceInfo.§2#'§(this.§true set throw§ + ".jpg");
+         var _loc2_:Renamed4105 = resourceInfo.Renamed4108(this.Renamed4114 + ".jpg");
          if(_loc2_ == null)
          {
-            _loc2_ = resourceInfo.§2#'§(this.§,"§ + ".jpg");
+            _loc2_ = resourceInfo.Renamed4108(this.Renamed4115 + ".jpg");
             if(_loc2_ == null)
             {
                _loc1_ = this.getFileName("_alpha.jpg");
@@ -291,32 +291,32 @@ package platform.client.fp10.core.resource.types
                _loc1_ = this.getFileName(".jpg");
                return _loc1_.substr(0,_loc1_.length - ".jpg".length);
             }
-            return this.§,"§;
+            return this.Renamed4115;
          }
-         return this.§true set throw§;
+         return this.Renamed4114;
       }
       
       private function getFileName(param1:String) : String
       {
-         var _loc2_:§7"'§ = resourceInfo.§2#'§(this.§true set throw§ + param1);
+         var _loc2_:Renamed4105 = resourceInfo.Renamed4108(this.Renamed4114 + param1);
          if(_loc2_ == null)
          {
-            _loc2_ = resourceInfo.§2#'§(this.§,"§ + param1);
+            _loc2_ = resourceInfo.Renamed4108(this.Renamed4115 + param1);
             if(_loc2_ == null)
             {
-               return this.§static const use§(param1);
+               return this.Renamed4119(param1);
             }
          }
-         return _loc2_.§in package false§;
+         return _loc2_.Renamed4107;
       }
       
-      private function §static const use§(param1:String) : String
+      private function Renamed4119(param1:String) : String
       {
-         var _loc2_:§7"'§ = null;
+         var _loc2_:Renamed4105 = null;
          var _loc3_:String = null;
-         for each(_loc2_ in resourceInfo.§class const set§)
+         for each(_loc2_ in resourceInfo.Renamed4104)
          {
-            _loc3_ = _loc2_.§in package false§;
+            _loc3_ = _loc2_.Renamed4107;
             if(_loc3_.length >= param1.length && _loc3_.substr(_loc3_.length - param1.length,param1.length) == param1)
             {
                return _loc3_;

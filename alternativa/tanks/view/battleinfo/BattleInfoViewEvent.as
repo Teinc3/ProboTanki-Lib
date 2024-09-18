@@ -1,6 +1,6 @@
 package alternativa.tanks.view.battleinfo
 {
-   import § !g§.§class for case§;
+   import Renamed136.Renamed663;
    import flash.events.Event;
    
    public class BattleInfoViewEvent extends Event
@@ -15,9 +15,9 @@ package alternativa.tanks.view.battleinfo
       
       public static const RETURN_TO_BATTLE:String = "BattleInfoViewEvent.RETURN_TO_BATTLE";
       
-      public var team:§class for case§;
+      public var team:Renamed663;
       
-      public function BattleInfoViewEvent(param1:String, param2:§class for case§ = null, param3:Boolean = false, param4:Boolean = false)
+      public function BattleInfoViewEvent(param1:String, param2:Renamed663 = null, param3:Boolean = false, param4:Boolean = false)
       {
          super(param1,param3,param4);
          this.team = param2;

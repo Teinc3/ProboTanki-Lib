@@ -1,6 +1,6 @@
 package alternativa.tanks.view.battlecreate
 {
-   import §?"a§.§finally for do§;
+   import Renamed1614.Renamed1615;
    import alternativa.osgi.service.locale.ILocaleService;
    import projects.tanks.clients.fp10.libraries.TanksLocale;
    
@@ -21,7 +21,7 @@ package alternativa.tanks.view.battlecreate
       
       public function get battleNameLabel() : String
       {
-         return localeService.getText(TanksLocale.§-!Y§);
+         return localeService.getText(TanksLocale.Renamed3918);
       }
       
       public function get mapNameLabel() : String
@@ -81,7 +81,7 @@ package alternativa.tanks.view.battlecreate
       
       public function get checkBoxCrystalsLabel() : String
       {
-         return localeService.getText(TanksLocale.§<G§);
+         return localeService.getText(TanksLocale.Renamed3919);
       }
       
       public function get checkBoxSportModeLabel() : String
@@ -154,30 +154,30 @@ package alternativa.tanks.view.battlecreate
          return localeService.getText(TanksLocale.TEXT_REARM_OPTION_TEXT);
       }
       
-      public function getThemeName(param1:§finally for do§) : String
+      public function getThemeName(param1:Renamed1615) : String
       {
          var _loc2_:String = null;
          switch(param1.value)
          {
-            case §finally for do§.SUMMER.value:
+            case Renamed1615.SUMMER.value:
                _loc2_ = localeService.getText(TanksLocale.TEXT_MAP_THEME_NAME_SUMMER);
                break;
-            case §finally for do§.WINTER.value:
+            case Renamed1615.WINTER.value:
                _loc2_ = localeService.getText(TanksLocale.TEXT_MAP_THEME_NAME_WINTER);
                break;
-            case §finally for do§.SPACE.value:
+            case Renamed1615.SPACE.value:
                _loc2_ = localeService.getText(TanksLocale.TEXT_MAP_THEME_NAME_SPACE);
                break;
-            case §finally for do§.SUMMER_DAY.value:
+            case Renamed1615.SUMMER_DAY.value:
                _loc2_ = localeService.getText(TanksLocale.TEXT_MAP_THEME_NAME_SUMMER_DAY);
                break;
-            case §finally for do§.SUMMER_NIGHT.value:
+            case Renamed1615.SUMMER_NIGHT.value:
                _loc2_ = localeService.getText(TanksLocale.TEXT_MAP_THEME_NAME_SUMMER_NIGHT);
                break;
-            case §finally for do§.WINTER_DAY.value:
+            case Renamed1615.WINTER_DAY.value:
                _loc2_ = localeService.getText(TanksLocale.TEXT_MAP_THEME_NAME_WINTER_DAY);
                break;
-            case §finally for do§.WINTER_NIGHT.value:
+            case Renamed1615.WINTER_NIGHT.value:
                _loc2_ = localeService.getText(TanksLocale.TEXT_MAP_THEME_NAME_WINTER_NIGHT);
          }
          return _loc2_;

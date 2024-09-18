@@ -8,23 +8,23 @@ package alternativa.tanks.service.socialnetwork
       
       function set passwordCreated(param1:Boolean) : void;
       
-      function set §6o§(param1:Boolean) : void;
+      function set Renamed2277(param1:Boolean) : void;
       
-      function set §3"V§(param1:Boolean) : void;
+      function set Renamed2278(param1:Boolean) : void;
       
       function set googleLinkExists(param1:Boolean) : void;
       
-      function §&!T§(param1:String) : Boolean;
+      function Renamed3785(param1:String) : Boolean;
       
-      function §if catch var§(param1:String) : Boolean;
+      function Renamed1879(param1:String) : Boolean;
       
-      function §null set throw§(param1:String) : void;
+      function Renamed1881(param1:String) : void;
       
-      function §4"L§(param1:String) : void;
+      function Renamed1880(param1:String) : void;
       
-      function §class const throw§(param1:String) : void;
+      function Renamed2280(param1:String) : void;
       
-      function §>#u§(param1:String) : void;
+      function Renamed2281(param1:String) : void;
    }
 }
 

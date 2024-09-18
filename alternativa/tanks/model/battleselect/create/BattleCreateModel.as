@@ -1,6 +1,6 @@
 package alternativa.tanks.model.battleselect.create
 {
-   import §>6§.§null for do§;
+   import Renamed1583.Renamed1584;
    import alternativa.osgi.service.display.IDisplay;
    import alternativa.osgi.service.locale.ILocaleService;
    import alternativa.tanks.controllers.battlecreate.CheckBattleNameEvent;
@@ -17,11 +17,11 @@ package alternativa.tanks.model.battleselect.create
    import platform.client.fp10.core.type.IGameObject;
    import projects.tanks.client.battleselect.model.battleselect.create.BattleCreateModelBase;
    import projects.tanks.client.battleselect.model.battleselect.create.IBattleCreateModelBase;
-   import projects.tanks.client.battleservice.§9"B§;
+   import projects.tanks.client.battleservice.Renamed1579;
    import projects.tanks.clients.fp10.libraries.TanksLocale;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.alertservices.IAlertService;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.userproperties.IUserPropertiesService;
-   import services.alertservice.§get const use§;
+   import services.alertservice.Renamed1616;
    
    public class BattleCreateModel extends BattleCreateModelBase implements IBattleCreateModelBase, IObjectLoadListener
    {
@@ -58,17 +58,17 @@ package alternativa.tanks.model.battleselect.create
       
       public function createFailedYouAreBanned() : void
       {
-         battleAlertService.showAlert(localeService.getText(TanksLocale.TEXT_CREATE_FAILED_YOU_ARE_BANNED),Vector.<String>([localeService.getText(§get const use§.OK)]));
+         battleAlertService.showAlert(localeService.getText(TanksLocale.TEXT_CREATE_FAILED_YOU_ARE_BANNED),Vector.<String>([localeService.getText(Renamed1616.OK)]));
       }
       
       public function createFailedServerIsHalting() : void
       {
-         battleAlertService.showAlert(localeService.getText(TanksLocale.TEXT_SERVER_IS_RESTARTING_CREATE_BATTLE_TEXT),Vector.<String>([localeService.getText(§get const use§.OK)]));
+         battleAlertService.showAlert(localeService.getText(TanksLocale.TEXT_SERVER_IS_RESTARTING_CREATE_BATTLE_TEXT),Vector.<String>([localeService.getText(Renamed1616.OK)]));
       }
       
       public function createFailedTooManyBattlesFromYou() : void
       {
-         battleAlertService.showAlert(localeService.getText(TanksLocale.TEXT_BATTLE_CREATE_PANEL_FLOOD_ALERT_TEXT),Vector.<String>([localeService.getText(§get const use§.OK)]));
+         battleAlertService.showAlert(localeService.getText(TanksLocale.TEXT_BATTLE_CREATE_PANEL_FLOOD_ALERT_TEXT),Vector.<String>([localeService.getText(Renamed1616.OK)]));
       }
       
       public function createFailedBattleCreateDisabled() : void
@@ -82,8 +82,8 @@ package alternativa.tanks.model.battleselect.create
       
       public function objectLoadedPost() : void
       {
-         var _loc1_:§null for do§ = §null for do§(modelRegistry.getModelsByInterface(§null for do§)[0]);
-         var _loc2_:Vector.<IGameObject> = _loc1_.§throw package try§();
+         var _loc1_:Renamed1584 = Renamed1584(modelRegistry.getModelsByInterface(Renamed1584)[0]);
+         var _loc2_:Vector.<IGameObject> = _loc1_.Renamed2080();
          var _loc3_:CreateBattleFormController = new CreateBattleFormController(getInitParam().battlesLimits,getInitParam().maxRangeLength,_loc2_,new CreateBattleFormView(display.stage,display.systemLayer,new LocaleCreateBattleForm()));
          putData(CreateBattleFormController,_loc3_);
          battleCreateFormService.addEventListener(BattleCreateFormServiceEvent.SHOW_FORM,getFunctionWrapper(this.onShowForm));
@@ -132,7 +132,7 @@ package alternativa.tanks.model.battleselect.create
       
       private function onCreateBattle(param1:CreateBattleEvent) : void
       {
-         var _loc2_:§9"B§ = param1.battleCreateParams;
+         var _loc2_:Renamed1579 = param1.battleCreateParams;
          trackerService.trackEvent("battleList","createBattle",_loc2_.mapId.toString());
          server.createBattle(_loc2_);
       }

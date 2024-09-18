@@ -4,11 +4,11 @@ package alternativa.tanks.service.temporaryitem
    
    public interface ITemporaryItemService
    {
-      function §native const set§(param1:IGameObject) : Number;
+      function Renamed2146(param1:IGameObject) : Number;
       
-      function §try in§(param1:IGameObject, param2:int) : void;
+      function Renamed2147(param1:IGameObject, param2:int) : void;
       
-      function §-",§(param1:IGameObject) : void;
+      function Renamed2148(param1:IGameObject) : void;
    }
 }
 

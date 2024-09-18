@@ -5,7 +5,7 @@ package alternativa.tanks.view.battlelist
    import flash.display.Sprite;
    import flash.events.Event;
    import flash.events.MouseEvent;
-   import projects.tanks.client.battleservice.§final package import§;
+   import projects.tanks.client.battleservice.Renamed1587;
    
    public class BattleModeCheckBox extends Sprite
    {
@@ -25,7 +25,7 @@ package alternativa.tanks.view.battlelist
       
       private var _icon:Bitmap;
       
-      private var _battleMode:§final package import§;
+      private var _battleMode:Renamed1587;
       
       private var _buttonNormalState:Bitmap;
       
@@ -33,7 +33,7 @@ package alternativa.tanks.view.battlelist
       
       private var _buttonPressedState:Bitmap;
       
-      public function BattleModeCheckBox(param1:§final package import§)
+      public function BattleModeCheckBox(param1:Renamed1587)
       {
          super();
          this._battleMode = param1;
@@ -127,7 +127,7 @@ package alternativa.tanks.view.battlelist
          this.setState(1);
       }
       
-      public function get battleMode() : §final package import§
+      public function get battleMode() : Renamed1587
       {
          return this._battleMode;
       }

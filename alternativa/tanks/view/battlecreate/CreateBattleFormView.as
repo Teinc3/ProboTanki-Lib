@@ -1,6 +1,6 @@
 package alternativa.tanks.view.battlecreate
 {
-   import §9"o§.§var const catch§;
+   import Renamed3900.Renamed3901;
    import alternativa.tanks.controllers.battlecreate.CreateBattleMapParams;
    import alternativa.tanks.controllers.battlecreate.ICreateBattleFormControllerCallBack;
    import alternativa.tanks.controllers.battlecreate.ICreateBattleFormViewCallBack;
@@ -16,8 +16,8 @@ package alternativa.tanks.view.battlecreate
    import controls.base.RedButtonBase;
    import controls.base.TankInputBase;
    import controls.checkbox.CheckBoxEvent;
-   import controls.checkbox.§while var import§;
-   import controls.dropdownlist.§<!&§;
+   import controls.checkbox.Renamed3902;
+   import controls.dropdownlist.Renamed3903;
    import controls.dropdownlist.DropDownList;
    import flash.display.BitmapData;
    import flash.display.DisplayObjectContainer;
@@ -30,7 +30,7 @@ package alternativa.tanks.view.battlecreate
    import flash.utils.clearTimeout;
    import flash.utils.setTimeout;
    import forms.events.LoginFormEvent;
-   import projects.tanks.client.battleservice.§final package import§;
+   import projects.tanks.client.battleservice.Renamed1587;
    
    public class CreateBattleFormView extends Sprite implements ICreateBattleFormView, ICreateBattleFormViewCallBack
    {
@@ -71,7 +71,7 @@ package alternativa.tanks.view.battlecreate
       
       private var _chooseThemeMapComboBox:DropDownList;
       
-      private var §super set class§:DropDownList;
+      private var Renamed3904:DropDownList;
       
       private var _battleInfo:BattleInfoParamsView;
       
@@ -85,29 +85,29 @@ package alternativa.tanks.view.battlecreate
       
       private var _scoreLimitStepper:NumStepper;
       
-      private var _autoBalanceCheckBox:§while var import§;
+      private var _autoBalanceCheckBox:Renamed3902;
       
-      private var _friendlyFireCheckBox:§while var import§;
+      private var _friendlyFireCheckBox:Renamed3902;
       
-      private var _suppliesCheckBox:§while var import§;
+      private var _suppliesCheckBox:Renamed3902;
       
-      private var _bonusesCheckBox:§while var import§;
+      private var _bonusesCheckBox:Renamed3902;
       
-      private var _crystalsCheckBox:§while var import§;
+      private var _crystalsCheckBox:Renamed3902;
       
-      private var _proBattleCheckBox:§while var import§;
+      private var _proBattleCheckBox:Renamed3902;
       
-      private var _upgradesCheckBox:§while var import§;
+      private var _upgradesCheckBox:Renamed3902;
       
-      private var _privateBattleCheckBox:§while var import§;
+      private var _privateBattleCheckBox:Renamed3902;
       
-      private var _reArmorCheckBox:§while var import§;
+      private var _reArmorCheckBox:Renamed3902;
       
       private var _startButton:RedButtonBase;
       
       private var _trackedEvents:Dictionary;
       
-      private const §false set use§:Number = 11;
+      private const Renamed3905:Number = 11;
       
       public function CreateBattleFormView(param1:Stage, param2:DisplayObjectContainer, param3:ILocaleCreateBattleForm)
       {
@@ -162,44 +162,44 @@ package alternativa.tanks.view.battlecreate
          this._scoreLimitStepper.label = this._locale.stepperFlagsLimitLabel;
          this._scoreLimitStepper.icon = BattleInfoIcons.CTF;
          addChild(this._scoreLimitStepper);
-         this._proBattleCheckBox = new §while var import§(§var const catch§.§5$$§);
+         this._proBattleCheckBox = new Renamed3902(Renamed3901.Renamed3906);
          this._proBattleCheckBox.label = this._locale.checkBoxSportModeLabel;
-         this._proBattleCheckBox.§ !w§ = false;
+         this._proBattleCheckBox.Renamed1878 = false;
          addChild(this._proBattleCheckBox);
-         this._autoBalanceCheckBox = new §while var import§(§var const catch§.§!+§);
-         this._autoBalanceCheckBox.§ !w§ = true;
+         this._autoBalanceCheckBox = new Renamed3902(Renamed3901.Renamed3907);
+         this._autoBalanceCheckBox.Renamed1878 = true;
          this._autoBalanceCheckBox.label = this._locale.checkBoxAutoBalanceLabel;
          addChild(this._autoBalanceCheckBox);
-         this._friendlyFireCheckBox = new §while var import§(§var const catch§.§throw set switch§);
+         this._friendlyFireCheckBox = new Renamed3902(Renamed3901.Renamed3908);
          this._friendlyFireCheckBox.label = this._locale.checkBoxFriendlyFireLabel;
          addChild(this._friendlyFireCheckBox);
-         this._suppliesCheckBox = new §while var import§(§var const catch§.§var var class§);
-         this._suppliesCheckBox.§ !w§ = true;
+         this._suppliesCheckBox = new Renamed3902(Renamed3901.Renamed3909);
+         this._suppliesCheckBox.Renamed1878 = true;
          this._suppliesCheckBox.label = this._locale.checkBoxNoSuppliesLabel;
          addChild(this._suppliesCheckBox);
-         this._bonusesCheckBox = new §while var import§(§var const catch§.§do package while§);
-         this._bonusesCheckBox.§ !w§ = true;
+         this._bonusesCheckBox = new Renamed3902(Renamed3901.Renamed3910);
+         this._bonusesCheckBox.Renamed1878 = true;
          this._bonusesCheckBox.label = this._locale.checkBoxBonusesLabel;
          addChild(this._bonusesCheckBox);
-         this._crystalsCheckBox = new §while var import§(§var const catch§.§7c§);
-         this._crystalsCheckBox.§ !w§ = true;
+         this._crystalsCheckBox = new Renamed3902(Renamed3901.Renamed3911);
+         this._crystalsCheckBox.Renamed1878 = true;
          this._crystalsCheckBox.label = this._locale.checkBoxCrystalsLabel;
          addChild(this._crystalsCheckBox);
-         this._upgradesCheckBox = new §while var import§(§var const catch§.§%# §);
-         this._upgradesCheckBox.§ !w§ = true;
+         this._upgradesCheckBox = new Renamed3902(Renamed3901.Renamed3912);
+         this._upgradesCheckBox.Renamed1878 = true;
          this._upgradesCheckBox.label = this._locale.checkBoxUpgradesLabel;
          this._upgradesCheckBox.alpha = 0.5;
          this._upgradesCheckBox.enabled = false;
-         this._privateBattleCheckBox = new §while var import§(§var const catch§.§var package use§);
+         this._privateBattleCheckBox = new Renamed3902(Renamed3901.Renamed3913);
          this._privateBattleCheckBox.label = this._locale.checkBoxPrivateBattleLabel;
          addChild(this._privateBattleCheckBox);
-         this._reArmorCheckBox = new §while var import§(§var const catch§.§return var continue§);
-         this._reArmorCheckBox.§ !w§ = true;
+         this._reArmorCheckBox = new Renamed3902(Renamed3901.Renamed3914);
+         this._reArmorCheckBox.Renamed1878 = true;
          this._reArmorCheckBox.label = this._locale.checkBoxReArmorLabel;
          addChild(this._reArmorCheckBox);
-         this.§super set class§ = new DropDownList();
-         this.§super set class§.setRenderer(§<!&§);
-         addChild(this.§super set class§);
+         this.Renamed3904 = new DropDownList();
+         this.Renamed3904.setRenderer(Renamed3903);
+         addChild(this.Renamed3904);
          this._startButton = new RedButtonBase();
          this._startButton.label = this._locale.startButtonLabel;
          addChild(this._startButton);
@@ -237,7 +237,7 @@ package alternativa.tanks.view.battlecreate
          this._crystalsCheckBox.addEventListener(CheckBoxEvent.STATE_CHANGED,this.onCrystalsChange);
          this._autoBalanceCheckBox.addEventListener(CheckBoxEvent.STATE_CHANGED,this.onAutoBalanceChange);
          this._reArmorCheckBox.addEventListener(CheckBoxEvent.STATE_CHANGED,this.onReArmorChange);
-         this.§super set class§.addEventListener(Event.CHANGE,this.§>#"§);
+         this.Renamed3904.addEventListener(Event.CHANGE,this.Renamed1608);
       }
       
       public function removeEvents() : void
@@ -265,16 +265,16 @@ package alternativa.tanks.view.battlecreate
          this._bonusesCheckBox.removeEventListener(CheckBoxEvent.STATE_CHANGED,this.onBonusesChange);
          this._autoBalanceCheckBox.removeEventListener(CheckBoxEvent.STATE_CHANGED,this.onAutoBalanceChange);
          this._reArmorCheckBox.removeEventListener(CheckBoxEvent.STATE_CHANGED,this.onReArmorChange);
-         this.§super set class§.removeEventListener(Event.CHANGE,this.§>#"§);
+         this.Renamed3904.removeEventListener(Event.CHANGE,this.Renamed1608);
       }
       
-      public function onClickTypeBattleButton(param1:§final package import§) : void
+      public function onClickTypeBattleButton(param1:Renamed1587) : void
       {
          this._callback.onSelected(param1);
          this.trackOnce("battleTypeChange_" + param1.name);
       }
       
-      public function setTypeBattle(param1:§final package import§) : void
+      public function setTypeBattle(param1:Renamed1587) : void
       {
          this._chooseTypeBattle.setTypeBattle(param1);
          this.onProBattleChanged();
@@ -329,53 +329,53 @@ package alternativa.tanks.view.battlecreate
       
       public function resetCheckBox() : void
       {
-         this._privateBattleCheckBox.§ !w§ = false;
+         this._privateBattleCheckBox.Renamed1878 = false;
          this.onProBattleChanged();
       }
       
       public function get isPrivateBattle() : Boolean
       {
-         return this._privateBattleCheckBox.§ !w§;
+         return this._privateBattleCheckBox.Renamed1878;
       }
       
       public function get isAutoBalance() : Boolean
       {
-         return this._autoBalanceCheckBox.§ !w§;
+         return this._autoBalanceCheckBox.Renamed1878;
       }
       
       public function get isFriendlyFire() : Boolean
       {
-         return this._friendlyFireCheckBox.§ !w§;
+         return this._friendlyFireCheckBox.Renamed1878;
       }
       
       public function get isNoSuppliesBattle() : Boolean
       {
-         return !this._suppliesCheckBox.§ !w§;
+         return !this._suppliesCheckBox.Renamed1878;
       }
       
       public function get isWithoutBonuses() : Boolean
       {
-         return !this._bonusesCheckBox.§ !w§;
+         return !this._bonusesCheckBox.Renamed1878;
       }
       
       public function get isWithoutCrystals() : Boolean
       {
-         return !this._crystalsCheckBox.§ !w§;
+         return !this._crystalsCheckBox.Renamed1878;
       }
       
       public function get isProBattle() : Boolean
       {
-         return this._proBattleCheckBox.§ !w§;
+         return this._proBattleCheckBox.Renamed1878;
       }
       
       public function get isReArmor() : Boolean
       {
-         return this._reArmorCheckBox.§ !w§;
+         return this._reArmorCheckBox.Renamed1878;
       }
       
       public function get isWithoutUpgrades() : Boolean
       {
-         return !this._upgradesCheckBox.§ !w§;
+         return !this._upgradesCheckBox.Renamed1878;
       }
       
       public function setRankIntervalRestriction(param1:int, param2:int, param3:int) : void
@@ -494,10 +494,10 @@ package alternativa.tanks.view.battlecreate
          this._stage = null;
          this._container = null;
          this._trackedEvents = null;
-         this.§super set class§ = null;
+         this.Renamed3904 = null;
       }
       
-      public function setAvailableTypesBattle(param1:Vector.<§final package import§>) : void
+      public function setAvailableTypesBattle(param1:Vector.<Renamed1587>) : void
       {
          this._chooseTypeBattle.setAvailableTypesBattle(param1);
       }
@@ -550,10 +550,10 @@ package alternativa.tanks.view.battlecreate
          this._crystalsCheckBox.y = this._bonusesCheckBox.y + this._bonusesCheckBox.height + 8;
          this._suppliesCheckBox.x = 11;
          this._suppliesCheckBox.y = this._crystalsCheckBox.y + this._crystalsCheckBox.height + 8;
-         this.§super set class§.x = _loc8_;
-         this.§super set class§.y = this._proBattleCheckBox.y;
-         this.§super set class§.width = _loc5_ - this.§super set class§.x - this.§false set use§;
-         this.§var const while§();
+         this.Renamed3904.x = _loc8_;
+         this.Renamed3904.y = this._proBattleCheckBox.y;
+         this.Renamed3904.width = _loc5_ - this.Renamed3904.x - this.Renamed3905;
+         this.Renamed3915();
          this._privateBattleCheckBox.x = _loc8_;
          this._privateBattleCheckBox.y = this._proBattleCheckBox.y + this._proBattleCheckBox.height + 8;
          this._autoBalanceCheckBox.x = _loc8_;
@@ -569,9 +569,9 @@ package alternativa.tanks.view.battlecreate
          }
       }
       
-      private function §var const while§() : void
+      private function Renamed3915() : void
       {
-         this.§super set class§.height = 34 + 5 * this.§super set class§.rowHeight;
+         this.Renamed3904.height = 34 + 5 * this.Renamed3904.rowHeight;
       }
       
       private function resizeWithDelay(param1:int = 200) : void
@@ -717,13 +717,13 @@ package alternativa.tanks.view.battlecreate
       public function setNameAndIconDominationStepper() : void
       {
          this._scoreLimitStepper.label = this._locale.stepperDominationLimitLabel;
-         this._scoreLimitStepper.icon = BattleInfoIcons.§import set super§;
+         this._scoreLimitStepper.icon = BattleInfoIcons.Renamed3916;
       }
       
-      public function §null var use§() : void
+      public function Renamed1599() : void
       {
          this._scoreLimitStepper.label = this._locale.stepperDominationLimitLabel;
-         this._scoreLimitStepper.icon = BattleInfoIcons.§import set super§;
+         this._scoreLimitStepper.icon = BattleInfoIcons.Renamed3916;
       }
       
       public function getTimeLimit() : int
@@ -838,7 +838,7 @@ package alternativa.tanks.view.battlecreate
       
       private function onProBattleChanged(param1:CheckBoxEvent = null) : void
       {
-         if(this._proBattleCheckBox.§ !w§)
+         if(this._proBattleCheckBox.Renamed1878)
          {
             this._upgradesCheckBox.visible = true;
             this._bonusesCheckBox.visible = true;
@@ -846,8 +846,8 @@ package alternativa.tanks.view.battlecreate
             this._suppliesCheckBox.visible = true;
             this._reArmorCheckBox.visible = true;
             this._privateBattleCheckBox.visible = true;
-            this.§super set class§.visible = true;
-            if(this._chooseTypeBattle.getSelectedBattleMode() != §final package import§.DM)
+            this.Renamed3904.visible = true;
+            if(this._chooseTypeBattle.getSelectedBattleMode() != Renamed1587.DM)
             {
                this._friendlyFireCheckBox.visible = true;
                this._autoBalanceCheckBox.visible = true;
@@ -867,7 +867,7 @@ package alternativa.tanks.view.battlecreate
             this._friendlyFireCheckBox.visible = false;
             this._autoBalanceCheckBox.visible = false;
             this._privateBattleCheckBox.visible = false;
-            this.§super set class§.visible = false;
+            this.Renamed3904.visible = false;
             this._reArmorCheckBox.visible = false;
          }
          this.trackOnce("proBattleChanged");
@@ -910,13 +910,13 @@ package alternativa.tanks.view.battlecreate
       
       private function onReArmorChange(param1:CheckBoxEvent) : void
       {
-         this._callback.§[#a§();
+         this._callback.Renamed1610();
          this.trackOnce("ReArmorChange");
       }
       
-      private function §>#"§(param1:Event) : void
+      private function Renamed1608(param1:Event) : void
       {
-         this._callback.§>#"§();
+         this._callback.Renamed1608();
       }
       
       private function trackOnce(param1:String) : void
@@ -928,34 +928,34 @@ package alternativa.tanks.view.battlecreate
          }
       }
       
-      public function §true package default§(param1:Vector.<Object>) : void
+      public function Renamed1592(param1:Vector.<Object>) : void
       {
          var _loc2_:int = 0;
          while(_loc2_ < param1.length)
          {
-            this.§super set class§.addItem(param1[_loc2_]);
+            this.Renamed3904.addItem(param1[_loc2_]);
             _loc2_++;
          }
       }
       
-      public function §super import§() : Object
+      public function Renamed1605() : Object
       {
-         return this.§super set class§.selectedItem;
+         return this.Renamed3904.selectedItem;
       }
       
-      public function §+#i§() : void
+      public function Renamed1609() : void
       {
-         this._reArmorCheckBox.§ !w§ = false;
+         this._reArmorCheckBox.Renamed1878 = false;
       }
       
-      public function §&#4§() : void
+      public function Renamed3917() : void
       {
-         this._upgradesCheckBox.§ !w§ = false;
+         this._upgradesCheckBox.Renamed1878 = false;
       }
       
-      public function §0!A§(param1:int) : void
+      public function Renamed1613(param1:int) : void
       {
-         this.§super set class§.selectItemByField("index",param1);
+         this.Renamed3904.selectItemByField("index",param1);
       }
    }
 }

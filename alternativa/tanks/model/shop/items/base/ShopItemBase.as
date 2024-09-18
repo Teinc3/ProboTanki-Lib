@@ -1,8 +1,8 @@
 package alternativa.tanks.model.shop.items.base
 {
    import controls.base.LabelBase;
-   import §each set import§.§'4§;
-   import §extends for catch§.§0#O§;
+   import Renamed348.Renamed2218;
+   import Renamed355.Renamed2267;
    import flash.events.MouseEvent;
    
    public class ShopItemBase extends ButtonItemBase
@@ -13,7 +13,7 @@ package alternativa.tanks.model.shop.items.base
       
       protected var itemId:String;
       
-      public function ShopItemBase(param1:String, param2:§0#O§)
+      public function ShopItemBase(param1:String, param2:Renamed2267)
       {
          this.itemId = param1;
          addEventListener(MouseEvent.CLICK,this.onMouseClick);
@@ -26,7 +26,7 @@ package alternativa.tanks.model.shop.items.base
       
       private function onMouseClick(param1:MouseEvent) : void
       {
-         dispatchEvent(new §'4§(this.itemId));
+         dispatchEvent(new Renamed2218(this.itemId));
       }
       
       override public function get width() : Number
@@ -50,7 +50,7 @@ package alternativa.tanks.model.shop.items.base
          alpha = 0.9;
       }
       
-      public function §dynamic var break§() : String
+      public function Renamed2269() : String
       {
          return this.itemId;
       }

@@ -1,47 +1,47 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import §[" §.ICodec;
+   import Renamed5811.ICodec;
    import alternativa.osgi.OSGi;
    import alternativa.osgi.service.clientlog.IClientLog;
    import flash.utils.ByteArray;
    import projects.tanks.client.chat.types.ChatMessage;
    import projects.tanks.client.chat.types.UserStatus;
-   import scpacker.networking.protocol.§?"s§;
+   import scpacker.networking.protocol.Renamed536;
    
    public class CodecChatMessage implements ICodec
    {
       public static var log:IClientLog = IClientLog(OSGi.getInstance().getService(IClientLog));
       
-      private var §import for override§:ICodec;
+      private var Renamed10635:ICodec;
       
-      private var §;#2§:ICodec;
+      private var Renamed10636:ICodec;
       
-      private var §#"u§:ICodec;
+      private var Renamed10637:ICodec;
       
-      private var §6!9§:ICodec;
+      private var Renamed10638:ICodec;
       
-      private var §dynamic catch use§:ICodec;
+      private var Renamed10639:ICodec;
       
-      private var §set package switch§:ICodec;
+      private var Renamed10640:ICodec;
       
-      public function CodecChatMessage(param1:§?"s§)
+      public function CodecChatMessage(param1:Renamed536)
       {
          super();
-         this.§;#2§ = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecUserStatus");
-         this.§#"u§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");
-         this.§6!9§ = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecUserStatus");
-         this.§dynamic catch use§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.StringCodec");
-         this.§set package switch§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");
+         this.Renamed10636 = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecUserStatus");
+         this.Renamed10637 = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");
+         this.Renamed10638 = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecUserStatus");
+         this.Renamed10639 = param1.getCodec("scpacker.networking.protocol.codec.primitive.StringCodec");
+         this.Renamed10640 = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");
       }
       
       public function decode(param1:ByteArray) : Object
       {
          var _loc2_:ChatMessage = new ChatMessage();
-         _loc2_.sourceUserStatus = this.§;#2§.decode(param1) as UserStatus;
-         _loc2_.system = this.§#"u§.decode(param1) as Boolean;
-         _loc2_.targetUserStatus = this.§6!9§.decode(param1) as UserStatus;
-         _loc2_.text = this.§dynamic catch use§.decode(param1) as String;
-         _loc2_.warning = this.§set package switch§.decode(param1) as Boolean;
+         _loc2_.sourceUserStatus = this.Renamed10636.decode(param1) as UserStatus;
+         _loc2_.system = this.Renamed10637.decode(param1) as Boolean;
+         _loc2_.targetUserStatus = this.Renamed10638.decode(param1) as UserStatus;
+         _loc2_.text = this.Renamed10639.decode(param1) as String;
+         _loc2_.warning = this.Renamed10640.decode(param1) as Boolean;
          return _loc2_;
       }
       
@@ -52,11 +52,11 @@ package scpacker.networking.protocol.codec.custom
             throw new Error("Object is null. Use @ProtocolOptional annotation.");
          }
          var _loc3_:ChatMessage = ChatMessage(param2);
-         this.§;#2§.encode(param1,_loc3_.sourceUserStatus);
-         this.§#"u§.encode(param1,_loc3_.system);
-         this.§6!9§.encode(param1,_loc3_.targetUserStatus);
-         this.§dynamic catch use§.encode(param1,_loc3_.text);
-         this.§set package switch§.encode(param1,_loc3_.warning);
+         this.Renamed10636.encode(param1,_loc3_.sourceUserStatus);
+         this.Renamed10637.encode(param1,_loc3_.system);
+         this.Renamed10638.encode(param1,_loc3_.targetUserStatus);
+         this.Renamed10639.encode(param1,_loc3_.text);
+         this.Renamed10640.encode(param1,_loc3_.warning);
          return 4;
       }
    }

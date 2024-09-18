@@ -1,6 +1,6 @@
 package scpacker.networking.protocol.codec.primitive
 {
-   import §[" §.ICodec;
+   import Renamed5811.ICodec;
    import flash.utils.ByteArray;
    
    public class FloatCodec implements ICodec

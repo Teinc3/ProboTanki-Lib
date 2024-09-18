@@ -1,15 +1,15 @@
 package projects.tanks.clients.fp10.models.tanksbattleselectmodelflash
 {
-   import §!#%§.*;
-   import §""v§.*;
-   import §%@§.§`#`§;
-   import §'#r§.*;
-   import §-#e§.*;
-   import §0"k§.§native package if§;
-   import §8!<§.§#"z§;
-   import §>6§.*;
-   import §>Y§.§native true§;
-   import §?#!§.§if catch break§;
+   import Renamed144.*;
+   import Renamed1580.*;
+   import Renamed188.Renamed4738;
+   import Renamed195.*;
+   import Renamed216.*;
+   import Renamed4739.Renamed4740;
+   import Renamed4741.Renamed4742;
+   import Renamed1583.*;
+   import Renamed4743.Renamed4744;
+   import Renamed4745.Renamed4746;
    import alternativa.osgi.OSGi;
    import alternativa.osgi.bundle.IBundleActivator;
    import alternativa.osgi.service.display.IDisplay;
@@ -27,12 +27,12 @@ package projects.tanks.clients.fp10.models.tanksbattleselectmodelflash
    import alternativa.tanks.service.achievement.IAchievementService;
    import alternativa.tanks.service.battle.BattleUserInfoService;
    import alternativa.tanks.service.battle.IBattleUserInfoService;
-   import alternativa.tanks.service.battle.§final package throw§;
+   import alternativa.tanks.service.battle.Renamed2077;
    import alternativa.tanks.service.battlecreate.IBattleCreateFormService;
    import alternativa.tanks.service.battleinfo.IBattleInfoFormService;
-   import alternativa.tanks.service.battleinfo.§override set const§;
+   import alternativa.tanks.service.battleinfo.Renamed543;
    import alternativa.tanks.service.battlelist.IBattleListFormService;
-   import alternativa.tanks.service.battlelist.§while for do§;
+   import alternativa.tanks.service.battlelist.Renamed544;
    import alternativa.tanks.service.money.IMoneyService;
    import alternativa.tanks.tracker.ITrackerService;
    import alternativa.tanks.view.battlecreate.CreateBattleFormView;
@@ -44,7 +44,7 @@ package projects.tanks.clients.fp10.models.tanksbattleselectmodelflash
    import alternativa.tanks.view.battlelist.BattleListView;
    import alternativa.tanks.view.battlelist.LocaleBattleList;
    import alternativa.tanks.view.battlelist.forms.BattleBigButton;
-   import §else set break§.*;
+   import Renamed353.*;
    import platform.client.fp10.core.model.IObjectLoadListener;
    import platform.client.fp10.core.model.ObjectLoadListener;
    import platform.client.fp10.core.model.ObjectLoadPostListener;
@@ -52,7 +52,7 @@ package projects.tanks.clients.fp10.models.tanksbattleselectmodelflash
    import platform.client.fp10.core.registry.ModelRegistry;
    import projects.tanks.client.battleselect.model.battleselect.IBattleSelectModelBase;
    import projects.tanks.client.battleselect.model.battleselect.create.IBattleCreateModelBase;
-   import projects.tanks.client.battleselect.model.info.§ !t§;
+   import projects.tanks.client.battleselect.model.info.Renamed2116;
    import projects.tanks.client.battleselect.model.item.IBattleItemModelBase;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.alertservices.IAlertService;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.battle.IBattleInfoService;
@@ -61,9 +61,9 @@ package projects.tanks.clients.fp10.models.tanksbattleselectmodelflash
    import projects.tanks.clients.fp10.libraries.tanksservices.service.storage.IStorageService;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.userproperties.IUserPropertiesService;
    import projects.tanks.clients.fp10.libraries.tanksservices.utils.BattleFormatUtil;
-   import §static set function§.*;
-   import §static set get§.§default var class§;
-   import §var for get§.§in var static§;
+   import Renamed423.*;
+   import Renamed424.Renamed4747;
+   import Renamed453.Renamed4748;
    
    public class Activator implements IBundleActivator
    {
@@ -313,24 +313,24 @@ package projects.tanks.clients.fp10.models.tanksbattleselectmodelflash
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §while for do§.display = IDisplay(param1);
+            Renamed544.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §while for do§.display;
+            return Renamed544.display;
          });
          osgi.injectService(IBattleCreateFormService,function(param1:Object):void
          {
-            §while for do§.battleCreateFormService = IBattleCreateFormService(param1);
+            Renamed544.battleCreateFormService = IBattleCreateFormService(param1);
          },function():IBattleCreateFormService
          {
-            return §while for do§.battleCreateFormService;
+            return Renamed544.battleCreateFormService;
          });
          osgi.injectService(IBattleInfoFormService,function(param1:Object):void
          {
-            §while for do§.battleInfoFormService = IBattleInfoFormService(param1);
+            Renamed544.battleInfoFormService = IBattleInfoFormService(param1);
          },function():IBattleInfoFormService
          {
-            return §while for do§.battleInfoFormService;
+            return Renamed544.battleInfoFormService;
          });
          osgi.injectService(LogService,function(param1:Object):void
          {
@@ -341,31 +341,31 @@ package projects.tanks.clients.fp10.models.tanksbattleselectmodelflash
          });
          osgi.injectService(IFriendInfoService,function(param1:Object):void
          {
-            §final package throw§.friendsInfoService = IFriendInfoService(param1);
+            Renamed2077.friendsInfoService = IFriendInfoService(param1);
          },function():IFriendInfoService
          {
-            return §final package throw§.friendsInfoService;
+            return Renamed2077.friendsInfoService;
          });
          osgi.injectService(IBattleUserInfoService,function(param1:Object):void
          {
-            §final package throw§.battleUserInfoService = IBattleUserInfoService(param1);
+            Renamed2077.battleUserInfoService = IBattleUserInfoService(param1);
          },function():IBattleUserInfoService
          {
-            return §final package throw§.battleUserInfoService;
+            return Renamed2077.battleUserInfoService;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §override set const§.display = IDisplay(param1);
+            Renamed543.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §override set const§.display;
+            return Renamed543.display;
          });
          osgi.injectService(ITrackerService,function(param1:Object):void
          {
-            §override set const§.trackerService = ITrackerService(param1);
+            Renamed543.trackerService = ITrackerService(param1);
          },function():ITrackerService
          {
-            return §override set const§.trackerService;
+            return Renamed543.trackerService;
          });
          osgi.injectService(IBattleInfoFormService,function(param1:Object):void
          {
@@ -383,24 +383,24 @@ package projects.tanks.clients.fp10.models.tanksbattleselectmodelflash
          });
          osgi.injectService(IBattleInfoFormService,function(param1:Object):void
          {
-            §do false§.battleInfoFormService = IBattleInfoFormService(param1);
+            Renamed2119.battleInfoFormService = IBattleInfoFormService(param1);
          },function():IBattleInfoFormService
          {
-            return §do false§.battleInfoFormService;
+            return Renamed2119.battleInfoFormService;
          });
          osgi.injectService(IAlertService,function(param1:Object):void
          {
-            §do false§.battleAlertService = IAlertService(param1);
+            Renamed2119.battleAlertService = IAlertService(param1);
          },function():IAlertService
          {
-            return §do false§.battleAlertService;
+            return Renamed2119.battleAlertService;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §do false§.localeService = ILocaleService(param1);
+            Renamed2119.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §do false§.localeService;
+            return Renamed2119.localeService;
          });
          osgi.injectService(IBattleInfoFormService,function(param1:Object):void
          {
@@ -418,10 +418,10 @@ package projects.tanks.clients.fp10.models.tanksbattleselectmodelflash
          });
          osgi.injectService(IBattleInfoFormService,function(param1:Object):void
          {
-            §4!A§.battleInfoFormService = IBattleInfoFormService(param1);
+            Renamed4749.battleInfoFormService = IBattleInfoFormService(param1);
          },function():IBattleInfoFormService
          {
-            return §4!A§.battleInfoFormService;
+            return Renamed4749.battleInfoFormService;
          });
          osgi.injectService(IBattleListFormService,function(param1:Object):void
          {
@@ -558,24 +558,24 @@ package projects.tanks.clients.fp10.models.tanksbattleselectmodelflash
          });
          osgi.injectService(BattleFormatUtil,function(param1:Object):void
          {
-            CreateBattleFormController.§]"j§ = BattleFormatUtil(param1);
+            CreateBattleFormController.Renamed1588 = BattleFormatUtil(param1);
          },function():BattleFormatUtil
          {
-            return CreateBattleFormController.§]"j§;
+            return CreateBattleFormController.Renamed1588;
          });
          osgi.injectService(BattleFormatUtil,function(param1:Object):void
          {
-            BattleTeamInfoModel.§]"j§ = BattleFormatUtil(param1);
+            BattleTeamInfoModel.Renamed1588 = BattleFormatUtil(param1);
          },function():BattleFormatUtil
          {
-            return BattleTeamInfoModel.§]"j§;
+            return BattleTeamInfoModel.Renamed1588;
          });
          osgi.injectService(BattleFormatUtil,function(param1:Object):void
          {
-            BattleDmInfoModel.§]"j§ = BattleFormatUtil(param1);
+            BattleDmInfoModel.Renamed1588 = BattleFormatUtil(param1);
          },function():BattleFormatUtil
          {
-            return BattleDmInfoModel.§]"j§;
+            return BattleDmInfoModel.Renamed1588;
          });
          osgi.injectService(IAlertService,function(param1:Object):void
          {
@@ -607,38 +607,38 @@ package projects.tanks.clients.fp10.models.tanksbattleselectmodelflash
          });
          osgi.injectService(BattleFormatUtil,function(param1:Object):void
          {
-            §while for do§.§]"j§ = BattleFormatUtil(param1);
+            Renamed544.Renamed1588 = BattleFormatUtil(param1);
          },function():BattleFormatUtil
          {
-            return §while for do§.§]"j§;
+            return Renamed544.Renamed1588;
          });
          modelRegisterAdapt = osgi.getService(ModelRegistry) as ModelRegistry;
-         modelRegisterAdapt.registerAdapt(§with var while§,§return var catch§);
-         modelRegisterAdapt.registerEvents(§with var while§,§var for try§);
+         modelRegisterAdapt.registerAdapt(Renamed2120,Renamed2124);
+         modelRegisterAdapt.registerEvents(Renamed2120,Renamed2125);
          modelRegister = osgi.getService(ModelRegistry) as ModelRegistry;
-         modelRegister.add(new BattleTeamInfoModel(),Vector.<Class>([§#"z§,ObjectLoadPostListener,ObjectUnloadListener]));
-         modelRegister.add(new §do false§(),Vector.<Class>([§ !t§,IObjectLoadListener,§with var while§]));
-         modelRegister.add(new BattleDmInfoModel(),Vector.<Class>([§native true§,ObjectLoadPostListener,ObjectUnloadListener]));
-         modelRegisterAdapt.registerAdapt(§in const if§,§var set switch§);
-         modelRegisterAdapt.registerEvents(§in const if§,§false package class§);
-         modelRegister.add(new §4!A§(),Vector.<Class>([§in var static§,§in const if§,IObjectLoadListener]));
-         modelRegister.add(new §0"^§(),Vector.<Class>([§native package if§,§,"3§]));
-         modelRegisterAdapt.registerAdapt(§,"3§,§;G§);
-         modelRegisterAdapt.registerEvents(§,"3§,§do throw§);
-         modelRegister.add(new §+!2§(),Vector.<Class>([§`#`§,§null for do§,IObjectLoadListener]));
-         modelRegisterAdapt.registerAdapt(§null for do§,§package§);
-         modelRegisterAdapt.registerEvents(§null for do§,§`!f§);
-         modelRegisterAdapt.registerAdapt(§<"U§,§with set in§);
-         modelRegisterAdapt.registerEvents(§<"U§,§<"<§);
-         modelRegister.add(new BattleTeamItemModel(),Vector.<Class>([§if catch break§,§<"U§,BattleItem,ObjectLoadListener]));
+         modelRegister.add(new BattleTeamInfoModel(),Vector.<Class>([Renamed4742,ObjectLoadPostListener,ObjectUnloadListener]));
+         modelRegister.add(new Renamed2119(),Vector.<Class>([Renamed2116,IObjectLoadListener,Renamed2120]));
+         modelRegister.add(new BattleDmInfoModel(),Vector.<Class>([Renamed4744,ObjectLoadPostListener,ObjectUnloadListener]));
+         modelRegisterAdapt.registerAdapt(Renamed4750,Renamed4751);
+         modelRegisterAdapt.registerEvents(Renamed4750,Renamed4752);
+         modelRegister.add(new Renamed4749(),Vector.<Class>([Renamed4748,Renamed4750,IObjectLoadListener]));
+         modelRegister.add(new Renamed4753(),Vector.<Class>([Renamed4740,Renamed1581]));
+         modelRegisterAdapt.registerAdapt(Renamed1581,Renamed4754);
+         modelRegisterAdapt.registerEvents(Renamed1581,Renamed4755);
+         modelRegister.add(new Renamed4756(),Vector.<Class>([Renamed4738,Renamed1584,IObjectLoadListener]));
+         modelRegisterAdapt.registerAdapt(Renamed1584,Renamed4757);
+         modelRegisterAdapt.registerEvents(Renamed1584,Renamed4758);
+         modelRegisterAdapt.registerAdapt(Renamed3638,Renamed4759);
+         modelRegisterAdapt.registerEvents(Renamed3638,Renamed4760);
+         modelRegister.add(new BattleTeamItemModel(),Vector.<Class>([Renamed4746,Renamed3638,BattleItem,ObjectLoadListener]));
          modelRegister.add(new BattleItemModel(),Vector.<Class>([IBattleItemModelBase,IObjectLoadListener,IBattleItem]));
-         modelRegisterAdapt.registerAdapt(§break package const§,§implements get§);
-         modelRegisterAdapt.registerEvents(§break package const§,§=V§);
-         modelRegister.add(new BattleDMItemModel(),Vector.<Class>([§default var class§,§break package const§,BattleItem,ObjectLoadListener]));
-         modelRegisterAdapt.registerAdapt(IBattleItem,§`"m§);
-         modelRegisterAdapt.registerEvents(IBattleItem,§import for var§);
-         modelRegisterAdapt.registerAdapt(BattleItem,§ h§);
-         modelRegisterAdapt.registerEvents(BattleItem,§in package final§);
+         modelRegisterAdapt.registerAdapt(Renamed3639,Renamed4761);
+         modelRegisterAdapt.registerEvents(Renamed3639,Renamed4762);
+         modelRegister.add(new BattleDMItemModel(),Vector.<Class>([Renamed4747,Renamed3639,BattleItem,ObjectLoadListener]));
+         modelRegisterAdapt.registerAdapt(IBattleItem,Renamed2134);
+         modelRegisterAdapt.registerEvents(IBattleItem,Renamed2132);
+         modelRegisterAdapt.registerAdapt(BattleItem,Renamed2131);
+         modelRegisterAdapt.registerEvents(BattleItem,Renamed2133);
          modelRegister.add(new BattleSelectModel(),Vector.<Class>([IBattleSelectModelBase,ObjectLoadPostListener,ObjectUnloadListener]));
          modelRegister.add(new BattleCreateModel(),Vector.<Class>([IBattleCreateModelBase,IObjectLoadListener]));
       }

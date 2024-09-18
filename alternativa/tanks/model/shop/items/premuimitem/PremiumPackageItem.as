@@ -2,7 +2,7 @@ package alternativa.tanks.model.shop.items.premuimitem
 {
    import alternativa.tanks.model.shop.items.base.ShopItemBase;
    import controls.base.LabelBase;
-   import §extends for catch§.§%!H§;
+   import Renamed355.Renamed2270;
    import flash.display.Bitmap;
    import flash.text.TextFieldAutoSize;
    import projects.tanks.clients.flash.commons.services.timeunit.ITimeUnitService;
@@ -10,7 +10,7 @@ package alternativa.tanks.model.shop.items.premuimitem
    public class PremiumPackageItem extends ShopItemBase
    {
       [Inject]
-      public static var §&J§:ITimeUnitService;
+      public static var Renamed2271:ITimeUnitService;
       
       private static const LEFT_PADDING:int = 18;
       
@@ -29,7 +29,7 @@ package alternativa.tanks.model.shop.items.premuimitem
       public function PremiumPackageItem(param1:String, param2:Object)
       {
          this.additionalData = param2;
-         super(param1,§%!H§.§"">§);
+         super(param1,Renamed2270.Renamed2273);
       }
       
       override protected function init() : void
@@ -43,7 +43,7 @@ package alternativa.tanks.model.shop.items.premuimitem
       private function initCrystalsAndPrice() : void
       {
          this.premiumLabel = new LabelBase();
-         this.premiumLabel.text = "+" + §&J§.§5!7§(this.additionalData.premium_duration);
+         this.premiumLabel.text = "+" + Renamed2271.Renamed2274(this.additionalData.premium_duration);
          this.premiumLabel.color = this.PREMIUM_TEXT_LABEL_COLOR;
          this.premiumLabel.autoSize = TextFieldAutoSize.LEFT;
          this.premiumLabel.size = 30;

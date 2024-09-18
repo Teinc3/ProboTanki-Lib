@@ -1,158 +1,158 @@
 package projects.tanks.clients.fp10.models.battlefieldmodelflash
 {
-   import § !V§.§9#;§;
-   import § !V§.§=p§;
-   import § !V§.§continue set package§;
-   import § "u§.§static set class§;
-   import §!!v§.§1"f§;
-   import §!!v§.§^C§;
-   import §!!v§.§use catch true§;
-   import §!!y§.§2!Y§;
-   import §!"#§.§%"@§;
-   import §!#u§.§while package super§;
-   import §!A§.§@"8§;
-   import §""W§.§ #"§;
-   import §""W§.§0"v§;
-   import §""W§.§native package get§;
-   import §""W§.§super const while§;
-   import §"$§.§[#D§;
-   import §"$§.§do set switch§;
-   import §"$§.§implements include§;
-   import §"$§.§import set class§;
-   import §#"D§.§7!t§;
-   import §##D§.§%"i§;
-   import §##Q§.§&H§;
-   import §%!5§.§try set finally§;
-   import §%3§.§2!$§;
-   import §%3§.§?"p§;
-   import §%3§.§get set const§;
-   import §%3§.§set package set§;
-   import §%3§.§super var default§;
-   import §%3§.§while catch final§;
-   import §&<§.§#u§;
-   import §&<§.§implements const include§;
-   import §'!@§.§break set import§;
-   import §+!e§.§!!r§;
-   import §+!e§.§%#A§;
-   import §+!e§.§2c§;
-   import §+!e§.§6"0§;
-   import §+!e§.§[@§;
-   import §+!e§.§]#E§;
-   import §+!e§.§do for switch§;
-   import §+!e§.§each set each§;
-   import §+!h§.§import var get§;
-   import §+"f§.§true package case§;
-   import §+#J§.§;#y§;
-   import §+Q§.§<#f§;
-   import §+Q§.§finally const§;
-   import §+Q§.§set if§;
-   import §,#K§.§null for static§;
-   import §,#a§.§!"3§;
-   import §,b§.§switch catch extends§;
-   import §-!z§.§^!I§;
-   import §0!$§.§]" §;
-   import §0!$§.§null catch switch§;
-   import §0#1§.§try catch static§;
-   import §0#I§.§&!K§;
-   import §0#I§.§-"v§;
-   import §0#I§.§5L§;
-   import §0#I§.§break for catch§;
-   import §0#I§.§get for default§;
-   import §0#I§.§super implements§;
-   import §0#y§.§?"8§;
-   import §0#y§.§case const class§;
-   import §0#y§.§if catch use§;
-   import §0#y§.§with package import§;
-   import §1"z§.§'!p§;
-   import §3"§.§?!1§;
-   import §3^§.§"u§;
-   import §4"%§.§0!#§;
-   import §4"%§.§3#X§;
-   import §4"%§.§80§;
-   import §4"%§.§var in§;
-   import §4#s§.§""2§;
-   import §4E§.§1"c§;
-   import §4E§.§override set function§;
-   import §5""§.§return package for§;
-   import §5"C§.§1!>§;
-   import §5"C§.§8!3§;
-   import §5"C§.§[!y§;
-   import §5+§.§`!O§;
-   import §6!m§.§%#E§;
-   import §6!m§.§'o§;
-   import §6!m§.§;"Z§;
-   import §6!u§.§%i§;
-   import §6!u§.§&§;
-   import §6!u§.§false set false§;
-   import §6!u§.§for package true§;
-   import §6"N§.§null for break§;
-   import §7!8§.§<c§;
-   import §7!8§.§="`§;
-   import §7!8§.§continue var static§;
-   import §7!8§.§static const default§;
-   import §7"j§.§'#h§;
-   import §7"j§.§9"<§;
-   import §7"j§.§do set case§;
-   import §8"+§.§catch package var§;
-   import §8"=§.§switch package final§;
-   import §8h§.§extends set package§;
-   import §9!1§.§false package finally§;
-   import §9!1§.§false set throw§;
-   import §9!B§.§while var finally§;
-   import §9"a§.§null var package§;
-   import §;#L§.§4#&§;
-   import §;$$§.§3?§;
-   import §;q§.§override const null§;
-   import §<!E§.§&#%§;
-   import §<!E§.§;"a§;
-   import §<!E§.§^!R§;
-   import §<!E§.§include var with§;
-   import §<"K§.§0"D§;
-   import §<#<§.§switch const null§;
-   import §=#M§.§'#B§;
-   import §=#M§.§null var implements§;
-   import §>u§.§var for var§;
-   import §?"c§.§;"9§;
-   import §?#0§.§3# §;
-   import §?#>§.§,$$§;
-   import §?#>§.§catch catch return§;
-   import §?#f§.§8#o§;
-   import §@$ §.§?§;
-   import §[=§.§finally for package§;
-   import §]!3§.§=#@§;
-   import §]!3§.§throw var each§;
-   import §]#1§.§^;§;
-   import §]#R§.§&!r§;
-   import §]#R§.§+#`§;
-   import §]#R§.§9"0§;
-   import §]#R§.§[§;
-   import §]#R§.§else for include§;
-   import §]#R§.§native var var§;
-   import §]#R§.§switch var implements§;
-   import §]#R§.§try set for§;
-   import §]2§.§@#w§;
-   import §]R§.§["w§;
-   import §]R§.§[g§;
-   import §]R§.§^H§;
-   import §]R§.§try package do§;
-   import §]i§.§'#;§;
-   import §]i§.§2#_§;
-   import §]i§.§const const false§;
-   import §]i§.§dynamic var while§;
-   import §]s§.§for for native§;
-   import §]s§.§implements static§;
-   import §`"Q§.§0"c§;
-   import §`"X§.§function const import§;
-   import §`"b§.§#!M§;
-   import §`"b§.§+y§;
-   import §`"b§.§,#[§;
-   import §`"b§.§<1§;
-   import §`"b§.§=#h§;
-   import §`"b§.§final const use§;
-   import §`"b§.§function catch extends§;
-   import §`"b§.§function set class§;
-   import §`"b§.§if for else§;
-   import §`"b§.§super const final§;
+   import Renamed137.Renamed4536;
+   import Renamed137.Renamed2400;
+   import Renamed137.Renamed4537;
+   import Renamed9.Renamed11;
+   import Renamed142.Renamed4538;
+   import Renamed142.Renamed4539;
+   import Renamed142.Renamed2741;
+   import Renamed143.Renamed2742;
+   import Renamed4540.Renamed4541;
+   import Renamed12.Renamed14;
+   import Renamed15.Renamed4542;
+   import Renamed4543.Renamed4544;
+   import Renamed4543.Renamed4545;
+   import Renamed4543.Renamed4546;
+   import Renamed4543.Renamed4547;
+   import Renamed4548.Renamed4549;
+   import Renamed4548.Renamed4550;
+   import Renamed4548.Renamed4551;
+   import Renamed4548.Renamed4552;
+   import Renamed4553.Renamed4554;
+   import Renamed148.Renamed2743;
+   import Renamed150.Renamed2745;
+   import Renamed155.Renamed4555;
+   import Renamed17.Renamed4556;
+   import Renamed17.Renamed4557;
+   import Renamed17.Renamed4558;
+   import Renamed17.Renamed4559;
+   import Renamed17.Renamed18;
+   import Renamed17.Renamed4560;
+   import Renamed4561.Renamed4562;
+   import Renamed4561.Renamed4563;
+   import Renamed194.Renamed4564;
+   import Renamed200.Renamed2746;
+   import Renamed200.Renamed2747;
+   import Renamed200.Renamed2748;
+   import Renamed200.Renamed2749;
+   import Renamed200.Renamed2401;
+   import Renamed200.Renamed2750;
+   import Renamed200.Renamed2751;
+   import Renamed200.Renamed4565;
+   import Renamed201.Renamed4566;
+   import Renamed4567.Renamed4568;
+   import Renamed202.Renamed4569;
+   import Renamed19.Renamed4570;
+   import Renamed19.Renamed20;
+   import Renamed19.Renamed4571;
+   import Renamed207.Renamed4572;
+   import Renamed206.Renamed4573;
+   import Renamed209.Renamed2752;
+   import Renamed215.Renamed4574;
+   import Renamed220.Renamed4575;
+   import Renamed220.Renamed4576;
+   import Renamed21.Renamed22;
+   import Renamed224.Renamed4577;
+   import Renamed224.Renamed4578;
+   import Renamed224.Renamed4579;
+   import Renamed224.Renamed4580;
+   import Renamed224.Renamed4581;
+   import Renamed224.Renamed4582;
+   import Renamed226.Renamed4583;
+   import Renamed226.Renamed4584;
+   import Renamed226.Renamed4585;
+   import Renamed226.Renamed3433;
+   import Renamed4586.Renamed4587;
+   import Renamed27.Renamed28;
+   import Renamed29.Renamed30;
+   import Renamed3253.Renamed4588;
+   import Renamed3253.Renamed4589;
+   import Renamed3253.Renamed3254;
+   import Renamed3253.Renamed4590;
+   import Renamed244.Renamed4591;
+   import Renamed250.Renamed4592;
+   import Renamed250.Renamed4593;
+   import Renamed4594.Renamed4595;
+   import Renamed3505.Renamed3506;
+   import Renamed3505.Renamed4596;
+   import Renamed3505.Renamed3511;
+   import Renamed257.Renamed4597;
+   import Renamed258.Renamed3512;
+   import Renamed258.Renamed3507;
+   import Renamed258.Renamed4598;
+   import Renamed259.Renamed4599;
+   import Renamed259.Renamed3435;
+   import Renamed259.Renamed3255;
+   import Renamed259.Renamed4600;
+   import Renamed31.Renamed32;
+   import Renamed264.Renamed508;
+   import Renamed264.Renamed4601;
+   import Renamed264.Renamed509;
+   import Renamed264.Renamed4602;
+   import Renamed1.Renamed4603;
+   import Renamed1.Renamed4604;
+   import Renamed1.Renamed1441;
+   import Renamed4605.Renamed4606;
+   import Renamed4607.Renamed4608;
+   import Renamed279.Renamed4609;
+   import Renamed280.Renamed3292;
+   import Renamed280.Renamed3293;
+   import Renamed281.Renamed4610;
+   import Renamed4611.Renamed4612;
+   import Renamed292.Renamed4613;
+   import Renamed293.Renamed1228;
+   import Renamed34.Renamed36;
+   import Renamed4614.Renamed4615;
+   import Renamed4614.Renamed4616;
+   import Renamed4614.Renamed4617;
+   import Renamed4614.Renamed4618;
+   import Renamed4619.Renamed4620;
+   import Renamed37.Renamed38;
+   import Renamed301.Renamed3043;
+   import Renamed301.Renamed4621;
+   import Renamed4622.Renamed4623;
+   import Renamed4624.Renamed4625;
+   import Renamed3294.Renamed3295;
+   import Renamed4626.Renamed4627;
+   import Renamed4626.Renamed4628;
+   import Renamed39.Renamed40;
+   import Renamed306.Renamed4629;
+   import Renamed41.Renamed42;
+   import Renamed475.Renamed4630;
+   import Renamed475.Renamed4631;
+   import Renamed477.Renamed4632;
+   import Renamed479.Renamed2753;
+   import Renamed479.Renamed2754;
+   import Renamed479.Renamed4633;
+   import Renamed479.Renamed2755;
+   import Renamed479.Renamed3148;
+   import Renamed479.Renamed3149;
+   import Renamed479.Renamed914;
+   import Renamed479.Renamed915;
+   import Renamed482.Renamed4634;
+   import Renamed487.Renamed4635;
+   import Renamed487.Renamed4636;
+   import Renamed487.Renamed4637;
+   import Renamed487.Renamed4638;
+   import Renamed485.Renamed4639;
+   import Renamed485.Renamed4640;
+   import Renamed485.Renamed4641;
+   import Renamed485.Renamed4642;
+   import Renamed488.Renamed2613;
+   import Renamed488.Renamed2614;
+   import Renamed4643.Renamed4644;
+   import Renamed4645.Renamed4646;
+   import Renamed2615.Renamed4647;
+   import Renamed2615.Renamed4648;
+   import Renamed2615.Renamed4649;
+   import Renamed2615.Renamed4650;
+   import Renamed2615.Renamed4651;
+   import Renamed2615.Renamed4652;
+   import Renamed2615.Renamed2757;
+   import Renamed2615.Renamed4653;
+   import Renamed2615.Renamed2616;
+   import Renamed2615.Renamed4654;
    import alternativa.osgi.OSGi;
    import alternativa.osgi.bundle.IBundleActivator;
    import alternativa.osgi.service.clientlog.IClientLog;
@@ -162,17 +162,17 @@ package projects.tanks.clients.fp10.models.battlefieldmodelflash
    import alternativa.osgi.service.dump.IDumper;
    import alternativa.osgi.service.locale.ILocaleService;
    import alternativa.osgi.service.logging.LogService;
-   import alternativa.tanks.battle.§+$%§;
-   import alternativa.tanks.battle.§0_§;
-   import alternativa.tanks.battle.§;!t§;
+   import alternativa.tanks.battle.Renamed668;
+   import alternativa.tanks.battle.Renamed623;
+   import alternativa.tanks.battle.Renamed768;
    import alternativa.tanks.battle.BattleService;
-   import alternativa.tanks.battle.§class true§;
-   import alternativa.tanks.battle.§else package false§;
+   import alternativa.tanks.battle.Renamed620;
+   import alternativa.tanks.battle.Renamed832;
    import alternativa.tanks.battle.events.BattleEventDispatcher;
-   import alternativa.tanks.battle.events.§throw package continue§;
+   import alternativa.tanks.battle.events.Renamed511;
    import alternativa.tanks.battle.objects.tank.skintexturesregistry.TankSkinTextureRegistry;
-   import alternativa.tanks.battle.objects.tank.tankskin.§false catch set§;
-   import alternativa.tanks.battle.scene3d.§0"_§;
+   import alternativa.tanks.battle.objects.tank.tankskin.Renamed917;
+   import alternativa.tanks.battle.scene3d.Renamed1304;
    import alternativa.tanks.bg.IBackgroundService;
    import alternativa.tanks.bonuses.BattleBonus;
    import alternativa.tanks.bonuses.BonusMesh;
@@ -183,62 +183,62 @@ package projects.tanks.clients.fp10.models.battlefieldmodelflash
    import alternativa.tanks.bonuses.RemovalAnimation;
    import alternativa.tanks.bonuses.SpawnAnimation;
    import alternativa.tanks.bonuses.SpawnFlashRenderer;
-   import alternativa.tanks.camera.§!"t§;
-   import alternativa.tanks.camera.§package const continue§;
-   import alternativa.tanks.camera.§var set package§;
+   import alternativa.tanks.camera.Renamed1453;
+   import alternativa.tanks.camera.Renamed1458;
+   import alternativa.tanks.camera.Renamed1498;
    import alternativa.tanks.engine3d.EffectsMaterialRegistry;
-   import alternativa.tanks.engine3d.§continue package dynamic§;
+   import alternativa.tanks.engine3d.Renamed1656;
    import alternativa.tanks.help.IHelpService;
    import alternativa.tanks.loader.ILoaderWindowService;
-   import alternativa.tanks.models.battle.battlefield.§#!>§;
-   import alternativa.tanks.models.battle.battlefield.§8"E§;
-   import alternativa.tanks.models.battle.battlefield.§>#=§;
-   import alternativa.tanks.models.battle.battlefield.§?#_§;
+   import alternativa.tanks.models.battle.battlefield.Renamed2310;
+   import alternativa.tanks.models.battle.battlefield.Renamed2383;
+   import alternativa.tanks.models.battle.battlefield.Renamed2320;
+   import alternativa.tanks.models.battle.battlefield.Renamed2326;
    import alternativa.tanks.models.battle.battlefield.BattleUserInfoService;
-   import alternativa.tanks.models.battle.battlefield.§]!t§;
-   import alternativa.tanks.models.battle.battlefield.§]#P§;
-   import alternativa.tanks.models.battle.battlefield.§final for continue§;
-   import alternativa.tanks.models.battle.battlefield.§static throw§;
-   import alternativa.tanks.models.battle.battlefield.§true var else§;
-   import alternativa.tanks.models.battle.gui.§&"4§;
-   import alternativa.tanks.models.battle.gui.chat.§3"Q§;
-   import alternativa.tanks.models.battle.gui.chat.§=+§;
+   import alternativa.tanks.models.battle.battlefield.Renamed2453;
+   import alternativa.tanks.models.battle.battlefield.Renamed2311;
+   import alternativa.tanks.models.battle.battlefield.Renamed2394;
+   import alternativa.tanks.models.battle.battlefield.Renamed2417;
+   import alternativa.tanks.models.battle.battlefield.Renamed2524;
+   import alternativa.tanks.models.battle.gui.Renamed2553;
+   import alternativa.tanks.models.battle.gui.chat.Renamed2568;
+   import alternativa.tanks.models.battle.gui.chat.Renamed2571;
    import alternativa.tanks.models.battle.gui.chat.ChatModel;
-   import alternativa.tanks.models.battle.gui.chat.§finally else§;
-   import alternativa.tanks.models.battle.gui.chat.§set package case§;
-   import alternativa.tanks.models.tank.§,X§;
-   import alternativa.tanks.models.tank.§2!s§;
-   import alternativa.tanks.models.tank.§2a§;
-   import alternativa.tanks.models.tank.§finally var return§;
-   import alternativa.tanks.models.tank.§in catch switch§;
-   import alternativa.tanks.models.tank.spawn.spawnhandlers.§<6§;
-   import alternativa.tanks.models.tank.§static implements§;
-   import alternativa.tanks.models.tank.§super catch function§;
-   import alternativa.tanks.models.tank.§var catch§;
-   import alternativa.tanks.models.tank.§while var final§;
-   import alternativa.tanks.models.weapon.§catch catch false§;
-   import alternativa.tanks.models.weapon.machinegun.§!n§;
-   import alternativa.tanks.models.weapon.machinegun.§6#-§;
-   import alternativa.tanks.models.weapon.machinegun.§dynamic package false§;
-   import alternativa.tanks.models.weapon.machinegun.§override for try§;
-   import alternativa.tanks.models.weapon.shaft.§="D§;
-   import alternativa.tanks.models.weapon.shaft.§=#k§;
-   import alternativa.tanks.models.weapon.shaft.§>"i§;
-   import alternativa.tanks.models.weapon.shaft.§finally native§;
-   import alternativa.tanks.models.weapon.shared.§6#L§;
-   import alternativa.tanks.models.weapon.shared.§@"e§;
-   import alternativa.tanks.models.weapon.shotgun.§ 5§;
-   import alternativa.tanks.models.weapon.shotgun.§case package null§;
-   import alternativa.tanks.models.weapon.smoky.§,v§;
-   import alternativa.tanks.models.weapon.smoky.§do override§;
+   import alternativa.tanks.models.battle.gui.chat.Renamed2566;
+   import alternativa.tanks.models.battle.gui.chat.Renamed2597;
+   import alternativa.tanks.models.tank.Renamed2735;
+   import alternativa.tanks.models.tank.Renamed2407;
+   import alternativa.tanks.models.tank.Renamed2787;
+   import alternativa.tanks.models.tank.Renamed2408;
+   import alternativa.tanks.models.tank.Renamed2813;
+   import alternativa.tanks.models.tank.spawn.spawnhandlers.Renamed2758;
+   import alternativa.tanks.models.tank.Renamed2865;
+   import alternativa.tanks.models.tank.Renamed2864;
+   import alternativa.tanks.models.tank.Renamed2409;
+   import alternativa.tanks.models.tank.Renamed2867;
+   import alternativa.tanks.models.weapon.Renamed43;
+   import alternativa.tanks.models.weapon.machinegun.Renamed3076;
+   import alternativa.tanks.models.weapon.machinegun.Renamed3106;
+   import alternativa.tanks.models.weapon.machinegun.Renamed44;
+   import alternativa.tanks.models.weapon.machinegun.Renamed3081;
+   import alternativa.tanks.models.weapon.shaft.Renamed3153;
+   import alternativa.tanks.models.weapon.shaft.Renamed3257;
+   import alternativa.tanks.models.weapon.shaft.Renamed45;
+   import alternativa.tanks.models.weapon.shaft.Renamed3170;
+   import alternativa.tanks.models.weapon.shared.Renamed3150;
+   import alternativa.tanks.models.weapon.shared.Renamed2943;
+   import alternativa.tanks.models.weapon.shotgun.Renamed3418;
+   import alternativa.tanks.models.weapon.shotgun.Renamed46;
+   import alternativa.tanks.models.weapon.smoky.Renamed3480;
+   import alternativa.tanks.models.weapon.smoky.Renamed47;
    import alternativa.tanks.service.panel.IPanelView;
    import alternativa.tanks.service.settings.ISettingsService;
    import alternativa.tanks.service.settings.keybinding.KeysBindingService;
    import alternativa.tanks.services.battlegui.BattleGUIService;
-   import alternativa.tanks.services.battlegui.§continue for else§;
+   import alternativa.tanks.services.battlegui.Renamed522;
    import alternativa.tanks.services.battleinput.BattleInputService;
    import alternativa.tanks.services.battlereadiness.BattleReadinessService;
-   import alternativa.tanks.services.battlereadiness.§case each§;
+   import alternativa.tanks.services.battlereadiness.Renamed524;
    import alternativa.tanks.services.colortransform.ColorTransformService;
    import alternativa.tanks.services.initialeffects.IInitialEffectsService;
    import alternativa.tanks.services.lightingeffects.ILightingEffectsService;
@@ -246,98 +246,98 @@ package projects.tanks.clients.fp10.models.battlefieldmodelflash
    import alternativa.tanks.services.ping.PingService;
    import alternativa.tanks.services.spectatorservice.SpectatorService;
    import alternativa.tanks.services.tankregistry.TankUsersRegistry;
-   import alternativa.tanks.services.targeting.§+"S§;
+   import alternativa.tanks.services.targeting.Renamed530;
    import alternativa.tanks.services.targeting.TargetingInputManager;
    import alternativa.tanks.services.targeting.TargetingModeService;
-   import alternativa.tanks.services.targeting.§continue for const§;
+   import alternativa.tanks.services.targeting.Renamed531;
    import alternativa.tanks.utils.DataValidator;
    import alternativa.utils.TextureMaterialRegistry;
-   import §break const override§.§use set false§;
-   import §break set catch§.§91§;
-   import §break set catch§.§each set continue§;
-   import §case include§.§case native§;
-   import §case include§.§const package in§;
-   import §case include§.§include set class§;
-   import §catch catch true§.§super const default§;
-   import §catch package super§.§in const§;
-   import §catch set dynamic§.§@!Z§;
-   import §class for§.§3!+§;
-   import §class for§.§[#f§;
-   import §class for§.§each var var§;
-   import §class package throw§.§do for return§;
-   import §class var for§.§const set default§;
-   import §class var for§.§import const throw§;
-   import §const const include§.§null set get§;
-   import §dynamic catch class§.§7#j§;
-   import §dynamic set final§.§;#,§;
-   import §each catch§.§<#=§;
-   import §each throw§.§finally return§;
-   import §else for break§.ControlsHelper;
-   import §else for break§.§const catch switch§;
-   import §extends set extends§.§do const for§;
-   import §extends var default§.§true catch function§;
-   import §false const case§.§'!U§;
-   import §false const case§.§,y§;
-   import §false const case§.§0#i§;
-   import §false const case§.§null catch const§;
-   import §false const case§.§throw native§;
-   import §final package set§.§]!o§;
-   import §final var static§.§'r§;
-   import §finally for continue§.§&#z§;
-   import §finally for continue§.§5$!§;
-   import §finally for continue§.§<!e§;
-   import §finally for continue§.§true override§;
-   import §finally for each§.§with for true§;
-   import §for for class§.IChatModelBase;
-   import §for for use§.§"#,§;
-   import §for native§.§1!U§;
-   import §for set super§.§>4§;
-   import §function implements§.§const var§;
-   import §function implements§.§final const include§;
-   import §function implements§.§override package for§;
-   import §function implements§.§return var class§;
-   import §if catch while§.§="G§;
-   import §if set dynamic§.§import set native§;
-   import §if set import§.§static set case§;
-   import §implements var final§.§[P§;
-   import §import catch function§.§8Z§;
-   import §in const true§.§2!K§;
-   import §in const true§.§^!W§;
-   import §in const true§.§case for§;
-   import §in const true§.§continue package break§;
-   import §in package catch§.§+!Q§;
-   import §in package catch§.§8#^§;
-   import §in package catch§.§[<§;
-   import §in package catch§.§false for finally§;
-   import §in package catch§.§while var continue§;
-   import §in set else§.§switch get§;
-   import §in set var§.§!#,§;
-   import §in set var§.§!#B§;
-   import §in set var§.§dynamic package dynamic§;
-   import §in var super§.§9!T§;
-   import §in var super§.§`0§;
-   import §in var super§.§dynamic set§;
-   import §in var super§.§each package for§;
-   import §in var super§.§final catch throw§;
-   import §in var super§.§finally package with§;
-   import §in var super§.§implements const use§;
-   import §include package null§.§1!0§;
-   import §include package while§.§4!C§;
-   import §native for§.§+!>§;
-   import §native for§.§2r§;
-   import §native for§.§4#=§;
-   import §native for§.§function set implements§;
-   import §override const package§.§'"]§;
-   import §package const false§.§##$§;
-   import §package if§.§"s§;
+   import Renamed310.Renamed3121;
+   import Renamed48.Renamed4655;
+   import Renamed48.Renamed49;
+   import Renamed50.Renamed51;
+   import Renamed50.Renamed4656;
+   import Renamed50.Renamed4657;
+   import Renamed320.Renamed4658;
+   import Renamed325.Renamed2411;
+   import Renamed52.Renamed53;
+   import Renamed56.Renamed4659;
+   import Renamed56.Renamed4660;
+   import Renamed56.Renamed57;
+   import Renamed332.Renamed4661;
+   import Renamed333.Renamed2382;
+   import Renamed333.Renamed4662;
+   import Renamed335.Renamed4663;
+   import Renamed342.Renamed2412;
+   import Renamed344.Renamed4664;
+   import Renamed61.Renamed62;
+   import Renamed349.Renamed4665;
+   import Renamed351.ControlsHelper;
+   import Renamed351.Renamed4666;
+   import Renamed357.Renamed2763;
+   import Renamed358.Renamed4667;
+   import Renamed63.Renamed64;
+   import Renamed63.Renamed4668;
+   import Renamed63.Renamed4669;
+   import Renamed63.Renamed4670;
+   import Renamed63.Renamed4671;
+   import Renamed361.Renamed4672;
+   import Renamed65.Renamed67;
+   import Renamed364.Renamed4673;
+   import Renamed364.Renamed4674;
+   import Renamed364.Renamed4675;
+   import Renamed364.Renamed4676;
+   import Renamed365.Renamed2766;
+   import Renamed368.IChatModelBase;
+   import Renamed369.Renamed4677;
+   import Renamed370.Renamed4678;
+   import Renamed373.Renamed4679;
+   import Renamed375.Renamed4680;
+   import Renamed375.Renamed4681;
+   import Renamed375.Renamed4682;
+   import Renamed375.Renamed2767;
+   import Renamed379.Renamed2647;
+   import Renamed383.Renamed4683;
+   import Renamed384.Renamed4684;
+   import Renamed68.Renamed69;
+   import Renamed388.Renamed4685;
+   import Renamed70.Renamed4686;
+   import Renamed70.Renamed4687;
+   import Renamed70.Renamed71;
+   import Renamed70.Renamed4688;
+   import Renamed394.Renamed3074;
+   import Renamed394.Renamed4689;
+   import Renamed394.Renamed4690;
+   import Renamed394.Renamed4691;
+   import Renamed394.Renamed4692;
+   import Renamed396.Renamed4693;
+   import Renamed72.Renamed73;
+   import Renamed72.Renamed4694;
+   import Renamed72.Renamed4695;
+   import Renamed74.Renamed3436;
+   import Renamed74.Renamed4696;
+   import Renamed74.Renamed75;
+   import Renamed74.Renamed4697;
+   import Renamed74.Renamed4698;
+   import Renamed74.Renamed4699;
+   import Renamed74.Renamed76;
+   import Renamed399.Renamed4700;
+   import Renamed77.Renamed4701;
+   import Renamed403.Renamed4702;
+   import Renamed403.Renamed4703;
+   import Renamed403.Renamed2414;
+   import Renamed403.Renamed4704;
+   import Renamed408.Renamed4705;
+   import Renamed410.Renamed4706;
+   import Renamed411.Renamed4707;
    import platform.client.fp10.core.model.IObjectLoadListener;
    import platform.client.fp10.core.model.ObjectLoadListener;
    import platform.client.fp10.core.model.ObjectLoadPostListener;
    import platform.client.fp10.core.model.ObjectUnloadListener;
    import platform.client.fp10.core.registry.ModelRegistry;
    import platform.client.fp10.core.registry.ResourceRegistry;
-   import projects.tanks.client.battlefield.models.battle.battlefield.§include set final§;
-   import projects.tanks.client.battleservice.model.statistics.§case package class§;
+   import projects.tanks.client.battlefield.models.battle.battlefield.Renamed2415;
+   import projects.tanks.client.battleservice.model.statistics.Renamed4214;
    import projects.tanks.clients.flash.commons.services.notification.INotificationService;
    import projects.tanks.clients.flash.commons.services.serverhalt.IServerHaltService;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.battle.IBattleInfoService;
@@ -353,37 +353,37 @@ package projects.tanks.clients.fp10.models.battlefieldmodelflash
    import projects.tanks.clients.fp10.libraries.tanksservices.service.user.IUserInfoService;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.userproperties.IUserPropertiesService;
    import projects.tanks.clients.fp10.libraries.tanksservices.utils.BattleFormatUtil;
-   import §return set use§.§'">§;
-   import §return set use§.§6!g§;
-   import §return set use§.§^!P§;
+   import Renamed79.Renamed2769;
+   import Renamed79.Renamed80;
+   import Renamed79.Renamed81;
    import services.contextmenu.IContextMenuService;
-   import §set break§.§^z§;
-   import §super catch package§.§super const false§;
-   import §switch const super§.§do catch return§;
-   import §switch package return§.§+"O§;
-   import §switch package return§.§2##§;
-   import §switch package return§.§else for override§;
-   import §switch package return§.§super catch use§;
-   import §switch package return§.§throw const case§;
-   import §switch package return§.§throw var try§;
-   import §true catch null§.§<!b§;
-   import §try const package§.§each var import§;
-   import §try for class§.§?!w§;
-   import §try for class§.§return get§;
-   import §use var final§.§set const final§;
-   import §var catch finally§.§!f§;
-   import §var catch finally§.§1!5§;
-   import §var catch finally§.§>!^§;
-   import §while const const§.§"!d§;
-   import §with for class§.§"!Y§;
-   import §with for class§.§7#i§;
-   import §with for class§.§>!>§;
-   import §with for class§.§class for var§;
-   import §with for class§.§implements var include§;
-   import §with for class§.§native var else§;
-   import §with for class§.§null var§;
-   import §with for class§.§use set while§;
-   import §with for function§.§final set native§;
+   import Renamed82.Renamed83;
+   import Renamed428.Renamed4708;
+   import Renamed431.Renamed4709;
+   import Renamed87.Renamed88;
+   import Renamed87.Renamed4710;
+   import Renamed87.Renamed4711;
+   import Renamed87.Renamed4712;
+   import Renamed87.Renamed4713;
+   import Renamed87.Renamed4714;
+   import Renamed439.Renamed4715;
+   import Renamed444.Renamed4716;
+   import Renamed446.Renamed2770;
+   import Renamed446.Renamed2771;
+   import Renamed91.Renamed93;
+   import Renamed451.Renamed4717;
+   import Renamed451.Renamed4718;
+   import Renamed451.Renamed4719;
+   import Renamed94.Renamed95;
+   import Renamed462.Renamed4720;
+   import Renamed462.Renamed4721;
+   import Renamed462.Renamed4722;
+   import Renamed462.Renamed4723;
+   import Renamed462.Renamed3122;
+   import Renamed462.Renamed3128;
+   import Renamed462.Renamed3075;
+   import Renamed462.Renamed4724;
+   import Renamed97.Renamed98;
    
    public class Activator implements IBundleActivator
    {
@@ -402,1025 +402,1025 @@ package projects.tanks.clients.fp10.models.battlefieldmodelflash
          osgi = _osgi;
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §continue for else§.display = IDisplay(param1);
+            Renamed522.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §continue for else§.display;
+            return Renamed522.display;
          });
          osgi.injectService(TargetingInputManager,function(param1:Object):void
          {
-            §else for include§.§9!U§ = TargetingInputManager(param1);
+            Renamed3148.Renamed1499 = TargetingInputManager(param1);
          },function():TargetingInputManager
          {
-            return §else for include§.§9!U§;
+            return Renamed3148.Renamed1499;
          });
          osgi.injectService(TargetingModeService,function(param1:Object):void
          {
-            §else for include§.§default package import§ = TargetingModeService(param1);
+            Renamed3148.Renamed926 = TargetingModeService(param1);
          },function():TargetingModeService
          {
-            return §else for include§.§default package import§;
+            return Renamed3148.Renamed926;
          });
          osgi.injectService(BattleInputService,function(param1:Object):void
          {
-            §8"E§.§const catch get§ = BattleInputService(param1);
+            Renamed2383.Renamed2384 = BattleInputService(param1);
          },function():BattleInputService
          {
-            return §8"E§.§const catch get§;
+            return Renamed2383.Renamed2384;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §>#=§.§ "#§ = IDisplay(param1);
+            Renamed2320.Renamed2321 = IDisplay(param1);
          },function():IDisplay
          {
-            return §>#=§.§ "#§;
+            return Renamed2320.Renamed2321;
          });
          osgi.injectService(BattleInputService,function(param1:Object):void
          {
-            §>#=§.§^"<§ = BattleInputService(param1);
+            Renamed2320.Renamed718 = BattleInputService(param1);
          },function():BattleInputService
          {
-            return §>#=§.§^"<§;
+            return Renamed2320.Renamed718;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §>#=§.battleService = BattleService(param1);
+            Renamed2320.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §>#=§.battleService;
+            return Renamed2320.battleService;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §final const use§.display = IDisplay(param1);
+            Renamed4652.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §final const use§.display;
+            return Renamed4652.display;
          });
          osgi.injectService(IPanelView,function(param1:Object):void
          {
-            §final const use§.panelView = IPanelView(param1);
+            Renamed4652.panelView = IPanelView(param1);
          },function():IPanelView
          {
-            return §final const use§.panelView;
+            return Renamed4652.panelView;
          });
          osgi.injectService(ISettingsService,function(param1:Object):void
          {
-            §final const use§.settingsService = ISettingsService(param1);
+            Renamed4652.settingsService = ISettingsService(param1);
          },function():ISettingsService
          {
-            return §final const use§.settingsService;
+            return Renamed4652.settingsService;
          });
          osgi.injectService(SpectatorService,function(param1:Object):void
          {
-            §final const use§.§!k§ = SpectatorService(param1);
+            Renamed4652.Renamed2545 = SpectatorService(param1);
          },function():SpectatorService
          {
-            return §final const use§.§!k§;
+            return Renamed4652.Renamed2545;
          });
          osgi.injectService(BattleInputService,function(param1:Object):void
          {
-            §final const use§.§!O§ = BattleInputService(param1);
+            Renamed4652.Renamed4725 = BattleInputService(param1);
          },function():BattleInputService
          {
-            return §final const use§.§!O§;
+            return Renamed4652.Renamed4725;
          });
          osgi.injectService(BattleGUIService,function(param1:Object):void
          {
-            §final const use§.§6"-§ = BattleGUIService(param1);
+            Renamed4652.Renamed4726 = BattleGUIService(param1);
          },function():BattleGUIService
          {
-            return §final const use§.§6"-§;
+            return Renamed4652.Renamed4726;
          });
          osgi.injectService(IDialogWindowsDispatcherService,function(param1:Object):void
          {
-            §[@§.dialogWindowsDispatcherService = IDialogWindowsDispatcherService(param1);
+            Renamed2401.dialogWindowsDispatcherService = IDialogWindowsDispatcherService(param1);
          },function():IDialogWindowsDispatcherService
          {
-            return §[@§.dialogWindowsDispatcherService;
+            return Renamed2401.dialogWindowsDispatcherService;
          });
          osgi.injectService(ILobbyLayoutService,function(param1:Object):void
          {
-            §[@§.lobbyLayoutService = ILobbyLayoutService(param1);
+            Renamed2401.lobbyLayoutService = ILobbyLayoutService(param1);
          },function():ILobbyLayoutService
          {
-            return §[@§.lobbyLayoutService;
+            return Renamed2401.lobbyLayoutService;
          });
          osgi.injectService(IDialogsService,function(param1:Object):void
          {
-            §[@§.dialogService = IDialogsService(param1);
+            Renamed2401.dialogService = IDialogsService(param1);
          },function():IDialogsService
          {
-            return §[@§.dialogService;
+            return Renamed2401.dialogService;
          });
          osgi.injectService(IBlurService,function(param1:Object):void
          {
-            §[@§.blurService = IBlurService(param1);
+            Renamed2401.blurService = IBlurService(param1);
          },function():IBlurService
          {
-            return §[@§.blurService;
+            return Renamed2401.blurService;
          });
          osgi.injectService(BattleInputService,function(param1:Object):void
          {
-            §[@§.§^"<§ = BattleInputService(param1);
+            Renamed2401.Renamed718 = BattleInputService(param1);
          },function():BattleInputService
          {
-            return §[@§.§^"<§;
+            return Renamed2401.Renamed718;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §[@§.battleService = BattleService(param1);
+            Renamed2401.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §[@§.battleService;
+            return Renamed2401.battleService;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §]!t§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed2453.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §]!t§.battleEventDispatcher;
+            return Renamed2453.battleEventDispatcher;
          });
          osgi.injectService(SpectatorService,function(param1:Object):void
          {
-            §]!t§.§!k§ = SpectatorService(param1);
+            Renamed2453.Renamed2545 = SpectatorService(param1);
          },function():SpectatorService
          {
-            return §]!t§.§!k§;
+            return Renamed2453.Renamed2545;
          });
          osgi.injectService(BattleInputService,function(param1:Object):void
          {
-            §do for switch§.§^"<§ = BattleInputService(param1);
+            Renamed2751.Renamed718 = BattleInputService(param1);
          },function():BattleInputService
          {
-            return §do for switch§.§^"<§;
+            return Renamed2751.Renamed718;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §do const for§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed2763.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §do const for§.battleEventDispatcher;
+            return Renamed2763.battleEventDispatcher;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §import const throw§.display = IDisplay(param1);
+            Renamed4662.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §import const throw§.display;
+            return Renamed4662.display;
          });
          osgi.injectService(TankUsersRegistry,function(param1:Object):void
          {
-            §import const throw§.§9#A§ = TankUsersRegistry(param1);
+            Renamed4662.Renamed2775 = TankUsersRegistry(param1);
          },function():TankUsersRegistry
          {
-            return §import const throw§.§9#A§;
+            return Renamed4662.Renamed2775;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §import const throw§.battleService = BattleService(param1);
+            Renamed4662.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §import const throw§.battleService;
+            return Renamed4662.battleService;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §import const throw§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed4662.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §import const throw§.battleEventDispatcher;
+            return Renamed4662.battleEventDispatcher;
          });
          osgi.injectService(IContextMenuService,function(param1:Object):void
          {
-            §import const throw§.contextMenuService = IContextMenuService(param1);
+            Renamed4662.contextMenuService = IContextMenuService(param1);
          },function():IContextMenuService
          {
-            return §import const throw§.contextMenuService;
+            return Renamed4662.contextMenuService;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §3"Q§.display = IDisplay(param1);
+            Renamed2568.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §3"Q§.display;
+            return Renamed2568.display;
          });
          osgi.injectService(BattleInputService,function(param1:Object):void
          {
-            §3"Q§.§const catch get§ = BattleInputService(param1);
+            Renamed2568.Renamed2384 = BattleInputService(param1);
          },function():BattleInputService
          {
-            return §3"Q§.§const catch get§;
+            return Renamed2568.Renamed2384;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §3"Q§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed2568.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §3"Q§.battleEventDispatcher;
+            return Renamed2568.battleEventDispatcher;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §3"Q§.localeService = ILocaleService(param1);
+            Renamed2568.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §3"Q§.localeService;
+            return Renamed2568.localeService;
          });
          osgi.injectService(IBlockUserService,function(param1:Object):void
          {
-            §3"Q§.blockUserService = IBlockUserService(param1);
+            Renamed2568.blockUserService = IBlockUserService(param1);
          },function():IBlockUserService
          {
-            return §3"Q§.blockUserService;
+            return Renamed2568.blockUserService;
          });
          osgi.injectService(BattleGUIService,function(param1:Object):void
          {
-            §3"Q§.§]!W§ = BattleGUIService(param1);
+            Renamed2568.Renamed2423 = BattleGUIService(param1);
          },function():BattleGUIService
          {
-            return §3"Q§.§]!W§;
+            return Renamed2568.Renamed2423;
          });
          osgi.injectService(IBattleInfoService,function(param1:Object):void
          {
-            §3"Q§.battleInfoService = IBattleInfoService(param1);
+            Renamed2568.battleInfoService = IBattleInfoService(param1);
          },function():IBattleInfoService
          {
-            return §3"Q§.battleInfoService;
+            return Renamed2568.battleInfoService;
          });
          osgi.injectService(IUserPropertiesService,function(param1:Object):void
          {
-            §3"Q§.userPropertiesService = IUserPropertiesService(param1);
+            Renamed2568.userPropertiesService = IUserPropertiesService(param1);
          },function():IUserPropertiesService
          {
-            return §3"Q§.userPropertiesService;
+            return Renamed2568.userPropertiesService;
          });
          osgi.injectService(BattleUserInfoService,function(param1:Object):void
          {
-            §3"Q§.userInfoService = BattleUserInfoService(param1);
+            Renamed2568.userInfoService = BattleUserInfoService(param1);
          },function():BattleUserInfoService
          {
-            return §3"Q§.userInfoService;
+            return Renamed2568.userInfoService;
          });
          osgi.injectService(FullscreenService,function(param1:Object):void
          {
-            §3"Q§.fullscreenService = FullscreenService(param1);
+            Renamed2568.fullscreenService = FullscreenService(param1);
          },function():FullscreenService
          {
-            return §3"Q§.fullscreenService;
+            return Renamed2568.fullscreenService;
          });
          osgi.injectService(TargetingInputManager,function(param1:Object):void
          {
-            §3"Q§.§else for if§ = TargetingInputManager(param1);
+            Renamed2568.Renamed2425 = TargetingInputManager(param1);
          },function():TargetingInputManager
          {
-            return §3"Q§.§else for if§;
+            return Renamed2568.Renamed2425;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §set package case§.localeService = ILocaleService(param1);
+            Renamed2597.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §set package case§.localeService;
+            return Renamed2597.localeService;
          });
          osgi.injectService(IBattleInfoService,function(param1:Object):void
          {
-            §!f§.battleInfoService = IBattleInfoService(param1);
+            Renamed4717.battleInfoService = IBattleInfoService(param1);
          },function():IBattleInfoService
          {
-            return §!f§.battleInfoService;
+            return Renamed4717.battleInfoService;
          });
          osgi.injectService(IStorageService,function(param1:Object):void
          {
-            §=#h§.storageService = IStorageService(param1);
+            Renamed4651.storageService = IStorageService(param1);
          },function():IStorageService
          {
-            return §=#h§.storageService;
+            return Renamed4651.storageService;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §=#h§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed4651.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §=#h§.battleEventDispatcher;
+            return Renamed4651.battleEventDispatcher;
          });
          osgi.injectService(IUserPropertiesService,function(param1:Object):void
          {
-            §=#h§.userPropertiesService = IUserPropertiesService(param1);
+            Renamed4651.userPropertiesService = IUserPropertiesService(param1);
          },function():IUserPropertiesService
          {
-            return §=#h§.userPropertiesService;
+            return Renamed4651.userPropertiesService;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §=#h§.display = IDisplay(param1);
+            Renamed4651.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §=#h§.display;
+            return Renamed4651.display;
          });
          osgi.injectService(BattleGUIService,function(param1:Object):void
          {
-            §=#h§.§]!W§ = BattleGUIService(param1);
+            Renamed4651.Renamed2423 = BattleGUIService(param1);
          },function():BattleGUIService
          {
-            return §=#h§.§]!W§;
+            return Renamed4651.Renamed2423;
          });
          osgi.injectService(IHelpService,function(param1:Object):void
          {
-            §const catch switch§.helpService = IHelpService(param1);
+            Renamed4666.helpService = IHelpService(param1);
          },function():IHelpService
          {
-            return §const catch switch§.helpService;
+            return Renamed4666.helpService;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §const catch switch§.localeService = ILocaleService(param1);
+            Renamed4666.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §const catch switch§.localeService;
+            return Renamed4666.localeService;
          });
          osgi.injectService(TextureMaterialRegistry,function(param1:Object):void
          {
-            §3?§.§false for package§ = TextureMaterialRegistry(param1);
+            Renamed1228.Renamed1233 = TextureMaterialRegistry(param1);
          },function():TextureMaterialRegistry
          {
-            return §3?§.§false for package§;
+            return Renamed1228.Renamed1233;
          });
          osgi.injectService(TankSkinTextureRegistry,function(param1:Object):void
          {
-            §3?§.§var package true§ = TankSkinTextureRegistry(param1);
+            Renamed1228.Renamed4727 = TankSkinTextureRegistry(param1);
          },function():TankSkinTextureRegistry
          {
-            return §3?§.§var package true§;
+            return Renamed1228.Renamed4727;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §3?§.battleService = BattleService(param1);
+            Renamed1228.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §3?§.battleService;
+            return Renamed1228.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §=#@§.battleService = BattleService(param1);
+            Renamed4630.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §=#@§.battleService;
+            return Renamed4630.battleService;
          });
          osgi.injectService(EffectsMaterialRegistry,function(param1:Object):void
          {
-            §=#@§.§1#=§ = EffectsMaterialRegistry(param1);
+            Renamed4630.Renamed4728 = EffectsMaterialRegistry(param1);
          },function():EffectsMaterialRegistry
          {
-            return §=#@§.§1#=§;
+            return Renamed4630.Renamed4728;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §=#@§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed4630.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §=#@§.battleEventDispatcher;
+            return Renamed4630.battleEventDispatcher;
          });
          osgi.injectService(BattleGUIService,function(param1:Object):void
          {
-            §=#@§.§]!W§ = BattleGUIService(param1);
+            Renamed4630.Renamed2423 = BattleGUIService(param1);
          },function():BattleGUIService
          {
-            return §=#@§.§]!W§;
+            return Renamed4630.Renamed2423;
          });
          osgi.injectService(IBattleInfoService,function(param1:Object):void
          {
-            §=#@§.battleInfoService = IBattleInfoService(param1);
+            Renamed4630.battleInfoService = IBattleInfoService(param1);
          },function():IBattleInfoService
          {
-            return §=#@§.battleInfoService;
+            return Renamed4630.battleInfoService;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §^!I§.display = IDisplay(param1);
+            Renamed4574.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §^!I§.display;
+            return Renamed4574.display;
          });
          osgi.injectService(BattleGUIService,function(param1:Object):void
          {
-            §^!I§.§finally set§ = BattleGUIService(param1);
+            Renamed4574.Renamed4729 = BattleGUIService(param1);
          },function():BattleGUIService
          {
-            return §^!I§.§finally set§;
+            return Renamed4574.Renamed4729;
          });
          osgi.injectService(ColorTransformService,function(param1:Object):void
          {
-            §7!t§.§class package if§ = ColorTransformService(param1);
+            Renamed4554.Renamed2421 = ColorTransformService(param1);
          },function():ColorTransformService
          {
-            return §7!t§.§class package if§;
+            return Renamed4554.Renamed2421;
          });
          osgi.injectService(TextureMaterialRegistry,function(param1:Object):void
          {
-            §7!t§.§@#R§ = TextureMaterialRegistry(param1);
+            Renamed4554.Renamed1368 = TextureMaterialRegistry(param1);
          },function():TextureMaterialRegistry
          {
-            return §7!t§.§@#R§;
+            return Renamed4554.Renamed1368;
          });
          osgi.injectService(ILightingEffectsService,function(param1:Object):void
          {
-            §7!t§.§get const true§ = ILightingEffectsService(param1);
+            Renamed4554.Renamed4730 = ILightingEffectsService(param1);
          },function():ILightingEffectsService
          {
-            return §7!t§.§get const true§;
+            return Renamed4554.Renamed4730;
          });
          osgi.injectService(TextureMaterialRegistry,function(param1:Object):void
          {
-            §in const§.§@#R§ = TextureMaterialRegistry(param1);
+            Renamed2411.Renamed1368 = TextureMaterialRegistry(param1);
          },function():TextureMaterialRegistry
          {
-            return §in const§.§@#R§;
+            return Renamed2411.Renamed1368;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §in const§.battleService = BattleService(param1);
+            Renamed2411.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §in const§.battleService;
+            return Renamed2411.battleService;
          });
          osgi.injectService(IBattleInfoService,function(param1:Object):void
          {
-            §="G§.battleInfoService = IBattleInfoService(param1);
+            Renamed2647.battleInfoService = IBattleInfoService(param1);
          },function():IBattleInfoService
          {
-            return §="G§.battleInfoService;
+            return Renamed2647.battleInfoService;
          });
          osgi.injectService(TankUsersRegistry,function(param1:Object):void
          {
-            §="G§.§9#A§ = TankUsersRegistry(param1);
+            Renamed2647.Renamed2775 = TankUsersRegistry(param1);
          },function():TankUsersRegistry
          {
-            return §="G§.§9#A§;
+            return Renamed2647.Renamed2775;
          });
          osgi.injectService(BattleUserInfoService,function(param1:Object):void
          {
-            §="G§.userInfoService = BattleUserInfoService(param1);
+            Renamed2647.userInfoService = BattleUserInfoService(param1);
          },function():BattleUserInfoService
          {
-            return §="G§.userInfoService;
+            return Renamed2647.userInfoService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §0"_§.battleService = BattleService(param1);
+            Renamed1304.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §0"_§.battleService;
+            return Renamed1304.battleService;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §8#o§.display = IDisplay(param1);
+            Renamed40.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §8#o§.display;
+            return Renamed40.display;
          });
          osgi.injectService(ILobbyLayoutService,function(param1:Object):void
          {
-            §8#o§.lobbyLayoutService = ILobbyLayoutService(param1);
+            Renamed40.lobbyLayoutService = ILobbyLayoutService(param1);
          },function():ILobbyLayoutService
          {
-            return §8#o§.lobbyLayoutService;
+            return Renamed40.lobbyLayoutService;
          });
          osgi.injectService(IServerHaltService,function(param1:Object):void
          {
-            §8#o§.§^!w§ = IServerHaltService(param1);
+            Renamed40.Renamed4481 = IServerHaltService(param1);
          },function():IServerHaltService
          {
-            return §8#o§.§^!w§;
+            return Renamed40.Renamed4481;
          });
          osgi.injectService(IUserPropertiesService,function(param1:Object):void
          {
-            §8#o§.userPropertiesService = IUserPropertiesService(param1);
+            Renamed40.userPropertiesService = IUserPropertiesService(param1);
          },function():IUserPropertiesService
          {
-            return §8#o§.userPropertiesService;
+            return Renamed40.userPropertiesService;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §8#o§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed40.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §8#o§.battleEventDispatcher;
+            return Renamed40.battleEventDispatcher;
          });
          osgi.injectService(BattleGUIService,function(param1:Object):void
          {
-            §8#o§.§finally set§ = BattleGUIService(param1);
+            Renamed40.Renamed4729 = BattleGUIService(param1);
          },function():BattleGUIService
          {
-            return §8#o§.§finally set§;
+            return Renamed40.Renamed4729;
          });
          osgi.injectService(BattleInputService,function(param1:Object):void
          {
-            §8#o§.§^"<§ = BattleInputService(param1);
+            Renamed40.Renamed718 = BattleInputService(param1);
          },function():BattleInputService
          {
-            return §8#o§.§^"<§;
+            return Renamed40.Renamed718;
          });
          osgi.injectService(INotificationService,function(param1:Object):void
          {
-            §8#o§.notificationService = INotificationService(param1);
+            Renamed40.notificationService = INotificationService(param1);
          },function():INotificationService
          {
-            return §8#o§.notificationService;
+            return Renamed40.notificationService;
          });
          osgi.injectService(IBattleInfoService,function(param1:Object):void
          {
-            §8#o§.battleInfoService = IBattleInfoService(param1);
+            Renamed40.battleInfoService = IBattleInfoService(param1);
          },function():IBattleInfoService
          {
-            return §8#o§.battleInfoService;
+            return Renamed40.battleInfoService;
          });
          osgi.injectService(PremiumService,function(param1:Object):void
          {
-            §8#o§.premiumService = PremiumService(param1);
+            Renamed40.premiumService = PremiumService(param1);
          },function():PremiumService
          {
-            return §8#o§.premiumService;
+            return Renamed40.premiumService;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §1!5§.localeService = ILocaleService(param1);
+            Renamed4718.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §1!5§.localeService;
+            return Renamed4718.localeService;
          });
          osgi.injectService(TargetingInputManager,function(param1:Object):void
          {
-            §continue for const§.§9!U§ = TargetingInputManager(param1);
+            Renamed531.Renamed1499 = TargetingInputManager(param1);
          },function():TargetingInputManager
          {
-            return §continue for const§.§9!U§;
+            return Renamed531.Renamed1499;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §continue for const§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed531.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §continue for const§.battleEventDispatcher;
+            return Renamed531.battleEventDispatcher;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §continue for const§.display = IDisplay(param1);
+            Renamed531.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §continue for const§.display;
+            return Renamed531.display;
          });
          osgi.injectService(FullscreenStateService,function(param1:Object):void
          {
-            §continue for const§.§5b§ = FullscreenStateService(param1);
+            Renamed531.Renamed3870 = FullscreenStateService(param1);
          },function():FullscreenStateService
          {
-            return §continue for const§.§5b§;
+            return Renamed531.Renamed3870;
          });
          osgi.injectService(FullscreenService,function(param1:Object):void
          {
-            §continue for const§.§in package continue§ = FullscreenService(param1);
+            Renamed531.Renamed3844 = FullscreenService(param1);
          },function():FullscreenService
          {
-            return §continue for const§.§in package continue§;
+            return Renamed531.Renamed3844;
          });
          osgi.injectService(ISettingsService,function(param1:Object):void
          {
-            §continue for const§.settingsService = ISettingsService(param1);
+            Renamed531.settingsService = ISettingsService(param1);
          },function():ISettingsService
          {
-            return §continue for const§.settingsService;
+            return Renamed531.settingsService;
          });
          osgi.injectService(KeysBindingService,function(param1:Object):void
          {
-            §continue for const§.§5!$§ = KeysBindingService(param1);
+            Renamed531.Renamed719 = KeysBindingService(param1);
          },function():KeysBindingService
          {
-            return §continue for const§.§5!$§;
+            return Renamed531.Renamed719;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §+"S§.display = IDisplay(param1);
+            Renamed530.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §+"S§.display;
+            return Renamed530.display;
          });
          osgi.injectService(ILobbyLayoutService,function(param1:Object):void
          {
-            §+"S§.§97§ = ILobbyLayoutService(param1);
+            Renamed530.Renamed3843 = ILobbyLayoutService(param1);
          },function():ILobbyLayoutService
          {
-            return §+"S§.§97§;
+            return Renamed530.Renamed3843;
          });
          osgi.injectService(BattleInputService,function(param1:Object):void
          {
-            §+"S§.§^"<§ = BattleInputService(param1);
+            Renamed530.Renamed718 = BattleInputService(param1);
          },function():BattleInputService
          {
-            return §+"S§.§^"<§;
+            return Renamed530.Renamed718;
          });
          osgi.injectService(FullscreenService,function(param1:Object):void
          {
-            §+"S§.§in package continue§ = FullscreenService(param1);
+            Renamed530.Renamed3844 = FullscreenService(param1);
          },function():FullscreenService
          {
-            return §+"S§.§in package continue§;
+            return Renamed530.Renamed3844;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §+"S§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed530.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §+"S§.battleEventDispatcher;
+            return Renamed530.battleEventDispatcher;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §>!^§.display = IDisplay(param1);
+            Renamed4719.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §>!^§.display;
+            return Renamed4719.display;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §>!^§.localeService = ILocaleService(param1);
+            Renamed4719.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §>!^§.localeService;
+            return Renamed4719.localeService;
          });
          osgi.injectService(TargetingInputManager,function(param1:Object):void
          {
-            §>!^§.§9!U§ = TargetingInputManager(param1);
+            Renamed4719.Renamed1499 = TargetingInputManager(param1);
          },function():TargetingInputManager
          {
-            return §>!^§.§9!U§;
+            return Renamed4719.Renamed1499;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §do catch return§.display = IDisplay(param1);
+            Renamed4709.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §do catch return§.display;
+            return Renamed4709.display;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §final set native§.display = IDisplay(param1);
+            Renamed98.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §final set native§.display;
+            return Renamed98.display;
          });
          osgi.injectService(ILobbyLayoutService,function(param1:Object):void
          {
-            §final set native§.lobbyLayoutService = ILobbyLayoutService(param1);
+            Renamed98.lobbyLayoutService = ILobbyLayoutService(param1);
          },function():ILobbyLayoutService
          {
-            return §final set native§.lobbyLayoutService;
+            return Renamed98.lobbyLayoutService;
          });
          osgi.injectService(IServerHaltService,function(param1:Object):void
          {
-            §final set native§.§^!w§ = IServerHaltService(param1);
+            Renamed98.Renamed4481 = IServerHaltService(param1);
          },function():IServerHaltService
          {
-            return §final set native§.§^!w§;
+            return Renamed98.Renamed4481;
          });
          osgi.injectService(IUserPropertiesService,function(param1:Object):void
          {
-            §final set native§.userPropertiesService = IUserPropertiesService(param1);
+            Renamed98.userPropertiesService = IUserPropertiesService(param1);
          },function():IUserPropertiesService
          {
-            return §final set native§.userPropertiesService;
+            return Renamed98.userPropertiesService;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §final set native§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed98.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §final set native§.battleEventDispatcher;
+            return Renamed98.battleEventDispatcher;
          });
          osgi.injectService(BattleGUIService,function(param1:Object):void
          {
-            §final set native§.§finally set§ = BattleGUIService(param1);
+            Renamed98.Renamed4729 = BattleGUIService(param1);
          },function():BattleGUIService
          {
-            return §final set native§.§finally set§;
+            return Renamed98.Renamed4729;
          });
          osgi.injectService(BattleInputService,function(param1:Object):void
          {
-            §final set native§.§^"<§ = BattleInputService(param1);
+            Renamed98.Renamed718 = BattleInputService(param1);
          },function():BattleInputService
          {
-            return §final set native§.§^"<§;
+            return Renamed98.Renamed718;
          });
          osgi.injectService(INotificationService,function(param1:Object):void
          {
-            §final set native§.notificationService = INotificationService(param1);
+            Renamed98.notificationService = INotificationService(param1);
          },function():INotificationService
          {
-            return §final set native§.notificationService;
+            return Renamed98.notificationService;
          });
          osgi.injectService(IBattleInfoService,function(param1:Object):void
          {
-            §final set native§.battleInfoService = IBattleInfoService(param1);
+            Renamed98.battleInfoService = IBattleInfoService(param1);
          },function():IBattleInfoService
          {
-            return §final set native§.battleInfoService;
+            return Renamed98.battleInfoService;
          });
          osgi.injectService(PremiumService,function(param1:Object):void
          {
-            §final set native§.premiumService = PremiumService(param1);
+            Renamed98.premiumService = PremiumService(param1);
          },function():PremiumService
          {
-            return §final set native§.premiumService;
+            return Renamed98.premiumService;
          });
          osgi.injectService(ISettingsService,function(param1:Object):void
          {
-            §+y§.settingsService = ISettingsService(param1);
+            Renamed4648.settingsService = ISettingsService(param1);
          },function():ISettingsService
          {
-            return §+y§.settingsService;
+            return Renamed4648.settingsService;
          });
          osgi.injectService(BattleGUIService,function(param1:Object):void
          {
-            §+y§.§]!W§ = BattleGUIService(param1);
+            Renamed4648.Renamed2423 = BattleGUIService(param1);
          },function():BattleGUIService
          {
-            return §+y§.§]!W§;
+            return Renamed4648.Renamed2423;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §2c§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed2748.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §2c§.battleEventDispatcher;
+            return Renamed2748.battleEventDispatcher;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §2c§.battleService = BattleService(param1);
+            Renamed2748.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §2c§.battleService;
+            return Renamed2748.battleService;
          });
          osgi.injectService(BattleInputService,function(param1:Object):void
          {
-            §2c§.§const catch get§ = BattleInputService(param1);
+            Renamed2748.Renamed2384 = BattleInputService(param1);
          },function():BattleInputService
          {
-            return §2c§.§const catch get§;
+            return Renamed2748.Renamed2384;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §2c§.display = IDisplay(param1);
+            Renamed2748.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §2c§.display;
+            return Renamed2748.display;
          });
          osgi.injectService(KeysBindingService,function(param1:Object):void
          {
-            §2c§.§5!$§ = KeysBindingService(param1);
+            Renamed2748.Renamed719 = KeysBindingService(param1);
          },function():KeysBindingService
          {
-            return §2c§.§5!$§;
+            return Renamed2748.Renamed719;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §package const continue§.battleService = BattleService(param1);
+            Renamed1458.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §package const continue§.battleService;
+            return Renamed1458.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §case each§.§include for with§ = BattleService(param1);
+            Renamed524.Renamed3809 = BattleService(param1);
          },function():BattleService
          {
-            return §case each§.§include for with§;
+            return Renamed524.Renamed3809;
          });
          osgi.injectService(ILoaderWindowService,function(param1:Object):void
          {
-            §case each§.loaderWindowService = ILoaderWindowService(param1);
+            Renamed524.loaderWindowService = ILoaderWindowService(param1);
          },function():ILoaderWindowService
          {
-            return §case each§.loaderWindowService;
+            return Renamed524.loaderWindowService;
          });
          osgi.injectService(ILobbyLayoutService,function(param1:Object):void
          {
-            §case each§.lobbyLayoutService = ILobbyLayoutService(param1);
+            Renamed524.lobbyLayoutService = ILobbyLayoutService(param1);
          },function():ILobbyLayoutService
          {
-            return §case each§.lobbyLayoutService;
+            return Renamed524.lobbyLayoutService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §else package false§.battleService = BattleService(param1);
+            Renamed832.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §else package false§.battleService;
+            return Renamed832.battleService;
          });
          osgi.injectService(IStorageService,function(param1:Object):void
          {
-            §0_§.storageService = IStorageService(param1);
+            Renamed623.storageService = IStorageService(param1);
          },function():IStorageService
          {
-            return §0_§.storageService;
+            return Renamed623.storageService;
          });
          osgi.injectService(BattleInputService,function(param1:Object):void
          {
-            §0_§.§^"<§ = BattleInputService(param1);
+            Renamed623.Renamed718 = BattleInputService(param1);
          },function():BattleInputService
          {
-            return §0_§.§^"<§;
+            return Renamed623.Renamed718;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §0_§.display = IDisplay(param1);
+            Renamed623.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §0_§.display;
+            return Renamed623.display;
          });
          osgi.injectService(KeysBindingService,function(param1:Object):void
          {
-            §0_§.§5!$§ = KeysBindingService(param1);
+            Renamed623.Renamed719 = KeysBindingService(param1);
          },function():KeysBindingService
          {
-            return §0_§.§5!$§;
+            return Renamed623.Renamed719;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §0_§.battleService = BattleService(param1);
+            Renamed623.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §0_§.battleService;
+            return Renamed623.battleService;
          });
          osgi.injectService(IBackgroundService,function(param1:Object):void
          {
-            §0_§.§?"F§ = IBackgroundService(param1);
+            Renamed623.Renamed720 = IBackgroundService(param1);
          },function():IBackgroundService
          {
-            return §0_§.§?"F§;
+            return Renamed623.Renamed720;
          });
          osgi.injectService(LogService,function(param1:Object):void
          {
-            §static throw§.logService = LogService(param1);
+            Renamed2417.logService = LogService(param1);
          },function():LogService
          {
-            return §static throw§.logService;
+            return Renamed2417.logService;
          });
          osgi.injectService(IStorageService,function(param1:Object):void
          {
-            §static throw§.storageService = IStorageService(param1);
+            Renamed2417.storageService = IStorageService(param1);
          },function():IStorageService
          {
-            return §static throw§.storageService;
+            return Renamed2417.storageService;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §static throw§.display = IDisplay(param1);
+            Renamed2417.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §static throw§.display;
+            return Renamed2417.display;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §static throw§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed2417.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §static throw§.battleEventDispatcher;
+            return Renamed2417.battleEventDispatcher;
          });
          osgi.injectService(DataValidator,function(param1:Object):void
          {
-            §static throw§.§'!1§ = DataValidator(param1);
+            Renamed2417.Renamed2419 = DataValidator(param1);
          },function():DataValidator
          {
-            return §static throw§.§'!1§;
+            return Renamed2417.Renamed2419;
          });
          osgi.injectService(ISettingsService,function(param1:Object):void
          {
-            §static throw§.settings = ISettingsService(param1);
+            Renamed2417.settings = ISettingsService(param1);
          },function():ISettingsService
          {
-            return §static throw§.settings;
+            return Renamed2417.settings;
          });
          osgi.injectService(IBackgroundService,function(param1:Object):void
          {
-            §static throw§.§?"F§ = IBackgroundService(param1);
+            Renamed2417.Renamed720 = IBackgroundService(param1);
          },function():IBackgroundService
          {
-            return §static throw§.§?"F§;
+            return Renamed2417.Renamed720;
          });
          osgi.injectService(MipMappingService,function(param1:Object):void
          {
-            §static throw§.§0"0§ = MipMappingService(param1);
+            Renamed2417.Renamed2420 = MipMappingService(param1);
          },function():MipMappingService
          {
-            return §static throw§.§0"0§;
+            return Renamed2417.Renamed2420;
          });
          osgi.injectService(TextureMaterialRegistry,function(param1:Object):void
          {
-            §static throw§.§@#R§ = TextureMaterialRegistry(param1);
+            Renamed2417.Renamed1368 = TextureMaterialRegistry(param1);
          },function():TextureMaterialRegistry
          {
-            return §static throw§.§@#R§;
+            return Renamed2417.Renamed1368;
          });
          osgi.injectService(ColorTransformService,function(param1:Object):void
          {
-            §static throw§.§class package if§ = ColorTransformService(param1);
+            Renamed2417.Renamed2421 = ColorTransformService(param1);
          },function():ColorTransformService
          {
-            return §static throw§.§class package if§;
+            return Renamed2417.Renamed2421;
          });
          osgi.injectService(IBattleInfoService,function(param1:Object):void
          {
-            §static throw§.battleInfoService = IBattleInfoService(param1);
+            Renamed2417.battleInfoService = IBattleInfoService(param1);
          },function():IBattleInfoService
          {
-            return §static throw§.battleInfoService;
+            return Renamed2417.battleInfoService;
          });
          osgi.injectService(BattleReadinessService,function(param1:Object):void
          {
-            §static throw§.§static package set§ = BattleReadinessService(param1);
+            Renamed2417.Renamed2422 = BattleReadinessService(param1);
          },function():BattleReadinessService
          {
-            return §static throw§.§static package set§;
+            return Renamed2417.Renamed2422;
          });
          osgi.injectService(BattleInputService,function(param1:Object):void
          {
-            §static throw§.§^"<§ = BattleInputService(param1);
+            Renamed2417.Renamed718 = BattleInputService(param1);
          },function():BattleInputService
          {
-            return §static throw§.§^"<§;
+            return Renamed2417.Renamed718;
          });
          osgi.injectService(BattleGUIService,function(param1:Object):void
          {
-            §static throw§.§]!W§ = BattleGUIService(param1);
+            Renamed2417.Renamed2423 = BattleGUIService(param1);
          },function():BattleGUIService
          {
-            return §static throw§.§]!W§;
+            return Renamed2417.Renamed2423;
          });
          osgi.injectService(ILobbyLayoutService,function(param1:Object):void
          {
-            §static throw§.lobbyLayoutService = ILobbyLayoutService(param1);
+            Renamed2417.lobbyLayoutService = ILobbyLayoutService(param1);
          },function():ILobbyLayoutService
          {
-            return §static throw§.lobbyLayoutService;
+            return Renamed2417.lobbyLayoutService;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §static throw§.localeService = ILocaleService(param1);
+            Renamed2417.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §static throw§.localeService;
+            return Renamed2417.localeService;
          });
          osgi.injectService(ILightingEffectsService,function(param1:Object):void
          {
-            §static throw§.§4!I§ = ILightingEffectsService(param1);
+            Renamed2417.Renamed2424 = ILightingEffectsService(param1);
          },function():ILightingEffectsService
          {
-            return §static throw§.§4!I§;
+            return Renamed2417.Renamed2424;
          });
          osgi.injectService(TargetingInputManager,function(param1:Object):void
          {
-            §static throw§.§else for if§ = TargetingInputManager(param1);
+            Renamed2417.Renamed2425 = TargetingInputManager(param1);
          },function():TargetingInputManager
          {
-            return §static throw§.§else for if§;
+            return Renamed2417.Renamed2425;
          });
          osgi.injectService(TargetingModeService,function(param1:Object):void
          {
-            §static throw§.§default package import§ = TargetingModeService(param1);
+            Renamed2417.Renamed926 = TargetingModeService(param1);
          },function():TargetingModeService
          {
-            return §static throw§.§default package import§;
+            return Renamed2417.Renamed926;
          });
          osgi.injectService(INotificationService,function(param1:Object):void
          {
-            §static throw§.notificationService = INotificationService(param1);
+            Renamed2417.notificationService = INotificationService(param1);
          },function():INotificationService
          {
-            return §static throw§.notificationService;
+            return Renamed2417.notificationService;
          });
          osgi.injectService(KeysBindingService,function(param1:Object):void
          {
-            §static throw§.§5!$§ = KeysBindingService(param1);
+            Renamed2417.Renamed719 = KeysBindingService(param1);
          },function():KeysBindingService
          {
-            return §static throw§.§5!$§;
+            return Renamed2417.Renamed719;
          });
          osgi.injectService(ResourceRegistry,function(param1:Object):void
          {
-            §static throw§.resourceRegistry = ResourceRegistry(param1);
+            Renamed2417.resourceRegistry = ResourceRegistry(param1);
          },function():ResourceRegistry
          {
-            return §static throw§.resourceRegistry;
+            return Renamed2417.resourceRegistry;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §switch package final§.localeService = ILocaleService(param1);
+            Renamed4608.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §switch package final§.localeService;
+            return Renamed4608.localeService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §0"c§.battleService = BattleService(param1);
+            Renamed4644.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §0"c§.battleService;
+            return Renamed4644.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
@@ -1452,17 +1452,17 @@ package projects.tanks.clients.fp10.models.battlefieldmodelflash
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §static implements§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed2865.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §static implements§.battleEventDispatcher;
+            return Renamed2865.battleEventDispatcher;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §static implements§.battleService = BattleService(param1);
+            Renamed2865.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §static implements§.battleService;
+            return Renamed2865.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
@@ -1487,437 +1487,437 @@ package projects.tanks.clients.fp10.models.battlefieldmodelflash
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §extends set package§.battleService = BattleService(param1);
+            Renamed4609.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §extends set package§.battleService;
+            return Renamed4609.battleService;
          });
          osgi.injectService(ILightingEffectsService,function(param1:Object):void
          {
-            BattleBonus.§super package implements§ = ILightingEffectsService(param1);
+            BattleBonus.Renamed1445 = ILightingEffectsService(param1);
          },function():ILightingEffectsService
          {
-            return BattleBonus.§super package implements§;
+            return BattleBonus.Renamed1445;
          });
          osgi.injectService(ILightingEffectsService,function(param1:Object):void
          {
-            BonusMesh.§super package implements§ = ILightingEffectsService(param1);
+            BonusMesh.Renamed1445 = ILightingEffectsService(param1);
          },function():ILightingEffectsService
          {
-            return BonusMesh.§super package implements§;
+            return BonusMesh.Renamed1445;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §%#E§.battleService = BattleService(param1);
+            Renamed3512.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §%#E§.battleService;
+            return Renamed3512.battleService;
          });
          osgi.injectService(PingService,function(param1:Object):void
          {
-            §^;§.§implements package switch§ = PingService(param1);
+            Renamed4632.Renamed4731 = PingService(param1);
          },function():PingService
          {
-            return §^;§.§implements package switch§;
+            return Renamed4632.Renamed4731;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §!#B§.battleService = BattleService(param1);
+            Renamed4694.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §!#B§.battleService;
+            return Renamed4694.battleService;
          });
          osgi.injectService(ISettingsService,function(param1:Object):void
          {
-            §var set package§.settings = ISettingsService(param1);
+            Renamed1498.settings = ISettingsService(param1);
          },function():ISettingsService
          {
-            return §var set package§.settings;
+            return Renamed1498.settings;
          });
          osgi.injectService(IStorageService,function(param1:Object):void
          {
-            §var set package§.storageService = IStorageService(param1);
+            Renamed1498.storageService = IStorageService(param1);
          },function():IStorageService
          {
-            return §var set package§.storageService;
+            return Renamed1498.storageService;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §var set package§.display = IDisplay(param1);
+            Renamed1498.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §var set package§.display;
+            return Renamed1498.display;
          });
          osgi.injectService(TargetingInputManager,function(param1:Object):void
          {
-            §var set package§.§9!U§ = TargetingInputManager(param1);
+            Renamed1498.Renamed1499 = TargetingInputManager(param1);
          },function():TargetingInputManager
          {
-            return §var set package§.§9!U§;
+            return Renamed1498.Renamed1499;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §var set package§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed1498.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §var set package§.battleEventDispatcher;
+            return Renamed1498.battleEventDispatcher;
          });
          osgi.injectService(KeysBindingService,function(param1:Object):void
          {
-            §var set package§.§5!$§ = KeysBindingService(param1);
+            Renamed1498.Renamed719 = KeysBindingService(param1);
          },function():KeysBindingService
          {
-            return §var set package§.§5!$§;
+            return Renamed1498.Renamed719;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §'"]§.battleService = BattleService(param1);
+            Renamed4705.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §'"]§.battleService;
+            return Renamed4705.battleService;
          });
          osgi.injectService(TargetingModeService,function(param1:Object):void
          {
-            §0"v§.§default package import§ = TargetingModeService(param1);
+            Renamed4545.Renamed926 = TargetingModeService(param1);
          },function():TargetingModeService
          {
-            return §0"v§.§default package import§;
+            return Renamed4545.Renamed926;
          });
          osgi.injectService(TargetingInputManager,function(param1:Object):void
          {
-            §0"v§.§9!U§ = TargetingInputManager(param1);
+            Renamed4545.Renamed1499 = TargetingInputManager(param1);
          },function():TargetingInputManager
          {
-            return §0"v§.§9!U§;
+            return Renamed4545.Renamed1499;
          });
          osgi.injectService(KeysBindingService,function(param1:Object):void
          {
-            §0"v§.§5!$§ = KeysBindingService(param1);
+            Renamed4545.Renamed719 = KeysBindingService(param1);
          },function():KeysBindingService
          {
-            return §0"v§.§5!$§;
+            return Renamed4545.Renamed719;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §'#h§.battleService = BattleService(param1);
+            Renamed4603.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §'#h§.battleService;
+            return Renamed4603.battleService;
          });
          osgi.injectService(IUserInfoService,function(param1:Object):void
          {
-            §'#h§.userInfoService = IUserInfoService(param1);
+            Renamed4603.userInfoService = IUserInfoService(param1);
          },function():IUserInfoService
          {
-            return §'#h§.userInfoService;
+            return Renamed4603.userInfoService;
          });
          osgi.injectService(TextureMaterialRegistry,function(param1:Object):void
          {
-            §'#h§.§@#R§ = TextureMaterialRegistry(param1);
+            Renamed4603.Renamed1368 = TextureMaterialRegistry(param1);
          },function():TextureMaterialRegistry
          {
-            return §'#h§.§@#R§;
+            return Renamed4603.Renamed1368;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §&!r§.display = IDisplay(param1);
+            Renamed2753.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §&!r§.display;
+            return Renamed2753.display;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §&!r§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed2753.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §&!r§.battleEventDispatcher;
+            return Renamed2753.battleEventDispatcher;
          });
          osgi.injectService(KeysBindingService,function(param1:Object):void
          {
-            §&!r§.§#!'§ = KeysBindingService(param1);
+            Renamed2753.Renamed4732 = KeysBindingService(param1);
          },function():KeysBindingService
          {
-            return §&!r§.§#!'§;
+            return Renamed2753.Renamed4732;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §switch var implements§.display = IDisplay(param1);
+            Renamed914.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §switch var implements§.display;
+            return Renamed914.display;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §switch var implements§.battleService = BattleService(param1);
+            Renamed914.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §switch var implements§.battleService;
+            return Renamed914.battleService;
          });
          osgi.injectService(BattleInputService,function(param1:Object):void
          {
-            §switch var implements§.§const catch get§ = BattleInputService(param1);
+            Renamed914.Renamed2384 = BattleInputService(param1);
          },function():BattleInputService
          {
-            return §switch var implements§.§const catch get§;
+            return Renamed914.Renamed2384;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §switch var implements§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed914.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §switch var implements§.battleEventDispatcher;
+            return Renamed914.battleEventDispatcher;
          });
          osgi.injectService(TargetingModeService,function(param1:Object):void
          {
-            §switch var implements§.§<"J§ = TargetingModeService(param1);
+            Renamed914.Renamed4733 = TargetingModeService(param1);
          },function():TargetingModeService
          {
-            return §switch var implements§.§<"J§;
+            return Renamed914.Renamed4733;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §switch var implements§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed914.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §switch var implements§.battleEventDispatcher;
+            return Renamed914.battleEventDispatcher;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §@"e§.battleService = BattleService(param1);
+            Renamed2943.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §@"e§.battleService;
+            return Renamed2943.battleService;
          });
          osgi.injectService(TargetingInputManager,function(param1:Object):void
          {
-            § #"§.§6">§ = TargetingInputManager(param1);
+            Renamed4544.Renamed4734 = TargetingInputManager(param1);
          },function():TargetingInputManager
          {
-            return § #"§.§6">§;
+            return Renamed4544.Renamed4734;
          });
          osgi.injectService(ISettingsService,function(param1:Object):void
          {
-            § #"§.settingsService = ISettingsService(param1);
+            Renamed4544.settingsService = ISettingsService(param1);
          },function():ISettingsService
          {
-            return § #"§.settingsService;
+            return Renamed4544.settingsService;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            § #"§.display = IDisplay(param1);
+            Renamed4544.display = IDisplay(param1);
          },function():IDisplay
          {
-            return § #"§.display;
+            return Renamed4544.display;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §[!y§.battleService = BattleService(param1);
+            Renamed3511.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §[!y§.battleService;
+            return Renamed3511.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §finally const§.battleService = BattleService(param1);
+            Renamed20.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §finally const§.battleService;
+            return Renamed20.battleService;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §finally const§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed20.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §finally const§.battleEventDispatcher;
+            return Renamed20.battleEventDispatcher;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §8Z§.battleService = BattleService(param1);
+            Renamed4685.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §8Z§.battleService;
+            return Renamed4685.battleService;
          });
          osgi.injectService(EffectsMaterialRegistry,function(param1:Object):void
          {
-            §set if§.§@#R§ = EffectsMaterialRegistry(param1);
+            Renamed4571.Renamed1368 = EffectsMaterialRegistry(param1);
          },function():EffectsMaterialRegistry
          {
-            return §set if§.§@#R§;
+            return Renamed4571.Renamed1368;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §set if§.battleService = BattleService(param1);
+            Renamed4571.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §set if§.battleService;
+            return Renamed4571.battleService;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §[#D§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed4549.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §[#D§.battleEventDispatcher;
+            return Renamed4549.battleEventDispatcher;
          });
          osgi.injectService(ModelRegistry,function(param1:Object):void
          {
-            §[#D§.modelRegistry = ModelRegistry(param1);
+            Renamed4549.modelRegistry = ModelRegistry(param1);
          },function():ModelRegistry
          {
-            return §[#D§.modelRegistry;
+            return Renamed4549.modelRegistry;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §super const while§.battleService = BattleService(param1);
+            Renamed4547.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §super const while§.battleService;
+            return Renamed4547.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §3# §.battleService = BattleService(param1);
+            Renamed3295.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §3# §.battleService;
+            return Renamed3295.battleService;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §3# §.§break package with§ = IDisplay(param1);
+            Renamed3295.Renamed3672 = IDisplay(param1);
          },function():IDisplay
          {
-            return §3# §.§break package with§;
+            return Renamed3295.Renamed3672;
          });
          osgi.injectService(ISettingsService,function(param1:Object):void
          {
-            §3# §.settings = ISettingsService(param1);
+            Renamed3295.settings = ISettingsService(param1);
          },function():ISettingsService
          {
-            return §3# §.settings;
+            return Renamed3295.settings;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §native package get§.battleService = BattleService(param1);
+            Renamed4546.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §native package get§.battleService;
+            return Renamed4546.battleService;
          });
          osgi.injectService(TargetingInputManager,function(param1:Object):void
          {
-            §native package get§.§9!U§ = TargetingInputManager(param1);
+            Renamed4546.Renamed1499 = TargetingInputManager(param1);
          },function():TargetingInputManager
          {
-            return §native package get§.§9!U§;
+            return Renamed4546.Renamed1499;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §9"0§.battleService = BattleService(param1);
+            Renamed4633.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §9"0§.battleService;
+            return Renamed4633.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §8!3§.battleService = BattleService(param1);
+            Renamed4596.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §8!3§.battleService;
+            return Renamed4596.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §'o§.battleService = BattleService(param1);
+            Renamed3507.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §'o§.battleService;
+            return Renamed3507.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §1"c§.battleService = BattleService(param1);
+            Renamed4592.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §1"c§.battleService;
+            return Renamed4592.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §>4§.battleService = BattleService(param1);
+            Renamed4679.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §>4§.battleService;
+            return Renamed4679.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §do set case§.battleService = BattleService(param1);
+            Renamed1441.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §do set case§.battleService;
+            return Renamed1441.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §in catch switch§.battleService = BattleService(param1);
+            Renamed2813.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §in catch switch§.battleService;
+            return Renamed2813.battleService;
          });
          osgi.injectService(BattleReadinessService,function(param1:Object):void
          {
-            §in catch switch§.§static package set§ = BattleReadinessService(param1);
+            Renamed2813.Renamed2422 = BattleReadinessService(param1);
          },function():BattleReadinessService
          {
-            return §in catch switch§.§static package set§;
+            return Renamed2813.Renamed2422;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §catch catch return§.display = IDisplay(param1);
+            Renamed4628.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §catch catch return§.display;
+            return Renamed4628.display;
          });
          osgi.injectService(BattleGUIService,function(param1:Object):void
          {
-            §catch catch return§.§finally set§ = BattleGUIService(param1);
+            Renamed4628.Renamed4729 = BattleGUIService(param1);
          },function():BattleGUIService
          {
-            return §catch catch return§.§finally set§;
+            return Renamed4628.Renamed4729;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §catch catch return§.localeService = ILocaleService(param1);
+            Renamed4628.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §catch catch return§.localeService;
+            return Renamed4628.localeService;
          });
          osgi.injectService(EffectsMaterialRegistry,function(param1:Object):void
          {
-            §true override§.§@#R§ = EffectsMaterialRegistry(param1);
+            Renamed4676.Renamed1368 = EffectsMaterialRegistry(param1);
          },function():EffectsMaterialRegistry
          {
-            return §true override§.§@#R§;
+            return Renamed4676.Renamed1368;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §true override§.battleService = BattleService(param1);
+            Renamed4676.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §true override§.battleService;
+            return Renamed4676.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §implements include§.battleService = BattleService(param1);
+            Renamed4551.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §implements include§.battleService;
+            return Renamed4551.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §continue package dynamic§.battleService = BattleService(param1);
+            Renamed1656.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §continue package dynamic§.battleService;
+            return Renamed1656.battleService;
          });
          osgi.injectService(TargetingInputManager,function(param1:Object):void
          {
-            §try set for§.§9!U§ = TargetingInputManager(param1);
+            Renamed915.Renamed1499 = TargetingInputManager(param1);
          },function():TargetingInputManager
          {
-            return §try set for§.§9!U§;
+            return Renamed915.Renamed1499;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
@@ -1935,794 +1935,794 @@ package projects.tanks.clients.fp10.models.battlefieldmodelflash
          });
          osgi.injectService(BattleGUIService,function(param1:Object):void
          {
-            ChatModel.§]!W§ = BattleGUIService(param1);
+            ChatModel.Renamed2423 = BattleGUIService(param1);
          },function():BattleGUIService
          {
-            return ChatModel.§]!W§;
+            return ChatModel.Renamed2423;
          });
          osgi.injectService(BattleInputService,function(param1:Object):void
          {
-            §=+§.§const catch get§ = BattleInputService(param1);
+            Renamed2571.Renamed2384 = BattleInputService(param1);
          },function():BattleInputService
          {
-            return §=+§.§const catch get§;
+            return Renamed2571.Renamed2384;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §;"Z§.battleService = BattleService(param1);
+            Renamed4598.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §;"Z§.battleService;
+            return Renamed4598.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §+$%§.battleService = BattleService(param1);
+            Renamed668.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §+$%§.battleService;
+            return Renamed668.battleService;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §6#L§.display = IDisplay(param1);
+            Renamed3150.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §6#L§.display;
+            return Renamed3150.display;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §6#L§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed3150.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §6#L§.battleEventDispatcher;
+            return Renamed3150.battleEventDispatcher;
          });
          osgi.injectService(TargetingInputManager,function(param1:Object):void
          {
-            §6#L§.§9!U§ = TargetingInputManager(param1);
+            Renamed3150.Renamed1499 = TargetingInputManager(param1);
          },function():TargetingInputManager
          {
-            return §6#L§.§9!U§;
+            return Renamed3150.Renamed1499;
          });
          osgi.injectService(TargetingModeService,function(param1:Object):void
          {
-            §6#L§.§default package import§ = TargetingModeService(param1);
+            Renamed3150.Renamed926 = TargetingModeService(param1);
          },function():TargetingModeService
          {
-            return §6#L§.§default package import§;
+            return Renamed3150.Renamed926;
          });
          osgi.injectService(ISettingsService,function(param1:Object):void
          {
-            §6#L§.settingsService = ISettingsService(param1);
+            Renamed3150.settingsService = ISettingsService(param1);
          },function():ISettingsService
          {
-            return §6#L§.settingsService;
+            return Renamed3150.settingsService;
          });
          osgi.injectService(KeysBindingService,function(param1:Object):void
          {
-            §6#L§.§5!$§ = KeysBindingService(param1);
+            Renamed3150.Renamed719 = KeysBindingService(param1);
          },function():KeysBindingService
          {
-            return §6#L§.§5!$§;
+            return Renamed3150.Renamed719;
          });
          osgi.injectService(TargetingModeService,function(param1:Object):void
          {
-            §false set throw§.§default package import§ = TargetingModeService(param1);
+            Renamed3293.Renamed926 = TargetingModeService(param1);
          },function():TargetingModeService
          {
-            return §false set throw§.§default package import§;
+            return Renamed3293.Renamed926;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §false set throw§.display = IDisplay(param1);
+            Renamed3293.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §false set throw§.display;
+            return Renamed3293.display;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §false package finally§.display = IDisplay(param1);
+            Renamed3292.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §false package finally§.display;
+            return Renamed3292.display;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §each set each§.display = IDisplay(param1);
+            Renamed4565.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §each set each§.display;
+            return Renamed4565.display;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §each set each§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed4565.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §each set each§.battleEventDispatcher;
+            return Renamed4565.battleEventDispatcher;
          });
          osgi.injectService(BattleInputService,function(param1:Object):void
          {
-            §each set each§.§^"<§ = BattleInputService(param1);
+            Renamed4565.Renamed718 = BattleInputService(param1);
          },function():BattleInputService
          {
-            return §each set each§.§^"<§;
+            return Renamed4565.Renamed718;
          });
          osgi.injectService(ILobbyLayoutService,function(param1:Object):void
          {
-            §each set each§.lobbyLayoutService = ILobbyLayoutService(param1);
+            Renamed4565.lobbyLayoutService = ILobbyLayoutService(param1);
          },function():ILobbyLayoutService
          {
-            return §each set each§.lobbyLayoutService;
+            return Renamed4565.lobbyLayoutService;
          });
          osgi.injectService(IDialogWindowsDispatcherService,function(param1:Object):void
          {
-            §each set each§.dialogWindowsDispatcherService = IDialogWindowsDispatcherService(param1);
+            Renamed4565.dialogWindowsDispatcherService = IDialogWindowsDispatcherService(param1);
          },function():IDialogWindowsDispatcherService
          {
-            return §each set each§.dialogWindowsDispatcherService;
+            return Renamed4565.dialogWindowsDispatcherService;
          });
          osgi.injectService(IDialogsService,function(param1:Object):void
          {
-            §each set each§.dialogsService = IDialogsService(param1);
+            Renamed4565.dialogsService = IDialogsService(param1);
          },function():IDialogsService
          {
-            return §each set each§.dialogsService;
+            return Renamed4565.dialogsService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §each set each§.battleService = BattleService(param1);
+            Renamed4565.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §each set each§.battleService;
+            return Renamed4565.battleService;
          });
          osgi.injectService(BattleGUIService,function(param1:Object):void
          {
-            §each set each§.§finally set§ = BattleGUIService(param1);
+            Renamed4565.Renamed4729 = BattleGUIService(param1);
          },function():BattleGUIService
          {
-            return §each set each§.§finally set§;
+            return Renamed4565.Renamed4729;
          });
          osgi.injectService(FullscreenStateService,function(param1:Object):void
          {
-            §each set each§.fullscreenStateService = FullscreenStateService(param1);
+            Renamed4565.fullscreenStateService = FullscreenStateService(param1);
          },function():FullscreenStateService
          {
-            return §each set each§.fullscreenStateService;
+            return Renamed4565.fullscreenStateService;
          });
          osgi.injectService(KeysBindingService,function(param1:Object):void
          {
-            §each set each§.§5!$§ = KeysBindingService(param1);
+            Renamed4565.Renamed719 = KeysBindingService(param1);
          },function():KeysBindingService
          {
-            return §each set each§.§5!$§;
+            return Renamed4565.Renamed719;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §continue var static§.battleService = BattleService(param1);
+            Renamed509.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §continue var static§.battleService;
+            return Renamed509.battleService;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §,#[§.display = IDisplay(param1);
+            Renamed4649.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §,#[§.display;
+            return Renamed4649.display;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §,#[§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed4649.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §,#[§.battleEventDispatcher;
+            return Renamed4649.battleEventDispatcher;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §,#[§.battleService = BattleService(param1);
+            Renamed4649.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §,#[§.battleService;
+            return Renamed4649.battleService;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §,#[§.localeService = ILocaleService(param1);
+            Renamed4649.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §,#[§.localeService;
+            return Renamed4649.localeService;
          });
          osgi.injectService(BattleGUIService,function(param1:Object):void
          {
-            §,#[§.§finally set§ = BattleGUIService(param1);
+            Renamed4649.Renamed4729 = BattleGUIService(param1);
          },function():BattleGUIService
          {
-            return §,#[§.§finally set§;
+            return Renamed4649.Renamed4729;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §get set const§.battleService = BattleService(param1);
+            Renamed4558.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §get set const§.battleService;
+            return Renamed4558.battleService;
          });
          osgi.injectService(IBattleInfoService,function(param1:Object):void
          {
-            §super var default§.battleInfoService = IBattleInfoService(param1);
+            Renamed18.battleInfoService = IBattleInfoService(param1);
          },function():IBattleInfoService
          {
-            return §super var default§.battleInfoService;
+            return Renamed18.battleInfoService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §super var default§.battleService = BattleService(param1);
+            Renamed18.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §super var default§.battleService;
+            return Renamed18.battleService;
          });
          osgi.injectService(TextureMaterialRegistry,function(param1:Object):void
          {
-            §super var default§.§@#R§ = TextureMaterialRegistry(param1);
+            Renamed18.Renamed1368 = TextureMaterialRegistry(param1);
          },function():TextureMaterialRegistry
          {
-            return §super var default§.§@#R§;
+            return Renamed18.Renamed1368;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §super var default§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed18.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §super var default§.battleEventDispatcher;
+            return Renamed18.battleEventDispatcher;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §super var default§.localeService = ILocaleService(param1);
+            Renamed18.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §super var default§.localeService;
+            return Renamed18.localeService;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §super var default§.display = IDisplay(param1);
+            Renamed18.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §super var default§.display;
+            return Renamed18.display;
          });
          osgi.injectService(BattleUserInfoService,function(param1:Object):void
          {
-            §super var default§.userInfoService = BattleUserInfoService(param1);
+            Renamed18.userInfoService = BattleUserInfoService(param1);
          },function():BattleUserInfoService
          {
-            return §super var default§.userInfoService;
+            return Renamed18.userInfoService;
          });
          osgi.injectService(BattleInputService,function(param1:Object):void
          {
-            §super var default§.§const catch get§ = BattleInputService(param1);
+            Renamed18.Renamed2384 = BattleInputService(param1);
          },function():BattleInputService
          {
-            return §super var default§.§const catch get§;
+            return Renamed18.Renamed2384;
          });
          osgi.injectService(KeysBindingService,function(param1:Object):void
          {
-            §super var default§.§5!$§ = KeysBindingService(param1);
+            Renamed18.Renamed719 = KeysBindingService(param1);
          },function():KeysBindingService
          {
-            return §super var default§.§5!$§;
+            return Renamed18.Renamed719;
          });
          osgi.injectService(ILightingEffectsService,function(param1:Object):void
          {
-            §2!$§.§get const true§ = ILightingEffectsService(param1);
+            Renamed4556.Renamed4730 = ILightingEffectsService(param1);
          },function():ILightingEffectsService
          {
-            return §2!$§.§get const true§;
+            return Renamed4556.Renamed4730;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §2!$§.battleService = BattleService(param1);
+            Renamed4556.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §2!$§.battleService;
+            return Renamed4556.battleService;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §2a§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed2787.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §2a§.battleEventDispatcher;
+            return Renamed2787.battleEventDispatcher;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §%#A§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed2747.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §%#A§.battleEventDispatcher;
+            return Renamed2747.battleEventDispatcher;
          });
          osgi.injectService(IBattleInfoService,function(param1:Object):void
          {
-            §super catch use§.battleInfoService = IBattleInfoService(param1);
+            Renamed4712.battleInfoService = IBattleInfoService(param1);
          },function():IBattleInfoService
          {
-            return §super catch use§.battleInfoService;
+            return Renamed4712.battleInfoService;
          });
          osgi.injectService(TextureMaterialRegistry,function(param1:Object):void
          {
-            §+"O§.§false for package§ = TextureMaterialRegistry(param1);
+            Renamed88.Renamed1233 = TextureMaterialRegistry(param1);
          },function():TextureMaterialRegistry
          {
-            return §+"O§.§false for package§;
+            return Renamed88.Renamed1233;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §+"O§.battleService = BattleService(param1);
+            Renamed88.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §+"O§.battleService;
+            return Renamed88.battleService;
          });
          osgi.injectService(IDumpService,function(param1:Object):void
          {
-            §+"O§.§"#-§ = IDumpService(param1);
+            Renamed88.Renamed4735 = IDumpService(param1);
          },function():IDumpService
          {
-            return §+"O§.§"#-§;
+            return Renamed88.Renamed4735;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §+"O§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed88.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §+"O§.battleEventDispatcher;
+            return Renamed88.battleEventDispatcher;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §return get§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed2771.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §return get§.battleEventDispatcher;
+            return Renamed2771.battleEventDispatcher;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §return get§.battleService = BattleService(param1);
+            Renamed2771.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §return get§.battleService;
+            return Renamed2771.battleService;
          });
          osgi.injectService(EffectsMaterialRegistry,function(param1:Object):void
          {
-            §override set function§.§@#R§ = EffectsMaterialRegistry(param1);
+            Renamed4593.Renamed1368 = EffectsMaterialRegistry(param1);
          },function():EffectsMaterialRegistry
          {
-            return §override set function§.§@#R§;
+            return Renamed4593.Renamed1368;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §override set function§.battleService = BattleService(param1);
+            Renamed4593.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §override set function§.battleService;
+            return Renamed4593.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §do override§.battleService = BattleService(param1);
+            Renamed47.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §do override§.battleService;
+            return Renamed47.battleService;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §do override§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed47.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §do override§.battleEventDispatcher;
+            return Renamed47.battleEventDispatcher;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §each var var§.battleService = BattleService(param1);
+            Renamed57.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §each var var§.battleService;
+            return Renamed57.battleService;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §each var var§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed57.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §each var var§.battleEventDispatcher;
+            return Renamed57.battleEventDispatcher;
          });
          osgi.injectService(TankUsersRegistry,function(param1:Object):void
          {
-            §each var var§.§9#A§ = TankUsersRegistry(param1);
+            Renamed57.Renamed2775 = TankUsersRegistry(param1);
          },function():TankUsersRegistry
          {
-            return §each var var§.§9#A§;
+            return Renamed57.Renamed2775;
          });
          osgi.injectService(EffectsMaterialRegistry,function(param1:Object):void
          {
-            §3!+§.§@#R§ = EffectsMaterialRegistry(param1);
+            Renamed4659.Renamed1368 = EffectsMaterialRegistry(param1);
          },function():EffectsMaterialRegistry
          {
-            return §3!+§.§@#R§;
+            return Renamed4659.Renamed1368;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §3!+§.battleService = BattleService(param1);
+            Renamed4659.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §3!+§.battleService;
+            return Renamed4659.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §>"i§.battleService = BattleService(param1);
+            Renamed45.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §>"i§.battleService;
+            return Renamed45.battleService;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §>"i§.display = IDisplay(param1);
+            Renamed45.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §>"i§.display;
+            return Renamed45.display;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §>"i§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed45.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §>"i§.battleEventDispatcher;
+            return Renamed45.battleEventDispatcher;
          });
          osgi.injectService(TankUsersRegistry,function(param1:Object):void
          {
-            §>"i§.§9#A§ = TankUsersRegistry(param1);
+            Renamed45.Renamed2775 = TankUsersRegistry(param1);
          },function():TankUsersRegistry
          {
-            return §>"i§.§9#A§;
+            return Renamed45.Renamed2775;
          });
          osgi.injectService(EffectsMaterialRegistry,function(param1:Object):void
          {
-            §=#k§.§@#R§ = EffectsMaterialRegistry(param1);
+            Renamed3257.Renamed1368 = EffectsMaterialRegistry(param1);
          },function():EffectsMaterialRegistry
          {
-            return §=#k§.§@#R§;
+            return Renamed3257.Renamed1368;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §=#k§.battleService = BattleService(param1);
+            Renamed3257.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §=#k§.battleService;
+            return Renamed3257.battleService;
          });
          osgi.injectService(TargetingModeService,function(param1:Object):void
          {
-            §finally native§.§default package import§ = TargetingModeService(param1);
+            Renamed3170.Renamed926 = TargetingModeService(param1);
          },function():TargetingModeService
          {
-            return §finally native§.§default package import§;
+            return Renamed3170.Renamed926;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §finally native§.display = IDisplay(param1);
+            Renamed3170.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §finally native§.display;
+            return Renamed3170.display;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §'!U§.battleService = BattleService(param1);
+            Renamed64.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §'!U§.battleService;
+            return Renamed64.battleService;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §'!U§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed64.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §'!U§.battleEventDispatcher;
+            return Renamed64.battleEventDispatcher;
          });
          osgi.injectService(EffectsMaterialRegistry,function(param1:Object):void
          {
-            §0#i§.§@#R§ = EffectsMaterialRegistry(param1);
+            Renamed4669.Renamed1368 = EffectsMaterialRegistry(param1);
          },function():EffectsMaterialRegistry
          {
-            return §0#i§.§@#R§;
+            return Renamed4669.Renamed1368;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §0#i§.battleService = BattleService(param1);
+            Renamed4669.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §0#i§.battleService;
+            return Renamed4669.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §,y§.battleService = BattleService(param1);
+            Renamed4668.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §,y§.battleService;
+            return Renamed4668.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §null catch const§.battleService = BattleService(param1);
+            Renamed4670.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §null catch const§.battleService;
+            return Renamed4670.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §9"<§.battleService = BattleService(param1);
+            Renamed4604.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §9"<§.battleService;
+            return Renamed4604.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §2!K§.battleService = BattleService(param1);
+            Renamed4686.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §2!K§.battleService;
+            return Renamed4686.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §^!W§.battleService = BattleService(param1);
+            Renamed4687.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §^!W§.battleService;
+            return Renamed4687.battleService;
          });
          osgi.injectService(EffectsMaterialRegistry,function(param1:Object):void
          {
-            §^!W§.§@#R§ = EffectsMaterialRegistry(param1);
+            Renamed4687.Renamed1368 = EffectsMaterialRegistry(param1);
          },function():EffectsMaterialRegistry
          {
-            return §^!W§.§@#R§;
+            return Renamed4687.Renamed1368;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §case for§.battleService = BattleService(param1);
+            Renamed71.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §case for§.battleService;
+            return Renamed71.battleService;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §case for§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed71.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §case for§.battleEventDispatcher;
+            return Renamed71.battleEventDispatcher;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §!#,§.battleService = BattleService(param1);
+            Renamed73.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §!#,§.battleService;
+            return Renamed73.battleService;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §!#,§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed73.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §!#,§.battleEventDispatcher;
+            return Renamed73.battleEventDispatcher;
          });
          osgi.injectService(EffectsMaterialRegistry,function(param1:Object):void
          {
-            §dynamic package dynamic§.§@#R§ = EffectsMaterialRegistry(param1);
+            Renamed4695.Renamed1368 = EffectsMaterialRegistry(param1);
          },function():EffectsMaterialRegistry
          {
-            return §dynamic package dynamic§.§@#R§;
+            return Renamed4695.Renamed1368;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §dynamic package dynamic§.battleService = BattleService(param1);
+            Renamed4695.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §dynamic package dynamic§.battleService;
+            return Renamed4695.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §91§.battleService = BattleService(param1);
+            Renamed4655.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §91§.battleService;
+            return Renamed4655.battleService;
          });
          osgi.injectService(EffectsMaterialRegistry,function(param1:Object):void
          {
-            §91§.§@#R§ = EffectsMaterialRegistry(param1);
+            Renamed4655.Renamed1368 = EffectsMaterialRegistry(param1);
          },function():EffectsMaterialRegistry
          {
-            return §91§.§@#R§;
+            return Renamed4655.Renamed1368;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §each set continue§.battleService = BattleService(param1);
+            Renamed49.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §each set continue§.battleService;
+            return Renamed49.battleService;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §each set continue§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed49.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §each set continue§.battleEventDispatcher;
+            return Renamed49.battleEventDispatcher;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §while var finally§.battleService = BattleService(param1);
+            Renamed4610.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §while var finally§.battleService;
+            return Renamed4610.battleService;
          });
          osgi.injectService(EffectsMaterialRegistry,function(param1:Object):void
          {
-            §const package in§.§@#R§ = EffectsMaterialRegistry(param1);
+            Renamed4656.Renamed1368 = EffectsMaterialRegistry(param1);
          },function():EffectsMaterialRegistry
          {
-            return §const package in§.§@#R§;
+            return Renamed4656.Renamed1368;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §const package in§.battleService = BattleService(param1);
+            Renamed4656.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §const package in§.battleService;
+            return Renamed4656.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §case native§.battleService = BattleService(param1);
+            Renamed51.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §case native§.battleService;
+            return Renamed51.battleService;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §case native§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed51.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §case native§.battleEventDispatcher;
+            return Renamed51.battleEventDispatcher;
          });
          osgi.injectService(DataValidator,function(param1:Object):void
          {
-            §7#j§.§'!1§ = DataValidator(param1);
+            Renamed2412.Renamed2419 = DataValidator(param1);
          },function():DataValidator
          {
-            return §7#j§.§'!1§;
+            return Renamed2412.Renamed2419;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §7#j§.battleService = BattleService(param1);
+            Renamed2412.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §7#j§.battleService;
+            return Renamed2412.battleService;
          });
          osgi.injectService(CommandService,function(param1:Object):void
          {
-            §7#j§.commandService = CommandService(param1);
+            Renamed2412.commandService = CommandService(param1);
          },function():CommandService
          {
-            return §7#j§.commandService;
+            return Renamed2412.commandService;
          });
          osgi.injectService(IClientLog,function(param1:Object):void
          {
-            §?#_§.clientLog = IClientLog(param1);
+            Renamed2326.clientLog = IClientLog(param1);
          },function():IClientLog
          {
-            return §?#_§.clientLog;
+            return Renamed2326.clientLog;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §?#_§.display = IDisplay(param1);
+            Renamed2326.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §?#_§.display;
+            return Renamed2326.display;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §<#=§.localeService = ILocaleService(param1);
+            Renamed62.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §<#=§.localeService;
+            return Renamed62.localeService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §<#=§.battleService = BattleService(param1);
+            Renamed62.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §<#=§.battleService;
+            return Renamed62.battleService;
          });
          osgi.injectService(BattleUserInfoService,function(param1:Object):void
          {
-            §<#=§.userInfoService = BattleUserInfoService(param1);
+            Renamed62.userInfoService = BattleUserInfoService(param1);
          },function():BattleUserInfoService
          {
-            return §<#=§.userInfoService;
+            return Renamed62.userInfoService;
          });
          osgi.injectService(IUserPropertiesService,function(param1:Object):void
          {
-            §<#=§.userPropertiesService = IUserPropertiesService(param1);
+            Renamed62.userPropertiesService = IUserPropertiesService(param1);
          },function():IUserPropertiesService
          {
-            return §<#=§.userPropertiesService;
+            return Renamed62.userPropertiesService;
          });
          osgi.injectService(TankUsersRegistry,function(param1:Object):void
          {
-            §,X§.§else const case§ = TankUsersRegistry(param1);
+            Renamed2735.Renamed2736 = TankUsersRegistry(param1);
          },function():TankUsersRegistry
          {
-            return §,X§.§else const case§;
+            return Renamed2735.Renamed2736;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §switch package final§.localeService = ILocaleService(param1);
+            Renamed4608.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §switch package final§.localeService;
+            return Renamed4608.localeService;
          });
          osgi.injectService(IUserInfoService,function(param1:Object):void
          {
-            §2!Y§.userInfoService = IUserInfoService(param1);
+            Renamed2742.userInfoService = IUserInfoService(param1);
          },function():IUserInfoService
          {
-            return §2!Y§.userInfoService;
+            return Renamed2742.userInfoService;
          });
          osgi.injectService(TankUsersRegistry,function(param1:Object):void
          {
-            §2!Y§.§9#A§ = TankUsersRegistry(param1);
+            Renamed2742.Renamed2775 = TankUsersRegistry(param1);
          },function():TankUsersRegistry
          {
-            return §2!Y§.§9#A§;
+            return Renamed2742.Renamed2775;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §class true§.battleService = BattleService(param1);
+            Renamed620.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §class true§.battleService;
+            return Renamed620.battleService;
          });
          osgi.injectService(TextureMaterialRegistry,function(param1:Object):void
          {
-            §in const§.§@#R§ = TextureMaterialRegistry(param1);
+            Renamed2411.Renamed1368 = TextureMaterialRegistry(param1);
          },function():TextureMaterialRegistry
          {
-            return §in const§.§@#R§;
+            return Renamed2411.Renamed1368;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §in const§.battleService = BattleService(param1);
+            Renamed2411.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §in const§.battleService;
+            return Renamed2411.battleService;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §##$§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed4706.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §##$§.battleEventDispatcher;
+            return Renamed4706.battleEventDispatcher;
          });
          osgi.injectService(BattleUserInfoService,function(param1:Object):void
          {
-            §##$§.userInfoService = BattleUserInfoService(param1);
+            Renamed4706.userInfoService = BattleUserInfoService(param1);
          },function():BattleUserInfoService
          {
-            return §##$§.userInfoService;
+            return Renamed4706.userInfoService;
          });
          osgi.injectService(IUserPropertiesService,function(param1:Object):void
          {
-            §##$§.userPropertiesService = IUserPropertiesService(param1);
+            Renamed4706.userPropertiesService = IUserPropertiesService(param1);
          },function():IUserPropertiesService
          {
-            return §##$§.userPropertiesService;
+            return Renamed4706.userPropertiesService;
          });
          osgi.injectService(IHelpService,function(param1:Object):void
          {
-            §function set class§.helpService = IHelpService(param1);
+            Renamed4653.helpService = IHelpService(param1);
          },function():IHelpService
          {
-            return §function set class§.helpService;
+            return Renamed4653.helpService;
          });
          osgi.injectService(ILobbyLayoutService,function(param1:Object):void
          {
-            §function set class§.lobbyLayoutService = ILobbyLayoutService(param1);
+            Renamed4653.lobbyLayoutService = ILobbyLayoutService(param1);
          },function():ILobbyLayoutService
          {
-            return §function set class§.lobbyLayoutService;
+            return Renamed4653.lobbyLayoutService;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
@@ -2733,847 +2733,847 @@ package projects.tanks.clients.fp10.models.battlefieldmodelflash
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §"u§.battleService = BattleService(param1);
+            Renamed30.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §"u§.battleService;
+            return Renamed30.battleService;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §"u§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed30.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §"u§.battleEventDispatcher;
+            return Renamed30.battleEventDispatcher;
          });
          osgi.injectService(BattleUserInfoService,function(param1:Object):void
          {
-            §do set switch§.battleUserInfoService = BattleUserInfoService(param1);
+            Renamed4550.battleUserInfoService = BattleUserInfoService(param1);
          },function():BattleUserInfoService
          {
-            return §do set switch§.battleUserInfoService;
+            return Renamed4550.battleUserInfoService;
          });
          osgi.injectService(TankUsersRegistry,function(param1:Object):void
          {
-            §do set switch§.§9#A§ = TankUsersRegistry(param1);
+            Renamed4550.Renamed2775 = TankUsersRegistry(param1);
          },function():TankUsersRegistry
          {
-            return §do set switch§.§9#A§;
+            return Renamed4550.Renamed2775;
          });
          osgi.injectService(ModelRegistry,function(param1:Object):void
          {
-            §do set switch§.modelRegistry = ModelRegistry(param1);
+            Renamed4550.modelRegistry = ModelRegistry(param1);
          },function():ModelRegistry
          {
-            return §do set switch§.modelRegistry;
+            return Renamed4550.modelRegistry;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §for for native§.localeService = ILocaleService(param1);
+            Renamed2613.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §for for native§.localeService;
+            return Renamed2613.localeService;
          });
          osgi.injectService(IBlockUserService,function(param1:Object):void
          {
-            §for for native§.blockUserService = IBlockUserService(param1);
+            Renamed2613.blockUserService = IBlockUserService(param1);
          },function():IBlockUserService
          {
-            return §for for native§.blockUserService;
+            return Renamed2613.blockUserService;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §implements static§.localeService = ILocaleService(param1);
+            Renamed2614.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §implements static§.localeService;
+            return Renamed2614.localeService;
          });
          osgi.injectService(IBlockUserService,function(param1:Object):void
          {
-            §implements static§.blockUserService = IBlockUserService(param1);
+            Renamed2614.blockUserService = IBlockUserService(param1);
          },function():IBlockUserService
          {
-            return §implements static§.blockUserService;
+            return Renamed2614.blockUserService;
          });
          osgi.injectService(ISettingsService,function(param1:Object):void
          {
-            §6"0§.settings = ISettingsService(param1);
+            Renamed2749.settings = ISettingsService(param1);
          },function():ISettingsService
          {
-            return §6"0§.settings;
+            return Renamed2749.settings;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §switch const null§.battleService = BattleService(param1);
+            Renamed38.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §switch const null§.battleService;
+            return Renamed38.battleService;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §#!M§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed4647.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §#!M§.battleEventDispatcher;
+            return Renamed4647.battleEventDispatcher;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §#!M§.localeService = ILocaleService(param1);
+            Renamed4647.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §#!M§.localeService;
+            return Renamed4647.localeService;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §do const for§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed2763.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §do const for§.battleEventDispatcher;
+            return Renamed2763.battleEventDispatcher;
          });
          osgi.injectService(ILobbyLayoutService,function(param1:Object):void
          {
-            §?!w§.lobbyLayoutService = ILobbyLayoutService(param1);
+            Renamed2770.lobbyLayoutService = ILobbyLayoutService(param1);
          },function():ILobbyLayoutService
          {
-            return §?!w§.lobbyLayoutService;
+            return Renamed2770.lobbyLayoutService;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §with for true§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed2766.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §with for true§.battleEventDispatcher;
+            return Renamed2766.battleEventDispatcher;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §,$$§.display = IDisplay(param1);
+            Renamed4627.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §,$$§.display;
+            return Renamed4627.display;
          });
          osgi.injectService(BattleGUIService,function(param1:Object):void
          {
-            §,$$§.§finally set§ = BattleGUIService(param1);
+            Renamed4627.Renamed4729 = BattleGUIService(param1);
          },function():BattleGUIService
          {
-            return §,$$§.§finally set§;
+            return Renamed4627.Renamed4729;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §,$$§.localeService = ILocaleService(param1);
+            Renamed4627.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §,$$§.localeService;
+            return Renamed4627.localeService;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §!!r§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed2746.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §!!r§.battleEventDispatcher;
+            return Renamed2746.battleEventDispatcher;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §!!r§.display = IDisplay(param1);
+            Renamed2746.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §!!r§.display;
+            return Renamed2746.display;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §!!r§.battleService = BattleService(param1);
+            Renamed2746.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §!!r§.battleService;
+            return Renamed2746.battleService;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §implements const include§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed4563.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §implements const include§.battleEventDispatcher;
+            return Renamed4563.battleEventDispatcher;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §implements const include§.battleService = BattleService(param1);
+            Renamed4563.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §implements const include§.battleService;
+            return Renamed4563.battleService;
          });
          osgi.injectService(IDialogWindowsDispatcherService,function(param1:Object):void
          {
-            §implements const include§.dialogWindowsDispatcherService = IDialogWindowsDispatcherService(param1);
+            Renamed4563.dialogWindowsDispatcherService = IDialogWindowsDispatcherService(param1);
          },function():IDialogWindowsDispatcherService
          {
-            return §implements const include§.dialogWindowsDispatcherService;
+            return Renamed4563.dialogWindowsDispatcherService;
          });
          osgi.injectService(ILobbyLayoutService,function(param1:Object):void
          {
-            §implements const include§.lobbyLayoutService = ILobbyLayoutService(param1);
+            Renamed4563.lobbyLayoutService = ILobbyLayoutService(param1);
          },function():ILobbyLayoutService
          {
-            return §implements const include§.lobbyLayoutService;
+            return Renamed4563.lobbyLayoutService;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §#u§.display = IDisplay(param1);
+            Renamed4562.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §#u§.display;
+            return Renamed4562.display;
          });
          osgi.injectService(IBlurService,function(param1:Object):void
          {
-            §#u§.blurService = IBlurService(param1);
+            Renamed4562.blurService = IBlurService(param1);
          },function():IBlurService
          {
-            return §#u§.blurService;
+            return Renamed4562.blurService;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §#u§.localeService = ILocaleService(param1);
+            Renamed4562.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §#u§.localeService;
+            return Renamed4562.localeService;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §]#E§.display = IDisplay(param1);
+            Renamed2750.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §]#E§.display;
+            return Renamed2750.display;
          });
          osgi.injectService(BattleFormatUtil,function(param1:Object):void
          {
-            §function catch extends§.§]"j§ = BattleFormatUtil(param1);
+            Renamed2757.Renamed1588 = BattleFormatUtil(param1);
          },function():BattleFormatUtil
          {
-            return §function catch extends§.§]"j§;
+            return Renamed2757.Renamed1588;
          });
          osgi.injectService(DataValidator,function(param1:Object):void
          {
-            §super catch function§.§'!1§ = DataValidator(param1);
+            Renamed2864.Renamed2419 = DataValidator(param1);
          },function():DataValidator
          {
-            return §super catch function§.§'!1§;
+            return Renamed2864.Renamed2419;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §!"t§.battleService = BattleService(param1);
+            Renamed1453.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §!"t§.battleService;
+            return Renamed1453.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §1!>§.battleService = BattleService(param1);
+            Renamed3506.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §1!>§.battleService;
+            return Renamed3506.battleService;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §const const false§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed4641.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §const const false§.battleEventDispatcher;
+            return Renamed4641.battleEventDispatcher;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §'#;§.display = IDisplay(param1);
+            Renamed4639.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §'#;§.display;
+            return Renamed4639.display;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §'#;§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed4639.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §'#;§.battleEventDispatcher;
+            return Renamed4639.battleEventDispatcher;
          });
          osgi.injectService(BattleInputService,function(param1:Object):void
          {
-            §'#;§.§^"<§ = BattleInputService(param1);
+            Renamed4639.Renamed718 = BattleInputService(param1);
          },function():BattleInputService
          {
-            return §'#;§.§^"<§;
+            return Renamed4639.Renamed718;
          });
          osgi.injectService(BattleGUIService,function(param1:Object):void
          {
-            §'#;§.§]!W§ = BattleGUIService(param1);
+            Renamed4639.Renamed2423 = BattleGUIService(param1);
          },function():BattleGUIService
          {
-            return §'#;§.§]!W§;
+            return Renamed4639.Renamed2423;
          });
          osgi.injectService(KeysBindingService,function(param1:Object):void
          {
-            §'#;§.§5!$§ = KeysBindingService(param1);
+            Renamed4639.Renamed719 = KeysBindingService(param1);
          },function():KeysBindingService
          {
-            return §'#;§.§5!$§;
+            return Renamed4639.Renamed719;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §'#;§.battleService = BattleService(param1);
+            Renamed4639.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §'#;§.battleService;
+            return Renamed4639.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §true package case§.battleService = BattleService(param1);
+            Renamed4568.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §true package case§.battleService;
+            return Renamed4568.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §try set finally§.battleService = BattleService(param1);
+            Renamed4555.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §try set finally§.battleService;
+            return Renamed4555.battleService;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §function catch extends§.localeService = ILocaleService(param1);
+            Renamed2757.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §function catch extends§.localeService;
+            return Renamed2757.localeService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §function catch extends§.battleService = BattleService(param1);
+            Renamed2757.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §function catch extends§.battleService;
+            return Renamed2757.battleService;
          });
          osgi.injectService(ISettingsService,function(param1:Object):void
          {
-            §function catch extends§.settingsService = ISettingsService(param1);
+            Renamed2757.settingsService = ISettingsService(param1);
          },function():ISettingsService
          {
-            return §function catch extends§.settingsService;
+            return Renamed2757.settingsService;
          });
          osgi.injectService(IStorageService,function(param1:Object):void
          {
-            §function catch extends§.storageService = IStorageService(param1);
+            Renamed2757.storageService = IStorageService(param1);
          },function():IStorageService
          {
-            return §function catch extends§.storageService;
+            return Renamed2757.storageService;
          });
          osgi.injectService(IUserPropertiesService,function(param1:Object):void
          {
-            §function catch extends§.userPropertiesService = IUserPropertiesService(param1);
+            Renamed2757.userPropertiesService = IUserPropertiesService(param1);
          },function():IUserPropertiesService
          {
-            return §function catch extends§.userPropertiesService;
+            return Renamed2757.userPropertiesService;
          });
          osgi.injectService(IHelpService,function(param1:Object):void
          {
-            §function catch extends§.helpService = IHelpService(param1);
+            Renamed2757.helpService = IHelpService(param1);
          },function():IHelpService
          {
-            return §function catch extends§.helpService;
+            return Renamed2757.helpService;
          });
          osgi.injectService(BattleGUIService,function(param1:Object):void
          {
-            §function catch extends§.§finally set§ = BattleGUIService(param1);
+            Renamed2757.Renamed4729 = BattleGUIService(param1);
          },function():BattleGUIService
          {
-            return §function catch extends§.§finally set§;
+            return Renamed2757.Renamed4729;
          });
          osgi.injectService(BattleFormatUtil,function(param1:Object):void
          {
-            §function catch extends§.§]"j§ = BattleFormatUtil(param1);
+            Renamed2757.Renamed1588 = BattleFormatUtil(param1);
          },function():BattleFormatUtil
          {
-            return §function catch extends§.§]"j§;
+            return Renamed2757.Renamed1588;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §function catch extends§.display = IDisplay(param1);
+            Renamed2757.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §function catch extends§.display;
+            return Renamed2757.display;
          });
          osgi.injectService(LogService,function(param1:Object):void
          {
-            §2!s§.logService = LogService(param1);
+            Renamed2407.logService = LogService(param1);
          },function():LogService
          {
-            return §2!s§.logService;
+            return Renamed2407.logService;
          });
          osgi.injectService(ISettingsService,function(param1:Object):void
          {
-            §2!s§.settingsService = ISettingsService(param1);
+            Renamed2407.settingsService = ISettingsService(param1);
          },function():ISettingsService
          {
-            return §2!s§.settingsService;
+            return Renamed2407.settingsService;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §2!s§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed2407.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §2!s§.battleEventDispatcher;
+            return Renamed2407.battleEventDispatcher;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §2!s§.display = IDisplay(param1);
+            Renamed2407.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §2!s§.display;
+            return Renamed2407.display;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §2!s§.battleService = BattleService(param1);
+            Renamed2407.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §2!s§.battleService;
+            return Renamed2407.battleService;
          });
          osgi.injectService(BattleUserInfoService,function(param1:Object):void
          {
-            §2!s§.battleUserInfoService = BattleUserInfoService(param1);
+            Renamed2407.battleUserInfoService = BattleUserInfoService(param1);
          },function():BattleUserInfoService
          {
-            return §2!s§.battleUserInfoService;
+            return Renamed2407.battleUserInfoService;
          });
          osgi.injectService(ModelRegistry,function(param1:Object):void
          {
-            §2!s§.modelRegistry = ModelRegistry(param1);
+            Renamed2407.modelRegistry = ModelRegistry(param1);
          },function():ModelRegistry
          {
-            return §2!s§.modelRegistry;
+            return Renamed2407.modelRegistry;
          });
          osgi.injectService(TankUsersRegistry,function(param1:Object):void
          {
-            §2!s§.§9#A§ = TankUsersRegistry(param1);
+            Renamed2407.Renamed2775 = TankUsersRegistry(param1);
          },function():TankUsersRegistry
          {
-            return §2!s§.§9#A§;
+            return Renamed2407.Renamed2775;
          });
          osgi.injectService(IInitialEffectsService,function(param1:Object):void
          {
-            §2!s§.§set catch switch§ = IInitialEffectsService(param1);
+            Renamed2407.Renamed2776 = IInitialEffectsService(param1);
          },function():IInitialEffectsService
          {
-            return §2!s§.§set catch switch§;
+            return Renamed2407.Renamed2776;
          });
          osgi.injectService(IBattleInfoService,function(param1:Object):void
          {
-            §2!s§.battleInfoService = IBattleInfoService(param1);
+            Renamed2407.battleInfoService = IBattleInfoService(param1);
          },function():IBattleInfoService
          {
-            return §2!s§.battleInfoService;
+            return Renamed2407.battleInfoService;
          });
          osgi.injectService(TankUsersRegistry,function(param1:Object):void
          {
-            §<!b§.§9#A§ = TankUsersRegistry(param1);
+            Renamed4715.Renamed2775 = TankUsersRegistry(param1);
          },function():TankUsersRegistry
          {
-            return §<!b§.§9#A§;
+            return Renamed4715.Renamed2775;
          });
          osgi.injectService(PingService,function(param1:Object):void
          {
-            §?!1§.§implements package switch§ = PingService(param1);
+            Renamed28.Renamed4731 = PingService(param1);
          },function():PingService
          {
-            return §?!1§.§implements package switch§;
+            return Renamed28.Renamed4731;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §while var final§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed2867.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §while var final§.battleEventDispatcher;
+            return Renamed2867.battleEventDispatcher;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §[P§.battleService = BattleService(param1);
+            Renamed69.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §[P§.battleService;
+            return Renamed69.battleService;
          });
          osgi.injectService(TextureMaterialRegistry,function(param1:Object):void
          {
-            §false catch set§.§false for package§ = TextureMaterialRegistry(param1);
+            Renamed917.Renamed1233 = TextureMaterialRegistry(param1);
          },function():TextureMaterialRegistry
          {
-            return §false catch set§.§false for package§;
+            return Renamed917.Renamed1233;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §false catch set§.battleService = BattleService(param1);
+            Renamed917.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §false catch set§.battleService;
+            return Renamed917.battleService;
          });
          osgi.injectService(BattleReadinessService,function(param1:Object):void
          {
-            §<6§.§static package set§ = BattleReadinessService(param1);
+            Renamed2758.Renamed2422 = BattleReadinessService(param1);
          },function():BattleReadinessService
          {
-            return §<6§.§static package set§;
+            return Renamed2758.Renamed2422;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §<6§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed2758.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §<6§.battleEventDispatcher;
+            return Renamed2758.battleEventDispatcher;
          });
          osgi.injectService(TankUsersRegistry,function(param1:Object):void
          {
-            §finally for package§.§9#A§ = TankUsersRegistry(param1);
+            Renamed42.Renamed2775 = TankUsersRegistry(param1);
          },function():TankUsersRegistry
          {
-            return §finally for package§.§9#A§;
+            return Renamed42.Renamed2775;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §&H§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed2745.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §&H§.battleEventDispatcher;
+            return Renamed2745.battleEventDispatcher;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §case package null§.battleService = BattleService(param1);
+            Renamed46.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §case package null§.battleService;
+            return Renamed46.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §case const class§.battleService = BattleService(param1);
+            Renamed4584.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §case const class§.battleService;
+            return Renamed4584.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §?"8§.battleService = BattleService(param1);
+            Renamed4583.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §?"8§.battleService;
+            return Renamed4583.battleService;
          });
          osgi.injectService(EffectsMaterialRegistry,function(param1:Object):void
          {
-            §if catch use§.§@#R§ = EffectsMaterialRegistry(param1);
+            Renamed4585.Renamed1368 = EffectsMaterialRegistry(param1);
          },function():EffectsMaterialRegistry
          {
-            return §if catch use§.§@#R§;
+            return Renamed4585.Renamed1368;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §with package import§.battleService = BattleService(param1);
+            Renamed3433.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §with package import§.battleService;
+            return Renamed3433.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            § 5§.battleService = BattleService(param1);
+            Renamed3418.battleService = BattleService(param1);
          },function():BattleService
          {
-            return § 5§.battleService;
+            return Renamed3418.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            § 5§.battleService = BattleService(param1);
+            Renamed3418.battleService = BattleService(param1);
          },function():BattleService
          {
-            return § 5§.battleService;
+            return Renamed3418.battleService;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §dynamic set§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed75.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §dynamic set§.battleEventDispatcher;
+            return Renamed75.battleEventDispatcher;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §-"v§.battleService = BattleService(param1);
+            Renamed4578.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §-"v§.battleService;
+            return Renamed4578.battleService;
          });
          osgi.injectService(ILightingEffectsService,function(param1:Object):void
          {
-            §-"v§.§get const true§ = ILightingEffectsService(param1);
+            Renamed4578.Renamed4730 = ILightingEffectsService(param1);
          },function():ILightingEffectsService
          {
-            return §-"v§.§get const true§;
+            return Renamed4578.Renamed4730;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §&!K§.battleService = BattleService(param1);
+            Renamed4577.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §&!K§.battleService;
+            return Renamed4577.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §1!0§.battleService = BattleService(param1);
+            Renamed4700.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §1!0§.battleService;
+            return Renamed4700.battleService;
          });
          osgi.injectService(IBattleInfoService,function(param1:Object):void
          {
-            §get for default§.battleInfoService = IBattleInfoService(param1);
+            Renamed4581.battleInfoService = IBattleInfoService(param1);
          },function():IBattleInfoService
          {
-            return §get for default§.battleInfoService;
+            return Renamed4581.battleInfoService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §get for default§.battleService = BattleService(param1);
+            Renamed4581.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §get for default§.battleService;
+            return Renamed4581.battleService;
          });
          osgi.injectService(TextureMaterialRegistry,function(param1:Object):void
          {
-            §get for default§.§@#R§ = TextureMaterialRegistry(param1);
+            Renamed4581.Renamed1368 = TextureMaterialRegistry(param1);
          },function():TextureMaterialRegistry
          {
-            return §get for default§.§@#R§;
+            return Renamed4581.Renamed1368;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §get for default§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed4581.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §get for default§.battleEventDispatcher;
+            return Renamed4581.battleEventDispatcher;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §get for default§.localeService = ILocaleService(param1);
+            Renamed4581.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §get for default§.localeService;
+            return Renamed4581.localeService;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §get for default§.display = IDisplay(param1);
+            Renamed4581.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §get for default§.display;
+            return Renamed4581.display;
          });
          osgi.injectService(BattleUserInfoService,function(param1:Object):void
          {
-            §get for default§.userInfoService = BattleUserInfoService(param1);
+            Renamed4581.userInfoService = BattleUserInfoService(param1);
          },function():BattleUserInfoService
          {
-            return §get for default§.userInfoService;
+            return Renamed4581.userInfoService;
          });
          osgi.injectService(BattleInputService,function(param1:Object):void
          {
-            §get for default§.§const catch get§ = BattleInputService(param1);
+            Renamed4581.Renamed2384 = BattleInputService(param1);
          },function():BattleInputService
          {
-            return §get for default§.§const catch get§;
+            return Renamed4581.Renamed2384;
          });
          osgi.injectService(ILightingEffectsService,function(param1:Object):void
          {
-            §get for default§.§get const true§ = ILightingEffectsService(param1);
+            Renamed4581.Renamed4730 = ILightingEffectsService(param1);
          },function():ILightingEffectsService
          {
-            return §get for default§.§get const true§;
+            return Renamed4581.Renamed4730;
          });
          osgi.injectService(KeysBindingService,function(param1:Object):void
          {
-            §get for default§.§5!$§ = KeysBindingService(param1);
+            Renamed4581.Renamed719 = KeysBindingService(param1);
          },function():KeysBindingService
          {
-            return §get for default§.§5!$§;
+            return Renamed4581.Renamed719;
          });
          osgi.injectService(IDialogWindowsDispatcherService,function(param1:Object):void
          {
-            §var catch§.dialogWindowsDispatcherService = IDialogWindowsDispatcherService(param1);
+            Renamed2409.dialogWindowsDispatcherService = IDialogWindowsDispatcherService(param1);
          },function():IDialogWindowsDispatcherService
          {
-            return §var catch§.dialogWindowsDispatcherService;
+            return Renamed2409.dialogWindowsDispatcherService;
          });
          osgi.injectService(TargetingInputManager,function(param1:Object):void
          {
-            §var catch§.§9!U§ = TargetingInputManager(param1);
+            Renamed2409.Renamed1499 = TargetingInputManager(param1);
          },function():TargetingInputManager
          {
-            return §var catch§.§9!U§;
+            return Renamed2409.Renamed1499;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §const set default§.display = IDisplay(param1);
+            Renamed2382.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §const set default§.display;
+            return Renamed2382.display;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §'">§.battleService = BattleService(param1);
+            Renamed2769.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §'">§.battleService;
+            return Renamed2769.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §!n§.battleService = BattleService(param1);
+            Renamed3076.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §!n§.battleService;
+            return Renamed3076.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §override for try§.battleService = BattleService(param1);
+            Renamed3081.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §override for try§.battleService;
+            return Renamed3081.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §6#-§.battleService = BattleService(param1);
+            Renamed3106.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §6#-§.battleService;
+            return Renamed3106.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §dynamic package false§.battleService = BattleService(param1);
+            Renamed44.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §dynamic package false§.battleService;
+            return Renamed44.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §"!Y§.battleService = BattleService(param1);
+            Renamed4720.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §"!Y§.battleService;
+            return Renamed4720.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §switch get§.battleService = BattleService(param1);
+            Renamed4693.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §switch get§.battleService;
+            return Renamed4693.battleService;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §native var else§.battleService = BattleService(param1);
+            Renamed3128.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §native var else§.battleService;
+            return Renamed3128.battleService;
          });
          osgi.injectService(EffectsMaterialRegistry,function(param1:Object):void
          {
-            §null var§.§@#R§ = EffectsMaterialRegistry(param1);
+            Renamed3075.Renamed1368 = EffectsMaterialRegistry(param1);
          },function():EffectsMaterialRegistry
          {
-            return §null var§.§@#R§;
+            return Renamed3075.Renamed1368;
          });
          osgi.injectService(BattleService,function(param1:Object):void
          {
-            §use set while§.battleService = BattleService(param1);
+            Renamed4724.battleService = BattleService(param1);
          },function():BattleService
          {
-            return §use set while§.battleService;
+            return Renamed4724.battleService;
          });
          osgi.injectService(BattleEventDispatcher,function(param1:Object):void
          {
-            §[<§.battleEventDispatcher = BattleEventDispatcher(param1);
+            Renamed4690.battleEventDispatcher = BattleEventDispatcher(param1);
          },function():BattleEventDispatcher
          {
-            return §[<§.battleEventDispatcher;
+            return Renamed4690.battleEventDispatcher;
          });
          modelRegister = osgi.getService(ModelRegistry) as ModelRegistry;
-         modelRegister.add(new §=#@§(),Vector.<Class>([§!"3§,ObjectLoadListener,ObjectLoadPostListener,ObjectUnloadListener,§true var else§,§throw var each§,§throw package continue§]));
+         modelRegister.add(new Renamed4630(),Vector.<Class>([Renamed4573,ObjectLoadListener,ObjectLoadPostListener,ObjectUnloadListener,Renamed2524,Renamed4631,Renamed511]));
          modelRegisterAdapt = osgi.getService(ModelRegistry) as ModelRegistry;
-         modelRegister.add(new ChatModel(),Vector.<Class>([IChatModelBase,§finally else§,ObjectLoadListener,ObjectUnloadListener]));
-         modelRegister.add(new §%"@§(),Vector.<Class>([§null set get§,§]" §,§throw package continue§,§null catch switch§]));
-         modelRegister.add(new §8#o§(),Vector.<Class>([§import set native§,IObjectLoadListener,§if for else§,§throw package continue§,§<1§]));
-         modelRegister.add(new §final set native§(),Vector.<Class>([§;#y§,ObjectLoadListener,ObjectLoadPostListener,ObjectUnloadListener,§if for else§,§throw package continue§,§<1§]));
-         modelRegister.add(new §&#%§(),Vector.<Class>([§""2§,§include var with§]));
-         modelRegisterAdapt.registerAdapt(§include var with§,§^!R§);
-         modelRegisterAdapt.registerEvents(§include var with§,§;"a§);
-         modelRegister.add(new §super var default§(),Vector.<Class>([§null var package§,§?"p§,ObjectLoadListener,ObjectUnloadListener,§throw package continue§]));
-         modelRegisterAdapt.registerAdapt(§?"p§,§while catch final§);
-         modelRegisterAdapt.registerEvents(§?"p§,§set package set§);
-         modelRegister.add(new §+!>§(),Vector.<Class>([§?#4§,§4#=§]));
-         modelRegisterAdapt.registerAdapt(§4#=§,§2r§);
-         modelRegisterAdapt.registerEvents(§4#=§,§function set implements§);
-         modelRegister.add(new §override package for§(),Vector.<Class>([§]!o§,§return var class§]));
-         modelRegisterAdapt.registerAdapt(§return var class§,§final const include§);
-         modelRegisterAdapt.registerEvents(§return var class§,§const var§);
-         modelRegisterAdapt.registerAdapt(§5$!§,§<!e§);
-         modelRegisterAdapt.registerEvents(§5$!§,§&#z§);
-         modelRegister.add(new §true override§(),Vector.<Class>([§catch package var§,ObjectLoadListener,ObjectUnloadListener,§5$!§]));
-         modelRegister.add(new §3#X§(),Vector.<Class>([§super const default§,ObjectLoadListener,§80§]));
-         modelRegisterAdapt.registerAdapt(§80§,§var in§);
-         modelRegisterAdapt.registerEvents(§80§,§0!#§);
-         modelRegisterAdapt.registerAdapt(§false set false§,§&#2§);
-         modelRegisterAdapt.registerEvents(§false set false§,§%i§);
-         modelRegister.add(new §for package true§(),Vector.<Class>([§var for var§,§false set false§]));
-         modelRegister.add(new §<#=§(),Vector.<Class>([§@"8§,ObjectLoadListener]));
-         modelRegister.add(new §static throw§(),Vector.<Class>([§include set final§,ObjectLoadListener,ObjectUnloadListener,BattleService]));
-         modelRegisterAdapt.registerAdapt(§^H§,§try package do§);
-         modelRegisterAdapt.registerEvents(§^H§,§["w§);
-         modelRegister.add(new §[g§(),Vector.<Class>([§function const import§,§^H§]));
-         modelRegister.add(new §in const§(),Vector.<Class>([§true catch function§,ObjectLoadListener,ObjectUnloadListener,§=p§]));
-         modelRegisterAdapt.registerAdapt(§=p§,§continue set package§);
-         modelRegisterAdapt.registerEvents(§=p§,§9#;§);
-         modelRegister.add(new §##$§(),Vector.<Class>([§4#&§,§throw package continue§,§]#P§]));
-         modelRegisterAdapt.registerAdapt(§]#P§,§#!>§);
-         modelRegisterAdapt.registerEvents(§]#P§,§final for continue§);
-         modelRegister.add(new §"u§(),Vector.<Class>([§do for return§,ObjectLoadPostListener,ObjectUnloadListener,§throw package continue§,§true var else§]));
-         modelRegister.add(new §switch const null§(),Vector.<Class>([§`!O§,ObjectLoadPostListener,ObjectUnloadListener,§true var else§]));
-         modelRegister.add(new §with for true§(),Vector.<Class>([§0"D§,§]" §]));
-         modelRegisterAdapt.registerAdapt(§use catch true§,§^C§);
-         modelRegisterAdapt.registerEvents(§use catch true§,§1"f§);
-         modelRegister.add(new §'#;§(),Vector.<Class>([§"s§,ObjectLoadListener,ObjectLoadPostListener,ObjectUnloadListener,§dynamic var while§,§use catch true§,§throw package continue§]));
-         modelRegisterAdapt.registerAdapt(§else for override§,§throw var try§);
-         modelRegisterAdapt.registerEvents(§else for override§,§throw const case§);
-         modelRegister.add(new §+"O§(),Vector.<Class>([§"#,§,ObjectLoadListener,ObjectUnloadListener,IDumper,§throw package continue§,§2##§,§else for override§]));
-         modelRegister.add(new §2!s§(),Vector.<Class>([§%"i§,ObjectLoadListener,ObjectUnloadListener,§finally var return§,§[#6§,§throw package continue§,§+#`§]));
-         modelRegister.add(new §function catch extends§(),Vector.<Class>([§case package class§,§super const final§,ObjectLoadListener,ObjectLoadPostListener,ObjectUnloadListener,§&"4§,§;!t§]));
-         modelRegister.add(new §[P§(),Vector.<Class>([§import var get§]));
-         modelRegister.add(new §finally for package§(),Vector.<Class>([§break set import§]));
-         modelRegisterAdapt.registerAdapt(§<c§,§="`§);
-         modelRegisterAdapt.registerEvents(§<c§,§static const default§);
-         modelRegister.add(new §continue var static§(),Vector.<Class>([§super const false§,§<c§,§]" §]));
-         modelRegister.add(new §?!1§(),Vector.<Class>([§'!p§]));
-         modelRegister.add(new §1!U§(),Vector.<Class>([§;"9§]));
-         modelRegister.add(new §&H§(),Vector.<Class>([§switch catch extends§,§]" §]));
-         modelRegister.add(new §do override§(),Vector.<Class>([§try catch static§,§catch catch false§,§,v§,§throw package continue§]));
-         modelRegister.add(new §case native§(),Vector.<Class>([§^z§,§throw package continue§,§catch catch false§,§include set class§,ObjectLoadListener]));
-         modelRegister.add(new §finally const§(),Vector.<Class>([§@!Z§,§catch catch false§,§throw package continue§,§<#f§]));
-         modelRegister.add(new §!#,§(),Vector.<Class>([§null for break§,§catch catch false§,§static set case§,ObjectLoadListener,§throw package continue§]));
-         modelRegister.add(new §each var var§(),Vector.<Class>([§static set class§,ObjectLoadListener,§catch catch false§,§throw package continue§,§[#f§]));
-         modelRegister.add(new §>"i§(),Vector.<Class>([§"!d§,§catch catch false§,§="D§,§throw package continue§,§native var var§,ObjectLoadListener]));
-         modelRegister.add(new §each set continue§(),Vector.<Class>([§while package super§,ObjectLoadListener,§catch catch false§,§static set case§,§throw package continue§]));
-         modelRegister.add(new §case package null§(),Vector.<Class>([§override const null§,§catch catch false§,§9!T§]));
-         modelRegister.add(new §'!U§(),Vector.<Class>([§set const final§,ObjectLoadListener,§catch catch false§,§throw native§,§throw package continue§]));
-         modelRegister.add(new §case for§(),Vector.<Class>([§'r§,ObjectLoadListener,§catch catch false§,§continue package break§,§throw package continue§]));
-         modelRegister.add(new §null var implements§(),Vector.<Class>([§each var import§,§'#B§,ObjectLoadListener]));
-         modelRegister.add(new §implements include§(),Vector.<Class>([§;#,§,ObjectLoadListener,ObjectUnloadListener,§import set class§]));
-         modelRegister.add(new §const const false§(),Vector.<Class>([§null for static§,ObjectUnloadListener,ObjectLoadListener,§2#_§]));
-         modelRegisterAdapt.registerAdapt(§9!T§,§`0§);
-         modelRegisterAdapt.registerEvents(§9!T§,§finally package with§);
-         modelRegister.add(new §dynamic set§(),Vector.<Class>([§finally return§,§implements const use§]));
-         modelRegisterAdapt.registerAdapt(§implements const use§,§final catch throw§);
-         modelRegisterAdapt.registerEvents(§implements const use§,§each package for§);
-         modelRegisterAdapt.registerAdapt(§break for catch§,§super implements§);
-         modelRegisterAdapt.registerEvents(§break for catch§,§5L§);
-         modelRegister.add(new §get for default§(),Vector.<Class>([§return package for§,ObjectLoadPostListener,ObjectUnloadListener,§throw package continue§,§true var else§,§break for catch§]));
-         modelRegister.add(new §^!P§(),Vector.<Class>([§6!g§,§4!C§]));
-         modelRegister.add(new §dynamic package false§(),Vector.<Class>([§use set false§,§false for finally§,§catch catch false§]));
-         modelRegister.add(new §7#i§(),Vector.<Class>([§@#w§,§implements var include§,ObjectLoadPostListener]));
-         modelRegisterAdapt.registerAdapt(§implements var include§,§class for var§);
-         modelRegisterAdapt.registerEvents(§implements var include§,§>!>§);
-         modelRegisterAdapt.registerAdapt(§+!Q§,§while var continue§);
-         modelRegisterAdapt.registerEvents(§+!Q§,§8#^§);
-         modelRegister.add(new §[<§(),Vector.<Class>([undefined,§+!Q§]));
+         modelRegister.add(new ChatModel(),Vector.<Class>([IChatModelBase,Renamed2566,ObjectLoadListener,ObjectUnloadListener]));
+         modelRegister.add(new Renamed4541(),Vector.<Class>([Renamed4663,Renamed4575,Renamed511,Renamed4576]));
+         modelRegister.add(new Renamed40(),Vector.<Class>([Renamed4683,IObjectLoadListener,Renamed2616,Renamed511,Renamed4650]));
+         modelRegister.add(new Renamed98(),Vector.<Class>([Renamed4569,ObjectLoadListener,ObjectLoadPostListener,ObjectUnloadListener,Renamed2616,Renamed511,Renamed4650]));
+         modelRegister.add(new Renamed4615(),Vector.<Class>([Renamed4591,Renamed4618]));
+         modelRegisterAdapt.registerAdapt(Renamed4618,Renamed4617);
+         modelRegisterAdapt.registerEvents(Renamed4618,Renamed4616);
+         modelRegister.add(new Renamed18(),Vector.<Class>([Renamed4612,Renamed4557,ObjectLoadListener,ObjectUnloadListener,Renamed511]));
+         modelRegisterAdapt.registerAdapt(Renamed4557,Renamed4560);
+         modelRegisterAdapt.registerEvents(Renamed4557,Renamed4559);
+         modelRegister.add(new Renamed4702(),Vector.<Class>([Renamed4736,Renamed2414]));
+         modelRegisterAdapt.registerAdapt(Renamed2414,Renamed4703);
+         modelRegisterAdapt.registerEvents(Renamed2414,Renamed4704);
+         modelRegister.add(new Renamed4682(),Vector.<Class>([Renamed4672,Renamed2767]));
+         modelRegisterAdapt.registerAdapt(Renamed2767,Renamed4681);
+         modelRegisterAdapt.registerEvents(Renamed2767,Renamed4680);
+         modelRegisterAdapt.registerAdapt(Renamed4674,Renamed4675);
+         modelRegisterAdapt.registerEvents(Renamed4674,Renamed4673);
+         modelRegister.add(new Renamed4676(),Vector.<Class>([Renamed4606,ObjectLoadListener,ObjectUnloadListener,Renamed4674]));
+         modelRegister.add(new Renamed4589(),Vector.<Class>([Renamed4658,ObjectLoadListener,Renamed3254]));
+         modelRegisterAdapt.registerAdapt(Renamed3254,Renamed4590);
+         modelRegisterAdapt.registerEvents(Renamed3254,Renamed4588);
+         modelRegisterAdapt.registerAdapt(Renamed3255,Renamed4737);
+         modelRegisterAdapt.registerEvents(Renamed3255,Renamed4599);
+         modelRegister.add(new Renamed4600(),Vector.<Class>([Renamed4623,Renamed3255]));
+         modelRegister.add(new Renamed62(),Vector.<Class>([Renamed4542,ObjectLoadListener]));
+         modelRegister.add(new Renamed2417(),Vector.<Class>([Renamed2415,ObjectLoadListener,ObjectUnloadListener,BattleService]));
+         modelRegisterAdapt.registerAdapt(Renamed4637,Renamed4638);
+         modelRegisterAdapt.registerEvents(Renamed4637,Renamed4635);
+         modelRegister.add(new Renamed4636(),Vector.<Class>([Renamed4646,Renamed4637]));
+         modelRegister.add(new Renamed2411(),Vector.<Class>([Renamed4667,ObjectLoadListener,ObjectUnloadListener,Renamed2400]));
+         modelRegisterAdapt.registerAdapt(Renamed2400,Renamed4537);
+         modelRegisterAdapt.registerEvents(Renamed2400,Renamed4536);
+         modelRegister.add(new Renamed4706(),Vector.<Class>([Renamed4613,Renamed511,Renamed2311]));
+         modelRegisterAdapt.registerAdapt(Renamed2311,Renamed2310);
+         modelRegisterAdapt.registerEvents(Renamed2311,Renamed2394);
+         modelRegister.add(new Renamed30(),Vector.<Class>([Renamed4661,ObjectLoadPostListener,ObjectUnloadListener,Renamed511,Renamed2524]));
+         modelRegister.add(new Renamed38(),Vector.<Class>([Renamed4597,ObjectLoadPostListener,ObjectUnloadListener,Renamed2524]));
+         modelRegister.add(new Renamed2766(),Vector.<Class>([Renamed4620,Renamed4575]));
+         modelRegisterAdapt.registerAdapt(Renamed2741,Renamed4539);
+         modelRegisterAdapt.registerEvents(Renamed2741,Renamed4538);
+         modelRegister.add(new Renamed4639(),Vector.<Class>([Renamed4707,ObjectLoadListener,ObjectLoadPostListener,ObjectUnloadListener,Renamed4642,Renamed2741,Renamed511]));
+         modelRegisterAdapt.registerAdapt(Renamed4711,Renamed4714);
+         modelRegisterAdapt.registerEvents(Renamed4711,Renamed4713);
+         modelRegister.add(new Renamed88(),Vector.<Class>([Renamed4677,ObjectLoadListener,ObjectUnloadListener,IDumper,Renamed511,Renamed4710,Renamed4711]));
+         modelRegister.add(new Renamed2407(),Vector.<Class>([Renamed2743,ObjectLoadListener,ObjectUnloadListener,Renamed2408,Renamed2774,Renamed511,Renamed2754]));
+         modelRegister.add(new Renamed2757(),Vector.<Class>([Renamed4214,Renamed4654,ObjectLoadListener,ObjectLoadPostListener,ObjectUnloadListener,Renamed2553,Renamed768]));
+         modelRegister.add(new Renamed69(),Vector.<Class>([Renamed4566]));
+         modelRegister.add(new Renamed42(),Vector.<Class>([Renamed4564]));
+         modelRegisterAdapt.registerAdapt(Renamed508,Renamed4601);
+         modelRegisterAdapt.registerEvents(Renamed508,Renamed4602);
+         modelRegister.add(new Renamed509(),Vector.<Class>([Renamed4708,Renamed508,Renamed4575]));
+         modelRegister.add(new Renamed28(),Vector.<Class>([Renamed4587]));
+         modelRegister.add(new Renamed4678(),Vector.<Class>([Renamed4625]));
+         modelRegister.add(new Renamed2745(),Vector.<Class>([Renamed2752,Renamed4575]));
+         modelRegister.add(new Renamed47(),Vector.<Class>([Renamed22,Renamed43,Renamed3480,Renamed511]));
+         modelRegister.add(new Renamed51(),Vector.<Class>([Renamed83,Renamed511,Renamed43,Renamed4657,ObjectLoadListener]));
+         modelRegister.add(new Renamed20(),Vector.<Class>([Renamed53,Renamed43,Renamed511,Renamed4570]));
+         modelRegister.add(new Renamed73(),Vector.<Class>([Renamed32,Renamed43,Renamed4684,ObjectLoadListener,Renamed511]));
+         modelRegister.add(new Renamed57(),Vector.<Class>([Renamed11,ObjectLoadListener,Renamed43,Renamed511,Renamed4660]));
+         modelRegister.add(new Renamed45(),Vector.<Class>([Renamed95,Renamed43,Renamed3153,Renamed511,Renamed3149,ObjectLoadListener]));
+         modelRegister.add(new Renamed49(),Vector.<Class>([Renamed14,ObjectLoadListener,Renamed43,Renamed4684,Renamed511]));
+         modelRegister.add(new Renamed46(),Vector.<Class>([Renamed36,Renamed43,Renamed3436]));
+         modelRegister.add(new Renamed64(),Vector.<Class>([Renamed93,ObjectLoadListener,Renamed43,Renamed4671,Renamed511]));
+         modelRegister.add(new Renamed71(),Vector.<Class>([Renamed67,ObjectLoadListener,Renamed43,Renamed4688,Renamed511]));
+         modelRegister.add(new Renamed4621(),Vector.<Class>([Renamed4716,Renamed3043,ObjectLoadListener]));
+         modelRegister.add(new Renamed4551(),Vector.<Class>([Renamed4664,ObjectLoadListener,ObjectUnloadListener,Renamed4552]));
+         modelRegister.add(new Renamed4641(),Vector.<Class>([Renamed4572,ObjectUnloadListener,ObjectLoadListener,Renamed4640]));
+         modelRegisterAdapt.registerAdapt(Renamed3436,Renamed4696);
+         modelRegisterAdapt.registerEvents(Renamed3436,Renamed4699);
+         modelRegister.add(new Renamed75(),Vector.<Class>([Renamed4665,Renamed76]));
+         modelRegisterAdapt.registerAdapt(Renamed76,Renamed4698);
+         modelRegisterAdapt.registerEvents(Renamed76,Renamed4697);
+         modelRegisterAdapt.registerAdapt(Renamed4580,Renamed4582);
+         modelRegisterAdapt.registerEvents(Renamed4580,Renamed4579);
+         modelRegister.add(new Renamed4581(),Vector.<Class>([Renamed4595,ObjectLoadPostListener,ObjectUnloadListener,Renamed511,Renamed2524,Renamed4580]));
+         modelRegister.add(new Renamed81(),Vector.<Class>([Renamed80,Renamed4701]));
+         modelRegister.add(new Renamed44(),Vector.<Class>([Renamed3121,Renamed4691,Renamed43]));
+         modelRegister.add(new Renamed4721(),Vector.<Class>([Renamed4634,Renamed3122,ObjectLoadPostListener]));
+         modelRegisterAdapt.registerAdapt(Renamed3122,Renamed4723);
+         modelRegisterAdapt.registerEvents(Renamed3122,Renamed4722);
+         modelRegisterAdapt.registerAdapt(Renamed3074,Renamed4692);
+         modelRegisterAdapt.registerEvents(Renamed3074,Renamed4689);
+         modelRegister.add(new Renamed4690(),Vector.<Class>([undefined,Renamed3074]));
       }
       
       public function stop(param1:OSGi) : void

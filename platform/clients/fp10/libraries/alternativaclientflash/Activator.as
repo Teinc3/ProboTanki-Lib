@@ -1,8 +1,8 @@
 package platform.clients.fp10.libraries.alternativaclientflash
 {
-   import §<<§.§1!y§;
-   import §?"X§.§"#d§;
-   import §?"X§.§-$%§;
+   import Renamed4127.Renamed4128;
+   import Renamed4129.Renamed4130;
+   import Renamed4129.Renamed4131;
    import alternativa.osgi.OSGi;
    import alternativa.osgi.bundle.IBundleActivator;
    import alternativa.osgi.service.clientlog.IClientLog;
@@ -82,22 +82,22 @@ package platform.clients.fp10.libraries.alternativaclientflash
          var _osgi:OSGi = param1;
          osgi = _osgi;
          var protocol:IProtocol = Protocol.defaultInstance;
-         codec = new §"#d§(false);
+         codec = new Renamed4130(false);
          protocol.registerCodec(new CollectionCodecInfo(new TypeCodecInfo(ImageResource,false),false,1),codec);
          protocol.registerCodec(new CollectionCodecInfo(new TypeCodecInfo(ImageResource,false),true,1),new OptionalCodecDecorator(codec));
-         codec = new §"#d§(true);
+         codec = new Renamed4130(true);
          protocol.registerCodec(new CollectionCodecInfo(new TypeCodecInfo(ImageResource,true),false,1),codec);
          protocol.registerCodec(new CollectionCodecInfo(new TypeCodecInfo(ImageResource,true),true,1),new OptionalCodecDecorator(codec));
-         codec = new §-$%§(false);
+         codec = new Renamed4131(false);
          protocol.registerCodec(new CollectionCodecInfo(new TypeCodecInfo(MultiframeImageResource,false),false,1),codec);
          protocol.registerCodec(new CollectionCodecInfo(new TypeCodecInfo(MultiframeImageResource,false),true,1),new OptionalCodecDecorator(codec));
-         codec = new §-$%§(true);
+         codec = new Renamed4131(true);
          protocol.registerCodec(new CollectionCodecInfo(new TypeCodecInfo(MultiframeImageResource,true),false,1),codec);
          protocol.registerCodec(new CollectionCodecInfo(new TypeCodecInfo(MultiframeImageResource,true),true,1),new OptionalCodecDecorator(codec));
-         codec = new §1!y§(false);
+         codec = new Renamed4128(false);
          protocol.registerCodec(new CollectionCodecInfo(new TypeCodecInfo(IGameObject,false),false,1),codec);
          protocol.registerCodec(new CollectionCodecInfo(new TypeCodecInfo(IGameObject,false),true,1),new OptionalCodecDecorator(codec));
-         codec = new §1!y§(true);
+         codec = new Renamed4128(true);
          protocol.registerCodec(new CollectionCodecInfo(new TypeCodecInfo(IGameObject,true),false,1),codec);
          protocol.registerCodec(new CollectionCodecInfo(new TypeCodecInfo(IGameObject,true),true,1),new OptionalCodecDecorator(codec));
          osgi.injectService(LogService,function(param1:Object):void

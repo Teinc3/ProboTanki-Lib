@@ -62,26 +62,26 @@ package services.alertservice
          }
       }
       
-      public function §switch const true§(param1:String, param2:Vector.<String>, param3:Vector.<Sprite>) : void
+      public function Renamed2166(param1:String, param2:Vector.<String>, param3:Vector.<Sprite>) : void
       {
          var _loc4_:Alert = null;
          if(this.isClose())
          {
             this._alert = new Alert();
-            this._alert.§switch const true§(param1,param2,param3);
+            this._alert.Renamed2166(param1,param2,param3);
             this.addAlert();
          }
          else
          {
             _loc4_ = new Alert();
-            _loc4_.§switch const true§(param1,param2,param3);
+            _loc4_.Renamed2166(param1,param2,param3);
             this._queue.push(_loc4_);
          }
       }
       
       public function showOkAlert(param1:String) : void
       {
-         this.showAlert(param1,Vector.<String>([localeService.getText(§get const use§.OK)]));
+         this.showAlert(param1,Vector.<String>([localeService.getText(Renamed1616.OK)]));
       }
       
       private function addAlert() : void
@@ -131,7 +131,7 @@ package services.alertservice
       
       private function onForciblyCloseDialogs(param1:DialogWindowsDispatcherServiceEvent) : void
       {
-         this._alert.§;!&§();
+         this._alert.Renamed10797();
       }
       
       public function onConnectionClosed(param1:ConnectionCloseStatus) : void

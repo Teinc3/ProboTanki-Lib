@@ -180,7 +180,7 @@ package alternativa.tanks.view.forms.commons
          this._pass2.maxChars = passwordParamsService.maxPasswordLength;
          this._pass2.hidden = true;
          this._pass2.validValue = true;
-         this._checkRemember.§ !w§ = true;
+         this._checkRemember.Renamed1878 = true;
          this._checkRemember.label = localeService.getText(TextConst.REGISTER_FORM_REMEMBER_ME_CHECKBOX_LABEL_TEXT);
          this._continueButton.label = localeService.getText(TanksLocale.TEXT_REGISTER_FORM_CONTINUE);
          this._continueButton.enable = false;
@@ -366,7 +366,7 @@ package alternativa.tanks.view.forms.commons
       
       public function get rememberMe() : Boolean
       {
-         return this._checkRemember.§ !w§;
+         return this._checkRemember.Renamed1878;
       }
       
       public function set callsign(param1:String) : void

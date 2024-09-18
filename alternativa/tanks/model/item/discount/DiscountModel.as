@@ -129,7 +129,7 @@ package alternativa.tanks.model.item.discount
       
       private function updateDiscount() : void
       {
-         garageService.§!E§().updateDiscount(object);
+         garageService.Renamed1933().updateDiscount(object);
       }
       
       public function objectUnloaded() : void

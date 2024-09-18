@@ -1,29 +1,29 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import §[" §.ICodec;
+   import Renamed5811.ICodec;
    import alternativa.osgi.OSGi;
    import alternativa.osgi.service.clientlog.IClientLog;
    import flash.utils.ByteArray;
    import platform.client.fp10.core.resource.types.SoundResource;
-   import projects.tanks.client.panel.model.battleinvite.§ !&§;
-   import scpacker.networking.protocol.§?"s§;
+   import projects.tanks.client.panel.model.battleinvite.Renamed4321;
+   import scpacker.networking.protocol.Renamed536;
    
    public class CodecBattleInviteCC implements ICodec
    {
       public static var log:IClientLog = IClientLog(OSGi.getInstance().getService(IClientLog));
       
-      private var §3!h§:ICodec;
+      private var Renamed10577:ICodec;
       
-      public function CodecBattleInviteCC(param1:§?"s§)
+      public function CodecBattleInviteCC(param1:Renamed536)
       {
          super();
-         this.§3!h§ = param1.getCodec("scpacker.networking.protocol.codec.custom.ResourceGetterCodec");
+         this.Renamed10577 = param1.getCodec("scpacker.networking.protocol.codec.custom.ResourceGetterCodec");
       }
       
       public function decode(param1:ByteArray) : Object
       {
-         var _loc2_:§ !&§ = new § !&§();
-         _loc2_.§in package case§ = this.§3!h§.decode(param1) as SoundResource;
+         var _loc2_:Renamed4321 = new Renamed4321();
+         _loc2_.Renamed2087 = this.Renamed10577.decode(param1) as SoundResource;
          return _loc2_;
       }
       
@@ -33,8 +33,8 @@ package scpacker.networking.protocol.codec.custom
          {
             throw new Error("Object is null. Use @ProtocolOptional annotation.");
          }
-         var _loc3_:§ !&§ = § !&§(param2);
-         this.§3!h§.encode(param1,_loc3_.§in package case§);
+         var _loc3_:Renamed4321 = Renamed4321(param2);
+         this.Renamed10577.encode(param1,_loc3_.Renamed2087);
          return 4;
       }
    }

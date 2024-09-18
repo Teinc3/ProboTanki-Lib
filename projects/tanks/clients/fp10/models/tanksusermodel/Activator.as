@@ -1,8 +1,8 @@
 package projects.tanks.clients.fp10.models.tanksusermodel
 {
-   import §-!?§.§for for true§;
-   import §8!2§.§`!@§;
-   import §`C§.§##z§;
+   import Renamed4829.Renamed4830;
+   import Renamed272.Renamed3542;
+   import Renamed501.Renamed545;
    import alternativa.osgi.OSGi;
    import alternativa.osgi.bundle.IBundleActivator;
    import alternativa.osgi.service.display.IDisplay;
@@ -11,22 +11,22 @@ package projects.tanks.clients.fp10.models.tanksusermodel
    import alternativa.tanks.model.useremailandpassword.UserEmailAndPasswordModel;
    import alternativa.tanks.servermodels.EntranceModel;
    import alternativa.tanks.servermodels.blockvalidator.BlockValidatorModel;
-   import alternativa.tanks.servermodels.captcha.§9J§;
+   import alternativa.tanks.servermodels.captcha.Renamed3549;
    import alternativa.tanks.servermodels.captcha.IServerCaptcha;
    import alternativa.tanks.servermodels.captcha.ServerCaptchaModel;
-   import alternativa.tanks.servermodels.captcha.§native implements§;
+   import alternativa.tanks.servermodels.captcha.Renamed3550;
    import alternativa.tanks.servermodels.login.ILogin;
    import alternativa.tanks.servermodels.login.LoginModel;
-   import alternativa.tanks.servermodels.loginbyhash.§;z§;
+   import alternativa.tanks.servermodels.loginbyhash.Renamed3555;
    import alternativa.tanks.servermodels.loginbyhash.ILoginByHash;
    import alternativa.tanks.servermodels.loginbyhash.LoginByHashModel;
-   import alternativa.tanks.servermodels.loginbyhash.§for set use§;
+   import alternativa.tanks.servermodels.loginbyhash.Renamed3556;
    import alternativa.tanks.servermodels.registartion.password.IPasswordRegistration;
    import alternativa.tanks.servermodels.registartion.password.PasswordRegistrationModel;
-   import alternativa.tanks.servermodels.socialnetwork.§2"'§;
+   import alternativa.tanks.servermodels.socialnetwork.Renamed3571;
    import alternativa.tanks.servermodels.socialnetwork.ExternalEntranceModel;
    import alternativa.tanks.servermodels.socialnetwork.IExternalEntranceModel;
-   import alternativa.tanks.servermodels.socialnetwork.§`"c§;
+   import alternativa.tanks.servermodels.socialnetwork.Renamed3573;
    import alternativa.tanks.service.IEntranceClientFacade;
    import alternativa.tanks.service.IEntranceServerFacade;
    import alternativa.tanks.service.IExternalEntranceService;
@@ -36,7 +36,7 @@ package projects.tanks.clients.fp10.models.tanksusermodel
    import alternativa.tanks.service.socialnetwork.ISocialNetworkPanelService;
    import alternativa.tanks.tracker.ITrackerService;
    import alternativa.tanks.view.bubbles.EntranceBubbleFactory;
-   import alternativa.tanks.view.forms.§!"z§;
+   import alternativa.tanks.view.forms.Renamed558;
    import alternativa.tanks.view.forms.ExternalRegistrationForm;
    import alternativa.tanks.view.forms.LinkExternalLoginForm;
    import alternativa.tanks.view.forms.LoginForm;
@@ -45,33 +45,33 @@ package projects.tanks.clients.fp10.models.tanksusermodel
    import alternativa.tanks.view.forms.commons.RegistrationCommonElementsSection;
    import alternativa.tanks.view.layers.EntranceView;
    import alternativa.tanks.view.registration.ExternalEntranceForm;
-   import §case var include§.§^k§;
-   import §case var include§.§default var dynamic§;
-   import §case var include§.§for set do§;
-   import §case var include§.§switch set false§;
-   import §const catch import§.§var if§;
-   import §dynamic use§.§>#M§;
-   import §final set continue§.§=n§;
-   import §final set continue§.§]"y§;
-   import §final set continue§.§dynamic const continue§;
-   import §final set continue§.§null catch null§;
-   import §in var var§.§<!V§;
+   import Renamed319.Renamed4831;
+   import Renamed319.Renamed4832;
+   import Renamed319.Renamed4833;
+   import Renamed319.Renamed4834;
+   import Renamed334.Renamed3552;
+   import Renamed346.Renamed4835;
+   import Renamed362.Renamed4836;
+   import Renamed362.Renamed4837;
+   import Renamed362.Renamed4838;
+   import Renamed362.Renamed4839;
+   import Renamed398.Renamed4840;
    import platform.client.fp10.core.model.IObjectLoadListener;
    import platform.client.fp10.core.model.ObjectLoadListener;
    import platform.client.fp10.core.model.ObjectLoadPostListener;
    import platform.client.fp10.core.model.ObjectUnloadPostListener;
    import platform.client.fp10.core.registry.ModelRegistry;
-   import projects.tanks.client.entrance.model.entrance.captcha.§'"p§;
+   import projects.tanks.client.entrance.model.entrance.captcha.Renamed3545;
    import projects.tanks.client.entrance.model.entrance.entrance.IEntranceModelBase;
-   import projects.tanks.client.entrance.model.entrance.externalentrance.§native catch while§;
+   import projects.tanks.client.entrance.model.entrance.externalentrance.Renamed3562;
    import projects.tanks.client.entrance.model.entrance.registration.IRegistrationModelBase;
    import projects.tanks.clients.flash.commons.services.timeunit.ITimeUnitService;
    import projects.tanks.clients.flash.commons.services.validate.IValidateService;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.alertservices.IAlertService;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.storage.IStorageService;
-   import §throw const package§.§"!M§;
+   import Renamed435.Renamed4841;
    import utils.preview.IImageResource;
-   import §var set dynamic§.§ "e§;
+   import Renamed455.Renamed3553;
    
    public class Activator implements IBundleActivator
    {
@@ -188,17 +188,17 @@ package projects.tanks.clients.fp10.models.tanksusermodel
          });
          osgi.injectService(ITimeUnitService,function(param1:Object):void
          {
-            EntranceView.§&J§ = ITimeUnitService(param1);
+            EntranceView.Renamed2271 = ITimeUnitService(param1);
          },function():ITimeUnitService
          {
-            return EntranceView.§&J§;
+            return EntranceView.Renamed2271;
          });
          osgi.injectService(IExternalEntranceService,function(param1:Object):void
          {
-            ExternalEntranceModel.§7#L§ = IExternalEntranceService(param1);
+            ExternalEntranceModel.Renamed3564 = IExternalEntranceService(param1);
          },function():IExternalEntranceService
          {
-            return ExternalEntranceModel.§7#L§;
+            return ExternalEntranceModel.Renamed3564;
          });
          osgi.injectService(IEntranceClientFacade,function(param1:Object):void
          {
@@ -251,10 +251,10 @@ package projects.tanks.clients.fp10.models.tanksusermodel
          });
          osgi.injectService(IEntranceClientFacade,function(param1:Object):void
          {
-            §"!M§.facade = IEntranceClientFacade(param1);
+            Renamed4841.facade = IEntranceClientFacade(param1);
          },function():IEntranceClientFacade
          {
-            return §"!M§.facade;
+            return Renamed4841.facade;
          });
          osgi.injectService(IPanelView,function(param1:Object):void
          {
@@ -272,17 +272,17 @@ package projects.tanks.clients.fp10.models.tanksusermodel
          });
          osgi.injectService(ISettingsService,function(param1:Object):void
          {
-            UserEmailAndPasswordModel.§null import§ = ISettingsService(param1);
+            UserEmailAndPasswordModel.Renamed2284 = ISettingsService(param1);
          },function():ISettingsService
          {
-            return UserEmailAndPasswordModel.§null import§;
+            return UserEmailAndPasswordModel.Renamed2284;
          });
          osgi.injectService(IEntranceClientFacade,function(param1:Object):void
          {
-            §for set do§.clientFacade = IEntranceClientFacade(param1);
+            Renamed4833.clientFacade = IEntranceClientFacade(param1);
          },function():IEntranceClientFacade
          {
-            return §for set do§.clientFacade;
+            return Renamed4833.clientFacade;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
@@ -307,17 +307,17 @@ package projects.tanks.clients.fp10.models.tanksusermodel
          });
          osgi.injectService(IExternalEntranceService,function(param1:Object):void
          {
-            ExternalEntranceForm.§7#L§ = IExternalEntranceService(param1);
+            ExternalEntranceForm.Renamed3564 = IExternalEntranceService(param1);
          },function():IExternalEntranceService
          {
-            return ExternalEntranceForm.§7#L§;
+            return ExternalEntranceForm.Renamed3564;
          });
          osgi.injectService(IExternalEntranceService,function(param1:Object):void
          {
-            LoginForm.§7#L§ = IExternalEntranceService(param1);
+            LoginForm.Renamed3564 = IExternalEntranceService(param1);
          },function():IExternalEntranceService
          {
-            return LoginForm.§7#L§;
+            return LoginForm.Renamed3564;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
@@ -384,82 +384,82 @@ package projects.tanks.clients.fp10.models.tanksusermodel
          });
          osgi.injectService(IExternalEntranceService,function(param1:Object):void
          {
-            RegistrationForm.§7#L§ = IExternalEntranceService(param1);
+            RegistrationForm.Renamed3564 = IExternalEntranceService(param1);
          },function():IExternalEntranceService
          {
-            return RegistrationForm.§7#L§;
+            return RegistrationForm.Renamed3564;
          });
          osgi.injectService(IEntranceClientFacade,function(param1:Object):void
          {
-            §dynamic const continue§.entranceClientFacade = IEntranceClientFacade(param1);
+            Renamed4838.entranceClientFacade = IEntranceClientFacade(param1);
          },function():IEntranceClientFacade
          {
-            return §dynamic const continue§.entranceClientFacade;
+            return Renamed4838.entranceClientFacade;
          });
          osgi.injectService(IDisplay,function(param1:Object):void
          {
-            §dynamic const continue§.display = IDisplay(param1);
+            Renamed4838.display = IDisplay(param1);
          },function():IDisplay
          {
-            return §dynamic const continue§.display;
+            return Renamed4838.display;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §dynamic const continue§.localeService = ILocaleService(param1);
+            Renamed4838.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §dynamic const continue§.localeService;
+            return Renamed4838.localeService;
          });
          osgi.injectService(ILocaleService,function(param1:Object):void
          {
-            §!"z§.localeService = ILocaleService(param1);
+            Renamed558.localeService = ILocaleService(param1);
          },function():ILocaleService
          {
-            return §!"z§.localeService;
+            return Renamed558.localeService;
          });
          osgi.injectService(IPasswordParamsService,function(param1:Object):void
          {
-            §!"z§.passwordParamsService = IPasswordParamsService(param1);
+            Renamed558.passwordParamsService = IPasswordParamsService(param1);
          },function():IPasswordParamsService
          {
-            return §!"z§.passwordParamsService;
+            return Renamed558.passwordParamsService;
          });
          osgi.injectService(IValidateService,function(param1:Object):void
          {
-            §!"z§.validateService = IValidateService(param1);
+            Renamed558.validateService = IValidateService(param1);
          },function():IValidateService
          {
-            return §!"z§.validateService;
+            return Renamed558.validateService;
          });
          osgi.injectService(ModelRegistry,function(param1:Object):void
          {
-            §##z§.modelRegistry = ModelRegistry(param1);
+            Renamed545.modelRegistry = ModelRegistry(param1);
          },function():ModelRegistry
          {
-            return §##z§.modelRegistry;
+            return Renamed545.modelRegistry;
          });
          modelRegisterAdapt = osgi.getService(ModelRegistry) as ModelRegistry;
          modelRegister = osgi.getService(ModelRegistry) as ModelRegistry;
-         modelRegister.add(new LoginModel(),Vector.<Class>([ILogin,§var if§]));
-         modelRegister.add(new §"!M§(),Vector.<Class>([§<!V§,IObjectLoadListener]));
-         modelRegisterAdapt.registerAdapt(§switch set false§,§default var dynamic§);
-         modelRegisterAdapt.registerEvents(§switch set false§,§^k§);
-         modelRegister.add(new §for set do§(),Vector.<Class>([§>#M§,§switch set false§,IObjectLoadListener]));
-         modelRegister.add(new LoginByHashModel(),Vector.<Class>([ILoginByHash,§ "e§]));
-         modelRegisterAdapt.registerAdapt(ILoginByHash,§for set use§);
-         modelRegisterAdapt.registerEvents(ILoginByHash,§;z§);
-         modelRegister.add(new BlockValidatorModel(),Vector.<Class>([§`!@§]));
+         modelRegister.add(new LoginModel(),Vector.<Class>([ILogin,Renamed3552]));
+         modelRegister.add(new Renamed4841(),Vector.<Class>([Renamed4840,IObjectLoadListener]));
+         modelRegisterAdapt.registerAdapt(Renamed4834,Renamed4832);
+         modelRegisterAdapt.registerEvents(Renamed4834,Renamed4831);
+         modelRegister.add(new Renamed4833(),Vector.<Class>([Renamed4835,Renamed4834,IObjectLoadListener]));
+         modelRegister.add(new LoginByHashModel(),Vector.<Class>([ILoginByHash,Renamed3553]));
+         modelRegisterAdapt.registerAdapt(ILoginByHash,Renamed3556);
+         modelRegisterAdapt.registerEvents(ILoginByHash,Renamed3555);
+         modelRegister.add(new BlockValidatorModel(),Vector.<Class>([Renamed3542]));
          modelRegister.add(new PasswordRegistrationModel(),Vector.<Class>([IRegistrationModelBase,IPasswordRegistration,ObjectLoadListener,IImageResource]));
-         modelRegisterAdapt.registerAdapt(IExternalEntranceModel,§2"'§);
-         modelRegisterAdapt.registerEvents(IExternalEntranceModel,§`"c§);
-         modelRegister.add(new ExternalEntranceModel(),Vector.<Class>([§native catch while§,ObjectLoadListener,IExternalEntranceModel]));
-         modelRegister.add(new ServerCaptchaModel(),Vector.<Class>([§'"p§,IServerCaptcha,IObjectLoadListener]));
-         modelRegisterAdapt.registerAdapt(IServerCaptcha,§native implements§);
-         modelRegisterAdapt.registerEvents(IServerCaptcha,§9J§);
+         modelRegisterAdapt.registerAdapt(IExternalEntranceModel,Renamed3571);
+         modelRegisterAdapt.registerEvents(IExternalEntranceModel,Renamed3573);
+         modelRegister.add(new ExternalEntranceModel(),Vector.<Class>([Renamed3562,ObjectLoadListener,IExternalEntranceModel]));
+         modelRegister.add(new ServerCaptchaModel(),Vector.<Class>([Renamed3545,IServerCaptcha,IObjectLoadListener]));
+         modelRegisterAdapt.registerAdapt(IServerCaptcha,Renamed3550);
+         modelRegisterAdapt.registerEvents(IServerCaptcha,Renamed3549);
          modelRegister.add(new EntranceModel(),Vector.<Class>([IEntranceModelBase,ObjectLoadListener,ObjectLoadPostListener,ObjectUnloadPostListener]));
-         modelRegisterAdapt.registerAdapt(§=n§,§null catch null§);
-         modelRegisterAdapt.registerEvents(§=n§,§]"y§);
-         modelRegister.add(new §dynamic const continue§(),Vector.<Class>([§=n§,§for for true§]));
+         modelRegisterAdapt.registerAdapt(Renamed4836,Renamed4839);
+         modelRegisterAdapt.registerEvents(Renamed4836,Renamed4837);
+         modelRegister.add(new Renamed4838(),Vector.<Class>([Renamed4836,Renamed4830]));
       }
       
       public function stop(param1:OSGi) : void

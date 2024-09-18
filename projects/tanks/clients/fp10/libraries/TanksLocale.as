@@ -386,7 +386,7 @@ package projects.tanks.clients.fp10.libraries
       
       public static const TEXT_BATTLE_BONUS_BOX_TEXT:String = "BATTLE_BONUS_BOX_TEXT";
       
-      public static const §<G§:String = "BATTLE_CRYSTAL_BOX_TEXT";
+      public static const Renamed3919:String = "BATTLE_CRYSTAL_BOX_TEXT";
       
       public static const TEXT_BATTLE_STAT_KDRATIO:String = "BATTLE_STAT_KDRATIO";
       
@@ -518,11 +518,11 @@ package projects.tanks.clients.fp10.libraries
       
       public static const TEXT_CHAT_SHARP_RULES:String = "CHAT_SHARP_RULES";
       
-      public static const §final var const§:String = "CHAT_SHARP_TELEGRAM";
+      public static const Renamed2066:String = "CHAT_SHARP_TELEGRAM";
       
-      public static const §#I§:String = "CHAT_SHARP_YOUTUBE";
+      public static const Renamed2067:String = "CHAT_SHARP_YOUTUBE";
       
-      public static const §^<§:String = "CHAT_SHARP_VK";
+      public static const Renamed2068:String = "CHAT_SHARP_VK";
       
       public static const TEXT_GARAGE_CATEGORY_BUTTON_HULLS:String = "GARAGE_CATEGORY_BUTTON_HULLS";
       
@@ -1084,7 +1084,7 @@ package projects.tanks.clients.fp10.libraries
       
       public static const TEXT_GARAGE_CONFIRM_ALERT_BUY_QEUSTION_TEXT:String = "GARAGE_CONFIRM_ALERT_BUY_QEUSTION_TEXT";
       
-      public static const §set for finally§:String = "GARAGE_CONFIRM_ALERT_RENT_QUESTION_TEXT";
+      public static const Renamed2101:String = "GARAGE_CONFIRM_ALERT_RENT_QUESTION_TEXT";
       
       public static const TEXT_GARAGE_CONFIRM_ALERT_UPGRADE_QEUSTION_TEXT:String = "GARAGE_CONFIRM_ALERT_UPGRADE_QEUSTION_TEXT";
       
@@ -1780,9 +1780,9 @@ package projects.tanks.clients.fp10.libraries
       
       public static const TEXT_HELP_PANEL_ACHIEVEMENTS_INVITE_FRIEND_ARROW_LENGTH:String = "HELP_PANEL_ACHIEVEMENTS_INVITE_FRIEND_ARROW_LENGTH";
       
-      public static const §'"H§:String = "BATTLE_PRO_BATTLE_ENTER_ALERT";
+      public static const Renamed1619:String = "BATTLE_PRO_BATTLE_ENTER_ALERT";
       
-      public static const §-!Y§:String = "BATTLE_CREATE_PANEL_MAP_NAME_LABEL";
+      public static const Renamed3918:String = "BATTLE_CREATE_PANEL_MAP_NAME_LABEL";
       
       public static const IMAGE_HEADER_BATTLES:String = "HEADER_BATTLES";
       
@@ -1886,7 +1886,7 @@ package projects.tanks.clients.fp10.libraries
       
       public static const IMAGE_NEWS_HEADER:String = "NEWS_HEADER";
       
-      public static const §]#i§:String = "DAILY_QUEST_MISSIONS";
+      public static const Renamed4049:String = "DAILY_QUEST_MISSIONS";
       
       public function TanksLocale()
       {

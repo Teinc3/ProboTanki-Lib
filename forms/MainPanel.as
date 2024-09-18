@@ -91,7 +91,7 @@ package forms
       
       private function onUpdateRank(param1:UserPropertiesServiceEvent) : void
       {
-         if(this.buttonBar.§!#T§())
+         if(this.buttonBar.Renamed2162())
          {
             this.buttonBar.draw();
             this.onResize();

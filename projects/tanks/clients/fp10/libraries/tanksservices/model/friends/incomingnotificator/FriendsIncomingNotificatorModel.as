@@ -1,7 +1,7 @@
 package projects.tanks.clients.fp10.libraries.tanksservices.model.friends.incomingnotificator
 {
-   import § !a§.§+!P§;
-   import § !a§.§return catch§;
+   import Renamed135.Renamed4496;
+   import Renamed135.Renamed4497;
    import alternativa.osgi.service.logging.LogService;
    import platform.client.fp10.core.model.ObjectLoadListener;
    import platform.client.fp10.core.model.ObjectUnloadListener;
@@ -9,7 +9,7 @@ package projects.tanks.clients.fp10.libraries.tanksservices.model.friends.incomi
    import projects.tanks.clients.fp10.libraries.tanksservices.service.friend.IFriendInfoService;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.friend.NewFriendRemoveEvent;
    
-   public class FriendsIncomingNotificatorModel extends §return catch§ implements §+!P§, ObjectLoadListener, ObjectUnloadListener
+   public class FriendsIncomingNotificatorModel extends Renamed4497 implements Renamed4496, ObjectLoadListener, ObjectUnloadListener
    {
       [Inject]
       public static var logService:LogService;

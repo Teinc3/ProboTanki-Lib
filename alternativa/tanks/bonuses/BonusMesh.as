@@ -9,7 +9,7 @@ package alternativa.tanks.bonuses
    public class BonusMesh extends BonusObject3DBase
    {
       [Inject]
-      public static var §super package implements§:ILightingEffectsService;
+      public static var Renamed1445:ILightingEffectsService;
       
       private var bonusColorTransform:ColorTransform;
       
@@ -42,7 +42,7 @@ package alternativa.tanks.bonuses
          this.setScale(1);
          setAlpha(1);
          setAlphaMultiplier(1);
-         this.bonusColorTransform = §super package implements§.§if switch§();
+         this.bonusColorTransform = Renamed1445.Renamed1447();
          object.colorTransform = this.bonusColorTransform;
       }
       

@@ -3,11 +3,11 @@ package alternativa.tanks.bonuses
    import alternativa.tanks.animations.AnimationTrack;
    import alternativa.tanks.animations.KeyFrameAnimation;
    import alternativa.tanks.battle.BattleService;
-   import alternativa.tanks.battle.scene3d.§else if§;
-   import §extends for const§.§1Q§;
-   import §extends for const§.§["D§;
+   import alternativa.tanks.battle.scene3d.Renamed919;
+   import Renamed356.Renamed1443;
+   import Renamed356.Renamed1444;
    
-   public class SpawnFlashRenderer extends §["D§ implements §else if§
+   public class SpawnFlashRenderer extends Renamed1444 implements Renamed919
    {
       [Inject]
       public static var battleService:BattleService;
@@ -24,7 +24,7 @@ package alternativa.tanks.bonuses
       
       private var bonus:BattleBonus;
       
-      public function SpawnFlashRenderer(param1:§1Q§)
+      public function SpawnFlashRenderer(param1:Renamed1443)
       {
          this.colorTransform = new AnimatedColorTransform();
          this.animation = new KeyFrameAnimation(animationTrack,this.colorTransform);
@@ -38,7 +38,7 @@ package alternativa.tanks.bonuses
          param1.onPickup.add(this.destroy);
          param1.onDestroy.add(this.destroy);
          param1.getBonusMesh().setColorTransform(this.colorTransform.colorTransform);
-         battleService.§3l§().§9"N§(this,0);
+         battleService.Renamed621().Renamed1287(this,0);
          this.animation.start();
       }
       
@@ -57,7 +57,7 @@ package alternativa.tanks.bonuses
       
       private function destroy() : void
       {
-         battleService.§3l§().§0!n§(this,0);
+         battleService.Renamed621().Renamed1289(this,0);
          this.bonus.onRemove.remove(this.destroy);
          this.bonus.onPickup.remove(this.destroy);
          this.bonus.onDestroy.remove(this.destroy);

@@ -4,17 +4,17 @@ package alternativa.tanks.gui.settings
    
    public class SelectTabEvent extends Event
    {
-      public static var §@=§:String = "SelectTabEvent";
+      public static var Renamed1957:String = "SelectTabEvent";
       
-      private var selectedCategory:§const const const§;
+      private var selectedCategory:Renamed1958;
       
-      public function SelectTabEvent(param1:§const const const§)
+      public function SelectTabEvent(param1:Renamed1958)
       {
-         super(§@=§);
+         super(Renamed1957);
          this.selectedCategory = param1;
       }
       
-      public function getSelectedCategory() : §const const const§
+      public function getSelectedCategory() : Renamed1958
       {
          return this.selectedCategory;
       }

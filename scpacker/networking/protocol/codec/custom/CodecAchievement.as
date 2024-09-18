@@ -1,8 +1,8 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import §[" §.ICodec;
+   import Renamed5811.ICodec;
    import flash.utils.ByteArray;
-   import projects.tanks.client.achievements.model.achievements.§null package extends§;
+   import projects.tanks.client.achievements.model.achievements.Renamed2072;
    
    public class CodecAchievement implements ICodec
    {
@@ -13,24 +13,24 @@ package scpacker.networking.protocol.codec.custom
       
       public function decode(param1:ByteArray) : Object
       {
-         var _loc2_:§null package extends§ = null;
+         var _loc2_:Renamed2072 = null;
          var _loc3_:int = param1.readInt();
          switch(_loc3_)
          {
             case 0:
-               _loc2_ = §null package extends§.FIRST_RANK_UP;
+               _loc2_ = Renamed2072.FIRST_RANK_UP;
                break;
             case 1:
-               _loc2_ = §null package extends§.FIRST_PURCHASE;
+               _loc2_ = Renamed2072.FIRST_PURCHASE;
                break;
             case 2:
-               _loc2_ = §null package extends§.SET_EMAIL;
+               _loc2_ = Renamed2072.SET_EMAIL;
                break;
             case 3:
-               _loc2_ = §null package extends§.FIGHT_FIRST_BATTLE;
+               _loc2_ = Renamed2072.FIGHT_FIRST_BATTLE;
                break;
             case 4:
-               _loc2_ = §null package extends§.FIRST_DONATE;
+               _loc2_ = Renamed2072.FIRST_DONATE;
          }
          return _loc2_;
       }

@@ -5,7 +5,7 @@ package alternativa.tanks.gui.upgrade
    import alternativa.tanks.gui.timer.CountDownTimerWithIcon;
    import alternativa.tanks.model.item.upgradable.UpgradableItemPropertyValue;
    import alternativa.tanks.service.itempropertyparams.ItemPropertyParamsService;
-   import alternativa.tanks.service.itempropertyparams.§else package implements§;
+   import alternativa.tanks.service.itempropertyparams.Renamed1710;
    import base.DiscreteSprite;
    import controls.TankWindowInner;
    import controls.labels.MouseDisabledLabel;
@@ -45,7 +45,7 @@ package alternativa.tanks.gui.upgrade
       
       private var timerLabel:CountDownTimerWithIcon;
       
-      private var propertyParams:§else package implements§;
+      private var propertyParams:Renamed1710;
       
       protected var propertyValue:UpgradableItemPropertyValue;
       
@@ -81,7 +81,7 @@ package alternativa.tanks.gui.upgrade
          this.bg.addChild(this.progressBar);
          this.bg.addChild(this.textLayer);
          this.propertyParams = propertyService.getParams(param3.getProperty());
-         this.icon = this.propertyParams.§+#_§();
+         this.icon = this.propertyParams.Renamed2003();
          var _loc4_:Bitmap;
          (_loc4_ = new Bitmap(ItemInfoPanelBitmaps.backIcon)).x = HORIZONTAL_MARGIN;
          _loc4_.y = 1;

@@ -15,7 +15,7 @@ package alternativa.tanks.gui.friends.battleinvite
    import projects.tanks.clients.fp10.libraries.tanksservices.service.alertservices.IAlertService;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.friend.battleinvite.IBattleInviteService;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.storage.IStorageService;
-   import services.alertservice.§get const use§;
+   import services.alertservice.Renamed1616;
    
    public class BattleInviteNotification extends Notification
    {
@@ -145,7 +145,7 @@ package alternativa.tanks.gui.friends.battleinvite
          battleInviteService.reject(userId);
          if(this._inaccessibleInStandalone && !isShowAlertAboutInaccessibleInStandalone())
          {
-            battleAlertService.showAlert(localeService.getText(TextConst.STRING_YOUR_ARE_PLAING_SAFP_ALERT),Vector.<String>([localeService.getText(§get const use§.OK)]));
+            battleAlertService.showAlert(localeService.getText(TextConst.STRING_YOUR_ARE_PLAING_SAFP_ALERT),Vector.<String>([localeService.getText(Renamed1616.OK)]));
             markAsShowAlertAboutInaccessibleInStandalone();
          }
          hide();

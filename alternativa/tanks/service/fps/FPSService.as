@@ -2,9 +2,9 @@ package alternativa.tanks.service.fps
 {
    public interface FPSService
    {
-      function §,"Q§() : Number;
+      function Renamed1654() : Number;
       
-      function §>#X§() : Number;
+      function Renamed3671() : Number;
    }
 }
 

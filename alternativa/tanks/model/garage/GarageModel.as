@@ -1,7 +1,7 @@
 package alternativa.tanks.model.garage
 {
-   import §;"-§.§[Z§;
-   import §;"-§.§finally for implements§;
+   import Renamed2090.Renamed2091;
+   import Renamed2090.Renamed2092;
    import alternativa.engine3d.materials.TextureResourcesRegistry;
    import alternativa.osgi.service.clientlog.IClientLog;
    import alternativa.osgi.service.command.CommandService;
@@ -10,7 +10,7 @@ package alternativa.tanks.model.garage
    import alternativa.osgi.service.dump.IDumpService;
    import alternativa.osgi.service.locale.ILocaleService;
    import alternativa.tanks.blur.IBlurService;
-   import alternativa.tanks.gui.§1#^§;
+   import alternativa.tanks.gui.Renamed1691;
    import alternativa.tanks.gui.ConfirmAlert;
    import alternativa.tanks.gui.GarageWindow;
    import alternativa.tanks.gui.GarageWindowEvent;
@@ -31,7 +31,7 @@ package alternativa.tanks.model.garage
    import alternativa.tanks.service.item3d.ITank3DViewer;
    import alternativa.tanks.service.money.IMoneyService;
    import alternativa.tanks.service.temporaryitem.ITemporaryItemService;
-   import alternativa.tanks.service.temporaryitemnotify.§3M§;
+   import alternativa.tanks.service.temporaryitemnotify.Renamed2093;
    import alternativa.tanks.service.temporaryitemnotify.ITemporaryItemNotifyService;
    import alternativa.tanks.tracker.ITrackerService;
    import controls.timer.CountDownTimer;
@@ -43,7 +43,7 @@ package alternativa.tanks.model.garage
    import flash.events.Event;
    import flash.events.MouseEvent;
    import flash.geom.Point;
-   import §get const function§.§'-§;
+   import Renamed378.Renamed2094;
    import platform.client.fp10.core.model.ObjectLoadListener;
    import platform.client.fp10.core.model.ObjectUnloadListener;
    import platform.client.fp10.core.registry.ModelRegistry;
@@ -62,9 +62,9 @@ package alternativa.tanks.model.garage
    import projects.tanks.clients.fp10.libraries.tanksservices.service.userproperties.IUserPropertiesService;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.userproperties.UserPropertiesServiceEvent;
    import services.alertservice.Alert;
-   import services.alertservice.§get const use§;
+   import services.alertservice.Renamed1616;
    
-   public class GarageModel extends GarageModelBase implements IGarageModelBase, ObjectLoadListener, ObjectUnloadListener, IResourceLoadingListener, §3M§, §null package override§
+   public class GarageModel extends GarageModelBase implements IGarageModelBase, ObjectLoadListener, ObjectUnloadListener, IResourceLoadingListener, Renamed2093, Renamed2095
    {
       [Inject]
       public static var trackerService:ITrackerService;
@@ -127,7 +127,7 @@ package alternativa.tanks.model.garage
       public static var battleInfoService:IBattleInfoService;
       
       [Inject]
-      public static var §super set dynamic§:IDelayMountCategoryService;
+      public static var Renamed1714:IDelayMountCategoryService;
       
       private static const GA_CATEGORY:String = "garage";
       
@@ -181,7 +181,7 @@ package alternativa.tanks.model.garage
       public function objectLoaded() : void
       {
          this.garageWindow = new GarageWindow(getInitParam().garageBox,false);
-         garageService.§8c§(this.garageWindow);
+         garageService.Renamed2096(this.garageWindow);
       }
       
       public function objectUnloaded() : void
@@ -222,9 +222,9 @@ package alternativa.tanks.model.garage
          loaderWindowService.showLoaderWindow();
          CountDownTimer.resetAllTimers();
          itemService.reset();
-         moneyService.§class catch§(param2 - moneyService.crystal);
+         moneyService.Renamed2097(param2 - moneyService.crystal);
          var _loc3_:Alert = new Alert();
-         _loc3_.showAlert(param1,Vector.<String>([§get const use§.OK]));
+         _loc3_.showAlert(param1,Vector.<String>([Renamed1616.OK]));
          display.dialogsLayer.addChild(_loc3_);
          this.destroyGarageWindow();
          this.unregisterDumpers();
@@ -262,7 +262,7 @@ package alternativa.tanks.model.garage
             _loc1_.removeChild(this.garageWindow);
          }
          tank3DViewer.resetView();
-         garageService.§<#h§();
+         garageService.Renamed2098();
          this.garageWindow = null;
       }
       
@@ -290,7 +290,7 @@ package alternativa.tanks.model.garage
          while(_loc3_ < param1.length)
          {
             _loc2_ = param1[_loc3_];
-            itemService.§8#X§(itemService.getCategory(_loc2_));
+            itemService.Renamed2099(itemService.getCategory(_loc2_));
             this.mountItem(_loc2_);
             _loc3_++;
          }
@@ -332,21 +332,21 @@ package alternativa.tanks.model.garage
          this.garageWindow.initStore(param1);
          this.garageWindow.addEventListener(GarageWindowEvent.STORE_ITEM_SELECTED,this.onStoreListSelect);
          this.garageWindow.addEventListener(GarageWindowEvent.BUY_ITEM,this.onBuyClick);
-         this.garageWindow.addEventListener(GarageWindowEvent.DELETE_PRESENT,getFunctionWrapper(this.§^r§));
+         this.garageWindow.addEventListener(GarageWindowEvent.DELETE_PRESENT,getFunctionWrapper(this.Renamed2100));
          this.initGarageWindow();
       }
       
-      private function §^r§(param1:GarageWindowEvent) : void
+      private function Renamed2100(param1:GarageWindowEvent) : void
       {
-         §[Z§(object.adapt(§[Z§)).removePresent(param1.item);
+         Renamed2091(object.adapt(Renamed2091)).removePresent(param1.item);
       }
       
       public function select(param1:IGameObject) : void
       {
          var _loc2_:IGameObject = null;
-         if(itemService.§!"p§(param1))
+         if(itemService.Renamed1704(param1))
          {
-            _loc2_ = itemService.§case const else§(param1);
+            _loc2_ = itemService.Renamed1931(param1);
             if(_loc2_ != null)
             {
                param1 = _loc2_;
@@ -386,7 +386,7 @@ package alternativa.tanks.model.garage
          this.warehouseSelectedItem = _loc3_;
          if(_loc4_ == ItemCategoryEnum.WEAPON || _loc4_ == ItemCategoryEnum.ARMOR)
          {
-            _loc2_ = itemService.§6#y§(_loc3_);
+            _loc2_ = itemService.Renamed1705(_loc3_);
             if(_loc2_ != null)
             {
                this.loadItemPreview(_loc2_);
@@ -430,7 +430,7 @@ package alternativa.tanks.model.garage
       public function showConfirmAlert(param1:String, param2:int, param3:BitmapData, param4:Boolean, param5:int, param6:int = -1, param7:Boolean = false) : void
       {
          blurService.blur();
-         this.confirmAlert = new ConfirmAlert(param1,param2,param3,param4,param5,param7 ? localeService.getText(TanksLocale.§set for finally§) : (param4 ? localeService.getText(TanksLocale.TEXT_GARAGE_CONFIRM_ALERT_BUY_QEUSTION_TEXT) : localeService.getText(TanksLocale.TEXT_GARAGE_CONFIRM_ALERT_UPGRADE_QEUSTION_TEXT)),param6,param7);
+         this.confirmAlert = new ConfirmAlert(param1,param2,param3,param4,param5,param7 ? localeService.getText(TanksLocale.Renamed2101) : (param4 ? localeService.getText(TanksLocale.TEXT_GARAGE_CONFIRM_ALERT_BUY_QEUSTION_TEXT) : localeService.getText(TanksLocale.TEXT_GARAGE_CONFIRM_ALERT_UPGRADE_QEUSTION_TEXT)),param6,param7);
          display.dialogsLayer.addChild(this.confirmAlert);
          this.confirmAlert.confirmButton.addEventListener(MouseEvent.CLICK,this.onBuyAlertConfirm);
          this.confirmAlert.cancelButton.addEventListener(MouseEvent.CLICK,this.hideConfirmAlert);
@@ -446,10 +446,10 @@ package alternativa.tanks.model.garage
       
       private function buyNextModification() : void
       {
-         var _loc1_:IGameObject = itemService.§6#y§(this.itemWaitingForConfirmation);
-         var _loc2_:IGameObject = itemService.§!#P§(_loc1_);
+         var _loc1_:IGameObject = itemService.Renamed1705(this.itemWaitingForConfirmation);
+         var _loc2_:IGameObject = itemService.Renamed2102(_loc1_);
          var _loc3_:int = itemService.getPrice(_loc1_);
-         moneyService.§case package final§(itemService.getPrice(_loc1_));
+         moneyService.Renamed2103(itemService.getPrice(_loc1_));
          server.nextModificationBought(_loc2_,_loc3_);
          this.forceUpgradePreviosModifications(_loc1_);
          this.upgradeItem(_loc2_,_loc1_);
@@ -460,16 +460,16 @@ package alternativa.tanks.model.garage
          var _loc2_:int = 0;
          var _loc3_:int = 0;
          this.hideConfirmAlert();
-         if(itemService.§2"J§(this.itemWaitingForConfirmation))
+         if(itemService.Renamed1700(this.itemWaitingForConfirmation))
          {
             this.buyKit();
             if(!itemService.canBuy(this.itemWaitingForConfirmation))
             {
-               this.§4j§(this.itemWaitingForConfirmation);
+               this.Renamed2104(this.itemWaitingForConfirmation);
             }
             return;
          }
-         if(itemService.§!"p§(this.itemWaitingForConfirmation) && itemService.§null var continue§(this.itemWaitingForConfirmation))
+         if(itemService.Renamed1704(this.itemWaitingForConfirmation) && itemService.Renamed1773(this.itemWaitingForConfirmation))
          {
             this.buyNextModification();
          }
@@ -485,10 +485,10 @@ package alternativa.tanks.model.garage
             {
                _loc2_ = 1;
             }
-            moneyService.§case package final§(_loc3_);
-            if(itemService.§extends const each§(this.itemWaitingForConfirmation))
+            moneyService.Renamed2103(_loc3_);
+            if(itemService.Renamed2105(this.itemWaitingForConfirmation))
             {
-               §finally for implements§(this.itemWaitingForConfirmation.adapt(§finally for implements§)).confirmPresentPurchase(this.itemWaitingForConfirmation);
+               Renamed2092(this.itemWaitingForConfirmation.adapt(Renamed2092)).confirmPresentPurchase(this.itemWaitingForConfirmation);
                return;
             }
             server.itemBought(this.itemWaitingForConfirmation,_loc2_,_loc3_);
@@ -507,12 +507,12 @@ package alternativa.tanks.model.garage
          {
             return;
          }
-         moneyService.§case package final§(_loc4_);
+         moneyService.Renamed2103(_loc4_);
          server.kitBought(this.itemWaitingForConfirmation,_loc4_);
          for each(_loc1_ in _loc3_.getItems())
          {
             _loc2_ = _loc1_.item;
-            this.§import for native§(_loc2_,_loc1_.count,_loc1_.mount);
+            this.Renamed2106(_loc2_,_loc1_.count,_loc1_.mount);
             if(!itemService.isCountable(_loc2_))
             {
                this.garageWindow.updateKitsContainsItem(_loc2_);
@@ -521,10 +521,10 @@ package alternativa.tanks.model.garage
          this.garageWindow.showItemInCategory(this.itemWaitingForConfirmation);
       }
       
-      private function §4j§(param1:IGameObject) : void
+      private function Renamed2104(param1:IGameObject) : void
       {
-         var _loc2_:§1#^§ = null;
-         for each(_loc2_ in this.garageWindow.§#"_§)
+         var _loc2_:Renamed1691 = null;
+         for each(_loc2_ in this.garageWindow.Renamed1690)
          {
             if(param1 == _loc2_.item)
             {
@@ -533,7 +533,7 @@ package alternativa.tanks.model.garage
          }
       }
       
-      private function §import for native§(param1:IGameObject, param2:int, param3:Boolean) : void
+      private function Renamed2106(param1:IGameObject, param2:int, param3:Boolean) : void
       {
          var _loc4_:Number = NaN;
          var _loc5_:IGameObject = null;
@@ -549,7 +549,7 @@ package alternativa.tanks.model.garage
       {
          var _loc2_:IGameObject = null;
          var _loc3_:UpgradableItem = null;
-         var _loc4_:Vector.<IGameObject> = itemService.§;#U§(param1);
+         var _loc4_:Vector.<IGameObject> = itemService.Renamed1706(param1);
          for each(_loc2_ in _loc4_)
          {
             _loc3_ = UpgradableItem(_loc2_.adapt(UpgradableItem));
@@ -570,7 +570,7 @@ package alternativa.tanks.model.garage
          }
          if(_loc5_ != ItemCategoryEnum.INVENTORY)
          {
-            if(itemService.§!"p§(param1))
+            if(itemService.Renamed1704(param1))
             {
                this.garageWindow.removeAllModifications(param1);
             }
@@ -589,14 +589,14 @@ package alternativa.tanks.model.garage
                this.garageWindow.updateCount(param1);
             }
          }
-         if(param3 && itemService.§include for each§(param1) && this.§break package§(param1))
+         if(param3 && itemService.Renamed1772(param1) && this.Renamed2107(param1))
          {
             this.mountItem(param1);
             server.itemMounted(param1);
          }
       }
       
-      public function §break package§(param1:IGameObject) : Boolean
+      public function Renamed2107(param1:IGameObject) : Boolean
       {
          if(!lobbyLayoutService.inBattle())
          {
@@ -606,7 +606,7 @@ package alternativa.tanks.model.garage
          {
             return false;
          }
-         var _loc2_:CountDownTimer = §super set dynamic§.§+N§(param1);
+         var _loc2_:CountDownTimer = Renamed1714.Renamed1775(param1);
          return _loc2_.getRemainingSeconds() <= 0;
       }
       
@@ -622,7 +622,7 @@ package alternativa.tanks.model.garage
       {
          this.garageWindow.addItemToDepot(param2);
          this.garageWindow.selectItemInWarehouse(param2);
-         if(!itemService.§,!S§(param2))
+         if(!itemService.Renamed1774(param2))
          {
             this.mountItem(param2);
             server.itemMounted(param2);
@@ -637,23 +637,23 @@ package alternativa.tanks.model.garage
          var _loc3_:ItemCategoryEnum = null;
          var _loc4_:int = 0;
          var _loc5_:Boolean = false;
-         var _loc6_:Boolean = §'-§(param1.item.adapt(§'-§)).isForRent();
+         var _loc6_:Boolean = Renamed2094(param1.item.adapt(Renamed2094)).isForRent();
          this.itemWaitingForConfirmation = param1.item;
-         var _loc7_:int = this.getPrice(itemService.§null var continue§(param1.item) && itemService.§!"p§(param1.item) ? itemService.§6#y§(param1.item) : param1.item);
-         if(moneyService.§while package dynamic§(_loc7_))
+         var _loc7_:int = this.getPrice(itemService.Renamed1773(param1.item) && itemService.Renamed1704(param1.item) ? itemService.Renamed1705(param1.item) : param1.item);
+         if(moneyService.Renamed1617(_loc7_))
          {
-            if(itemService.§extends const each§(this.itemWaitingForConfirmation))
+            if(itemService.Renamed2105(this.itemWaitingForConfirmation))
             {
-               §finally for implements§(param1.item.adapt(§finally for implements§)).preparePresent(this.itemWaitingForConfirmation);
+               Renamed2092(param1.item.adapt(Renamed2092)).preparePresent(this.itemWaitingForConfirmation);
                return;
             }
-            if(itemService.§null var continue§(this.itemWaitingForConfirmation) && itemService.§!"p§(this.itemWaitingForConfirmation))
+            if(itemService.Renamed1773(this.itemWaitingForConfirmation) && itemService.Renamed1704(this.itemWaitingForConfirmation))
             {
-               _loc2_ = itemService.getPreviewResource(itemService.§6#y§(this.itemWaitingForConfirmation)).data;
-               _loc3_ = itemService.getCategory(itemService.§6#y§(this.itemWaitingForConfirmation));
-               _loc4_ = itemService.getPrice(itemService.§6#y§(this.itemWaitingForConfirmation));
-               _loc5_ = itemService.isCountable(itemService.§6#y§(this.itemWaitingForConfirmation));
-               this.showConfirmAlert(itemService.getName(itemService.§6#y§(this.itemWaitingForConfirmation)),_loc4_,_loc2_,false,_loc3_ == ItemCategoryEnum.ARMOR || _loc3_ == ItemCategoryEnum.WEAPON ? int(itemService.getModificationIndex(itemService.§6#y§(param1.item))) : int(-1),_loc5_ ? int(this.garageWindow.itemInfoPanel.inventoryNumStepper.value) : int(-1),_loc6_);
+               _loc2_ = itemService.getPreviewResource(itemService.Renamed1705(this.itemWaitingForConfirmation)).data;
+               _loc3_ = itemService.getCategory(itemService.Renamed1705(this.itemWaitingForConfirmation));
+               _loc4_ = itemService.getPrice(itemService.Renamed1705(this.itemWaitingForConfirmation));
+               _loc5_ = itemService.isCountable(itemService.Renamed1705(this.itemWaitingForConfirmation));
+               this.showConfirmAlert(itemService.getName(itemService.Renamed1705(this.itemWaitingForConfirmation)),_loc4_,_loc2_,false,_loc3_ == ItemCategoryEnum.ARMOR || _loc3_ == ItemCategoryEnum.WEAPON ? int(itemService.getModificationIndex(itemService.Renamed1705(param1.item))) : int(-1),_loc5_ ? int(this.garageWindow.itemInfoPanel.inventoryNumStepper.value) : int(-1),_loc6_);
             }
             else
             {
@@ -670,7 +670,7 @@ package alternativa.tanks.model.garage
          }
       }
       
-      public function §case package throw§(param1:Vector.<IGameObject>) : void
+      public function Renamed2108(param1:Vector.<IGameObject>) : void
       {
          var _loc2_:Boolean = false;
          var _loc3_:IGameObject = null;

@@ -133,7 +133,7 @@ package scpacker.gui
          IDialogsService(OSGi.getInstance().getService(IDialogsService)).removeDialog(this);
       }
       
-      public function §else for final§() : String
+      public function Renamed8814() : String
       {
          return this.passInput.value;
       }

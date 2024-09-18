@@ -1,6 +1,6 @@
 package alternativa.tanks.service.battleinfo
 {
-   import § !g§.§class for case§;
+   import Renamed136.Renamed663;
    import alternativa.tanks.view.battleinfo.dm.BattleInfoDmParams;
    import alternativa.tanks.view.battleinfo.team.BattleInfoTeamParams;
    import flash.events.IEventDispatcher;
@@ -8,21 +8,21 @@ package alternativa.tanks.service.battleinfo
    
    public interface IBattleInfoFormService extends IEventDispatcher
    {
-      function §set package default§(param1:BattleInfoDmParams) : void;
+      function Renamed3626(param1:BattleInfoDmParams) : void;
       
-      function §implements var function§(param1:BattleInfoTeamParams) : void;
+      function Renamed3627(param1:BattleInfoTeamParams) : void;
       
-      function §+!x§() : void;
+      function Renamed2121() : void;
       
       function destroy() : void;
       
       function updateName(param1:String) : void;
       
-      function updateTeamScore(param1:§class for case§, param2:int) : void;
+      function updateTeamScore(param1:Renamed663, param2:int) : void;
       
-      function addUserTeam(param1:BattleInfoUser, param2:§class for case§) : void;
+      function addUserTeam(param1:BattleInfoUser, param2:Renamed663) : void;
       
-      function §1#F§(param1:BattleInfoUser) : void;
+      function Renamed3628(param1:BattleInfoUser) : void;
       
       function removeUser(param1:String) : void;
       
@@ -32,7 +32,7 @@ package alternativa.tanks.service.battleinfo
       
       function swapTeams() : void;
       
-      function §+#E§() : void;
+      function Renamed3629() : void;
       
       function roundStart() : void;
       
@@ -40,13 +40,13 @@ package alternativa.tanks.service.battleinfo
       
       function battleStop() : void;
       
-      function §3o§() : void;
+      function Renamed1622() : void;
       
       function removeFormFromStage() : void;
       
       function getBattleItemId() : String;
       
-      function §package for set§() : void;
+      function Renamed3630() : void;
    }
 }
 

@@ -140,33 +140,7 @@ package com.hurlant.util.asn1.type
                      }
                      return null;
                   }
-                  §§goto(addr93);
-               }
-               else
-               {
-                  _loc6_ = this.readDERTag(param1);
-                  if(this.defaultTag == ANY)
-                  {
-                     this.parsedTag = _loc6_;
-                  }
-                  else
-                  {
-                     if(_loc6_ != this.defaultTag)
-                     {
-                     }
-                     §§goto(addr93);
-                  }
-               }
-               _loc4_ = this.readDERLength(param1);
-               _loc5_ = this.fromDERContent(param1,_loc4_);
-               if(_loc5_ != null)
-               {
-                  return _loc5_;
-               }
-            }
-            §§goto(addr93);
-         }
-         §§goto(addr38);
+                  §Renamed3960Renamed3961Renamed3962§goto(addr38);
       }
       
       protected function fromDefaultValue() : *

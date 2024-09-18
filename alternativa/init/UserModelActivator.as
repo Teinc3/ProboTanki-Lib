@@ -1,6 +1,6 @@
 package alternativa.init
 {
-   import §`C§.§1#O§;
+   import Renamed501.Renamed579;
    import alternativa.osgi.OSGi;
    import alternativa.osgi.bundle.IBundleActivator;
    import alternativa.osgi.service.display.IDisplay;
@@ -50,7 +50,7 @@ package alternativa.init
       public function start(param1:OSGi) : void
       {
          UserModelActivator.osgi = param1;
-         param1.registerService(IExternalEntranceService,new §1#O§());
+         param1.registerService(IExternalEntranceService,new Renamed579());
          this._context = new EntranceContext((param1.getService(IDisplay) as IDisplay).contentUILayer);
       }
       

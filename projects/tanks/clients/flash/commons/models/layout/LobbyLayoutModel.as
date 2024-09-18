@@ -3,11 +3,11 @@ package projects.tanks.clients.flash.commons.models.layout
    import platform.client.fp10.core.model.ObjectLoadListener;
    import platform.client.fp10.core.model.ObjectUnloadListener;
    import projects.tanks.client.commons.models.layout.LayoutState;
-   import projects.tanks.client.commons.models.layout.§catch var set§;
-   import projects.tanks.client.commons.models.layout.§extends try§;
+   import projects.tanks.client.commons.models.layout.Renamed4254;
+   import projects.tanks.client.commons.models.layout.Renamed4255;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.layout.ILobbyLayoutService;
    
-   public class LobbyLayoutModel extends §extends try§ implements §catch var set§, ILobbyLayout, ObjectLoadListener, ObjectUnloadListener
+   public class LobbyLayoutModel extends Renamed4255 implements Renamed4254, ILobbyLayout, ObjectLoadListener, ObjectUnloadListener
    {
       [Inject]
       public static var lobbyLayoutService:ILobbyLayoutService;

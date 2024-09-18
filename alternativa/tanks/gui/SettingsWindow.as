@@ -220,13 +220,13 @@ package alternativa.tanks.gui
       {
          if(param1 != null)
          {
-            param1.§ !w§ = param2;
+            param1.Renamed1878 = param2;
          }
       }
       
       private static function getCheckBoxState(param1:TankCheckBoxBase) : Boolean
       {
-         return param1 != null && param1.§ !w§;
+         return param1 != null && param1.Renamed1878;
       }
       
       private static function restoreInput(param1:FocusEvent) : void
@@ -312,7 +312,7 @@ package alternativa.tanks.gui
       
       private function checkDustAvailable() : void
       {
-         this.cbDust.visible = Boolean(this.cbSoftParticles) && !this.cbGraphicsAutoQuality.§ !w§ && this.cbSoftParticles.§ !w§;
+         this.cbDust.visible = Boolean(this.cbSoftParticles) && !this.cbGraphicsAutoQuality.Renamed1878 && this.cbSoftParticles.Renamed1878;
       }
       
       private function createGraphicsAutoQualityCheckBox(param1:ILocaleService) : void
@@ -323,7 +323,7 @@ package alternativa.tanks.gui
       
       private function onGraphicsAutQualityClick(param1:MouseEvent) : void
       {
-         var _loc2_:* = !this.cbGraphicsAutoQuality.§ !w§;
+         var _loc2_:* = !this.cbGraphicsAutoQuality.Renamed1878;
          this.cbFog.visible = _loc2_;
          this.cbTankShadow.visible = _loc2_;
          this.cbDynamicShadows.visible = _loc2_;
@@ -494,7 +494,7 @@ package alternativa.tanks.gui
       private function createSNPanel() : void
       {
          this.currentSN = VKONTAKTE;
-         var _loc1_:Boolean = socialNetworkService.§if catch var§(this.currentSN);
+         var _loc1_:Boolean = socialNetworkService.Renamed1879(this.currentSN);
          var _loc2_:Sprite = new Sprite();
          this.snHasLinkLabel = new LabelBase();
          this.snHasLinkLabel.text = _loc1_ ? localeService.getText(TextConst.STRING_SETTINGS_UNLINK_ACCOUNT) : localeService.getText(TextConst.STRING_SETTINGS_LINK_ACCOUNT);
@@ -531,12 +531,12 @@ package alternativa.tanks.gui
       
       private function onSNUnLinkClick(param1:MouseEvent) : void
       {
-         socialNetworkService.§4"L§(this.currentSN);
+         socialNetworkService.Renamed1880(this.currentSN);
       }
       
       private function onSNCreateLinkClick(param1:MouseEvent) : void
       {
-         socialNetworkService.§null set throw§(this.currentSN);
+         socialNetworkService.Renamed1881(this.currentSN);
       }
       
       private function createControlPanel(param1:ILocaleService) : void
@@ -641,62 +641,62 @@ package alternativa.tanks.gui
       
       public function get bgSound() : Boolean
       {
-         return this._bgSound.§ !w§;
+         return this._bgSound.Renamed1878;
       }
       
       public function set bgSound(param1:Boolean) : void
       {
-         this._bgSound.§ !w§ = param1;
+         this._bgSound.Renamed1878 = param1;
       }
       
       public function get showFPS() : Boolean
       {
-         return this.cbShowFPS.§ !w§;
+         return this.cbShowFPS.Renamed1878;
       }
       
       public function set showFPS(param1:Boolean) : void
       {
-         this.cbShowFPS.§ !w§ = param1;
+         this.cbShowFPS.Renamed1878 = param1;
       }
       
       public function get receiveBattleInvite() : Boolean
       {
-         return this._receiveBattleInvite.§ !w§;
+         return this._receiveBattleInvite.Renamed1878;
       }
       
       public function set receiveBattleInvite(param1:Boolean) : void
       {
-         this._receiveBattleInvite.§ !w§ = param1;
+         this._receiveBattleInvite.Renamed1878 = param1;
       }
       
       public function get showSkyBox() : Boolean
       {
-         return this.cbShowSkyBox.§ !w§;
+         return this.cbShowSkyBox.Renamed1878;
       }
       
       public function set showSkyBox(param1:Boolean) : void
       {
-         this.cbShowSkyBox.§ !w§ = param1;
+         this.cbShowSkyBox.Renamed1878 = param1;
       }
       
       public function get showChat() : Boolean
       {
-         return this.cbShowChat.§ !w§;
+         return this.cbShowChat.Renamed1878;
       }
       
       public function set showChat(param1:Boolean) : void
       {
-         this.cbShowChat.§ !w§ = param1;
+         this.cbShowChat.Renamed1878 = param1;
       }
       
       public function get inverseBackDriving() : Boolean
       {
-         return this._inverseBackDriving.§ !w§;
+         return this._inverseBackDriving.Renamed1878;
       }
       
       public function set inverseBackDriving(param1:Boolean) : void
       {
-         this._inverseBackDriving.§ !w§ = param1;
+         this._inverseBackDriving.Renamed1878 = param1;
       }
       
       public function get enableMipMapping() : Boolean
@@ -711,12 +711,12 @@ package alternativa.tanks.gui
       
       public function get alternateCamera() : Boolean
       {
-         return this.cbAlternateCamera.§ !w§;
+         return this.cbAlternateCamera.Renamed1878;
       }
       
       public function set alternateCamera(param1:Boolean) : void
       {
-         this.cbAlternateCamera.§ !w§ = param1;
+         this.cbAlternateCamera.Renamed1878 = param1;
       }
       
       public function get shadowsEnabled() : Boolean
@@ -987,12 +987,12 @@ package alternativa.tanks.gui
       
       public function get adaptiveFPS() : Boolean
       {
-         return this.cbAdaptiveFPS.§ !w§;
+         return this.cbAdaptiveFPS.Renamed1878;
       }
       
       public function set adaptiveFPS(param1:Boolean) : void
       {
-         this.cbAdaptiveFPS.§ !w§ = param1;
+         this.cbAdaptiveFPS.Renamed1878 = param1;
       }
       
       public function set graphicsAutoQuality(param1:Boolean) : void
@@ -1006,12 +1006,12 @@ package alternativa.tanks.gui
       
       public function set mouseControl(param1:Boolean) : void
       {
-         this.cbMouseControl.§ !w§ = param1;
+         this.cbMouseControl.Renamed1878 = param1;
       }
       
       public function get mouseControl() : Boolean
       {
-         return this.cbMouseControl.§ !w§;
+         return this.cbMouseControl.Renamed1878;
       }
       
       public function set showMouseControl(param1:Boolean) : void

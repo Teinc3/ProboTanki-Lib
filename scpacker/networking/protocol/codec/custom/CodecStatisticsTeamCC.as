@@ -1,41 +1,41 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import §+#J§.§4#R§;
-   import §[" §.ICodec;
+   import Renamed202.Renamed6015;
+   import Renamed5811.ICodec;
    import alternativa.osgi.OSGi;
    import alternativa.osgi.service.clientlog.IClientLog;
    import flash.utils.ByteArray;
-   import projects.tanks.client.battleservice.model.statistics.§in for for§;
-   import scpacker.networking.protocol.§?"s§;
+   import projects.tanks.client.battleservice.model.statistics.Renamed2737;
+   import scpacker.networking.protocol.Renamed536;
    
    public class CodecStatisticsTeamCC implements ICodec
    {
       public static var log:IClientLog = IClientLog(OSGi.getInstance().getService(IClientLog));
       
-      private var §%#i§:ICodec;
+      private var Renamed10728:ICodec;
       
-      private var § !j§:ICodec;
+      private var Renamed10729:ICodec;
       
-      private var §override const continue§:ICodec;
+      private var Renamed10730:ICodec;
       
-      private var §if for import§:ICodec;
+      private var Renamed10731:ICodec;
       
-      public function CodecStatisticsTeamCC(param1:§?"s§)
+      public function CodecStatisticsTeamCC(param1:Renamed536)
       {
          super();
-         this.§%#i§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");
-         this.§ !j§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");
-         this.§override const continue§ = param1.getCodec("scpacker.networking.protocol.codec.custom.VectorCodecUserInfo");
-         this.§if for import§ = param1.getCodec("scpacker.networking.protocol.codec.custom.VectorCodecUserInfo");
+         this.Renamed10728 = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");
+         this.Renamed10729 = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");
+         this.Renamed10730 = param1.getCodec("scpacker.networking.protocol.codec.custom.VectorCodecUserInfo");
+         this.Renamed10731 = param1.getCodec("scpacker.networking.protocol.codec.custom.VectorCodecUserInfo");
       }
       
       public function decode(param1:ByteArray) : Object
       {
-         var _loc2_:§4#R§ = new §4#R§();
-         _loc2_.§break var for§ = this.§%#i§.decode(param1) as int;
-         _loc2_.§override const const§ = this.§ !j§.decode(param1) as int;
-         _loc2_.§-f§ = this.§override const continue§.decode(param1) as Vector.<§in for for§>;
-         _loc2_.§null for null§ = this.§if for import§.decode(param1) as Vector.<§in for for§>;
+         var _loc2_:Renamed6015 = new Renamed6015();
+         _loc2_.Renamed2689 = this.Renamed10728.decode(param1) as int;
+         _loc2_.Renamed2687 = this.Renamed10729.decode(param1) as int;
+         _loc2_.Renamed6018 = this.Renamed10730.decode(param1) as Vector.<Renamed2737>;
+         _loc2_.Renamed6019 = this.Renamed10731.decode(param1) as Vector.<Renamed2737>;
          return _loc2_;
       }
       
@@ -45,11 +45,11 @@ package scpacker.networking.protocol.codec.custom
          {
             throw new Error("Object is null. Use @ProtocolOptional annotation.");
          }
-         var _loc3_:§4#R§ = §4#R§(param2);
-         this.§%#i§.encode(param1,_loc3_.§break var for§);
-         this.§ !j§.encode(param1,_loc3_.§override const const§);
-         this.§override const continue§.encode(param1,_loc3_.§-f§);
-         this.§if for import§.encode(param1,_loc3_.§null for null§);
+         var _loc3_:Renamed6015 = Renamed6015(param2);
+         this.Renamed10728.encode(param1,_loc3_.Renamed2689);
+         this.Renamed10729.encode(param1,_loc3_.Renamed2687);
+         this.Renamed10730.encode(param1,_loc3_.Renamed6018);
+         this.Renamed10731.encode(param1,_loc3_.Renamed6019);
          return 4;
       }
    }

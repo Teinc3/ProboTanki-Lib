@@ -16,9 +16,9 @@ package alternativa.tanks.service.item3d
       
       function setColor(param1:BitmapData) : void;
       
-      function §true false§(param1:BitmapData) : void;
+      function Renamed2110(param1:BitmapData) : void;
       
-      function §3![§() : void;
+      function Renamed1762() : void;
    }
 }
 

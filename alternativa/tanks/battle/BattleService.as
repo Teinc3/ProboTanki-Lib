@@ -1,101 +1,101 @@
 package alternativa.tanks.battle
 {
-   import §14§.§7"]§;
-   import §7"j§.§final var super§;
-   import §7"j§.§finally const package§;
+   import Renamed235.Renamed607;
+   import Renamed1.Renamed608;
+   import Renamed1.Renamed609;
    import alternativa.math.Vector3;
    import alternativa.tanks.battle.objects.tank.Tank;
-   import alternativa.tanks.battle.scene3d.§[!r§;
-   import alternativa.tanks.camera.§function const package§;
-   import alternativa.tanks.models.weapon.shared.§%!v§;
-   import alternativa.tanks.models.weapon.shared.§%#e§;
-   import alternativa.tanks.models.weapon.shared.§]!m§;
-   import alternativa.tanks.models.weapon.shared.§set set get§;
-   import §extends for const§.§import use§;
-   import §false const case§.§##Z§;
+   import alternativa.tanks.battle.scene3d.Renamed610;
+   import alternativa.tanks.camera.Renamed611;
+   import alternativa.tanks.models.weapon.shared.Renamed612;
+   import alternativa.tanks.models.weapon.shared.Renamed613;
+   import alternativa.tanks.models.weapon.shared.Renamed614;
+   import alternativa.tanks.models.weapon.shared.Renamed615;
+   import Renamed356.Renamed616;
+   import Renamed63.Renamed617;
    import flash.display.BitmapData;
    import flash.media.Sound;
    import flash.utils.Dictionary;
    
    public interface BattleService
    {
-      function §class while§() : §import use§;
+      function Renamed618() : Renamed616;
       
-      function §'x§() : §class true§;
+      function Renamed619() : Renamed620;
       
-      function §3l§() : §[!r§;
+      function Renamed621() : Renamed610;
       
-      function §7#P§() : §0_§;
+      function Renamed622() : Renamed623;
       
-      function §static const continue§() : §%#e§;
+      function Renamed624() : Renamed613;
       
-      function §set package dynamic§(param1:§%#e§) : void;
+      function Renamed625(param1:Renamed613) : void;
       
-      function §?!r§() : §%!v§;
+      function Renamed626() : Renamed612;
       
-      function §catch native§() : §]!m§;
+      function Renamed627() : Renamed614;
       
-      function §get package each§(param1:§]!m§) : void;
+      function Renamed628(param1:Renamed614) : void;
       
-      function §4p§() : §set set get§;
+      function Renamed629() : Renamed615;
       
-      function §@"§(param1:§set set get§) : void;
+      function Renamed630(param1:Renamed615) : void;
       
-      function §1"I§() : int;
+      function Renamed631() : int;
       
-      function §=!I§() : Sound;
+      function Renamed632() : Sound;
       
-      function get §&S§() : §7"]§;
+      function get Renamed633() : Renamed607;
       
-      function §override true§() : int;
+      function Renamed634() : int;
       
-      function §^!6§(param1:Tank) : void;
+      function Renamed635(param1:Tank) : void;
       
-      function §7"0§(param1:§finally const package§) : void;
+      function Renamed636(param1:Renamed609) : void;
       
-      function §"#D§(param1:§final var super§) : void;
+      function Renamed637(param1:Renamed608) : void;
       
-      function §2!k§(param1:§function const package§) : void;
+      function Renamed638(param1:Renamed611) : void;
       
-      function §continue package try§() : void;
+      function Renamed639() : void;
       
-      function §?#E§() : void;
+      function Renamed640() : void;
       
-      function §get package dynamic§() : void;
+      function Renamed641() : void;
       
-      function §,!'§(param1:Vector3, param2:Vector3) : void;
+      function Renamed642(param1:Vector3, param2:Vector3) : void;
       
-      function §set finally§() : void;
+      function Renamed643() : void;
       
-      function §^"S§(param1:Vector3, param2:Vector3) : void;
+      function Renamed644(param1:Vector3, param2:Vector3) : void;
       
-      function §try for true§() : void;
+      function Renamed645() : void;
       
-      function §each set use§() : Boolean;
+      function Renamed646() : Boolean;
       
-      function §^#6§() : Dictionary;
+      function Renamed647() : Dictionary;
       
-      function §package case§() : void;
+      function Renamed648() : void;
       
-      function §,#&§() : §##Z§;
+      function Renamed649() : Renamed617;
       
-      function §switch set throw§(param1:§##Z§) : void;
+      function Renamed650(param1:Renamed617) : void;
       
-      function §use for use§(param1:BitmapData) : void;
+      function Renamed651(param1:BitmapData) : void;
       
-      function §2I§() : void;
+      function Renamed652() : void;
       
-      function §]"d§() : int;
+      function Renamed653() : int;
       
-      function §4!D§() : void;
+      function Renamed654() : void;
       
-      function §!#;§() : Boolean;
+      function Renamed655() : Boolean;
       
-      function §;2§() : int;
+      function Renamed656() : int;
       
-      function §#$!§() : Boolean;
+      function Renamed657() : Boolean;
       
-      function §[f§(param1:Boolean) : void;
+      function Renamed658(param1:Boolean) : void;
    }
 }
 

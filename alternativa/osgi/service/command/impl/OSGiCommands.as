@@ -1,7 +1,7 @@
 package alternativa.osgi.service.command.impl
 {
    import alternativa.osgi.OSGi;
-   import alternativa.osgi.bundle.§;!o§;
+   import alternativa.osgi.bundle.Renamed604;
    import alternativa.osgi.catalogs.ServiceInfo;
    import alternativa.osgi.catalogs.ServiceParam;
    import alternativa.osgi.service.command.CommandService;
@@ -24,7 +24,7 @@ package alternativa.osgi.service.command.impl
       
       public function cmdBundlesList(param1:FormattedOutput) : void
       {
-         var _loc2_:Vector.<§;!o§> = this.osgi.bundleList;
+         var _loc2_:Vector.<Renamed604> = this.osgi.bundleList;
          var _loc3_:int = 0;
          while(_loc3_ < _loc2_.length)
          {

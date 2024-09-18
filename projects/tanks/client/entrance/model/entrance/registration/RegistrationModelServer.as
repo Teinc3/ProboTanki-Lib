@@ -6,8 +6,8 @@ package projects.tanks.client.entrance.model.entrance.registration
    import alternativa.protocol.OptionalMap;
    import alternativa.protocol.ProtocolBuffer;
    import alternativa.types.Long;
-   import §else for implements§.§?"L§;
-   import §else for implements§.§final for break§;
+   import Renamed352.Renamed4310;
+   import Renamed352.Renamed4311;
    import flash.utils.ByteArray;
    import platform.client.fp10.core.model.IModel;
    import scpacker.networking.Network;
@@ -56,12 +56,12 @@ package projects.tanks.client.entrance.model.entrance.registration
       
       public function checkUid(param1:String) : void
       {
-         this.network.send(new §final for break§(param1));
+         this.network.send(new Renamed4311(param1));
       }
       
       public function register(param1:String, param2:String, param3:String, param4:Boolean, param5:String, param6:String, param7:String, param8:String) : void
       {
-         this.network.send(new §?"L§(param1,param2,param4));
+         this.network.send(new Renamed4310(param1,param2,param4));
       }
    }
 }

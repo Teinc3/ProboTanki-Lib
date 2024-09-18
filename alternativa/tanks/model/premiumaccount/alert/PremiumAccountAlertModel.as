@@ -7,13 +7,13 @@ package alternativa.tanks.model.premiumaccount.alert
    import flash.events.Event;
    import flash.utils.clearInterval;
    import flash.utils.setInterval;
-   import projects.tanks.client.panel.model.premiumaccount.alert.§3"l§;
+   import projects.tanks.client.panel.model.premiumaccount.alert.Renamed2168;
    import projects.tanks.client.panel.model.premiumaccount.alert.PremiumAccountAlertCC;
-   import projects.tanks.client.panel.model.premiumaccount.alert.§native package finally§;
+   import projects.tanks.client.panel.model.premiumaccount.alert.Renamed2169;
    import projects.tanks.clients.flash.commons.services.notification.INotificationService;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.premium.PremiumService;
    
-   public class PremiumAccountAlertModel extends §native package finally§ implements §3"l§
+   public class PremiumAccountAlertModel extends Renamed2169 implements Renamed2168
    {
       [Inject]
       public static var notificationService:INotificationService;

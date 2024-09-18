@@ -1,20 +1,20 @@
 package alternativa.tanks.services.lightingeffects
 {
-   import §'H§.§implements set else§;
+   import Renamed199.Renamed3820;
    import flash.geom.ColorTransform;
-   import projects.tanks.client.battleservice.§final package import§;
+   import projects.tanks.client.battleservice.Renamed1587;
    
    public interface ILightingEffectsService
    {
-      function §@!z§(param1:§final package import§, param2:§implements set else§) : void;
+      function Renamed3821(param1:Renamed1587, param2:Renamed3820) : void;
       
-      function §try const include§(param1:§final package import§) : §implements set else§;
+      function Renamed3822(param1:Renamed1587) : Renamed3820;
       
-      function §2#[§(param1:Number, param2:ColorTransform, param3:ColorTransform) : void;
+      function Renamed2480(param1:Number, param2:ColorTransform, param3:ColorTransform) : void;
       
-      function §set package include§() : Number;
+      function Renamed1446() : Number;
       
-      function §if switch§() : ColorTransform;
+      function Renamed1447() : ColorTransform;
    }
 }
 

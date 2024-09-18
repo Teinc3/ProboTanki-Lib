@@ -224,7 +224,7 @@ package alternativa.tanks.model
       
       private function prepareSharpLink() : void
       {
-         this.sharpLinks = [localeService.getText(TanksLocale.TEXT_CHAT_SHARP_RULES).split("|"),localeService.getText(TanksLocale.TEXT_CHAT_SHARP_WIKI).split("|"),localeService.getText(TanksLocale.§final var const§).split("|"),localeService.getText(TanksLocale.§#I§).split("|"),localeService.getText(TanksLocale.§^<§).split("|")];
+         this.sharpLinks = [localeService.getText(TanksLocale.TEXT_CHAT_SHARP_RULES).split("|"),localeService.getText(TanksLocale.TEXT_CHAT_SHARP_WIKI).split("|"),localeService.getText(TanksLocale.Renamed2066).split("|"),localeService.getText(TanksLocale.Renamed2067).split("|"),localeService.getText(TanksLocale.Renamed2068).split("|")];
          var _loc1_:int = 0;
          while(_loc1_ < this.sharpLinks.length)
          {

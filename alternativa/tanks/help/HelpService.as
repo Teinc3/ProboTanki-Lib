@@ -1,6 +1,6 @@
 package alternativa.tanks.help
 {
-   import alternativa.init.§<!Y§;
+   import alternativa.init.Renamed0;
    import alternativa.osgi.OSGi;
    import alternativa.osgi.service.display.IDisplay;
    import flash.display.DisplayObjectContainer;
@@ -20,48 +20,48 @@ package alternativa.tanks.help
       
       private var stage:Stage;
       
-      private var §class set import§:DisplayObjectContainer;
+      private var Renamed2004:DisplayObjectContainer;
       
-      private var §override switch§:Sprite;
+      private var Renamed2005:Sprite;
       
-      private var §if const const§:Dictionary;
+      private var Renamed2006:Dictionary;
       
-      private var §switch package case§:Array;
+      private var Renamed2007:Array;
       
-      private var §throw var package§:Boolean;
+      private var Renamed2008:Boolean;
       
-      private var §9!v§:Array;
+      private var Renamed2009:Array;
       
-      private var §>"s§:Boolean;
+      private var Renamed2010:Boolean;
       
-      private var §7!P§:Dictionary;
+      private var Renamed2011:Dictionary;
       
-      private var §+#5§:Dictionary;
+      private var Renamed2012:Dictionary;
       
-      private var §else for var§:Vector.<ShowedHelperInfo>;
+      private var Renamed2013:Vector.<ShowedHelperInfo>;
       
       private var hidedHelpers:Vector.<Object>;
       
       private var locked:Boolean = false;
       
-      private const §in package native§:int = 86400000;
+      private const Renamed2014:int = 86400000;
       
-      private const §throw var dynamic§:int = 5;
+      private const Renamed2015:int = 5;
       
       public function HelpService()
       {
          var _loc1_:* = undefined;
-         this.§+#5§ = new Dictionary();
-         this.§else for var§ = new Vector.<ShowedHelperInfo>();
+         this.Renamed2012 = new Dictionary();
+         this.Renamed2013 = new Vector.<ShowedHelperInfo>();
          super();
-         var _loc2_:OSGi = §<!Y§.osgi;
+         var _loc2_:OSGi = Renamed0.osgi;
          var _loc3_:IDisplay = IDisplay(_loc2_.getService(IDisplay));
          this.stage = _loc3_.stage;
-         this.§class set import§ = _loc3_.noticesLayer;
-         this.§override switch§ = new Sprite();
-         this.§if const const§ = new Dictionary();
-         this.§switch package case§ = new Array();
-         this.§9!v§ = new Array();
+         this.Renamed2004 = _loc3_.noticesLayer;
+         this.Renamed2005 = new Sprite();
+         this.Renamed2006 = new Dictionary();
+         this.Renamed2007 = new Array();
+         this.Renamed2009 = new Array();
          this.storage = IStorageService(_loc2_.getService(IStorageService)).getStorage();
          for(_loc1_ in this.storage.data)
          {
@@ -80,24 +80,24 @@ package alternativa.tanks.help
          this.hidedHelpers = this.storage.data.hidedHelpers as Vector.<Object>;
          OSGi.clientLog.log("helper","hidedHelpers = %1",this.hidedHelpers);
          OSGi.clientLog.log("helper","userRank = %1",int(this.storage.data.userRank));
-         this.§throw var package§ = int(this.storage.data.userRank) >= 6;
-         this.§7!P§ = new Dictionary();
+         this.Renamed2008 = int(this.storage.data.userRank) >= 6;
+         this.Renamed2011 = new Dictionary();
          this.stage.addEventListener(Event.RESIZE,this.onStageResize);
       }
       
       public function registerHelper(param1:String, param2:int, param3:Helper, param4:Boolean) : void
       {
          var _loc5_:Object = null;
-         var _loc6_:Dictionary = this.§if const const§[param1];
+         var _loc6_:Dictionary = this.Renamed2006[param1];
          if(_loc6_ == null)
          {
             _loc6_ = new Dictionary();
-            this.§if const const§[param1] = _loc6_;
+            this.Renamed2006[param1] = _loc6_;
          }
          _loc6_[param2] = param3;
          if(param4)
          {
-            this.§switch package case§.push(param3);
+            this.Renamed2007.push(param3);
          }
          var _loc7_:Vector.<Object> = this.storage.data.helperShowNum != null && this.storage.data.helperShowNum is Vector.<Object> ? this.storage.data.helperShowNum as Vector.<Object> : new Vector.<Object>();
          var _loc8_:int = -1;
@@ -137,7 +137,7 @@ package alternativa.tanks.help
       
       public function unregisterHelper(param1:String, param2:int) : void
       {
-         var _loc3_:Dictionary = this.§if const const§[param1];
+         var _loc3_:Dictionary = this.Renamed2006[param1];
          if(_loc3_ == null)
          {
             return;
@@ -147,12 +147,12 @@ package alternativa.tanks.help
          {
             return;
          }
-         this.§0!G§(_loc4_);
+         this.Renamed2016(_loc4_);
          delete _loc3_[param2];
-         var _loc5_:int = int(this.§switch package case§.indexOf(_loc4_));
+         var _loc5_:int = int(this.Renamed2007.indexOf(_loc4_));
          if(_loc5_ >= 0)
          {
-            this.§switch package case§.splice(_loc5_,1);
+            this.Renamed2007.splice(_loc5_,1);
          }
       }
       
@@ -160,7 +160,7 @@ package alternativa.tanks.help
       {
          if(this.locked)
          {
-            this.§else for var§.push(new ShowedHelperInfo(param1,param2,param3));
+            this.Renamed2013.push(new ShowedHelperInfo(param1,param2,param3));
          }
          else
          {
@@ -175,25 +175,25 @@ package alternativa.tanks.help
          var _loc6_:int = 0;
          var _loc7_:Object = null;
          var _loc8_:HelperTimer = null;
-         if(this.§throw var package§ || this.§#!§(param1,param2))
+         if(this.Renamed2008 || this.Renamed2017(param1,param2))
          {
             return;
          }
-         var _loc9_:Helper = this.§7#V§(param1,param2);
+         var _loc9_:Helper = this.Renamed2018(param1,param2);
          if(_loc9_ == null)
          {
             return;
          }
-         if(!this.§class set import§.contains(this.§override switch§))
+         if(!this.Renamed2004.contains(this.Renamed2005))
          {
-            this.§class set import§.addChild(this.§override switch§);
+            this.Renamed2004.addChild(this.Renamed2005);
          }
          if(param3 || _loc9_.showLimit == -1 || _loc9_.showNum < _loc9_.showLimit)
          {
-            if(!this.§override switch§.contains(_loc9_))
+            if(!this.Renamed2005.contains(_loc9_))
             {
                ++_loc9_.showNum;
-               this.§7!P§[_loc9_] = new ShowedHelperInfo(param1,param2,param3);
+               this.Renamed2011[_loc9_] = new ShowedHelperInfo(param1,param2,param3);
                _loc4_ = this.storage.data.helperShowNum != null && this.storage.data.helperShowNum is Vector.<Object> ? this.storage.data.helperShowNum as Vector.<Object> : new Vector.<Object>();
                _loc5_ = -1;
                _loc6_ = 0;
@@ -218,23 +218,23 @@ package alternativa.tanks.help
                }
                this.storage.data.helperShowNum = _loc4_;
                this.storage.flush();
-               this.§override switch§.addChild(_loc9_);
+               this.Renamed2005.addChild(_loc9_);
                _loc9_.draw(_loc9_.size);
                _loc9_.align(this.stage.stageWidth,this.stage.stageHeight);
-               _loc9_.addEventListener(MouseEvent.MOUSE_DOWN,this.§catch var native§);
+               _loc9_.addEventListener(MouseEvent.MOUSE_DOWN,this.Renamed2019);
                if(!param3)
                {
                   (_loc8_ = new HelperTimer(_loc9_.showDuration,1)).helper = _loc9_;
                   _loc9_.timer = _loc8_;
-                  _loc8_.addEventListener(TimerEvent.TIMER_COMPLETE,this.§>#A§);
-                  this.§9!v§.push(_loc8_);
+                  _loc8_.addEventListener(TimerEvent.TIMER_COMPLETE,this.Renamed2020);
+                  this.Renamed2009.push(_loc8_);
                   _loc8_.start();
                }
             }
          }
       }
       
-      private function §#!§(param1:String, param2:int) : Boolean
+      private function Renamed2017(param1:String, param2:int) : Boolean
       {
          var _loc3_:Object = null;
          var _loc4_:Date = new Date();
@@ -242,7 +242,7 @@ package alternativa.tanks.help
          {
             if(_loc3_.groupKey == param1 && _loc3_.helperId == param2)
             {
-               return _loc4_.time - _loc3_.date.time < this.§in package native§ || _loc3_.count >= this.§throw var dynamic§;
+               return _loc4_.time - _loc3_.date.time < this.Renamed2014 || _loc3_.count >= this.Renamed2015;
             }
          }
          return false;
@@ -251,35 +251,35 @@ package alternativa.tanks.help
       public function hideAllHelpers() : void
       {
          var _loc1_:Helper = null;
-         if(this.§override switch§ != null)
+         if(this.Renamed2005 != null)
          {
-            while(this.§override switch§.numChildren != 0)
+            while(this.Renamed2005.numChildren != 0)
             {
-               _loc1_ = this.§override switch§.getChildAt(0) as Helper;
+               _loc1_ = this.Renamed2005.getChildAt(0) as Helper;
                this.hideHelper(_loc1_.groupKey,_loc1_.id);
             }
-            if(this.§override switch§.numChildren == 0 && this.§class set import§.contains(this.§override switch§))
+            if(this.Renamed2005.numChildren == 0 && this.Renamed2004.contains(this.Renamed2005))
             {
-               this.§class set import§.removeChild(this.§override switch§);
+               this.Renamed2004.removeChild(this.Renamed2005);
             }
          }
       }
       
       public function hideHelper(param1:String, param2:int) : void
       {
-         if(this.§7!P§[this.§7#V§(param1,param2)] != null)
+         if(this.Renamed2011[this.Renamed2018(param1,param2)] != null)
          {
-            delete this.§7!P§[this.§7#V§(param1,param2)];
+            delete this.Renamed2011[this.Renamed2018(param1,param2)];
          }
-         this.§0!G§(this.§7#V§(param1,param2));
-         this.§>$§();
+         this.Renamed2016(this.Renamed2018(param1,param2));
+         this.Renamed2021();
       }
       
-      private function §>$§() : void
+      private function Renamed2021() : void
       {
-         if(this.§override switch§.numChildren == 0 && this.§class set import§.contains(this.§override switch§))
+         if(this.Renamed2005.numChildren == 0 && this.Renamed2004.contains(this.Renamed2005))
          {
-            this.§class set import§.removeChild(this.§override switch§);
+            this.Renamed2004.removeChild(this.Renamed2005);
          }
       }
       
@@ -287,36 +287,36 @@ package alternativa.tanks.help
       {
          var _loc1_:Helper = null;
          var _loc2_:int = 0;
-         if(!this.§class set import§.contains(this.§override switch§))
+         if(!this.Renamed2004.contains(this.Renamed2005))
          {
-            this.§class set import§.addChild(this.§override switch§);
+            this.Renamed2004.addChild(this.Renamed2005);
          }
          var _loc3_:int = 0;
-         while(_loc3_ < this.§switch package case§.length)
+         while(_loc3_ < this.Renamed2007.length)
          {
-            _loc1_ = this.§switch package case§[_loc3_] as Helper;
-            if(!this.§override switch§.contains(_loc1_))
+            _loc1_ = this.Renamed2007[_loc3_] as Helper;
+            if(!this.Renamed2005.contains(_loc1_))
             {
-               this.§override switch§.addChild(_loc1_);
+               this.Renamed2005.addChild(_loc1_);
                _loc1_.draw(_loc1_.size);
                _loc1_.align(this.stage.stageWidth,this.stage.stageHeight);
             }
             else
             {
-               _loc2_ = int(this.§9!v§.indexOf(_loc1_.timer));
+               _loc2_ = int(this.Renamed2009.indexOf(_loc1_.timer));
                if(_loc2_ != -1)
                {
-                  HelperTimer(this.§9!v§[_loc2_]).stop();
-                  this.§9!v§.splice(_loc2_,1);
+                  HelperTimer(this.Renamed2009[_loc2_]).stop();
+                  this.Renamed2009.splice(_loc2_,1);
                }
             }
-            this.§7!P§[_loc1_] = new ShowedHelperInfo(_loc1_.groupKey,_loc1_.id,true);
+            this.Renamed2011[_loc1_] = new ShowedHelperInfo(_loc1_.groupKey,_loc1_.id,true);
             _loc3_++;
          }
-         if(!this.§>"s§)
+         if(!this.Renamed2010)
          {
-            this.§>"s§ = true;
-            this.stage.addEventListener(MouseEvent.CLICK,this.§@"w§,true);
+            this.Renamed2010 = true;
+            this.stage.addEventListener(MouseEvent.CLICK,this.Renamed2022,true);
          }
       }
       
@@ -325,30 +325,30 @@ package alternativa.tanks.help
          var _loc1_:Helper = null;
          var _loc2_:int = 0;
          var _loc3_:int = 0;
-         while(_loc3_ < this.§switch package case§.length)
+         while(_loc3_ < this.Renamed2007.length)
          {
-            _loc1_ = this.§switch package case§[_loc3_];
-            _loc2_ = int(this.§9!v§.indexOf(_loc1_.timer));
+            _loc1_ = this.Renamed2007[_loc3_];
+            _loc2_ = int(this.Renamed2009.indexOf(_loc1_.timer));
             if(_loc2_ != -1)
             {
-               (this.§9!v§[_loc2_] as HelperTimer).stop();
-               this.§9!v§.splice(_loc2_,1);
+               (this.Renamed2009[_loc2_] as HelperTimer).stop();
+               this.Renamed2009.splice(_loc2_,1);
             }
-            if(this.§override switch§.contains(_loc1_))
+            if(this.Renamed2005.contains(_loc1_))
             {
-               this.§override switch§.removeChild(_loc1_);
+               this.Renamed2005.removeChild(_loc1_);
             }
-            if(this.§7!P§[_loc1_] != null)
+            if(this.Renamed2011[_loc1_] != null)
             {
-               delete this.§7!P§[_loc1_];
+               delete this.Renamed2011[_loc1_];
             }
             _loc3_++;
          }
-         this.§>$§();
-         if(this.§>"s§)
+         this.Renamed2021();
+         if(this.Renamed2010)
          {
-            this.§>"s§ = false;
-            this.stage.removeEventListener(MouseEvent.CLICK,this.§@"w§,true);
+            this.Renamed2010 = false;
+            this.stage.removeEventListener(MouseEvent.CLICK,this.Renamed2022,true);
          }
       }
       
@@ -360,49 +360,49 @@ package alternativa.tanks.help
       public function pushState() : void
       {
          var _loc1_:* = null;
-         this.§+#5§ = new Dictionary();
-         for(_loc1_ in this.§7!P§)
+         this.Renamed2012 = new Dictionary();
+         for(_loc1_ in this.Renamed2011)
          {
-            this.§+#5§[_loc1_] = this.§7!P§[_loc1_];
+            this.Renamed2012[_loc1_] = this.Renamed2011[_loc1_];
          }
       }
       
       public function popState() : void
       {
          var _loc1_:* = null;
-         for(_loc1_ in this.§+#5§)
+         for(_loc1_ in this.Renamed2012)
          {
-            this.showHelper(this.§+#5§[_loc1_].groupKey,this.§+#5§[_loc1_].helperId,this.§+#5§[_loc1_].force);
+            this.showHelper(this.Renamed2012[_loc1_].groupKey,this.Renamed2012[_loc1_].helperId,this.Renamed2012[_loc1_].force);
          }
-         this.§+#5§ = new Dictionary();
+         this.Renamed2012 = new Dictionary();
       }
       
-      private function §@"w§(param1:MouseEvent) : void
+      private function Renamed2022(param1:MouseEvent) : void
       {
          this.hideHelp();
          param1.stopPropagation();
       }
       
-      private function §>#A§(param1:TimerEvent) : void
+      private function Renamed2020(param1:TimerEvent) : void
       {
          var _loc2_:HelperTimer = param1.target as HelperTimer;
          var _loc3_:Helper = _loc2_.helper;
          this.hideHelper(_loc3_.groupKey,_loc3_.id);
       }
       
-      private function §catch var native§(param1:MouseEvent) : void
+      private function Renamed2019(param1:MouseEvent) : void
       {
          var _loc2_:Helper = null;
          if(param1.target is Helper)
          {
             _loc2_ = param1.target as Helper;
             this.hideHelper(_loc2_.groupKey,_loc2_.id);
-            this.§with for do§(_loc2_);
+            this.Renamed2023(_loc2_);
             param1.stopPropagation();
          }
       }
       
-      private function §with for do§(param1:Helper) : void
+      private function Renamed2023(param1:Helper) : void
       {
          var _loc2_:Object = null;
          var _loc3_:Object = null;
@@ -432,12 +432,12 @@ package alternativa.tanks.help
       {
          var _loc2_:int = 0;
          var _loc3_:Helper = null;
-         if(this.§class set import§.contains(this.§override switch§))
+         if(this.Renamed2004.contains(this.Renamed2005))
          {
             _loc2_ = 0;
-            while(_loc2_ < this.§override switch§.numChildren)
+            while(_loc2_ < this.Renamed2005.numChildren)
             {
-               _loc3_ = this.§override switch§.getChildAt(_loc2_) as Helper;
+               _loc3_ = this.Renamed2005.getChildAt(_loc2_) as Helper;
                if(_loc3_ != null)
                {
                   _loc3_.align(this.stage.stageWidth,this.stage.stageHeight);
@@ -447,9 +447,9 @@ package alternativa.tanks.help
          }
       }
       
-      private function §7#V§(param1:String, param2:int) : Helper
+      private function Renamed2018(param1:String, param2:int) : Helper
       {
-         var _loc3_:Dictionary = this.§if const const§[param1];
+         var _loc3_:Dictionary = this.Renamed2006[param1];
          if(_loc3_ == null)
          {
             return null;
@@ -457,26 +457,26 @@ package alternativa.tanks.help
          return _loc3_[param2];
       }
       
-      private function §0!G§(param1:Helper) : void
+      private function Renamed2016(param1:Helper) : void
       {
          var _loc2_:int = 0;
          if(param1 == null)
          {
             return;
          }
-         if(this.§override switch§.contains(param1))
+         if(this.Renamed2005.contains(param1))
          {
-            this.§override switch§.removeChild(param1);
+            this.Renamed2005.removeChild(param1);
          }
-         param1.removeEventListener(MouseEvent.MOUSE_DOWN,this.§catch var native§);
+         param1.removeEventListener(MouseEvent.MOUSE_DOWN,this.Renamed2019);
          var _loc3_:HelperTimer = param1.timer;
          if(_loc3_ != null)
          {
             _loc3_.stop();
-            _loc2_ = int(this.§9!v§.indexOf(_loc3_));
+            _loc2_ = int(this.Renamed2009.indexOf(_loc3_));
             if(_loc2_ != -1)
             {
-               this.§9!v§.splice(_loc2_,1);
+               this.Renamed2009.splice(_loc2_,1);
             }
          }
       }
@@ -490,11 +490,11 @@ package alternativa.tanks.help
       {
          var _loc1_:ShowedHelperInfo = null;
          this.locked = false;
-         for each(_loc1_ in this.§else for var§)
+         for each(_loc1_ in this.Renamed2013)
          {
             this.showHelper(_loc1_.groupKey,_loc1_.helperId,_loc1_.force);
          }
-         this.§else for var§ = new Vector.<ShowedHelperInfo>();
+         this.Renamed2013 = new Vector.<ShowedHelperInfo>();
       }
    }
 }

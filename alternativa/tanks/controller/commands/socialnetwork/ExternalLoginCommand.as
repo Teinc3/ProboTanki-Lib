@@ -2,7 +2,7 @@ package alternativa.tanks.controller.commands.socialnetwork
 {
    import alternativa.tanks.controller.events.socialnetwork.ExternalLoginEvent;
    import alternativa.tanks.service.IEntranceServerFacade;
-   import alternativa.tanks.service.§each package super§;
+   import alternativa.tanks.service.Renamed555;
    import org.robotlegs.mvcs.Command;
    
    public class ExternalLoginCommand extends Command
@@ -14,7 +14,7 @@ package alternativa.tanks.controller.commands.socialnetwork
       public var loginEvent:ExternalLoginEvent;
       
       [Inject]
-      public var sharedObjects:§each package super§;
+      public var sharedObjects:Renamed555;
       
       public function ExternalLoginCommand()
       {
@@ -23,8 +23,8 @@ package alternativa.tanks.controller.commands.socialnetwork
       
       override public function execute() : void
       {
-         this.sharedObjects.§+"d§ = this.loginEvent.callsign;
-         this.entranceGateway.§extends for super§(this.loginEvent.callsign,this.loginEvent.password);
+         this.sharedObjects.Renamed1567 = this.loginEvent.callsign;
+         this.entranceGateway.Renamed1575(this.loginEvent.callsign,this.loginEvent.password);
       }
    }
 }

@@ -10,11 +10,11 @@ package alternativa.math
       
       public static const IDENTITY:Matrix3 = new Matrix3();
       
-      private static const §null for in§:Vector3 = new Vector3();
+      private static const Renamed594:Vector3 = new Vector3();
       
-      private static const §4#!§:Vector3 = new Vector3();
+      private static const Renamed595:Vector3 = new Vector3();
       
-      private static const §?R§:Vector3 = new Vector3();
+      private static const Renamed596:Vector3 = new Vector3();
       
       public var m00:Number;
       
@@ -310,7 +310,7 @@ package alternativa.math
          }
       }
       
-      public function §in package const§(param1:Vector3) : void
+      public function Renamed597(param1:Vector3) : void
       {
          this.getAxis(0,param1);
       }
@@ -340,23 +340,23 @@ package alternativa.math
          }
       }
       
-      public function §-#g§(param1:Vector3) : void
+      public function Renamed598(param1:Vector3) : void
       {
-         §4#!§.copy(param1).normalize();
-         if(§4#!§.dot(Vector3.X_AXIS) < 0.9)
+         Renamed595.copy(param1).normalize();
+         if(Renamed595.dot(Vector3.X_AXIS) < 0.9)
          {
-            §?R§.cross2(Vector3.X_AXIS,§4#!§);
+            Renamed596.cross2(Vector3.X_AXIS,Renamed595);
          }
          else
          {
-            §?R§.cross2(§4#!§,Vector3.Y_AXIS);
+            Renamed596.cross2(Renamed595,Vector3.Y_AXIS);
          }
-         §?R§.normalize();
-         §null for in§.cross2(§4#!§,§?R§).normalize();
-         this.§6#&§(§null for in§,§4#!§,§?R§);
+         Renamed596.normalize();
+         Renamed594.cross2(Renamed595,Renamed596).normalize();
+         this.Renamed599(Renamed594,Renamed595,Renamed596);
       }
       
-      public function §6#&§(param1:Vector3, param2:Vector3, param3:Vector3) : void
+      public function Renamed599(param1:Vector3, param2:Vector3, param3:Vector3) : void
       {
          this.m00 = param1.x;
          this.m01 = param2.x;

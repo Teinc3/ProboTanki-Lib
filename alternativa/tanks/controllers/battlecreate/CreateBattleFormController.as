@@ -1,12 +1,12 @@
 package alternativa.tanks.controllers.battlecreate
 {
-   import §""v§.§,"3§;
-   import §1!R§.§throw package static§;
-   import §>6§.§null for do§;
+   import Renamed1580.Renamed1581;
+   import Renamed232.Renamed1582;
+   import Renamed1583.Renamed1584;
    import alternativa.tanks.service.achievement.IAchievementService;
    import alternativa.tanks.view.battlecreate.ICreateBattleFormView;
    import alternativa.types.Long;
-   import §break for null§.§'B§;
+   import Renamed312.Renamed1585;
    import flash.events.EventDispatcher;
    import flash.events.TimerEvent;
    import flash.net.SharedObject;
@@ -14,9 +14,9 @@ package alternativa.tanks.controllers.battlecreate
    import flash.utils.Timer;
    import platform.client.fp10.core.resource.types.ImageResource;
    import platform.client.fp10.core.type.IGameObject;
-   import projects.tanks.client.battleservice.§9"B§;
-   import projects.tanks.client.battleservice.§<#p§;
-   import projects.tanks.client.battleservice.§final package import§;
+   import projects.tanks.client.battleservice.Renamed1579;
+   import projects.tanks.client.battleservice.Renamed1586;
+   import projects.tanks.client.battleservice.Renamed1587;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.storage.IStorageService;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.userproperties.IUserPropertiesService;
    import projects.tanks.clients.fp10.libraries.tanksservices.utils.BattleFormatUtil;
@@ -35,7 +35,7 @@ package alternativa.tanks.controllers.battlecreate
       public static var userPropertiesService:IUserPropertiesService;
       
       [Inject]
-      public static var §]"j§:BattleFormatUtil;
+      public static var Renamed1588:BattleFormatUtil;
       
       private static const CHANNEL:String = "battlecreate";
       
@@ -57,9 +57,9 @@ package alternativa.tanks.controllers.battlecreate
       
       private static const STEP_FOR_STEPPER_CP:int = 50;
       
-      private static const §try set try§:int = 50;
+      private static const Renamed1589:int = 50;
       
-      private var _battlesLimits:Vector.<§'B§>;
+      private var _battlesLimits:Vector.<Renamed1585>;
       
       private var _killsLimit:int = 0;
       
@@ -67,13 +67,13 @@ package alternativa.tanks.controllers.battlecreate
       
       private var _dominationScore:int = 0;
       
-      private var §each package true§:int = 0;
+      private var Renamed1590:int = 0;
       
       private var _timeLimitInSec:int = 900;
       
       private var _maxPeopleCount:int;
       
-      private var _battleMode:§final package import§;
+      private var _battleMode:Renamed1587;
       
       private var _view:ICreateBattleFormView;
       
@@ -99,18 +99,18 @@ package alternativa.tanks.controllers.battlecreate
       
       private var _isShowForm:Boolean;
       
-      private var §4"P§:int;
+      private var Renamed1591:int;
       
-      public function CreateBattleFormController(param1:Vector.<§'B§>, param2:int, param3:Vector.<IGameObject>, param4:ICreateBattleFormView)
+      public function CreateBattleFormController(param1:Vector.<Renamed1585>, param2:int, param3:Vector.<IGameObject>, param4:ICreateBattleFormView)
       {
-         this._battleMode = §final package import§.DM;
+         this._battleMode = Renamed1587.DM;
          this._mapThemes = new Dictionary();
          super();
          this._view = param4;
          this.init(param1,param2,param3);
       }
       
-      private function init(param1:Vector.<§'B§>, param2:int, param3:Vector.<IGameObject>) : void
+      private function init(param1:Vector.<Renamed1585>, param2:int, param3:Vector.<IGameObject>) : void
       {
          this._view.setCallBack(this);
          this._checkedBattleNameTimer = new Timer(1200);
@@ -119,7 +119,7 @@ package alternativa.tanks.controllers.battlecreate
          this._view.setMaxRankRange(param2 - 1);
          this._view.setRankIntervalRestriction(MIN_RANK,MAX_RANK,MIN_RANK_INTERVAL_LENGTH);
          this._view.resetCheckBox();
-         this._view.§true package default§(this.§6!N§());
+         this._view.Renamed1592(this.Renamed1593());
          this.parseMapsParams(param3);
       }
       
@@ -127,28 +127,28 @@ package alternativa.tanks.controllers.battlecreate
       {
          var _loc8_:SaveMapParams = null;
          var _loc2_:IGameObject = null;
-         var _loc3_:§null for do§ = null;
+         var _loc3_:Renamed1584 = null;
          var _loc4_:CreateBattleMapParams = null;
-         var _loc5_:§,"3§ = null;
+         var _loc5_:Renamed1581 = null;
          this._mapsParams = new Array();
          var _loc6_:int = int(param1.length);
          var _loc7_:int = 0;
          while(_loc7_ < _loc6_)
          {
             _loc2_ = param1[_loc7_];
-            _loc3_ = §null for do§(_loc2_.adapt(§null for do§));
+            _loc3_ = Renamed1584(_loc2_.adapt(Renamed1584));
             (_loc4_ = new CreateBattleMapParams()).index = _loc7_;
-            _loc4_.id = _loc3_.§try var dynamic§();
+            _loc4_.id = _loc3_.Renamed1594();
             _loc4_.previewResource = _loc3_.getPreviewResource();
             _loc4_.gameName = _loc3_.getName();
-            _loc4_.maxPeople = _loc3_.§get var case§();
+            _loc4_.maxPeople = _loc3_.Renamed1595();
             _loc4_.maxRank = _loc3_.getMaxRank();
             _loc4_.minRank = _loc3_.getMinRank();
             _loc4_.themeName = _loc3_.getThemeName();
-            _loc4_.theme = _loc3_.§0"E§();
-            _loc4_.battleModes = _loc3_.§=>§();
+            _loc4_.theme = _loc3_.Renamed1596();
+            _loc4_.battleModes = _loc3_.Renamed1597();
             _loc4_.enabled = _loc3_.isEnabled();
-            _loc5_ = §,"3§(_loc2_.adapt(§,"3§));
+            _loc5_ = Renamed1581(_loc2_.adapt(Renamed1581));
             _loc4_.clanName = _loc5_.getClanName();
             _loc4_.clanLink = _loc5_.getClanLink();
             _loc4_.additionalCrystalsPercent = _loc3_.getAdditionalCrystalsPercent();
@@ -185,18 +185,18 @@ package alternativa.tanks.controllers.battlecreate
       {
          switch(this._battleMode)
          {
-            case §final package import§.DM:
-            case §final package import§.TDM:
+            case Renamed1587.DM:
+            case Renamed1587.TDM:
                this._killsLimit = this._view.getScoreLimit();
                break;
-            case §final package import§.CTF:
+            case Renamed1587.CTF:
                this._flagsLimit = this._view.getScoreLimit();
                break;
-            case §final package import§.CP:
+            case Renamed1587.CP:
                this._dominationScore = this._view.getScoreLimit();
                break;
-            case §final package import§.AS:
-               this.§each package true§ = this._view.getScoreLimit();
+            case Renamed1587.AS:
+               this.Renamed1590 = this._view.getScoreLimit();
          }
          if(this._isCheckedServerBattleName)
          {
@@ -243,7 +243,7 @@ package alternativa.tanks.controllers.battlecreate
          }
       }
       
-      public function onSelected(param1:§final package import§) : void
+      public function onSelected(param1:Renamed1587) : void
       {
          this._battleMode = param1;
          var _loc2_:int = this._battlesLimits[this._battleMode.value].timeLimitInSec;
@@ -253,20 +253,20 @@ package alternativa.tanks.controllers.battlecreate
          }
          switch(this._battleMode)
          {
-            case §final package import§.DM:
+            case Renamed1587.DM:
                this.setTypeBattleDM();
                break;
-            case §final package import§.TDM:
+            case Renamed1587.TDM:
                this.setTypeBattleTDM();
                break;
-            case §final package import§.CTF:
+            case Renamed1587.CTF:
                this.setTypeBattleCtf();
                break;
-            case §final package import§.CP:
+            case Renamed1587.CP:
                this.setTypeBattleDomination();
                break;
-            case §final package import§.AS:
-               this.§#!m§();
+            case Renamed1587.AS:
+               this.Renamed1598();
          }
       }
       
@@ -334,15 +334,15 @@ package alternativa.tanks.controllers.battlecreate
          }
       }
       
-      private function §#!m§() : void
+      private function Renamed1598() : void
       {
          this._view.setTypeBattle(this._battleMode);
          var _loc1_:int = int(this.getSelectedMapParams().maxPeople) / 2;
          this._maxPeopleCount = _loc1_;
          this._view.setSettingsPlayersLimit(MIN_PLAYER_FOR_TEAM_BATTLE,_loc1_,this._maxPeopleCount);
          this._view.setSettingsTimeLimit(0,this._battlesLimits[this._battleMode.value].timeLimitInSec / 60,this._timeLimitInSec / 60);
-         this._view.setSettingsScoreLimit(0,this._battlesLimits[this._battleMode.value].scoreLimit,this.§each package true§,§try set try§);
-         this._view.§null var use§();
+         this._view.setSettingsScoreLimit(0,this._battlesLimits[this._battleMode.value].scoreLimit,this.Renamed1590,Renamed1589);
+         this._view.Renamed1599();
          this._view.setNameMaxPlayersTeamStepper();
          if(this._isAutoName)
          {
@@ -606,7 +606,7 @@ package alternativa.tanks.controllers.battlecreate
          throw new ArgumentError("For your rank is not available maps");
       }
       
-      private function §2"h§() : CreateBattleMapParams
+      private function Renamed1600() : CreateBattleMapParams
       {
          var _loc1_:SaveMapParams = this.getSaveMapParams();
          return this.getMapParams(_loc1_.mapId,_loc1_.themeName);
@@ -615,7 +615,7 @@ package alternativa.tanks.controllers.battlecreate
       private function selectDefaultMap() : void
       {
          var _loc1_:String = null;
-         var _loc2_:CreateBattleMapParams = this.§2"h§();
+         var _loc2_:CreateBattleMapParams = this.Renamed1600();
          if(this.isMapAndThemeAvailable(_loc2_))
          {
             _loc1_ = _loc2_.gameName;
@@ -699,7 +699,7 @@ package alternativa.tanks.controllers.battlecreate
          _loc2_.data.SelectedMap = _loc3_;
       }
       
-      private function selectBattleType(param1:§final package import§) : void
+      private function selectBattleType(param1:Renamed1587) : void
       {
          if(this.isTypeBattleContainedSelectedMap(param1))
          {
@@ -711,10 +711,10 @@ package alternativa.tanks.controllers.battlecreate
          }
       }
       
-      private function isTypeBattleContainedSelectedMap(param1:§final package import§) : Boolean
+      private function isTypeBattleContainedSelectedMap(param1:Renamed1587) : Boolean
       {
          var _loc2_:Boolean = false;
-         var _loc3_:Vector.<§final package import§> = this.getSelectedMapParams().battleModes;
+         var _loc3_:Vector.<Renamed1587> = this.getSelectedMapParams().battleModes;
          var _loc4_:int = 0;
          while(_loc4_ < _loc3_.length)
          {
@@ -730,23 +730,23 @@ package alternativa.tanks.controllers.battlecreate
       
       public function onCreateBattle() : void
       {
-         var _loc1_:§9"B§ = null;
+         var _loc1_:Renamed1579 = null;
          if(this.isBattleParamsCorrect())
          {
-            _loc1_ = new §9"B§();
+            _loc1_ = new Renamed1579();
             _loc1_.battleMode = this._battleMode;
-            _loc1_.§function function§ = new §'B§(this._view.getScoreLimit(),this._timeLimitInSec);
+            _loc1_.Renamed1601 = new Renamed1585(this._view.getScoreLimit(),this._timeLimitInSec);
             _loc1_.mapId = this._view.getSelectedThemeItem().id;
             _loc1_.theme = this._view.getSelectedThemeItem().theme;
             _loc1_.maxPeopleCount = this._maxPeopleCount;
             _loc1_.name = this._view.getBattleName();
             _loc1_.privateBattle = this._view.isPrivateBattle;
-            _loc1_.rankRange = new §<#p§(this._view.getMaxRank(),this._view.getMinRank());
+            _loc1_.rankRange = new Renamed1586(this._view.getMaxRank(),this._view.getMinRank());
             _loc1_.proBattle = this._view.isProBattle;
             if(this._view.isProBattle)
             {
                _loc1_.withoutSupplies = this._view.isNoSuppliesBattle;
-               _loc1_.§4#W§ = this._view.isWithoutUpgrades;
+               _loc1_.Renamed1602 = this._view.isWithoutUpgrades;
                _loc1_.withoutBonuses = this._view.isWithoutBonuses;
                _loc1_.withoutCrystals = this._view.isWithoutCrystals;
                _loc1_.autoBalance = this._view.isAutoBalance;
@@ -757,102 +757,102 @@ package alternativa.tanks.controllers.battlecreate
             {
                _loc1_.autoBalance = true;
             }
-            _loc1_.equipmentConstraintsMode = this.§';§();
-            _loc1_.parkourMode = this._view.isProBattle && this.§extends package import§();
+            _loc1_.equipmentConstraintsMode = this.Renamed1603();
+            _loc1_.parkourMode = this._view.isProBattle && this.Renamed1604();
             dispatchEvent(new CreateBattleEvent(CreateBattleEvent.CREATE_BATTLE,_loc1_));
             this.hideForm();
             achievementService.hideAllBubbles(true);
          }
       }
       
-      private function §extends package import§() : Boolean
+      private function Renamed1604() : Boolean
       {
-         return this._view.§super import§().parkour;
+         return this._view.Renamed1605().parkour;
       }
       
-      private function §';§() : §throw package static§
+      private function Renamed1603() : Renamed1582
       {
          if(this._view.isProBattle)
          {
-            return this._view.§super import§().equipmentConstraintsMode;
+            return this._view.Renamed1605().equipmentConstraintsMode;
          }
-         return §throw package static§.NONE;
+         return Renamed1582.NONE;
       }
       
-      private function §6!N§() : Vector.<Object>
+      private function Renamed1593() : Vector.<Object>
       {
-         this.§4"P§ = 0;
+         this.Renamed1591 = 0;
          var _loc1_:Vector.<Object> = new Vector.<Object>();
          _loc1_.push({
             "index":0,
-            "gameName":§]"j§.§]%§(§throw package static§.NONE),
-            "equipmentConstraintsMode":§throw package static§.NONE,
+            "gameName":Renamed1588.Renamed1606(Renamed1582.NONE),
+            "equipmentConstraintsMode":Renamed1582.NONE,
             "parkour":false,
             "rang":0
          });
          _loc1_.push({
             "index":1,
-            "gameName":§]"j§.§]%§(§throw package static§.HORNET_RAILGUN),
-            "equipmentConstraintsMode":§throw package static§.HORNET_RAILGUN,
+            "gameName":Renamed1588.Renamed1606(Renamed1582.HORNET_RAILGUN),
+            "equipmentConstraintsMode":Renamed1582.HORNET_RAILGUN,
             "parkour":false,
             "rang":0
          });
          _loc1_.push({
             "index":2,
-            "gameName":§]"j§.§]%§(§throw package static§.WASP_RAILGUN),
-            "equipmentConstraintsMode":§throw package static§.WASP_RAILGUN,
+            "gameName":Renamed1588.Renamed1606(Renamed1582.WASP_RAILGUN),
+            "equipmentConstraintsMode":Renamed1582.WASP_RAILGUN,
             "parkour":false,
             "rang":0
          });
          _loc1_.push({
             "index":3,
-            "gameName":§]"j§.§]%§(§throw package static§.HORNET_WASP_RAILGUN),
-            "equipmentConstraintsMode":§throw package static§.HORNET_WASP_RAILGUN,
+            "gameName":Renamed1588.Renamed1606(Renamed1582.HORNET_WASP_RAILGUN),
+            "equipmentConstraintsMode":Renamed1582.HORNET_WASP_RAILGUN,
             "parkour":false,
             "rang":0
          });
          _loc1_.push({
             "index":4,
-            "gameName":§]"j§.§break for return§(),
-            "equipmentConstraintsMode":§throw package static§.NONE,
+            "gameName":Renamed1588.Renamed1607(),
+            "equipmentConstraintsMode":Renamed1582.NONE,
             "parkour":true,
             "rang":0
          });
          return _loc1_;
       }
       
-      public function §>#"§() : void
+      public function Renamed1608() : void
       {
-         var _loc1_:§throw package static§ = null;
-         if(!this.§extends package import§())
+         var _loc1_:Renamed1582 = null;
+         if(!this.Renamed1604())
          {
-            _loc1_ = this.§';§();
-            if(_loc1_ != §throw package static§.NONE)
+            _loc1_ = this.Renamed1603();
+            if(_loc1_ != Renamed1582.NONE)
             {
-               this._view.§+#i§();
+               this._view.Renamed1609();
             }
          }
       }
       
-      public function §[#a§() : void
+      public function Renamed1610() : void
       {
          if(this._view.isReArmor)
          {
-            this.§do catch while§();
+            this.Renamed1611();
          }
       }
       
-      private function §do catch while§() : void
+      private function Renamed1611() : void
       {
-         if(!this.§extends package import§())
+         if(!this.Renamed1604())
          {
-            this.§super package get§();
+            this.Renamed1612();
          }
       }
       
-      private function §super package get§() : void
+      private function Renamed1612() : void
       {
-         this._view.§0!A§(this.§4"P§);
+         this._view.Renamed1613(this.Renamed1591);
       }
       
       private function getAutoName() : String

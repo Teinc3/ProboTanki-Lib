@@ -1,7 +1,7 @@
 package projects.tanks.client.battleselect.model.battleselect.create
 {
-   import §7#z§.§"!i§;
-   import §7#z§.§]!V§;
+   import Renamed268.Renamed4169;
+   import Renamed268.Renamed4170;
    import alternativa.osgi.OSGi;
    import alternativa.protocol.ICodec;
    import alternativa.protocol.IProtocol;
@@ -9,7 +9,7 @@ package projects.tanks.client.battleselect.model.battleselect.create
    import alternativa.types.Long;
    import flash.utils.ByteArray;
    import platform.client.fp10.core.model.IModel;
-   import projects.tanks.client.battleservice.§9"B§;
+   import projects.tanks.client.battleservice.Renamed1579;
    import scpacker.networking.Network;
    
    public class BattleCreateModelServer
@@ -43,12 +43,12 @@ package projects.tanks.client.battleselect.model.battleselect.create
       
       public function checkBattleNameForForbiddenWords(param1:String) : void
       {
-         this.network.send(new §]!V§(param1));
+         this.network.send(new Renamed4170(param1));
       }
       
-      public function createBattle(param1:§9"B§) : void
+      public function createBattle(param1:Renamed1579) : void
       {
-         this.network.send(new §"!i§(param1));
+         this.network.send(new Renamed4169(param1));
       }
    }
 }

@@ -8,7 +8,7 @@ package projects.tanks.client.chat.models.chat.chat
    import flash.utils.ByteArray;
    import platform.client.fp10.core.model.IModel;
    import scpacker.networking.Network;
-   import §true super§.§set const false§;
+   import Renamed442.Renamed4253;
    
    public class ChatModelServer
    {
@@ -39,7 +39,7 @@ package projects.tanks.client.chat.models.chat.chat
       
       public function sendMessage(param1:String, param2:String) : void
       {
-         Network(OSGi.getInstance().getService(Network)).send(new §set const false§(param1,param2));
+         Network(OSGi.getInstance().getService(Network)).send(new Renamed4253(param1,param2));
       }
    }
 }

@@ -1,6 +1,6 @@
 package alternativa.tanks.controllers.battleinfo
 {
-   import § !g§.§class for case§;
+   import Renamed136.Renamed663;
    import alternativa.osgi.service.locale.ILocaleService;
    import alternativa.tanks.controllers.BattleSelectVectorUtil;
    import alternativa.tanks.service.money.IMoneyService;
@@ -22,7 +22,7 @@ package alternativa.tanks.controllers.battleinfo
    import projects.tanks.clients.fp10.libraries.tanksservices.service.layout.ILobbyLayoutService;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.userproperties.IUserPropertiesService;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.userproperties.UserPropertiesServiceEvent;
-   import services.alertservice.§get const use§;
+   import services.alertservice.Renamed1616;
    import utils.preview.IImageResource;
    import utils.preview.ImageResourceLoadingWrapper;
    
@@ -59,7 +59,7 @@ package alternativa.tanks.controllers.battleinfo
       
       private var _setupTime:int;
       
-      private var _rememberBattleTeam:§class for case§;
+      private var _rememberBattleTeam:Renamed663;
       
       private var _userAlreadyPaid:Boolean;
       
@@ -314,14 +314,14 @@ package alternativa.tanks.controllers.battleinfo
          this._view.updateBattleName(param1);
       }
       
-      public function addUserTeam(param1:BattleInfoUser, param2:§class for case§) : void
+      public function addUserTeam(param1:BattleInfoUser, param2:Renamed663) : void
       {
-         if(param2 == §class for case§.RED)
+         if(param2 == Renamed663.RED)
          {
             this._usersInfoRed.push(param1);
             this.updateRedUser(param1);
          }
-         if(param2 == §class for case§.BLUE)
+         if(param2 == Renamed663.BLUE)
          {
             this._usersInfoBlue.push(param1);
             this.updateBlueUser(param1);
@@ -343,7 +343,7 @@ package alternativa.tanks.controllers.battleinfo
          this.updateAvailableEnterInBattle();
       }
       
-      public function updateTeamScore(param1:§class for case§, param2:int) : void
+      public function updateTeamScore(param1:Renamed663, param2:int) : void
       {
          this._view.updateScore(param1,param2);
       }
@@ -489,7 +489,7 @@ package alternativa.tanks.controllers.battleinfo
       {
          if(this._proBattle && this._noSuppliesTimeLeftInSec == 0 && !this._userAlreadyPaid)
          {
-            if(moneyService.§while package dynamic§(this._proBattleEnterPrice))
+            if(moneyService.Renamed1617(this._proBattleEnterPrice))
             {
                this.showPayedBattleAlert(param1.team);
             }
@@ -502,11 +502,11 @@ package alternativa.tanks.controllers.battleinfo
          }
       }
       
-      private function showPayedBattleAlert(param1:§class for case§) : void
+      private function showPayedBattleAlert(param1:Renamed663) : void
       {
          this._rememberBattleTeam = param1;
-         var _loc2_:Vector.<String> = Vector.<String>([§get const use§.ENTER,§get const use§.§in package get§]);
-         battleAlertService.showAlert(localeService.getText(TanksLocale.§'"H§),_loc2_);
+         var _loc2_:Vector.<String> = Vector.<String>([Renamed1616.ENTER,Renamed1616.Renamed1618]);
+         battleAlertService.showAlert(localeService.getText(TanksLocale.Renamed1619),_loc2_);
          battleAlertService.addEventListener(AlertServiceEvent.ALERT_BUTTON_PRESSED,this.onAlertButtonPressed);
       }
       

@@ -8,7 +8,7 @@ package projects.tanks.clients.flash.resources.tanks
    import alternativa.engine3d.core.Vertex;
    import alternativa.engine3d.materials.TextureMaterial;
    import alternativa.engine3d.objects.Mesh;
-   import alternativa.tanks.battle.objects.tank.tankskin.§"§;
+   import alternativa.tanks.battle.objects.tank.tankskin.Renamed4482;
    import alternativa.tanks.materials.AnimatedPaintMaterial;
    import alternativa.tanks.materials.PaintMaterial;
    import flash.display.BitmapData;
@@ -40,9 +40,9 @@ package projects.tanks.clients.flash.resources.tanks
       
       private var multiframeImageResource:MultiframeImageResource;
       
-      private var leftTrackSkin:§"#3§;
+      private var leftTrackSkin:Renamed1175;
       
-      private var rightTrackSkin:§"#3§;
+      private var rightTrackSkin:Renamed1175;
       
       private var materials:Vector.<TextureMaterial>;
       
@@ -212,8 +212,8 @@ package projects.tanks.clients.flash.resources.tanks
       public function createTrackSkins(param1:Mesh, param2:Tanks3DSResource) : void
       {
          var _loc3_:Face = null;
-         this.leftTrackSkin = new §"#3§();
-         this.rightTrackSkin = new §"#3§();
+         this.leftTrackSkin = new Renamed1175();
+         this.rightTrackSkin = new Renamed1175();
          for each(_loc3_ in param1.faces)
          {
             if(_loc3_.id == "track" || _loc3_.material.name == "track")

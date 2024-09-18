@@ -3,13 +3,13 @@ package projects.tanks.clients.fp10.libraries.tanksservices.model.notifier.rank
    import alternativa.types.Long;
    import flash.utils.Dictionary;
    import projects.tanks.client.tanksservices.model.notifier.rank.RankNotifierData;
-   import projects.tanks.client.tanksservices.model.notifier.rank.§extends set default§;
-   import projects.tanks.client.tanksservices.model.notifier.rank.§set var include§;
+   import projects.tanks.client.tanksservices.model.notifier.rank.Renamed4399;
+   import projects.tanks.client.tanksservices.model.notifier.rank.Renamed4401;
    import projects.tanks.clients.fp10.libraries.tanksservices.model.UserRefresh;
    import projects.tanks.clients.fp10.libraries.tanksservices.model.listener.UserNotifier;
    import projects.tanks.clients.fp10.libraries.tanksservices.model.notifier.UserInfoConsumer;
    
-   public class RankNotifierModel extends §extends set default§ implements §set var include§, UserRefresh
+   public class RankNotifierModel extends Renamed4399 implements Renamed4401, UserRefresh
    {
       private var data:Dictionary;
       

@@ -2,50 +2,50 @@ package platform.client.core.general.resourcelocale.format
 {
    public class LocalizedFileFormat
    {
-      private var §,!?§:Vector.<§default set case§>;
+      private var Renamed4056:Vector.<Renamed4057>;
       
-      private var §dynamic package final§:Vector.<§?[§>;
+      private var Renamed4058:Vector.<Renamed4059>;
       
       private var _images:Vector.<ImagePair>;
       
-      private var §function finally§:Vector.<§8!W§>;
+      private var Renamed4060:Vector.<Renamed4061>;
       
-      private var §with const case§:Vector.<§super const function§>;
+      private var Renamed4062:Vector.<Renamed4063>;
       
-      private var §8!v§:String;
+      private var Renamed4064:String;
       
       private var _strings:Vector.<StringPair>;
       
-      public function LocalizedFileFormat(param1:Vector.<§default set case§> = null, param2:Vector.<§?[§> = null, param3:Vector.<ImagePair> = null, param4:Vector.<§8!W§> = null, param5:Vector.<§super const function§> = null, param6:String = null, param7:Vector.<StringPair> = null)
+      public function LocalizedFileFormat(param1:Vector.<Renamed4057> = null, param2:Vector.<Renamed4059> = null, param3:Vector.<ImagePair> = null, param4:Vector.<Renamed4061> = null, param5:Vector.<Renamed4063> = null, param6:String = null, param7:Vector.<StringPair> = null)
       {
          super();
-         this.§,!?§ = param1;
-         this.§dynamic package final§ = param2;
+         this.Renamed4056 = param1;
+         this.Renamed4058 = param2;
          this._images = param3;
-         this.§function finally§ = param4;
-         this.§with const case§ = param5;
-         this.§8!v§ = param6;
+         this.Renamed4060 = param4;
+         this.Renamed4062 = param5;
+         this.Renamed4064 = param6;
          this._strings = param7;
       }
       
-      public function get booleans() : Vector.<§default set case§>
+      public function get booleans() : Vector.<Renamed4057>
       {
-         return this.§,!?§;
+         return this.Renamed4056;
       }
       
-      public function set booleans(param1:Vector.<§default set case§>) : void
+      public function set booleans(param1:Vector.<Renamed4057>) : void
       {
-         this.§,!?§ = param1;
+         this.Renamed4056 = param1;
       }
       
-      public function get §]"O§() : Vector.<§?[§>
+      public function get Renamed4065() : Vector.<Renamed4059>
       {
-         return this.§dynamic package final§;
+         return this.Renamed4058;
       }
       
-      public function set §]"O§(param1:Vector.<§?[§>) : void
+      public function set Renamed4065(param1:Vector.<Renamed4059>) : void
       {
-         this.§dynamic package final§ = param1;
+         this.Renamed4058 = param1;
       }
       
       public function get images() : Vector.<ImagePair>
@@ -58,34 +58,34 @@ package platform.client.core.general.resourcelocale.format
          this._images = param1;
       }
       
-      public function get ints() : Vector.<§8!W§>
+      public function get ints() : Vector.<Renamed4061>
       {
-         return this.§function finally§;
+         return this.Renamed4060;
       }
       
-      public function set ints(param1:Vector.<§8!W§>) : void
+      public function set ints(param1:Vector.<Renamed4061>) : void
       {
-         this.§function finally§ = param1;
+         this.Renamed4060 = param1;
       }
       
-      public function get movies() : Vector.<§super const function§>
+      public function get movies() : Vector.<Renamed4063>
       {
-         return this.§with const case§;
+         return this.Renamed4062;
       }
       
-      public function set movies(param1:Vector.<§super const function§>) : void
+      public function set movies(param1:Vector.<Renamed4063>) : void
       {
-         this.§with const case§ = param1;
+         this.Renamed4062 = param1;
       }
       
-      public function get §get package while§() : String
+      public function get Renamed4066() : String
       {
-         return this.§8!v§;
+         return this.Renamed4064;
       }
       
-      public function set §get package while§(param1:String) : void
+      public function set Renamed4066(param1:String) : void
       {
-         this.§8!v§ = param1;
+         this.Renamed4064 = param1;
       }
       
       public function get strings() : Vector.<StringPair>
@@ -102,11 +102,11 @@ package platform.client.core.general.resourcelocale.format
       {
          var _loc1_:String = "LocalizedFileFormat [";
          _loc1_ += "booleans = " + this.booleans + " ";
-         _loc1_ += "doubles = " + this.§]"O§ + " ";
+         _loc1_ += "doubles = " + this.Renamed4065 + " ";
          _loc1_ += "images = " + this.images + " ";
          _loc1_ += "ints = " + this.ints + " ";
          _loc1_ += "movies = " + this.movies + " ";
-         _loc1_ += "prefix = " + this.§get package while§ + " ";
+         _loc1_ += "prefix = " + this.Renamed4066 + " ";
          _loc1_ += "strings = " + this.strings + " ";
          return _loc1_ + "]";
       }

@@ -1,11 +1,11 @@
 package alternativa.tanks.servermodels.captcha
 {
-   import §2!8§.§]"9§;
+   import Renamed236.Renamed2178;
    import projects.tanks.client.entrance.model.entrance.captcha.CaptchaLocation;
    
    public interface IServerCaptcha
    {
-      function bindFacade(param1:§]"9§) : void;
+      function bindFacade(param1:Renamed2178) : void;
       
       function unbindFacade() : void;
       

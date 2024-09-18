@@ -35,7 +35,7 @@ package alternativa.tanks.view.registration
          super();
       }
       
-      public function §9#L§() : void
+      public function Renamed3954() : void
       {
          this.initialize();
       }

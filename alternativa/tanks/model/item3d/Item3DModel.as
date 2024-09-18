@@ -51,7 +51,7 @@ package alternativa.tanks.model.item3d
                }
                else
                {
-                  tank3DViewer.§true false§(_loc2_.data);
+                  tank3DViewer.Renamed2110(_loc2_.data);
                }
          }
       }

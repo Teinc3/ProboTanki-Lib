@@ -1,7 +1,7 @@
 package projects.tanks.client.tanksservices.types.battle
 {
-   import projects.tanks.client.battleservice.§<#p§;
-   import projects.tanks.client.battleservice.§final package import§;
+   import projects.tanks.client.battleservice.Renamed1586;
+   import projects.tanks.client.battleservice.Renamed1587;
    
    public class BattleInfoData
    {
@@ -9,19 +9,19 @@ package projects.tanks.client.tanksservices.types.battle
       
       private var _mapName:String;
       
-      private var _mode:§final package import§;
+      private var _mode:Renamed1587;
       
       private var _privateBattle:Boolean;
       
       private var _proBattle:Boolean;
       
-      private var _range:§<#p§;
+      private var _range:Renamed1586;
       
       private var _remote:Boolean;
       
       private var _serverNumber:int;
       
-      public function BattleInfoData(param1:String = null, param2:String = null, param3:§final package import§ = null, param4:Boolean = false, param5:Boolean = false, param6:§<#p§ = null, param7:Boolean = false, param8:int = 0)
+      public function BattleInfoData(param1:String = null, param2:String = null, param3:Renamed1587 = null, param4:Boolean = false, param5:Boolean = false, param6:Renamed1586 = null, param7:Boolean = false, param8:int = 0)
       {
          super();
          this._battleId = param1;
@@ -54,12 +54,12 @@ package projects.tanks.client.tanksservices.types.battle
          this._mapName = param1;
       }
       
-      public function get mode() : §final package import§
+      public function get mode() : Renamed1587
       {
          return this._mode;
       }
       
-      public function set mode(param1:§final package import§) : void
+      public function set mode(param1:Renamed1587) : void
       {
          this._mode = param1;
       }
@@ -84,12 +84,12 @@ package projects.tanks.client.tanksservices.types.battle
          this._proBattle = param1;
       }
       
-      public function get range() : §<#p§
+      public function get range() : Renamed1586
       {
          return this._range;
       }
       
-      public function set range(param1:§<#p§) : void
+      public function set range(param1:Renamed1586) : void
       {
          this._range = param1;
       }

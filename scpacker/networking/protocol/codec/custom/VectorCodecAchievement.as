@@ -1,17 +1,17 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import §[" §.ICodec;
+   import Renamed5811.ICodec;
    import flash.utils.ByteArray;
-   import projects.tanks.client.achievements.model.achievements.§null package extends§;
-   import scpacker.networking.protocol.§?"s§;
+   import projects.tanks.client.achievements.model.achievements.Renamed2072;
+   import scpacker.networking.protocol.Renamed536;
    
    public class VectorCodecAchievement implements ICodec
    {
       private var elementCodec:ICodec;
       
-      private var §?"_§:Boolean;
+      private var Renamed5009:Boolean;
       
-      public function VectorCodecAchievement(param1:§?"s§)
+      public function VectorCodecAchievement(param1:Renamed536)
       {
          super();
          this.elementCodec = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecAchievement");
@@ -20,11 +20,11 @@ package scpacker.networking.protocol.codec.custom
       public function decode(param1:ByteArray) : Object
       {
          var _loc2_:int = param1.readInt();
-         var _loc3_:Vector.<§null package extends§> = new Vector.<§null package extends§>(_loc2_,true);
+         var _loc3_:Vector.<Renamed2072> = new Vector.<Renamed2072>(_loc2_,true);
          var _loc4_:int = 0;
          while(_loc4_ < _loc2_)
          {
-            _loc3_[_loc4_] = §null package extends§(this.elementCodec.decode(param1));
+            _loc3_[_loc4_] = Renamed2072(this.elementCodec.decode(param1));
             _loc4_++;
          }
          return _loc3_;
@@ -36,7 +36,7 @@ package scpacker.networking.protocol.codec.custom
          {
             throw new Error("Object is null. Use @ProtocolOptional annotation.");
          }
-         var _loc3_:Vector.<§null package extends§> = Vector.<§null package extends§>(param2);
+         var _loc3_:Vector.<Renamed2072> = Vector.<Renamed2072>(param2);
          var _loc4_:int = int(_loc3_.length);
          param1.writeInt(_loc4_);
          var _loc5_:int = 0;

@@ -20,23 +20,23 @@ package alternativa.tanks.service.item
       
       function getCategory(param1:IGameObject) : ItemCategoryEnum;
       
-      function §^#x§(param1:IGameObject) : ItemViewCategoryEnum;
+      function Renamed1934(param1:IGameObject) : ItemViewCategoryEnum;
       
-      function §8#X§(param1:ItemCategoryEnum) : void;
+      function Renamed2099(param1:ItemCategoryEnum) : void;
       
-      function §;#U§(param1:IGameObject) : Vector.<IGameObject>;
+      function Renamed1706(param1:IGameObject) : Vector.<IGameObject>;
       
-      function §final var catch§(param1:IGameObject) : int;
+      function Renamed3677(param1:IGameObject) : int;
       
       function getProperties(param1:IGameObject) : Vector.<ItemPropertyValue>;
       
-      function §6#y§(param1:IGameObject) : IGameObject;
+      function Renamed1705(param1:IGameObject) : IGameObject;
       
       function getName(param1:IGameObject) : String;
       
       function getDescription(param1:IGameObject) : String;
       
-      function §!#P§(param1:IGameObject) : IGameObject;
+      function Renamed2102(param1:IGameObject) : IGameObject;
       
       function getPosition(param1:IGameObject) : int;
       
@@ -50,29 +50,29 @@ package alternativa.tanks.service.item
       
       function getUpgradingProperty(param1:IGameObject) : ItemGarageProperty;
       
-      function §!"p§(param1:IGameObject) : Boolean;
+      function Renamed1704(param1:IGameObject) : Boolean;
       
       function getEndDiscountTimer(param1:IGameObject) : CountDownTimer;
       
       function getPriceWithoutDiscount(param1:IGameObject) : int;
       
-      function §2"J§(param1:IGameObject) : Boolean;
+      function Renamed1700(param1:IGameObject) : Boolean;
       
       function isGrouped(param1:IGameObject) : Boolean;
       
-      function §extends const each§(param1:IGameObject) : Boolean;
+      function Renamed2105(param1:IGameObject) : Boolean;
       
       function isCountable(param1:IGameObject) : Boolean;
       
-      function §static set default§(param1:IGameObject) : Boolean;
+      function Renamed1768(param1:IGameObject) : Boolean;
       
-      function §while try§(param1:IGameObject) : Boolean;
+      function Renamed1760(param1:IGameObject) : Boolean;
       
       function canBuy(param1:IGameObject) : Boolean;
       
-      function §include for each§(param1:IGameObject) : Boolean;
+      function Renamed1772(param1:IGameObject) : Boolean;
       
-      function §null var continue§(param1:IGameObject) : Boolean;
+      function Renamed1773(param1:IGameObject) : Boolean;
       
       function reset() : void;
       
@@ -82,21 +82,21 @@ package alternativa.tanks.service.item
       
       function hasNextModification(param1:IGameObject) : Boolean;
       
-      function §override const class§(param1:IGameObject) : IGameObject;
+      function Renamed1932(param1:IGameObject) : IGameObject;
       
-      function §0",§(param1:IGameObject) : IGameObject;
+      function Renamed1935(param1:IGameObject) : IGameObject;
       
-      function §case const else§(param1:IGameObject) : IGameObject;
+      function Renamed1931(param1:IGameObject) : IGameObject;
       
       function getCount(param1:IGameObject) : int;
       
       function setCount(param1:IGameObject, param2:int) : void;
       
-      function §,$!§(param1:IGameObject) : int;
+      function Renamed1764(param1:IGameObject) : int;
       
-      function §[!@§(param1:IGameObject) : int;
+      function Renamed1763(param1:IGameObject) : int;
       
-      function §,!S§(param1:IGameObject) : Boolean;
+      function Renamed1774(param1:IGameObject) : Boolean;
       
       function mountItem(param1:IGameObject) : void;
       
@@ -104,9 +104,9 @@ package alternativa.tanks.service.item
       
       function getTimeLeftInSeconds(param1:IGameObject) : int;
       
-      function §[#e§(param1:IGameObject) : Boolean;
+      function Renamed1701(param1:IGameObject) : Boolean;
       
-      function §>#J§(param1:IGameObject) : Boolean;
+      function Renamed1702(param1:IGameObject) : Boolean;
    }
 }
 

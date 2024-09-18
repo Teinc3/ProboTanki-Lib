@@ -1,7 +1,7 @@
 package projects.tanks.clients.fp10.libraries.tanksservices.service.dialogs
 {
    import alternativa.osgi.service.display.IDisplay;
-   import alternativa.tanks.loader.§0=§;
+   import alternativa.tanks.loader.Renamed2032;
    import alternativa.tanks.loader.ILoaderWindowService;
    import flash.display.DisplayObject;
    import flash.display.DisplayObjectContainer;
@@ -69,10 +69,10 @@ package projects.tanks.clients.fp10.libraries.tanksservices.service.dialogs
       
       public function enqueueDialog(param1:DialogWindow) : void
       {
-         if(loaderWindowService.§<!5§())
+         if(loaderWindowService.Renamed2029())
          {
             this.queue.unshift(param1);
-            loaderWindowService.addEventListener(§0=§.§&#O§,this.§-`§);
+            loaderWindowService.addEventListener(Renamed2032.Renamed2033,this.Renamed4513);
             return;
          }
          if(this.dialogs.length == 0)
@@ -85,12 +85,12 @@ package projects.tanks.clients.fp10.libraries.tanksservices.service.dialogs
          }
       }
       
-      private function §-`§(param1:§0=§) : void
+      private function Renamed4513(param1:Renamed2032) : void
       {
          if(this.queue.length > 0)
          {
             this.addDialog(this.queue.pop());
-            loaderWindowService.removeEventListener(§0=§.§&#O§,this.§-`§);
+            loaderWindowService.removeEventListener(Renamed2032.Renamed2033,this.Renamed4513);
          }
       }
       

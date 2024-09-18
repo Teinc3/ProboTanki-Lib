@@ -1,7 +1,7 @@
 package alternativa.utils
 {
    import alternativa.engine3d.materials.TextureMaterial;
-   import alternativa.tanks.battle.objects.tank.tankskin.§function else§;
+   import alternativa.tanks.battle.objects.tank.tankskin.Renamed1168;
    import alternativa.tanks.materials.AnimatedPaintMaterial;
    import alternativa.tanks.materials.PaintMaterial;
    import flash.display.BitmapData;
@@ -10,9 +10,9 @@ package alternativa.utils
    
    public interface TextureMaterialRegistry
    {
-      function getAnimatedPaint(param1:MultiframeImageResource, param2:§function else§) : AnimatedPaintMaterial;
+      function getAnimatedPaint(param1:MultiframeImageResource, param2:Renamed1168) : AnimatedPaintMaterial;
       
-      function getPaint(param1:ImageResource, param2:§function else§) : PaintMaterial;
+      function getPaint(param1:ImageResource, param2:Renamed1168) : PaintMaterial;
       
       function getMaterial(param1:BitmapData, param2:Boolean = true) : TextureMaterial;
       

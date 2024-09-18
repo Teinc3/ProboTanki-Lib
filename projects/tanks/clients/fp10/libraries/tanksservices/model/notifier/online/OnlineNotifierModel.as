@@ -1,15 +1,15 @@
 package projects.tanks.clients.fp10.libraries.tanksservices.model.notifier.online
 {
    import alternativa.types.Long;
-   import projects.tanks.client.tanksservices.model.notifier.online.§4"q§;
+   import projects.tanks.client.tanksservices.model.notifier.online.Renamed4393;
    import projects.tanks.client.tanksservices.model.notifier.online.OnlineNotifierData;
-   import projects.tanks.client.tanksservices.model.notifier.online.§else for get§;
+   import projects.tanks.client.tanksservices.model.notifier.online.Renamed4395;
    import projects.tanks.clients.fp10.libraries.tanksservices.model.UserRefresh;
    import projects.tanks.clients.fp10.libraries.tanksservices.model.listener.UserNotifier;
    import projects.tanks.clients.fp10.libraries.tanksservices.model.notifier.UserInfoConsumer;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.notifier.online.IOnlineNotifierService;
    
-   public class OnlineNotifierModel extends §else for get§ implements §4"q§, UserRefresh
+   public class OnlineNotifierModel extends Renamed4395 implements Renamed4393, UserRefresh
    {
       [Inject]
       public static var onlineNotifierService:IOnlineNotifierService;

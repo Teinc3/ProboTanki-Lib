@@ -1,105 +1,105 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import §1!R§.§throw package static§;
-   import §?"a§.§finally for do§;
-   import §[" §.ICodec;
+   import Renamed232.Renamed1582;
+   import Renamed1614.Renamed1615;
+   import Renamed5811.ICodec;
    import alternativa.osgi.OSGi;
    import alternativa.osgi.service.clientlog.IClientLog;
-   import §break for null§.§'B§;
+   import Renamed312.Renamed1585;
    import flash.utils.ByteArray;
-   import projects.tanks.client.battleservice.§9"B§;
-   import projects.tanks.client.battleservice.§<#p§;
-   import projects.tanks.client.battleservice.§final package import§;
-   import scpacker.networking.protocol.§?"s§;
+   import projects.tanks.client.battleservice.Renamed1579;
+   import projects.tanks.client.battleservice.Renamed1586;
+   import projects.tanks.client.battleservice.Renamed1587;
+   import scpacker.networking.protocol.Renamed536;
    
    public class CodecBattleCreateParameters implements ICodec
    {
       public static var log:IClientLog = IClientLog(OSGi.getInstance().getService(IClientLog));
       
-      private var §&"<§:ICodec;
+      private var Renamed10548:ICodec;
       
-      private var §,N§:ICodec;
+      private var Renamed10549:ICodec;
       
-      private var §set const class§:ICodec;
+      private var Renamed10550:ICodec;
       
-      private var §<!z§:ICodec;
+      private var Renamed10551:ICodec;
       
-      private var §with package dynamic§:ICodec;
+      private var Renamed10552:ICodec;
       
-      private var §static package native§:ICodec;
+      private var Renamed10553:ICodec;
       
-      private var §2!R§:ICodec;
+      private var Renamed10554:ICodec;
       
-      private var §!U§:ICodec;
+      private var Renamed10555:ICodec;
       
-      private var §3$$§:ICodec;
+      private var Renamed10556:ICodec;
       
-      private var §+#!§:ICodec;
+      private var Renamed10015:ICodec;
       
-      private var §0#J§:ICodec;
+      private var Renamed10557:ICodec;
       
-      private var §`"+§:ICodec;
+      private var Renamed10558:ICodec;
       
-      private var §'!w§:ICodec;
+      private var Renamed10559:ICodec;
       
-      private var §"^§:ICodec;
+      private var Renamed10560:ICodec;
       
-      private var §%#v§:ICodec;
+      private var Renamed10561:ICodec;
       
-      private var §?#8§:ICodec;
+      private var Renamed10562:ICodec;
       
-      private var §const set for§:ICodec;
+      private var Renamed10563:ICodec;
       
-      private var §+#K§:ICodec;
+      private var Renamed10564:ICodec;
       
-      private var §switch set static§:ICodec;
+      private var Renamed10565:ICodec;
       
-      private var §in catch with§:ICodec;
+      private var Renamed10566:ICodec;
       
-      public function CodecBattleCreateParameters(param1:§?"s§)
+      public function CodecBattleCreateParameters(param1:Renamed536)
       {
          super();
-         this.§&"<§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");
-         this.§set const class§ = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecBattleMode");
-         this.§<!z§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");
-         this.§with package dynamic§ = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecEquipmentConstraintsMode");
-         this.§static package native§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");
-         this.§2!R§ = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecBattleLimits");
-         this.§!U§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.StringCodec");
-         this.§3$$§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");
-         this.§+#!§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.StringCodec");
-         this.§0#J§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");
-         this.§`"+§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");
-         this.§'!w§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");
-         this.§"^§ = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecRange");
-         this.§%#v§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");
-         this.§?#8§ = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecMapTheme");
-         this.§const set for§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");
-         this.§+#K§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");
-         this.§switch set static§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");
-         this.§in catch with§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");
+         this.Renamed10548 = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");
+         this.Renamed10550 = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecBattleMode");
+         this.Renamed10551 = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");
+         this.Renamed10552 = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecEquipmentConstraintsMode");
+         this.Renamed10553 = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");
+         this.Renamed10554 = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecBattleLimits");
+         this.Renamed10555 = param1.getCodec("scpacker.networking.protocol.codec.primitive.StringCodec");
+         this.Renamed10556 = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");
+         this.Renamed10015 = param1.getCodec("scpacker.networking.protocol.codec.primitive.StringCodec");
+         this.Renamed10557 = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");
+         this.Renamed10558 = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");
+         this.Renamed10559 = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");
+         this.Renamed10560 = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecRange");
+         this.Renamed10561 = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");
+         this.Renamed10562 = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecMapTheme");
+         this.Renamed10563 = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");
+         this.Renamed10564 = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");
+         this.Renamed10565 = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");
+         this.Renamed10566 = param1.getCodec("scpacker.networking.protocol.codec.primitive.BooleanCodec");
       }
       
       public function decode(param1:ByteArray) : Object
       {
-         var _loc2_:§9"B§ = new §9"B§();
-         _loc2_.autoBalance = this.§&"<§.decode(param1) as Boolean;
-         _loc2_.battleMode = this.§set const class§.decode(param1) as §final package import§;
-         _loc2_.equipmentConstraintsMode = this.§with package dynamic§.decode(param1) as §throw package static§;
-         _loc2_.friendlyFire = this.§static package native§.decode(param1) as Boolean;
-         _loc2_.§function function§ = this.§2!R§.decode(param1) as §'B§;
-         _loc2_.mapId = this.§!U§.decode(param1) as String;
-         _loc2_.maxPeopleCount = this.§3$$§.decode(param1) as int;
-         _loc2_.name = this.§+#!§.decode(param1) as String;
-         _loc2_.parkourMode = this.§0#J§.decode(param1) as Boolean;
-         _loc2_.privateBattle = this.§`"+§.decode(param1) as Boolean;
-         _loc2_.proBattle = this.§'!w§.decode(param1) as Boolean;
-         _loc2_.rankRange = this.§"^§.decode(param1) as §<#p§;
-         _loc2_.reArmorEnabled = this.§%#v§.decode(param1) as Boolean;
-         _loc2_.theme = this.§?#8§.decode(param1) as §finally for do§;
-         _loc2_.withoutBonuses = this.§const set for§.decode(param1) as Boolean;
-         _loc2_.withoutCrystals = this.§+#K§.decode(param1) as Boolean;
-         _loc2_.withoutSupplies = this.§switch set static§.decode(param1) as Boolean;
+         var _loc2_:Renamed1579 = new Renamed1579();
+         _loc2_.autoBalance = this.Renamed10548.decode(param1) as Boolean;
+         _loc2_.battleMode = this.Renamed10550.decode(param1) as Renamed1587;
+         _loc2_.equipmentConstraintsMode = this.Renamed10552.decode(param1) as Renamed1582;
+         _loc2_.friendlyFire = this.Renamed10553.decode(param1) as Boolean;
+         _loc2_.Renamed1601 = this.Renamed10554.decode(param1) as Renamed1585;
+         _loc2_.mapId = this.Renamed10555.decode(param1) as String;
+         _loc2_.maxPeopleCount = this.Renamed10556.decode(param1) as int;
+         _loc2_.name = this.Renamed10015.decode(param1) as String;
+         _loc2_.parkourMode = this.Renamed10557.decode(param1) as Boolean;
+         _loc2_.privateBattle = this.Renamed10558.decode(param1) as Boolean;
+         _loc2_.proBattle = this.Renamed10559.decode(param1) as Boolean;
+         _loc2_.rankRange = this.Renamed10560.decode(param1) as Renamed1586;
+         _loc2_.reArmorEnabled = this.Renamed10561.decode(param1) as Boolean;
+         _loc2_.theme = this.Renamed10562.decode(param1) as Renamed1615;
+         _loc2_.withoutBonuses = this.Renamed10563.decode(param1) as Boolean;
+         _loc2_.withoutCrystals = this.Renamed10564.decode(param1) as Boolean;
+         _loc2_.withoutSupplies = this.Renamed10565.decode(param1) as Boolean;
          return _loc2_;
       }
       
@@ -110,25 +110,25 @@ package scpacker.networking.protocol.codec.custom
             throw new Error("Object is null. Use @ProtocolOptional annotation.");
          }
          var _loc3_:int = 0;
-         var _loc4_:§9"B§ = §9"B§(param2);
-         _loc3_ += this.§&"<§.encode(param1,_loc4_.autoBalance);
-         _loc3_ += this.§set const class§.encode(param1,_loc4_.battleMode);
-         _loc3_ += this.§with package dynamic§.encode(param1,_loc4_.equipmentConstraintsMode);
-         _loc3_ += this.§static package native§.encode(param1,_loc4_.friendlyFire);
-         _loc3_ += this.§2!R§.encode(param1,_loc4_.§function function§);
-         _loc3_ += this.§!U§.encode(param1,_loc4_.mapId);
-         _loc3_ += this.§3$$§.encode(param1,_loc4_.maxPeopleCount);
-         _loc3_ += this.§+#!§.encode(param1,_loc4_.name);
-         _loc3_ += this.§0#J§.encode(param1,_loc4_.parkourMode);
-         _loc3_ += this.§`"+§.encode(param1,_loc4_.privateBattle);
-         _loc3_ += this.§'!w§.encode(param1,_loc4_.proBattle);
-         _loc3_ += this.§"^§.encode(param1,_loc4_.rankRange);
-         _loc3_ += this.§%#v§.encode(param1,_loc4_.reArmorEnabled);
-         _loc3_ += this.§?#8§.encode(param1,_loc4_.theme);
-         _loc3_ += this.§const set for§.encode(param1,_loc4_.withoutBonuses);
-         _loc3_ += this.§+#K§.encode(param1,_loc4_.withoutCrystals);
-         _loc3_ += this.§switch set static§.encode(param1,_loc4_.withoutSupplies);
-         return _loc3_ + this.§in catch with§.encode(param1,_loc4_.§4#W§);
+         var _loc4_:Renamed1579 = Renamed1579(param2);
+         _loc3_ += this.Renamed10548.encode(param1,_loc4_.autoBalance);
+         _loc3_ += this.Renamed10550.encode(param1,_loc4_.battleMode);
+         _loc3_ += this.Renamed10552.encode(param1,_loc4_.equipmentConstraintsMode);
+         _loc3_ += this.Renamed10553.encode(param1,_loc4_.friendlyFire);
+         _loc3_ += this.Renamed10554.encode(param1,_loc4_.Renamed1601);
+         _loc3_ += this.Renamed10555.encode(param1,_loc4_.mapId);
+         _loc3_ += this.Renamed10556.encode(param1,_loc4_.maxPeopleCount);
+         _loc3_ += this.Renamed10015.encode(param1,_loc4_.name);
+         _loc3_ += this.Renamed10557.encode(param1,_loc4_.parkourMode);
+         _loc3_ += this.Renamed10558.encode(param1,_loc4_.privateBattle);
+         _loc3_ += this.Renamed10559.encode(param1,_loc4_.proBattle);
+         _loc3_ += this.Renamed10560.encode(param1,_loc4_.rankRange);
+         _loc3_ += this.Renamed10561.encode(param1,_loc4_.reArmorEnabled);
+         _loc3_ += this.Renamed10562.encode(param1,_loc4_.theme);
+         _loc3_ += this.Renamed10563.encode(param1,_loc4_.withoutBonuses);
+         _loc3_ += this.Renamed10564.encode(param1,_loc4_.withoutCrystals);
+         _loc3_ += this.Renamed10565.encode(param1,_loc4_.withoutSupplies);
+         return _loc3_ + this.Renamed10566.encode(param1,_loc4_.Renamed1602);
       }
    }
 }

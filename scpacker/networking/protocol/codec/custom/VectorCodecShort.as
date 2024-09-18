@@ -1,17 +1,17 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import §[" §.§#""§;
-   import §[" §.ICodec;
+   import Renamed5811.Renamed9342;
+   import Renamed5811.ICodec;
    import flash.utils.ByteArray;
-   import scpacker.networking.protocol.§?"s§;
+   import scpacker.networking.protocol.Renamed536;
    
-   public class VectorCodecShort extends §#""§ implements ICodec
+   public class VectorCodecShort extends Renamed9342 implements ICodec
    {
       private var elementCodec:ICodec;
       
-      private var §?"_§:Boolean;
+      private var Renamed5009:Boolean;
       
-      public function VectorCodecShort(param1:§?"s§)
+      public function VectorCodecShort(param1:Renamed536)
       {
          super();
          this.elementCodec = param1.getCodec("scpacker.networking.protocol.codec.primitive.ShortCodec");
@@ -19,7 +19,7 @@ package scpacker.networking.protocol.codec.custom
       
       public function decode(param1:ByteArray) : Object
       {
-         if(§each catch else§(param1))
+         if(Renamed9343(param1))
          {
             return null;
          }
@@ -37,7 +37,7 @@ package scpacker.networking.protocol.codec.custom
       public function encode(param1:ByteArray, param2:Object) : int
       {
          var _loc3_:int = 1;
-         if(§%"s§(param1,param2))
+         if(Renamed9344(param1,param2))
          {
             return _loc3_;
          }

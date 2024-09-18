@@ -1,6 +1,6 @@
 package alternativa.tanks.view.battleinfo.team
 {
-   import § !g§.§class for case§;
+   import Renamed136.Renamed663;
    import alternativa.osgi.service.display.IDisplay;
    import alternativa.tanks.service.achievement.IAchievementService;
    import alternativa.tanks.view.battleinfo.BattleInfoParamsView;
@@ -211,7 +211,7 @@ package alternativa.tanks.view.battleinfo.team
       
       public function updateInitParams(param1:BattleInfoTeamParams) : void
       {
-         this._battleInfo.setUp(param1.battleName,param1.minRank,param1.maxRank,param1.scoreLimit,param1.timeLimitInSec,param1.autoBalance,param1.friendlyFire,param1.battleUrl,param1.battleMode,param1.noSupplies,param1.withoutBonuses,param1.upgradesDisabled,param1.proBattle,param1.withoutCrystals,param1.reArmor,false,param1.§8z§,param1.§;9§);
+         this._battleInfo.setUp(param1.battleName,param1.minRank,param1.maxRank,param1.scoreLimit,param1.timeLimitInSec,param1.autoBalance,param1.friendlyFire,param1.battleUrl,param1.battleMode,param1.noSupplies,param1.withoutBonuses,param1.upgradesDisabled,param1.proBattle,param1.withoutCrystals,param1.reArmor,false,param1.Renamed3642,param1.Renamed1625);
          this._battleInfo.setClanName(param1.clanName,param1.clanLink);
          this._battleInfo.setPreview(param1.previewResource.data);
          this._dataProviderRed = new DataProvider();
@@ -225,8 +225,8 @@ package alternativa.tanks.view.battleinfo.team
          this._minRank = param1.minRank;
          this._maxRank = param1.maxRank;
          this._spectatorEnabled = param1.spectatorEnabled;
-         this.updateScore(§class for case§.RED,param1.scoreRed);
-         this.updateScore(§class for case§.BLUE,param1.scoreBlue);
+         this.updateScore(Renamed663.RED,param1.scoreRed);
+         this.updateScore(Renamed663.BLUE,param1.scoreBlue);
          this.clearUsersInfo();
          this.onResize();
       }
@@ -438,13 +438,13 @@ package alternativa.tanks.view.battleinfo.team
          this._fightButtonBlue.cost = param1;
       }
       
-      public function updateScore(param1:§class for case§, param2:int) : void
+      public function updateScore(param1:Renamed663, param2:int) : void
       {
-         if(param1 == §class for case§.RED)
+         if(param1 == Renamed663.RED)
          {
             this._redScoreLabel.text = String(param2);
          }
-         if(param1 == §class for case§.BLUE)
+         if(param1 == Renamed663.BLUE)
          {
             this._blueScoreLabel.text = String(param2);
          }
@@ -556,12 +556,12 @@ package alternativa.tanks.view.battleinfo.team
       
       private function onFightButtonRedClick(param1:MouseEvent) : void
       {
-         dispatchEvent(new BattleInfoViewEvent(BattleInfoViewEvent.ENTER_TEAM,§class for case§.RED));
+         dispatchEvent(new BattleInfoViewEvent(BattleInfoViewEvent.ENTER_TEAM,Renamed663.RED));
       }
       
       private function onFightButtonBlueClick(param1:MouseEvent) : void
       {
-         dispatchEvent(new BattleInfoViewEvent(BattleInfoViewEvent.ENTER_TEAM,§class for case§.BLUE));
+         dispatchEvent(new BattleInfoViewEvent(BattleInfoViewEvent.ENTER_TEAM,Renamed663.BLUE));
       }
       
       private function onEnterSpectator(param1:BattleInfoViewEvent) : void

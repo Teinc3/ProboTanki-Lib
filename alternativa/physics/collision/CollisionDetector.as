@@ -4,7 +4,7 @@ package alternativa.physics.collision
    import alternativa.physics.BodyContact;
    import alternativa.physics.ShapeContact;
    import alternativa.physics.collision.types.RayHit;
-   import §for set super§.§=-§;
+   import Renamed373.Renamed606;
    
    public interface CollisionDetector
    {
@@ -20,7 +20,7 @@ package alternativa.physics.collision
       
       function testCollision(param1:CollisionShape, param2:CollisionShape) : Boolean;
       
-      function getTankBodies() : Vector.<§=-§>;
+      function getTankBodies() : Vector.<Renamed606>;
    }
 }
 

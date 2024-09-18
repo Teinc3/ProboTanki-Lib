@@ -1,6 +1,6 @@
 package scpacker.networking.protocol.codec.complex
 {
-   import §[" §.ICodec;
+   import Renamed5811.ICodec;
    import flash.utils.ByteArray;
    
    public class VectorCodecInt implements ICodec

@@ -1,12 +1,12 @@
 package projects.tanks.clients.fp10.libraries.tanksservices.model
 {
-   import projects.tanks.client.users.model.friends.§"!1§;
-   import projects.tanks.client.users.model.friends.§0U§;
+   import projects.tanks.client.users.model.friends.Renamed4412;
+   import projects.tanks.client.users.model.friends.Renamed4414;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.friend.FriendActionServiceEvent;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.friend.FriendActionServiceUidEvent;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.friend.IFriendActionService;
    
-   public class FriendsModel extends §"!1§ implements §0U§, IFriends
+   public class FriendsModel extends Renamed4412 implements Renamed4414, IFriends
    {
       [Inject]
       public static var friendsActionService:IFriendActionService;
@@ -55,7 +55,7 @@ package projects.tanks.clients.fp10.libraries.tanksservices.model
       
       private function onRejectAllIncoming(param1:FriendActionServiceEvent) : void
       {
-         server.§while package§();
+         server.Renamed4445();
       }
       
       private function onRevoke(param1:FriendActionServiceEvent) : void
@@ -65,7 +65,7 @@ package projects.tanks.clients.fp10.libraries.tanksservices.model
       
       private function onCheck(param1:FriendActionServiceUidEvent) : void
       {
-         server.§5!t§(param1.uid);
+         server.Renamed822(param1.uid);
       }
       
       public function objectUnloaded() : void

@@ -3,7 +3,7 @@ package alternativa.tanks.model.item
    import alternativa.tanks.service.battle.IBattleUserInfoService;
    import alternativa.tanks.service.battlelist.IBattleListFormService;
    import platform.client.fp10.core.model.IObjectLoadListener;
-   import projects.tanks.client.battleselect.model.item.§5!9§;
+   import projects.tanks.client.battleselect.model.item.Renamed1620;
    import projects.tanks.client.battleselect.model.item.BattleItemCC;
    import projects.tanks.client.battleselect.model.item.BattleItemModelBase;
    import projects.tanks.client.battleselect.model.item.IBattleItemModelBase;
@@ -31,7 +31,7 @@ package alternativa.tanks.model.item
          battleListFormService.updateName(object.name,param1);
       }
       
-      public function updateSuspicious(param1:§5!9§) : void
+      public function updateSuspicious(param1:Renamed1620) : void
       {
          battleListFormService.updateSuspicious(object.name,param1);
       }
@@ -51,8 +51,8 @@ package alternativa.tanks.model.item
       
       public function objectUnloadedPost() : void
       {
-         battleUserInfoService.§try null§(object);
-         battleListFormService.§implements var catch§(object.name);
+         battleUserInfoService.Renamed2129(object);
+         battleListFormService.Renamed2130(object.name);
       }
       
       public function getConstructor() : BattleItemCC

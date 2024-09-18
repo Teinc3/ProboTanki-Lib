@@ -4,8 +4,8 @@ package alternativa.tanks.controller.commands.goto
    import alternativa.tanks.controller.events.socialnetwork.NavigationExternalEvent;
    import alternativa.tanks.model.EntranceServerParamsModel;
    import alternativa.tanks.model.EntranceUrlParamsModel;
-   import alternativa.tanks.service.§each const each§;
-   import alternativa.tanks.service.§each package super§;
+   import alternativa.tanks.service.Renamed554;
+   import alternativa.tanks.service.Renamed555;
    import org.robotlegs.mvcs.Command;
    
    public class GoToExternalLoginCommand extends Command
@@ -17,13 +17,13 @@ package alternativa.tanks.controller.commands.goto
       public var serverParamsModel:EntranceServerParamsModel;
       
       [Inject]
-      public var sharedObjectsService:§each package super§;
+      public var sharedObjectsService:Renamed555;
       
       [Inject]
       public var event:NavigationExternalEvent;
       
       [Inject]
-      public var captchaService:§each const each§;
+      public var captchaService:Renamed554;
       
       public function GoToExternalLoginCommand()
       {
@@ -41,7 +41,7 @@ package alternativa.tanks.controller.commands.goto
          {
             _loc1_ = this.captchaService.loginCaptchaEnabled;
          }
-         dispatch(new ShowExternalEntranceFormEvent(ShowExternalEntranceFormEvent.LOGIN_FORM,this.event.socialNetworkId,this.entranceUrlParamsModel.passedCallsign || this.sharedObjectsService.§+"d§,_loc1_));
+         dispatch(new ShowExternalEntranceFormEvent(ShowExternalEntranceFormEvent.LOGIN_FORM,this.event.socialNetworkId,this.entranceUrlParamsModel.passedCallsign || this.sharedObjectsService.Renamed1567,_loc1_));
       }
    }
 }

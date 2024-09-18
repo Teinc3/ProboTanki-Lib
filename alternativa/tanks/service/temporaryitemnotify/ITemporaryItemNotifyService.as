@@ -4,11 +4,11 @@ package alternativa.tanks.service.temporaryitemnotify
    
    public interface ITemporaryItemNotifyService
    {
-      function addListener(param1:§3M§) : void;
+      function addListener(param1:Renamed2093) : void;
       
-      function removeListener(param1:§3M§) : void;
+      function removeListener(param1:Renamed2093) : void;
       
-      function §while for catch§(param1:IGameObject) : void;
+      function Renamed3793(param1:IGameObject) : void;
    }
 }
 

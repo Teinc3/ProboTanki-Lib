@@ -1,10 +1,10 @@
 package alternativa.tanks.servermodels.login
 {
    import alternativa.tanks.service.IEntranceClientFacade;
-   import §const catch import§.§&#V§;
-   import §const catch import§.§var if§;
+   import Renamed334.Renamed3551;
+   import Renamed334.Renamed3552;
    
-   public class LoginModel extends §&#V§ implements ILogin, §var if§
+   public class LoginModel extends Renamed3551 implements ILogin, Renamed3552
    {
       [Inject]
       public static var entranceClientFacade:IEntranceClientFacade;

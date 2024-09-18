@@ -64,9 +64,9 @@ package services.alertservice
       
       public static const ERROR_CONFIRM_EMAIL:int = 20;
       
-      public static const §implements catch§:int = 21;
+      public static const Renamed10787:int = 21;
       
-      public static const §6b§:int = 22;
+      public static const Renamed10788:int = 22;
       
       protected var bgWindow:TankWindow;
       
@@ -86,7 +86,7 @@ package services.alertservice
       
       private var localeService:ILocaleService;
       
-      private var §3"0§:Vector.<Sprite>;
+      private var Renamed10789:Vector.<Sprite>;
       
       public function Alert(param1:int = -1, param2:Boolean = false)
       {
@@ -102,24 +102,24 @@ package services.alertservice
       
       public static function fillButtonLabels(param1:ILocaleService) : void
       {
-         §get const use§.YES = param1.getText(TanksLocale.TEXT_ALERT_ANSWER_YES);
-         §get const use§.NO = param1.getText(TanksLocale.TEXT_ALERT_ANSWER_NO);
-         §get const use§.OK = param1.getText(TanksLocale.TEXT_ALERT_ANSWER_OK);
-         §get const use§.CANCEL = param1.getText(TanksLocale.TEXT_ALERT_ANSWER_CANCEL);
-         §get const use§.SEND = param1.getText(TanksLocale.TEXT_ALERT_ANSWER_SEND_BUG_REPORT);
-         §get const use§.§9f§ = param1.getText(TanksLocale.TEXT_ALERT_ANSWER_RETURN_TO_BATTLE);
-         §get const use§.GARAGE = param1.getText(TanksLocale.TEXT_ALERT_ANSWER_GO_TO_GARAGE);
-         §get const use§.§include for include§ = param1.getText(TanksLocale.TEXT_ALERT_ANSWER_PROCEED);
-         §get const use§.§">§ = "Закрыть доступ";
-         §get const use§.ENTER = param1.getText(TanksLocale.TEXT_BATTLEINFO_PANEL_PAID_BATTLES_ALERT_ANSWER_ENTER);
-         §get const use§.§in package get§ = param1.getText(TanksLocale.TEXT_BATTLEINFO_PANEL_PAID_BATTLES_ALERT_ANSWER_DONT_ENTER);
+         Renamed1616.YES = param1.getText(TanksLocale.TEXT_ALERT_ANSWER_YES);
+         Renamed1616.NO = param1.getText(TanksLocale.TEXT_ALERT_ANSWER_NO);
+         Renamed1616.OK = param1.getText(TanksLocale.TEXT_ALERT_ANSWER_OK);
+         Renamed1616.CANCEL = param1.getText(TanksLocale.TEXT_ALERT_ANSWER_CANCEL);
+         Renamed1616.SEND = param1.getText(TanksLocale.TEXT_ALERT_ANSWER_SEND_BUG_REPORT);
+         Renamed1616.Renamed3951 = param1.getText(TanksLocale.TEXT_ALERT_ANSWER_RETURN_TO_BATTLE);
+         Renamed1616.GARAGE = param1.getText(TanksLocale.TEXT_ALERT_ANSWER_GO_TO_GARAGE);
+         Renamed1616.Renamed3952 = param1.getText(TanksLocale.TEXT_ALERT_ANSWER_PROCEED);
+         Renamed1616.Renamed10790 = "Закрыть доступ";
+         Renamed1616.ENTER = param1.getText(TanksLocale.TEXT_BATTLEINFO_PANEL_PAID_BATTLES_ALERT_ANSWER_ENTER);
+         Renamed1616.Renamed1618 = param1.getText(TanksLocale.TEXT_BATTLEINFO_PANEL_PAID_BATTLES_ALERT_ANSWER_DONT_ENTER);
       }
       
       private function init() : void
       {
          this.localeService = ILocaleService(OSGi.getInstance().getService(ILocaleService));
          this.bgWindow.headerLang = this.localeService.getText(TanksLocale.TEXT_GUI_LANG);
-         if(§get const use§.YES == null)
+         if(Renamed1616.YES == null)
          {
             fillButtonLabels(this.localeService);
          }
@@ -133,29 +133,29 @@ package services.alertservice
       
       private function initStandardAlerts(param1:ILocaleService) : void
       {
-         this.alerts[ALERT_QUIT] = [param1.getText(TanksLocale.TEXT_ALERT_QUIT_TEXT),Vector.<String>([§get const use§.YES,§get const use§.NO])];
-         this.alerts[ALERT_CONFIRM_EMAIL] = [param1.getText(TanksLocale.TEXT_ALERT_EMAIL_CONFIRMED),Vector.<String>([§get const use§.YES])];
-         this.alerts[ERROR_FATAL] = [param1.getText(TanksLocale.TEXT_ERROR_FATAL),Vector.<String>([§get const use§.§9f§])];
-         this.alerts[ERROR_FATAL_DEBUG] = [param1.getText(TanksLocale.TEXT_ERROR_FATAL_DEBUG),Vector.<String>([§get const use§.SEND])];
-         this.alerts[ERROR_CALLSIGN_FIRST_SYMBOL] = [param1.getText(TanksLocale.TEXT_ERROR_CALLSIGN_WRONG_FIRST_SYMBOL),Vector.<String>([§get const use§.OK])];
-         this.alerts[ERROR_CALLSIGN_DEVIDE] = [param1.getText(TanksLocale.TEXT_ERROR_CALLSIGN_NOT_SINGLE_DEVIDERS),Vector.<String>([§get const use§.OK])];
-         this.alerts[ERROR_CALLSIGN_LAST_SYMBOL] = [param1.getText(TanksLocale.TEXT_ERROR_CALLSIGN_WRONG_LAST_SYMBOL),Vector.<String>([§get const use§.OK])];
-         this.alerts[ERROR_CALLSIGN_LENGTH] = [param1.getText(TanksLocale.TEXT_ERROR_CALLSIGN_LENGTH),Vector.<String>([§get const use§.OK])];
-         this.alerts[ERROR_CALLSIGN_UNIQUE] = [param1.getText(TanksLocale.TEXT_ERROR_CALLSIGN_NOT_UNIQUE),Vector.<String>([§get const use§.OK])];
-         this.alerts[ERROR_EMAIL_UNIQUE] = [param1.getText(TanksLocale.TEXT_ERROR_EMAIL_NOT_UNIQUE),Vector.<String>([§get const use§.OK])];
-         this.alerts[ERROR_EMAIL_INVALID] = [param1.getText(TanksLocale.TEXT_ERROR_EMAIL_INVALID),Vector.<String>([§get const use§.OK])];
-         this.alerts[ERROR_EMAIL_NOTFOUND] = [param1.getText(TanksLocale.TEXT_ERROR_EMAIL_NOT_FOUND),Vector.<String>([§get const use§.OK])];
-         this.alerts[ERROR_EMAIL_NOTSENDED] = [param1.getText(TanksLocale.TEXT_ERROR_EMAIL_NOT_SENDED),Vector.<String>([§get const use§.OK])];
-         this.alerts[ERROR_PASSWORD_INCORRECT] = [param1.getText(TanksLocale.TEXT_ERROR_PASSWORD_INCORRECT),Vector.<String>([§get const use§.OK])];
-         this.alerts[ERROR_PASSWORD_LENGTH] = [param1.getText(TanksLocale.TEXT_ERROR_PASSWORD_LENGTH),Vector.<String>([§get const use§.OK])];
-         this.alerts[ERROR_PASSWORD_CHANGE] = [param1.getText(TanksLocale.TEXT_ERROR_PASSWORD_CHANGE),Vector.<String>([§get const use§.OK])];
-         this.alerts[GARAGE_AVAILABLE] = [param1.getText(TanksLocale.TEXT_ALERT_GARAGE_AVAILABLE),Vector.<String>([§get const use§.GARAGE,§get const use§.CANCEL])];
-         this.alerts[ALERT_RECOVERY_LINK_SENDED] = [param1.getText(TanksLocale.TEXT_SETTINGS_CHANGE_PASSWORD_CONFIRMATION_SENT_TEXT),Vector.<String>([§get const use§.OK])];
-         this.alerts[ALERT_CHAT_PROCEED] = [param1.getText(TanksLocale.TEXT_ALERT_CHAT_PROCEED_EXTERNAL_LINK),Vector.<String>([§get const use§.CANCEL])];
-         this.alerts[CAPTCHA_INCORRECT] = [param1.getText(TanksLocale.TEXT_CAPTCHA_INCORRECT),Vector.<String>([§get const use§.OK])];
-         this.alerts[ERROR_CONFIRM_EMAIL] = [param1.getText(TanksLocale.TEXT_ALERT_EMAIL_CONFIRMED_WRONG_LINK),Vector.<String>([§get const use§.OK])];
-         this.alerts[§implements catch§] = ["Внимание!\nПрежде чем вы сможете закрыть доступ для сервиса ВКонтакте, вам\nнеобходимо установить пароль для аккаунта \"Танков Онлайн\" в настройках.",[§get const use§.OK]];
-         this.alerts[§6b§] = [param1.getText(TanksLocale.TEXT_PARTNER_USERNAME_ALREDY_USED_ERROR),Vector.<String>([§get const use§.OK])];
+         this.alerts[ALERT_QUIT] = [param1.getText(TanksLocale.TEXT_ALERT_QUIT_TEXT),Vector.<String>([Renamed1616.YES,Renamed1616.NO])];
+         this.alerts[ALERT_CONFIRM_EMAIL] = [param1.getText(TanksLocale.TEXT_ALERT_EMAIL_CONFIRMED),Vector.<String>([Renamed1616.YES])];
+         this.alerts[ERROR_FATAL] = [param1.getText(TanksLocale.TEXT_ERROR_FATAL),Vector.<String>([Renamed1616.Renamed3951])];
+         this.alerts[ERROR_FATAL_DEBUG] = [param1.getText(TanksLocale.TEXT_ERROR_FATAL_DEBUG),Vector.<String>([Renamed1616.SEND])];
+         this.alerts[ERROR_CALLSIGN_FIRST_SYMBOL] = [param1.getText(TanksLocale.TEXT_ERROR_CALLSIGN_WRONG_FIRST_SYMBOL),Vector.<String>([Renamed1616.OK])];
+         this.alerts[ERROR_CALLSIGN_DEVIDE] = [param1.getText(TanksLocale.TEXT_ERROR_CALLSIGN_NOT_SINGLE_DEVIDERS),Vector.<String>([Renamed1616.OK])];
+         this.alerts[ERROR_CALLSIGN_LAST_SYMBOL] = [param1.getText(TanksLocale.TEXT_ERROR_CALLSIGN_WRONG_LAST_SYMBOL),Vector.<String>([Renamed1616.OK])];
+         this.alerts[ERROR_CALLSIGN_LENGTH] = [param1.getText(TanksLocale.TEXT_ERROR_CALLSIGN_LENGTH),Vector.<String>([Renamed1616.OK])];
+         this.alerts[ERROR_CALLSIGN_UNIQUE] = [param1.getText(TanksLocale.TEXT_ERROR_CALLSIGN_NOT_UNIQUE),Vector.<String>([Renamed1616.OK])];
+         this.alerts[ERROR_EMAIL_UNIQUE] = [param1.getText(TanksLocale.TEXT_ERROR_EMAIL_NOT_UNIQUE),Vector.<String>([Renamed1616.OK])];
+         this.alerts[ERROR_EMAIL_INVALID] = [param1.getText(TanksLocale.TEXT_ERROR_EMAIL_INVALID),Vector.<String>([Renamed1616.OK])];
+         this.alerts[ERROR_EMAIL_NOTFOUND] = [param1.getText(TanksLocale.TEXT_ERROR_EMAIL_NOT_FOUND),Vector.<String>([Renamed1616.OK])];
+         this.alerts[ERROR_EMAIL_NOTSENDED] = [param1.getText(TanksLocale.TEXT_ERROR_EMAIL_NOT_SENDED),Vector.<String>([Renamed1616.OK])];
+         this.alerts[ERROR_PASSWORD_INCORRECT] = [param1.getText(TanksLocale.TEXT_ERROR_PASSWORD_INCORRECT),Vector.<String>([Renamed1616.OK])];
+         this.alerts[ERROR_PASSWORD_LENGTH] = [param1.getText(TanksLocale.TEXT_ERROR_PASSWORD_LENGTH),Vector.<String>([Renamed1616.OK])];
+         this.alerts[ERROR_PASSWORD_CHANGE] = [param1.getText(TanksLocale.TEXT_ERROR_PASSWORD_CHANGE),Vector.<String>([Renamed1616.OK])];
+         this.alerts[GARAGE_AVAILABLE] = [param1.getText(TanksLocale.TEXT_ALERT_GARAGE_AVAILABLE),Vector.<String>([Renamed1616.GARAGE,Renamed1616.CANCEL])];
+         this.alerts[ALERT_RECOVERY_LINK_SENDED] = [param1.getText(TanksLocale.TEXT_SETTINGS_CHANGE_PASSWORD_CONFIRMATION_SENT_TEXT),Vector.<String>([Renamed1616.OK])];
+         this.alerts[ALERT_CHAT_PROCEED] = [param1.getText(TanksLocale.TEXT_ALERT_CHAT_PROCEED_EXTERNAL_LINK),Vector.<String>([Renamed1616.CANCEL])];
+         this.alerts[CAPTCHA_INCORRECT] = [param1.getText(TanksLocale.TEXT_CAPTCHA_INCORRECT),Vector.<String>([Renamed1616.OK])];
+         this.alerts[ERROR_CONFIRM_EMAIL] = [param1.getText(TanksLocale.TEXT_ALERT_EMAIL_CONFIRMED_WRONG_LINK),Vector.<String>([Renamed1616.OK])];
+         this.alerts[Renamed10787] = ["Внимание!\nПрежде чем вы сможете закрыть доступ для сервиса ВКонтакте, вам\nнеобходимо установить пароль для аккаунта \"Танков Онлайн\" в настройках.",[Renamed1616.OK]];
+         this.alerts[Renamed10788] = [param1.getText(TanksLocale.TEXT_PARTNER_USERNAME_ALREDY_USED_ERROR),Vector.<String>([Renamed1616.OK])];
       }
       
       private function createOutput() : void
@@ -174,16 +174,16 @@ package services.alertservice
       public function showAlert(param1:String, param2:Vector.<String>) : void
       {
          this.message = param1;
-         this.§3"0§ = null;
+         this.Renamed10789 = null;
          this.labels = param2;
          addEventListener(Event.ADDED_TO_STAGE,this.onAddedToStage);
       }
       
-      public function §switch const true§(param1:String, param2:Vector.<String>, param3:Vector.<Sprite>) : void
+      public function Renamed2166(param1:String, param2:Vector.<String>, param3:Vector.<Sprite>) : void
       {
          this.message = param1;
          this.labels = param2;
-         this.§3"0§ = param3;
+         this.Renamed10789 = param3;
          addEventListener(Event.ADDED_TO_STAGE,this.onAddedToStage);
       }
       
@@ -193,14 +193,14 @@ package services.alertservice
          this.doLayout(param1);
       }
       
-      private function §"#Q§() : Boolean
+      private function Renamed10791() : Boolean
       {
          return this.labels.length != 0;
       }
       
-      private function §&#"§() : Boolean
+      private function Renamed10792() : Boolean
       {
-         return this.§3"0§ != null;
+         return this.Renamed10789 != null;
       }
       
       protected function doLayout(param1:Event) : void
@@ -214,14 +214,14 @@ package services.alertservice
          this.alertWindow.addChild(this.bgWindow);
          this.alertWindow.addChild(this.output);
          this.output.htmlText = this.message;
-         if(this.§"#Q§())
+         if(this.Renamed10791())
          {
             _loc3_ = 0;
             while(_loc3_ < this.labels.length)
             {
-               if(this.§&#"§())
+               if(this.Renamed10792())
                {
-                  _loc2_ = this.§3"0§[_loc3_];
+                  _loc2_ = this.Renamed10789[_loc3_];
                }
                else
                {
@@ -269,21 +269,21 @@ package services.alertservice
             case 2:
                if(AlertUtils.isConfirmationKey(param1.keyCode))
                {
-                  _loc2_ = this.getFirstExistingLabel(this.§static catch finally§());
+                  _loc2_ = this.getFirstExistingLabel(this.Renamed10793());
                }
                else if(AlertUtils.isCancelKey(param1.keyCode))
                {
-                  _loc2_ = this.getFirstExistingLabel(this.§throw default§());
+                  _loc2_ = this.getFirstExistingLabel(this.Renamed10794());
                }
                break;
             case 3:
                if(AlertUtils.isConfirmationKey(param1.keyCode))
                {
-                  _loc2_ = this.getFirstExistingLabel(this.§static catch finally§());
+                  _loc2_ = this.getFirstExistingLabel(this.Renamed10793());
                }
                else if(AlertUtils.isCancelKey(param1.keyCode))
                {
-                  _loc2_ = this.getFirstExistingLabel(Vector.<String>([§get const use§.CANCEL]));
+                  _loc2_ = this.getFirstExistingLabel(Vector.<String>([Renamed1616.CANCEL]));
                }
          }
          if(_loc2_ != null)
@@ -293,14 +293,14 @@ package services.alertservice
          }
       }
       
-      private function §throw default§() : Vector.<String>
+      private function Renamed10794() : Vector.<String>
       {
-         return Vector.<String>([§get const use§.NO,§get const use§.CANCEL,§get const use§.§9f§,§get const use§.§in package get§]);
+         return Vector.<String>([Renamed1616.NO,Renamed1616.CANCEL,Renamed1616.Renamed3951,Renamed1616.Renamed1618]);
       }
       
-      private function §static catch finally§() : Vector.<String>
+      private function Renamed10793() : Vector.<String>
       {
-         return Vector.<String>([§get const use§.OK,§get const use§.YES,§get const use§.GARAGE,§get const use§.§include for include§,§get const use§.SEND,§get const use§.ENTER,this.localeService.getText(TanksLocale.TEXT_BATTLE_ENTER_WARNING_PARKOUR_BUTTON_ENTER)]);
+         return Vector.<String>([Renamed1616.OK,Renamed1616.YES,Renamed1616.GARAGE,Renamed1616.Renamed3952,Renamed1616.SEND,Renamed1616.ENTER,this.localeService.getText(TanksLocale.TEXT_BATTLE_ENTER_WARNING_PARKOUR_BUTTON_ENTER)]);
       }
       
       private function getFirstExistingLabel(param1:Vector.<String>) : String
@@ -319,12 +319,12 @@ package services.alertservice
          return "";
       }
       
-      private function §catch set super§(param1:Object) : Boolean
+      private function Renamed10795(param1:Object) : Boolean
       {
          return param1 is ButtonBase || param1 is ColorButton;
       }
       
-      private function §try const try§(param1:Object) : String
+      private function Renamed10796(param1:Object) : String
       {
          if(param1 is ButtonBase)
          {
@@ -344,7 +344,7 @@ package services.alertservice
          while(_loc3_ < this.alertWindow.numChildren)
          {
             _loc2_ = this.alertWindow.getChildAt(_loc3_);
-            if(this.§catch set super§(_loc2_) && this.§try const try§(_loc2_) == param1)
+            if(this.Renamed10795(_loc2_) && this.Renamed10796(_loc2_) == param1)
             {
                _loc2_.dispatchEvent(new MouseEvent(MouseEvent.CLICK));
                return;
@@ -385,9 +385,9 @@ package services.alertservice
          {
             this.alertWindow.removeChildAt(0);
          }
-         if(this.§catch set super§(param1.currentTarget))
+         if(this.Renamed10795(param1.currentTarget))
          {
-            dispatchEvent(new AlertEvent(this.§try const try§(param1.currentTarget)));
+            dispatchEvent(new AlertEvent(this.Renamed10796(param1.currentTarget)));
          }
          removeDisplayObject(this);
       }
@@ -407,12 +407,12 @@ package services.alertservice
          }
       }
       
-      public function §;!&§() : void
+      public function Renamed10797() : void
       {
          var _loc1_:String = null;
          if(this.labels.length == 2)
          {
-            _loc1_ = this.getFirstExistingLabel(this.§throw default§());
+            _loc1_ = this.getFirstExistingLabel(this.Renamed10794());
          }
          else if(this.labels.length == 1)
          {

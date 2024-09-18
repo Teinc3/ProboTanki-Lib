@@ -4,7 +4,7 @@ package alternativa.tanks.service.itempropertyparams
    
    public interface ItemPropertyParamsService
    {
-      function getParams(param1:ItemGarageProperty) : §else package implements§;
+      function getParams(param1:ItemGarageProperty) : Renamed1710;
    }
 }
 

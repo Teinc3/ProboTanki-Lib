@@ -1,49 +1,49 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import §[" §.§#""§;
-   import §[" §.ICodec;
+   import Renamed5811.Renamed9342;
+   import Renamed5811.ICodec;
    import alternativa.osgi.OSGi;
    import alternativa.osgi.service.clientlog.IClientLog;
    import flash.utils.ByteArray;
    import projects.tanks.client.chat.types.UserStatus;
    import projects.tanks.client.users.services.chatmoderator.ChatModeratorLevel;
-   import scpacker.networking.protocol.§?"s§;
+   import scpacker.networking.protocol.Renamed536;
    
-   public class CodecUserStatus extends §#""§ implements ICodec
+   public class CodecUserStatus extends Renamed9342 implements ICodec
    {
       public static var log:IClientLog = IClientLog(OSGi.getInstance().getService(IClientLog));
       
-      private var §break var import§:ICodec;
+      private var Renamed10627:ICodec;
       
-      private var §for set throw§:ICodec;
+      private var Renamed10760:ICodec;
       
-      private var §?!8§:ICodec;
+      private var Renamed10761:ICodec;
       
-      private var §"#$§:ICodec;
+      private var Renamed10745:ICodec;
       
-      private var §'#X§:ICodec;
+      private var Renamed10607:ICodec;
       
-      public function CodecUserStatus(param1:§?"s§)
+      public function CodecUserStatus(param1:Renamed536)
       {
          super();
-         this.§break var import§ = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecChatModeratorLevel");
-         this.§for set throw§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.StringCodec");
-         this.§?!8§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");
-         this.§"#$§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.StringCodec");
-         this.§'#X§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.StringCodec");
+         this.Renamed10627 = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecChatModeratorLevel");
+         this.Renamed10760 = param1.getCodec("scpacker.networking.protocol.codec.primitive.StringCodec");
+         this.Renamed10761 = param1.getCodec("scpacker.networking.protocol.codec.primitive.IntCodec");
+         this.Renamed10745 = param1.getCodec("scpacker.networking.protocol.codec.primitive.StringCodec");
+         this.Renamed10607 = param1.getCodec("scpacker.networking.protocol.codec.primitive.StringCodec");
       }
       
       public function decode(param1:ByteArray) : Object
       {
-         if(§each catch else§(param1))
+         if(Renamed9343(param1))
          {
             return null;
          }
          var _loc2_:UserStatus = new UserStatus();
-         _loc2_.chatModeratorLevel = this.§break var import§.decode(param1) as ChatModeratorLevel;
-         _loc2_.ip = this.§for set throw§.decode(param1) as String;
-         _loc2_.rankIndex = this.§?!8§.decode(param1) as int;
-         _loc2_.userId = _loc2_.uid = this.§"#$§.decode(param1) as String;
+         _loc2_.chatModeratorLevel = this.Renamed10627.decode(param1) as ChatModeratorLevel;
+         _loc2_.ip = this.Renamed10760.decode(param1) as String;
+         _loc2_.rankIndex = this.Renamed10761.decode(param1) as int;
+         _loc2_.userId = _loc2_.uid = this.Renamed10745.decode(param1) as String;
          return _loc2_;
       }
       
@@ -54,11 +54,11 @@ package scpacker.networking.protocol.codec.custom
             throw new Error("Object is null. Use @ProtocolOptional annotation.");
          }
          var _loc3_:UserStatus = UserStatus(param2);
-         this.§break var import§.encode(param1,_loc3_.chatModeratorLevel);
-         this.§for set throw§.encode(param1,_loc3_.ip);
-         this.§?!8§.encode(param1,_loc3_.rankIndex);
-         this.§"#$§.encode(param1,_loc3_.uid);
-         this.§'#X§.encode(param1,_loc3_.userId);
+         this.Renamed10627.encode(param1,_loc3_.chatModeratorLevel);
+         this.Renamed10760.encode(param1,_loc3_.ip);
+         this.Renamed10761.encode(param1,_loc3_.rankIndex);
+         this.Renamed10745.encode(param1,_loc3_.uid);
+         this.Renamed10607.encode(param1,_loc3_.userId);
          return 4;
       }
    }

@@ -9,41 +9,41 @@ package alternativa.tanks.service.battle
       [Inject]
       public static var logService:LogService;
       
-      private var §get catch use§:Dictionary;
+      private var Renamed3623:Dictionary;
       
       public function BattleUserInfoService()
       {
-         this.§get catch use§ = new Dictionary();
+         this.Renamed3623 = new Dictionary();
          super();
       }
       
-      public function §throw package native§(param1:String) : Boolean
+      public function Renamed3624(param1:String) : Boolean
       {
-         return param1 in this.§get catch use§;
+         return param1 in this.Renamed3623;
       }
       
-      public function §1#Q§(param1:String) : IGameObject
+      public function Renamed3625(param1:String) : IGameObject
       {
-         return this.§get catch use§[param1];
+         return this.Renamed3623[param1];
       }
       
       public function connect(param1:String, param2:IGameObject) : void
       {
-         this.§get catch use§[param1] = param2;
+         this.Renamed3623[param1] = param2;
       }
       
       public function disconnect(param1:String) : void
       {
-         delete this.§get catch use§[param1];
+         delete this.Renamed3623[param1];
       }
       
-      public function §try null§(param1:IGameObject) : void
+      public function Renamed2129(param1:IGameObject) : void
       {
          var _loc2_:* = undefined;
          var _loc3_:String = null;
-         for(_loc2_ in this.§get catch use§)
+         for(_loc2_ in this.Renamed3623)
          {
-            _loc3_ = this.§get catch use§[_loc2_];
+            _loc3_ = this.Renamed3623[_loc2_];
             if(_loc3_ == param1)
             {
                this.disconnect(_loc2_);

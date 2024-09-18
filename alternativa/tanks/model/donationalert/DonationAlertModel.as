@@ -1,7 +1,7 @@
 package alternativa.tanks.model.donationalert
 {
-   import §"#p§.§break package extends§;
-   import §"#p§.§set for override§;
+   import Renamed2081.Renamed2082;
+   import Renamed2081.Renamed2083;
    import alternativa.osgi.service.display.IDisplay;
    import alternativa.tanks.gui.ThanksForPurchaseWindow;
    import alternativa.tanks.service.dialogs.IDialogsService;
@@ -13,7 +13,7 @@ package alternativa.tanks.model.donationalert
    import platform.client.fp10.core.resource.types.ImageResource;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.alertservices.IAlertService;
    
-   public class DonationAlertModel extends §break package extends§ implements §set for override§
+   public class DonationAlertModel extends Renamed2082 implements Renamed2083
    {
       [Inject]
       public static var dialogsService:IDialogsService;

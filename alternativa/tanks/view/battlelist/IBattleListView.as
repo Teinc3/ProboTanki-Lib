@@ -2,8 +2,8 @@ package alternativa.tanks.view.battlelist
 {
    import alternativa.tanks.controllers.battlelist.BattleListItemParams;
    import alternativa.tanks.controllers.battlelist.IBattleListViewControllerCallBack;
-   import projects.tanks.client.battleselect.model.item.§5!9§;
-   import projects.tanks.client.battleservice.§final package import§;
+   import projects.tanks.client.battleselect.model.item.Renamed1620;
+   import projects.tanks.client.battleservice.Renamed1587;
    
    public interface IBattleListView
    {
@@ -25,7 +25,7 @@ package alternativa.tanks.view.battlelist
       
       function updateName(param1:String, param2:String) : void;
       
-      function updateSuspicious(param1:String, param2:§5!9§) : void;
+      function updateSuspicious(param1:String, param2:Renamed1620) : void;
       
       function updateUsersCountTeam(param1:String, param2:int, param3:int, param4:int, param5:uint) : void;
       
@@ -41,9 +41,9 @@ package alternativa.tanks.view.battlelist
       
       function getItemIndex(param1:String) : int;
       
-      function lockFilter(param1:§final package import§) : void;
+      function lockFilter(param1:Renamed1587) : void;
       
-      function unLockFilter(param1:§final package import§) : void;
+      function unLockFilter(param1:Renamed1587) : void;
    }
 }
 

@@ -1,8 +1,8 @@
 package alternativa.tanks.gui.settings
 {
-   public class SettingsWindowEvent extends §for const true§
+   public class SettingsWindowEvent extends Renamed1979
    {
-      public static const §[#5§:String = "SettingsWindowEventCloseSettings";
+      public static const Renamed1977:String = "SettingsWindowEventCloseSettings";
       
       public function SettingsWindowEvent(param1:String)
       {

@@ -5,15 +5,15 @@ package alternativa.tanks.model.garage.availableitems
    import alternativa.tanks.locale.constants.TextConst;
    import alternativa.tanks.service.notificationcategories.INotificationGarageCategoriesService;
    import flash.events.Event;
-   import §for const native§.§#"6§;
-   import §for const native§.§3_§;
+   import Renamed367.Renamed2113;
+   import Renamed367.Renamed2114;
    import forms.events.PartsListEvent;
    import projects.tanks.client.commons.models.layout.LayoutState;
    import projects.tanks.client.panel.model.garage.GarageItemInfo;
    import projects.tanks.clients.flash.commons.services.layout.LobbyLayoutServiceEvent;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.layout.ILobbyLayoutService;
    
-   public class AvailableItemsModel extends §3_§ implements §#"6§
+   public class AvailableItemsModel extends Renamed2114 implements Renamed2113
    {
       [Inject]
       public static var lobbyLayoutService:ILobbyLayoutService;
@@ -51,7 +51,7 @@ package alternativa.tanks.model.garage.availableitems
             }
             lobbyLayoutService.addEventListener(LobbyLayoutServiceEvent.END_LAYOUT_SWITCH,this.onEndLayoutSwitch);
          }
-         notificationGarageCategoriesService.§native const else§(param1);
+         notificationGarageCategoriesService.Renamed2115(param1);
       }
       
       private function onEndLayoutSwitch(param1:LobbyLayoutServiceEvent) : void

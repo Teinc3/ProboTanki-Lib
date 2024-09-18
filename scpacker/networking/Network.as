@@ -1,8 +1,8 @@
 package scpacker.networking
 {
-   import § M§.§true else§;
-   import §&#;§.AbstractPacket;
-   import §&#;§.§^#K§;
+   import Renamed140.Renamed4936;
+   import Renamed189.AbstractPacket;
+   import Renamed189.Renamed5817;
    import alternativa.osgi.OSGi;
    import alternativa.osgi.service.display.IDisplay;
    import alternativa.tanks.bg.IBackgroundService;
@@ -16,25 +16,25 @@ package scpacker.networking
    import platform.client.fp10.core.network.handler.OnConnectionClosedServiceListener;
    import platform.client.fp10.core.service.errormessage.IErrorMessageService;
    import platform.client.fp10.core.service.errormessage.errors.ConnectionClosedError;
-   import scpacker.networking.protocol.§?"s§;
+   import scpacker.networking.protocol.Renamed536;
    
    public class Network
    {
-      public static var §["b§:§true else§;
+      public static var Renamed10516:Renamed4936;
       
-      public static var §;!§:§?"s§;
+      public static var Renamed5812:Renamed536;
       
-      private static var §package package extends§:§^#K§;
+      private static var Renamed10517:Renamed5817;
       
       private var socket:Socket;
       
       private var currentPacketPosition:int;
       
-      private var §9"L§:Boolean = false;
+      private var Renamed10518:Boolean = false;
       
-      private var §catch var import§:Boolean = true;
+      private var Renamed10519:Boolean = true;
       
-      private var §finally for dynamic§:ByteArray;
+      private var Renamed5815:ByteArray;
       
       private var rawDataBuffer:ByteArray;
       
@@ -42,23 +42,23 @@ package scpacker.networking
       
       public function Network()
       {
-         this.§finally for dynamic§ = new ByteArray();
+         this.Renamed5815 = new ByteArray();
          this.rawDataBuffer = new ByteArray();
          this.dataBuffer = new ByteArray();
          super();
          this.socket = new Socket();
-         §package package extends§ = new §^#K§();
-         §["b§ = new §true else§();
-         OSGi.getInstance().registerService(§true else§,§["b§);
-         OSGi.getInstance().registerService(§^#K§,§package package extends§);
-         OSGi.getInstance().registerService(§?"s§,§;!§ = new §?"s§());
+         Renamed10517 = new Renamed5817();
+         Renamed10516 = new Renamed4936();
+         OSGi.getInstance().registerService(Renamed4936,Renamed10516);
+         OSGi.getInstance().registerService(Renamed5817,Renamed10517);
+         OSGi.getInstance().registerService(Renamed536,Renamed5812 = new Renamed536());
       }
       
       public function connect(param1:String, param2:int) : void
       {
-         var _loc3_:§?"s§ = §?"s§(OSGi.getInstance().getService(§?"s§));
+         var _loc3_:Renamed536 = Renamed536(OSGi.getInstance().getService(Renamed536));
          _loc3_.init();
-         new §catch final§().start(OSGi.getInstance());
+         new Renamed10520().start(OSGi.getInstance());
          this.socket.connect(param1,param2);
          this.socket.addEventListener(ProgressEvent.SOCKET_DATA,this.onDataSocket);
          this.socket.addEventListener(Event.CONNECT,this.onConnected);
@@ -95,15 +95,15 @@ package scpacker.networking
       private function onDataSocket(param1:Event) : void
       {
          this.socket.readBytes(this.dataBuffer,this.dataBuffer.length);
-         this.§=!d§();
+         this.Renamed10521();
       }
       
-      private function §=!d§() : void
+      private function Renamed10521() : void
       {
-         var §if for case§:int = 0;
-         var §=!$§:int = 0;
-         var §'#-§:int = 0;
-         var §-#H§:AbstractPacket = null;
+         var Renamed10522:int = 0;
+         var Renamed10523:int = 0;
+         var Renamed10524:int = 0;
+         var Renamed8774:AbstractPacket = null;
          this.dataBuffer.position = this.currentPacketPosition;
          if(this.dataBuffer.bytesAvailable == 0)
          {
@@ -111,33 +111,33 @@ package scpacker.networking
          }
          while(true)
          {
-            if(this.dataBuffer.bytesAvailable < AbstractPacket.§,#,§)
+            if(this.dataBuffer.bytesAvailable < AbstractPacket.Renamed5813)
             {
                return;
             }
-            §if for case§ = this.dataBuffer.readInt();
-            §=!$§ = this.dataBuffer.readInt();
-            §'#-§ = §if for case§ - AbstractPacket.§,#,§;
-            if(this.dataBuffer.bytesAvailable < §'#-§)
+            Renamed10522 = this.dataBuffer.readInt();
+            Renamed10523 = this.dataBuffer.readInt();
+            Renamed10524 = Renamed10522 - AbstractPacket.Renamed5813;
+            if(this.dataBuffer.bytesAvailable < Renamed10524)
             {
                return;
             }
-            if(§'#-§ > 0)
+            if(Renamed10524 > 0)
             {
-               this.dataBuffer.readBytes(this.§finally for dynamic§,0,§'#-§);
+               this.dataBuffer.readBytes(this.Renamed5815,0,Renamed10524);
             }
             try
             {
-               §;!§.§2"C§().decrypt(this.§finally for dynamic§);
-               §-#H§ = §package package extends§.§function package do§(§=!$§);
-               §-#H§.unwrap(this.§finally for dynamic§);
-               §["b§.invoke(§-#H§);
+               Renamed5812.Renamed5816().decrypt(this.Renamed5815);
+               Renamed8774 = Renamed10517.Renamed5820(Renamed10523);
+               Renamed8774.unwrap(this.Renamed5815);
+               Renamed10516.invoke(Renamed8774);
             }
             catch(e:Error)
             {
-               OSGi.clientLog.log("net","error packet %1 packetLength %2 packetId %3 \n\n %4",§-#H§,§if for case§,§=!$§,e.getStackTrace());
+               OSGi.clientLog.log("net","error packet %1 packetLength %2 packetId %3 \n\n %4",Renamed8774,Renamed10522,Renamed10523,e.getStackTrace());
             }
-            this.§finally for dynamic§.clear();
+            this.Renamed5815.clear();
             if(this.dataBuffer.bytesAvailable == 0)
             {
                break;

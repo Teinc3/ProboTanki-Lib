@@ -20,7 +20,7 @@ package alternativa.tanks.controllers.battleinfo
    import projects.tanks.clients.fp10.libraries.tanksservices.service.layout.ILobbyLayoutService;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.userproperties.IUserPropertiesService;
    import projects.tanks.clients.fp10.libraries.tanksservices.service.userproperties.UserPropertiesServiceEvent;
-   import services.alertservice.§get const use§;
+   import services.alertservice.Renamed1616;
    import utils.preview.IImageResource;
    import utils.preview.ImageResourceLoadingWrapper;
    
@@ -371,7 +371,7 @@ package alternativa.tanks.controllers.battleinfo
       {
          if(this._proBattle && this._noSuppliesTimeLeftInSec == 0 && !this._userAlreadyPaid)
          {
-            if(moneyService.§while package dynamic§(this._proBattleEnterPrice))
+            if(moneyService.Renamed1617(this._proBattleEnterPrice))
             {
                this.showPayedBattleAlert();
             }
@@ -385,8 +385,8 @@ package alternativa.tanks.controllers.battleinfo
       
       private function showPayedBattleAlert() : void
       {
-         var _loc1_:Vector.<String> = Vector.<String>([§get const use§.ENTER,§get const use§.§in package get§]);
-         battleAlertService.showAlert(localeService.getText(TanksLocale.§'"H§),_loc1_);
+         var _loc1_:Vector.<String> = Vector.<String>([Renamed1616.ENTER,Renamed1616.Renamed1618]);
+         battleAlertService.showAlert(localeService.getText(TanksLocale.Renamed1619),_loc1_);
          battleAlertService.addEventListener(AlertServiceEvent.ALERT_BUTTON_PRESSED,this.onAlertButtonPressed);
       }
       

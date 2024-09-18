@@ -1,6 +1,6 @@
 package com.alternativaplatform.projects.tanks.client.models.battlefield
 {
-   import §;"?§.§#">§;
+   import Renamed602.Renamed603;
    import alternativa.object.ClientObject;
    import alternativa.types.Long;
    import platform.client.fp10.core.type.IGameObject;
@@ -11,7 +11,7 @@ package com.alternativaplatform.projects.tanks.client.models.battlefield
       
       public var objectId:String;
       
-      public var position:§#">§;
+      public var position:Renamed603;
       
       public var timeFromAppearing:int;
       

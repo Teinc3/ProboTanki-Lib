@@ -1,8 +1,8 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import §[" §.ICodec;
+   import Renamed5811.ICodec;
    import flash.utils.ByteArray;
-   import §set break§.§try var finally§;
+   import Renamed82.Renamed8544;
    
    public class CodecIsisState implements ICodec
    {
@@ -13,21 +13,21 @@ package scpacker.networking.protocol.codec.custom
       
       public function decode(param1:ByteArray) : Object
       {
-         var _loc2_:§try var finally§ = null;
+         var _loc2_:Renamed8544 = null;
          var _loc3_:int = param1.readInt();
          switch(_loc3_)
          {
             case 0:
-               _loc2_ = §try var finally§.OFF;
+               _loc2_ = Renamed8544.OFF;
                break;
             case 1:
-               _loc2_ = §try var finally§.IDLE;
+               _loc2_ = Renamed8544.IDLE;
                break;
             case 2:
-               _loc2_ = §try var finally§.HEALING;
+               _loc2_ = Renamed8544.HEALING;
                break;
             case 3:
-               _loc2_ = §try var finally§.DAMAGING;
+               _loc2_ = Renamed8544.DAMAGING;
          }
          return _loc2_;
       }

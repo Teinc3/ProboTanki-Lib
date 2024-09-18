@@ -1,53 +1,53 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import §9"a§.§each var for§;
-   import §[" §.ICodec;
+   import Renamed4611.Renamed5433;
+   import Renamed5811.ICodec;
    import alternativa.osgi.OSGi;
    import alternativa.osgi.service.clientlog.IClientLog;
    import flash.utils.ByteArray;
    import platform.client.fp10.core.resource.types.SoundResource;
-   import scpacker.networking.protocol.§?"s§;
+   import scpacker.networking.protocol.Renamed536;
    
    public class CodecCaptureTheFlagSoundFX implements ICodec
    {
       public static var log:IClientLog = IClientLog(OSGi.getInstance().getService(IClientLog));
       
-      private var §false var throw§:ICodec;
+      private var Renamed10619:ICodec;
       
-      private var §continue for catch§:ICodec;
+      private var Renamed10544:ICodec;
       
-      private var §>,§:ICodec;
+      private var Renamed10620:ICodec;
       
-      private var §null try§:ICodec;
+      private var Renamed10545:ICodec;
       
-      private var §finally for§:ICodec;
+      private var Renamed10621:ICodec;
       
-      private var §?#D§:ICodec;
+      private var Renamed10546:ICodec;
       
-      private var §try package true§:ICodec;
+      private var Renamed10622:ICodec;
       
-      private var §&j§:ICodec;
+      private var Renamed10547:ICodec;
       
-      public function CodecCaptureTheFlagSoundFX(param1:§?"s§)
+      public function CodecCaptureTheFlagSoundFX(param1:Renamed536)
       {
          super();
-         this.§false var throw§ = param1.getCodec("scpacker.networking.protocol.codec.custom.ResourceGetterCodec");
-         this.§continue for catch§ = param1.getCodec("scpacker.networking.protocol.codec.custom.ResourceGetterCodec");
-         this.§>,§ = param1.getCodec("scpacker.networking.protocol.codec.custom.ResourceGetterCodec");
-         this.§null try§ = param1.getCodec("scpacker.networking.protocol.codec.custom.ResourceGetterCodec");
-         this.§finally for§ = param1.getCodec("scpacker.networking.protocol.codec.custom.ResourceGetterCodec");
-         this.§?#D§ = param1.getCodec("scpacker.networking.protocol.codec.custom.ResourceGetterCodec");
-         this.§try package true§ = param1.getCodec("scpacker.networking.protocol.codec.custom.ResourceGetterCodec");
-         this.§&j§ = param1.getCodec("scpacker.networking.protocol.codec.custom.ResourceGetterCodec");
+         this.Renamed10619 = param1.getCodec("scpacker.networking.protocol.codec.custom.ResourceGetterCodec");
+         this.Renamed10544 = param1.getCodec("scpacker.networking.protocol.codec.custom.ResourceGetterCodec");
+         this.Renamed10620 = param1.getCodec("scpacker.networking.protocol.codec.custom.ResourceGetterCodec");
+         this.Renamed10545 = param1.getCodec("scpacker.networking.protocol.codec.custom.ResourceGetterCodec");
+         this.Renamed10621 = param1.getCodec("scpacker.networking.protocol.codec.custom.ResourceGetterCodec");
+         this.Renamed10546 = param1.getCodec("scpacker.networking.protocol.codec.custom.ResourceGetterCodec");
+         this.Renamed10622 = param1.getCodec("scpacker.networking.protocol.codec.custom.ResourceGetterCodec");
+         this.Renamed10547 = param1.getCodec("scpacker.networking.protocol.codec.custom.ResourceGetterCodec");
       }
       
       public function decode(param1:ByteArray) : Object
       {
-         var _loc2_:§each var for§ = new §each var for§();
-         _loc2_.§8,§ = this.§continue for catch§.decode(param1) as SoundResource;
-         _loc2_.§do for try§ = this.§null try§.decode(param1) as SoundResource;
-         _loc2_.§final var get§ = this.§?#D§.decode(param1) as SoundResource;
-         _loc2_.§return set while§ = this.§&j§.decode(param1) as SoundResource;
+         var _loc2_:Renamed5433 = new Renamed5433();
+         _loc2_.Renamed5456 = this.Renamed10544.decode(param1) as SoundResource;
+         _loc2_.Renamed5457 = this.Renamed10545.decode(param1) as SoundResource;
+         _loc2_.Renamed5458 = this.Renamed10546.decode(param1) as SoundResource;
+         _loc2_.Renamed5459 = this.Renamed10547.decode(param1) as SoundResource;
          return _loc2_;
       }
       
@@ -57,15 +57,15 @@ package scpacker.networking.protocol.codec.custom
          {
             throw new Error("Object is null. Use @ProtocolOptional annotation.");
          }
-         var _loc3_:§each var for§ = §each var for§(param2);
-         this.§false var throw§.encode(param1,_loc3_.§continue catch§);
-         this.§continue for catch§.encode(param1,_loc3_.§8,§);
-         this.§>,§.encode(param1,_loc3_.§with break§);
-         this.§null try§.encode(param1,_loc3_.§do for try§);
-         this.§finally for§.encode(param1,_loc3_.§null package case§);
-         this.§?#D§.encode(param1,_loc3_.§final var get§);
-         this.§try package true§.encode(param1,_loc3_.§!"%§);
-         this.§&j§.encode(param1,_loc3_.§return set while§);
+         var _loc3_:Renamed5433 = Renamed5433(param2);
+         this.Renamed10619.encode(param1,_loc3_.Renamed7255);
+         this.Renamed10544.encode(param1,_loc3_.Renamed5456);
+         this.Renamed10620.encode(param1,_loc3_.Renamed7256);
+         this.Renamed10545.encode(param1,_loc3_.Renamed5457);
+         this.Renamed10621.encode(param1,_loc3_.Renamed7257);
+         this.Renamed10546.encode(param1,_loc3_.Renamed5458);
+         this.Renamed10622.encode(param1,_loc3_.Renamed7258);
+         this.Renamed10547.encode(param1,_loc3_.Renamed5459);
          return 4;
       }
    }

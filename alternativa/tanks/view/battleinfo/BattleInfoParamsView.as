@@ -1,6 +1,6 @@
 package alternativa.tanks.view.battleinfo
 {
-   import §9"o§.§implements const true§;
+   import Renamed3900.Renamed3920;
    import alternativa.osgi.service.locale.ILocaleService;
    import alternativa.types.Long;
    import assets.icons.BattleInfoIcons;
@@ -23,7 +23,7 @@ package alternativa.tanks.view.battleinfo
    import flash.text.TextFieldType;
    import forms.ranks.SmallRankIcon;
    import forms.registration.CallsignIconStates;
-   import projects.tanks.client.battleservice.§final package import§;
+   import projects.tanks.client.battleservice.Renamed1587;
    import projects.tanks.clients.fp10.libraries.TanksLocale;
    
    public class BattleInfoParamsView extends Sprite
@@ -61,7 +61,7 @@ package alternativa.tanks.view.battleinfo
       
       private var proBattleIcon:Bitmap;
       
-      private var §1#2§:Bitmap;
+      private var Renamed3921:Bitmap;
       
       private var reArmorIcon:Bitmap;
       
@@ -99,7 +99,7 @@ package alternativa.tanks.view.battleinfo
       
       private var _clanLink:String;
       
-      private var §native const native§:Number;
+      private var Renamed3922:Number;
       
       private var ICON_VERTICAL_MARGIN:int = 6;
       
@@ -109,19 +109,19 @@ package alternativa.tanks.view.battleinfo
       {
          var _loc1_:Array = null;
          this.iconBar = new Sprite();
-         this.autoBalanceIcon = new Bitmap(§implements const true§.§!+§);
-         this.friendlyFireIcon = new Bitmap(§implements const true§.§throw set switch§);
+         this.autoBalanceIcon = new Bitmap(Renamed3920.Renamed3907);
+         this.friendlyFireIcon = new Bitmap(Renamed3920.Renamed3908);
          this.iconTL = new BattleInfoIcons();
-         this.battleModeIcon = new Bitmap(§implements const true§.§+"w§);
-         this.iconCTF = new Bitmap(§implements const true§.§%#3§);
-         this.iconCP = new Bitmap(§implements const true§.§]#x§);
-         this.suppliesIcon = new Bitmap(§implements const true§.§var var class§);
-         this.bonusesIcon = new Bitmap(§implements const true§.§do package while§);
-         this.crystalBonusesIcon = new Bitmap(§implements const true§.§&"u§);
-         this.upgradesIcon = new Bitmap(§implements const true§.§%# §);
-         this.proBattleIcon = new Bitmap(§implements const true§.§override package false§);
-         this.reArmorIcon = new Bitmap(§implements const true§.§return var continue§);
-         this.§1#2§ = new Bitmap(§implements const true§.§in const finally§);
+         this.battleModeIcon = new Bitmap(Renamed3920.Renamed3923);
+         this.iconCTF = new Bitmap(Renamed3920.Renamed3924);
+         this.iconCP = new Bitmap(Renamed3920.Renamed3925);
+         this.suppliesIcon = new Bitmap(Renamed3920.Renamed3909);
+         this.bonusesIcon = new Bitmap(Renamed3920.Renamed3910);
+         this.crystalBonusesIcon = new Bitmap(Renamed3920.Renamed3926);
+         this.upgradesIcon = new Bitmap(Renamed3920.Renamed3912);
+         this.proBattleIcon = new Bitmap(Renamed3920.Renamed3927);
+         this.reArmorIcon = new Bitmap(Renamed3920.Renamed3914);
+         this.Renamed3921 = new Bitmap(Renamed3920.Renamed3928);
          this.killLimitLabel = new LabelBase();
          this.timeLimitLabel = new LabelBase();
          this.rangBar = new Sprite();
@@ -222,7 +222,7 @@ package alternativa.tanks.view.battleinfo
          }
       }
       
-      public function setUp(param1:String, param2:int, param3:int, param4:int, param5:int, param6:Boolean, param7:Boolean, param8:String, param9:§final package import§, param10:Boolean, param11:Boolean, param12:Boolean, param13:Boolean, param14:Boolean, param15:Boolean, param16:Boolean, param17:Boolean, param18:String) : void
+      public function setUp(param1:String, param2:int, param3:int, param4:int, param5:int, param6:Boolean, param7:Boolean, param8:String, param9:Renamed1587, param10:Boolean, param11:Boolean, param12:Boolean, param13:Boolean, param14:Boolean, param15:Boolean, param16:Boolean, param17:Boolean, param18:String) : void
       {
          var _loc22_:int = 0;
          var _loc19_:SmallRankIcon = null;
@@ -249,7 +249,7 @@ package alternativa.tanks.view.battleinfo
                _loc20_--;
             }
          }
-         this.§native const native§ = _loc22_ * 14;
+         this.Renamed3922 = _loc22_ * 14;
          if(param8.length > 0 && this.urlString == null)
          {
             this.urlString = new TankInputBase();
@@ -270,9 +270,9 @@ package alternativa.tanks.view.battleinfo
          {
             this.nameTF.text = this.nameTF.text + " " + param18;
          }
-         this.§1#2§.x = this.proBattleIcon.x;
-         this.§1#2§.y = this.proBattleIcon.y + 1;
-         this.§1#2§.visible = param14 && param17;
+         this.Renamed3921.x = this.proBattleIcon.x;
+         this.Renamed3921.y = this.proBattleIcon.y + 1;
+         this.Renamed3921.visible = param14 && param17;
          while(this.iconBar.numChildren > 0)
          {
             this.iconBar.removeChildAt(0);
@@ -289,21 +289,21 @@ package alternativa.tanks.view.battleinfo
          }
          if(param4 > 0)
          {
-            if(param9 == §final package import§.DM || param9 == §final package import§.TDM)
+            if(param9 == Renamed1587.DM || param9 == Renamed1587.TDM)
             {
-               this.battleModeIcon = new Bitmap(§implements const true§.§+"w§);
+               this.battleModeIcon = new Bitmap(Renamed3920.Renamed3923);
             }
-            if(param9 == §final package import§.CTF)
+            if(param9 == Renamed1587.CTF)
             {
-               this.battleModeIcon = new Bitmap(§implements const true§.§%#3§);
+               this.battleModeIcon = new Bitmap(Renamed3920.Renamed3924);
             }
-            if(param9 == §final package import§.CP)
+            if(param9 == Renamed1587.CP)
             {
-               this.battleModeIcon = new Bitmap(§implements const true§.§]#x§);
+               this.battleModeIcon = new Bitmap(Renamed3920.Renamed3925);
             }
-            if(param9 == §final package import§.AS)
+            if(param9 == Renamed1587.AS)
             {
-               this.battleModeIcon = new Bitmap(§implements const true§.§]#x§);
+               this.battleModeIcon = new Bitmap(Renamed3920.Renamed3925);
             }
             this.battleModeIcon.x = this.iconBar.numChildren > 0 ? Number(this.iconBar.width + this.ICON_VERTICAL_MARGIN) : Number(0);
             this.iconBar.addChild(this.battleModeIcon);
@@ -318,7 +318,7 @@ package alternativa.tanks.view.battleinfo
          this.addIcon(this.crystalBonusesIcon,!param14);
          this.addIcon(this.suppliesIcon,!param10);
          this.addIcon(this.reArmorIcon,param15);
-         if(param9 != §final package import§.DM)
+         if(param9 != Renamed1587.DM)
          {
             this.addIcon(this.autoBalanceIcon,param6);
             this.addIcon(this.friendlyFireIcon,param7);
@@ -379,7 +379,7 @@ package alternativa.tanks.view.battleinfo
          this.rangBar.y = this.bg.height - 23;
          this.nameTF.y = 10;
          this.iconBar.y = 40;
-         this.spectatorButton.y = this.rangBar.y + this.§native const native§ - this.spectatorButton.height - 9;
+         this.spectatorButton.y = this.rangBar.y + this.Renamed3922 - this.spectatorButton.height - 9;
          if(this.urlString != null)
          {
             this.urlString.y = this._height - this.urlCopyButton.height;

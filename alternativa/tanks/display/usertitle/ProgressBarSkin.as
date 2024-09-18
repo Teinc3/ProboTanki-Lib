@@ -1,6 +1,6 @@
 package alternativa.tanks.display.usertitle
 {
-   import § !g§.§class for case§;
+   import Renamed136.Renamed663;
    import flash.display.Bitmap;
    import flash.display.BitmapData;
    
@@ -138,13 +138,13 @@ package alternativa.tanks.display.usertitle
          this.shadowRightTip = param9;
       }
       
-      public static function getHealthBarSkin(param1:§class for case§) : ProgressBarSkin
+      public static function getHealthBarSkin(param1:Renamed663) : ProgressBarSkin
       {
          switch(param1)
          {
-            case §class for case§.BLUE:
+            case Renamed663.BLUE:
                return HEALTHBAR_BLUE;
-            case §class for case§.RED:
+            case Renamed663.RED:
                return HEALTHBAR_RED;
             default:
                return HEALTHBAR_DM;

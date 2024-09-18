@@ -1,45 +1,45 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import §;"?§.§#">§;
-   import §[" §.ICodec;
+   import Renamed602.Renamed603;
+   import Renamed5811.ICodec;
    import alternativa.osgi.OSGi;
    import alternativa.osgi.service.clientlog.IClientLog;
    import flash.utils.ByteArray;
-   import scpacker.networking.protocol.§?"s§;
-   import §with const throw§.§["R§;
+   import scpacker.networking.protocol.Renamed536;
+   import Renamed461.Renamed2772;
    
    public class CodecMoveCommand implements ICodec
    {
       public static var log:IClientLog = IClientLog(OSGi.getInstance().getService(IClientLog));
       
-      private var §include else§:ICodec;
+      private var Renamed10690:ICodec;
       
-      private var §1#`§:ICodec;
+      private var Renamed10691:ICodec;
       
-      private var §throw catch null§:ICodec;
+      private var Renamed10692:ICodec;
       
-      private var §5!]§:ICodec;
+      private var Renamed10693:ICodec;
       
-      private var §static var true§:ICodec;
+      private var Renamed10535:ICodec;
       
-      public function CodecMoveCommand(param1:§?"s§)
+      public function CodecMoveCommand(param1:Renamed536)
       {
          super();
-         this.§include else§ = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecVector3d");
-         this.§1#`§ = param1.getCodec("scpacker.networking.protocol.codec.primitive.ByteCodec");
-         this.§throw catch null§ = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecVector3d");
-         this.§5!]§ = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecVector3d");
-         this.§static var true§ = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecVector3d");
+         this.Renamed10690 = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecVector3d");
+         this.Renamed10691 = param1.getCodec("scpacker.networking.protocol.codec.primitive.ByteCodec");
+         this.Renamed10692 = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecVector3d");
+         this.Renamed10693 = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecVector3d");
+         this.Renamed10535 = param1.getCodec("scpacker.networking.protocol.codec.custom.CodecVector3d");
       }
       
       public function decode(param1:ByteArray) : Object
       {
-         var _loc2_:§["R§ = new §["R§();
-         _loc2_.angularVelocity = this.§include else§.decode(param1) as §#">§;
-         _loc2_.control = this.§1#`§.decode(param1) as int;
-         _loc2_.§const null§ = this.§throw catch null§.decode(param1) as §#">§;
-         _loc2_.orientation = this.§5!]§.decode(param1) as §#">§;
-         _loc2_.position = this.§static var true§.decode(param1) as §#">§;
+         var _loc2_:Renamed2772 = new Renamed2772();
+         _loc2_.angularVelocity = this.Renamed10690.decode(param1) as Renamed603;
+         _loc2_.control = this.Renamed10691.decode(param1) as int;
+         _loc2_.Renamed2904 = this.Renamed10692.decode(param1) as Renamed603;
+         _loc2_.orientation = this.Renamed10693.decode(param1) as Renamed603;
+         _loc2_.position = this.Renamed10535.decode(param1) as Renamed603;
          return _loc2_;
       }
       
@@ -50,12 +50,12 @@ package scpacker.networking.protocol.codec.custom
          {
             throw new Error("Object is null. Use @ProtocolOptional annotation.");
          }
-         var _loc4_:§["R§ = §["R§(param2);
-         _loc3_ += this.§include else§.encode(param1,_loc4_.angularVelocity);
-         _loc3_ += this.§1#`§.encode(param1,_loc4_.control);
-         _loc3_ += this.§throw catch null§.encode(param1,_loc4_.§const null§);
-         _loc3_ += this.§5!]§.encode(param1,_loc4_.orientation);
-         return _loc3_ + this.§static var true§.encode(param1,_loc4_.position);
+         var _loc4_:Renamed2772 = Renamed2772(param2);
+         _loc3_ += this.Renamed10690.encode(param1,_loc4_.angularVelocity);
+         _loc3_ += this.Renamed10691.encode(param1,_loc4_.control);
+         _loc3_ += this.Renamed10692.encode(param1,_loc4_.Renamed2904);
+         _loc3_ += this.Renamed10693.encode(param1,_loc4_.orientation);
+         return _loc3_ + this.Renamed10535.encode(param1,_loc4_.position);
       }
    }
 }

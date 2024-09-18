@@ -1,10 +1,10 @@
 package scpacker.networking.protocol.codec.primitive
 {
-   import §[" §.§#""§;
-   import §[" §.ICodec;
+   import Renamed5811.Renamed9342;
+   import Renamed5811.ICodec;
    import flash.utils.ByteArray;
    
-   public class StringCodec extends §#""§ implements ICodec
+   public class StringCodec extends Renamed9342 implements ICodec
    {
       public function StringCodec()
       {
@@ -13,7 +13,7 @@ package scpacker.networking.protocol.codec.primitive
       
       public function encode(param1:ByteArray, param2:Object) : int
       {
-         if(§%"s§(param1,param2))
+         if(Renamed9344(param1,param2))
          {
             return 1;
          }
@@ -27,7 +27,7 @@ package scpacker.networking.protocol.codec.primitive
       
       public function decode(param1:ByteArray) : Object
       {
-         if(§each catch else§(param1))
+         if(Renamed9343(param1))
          {
             return null;
          }

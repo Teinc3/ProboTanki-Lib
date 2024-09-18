@@ -5,7 +5,7 @@ package alternativa.tanks.model.shop.items.crystallitem
    import alternativa.tanks.model.shop.items.base.ShopItemBase;
    import alternativa.tanks.model.shop.items.utils.FormatUtils;
    import controls.base.LabelBase;
-   import §extends for catch§.§%!H§;
+   import Renamed355.Renamed2270;
    import flash.display.Bitmap;
    import flash.display.BitmapData;
    import flash.text.TextFieldAutoSize;
@@ -16,7 +16,7 @@ package alternativa.tanks.model.shop.items.crystallitem
    public class CrystalPackageItem extends ShopItemBase
    {
       [Inject]
-      public static var §&J§:ITimeUnitService;
+      public static var Renamed2271:ITimeUnitService;
       
       [Inject]
       public static var localeService:ILocaleService;
@@ -60,7 +60,7 @@ package alternativa.tanks.model.shop.items.crystallitem
       public function CrystalPackageItem(param1:String, param2:Object)
       {
          this.additionalData = param2;
-         super(param1,§%!H§.GREEN);
+         super(param1,Renamed2270.GREEN);
       }
       
       override protected function init() : void
@@ -108,7 +108,7 @@ package alternativa.tanks.model.shop.items.crystallitem
       private function initPackageWithPremium() : void
       {
          this.premiumLabel = new LabelBase();
-         this.premiumLabel.text = "+" + this.additionalData.premium_duration + " " + §&J§.§var for null§(this.additionalData.premium_duration).charAt(0);
+         this.premiumLabel.text = "+" + this.additionalData.premium_duration + " " + Renamed2271.Renamed2272(this.additionalData.premium_duration).charAt(0);
          this.premiumLabel.color = ColorConstants.WHITE;
          this.premiumLabel.autoSize = TextFieldAutoSize.LEFT;
          this.premiumLabel.size = 20;
@@ -123,7 +123,7 @@ package alternativa.tanks.model.shop.items.crystallitem
       {
          if(ShopWindow.haveDoubleCrystalls)
          {
-            setSkin(§%!H§.RED);
+            setSkin(Renamed2270.RED);
          }
          this.presentLabel = new LabelBase();
          this.presentLabel.text = "+" + FormatUtils.valueToString(this.additionalData.bonus_crystalls,0,false);
@@ -146,7 +146,7 @@ package alternativa.tanks.model.shop.items.crystallitem
       
       private function initPackageWithoutPresent() : void
       {
-         setSkin(§%!H§.§"">§);
+         setSkin(Renamed2270.Renamed2273);
       }
       
       private function get hasPremium() : Boolean

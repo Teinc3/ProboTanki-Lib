@@ -17,7 +17,7 @@ package alternativa.tanks.loader
       
       function showTip(param1:DisplayObject) : void;
       
-      function §<!5§() : Boolean;
+      function Renamed2029() : Boolean;
    }
 }
 

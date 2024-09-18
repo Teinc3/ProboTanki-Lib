@@ -19,7 +19,7 @@ package alternativa.tanks.model.garage
       
       private var color:BitmapData;
       
-      private var §&r§:Boolean;
+      private var Renamed2109:Boolean;
       
       public function Tank3DViewer()
       {
@@ -75,9 +75,9 @@ package alternativa.tanks.model.garage
          }
       }
       
-      public function §true false§(param1:BitmapData) : void
+      public function Renamed2110(param1:BitmapData) : void
       {
-         this.§&r§ = true;
+         this.Renamed2109 = true;
          if(this.tankPreview != null)
          {
             this.tankPreview.setColorMap(param1);
@@ -93,13 +93,13 @@ package alternativa.tanks.model.garage
          }
       }
       
-      public function §3![§() : void
+      public function Renamed1762() : void
       {
-         if(!this.§&r§)
+         if(!this.Renamed2109)
          {
             return;
          }
-         this.§&r§ = false;
+         this.Renamed2109 = false;
          if(this.tankPreview == null)
          {
             return;

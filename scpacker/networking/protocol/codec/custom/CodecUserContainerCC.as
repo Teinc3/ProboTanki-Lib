@@ -1,24 +1,24 @@
 package scpacker.networking.protocol.codec.custom
 {
-   import §[" §.ICodec;
+   import Renamed5811.ICodec;
    import flash.utils.ByteArray;
    import projects.tanks.client.users.model.friends.container.UserContainerCC;
-   import scpacker.networking.protocol.§?"s§;
+   import scpacker.networking.protocol.Renamed536;
    
    public class CodecUserContainerCC implements ICodec
    {
-      private var §`!Q§:ICodec;
+      private var Renamed10740:ICodec;
       
-      public function CodecUserContainerCC(param1:§?"s§)
+      public function CodecUserContainerCC(param1:Renamed536)
       {
          super();
-         this.§`!Q§ = param1.getCodec("scpacker.networking.protocol.codec.complex.VectorCodecString");
+         this.Renamed10740 = param1.getCodec("scpacker.networking.protocol.codec.complex.VectorCodecString");
       }
       
       public function decode(param1:ByteArray) : Object
       {
          var _loc2_:UserContainerCC = new UserContainerCC();
-         _loc2_.users = this.§`!Q§.decode(param1) as Vector.<String>;
+         _loc2_.users = this.Renamed10740.decode(param1) as Vector.<String>;
          return _loc2_;
       }
       
@@ -29,7 +29,7 @@ package scpacker.networking.protocol.codec.custom
             throw new Error("Object is null. Use @ProtocolOptional annotation.");
          }
          var _loc3_:UserContainerCC = UserContainerCC(param2);
-         this.§`!Q§.encode(param1,_loc3_.users);
+         this.Renamed10740.encode(param1,_loc3_.users);
          return 4;
       }
    }
