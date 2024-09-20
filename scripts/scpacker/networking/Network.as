@@ -100,9 +100,9 @@ package scpacker.networking
       
       private function processData() : void
       {
-         var totalPacketLen:int = 0;
+         var thisPacketLen:int = 0;
          var packetID:int = 0;
-         var currPacketLen:int = 0;
+         var remainingPacketLen:int = 0;
          var absPacket:AbstractPacket = null;
          this.dataBuffer.position = this.currentPacketPosition;
          if(this.dataBuffer.bytesAvailable == 0)
@@ -111,20 +111,20 @@ package scpacker.networking
          }
          while(true)
          {
-            if(this.dataBuffer.bytesAvailable < AbstractPacket.const_8)
+            if(this.dataBuffer.bytesAvailable < AbstractPacket.headerLength)
             {
                return;
             }
-            totalPacketLen = this.dataBuffer.readInt();
+            thisPacketLen = this.dataBuffer.readInt();
             packetID = this.dataBuffer.readInt();
-            currPacketLen = totalPacketLen - AbstractPacket.const_8;
-            if(this.dataBuffer.bytesAvailable < currPacketLen)
+            remainingPacketLen = thisPacketLen - AbstractPacket.headerLength;
+            if(this.dataBuffer.bytesAvailable < remainingPacketLen)
             {
                return;
             }
-            if(currPacketLen > 0)
+            if(remainingPacketLen > 0)
             {
-               this.dataBuffer.readBytes(this.packetByteArray,0,currPacketLen);
+               this.dataBuffer.readBytes(this.packetByteArray,0,remainingPacketLen);
             }
             try
             {
@@ -135,7 +135,7 @@ package scpacker.networking
             }
             catch(e:Error)
             {
-               OSGi.clientLog.log("net","error packet %1 packetLength %2 packetId %3 \n\n %4",absPacket,totalPacketLen,packetID,e.getStackTrace());
+               OSGi.clientLog.log("net","error packet %1 packetLength %2 packetId %3 \n\n %4",absPacket,thisPacketLen,packetID,e.getStackTrace());
             }
             this.packetByteArray.clear();
             if(this.dataBuffer.bytesAvailable == 0)

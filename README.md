@@ -1,0 +1,1 @@
+- If the decryption and encryption indicies change, we can only spoof outbound packets if we make sure that the resulting indices are the same as the original indices. This is because the server will only accept packets that have the correct indices.

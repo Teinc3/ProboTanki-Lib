@@ -30,7 +30,7 @@ package Renamed406
       
       override public function getCorrespondingModel() : int
       {
-         return 4;
+         return 4; // NewEntranceModel
       }
       
       override public function getPacketId() : int

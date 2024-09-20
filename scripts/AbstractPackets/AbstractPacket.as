@@ -9,7 +9,7 @@ package AbstractPackets
    {
       public static var codecRegisterer:CodecRegisterer;
       
-      public static const const_8:int = 8;
+      public static const headerLength:int = 8;
       
       private var length:int = 8;
       
@@ -31,7 +31,7 @@ package AbstractPackets
       public function wrap(param1:ByteArray) : void
       {
          var _loc2_:int = int(param1.position);
-         var _loc3_:int = const_8;
+         var _loc3_:int = headerLength;
          param1.writeInt(_loc3_);
          param1.writeInt(this.getPacketId());
          var _loc4_:int = 0;

@@ -10,7 +10,7 @@ package Renamed406
    import scpacker.server.models.locale.LocalizationLoader;
    import scpacker.utils.ResourcesLoader;
    
-   public class Renamed8589 extends Renamed4886
+   public class NewEntranceModel extends Renamed4886
    {
       private var Renamed8590:DispatcherModel;
       
@@ -22,7 +22,7 @@ package Renamed406
       
       public var modelId:int;
       
-      public function Renamed8589()
+      public function NewEntranceModel()
       {
          this.Renamed8591 = new ResourcesLoader();
          this.Renamed8592 = new LocalizationLoader();

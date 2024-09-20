@@ -398,7 +398,7 @@ package scpacker.networking
    import Renamed400.Renamed8553;
    import Renamed402.Renamed5938;
    import Renamed402.Renamed8558;
-   import Renamed406.Renamed8589;
+   import Renamed406.NewEntranceModel;
    import Renamed406.Renamed8598;
    import Renamed406.HashPacket;
    import Renamed406.Renamed4089;
@@ -547,7 +547,7 @@ package scpacker.networking
          this.absPacketManager.setAbsPacket(new Renamed4293());
          this.absPacketManager.setAbsPacket(new Renamed4294());
          this.absPacketManager.setAbsPacket(new Renamed4900());
-         this.modelRegistry.register(new Renamed8589());
+         this.modelRegistry.register(new NewEntranceModel());
          this.absPacketManager.setAbsPacket(new Renamed8606());
          this.absPacketManager.setAbsPacket(new Renamed4089());
          this.absPacketManager.setAbsPacket(new Renamed8605());
