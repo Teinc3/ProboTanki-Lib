@@ -33,8 +33,7 @@ class NetworkManager:
             if packet[TCP].sport == 1337:
                 self.process_incoming_packet(packet[Raw].load)
             else:
-                # Intercept the packet (modify if required!)
-                pass
+                self.process_outbound_packet(packet[Raw].load)
 
     def process_incoming_packet(self, data: bytearray) -> None:
         # Copy the packet to the databuffer
@@ -59,14 +58,17 @@ class NetworkManager:
             try:
                 # Do sth with the packet
                 if self.inboundProtection.active:
-                    self.packetByteArray = self.inboundProtection.decrypt(self.packetByteArray)
+                    self.packetByteArray = self.inboundProtection.decrypt_server(self.packetByteArray)
                 
                 if packetID == 2001736388:
                     # Decrypt the hash and Activate both inbound and outbound protection
                     self.inboundProtection.activate(self.packetByteArray)
                     self.outboundProtection.activate(self.packetByteArray)
-                else:
-                    print("Packet ID: " + str(packetID) + " | Packet Data: " + str(len(self.packetByteArray) if len(self.packetByteArray) >= 300 else self.packetByteArray))
+                
+                packetLen = len(self.packetByteArray)
+                if (packetLen > 0):
+                    print(f"IN [{packetLen}] | Packet ID: {packetID} | Packet Data: {'Data Too Big!' if packetLen >= 300 else self.packetByteArray}")
+
             except Exception as e:
                 print(e)
 
@@ -78,6 +80,17 @@ class NetworkManager:
         self.dataBuffer = bytearray()
         self.dataBufferIndex = 0
         self.unfinishedPacketPosition = 0
+
+    def process_outbound_packet(self, data: bytearray) -> None:
+        # As outbound packets are flushed, we don't need to buffer them to process an entire packet
+        packetLen = int.from_bytes(data[0:4])
+        packetID = int.from_bytes(data[4:8], signed=True)
+        packetData = data[8:]
+        if self.outboundProtection.active:
+            packetData = self.outboundProtection.decrypt_client(packetData)
+
+        if packetLen > 8:
+            print(f"OUT [{packetLen}] | Packet ID: {packetID} | Packet Data: {'Data Too Big!' if packetLen >= 300 else packetData}")
 
    
 if __name__ == "__main__":
