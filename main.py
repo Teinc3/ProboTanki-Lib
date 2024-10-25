@@ -1,8 +1,30 @@
+import platform
 from scapy import all as Scapy
 from scapy.packet import Packet, Raw
 from scapy.layers.inet import TCP
-
+from scapy.config import conf
 from codec.XorProtectionContext import XorProtectionContext
+
+
+def get_interface():
+    current_os = platform.system()
+    if current_os == "Darwin":
+        return "en0"
+    else:
+        interfaces = conf.ifaces.data
+        for iface in interfaces.values():
+            if iface.name == "Ethernet 6":
+                print(f"Selected interface: {iface.name} (Description: {iface.description})")
+                return iface.name
+
+
+def read_buffer(buffer, index, length):
+    return buffer[index:index + length]
+
+
+def get_bytes_available(buffer, index):
+    return len(buffer) - index
+
 
 class NetworkManager:
     PacketHeaderLength = 8
@@ -10,88 +32,68 @@ class NetworkManager:
     def __init__(self):
         self.inboundProtection = XorProtectionContext()
         self.outboundProtection = XorProtectionContext()
-        
-        self.dataBuffer = bytearray()
-        self.dataBufferIndex = 0
-        self.unfinishedPacketPosition = 0
-        self.packetByteArray = bytearray()
-
-        # Start sniffing
-        Scapy.sniff(iface="en0", filter="tcp", store=False, prn=self.process_packet)
-
-    def read_buffer(self, length: int) -> bytearray:
-        data = self.dataBuffer[self.dataBufferIndex:self.dataBufferIndex + length]
-        self.dataBufferIndex += length
-        return data
-
-    def get_bytes_available(self) -> int:
-        return len(self.dataBuffer) - self.dataBufferIndex
+        self.buffers = {
+            "inbound": {"buffer": bytearray(), "index": 0, "unfinished": 0, "packetData": bytearray()},
+            "outbound": {"buffer": bytearray(), "index": 0, "unfinished": 0, "packetData": bytearray()}
+        }
+        iface = get_interface()
+        Scapy.sniff(iface=iface, filter="tcp", store=False, prn=self.process_packet)
 
     def process_packet(self, packet: Packet) -> None:
-        # If we are sending raw data to the server
         if packet.haslayer(TCP) and packet.haslayer(Raw) and (1337 in [packet[TCP].dport, packet[TCP].sport]):
-            if packet[TCP].sport == 1337:
-                self.process_incoming_packet(packet[Raw].load)
-            else:
-                self.process_outbound_packet(packet[Raw].load)
+            direction = "inbound" if packet[TCP].sport == 1337 else "outbound"
+            data = packet[Raw].load
+            self.handle_packet(data, direction)
 
-    def process_incoming_packet(self, data: bytearray) -> None:
-        # Copy the packet to the databuffer
-        self.dataBuffer += data
-
-        self.dataBufferIndex = self.unfinishedPacketPosition
+    def handle_packet(self, data: bytearray, direction: str) -> None:
+        protection = self.inboundProtection if direction == "inbound" else self.outboundProtection
+        buffer_info = self.buffers[direction]
+        buffer_info["buffer"] += data
+        buffer_info["index"] = buffer_info["unfinished"]
 
         while True:
-            if self.get_bytes_available() < NetworkManager.PacketHeaderLength:
+            if get_bytes_available(buffer_info["buffer"], buffer_info["index"]) < NetworkManager.PacketHeaderLength:
+                return
+            packet_len = int.from_bytes(read_buffer(buffer_info["buffer"], buffer_info["index"], 4), signed=True)
+            packet_id = int.from_bytes(read_buffer(buffer_info["buffer"], buffer_info["index"] + 4, 4), signed=True)
+            buffer_info["index"] += 8
+            remaining_len = packet_len - NetworkManager.PacketHeaderLength
+
+            if get_bytes_available(buffer_info["buffer"], buffer_info["index"]) < remaining_len:
+                buffer_info["unfinished"] = buffer_info["index"] - 8
                 return
 
-            # Read 2 signed-integers from the buffer simultaneously
-            thisPacketLen = int.from_bytes(self.read_buffer(4), signed=True)
-            packetID = int.from_bytes(self.read_buffer(4), signed=True)
-            remainingPacketLen = thisPacketLen - NetworkManager.PacketHeaderLength
+            if remaining_len > 0:
+                buffer_info["packetData"] = read_buffer(buffer_info["buffer"], buffer_info["index"], remaining_len)
+                buffer_info["index"] += remaining_len
 
-            if self.get_bytes_available() < remainingPacketLen:
-                return
-            if remainingPacketLen > 0:
-                self.packetByteArray = self.read_buffer(remainingPacketLen)
+            if protection.active:
+                if direction == "inbound":
+                    buffer_info["packetData"] = protection.decrypt_server(buffer_info["packetData"])
+                else:
+                    buffer_info["packetData"] = protection.decrypt_client(buffer_info["packetData"])
 
-            try:
-                # Do sth with the packet
-                if self.inboundProtection.active:
-                    self.packetByteArray = self.inboundProtection.decrypt_server(self.packetByteArray)
-                
-                if packetID == 2001736388:
-                    # Decrypt the hash and Activate both inbound and outbound protection
-                    self.inboundProtection.activate(self.packetByteArray)
-                    self.outboundProtection.activate(self.packetByteArray)
-                
-                packetLen = len(self.packetByteArray)
-                if (packetLen > 0):
-                    print(f"IN [{packetLen}] | Packet ID: {packetID} | Packet Data: {'Data Too Big!' if packetLen >= 300 else self.packetByteArray}")
+            if direction == "inbound" and packet_id == 2001736388:
+                self.inboundProtection.activate(buffer_info["packetData"])
+                self.outboundProtection.activate(buffer_info["packetData"])
 
-            except Exception as e:
-                print(e)
+            # if packet_len > 8:
+            # if packet_len > 8 and direction == "inbound":
+            if packet_len > 8 and direction == "outbound":
+                print(
+                    f"{direction.upper()} [{packet_len}] | Packet ID: {packet_id} "
+                    f"| Packet Data: {'Data Too Big!' if packet_len >= 300 else buffer_info['packetData']}"
+                )
 
-            self.packetByteArray = bytearray()
-            if self.get_bytes_available() == 0:
+            buffer_info["packetData"] = bytearray()
+            if get_bytes_available(buffer_info["buffer"], buffer_info["index"]) == 0:
                 break
-            self.unfinishedPacketPosition = self.dataBufferIndex
+            buffer_info["unfinished"] = buffer_info["index"]
 
-        self.dataBuffer = bytearray()
-        self.dataBufferIndex = 0
-        self.unfinishedPacketPosition = 0
+        buffer_info["buffer"] = bytearray()
+        buffer_info["index"] = 0
+        buffer_info["unfinished"] = 0
 
-    def process_outbound_packet(self, data: bytearray) -> None:
-        # As outbound packets are flushed, we don't need to buffer them to process an entire packet
-        packetLen = int.from_bytes(data[0:4])
-        packetID = int.from_bytes(data[4:8], signed=True)
-        packetData = data[8:]
-        if self.outboundProtection.active:
-            packetData = self.outboundProtection.decrypt_client(packetData)
 
-        if packetLen > 8:
-            print(f"OUT [{packetLen}] | Packet ID: {packetID} | Packet Data: {'Data Too Big!' if packetLen >= 300 else packetData}")
-
-   
 if __name__ == "__main__":
     networkManager = NetworkManager()

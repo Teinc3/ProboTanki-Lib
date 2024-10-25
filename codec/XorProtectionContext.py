@@ -63,6 +63,7 @@ class XorProtectionContext:
         for data_index in range(len(data)):
             encrypted_value = data[data_index]
             decrypted_value = encrypted_value ^ self.c2s_vector[self.c2s_index]
-            data[data_index] = self.c2s_vector[self.c2s_index] = decrypted_value
+            self.c2s_vector[self.c2s_index] = decrypted_value
+            data[data_index] = decrypted_value
             self.c2s_index ^= decrypted_value & 7
         return data
