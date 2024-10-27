@@ -78,11 +78,10 @@ class NetworkManager:
                 self.outboundProtection.activate(buffer_info["packetData"])
 
             # if packet_len > 8:
-            # if packet_len > 8 and direction == "inbound":
-            if packet_len > 8 and direction == "outbound":
+            if packet_len > 8:
                 print(
-                    f"{direction.upper()} [{packet_len}] | Packet ID: {packet_id} "
-                    f"| Packet Data: {'Data Too Big!' if packet_len >= 300 else buffer_info['packetData']}"
+                    f"{"IN" if direction == "inbound" else "OUT"} [{packet_len}] | Packet ID: {packet_id} "
+                    f"| Data: {'Data Too Big!' if packet_len >= 300 else buffer_info['packetData']}"
                 )
 
             buffer_info["packetData"] = bytearray()

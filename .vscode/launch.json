@@ -8,7 +8,7 @@
             "name": "Python Debugger: Current File",
             "type": "debugpy",
             "request": "launch",
-            "program": "${file}",
+            "program": "${workspaceFolder}/src/main.py",
             "console": "integratedTerminal",
             "python": "/opt/homebrew/bin/python3.11",
             "sudo": true
