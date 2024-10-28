@@ -21,9 +21,10 @@ print("Adding iptable rules :")
 print(iptablesr)
 os.system(iptablesr)
 
+
 # If you want to use it for MITM attacks, set ip_forward=1 :
-#print("Set ipv4 forward settings : ")
-#os.system("sysctl net.ipv4.ip_forward=1")
+# print("Set ipv4 forward settings : ")
+# os.system("sysctl net.ipv4.ip_forward=1")
 
 def callback(payload):
     # Here is where the magic happens.
@@ -38,7 +39,7 @@ def callback(payload):
         # Let the rest go it's way
         payload.set_verdict(nfqueue.NF_ACCEPT)
     # If you want to modify the packet, copy and modify it with scapy then do :
-    #payload.set_verdict_modified(nfqueue.NF_ACCEPT, str(packet), len(packet))
+    # payload.set_verdict_modified(nfqueue.NF_ACCEPT, str(packet), len(packet))
 
 
 def main():
@@ -49,12 +50,12 @@ def main():
     q.set_callback(callback)
     q.create_queue(0)
     try:
-        q.try_run() # Main loop
+        q.try_run()  # Main loop
     except KeyboardInterrupt:
         q.unbind(socket.AF_INET)
         q.close()
         print("Flushing iptables.")
-        # This flushes everything, you might wanna be careful
+        # This flushes everything, you might want to be careful
         os.system('iptables -F')
         os.system('iptables -X')
 

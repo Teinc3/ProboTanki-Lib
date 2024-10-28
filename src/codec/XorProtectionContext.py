@@ -1,11 +1,32 @@
-from .EByteArray import EByteArray
+from src.Logger import Logger
+from src.codec.EByteArray import EByteArray
+
+
+def extract_key(packetByteArray: EByteArray) -> list[int]:
+    # Read int to get how many bytes the key_vector has
+    key_vector_size = int.from_bytes(packetByteArray[:4], signed=True)
+    packetByteArray = packetByteArray[4:]
+
+    # Read the key_vector
+    key_vector: list[int] = []
+    for i in range(key_vector_size):
+        key_vector.append(packetByteArray[i])
+
+    return key_vector
+
 
 class XorProtectionContext:
     ProtectionSize = 8
 
     def __init__(self):
+        self.xor_key = None
+        self.s2c_index = None
+        self.c2s_index = None
+        self.s2c_vector = None
+        self.c2s_vector = None
         self.active = False
-    
+        self.logger = Logger()
+
     def activate(self, packetByteArray: EByteArray) -> None:
 
         self.active = True
@@ -16,7 +37,7 @@ class XorProtectionContext:
         self.s2c_index = 0
         self.xor_key = 0
 
-        key_vector = self.extract_key(packetByteArray)
+        key_vector = extract_key(packetByteArray)
 
         for key_element in key_vector:
             self.xor_key ^= key_element
@@ -25,21 +46,10 @@ class XorProtectionContext:
             self.s2c_vector[vector_index] = self.xor_key ^ (vector_index << 3)
             self.c2s_vector[vector_index] = self.xor_key ^ (vector_index << 3) ^ 0x57
 
-        # Print the hash and vectors
-        print("Hash: " + str(key_vector) + " | Encryption (Client to Server) Vector: " + str(self.c2s_vector) + " | Decryption (Server to Client) Vector: " + str(self.s2c_vector))
+        # Log the hash and vectors
+        self.logger.log_info(f"Hash: {key_vector} | Encryption (Client to Server) Vector: {self.c2s_vector} | "
+                             f"Decryption (Server to Client) Vector: {self.s2c_vector}")
 
-    def extract_key(self, packetByteArray: EByteArray) -> list[int]:
-        # Read int to get how many bytes the key_vector has
-        key_vector_size = int.from_bytes(packetByteArray[:4], signed=True)
-        packetByteArray = packetByteArray[4:]
-
-        # Read the key_vector
-        key_vector: list[int] = []
-        for i in range(key_vector_size):
-            key_vector.append(packetByteArray[i])
-        
-        return key_vector
-    
     def decrypt_server(self, data):
         data = EByteArray(data)
         for data_index in range(len(data)):
@@ -48,7 +58,7 @@ class XorProtectionContext:
             data[data_index] = self.s2c_vector[self.s2c_index] = decrypted_value
             self.s2c_index ^= self.s2c_vector[self.s2c_index] & 7
         return data
-    
+
     def decrypt_client(self, data):
         data = EByteArray(data)
         for data_index in range(len(data)):
@@ -58,14 +68,14 @@ class XorProtectionContext:
             data[data_index] = decrypted_value
             self.c2s_index ^= decrypted_value & 7
         return data
-    
+
     def decrypt(self, data, direction):
         return data if not self.active else self.decrypt_server(data) if direction else self.decrypt_client(data)
 
     def encrypt(self, data):
         if not self.active:
             return data
-        
+
         data = EByteArray(data)
         for data_index in range(len(data)):
             unencrypted_value = data[data_index]
