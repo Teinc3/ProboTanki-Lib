@@ -7,7 +7,7 @@ class EByteArray(bytearray):
     def bytes_available(self) -> int:
         return len(self) - self.position
     
-    def read_bytes(self, length: int) -> bytearray:
+    def read_bytes(self, length: int) -> 'EByteArray':
         try:
             temp = self[self.position:self.position + length]
             self.position += length
@@ -15,7 +15,7 @@ class EByteArray(bytearray):
         except IndexError:
             raise EOFError("Not enough bytes available to read")
         
-    def read_bytes_into(self, buffer: bytearray, offset: int = 0, length: int = 0) -> None:
+    def read_bytes_into(self, buffer: 'EByteArray', offset: int = 0, length: int = 0) -> None:
         try:
             buffer[offset:offset + length] = self.read_bytes(length)
         except IndexError:

@@ -1,5 +1,5 @@
-from src.Logger import Logger
-from src.codec.EByteArray import EByteArray
+from Logger import Logger
+from codec.EByteArray import EByteArray
 
 
 def extract_key(packetByteArray: EByteArray) -> list[int]:
@@ -47,8 +47,11 @@ class XorProtectionContext:
             self.c2s_vector[vector_index] = self.xor_key ^ (vector_index << 3) ^ 0x57
 
         # Log the hash and vectors
-        self.logger.log_info(f"Hash: {key_vector} | Encryption (Client to Server) Vector: {self.c2s_vector} | "
-                             f"Decryption (Server to Client) Vector: {self.s2c_vector}")
+        self.logger.log_info(
+            f"Hash: {key_vector} | Encryption (Client to Server) Vector: {self.c2s_vector} | "
+            f"Decryption (Server to Client) Vector: {self.s2c_vector}",
+            True
+        )
 
     def decrypt_server(self, data):
         data = EByteArray(data)
@@ -57,6 +60,8 @@ class XorProtectionContext:
             decrypted_value = encrypted_value ^ self.s2c_vector[self.s2c_index]
             data[data_index] = self.s2c_vector[self.s2c_index] = decrypted_value
             self.s2c_index ^= self.s2c_vector[self.s2c_index] & 7
+
+        self.logger.log_info(f"S2C Vector: {self.s2c_vector} | S2C Index: {self.s2c_index}")
         return data
 
     def decrypt_client(self, data):
@@ -67,6 +72,8 @@ class XorProtectionContext:
             self.c2s_vector[self.c2s_index] = decrypted_value
             data[data_index] = decrypted_value
             self.c2s_index ^= decrypted_value & 7
+
+        self.logger.log_info(f"C2S Vector: {self.c2s_vector} | C2S Index: {self.c2s_index}")
         return data
 
     def decrypt(self, data, direction):
@@ -83,4 +90,6 @@ class XorProtectionContext:
             data[data_index] = encrypted_value
             self.c2s_vector[self.c2s_index] = unencrypted_value
             self.c2s_index ^= unencrypted_value & 7
+
+        self.logger.log_info(f"C2S Vector: {self.c2s_vector} | C2S Index: {self.c2s_index}")
         return data

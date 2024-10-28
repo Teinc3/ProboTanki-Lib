@@ -7,8 +7,3 @@
 - [AbstractPacket](/scripts/AbstractPackets/AbstractPacket.as)
 - [Network](/scripts/scpacker/networking/Network.as)
 - [XorProtectionContext](/scripts/ProtectionContexts/XorProtectionContext.as)
-
-## Others
-- I can decrypt inbound packets, but haven't figured out outbound decryption yet. Ideally, please help me figure it out, if you can.
-
-- For a TCP proxy, check out https://github.com/ewpratten/tcprelay.s

@@ -1,6 +1,6 @@
 from codec.EByteArray import EByteArray
 from codec.XorProtectionContext import XorProtectionContext
-from src.Logger import Logger
+from Logger import Logger
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
@@ -12,8 +12,7 @@ class Listener:
 
     direction: bool  # IN = True, OUT = False
     current_packet_position: int
-    packet_byte_array: EByteArray
-    raw_data_buffer: EByteArray
+    abs_packet_data_array: EByteArray
     data_buffer: EByteArray
     protection: XorProtectionContext
     processor: 'Processor'
@@ -22,58 +21,79 @@ class Listener:
     def __init__(self, direction, processor):
         self.direction = direction
         self.processor = processor
+
         self.current_packet_position = 0
-        self.packet_byte_array = EByteArray()
-        self.raw_data_buffer = EByteArray()
+        self.abs_packet_data_array = EByteArray()
         self.data_buffer = EByteArray()
         self.protection = XorProtectionContext()
-        self.debug = False
+        
         self.logger = Logger()
 
     @property
     def direction_code(self) -> str:
         return "IN" if self.direction else "OUT"
 
-    def on_socket_data(self, data: bytearray) -> None:
+    def on_socket_data(self, data: bytearray) -> None:        
         data = EByteArray(data)
         data.read_bytes_into(self.data_buffer, len(self.data_buffer), len(data))
+
+        self.logger.log_info(
+            f"TCP Packet {self.direction_code} [{len(data)}] | Data: {data[0:max(50, len(data))]} | "
+            f"Buffer Start: {self.data_buffer[0:max(50, len(self.data_buffer))]} | Buffer End: {self.data_buffer[-50:]}"
+        )
 
         self.process_data()
 
     def process_data(self) -> None:
-        current_packet_len: int = 0
+        abs_packet_len: int = 0
         packet_ID: int = 0
-        remaining_packet_len: int = 0
+        packet_data_len: int = 0
 
         self.data_buffer.position = self.current_packet_position
         if self.data_buffer.bytes_available == 0:
+            self.logger.log_info(f"{self.direction_code} | Buffer is empty")
             return
 
         while True:
             if self.data_buffer.bytes_available < Listener.PacketHeaderLength:
+                self.logger.log_info(
+                    f"{self.direction_code} Buffer is too small"
+                    f" | Packet Header Length: {Listener.PacketHeaderLength} | Buffer Length: {self.data_buffer.bytes_available}"
+                    f" | Buffer: {self.data_buffer}"
+                    )
                 return
 
-            current_packet_len = self.data_buffer.read_int()
+            abs_packet_len = self.data_buffer.read_int()
             packet_ID = self.data_buffer.read_int()
-            remaining_packet_len = current_packet_len - Listener.PacketHeaderLength
+            packet_data_len = abs_packet_len - Listener.PacketHeaderLength
 
-            # if self.direction and packet_ID == 2094741924: This occurs twice, 1st time is ok, 2nd time screws us up
-
-            if self.data_buffer.bytes_available < remaining_packet_len:
+            if self.data_buffer.bytes_available < packet_data_len:
+                self.logger.log_info(
+                    f"{self.direction_code} Buffer is too small for packet data"
+                    f" | Packet Data Length: {packet_data_len} | Buffer Length: {self.data_buffer.bytes_available}"
+                    f" | Buffer: {self.data_buffer}"
+                )
                 return
 
-            if remaining_packet_len > 0:
-                self.data_buffer.read_bytes_into(self.packet_byte_array, 0, remaining_packet_len)
+            if packet_data_len > 0:
+                self.data_buffer.read_bytes_into(self.abs_packet_data_array, 0, packet_data_len)
+
+                self.logger.log_info(
+                    f"Packet Data: {self.abs_packet_data_array[0:min(50, len(self.abs_packet_data_array))]}"
+                    f" | Buffer Start: {self.data_buffer[0:min(50, len(self.data_buffer))]} | Buffer End: {self.data_buffer[-50:]}"
+                )
 
             try:
-                self.packet_byte_array = self.protection.decrypt(self.packet_byte_array, self.direction)
-                self.processor.process_packet(self.direction, packet_ID, current_packet_len, self.packet_byte_array)
+                self.abs_packet_data_array = self.protection.decrypt(self.abs_packet_data_array, self.direction)
+                self.processor.process_packet(self.direction, packet_ID, abs_packet_len, self.abs_packet_data_array)
 
             except Exception as e:
-                self.logger.log_error(f"Error decrypting packet: {e} | Direction: {self.direction_code} "
-                                      f"| Packet ID: {packet_ID} | Data Buffer: {self.data_buffer}")
+                self.logger.log_error(
+                    f"Error decrypting packet: {e} | Direction: {self.direction_code} "
+                    f"| Packet ID: {packet_ID} | Data Buffer: {self.data_buffer}"
+                )
 
-            self.packet_byte_array.clear()
+            self.abs_packet_data_array.clear()
             if self.data_buffer.bytes_available == 0:
                 break
 

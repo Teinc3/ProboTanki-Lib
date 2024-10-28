@@ -1,6 +1,6 @@
 from codec.EByteArray import EByteArray
 from typing import TYPE_CHECKING
-from src.Logger import Logger
+from Logger import Logger
 
 if TYPE_CHECKING:
     from main import Manager

@@ -5,7 +5,7 @@ from scapy.layers.inet import TCP
 from scapy.config import conf
 from Processor import Processor
 from Listener import Listener
-from src.Logger import Logger
+from Logger import Logger
 
 
 def get_interface():
