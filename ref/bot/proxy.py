@@ -5,9 +5,11 @@ from bytearray import ByteArray
 
 LOCAL_HOST = "127.0.0.1"
 LOCAL_PORT = 1337
+LOCAL_BIND_PORT = 7331
 
-TARGET_HOST = "146.59.110.195"
+TARGET_HOST = "146.59.110.146" # core-protanki.com
 TARGET_PORT = 1337
+
 
 server_enc = Encryption()
 client_enc = Encryption()
@@ -107,6 +109,7 @@ def start_local_serv():
 def start_target_client():
     global target_server
     target_server.settimeout(10)
+    target_server.bind((LOCAL_HOST, LOCAL_BIND_PORT))
     target_server.connect((TARGET_HOST, TARGET_PORT))
     server_handler = Thread(target=handle_server)
     server_handler.start()
