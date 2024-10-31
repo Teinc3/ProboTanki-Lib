@@ -1,10 +1,10 @@
 import socket
 from threading import Thread
 import struct
-# import logging
+from modules.logger import logger
 
-from processor import Processor
-from codec.ebytearray import EByteArray
+from modules.processor import Processor
+from crypto.codec.ebytearray import EByteArray
 
 from holders.protectionholder import ProtectionHolder
 from holders.socketholder import SocketHolder
@@ -56,10 +56,10 @@ class TankiProxy:
                 self.forward(False, packet_len, packet_id, forwarded_data)
 
             except struct.error:
-                print("Client socket aborted")
+                logger.log_error("Client socket aborted")
                 self.end()
             except Exception as e:
-                print("Client socket Error: ", e)
+                logger.log_error("Client socket error: ", e)
                 self.end()
 
     def handle_server(self):
@@ -88,10 +88,10 @@ class TankiProxy:
                 self.forward(True, packet_len, packet_id, encrypted_data)
 
             except struct.error:
-                print("Server socket aborted")
+                logger.log_error("Server socket aborted")
                 self.end()
             except Exception as e:
-                print("Server socket error: ", e)
+                logger.log_error("Server socket error: ", e)
                 self.end()
 
     def forward(self, direction: bool, packet_len: int, packet_id: int, encrypted_data: EByteArray):
@@ -123,14 +123,14 @@ class TankiProxy:
             self.sockets.server.settimeout(10)
             self.sockets.server.connect((TankiProxy.TARGET_ADDRESS.host, TankiProxy.TARGET_ADDRESS.port))
 
-            print("Connected to Target Server")
+            logger.log_info("Connected to Target Server", True)
             Thread(target=self.handle_server).start()
 
         except socket.timeout:
-            print("Failed to connect to Target Server")
+            logger.log_error("Server Connection Timeout")
             self.end()
         except socket.error as e:
-            print("Server Socket Error: ", e)
+            logger.log_error("Server Connection Error: ", e)
             self.end()
 
     def start_client_proxy(self):
@@ -138,11 +138,11 @@ class TankiProxy:
 
         local_proxy = socket.socket()
         local_proxy.bind((TankiProxy.PROXY_ADDRESS.split_args))
-        print("Proxy Server Started, Listening for Client")
+        logger.log_info("Proxy Server Started", True)
         local_proxy.listen(TankiProxy.MAX_CONNECTIONS)
 
         self.sockets.client, _ = local_proxy.accept()
-        print("Client Connected, Starting Server Socket")
+        logger.log_info("Client Connected", True)
         self.start_server_socket()
 
         Thread(target=self.handle_client).start()

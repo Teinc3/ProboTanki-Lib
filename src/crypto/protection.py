@@ -1,4 +1,4 @@
-from codec.ebytearray import EByteArray
+from crypto.codec.ebytearray import EByteArray
 
 class Protection:
     vector_length = 8

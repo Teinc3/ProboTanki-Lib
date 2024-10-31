@@ -1,4 +1,4 @@
-from protection import Protection
+from crypto.protection import Protection
 
 class ProtectionHolder:
     def __init__(self):
