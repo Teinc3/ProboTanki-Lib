@@ -95,6 +95,7 @@ def handle_server():
             print("[server --> client] Forwarded", packet_id, "->", packet_data)
             send_to_client(packet_id,packet_data)
 
+# Recv Client handshake
 def start_local_serv():
     global local_client
     local_server = socket.socket()
@@ -105,6 +106,7 @@ def start_local_serv():
     client_handler = Thread(target=handle_client)
     client_handler.start()
 
+# Handshake with server
 def start_target_client():
     global target_server
     target_server.settimeout(10)
