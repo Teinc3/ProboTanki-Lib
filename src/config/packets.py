@@ -1,4 +1,4 @@
-class Packets():
+class Packets:
     Activate_Protection = 2001736388
     Ping = -555602629
     Pong = 1484572481
@@ -12,10 +12,10 @@ class Packets():
     Login_Success = -1923286328
     Login_Failed = 103812952
 
-    Joined_Battle = -1895446889 
+    Joined_Battle = -1895446889
     Left_Battle = 1941694508
     Create_Battle = -2135234426
-    Battle_Created = 802300608 # For all new battles, not just ones you create
+    Battle_Created = 802300608  # For all new battles, not just ones you create
     Load_Battle_Info = 546722394
     Update_Battle_Player_Score = -375282889
 

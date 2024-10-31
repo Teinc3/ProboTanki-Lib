@@ -2,17 +2,16 @@ import socket
 from threading import Thread
 import struct
 from modules.logger import logger
-
 from modules.processor import Processor
 from crypto.codec.ebytearray import EByteArray
+from holders.protectionHolder import ProtectionHolder
+from holders.socketHolder import SocketHolder
+from holders.addressHolder import Address
 
-from holders.protectionholder import ProtectionHolder
-from holders.socketholder import SocketHolder
-from holders.addressholder import Address
 
 class TankiProxy:
     PROXY_ADDRESS = Address("127.0.0.1", 1337)
-    TARGET_ADDRESS = Address("146.59.110.146", 1337) # core-protanki.com
+    TARGET_ADDRESS = Address("146.59.110.146", 1337)  # core-protanki.com
 
     MAX_CONNECTIONS = 1
 
@@ -20,25 +19,25 @@ class TankiProxy:
     processor: Processor
     sockets: SocketHolder
 
-    def __init__(self, processor: Processor):
-        self.processor = processor
-        self.protections = processor.protections
-        self.sockets = processor.sockets
+    def __init__(self, proc: Processor):
+        self.processor = proc
+        self.protections = proc.protections
+        self.sockets = proc.sockets
 
         self.start_client_proxy()
 
     def handle_client(self):
         """C2S: Client -> Proxy -> Server"""
-        
+
         socx = self.sockets.client
         while True:
             try:
                 packet_len = EByteArray(socx.recv(4)).read_int()
-                packet_id = EByteArray(socx.recv(4)).read_int()                    
+                packet_id = EByteArray(socx.recv(4)).read_int()
 
                 abspacket_data_len = packet_len - Processor.HEADER_LEN
                 encrypted_data = EByteArray()
-            
+
                 if abspacket_data_len > 0:
                     # Load chunked data into the socket buffer until we have all the data to read
                     while len(encrypted_data) != abspacket_data_len:
@@ -78,7 +77,7 @@ class TankiProxy:
                     while len(encrypted_data) != abspacket_data_len:
                         remaining_size = abspacket_data_len - len(encrypted_data)
                         received_data = EByteArray(socx.recv(remaining_size))
-                        if (len(received_data) == 0):
+                        if len(received_data) == 0:
                             raise Exception("Server Disconnected")
                         encrypted_data += received_data
 
@@ -98,11 +97,12 @@ class TankiProxy:
         """Forwards an encrypted but full packet over"""
 
         full_packet = (EByteArray()
-                        .write_int(packet_len)
-                        .write_int(packet_id)
-                        .write(encrypted_data))
-        # print(f"Forwarding {'IN' if direction else 'OUT'} [{packet_len}]: ID: {packet_id} | Data: {encrypted_data.trim()}")
-        
+                       .write_int(packet_len)
+                       .write_int(packet_id)
+                       .write(bytes(encrypted_data)))
+        # print(f"Forwarding {'IN' if direction else 'OUT'} [{packet_len}]: ID: {packet_id} | "
+        #       f"Data: {encrypted_data.trim()}")
+
         # As IN is true, if true we forward to client, else we forward to server
         (self.sockets.client if direction else self.sockets.server).sendall(full_packet)
 
@@ -114,11 +114,12 @@ class TankiProxy:
         # else:
         #     debug_data = self.protections.debug_c2s.decrypt(full_packet)
 
-        # print(f"DEBUG FORWARDED {'IN' if direction else 'OUT'} [{debug_packet_len}]: ID: {debug_packet_id} | Data: {debug_data.trim()}")
+        # print(f"DEBUG FORWARDED {'IN' if direction else 'OUT'} [{debug_packet_len}]: ID: {debug_packet_id} | "
+        #       f"Data: {debug_data.trim()}")
 
     def start_server_socket(self):
         """Starts a socket to connect to the target server"""
-        
+
         try:
             self.sockets.server.settimeout(10)
             self.sockets.server.connect((TankiProxy.TARGET_ADDRESS.host, TankiProxy.TARGET_ADDRESS.port))
@@ -137,7 +138,7 @@ class TankiProxy:
         """Starts a server to listen for the client to connect to us"""
 
         local_proxy = socket.socket()
-        local_proxy.bind((TankiProxy.PROXY_ADDRESS.split_args))
+        local_proxy.bind(TankiProxy.PROXY_ADDRESS.split_args)
         logger.log_info("Proxy Server Started", True)
         local_proxy.listen(TankiProxy.MAX_CONNECTIONS)
 
@@ -150,6 +151,7 @@ class TankiProxy:
     def end(self):
         self.sockets.close()
         exit(0)
+
 
 if __name__ == "__main__":
     sockets = SocketHolder()

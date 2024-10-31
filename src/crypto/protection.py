@@ -1,5 +1,6 @@
 from crypto.codec.ebytearray import EByteArray
 
+
 class Protection:
     vector_length = 8
 
@@ -39,7 +40,8 @@ class Protection:
 
         for i in range(len(encrypted_data)):
             encrypted_byte = encrypted_data[i]
-            self.decryption_vector[self.decryption_index] = encrypted_byte ^ self.decryption_vector[self.decryption_index]
+            self.decryption_vector[self.decryption_index] = (
+                    encrypted_byte ^ self.decryption_vector[self.decryption_index])
             data[i] = self.decryption_vector[self.decryption_index]
             self.decryption_index ^= self.decryption_vector[self.decryption_index] & 7
 

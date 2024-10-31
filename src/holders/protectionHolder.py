@@ -1,5 +1,6 @@
 from crypto.protection import Protection
 
+
 class ProtectionHolder:
     def __init__(self):
         self.s2c = Protection(True)
