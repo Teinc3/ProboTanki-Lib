@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Message Display</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+        }
+        #messages {
+            border: 1px solid #ccc;
+            height: 600px;
+            overflow-y: scroll;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 4px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .filter-container {
+            margin-bottom: 10px;
+        }
+        .filter-container select {
+            margin-right: 5px;
+            padding: 4px;
+        }
+        .filter-container button {
+            padding: 4px 8px;
+        }
+    </style>
+</head>
+<body>
+<h1>Real-Time Message Display</h1>
+
+<div class="filter-container">
+    <label for="filterId"></label><select id="filterId">
+        <option value="">Filter by ID</option>
+    </select>
+    <label for="filterDirection"></label><select id="filterDirection">
+        <option value="">Filter by Direction</option>
+    </select>
+    <label for="filterDescription"></label><select id="filterDescription">
+        <option value="">Filter by Description</option>
+    </select>
+    <button id="clearFilters">Clear Filters</button>
+</div>
+
+<div id="messages">
+    <table>
+        <thead>
+        <tr>
+            <th>Direction</th>
+            <th>ID</th>
+            <th>Description</th>
+            <th>Data</th>
+        </tr>
+        </thead>
+        <tbody id="packetTableBody">
+        </tbody>
+    </table>
+</div>
+
+<script>
+    const socket = io();
+    const messagesDiv = document.getElementById('messages');
+    const filterIdSelect = document.getElementById('filterId');
+    const filterDirectionSelect = document.getElementById('filterDirection');
+    const filterDescriptionSelect = document.getElementById('filterDescription');
+    const clearFiltersButton = document.getElementById('clearFilters');
+    let isAutoScrollEnabled = true;
+    let packets = [];
+    let currentFilters = { id: '', direction: '', description: '' };
+
+    function parseTcpPacket(packet) {
+        const regex = /(?:IN|OUT) \[(\d+)] \| ID: (-?\d+) \((.*?)\) \| Data: EByteArray\(b'([^']*)'\)/;
+        const match = packet.match(regex);
+        if (match) {
+            const direction = match[0].startsWith('IN') ? 'IN' : 'OUT';
+            const idValue = match[2];
+            const description = match[3];
+            const dataValue = match[4];
+
+            return { direction, idValue, description, dataValue };
+        }
+        return null;
+    }
+
+    function addPacketToTable(packet) {
+        const parsed = parseTcpPacket(packet);
+        if (parsed) {
+            packets.push(parsed);
+            updateFilterOptions();
+            if (isPacketVisible(parsed)) {
+                renderPacket(parsed);
+            }
+            if (isAutoScrollEnabled) {
+                messagesDiv.scrollTop = messagesDiv.scrollHeight;
+            }
+        }
+    }
+
+    function updateFilterOptions() {
+        const uniqueIds = new Set();
+        const uniqueDirections = new Set();
+        const uniqueDescriptions = new Set();
+
+        packets.forEach(packet => {
+            uniqueIds.add(packet.idValue);
+            uniqueDirections.add(packet.direction);
+            uniqueDescriptions.add(packet.description);
+        });
+
+        filterIdSelect.innerHTML = `<option value="">Filter by ID</option>`;
+        uniqueIds.forEach(id => {
+            filterIdSelect.innerHTML += `<option value="${id}">${id}</option>`;
+        });
+
+        filterDirectionSelect.innerHTML = `<option value="">Filter by Direction</option>`;
+        uniqueDirections.forEach(direction => {
+            filterDirectionSelect.innerHTML += `<option value="${direction}">${direction}</option>`;
+        });
+
+        filterDescriptionSelect.innerHTML = `<option value="">Filter by Description</option>`;
+        uniqueDescriptions.forEach(description => {
+            filterDescriptionSelect.innerHTML += `<option value="${description}">${description}</option>`;
+        });
+    }
+
+    function renderPacket(packet) {
+        const tableBody = document.getElementById('packetTableBody');
+        const row = `<tr>
+                        <td>${packet.direction}</td>
+                        <td>${packet.idValue}</td>
+                        <td>${packet.description}</td>
+                        <td>${packet.dataValue}</td>
+                     </tr>`;
+        tableBody.innerHTML += row;
+    }
+
+    function isPacketVisible(packet) {
+        const { id, direction, description } = currentFilters;
+        const idMatch = !id || packet.idValue === id;
+        const directionMatch = !direction || packet.direction === direction;
+        const descriptionMatch = !description || packet.description === description;
+
+        return idMatch && directionMatch && descriptionMatch;
+    }
+
+    function renderTable() {
+        const tableBody = document.getElementById('packetTableBody');
+        tableBody.innerHTML = '';
+        packets.forEach(packet => {
+            if (isPacketVisible(packet)) {
+                renderPacket(packet);
+            }
+        });
+    }
+
+    function filterPackets() {
+        currentFilters.id = filterIdSelect.value;
+        currentFilters.direction = filterDirectionSelect.value;
+        currentFilters.description = filterDescriptionSelect.value;
+
+        renderTable();
+    }
+
+    function clearFilters() {
+        filterIdSelect.selectedIndex = 0;
+        filterDirectionSelect.selectedIndex = 0;
+        filterDescriptionSelect.selectedIndex = 0;
+        currentFilters = { id: '', direction: '', description: '' };
+        renderTable();
+    }
+
+    filterIdSelect.addEventListener('change', filterPackets);
+    filterDirectionSelect.addEventListener('change', filterPackets);
+    filterDescriptionSelect.addEventListener('change', filterPackets);
+    clearFiltersButton.addEventListener('click', clearFilters);
+
+    messagesDiv.addEventListener('scroll', () => {
+        const threshold = 10;
+        isAutoScrollEnabled = messagesDiv.scrollHeight - messagesDiv.scrollTop - messagesDiv.clientHeight < threshold;
+    });
+
+    socket.on('new_message', function(data) {
+        const message = data.message;
+        addPacketToTable(message);
+    });
+
+    socket.on('connect', function() {
+        console.log('WebSocket connected');
+    });
+</script>
+</body>
+</html>
