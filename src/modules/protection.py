@@ -1,4 +1,4 @@
-from crypto.codec.ebytearray import EByteArray
+from utils.ebytearray import EByteArray
 
 
 class Protection:

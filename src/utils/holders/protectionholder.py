@@ -1,4 +1,4 @@
-from crypto.protection import Protection
+from modules.protection import Protection
 
 
 class ProtectionHolder:

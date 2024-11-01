@@ -1,12 +1,14 @@
 import socket
 from threading import Thread
 import struct
+
 from modules.logger import logger
 from modules.processor import Processor
-from crypto.codec.ebytearray import EByteArray
-from holders.protectionHolder import ProtectionHolder
-from holders.socketHolder import SocketHolder
-from holders.addressHolder import Address
+from packets.abstractpacket import AbstractPacket
+from utils.address import Address
+from utils.ebytearray import EByteArray
+from utils.holders.protectionholder import ProtectionHolder
+from utils.holders.socketholder import SocketHolder
 
 
 class TankiProxy:
@@ -35,7 +37,7 @@ class TankiProxy:
                 packet_len = EByteArray(socx.recv(4)).read_int()
                 packet_id = EByteArray(socx.recv(4)).read_int()
 
-                abspacket_data_len = packet_len - Processor.HEADER_LEN
+                abspacket_data_len = packet_len - AbstractPacket.HEADER_LEN
                 encrypted_data = EByteArray()
 
                 if abspacket_data_len > 0:
@@ -70,7 +72,7 @@ class TankiProxy:
                 packet_len = EByteArray(socx.recv(4)).read_int()
                 packet_id = EByteArray(socx.recv(4)).read_int()
 
-                abspacket_data_len = packet_len - Processor.HEADER_LEN
+                abspacket_data_len = packet_len - AbstractPacket.HEADER_LEN
                 encrypted_data = EByteArray()
 
                 if abspacket_data_len > 0:

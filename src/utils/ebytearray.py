@@ -1,5 +1,4 @@
 import struct
-from typing import Optional
 
 
 class EByteArray(bytearray):
@@ -10,7 +9,7 @@ class EByteArray(bytearray):
         del self[:length]  # Deletes the bytes read, cleaning up the code
         return value
 
-    def write(self, value: bytes) -> "EByteArray":
+    def write(self, value: bytes):
         self.extend(value)
         return self
 
@@ -22,50 +21,51 @@ class EByteArray(bytearray):
 
     def read_boolean(self) -> bool:
         return self.read_byte() != 0
+    
+    def read_short(self) -> int:
+        return self._read_value('>h')
 
     def read_float(self) -> float:
         return self._read_value('>f')
-
-    def write_int(self, value: int) -> "EByteArray":
-        bytes_int = struct.pack('>i', value)
-        self.write(bytes_int)
-        return self
-
-    def write_byte(self, value: int) -> "EByteArray":
-        bytes_byte = struct.pack('b', value)
-        self.write(bytes_byte)
-        return self
-
-    def write_boolean(self, value: bool) -> "EByteArray":
-        self.write_byte(1 if value else 0)
-        return self
-
-    def write_float(self, value: float) -> "EByteArray":
-        bytes_float = struct.pack('>f', value)
-        self.write(bytes_float)
-        return self
-
-    def write_string(self, value: str = None) -> "EByteArray":
-        if not value:
-            self.write_boolean(True)
-            return self
-        self.write_boolean(False)
-        length = len(value)
-        self.write_int(length)
-        buffer = value.encode('utf-8')
-        self.write(buffer)
-        return self
-
-    def read_string(self) -> Optional[str]:
-        isEmpty = self.read_boolean()
-        if isEmpty:
-            return None
-        length = self.read_int()
+    
+    def read_string(self, length: int) -> str:
         value = self[:length].decode('utf-8')
         del self[:length]  # Deletes the bytes read
         return value
 
-    def trim(self, trim_length=300) -> "EByteArray":
+    def write_int(self, value: int):
+        bytes_int = struct.pack('>i', value)
+        self.write(bytes_int)
+        return self
+
+    def write_byte(self, value: int):
+        bytes_byte = struct.pack('b', value)
+        self.write(bytes_byte)
+        return self
+
+    def write_boolean(self, value: bool):
+        self.write_byte(1 if value else 0)
+        return self
+    
+    def write_short(self, value: int):
+        if value < -32768 or value > 32767:
+            raise ValueError('Short value out of range')
+        
+        bytes_short = struct.pack('>h', value)
+        self.write(bytes_short)
+        return self
+
+    def write_float(self, value: float):
+        bytes_float = struct.pack('>f', value)
+        self.write(bytes_float)
+        return self
+
+    def write_string(self, value: str):
+        buffer = value.encode('utf-8')
+        self.write(buffer)
+        return self
+
+    def trim(self, trim_length=300):
         """
         Trims the packet data for display.
         If length ≤ trim_length bytes, displays the entire packet.

@@ -1,0 +1,9 @@
+from packets.abstractpacket import AbstractPacket
+from codec.primitive.boolcodec import BoolCodec
+
+
+class Invite_Code_Status(AbstractPacket):
+    id = 444933603
+    description = "Do we need an invite code to access the server?"
+    codecs = [BoolCodec]
+    attributes = ["inviteEnabled"]

@@ -1,12 +1,12 @@
-from config.packets import Packets
-from holders.socketHolder import SocketHolder
-from holders.protectionHolder import ProtectionHolder
-from crypto.codec.ebytearray import EByteArray
 from modules.logger import logger
+from packets.packets import Packets
+from packets.abstractpacket import AbstractPacket
+from utils.holders.socketholder import SocketHolder
+from utils.holders.protectionholder import ProtectionHolder
+from utils.ebytearray import EByteArray
 
 
 class Processor:
-    HEADER_LEN = 8
 
     sockets: SocketHolder
     protections: ProtectionHolder
@@ -31,7 +31,7 @@ class Processor:
         elif packet_id == Packets.Ping:
             interest = False
 
-        if packet_len > Processor.HEADER_LEN or interest:
+        if packet_len > AbstractPacket.HEADER_LEN or interest:
             logger.log_info(
                 f"IN [{packet_len}] | ID: {packet_id} ({Packets.get_name(packet_id)}) | Data: {data_copy.trim()}", True)
 
@@ -41,7 +41,7 @@ class Processor:
         if packet_id == Packets.Pong:
             interest = False
 
-        if packet_len > Processor.HEADER_LEN or interest:
+        if packet_len > AbstractPacket.HEADER_LEN or interest:
             logger.log_info(
                 f"OUT [{packet_len}] | ID: {packet_id} ({Packets.get_name(packet_id)}) | Data: {packet_data.trim()}",
                 True)

@@ -1,9 +1,10 @@
 import socket
+from typing import Optional
 
 
 class SocketHolder:
     server: socket.socket
-    client: socket.socket | None
+    client: Optional[socket.socket]
 
     def __init__(self):
         self.server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
