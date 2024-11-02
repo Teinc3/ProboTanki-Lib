@@ -1,6 +1,7 @@
 from packets.abstractpacket import AbstractPacket
 
-from codec.primitive import StringCodec, IntCodec, BoolCodec
+from codec.primitive import IntCodec, BoolCodec
+from codec.complex import StringCodec
 
 
 class Player_Online(AbstractPacket):
@@ -8,4 +9,4 @@ class Player_Online(AbstractPacket):
     description = "Updates Player's Online Status"
     codecs = [BoolCodec, IntCodec, StringCodec]
     attributes = ['online', 'serverID', 'username']
-    log = False
+    shouldLog = False

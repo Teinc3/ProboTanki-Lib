@@ -1,6 +1,6 @@
 from packets.abstractpacket import AbstractPacket
 
-from codec.primitive.stringcodec import StringCodec
+from codec.complex import StringCodec
 
 
 class Send_Promocode(AbstractPacket):

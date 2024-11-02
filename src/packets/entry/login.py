@@ -1,7 +1,7 @@
 from packets.abstractpacket import AbstractPacket
 
-from codec.primitive.stringcodec import StringCodec
-from codec.primitive.boolcodec import BoolCodec
+from codec.complex import StringCodec
+from codec.primitive import BoolCodec
 
 
 class Login(AbstractPacket):

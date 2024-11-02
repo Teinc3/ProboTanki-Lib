@@ -1,6 +1,7 @@
 from packets.abstractpacket import AbstractPacket
 
-from codec.primitive import StringCodec, IntCodec
+from codec.primitive import IntCodec
+from codec.complex import StringCodec
 
 
 class Receive_Game_Chat(AbstractPacket):

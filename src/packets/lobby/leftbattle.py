@@ -1,6 +1,6 @@
 from packets.abstractpacket import AbstractPacket
 
-from codec.primitive.stringcodec import StringCodec
+from codec.complex import StringCodec
 
 
 class Left_Battle(AbstractPacket):
@@ -8,4 +8,4 @@ class Left_Battle(AbstractPacket):
     description = 'A player has left the battle'
     codecs = [StringCodec]
     attributes = ["username"]
-    log = False
+    shouldLog = False

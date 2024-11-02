@@ -1,7 +1,6 @@
 from packets.abstractpacket import AbstractPacket
 
-from codec.primitive.intcodec import IntCodec
-from codec.primitive.boolcodec import BoolCodec
+from codec.primitive import IntCodec, BoolCodec
 
 
 class Login_Ready(AbstractPacket):

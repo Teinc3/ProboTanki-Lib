@@ -1,6 +1,7 @@
 from packets.abstractpacket import AbstractPacket
 
-from codec.primitive import StringCodec, IntCodec
+from codec.primitive import IntCodec
+from codec.complex import StringCodec
 
 
 class Load_Player_Rank(AbstractPacket):
@@ -8,4 +9,4 @@ class Load_Player_Rank(AbstractPacket):
     description = "Loads the rank of a player"
     codecs = [IntCodec, StringCodec]
     attributes = ['rank', 'username']
-    log = False
+    shouldLog = False

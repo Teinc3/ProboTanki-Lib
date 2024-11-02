@@ -1,6 +1,6 @@
 from codec.base import CustomBaseCodec
-from codec.primitive import BoolCodec, IntCodec, StringCodec
-from codec.complex.doubleintcodec import DoubleIntCodec
+from codec.primitive import BoolCodec, IntCodec
+from codec.complex import StringCodec, DoubleIntCodec
 
 
 class BattleCreateOptionsCodec(CustomBaseCodec):
@@ -12,7 +12,5 @@ class BattleCreateOptionsCodec(CustomBaseCodec):
               IntCodec, StringCodec, BoolCodec, BoolCodec, BoolCodec, DoubleIntCodec, 
               BoolCodec, IntCodec, BoolCodec, BoolCodec, BoolCodec, BoolCodec]
 
-    # For decode, we don't use the last codec, hence override - but for Encode we do, so we use superclass method for that 
-    def decode(self):
-        return {self.attributes[i]: self.codecs[i](self._buffer).decode() for i in range(len(self.codecs - 1))}
-    
+    # Since this packet should be C2S, note that the encode method includes the noUpgrade attribute (which is absent in decode) 
+    # But since we have to decode the "Encoded" packet, we have to include the noUpgrade attribute in the decode method

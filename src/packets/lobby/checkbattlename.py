@@ -1,6 +1,6 @@
 from packets.abstractpacket import AbstractPacket
 
-from codec.primitive import StringCodec
+from codec.complex import StringCodec
 
 class Check_Battle_Name(AbstractPacket):
     id = 566652736

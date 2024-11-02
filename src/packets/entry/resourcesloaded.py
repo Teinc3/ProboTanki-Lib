@@ -1,5 +1,5 @@
 from packets.abstractpacket import AbstractPacket
-from codec.primitive.intcodec import IntCodec
+from codec.primitive import IntCodec
 
 
 class Resources_Loaded(AbstractPacket):

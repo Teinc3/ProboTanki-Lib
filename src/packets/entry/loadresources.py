@@ -1,6 +1,6 @@
 from packets.abstractpacket import AbstractPacket
-from codec.primitive.stringcodec import StringCodec
-from codec.primitive.intcodec import IntCodec
+from codec.complex import StringCodec
+from codec.primitive import IntCodec
 
 
 class Load_Resources(AbstractPacket):
@@ -8,3 +8,4 @@ class Load_Resources(AbstractPacket):
     description = 'Server tells us what resources to load'
     codecs = [StringCodec, IntCodec]
     attributes = ["json", "callbackID"]
+    shouldLog = False

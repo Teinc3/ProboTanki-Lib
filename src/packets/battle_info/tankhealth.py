@@ -1,6 +1,7 @@
 from packets.abstractpacket import AbstractPacket
 
-from codec.primitive import StringCodec, FloatCodec
+from codec.primitive import FloatCodec
+from codec.complex import StringCodec
 
 
 class Tank_Health(AbstractPacket):

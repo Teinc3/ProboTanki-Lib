@@ -17,6 +17,8 @@ class BaseCodec(ABC, Generic[T]):
     - encode: Encodes a value to an ebytearray
     """
 
+    shortern = False
+
     def __init__(self, buffer: EByteArray):
         self._buffer = buffer
 

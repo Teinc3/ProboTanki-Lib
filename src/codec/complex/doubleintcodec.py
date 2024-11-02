@@ -1,7 +1,7 @@
 from typing import Tuple
 
 from codec.base import BaseCodec
-from codec.primitive.intcodec import IntCodec
+from codec.primitive import IntCodec
 
 
 class DoubleIntCodec(BaseCodec[Tuple[int, int]]):

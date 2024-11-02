@@ -3,8 +3,9 @@ from threading import Thread
 import struct
 
 from modules.logger import logger
-from modules.processor import Processor
+from modules.packetmanager import PacketManager
 from packets.abstractpacket import AbstractPacket
+
 from utils.address import Address
 from utils.ebytearray import EByteArray
 from utils.holders.protectionholder import ProtectionHolder
@@ -18,13 +19,11 @@ class TankiProxy:
     MAX_CONNECTIONS = 1
 
     protections: ProtectionHolder
-    processor: Processor
     sockets: SocketHolder
 
-    def __init__(self, proc: Processor):
-        self.processor = proc
-        self.protections = proc.protections
-        self.sockets = proc.sockets
+    def __init__(self, protections: ProtectionHolder, sockets: SocketHolder):
+        self.protections = protections
+        self.sockets = sockets
 
         self.start_client_proxy()
 
@@ -50,7 +49,7 @@ class TankiProxy:
                         encrypted_data += received_data
 
                 packet_data = self.protections.c2s.decrypt(encrypted_data)
-                self.processor.parse_outbound(packet_len, packet_id, EByteArray(packet_data))
+                self.parse_packet(False, packet_id, EByteArray(packet_data))
 
                 # Note: when forwarding, we have to re-encrypt the data
                 forwarded_data = self.protections.c2s.encrypt(packet_data)
@@ -60,7 +59,7 @@ class TankiProxy:
                 logger.log_error("Client socket aborted")
                 self.end()
             except Exception as e:
-                logger.log_error("Client socket error: ", e)
+                logger.log_error(f"Client socket error: {e}")
                 self.end()
 
     def handle_server(self):
@@ -84,7 +83,7 @@ class TankiProxy:
                         encrypted_data += received_data
 
                 packet_data = self.protections.s2c.decrypt(encrypted_data)
-                self.processor.parse_inbound(packet_len, packet_id, EByteArray(packet_data))
+                self.parse_packet(True, packet_id, EByteArray(packet_data))
 
                 self.forward(True, packet_len, packet_id, encrypted_data)
 
@@ -92,8 +91,19 @@ class TankiProxy:
                 logger.log_error("Server socket aborted")
                 self.end()
             except Exception as e:
-                logger.log_error("Server socket error: ", e)
+                logger.log_error(f"Server socket error: {e}")
                 self.end()
+
+    def parse_packet(self, direction: bool, packet_id: int, packet_data: EByteArray):
+        """Parses a packet based on its direction"""
+
+        Packet = PacketManager.get_packet(packet_id)
+        if Packet is not None:
+            packet = Packet(direction, self.protections, self.sockets)
+            packet.unwrap(packet_data)
+            packet.process()
+        else:
+            logger.log_info(f"{"IN" if direction else "OUT"} [{len(packet_data) + AbstractPacket.HEADER_LEN}] | ID: {packet_id} ({PacketManager.get_name(packet_id)}) | Data: {packet_data.trim()}", True)
 
     def forward(self, direction: bool, packet_len: int, packet_id: int, encrypted_data: EByteArray):
         """Forwards an encrypted but full packet over"""
@@ -102,22 +112,8 @@ class TankiProxy:
                        .write_int(packet_len)
                        .write_int(packet_id)
                        .write(bytes(encrypted_data)))
-        # print(f"Forwarding {'IN' if direction else 'OUT'} [{packet_len}]: ID: {packet_id} | "
-        #       f"Data: {encrypted_data.trim()}")
 
-        # As IN is true, if true we forward to client, else we forward to server
         (self.sockets.client if direction else self.sockets.server).sendall(full_packet)
-
-        # debug_packet_len = full_packet.read_int()
-        # debug_packet_id = full_packet.read_int()
-
-        # if direction:
-        #     debug_data = self.protections.debug_s2c.decrypt(full_packet)
-        # else:
-        #     debug_data = self.protections.debug_c2s.decrypt(full_packet)
-
-        # print(f"DEBUG FORWARDED {'IN' if direction else 'OUT'} [{debug_packet_len}]: ID: {debug_packet_id} | "
-        #       f"Data: {debug_data.trim()}")
 
     def start_server_socket(self):
         """Starts a socket to connect to the target server"""
@@ -133,7 +129,7 @@ class TankiProxy:
             logger.log_error("Server Connection Timeout")
             self.end()
         except socket.error as e:
-            logger.log_error("Server Connection Error: ", e)
+            logger.log_error(f"Server Connection Error: {e}")
             self.end()
 
     def start_client_proxy(self):
@@ -156,7 +152,4 @@ class TankiProxy:
 
 
 if __name__ == "__main__":
-    sockets = SocketHolder()
-    protections = ProtectionHolder()
-    processor = Processor(sockets, protections)
-    TankiProxy(processor)
+    TankiProxy(ProtectionHolder(), SocketHolder())

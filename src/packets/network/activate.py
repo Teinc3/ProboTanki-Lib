@@ -8,3 +8,8 @@ class Activate_Protection(AbstractPacket):
     description = 'Contains the keys required to activate packet encryption'
     codecs = [VectorCodecFactory(int, ByteCodec)]
     attributes = ['keys']
+
+    def process(self):
+        super().process()
+        self.protections.activate(self.object['keys'])
+        self.logger.log_warning("Protection Activated")
