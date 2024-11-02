@@ -1,6 +1,15 @@
 import os
 import logging
 from logging.handlers import RotatingFileHandler
+import requests
+
+
+def send_message(message: str):
+    """Sends a message to the /send endpoint."""
+    try:
+        requests.post("http://127.0.0.1:6942/send", json={'message': message})
+    except Exception as e:
+        print(f"Error calling /send endpoint: {e}")
 
 
 class Logger:
@@ -39,13 +48,17 @@ class Logger:
         if print_console:
             print(message)
 
+        send_message(message)
+
     def log_warning(self, message: str):
         self.logger.warning(message)
         print(message)
+        send_message(message)
 
     def log_error(self, message: str):
         self.logger.error(message)
         print(message)
+        send_message(message)
 
 
 logger = Logger()
