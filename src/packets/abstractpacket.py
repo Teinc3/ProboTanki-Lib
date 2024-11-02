@@ -44,7 +44,7 @@ class AbstractPacket():
         packet_data = EByteArray()
         data_len = 0
         for i in range(0, len(self.codecs)):
-            codec: BaseCodec = self.codecs[i](packet_data)
+            codec = self.codecs[i](packet_data)
             data_len += codec.encode(self.objects[i])
         return (data_len + AbstractPacket.HEADER_LEN, self.id, packet_data)
     
@@ -60,9 +60,27 @@ class AbstractPacket():
             self.objects.append(self.object[self.attributes[i]])
         return self.objects
     
-    def process(self):
-        # Default behavior is just to log the packet
+    def process(self) -> bool:
+        # Default behavior is just to log the packet and declare no packet interception
         self.log()
+        return False
+    
+    # Example of packet manipulation: Create_Battle
+    # def process(self):
+    #     # Change rank range to enable all ranks
+    #     self.object["rankRange"]["minRank"] = 14
+    #     self.object["rankRange"]["maxRank"] = 20
+    #     self.deimplement()
+    #     packet_len, _, unencrypted_data = self.wrap()
+        
+    #     packet_data = EByteArray()
+    #     packet_data.write_int(packet_len)
+    #     packet_data.write_int(self.id)
+    #     packet_data.write(self.protections.c2s.encrypt(unencrypted_data))
+    #     self.sockets.server.send(packet_data)
+        
+    #     super().process()
+    #     return True
     
     def log(self):
         logger.log_info(f"[{'IN' if self.direction else 'OUT'}] ({self.__class__.__name__}) | Data: {self.object}", self.shouldLog)

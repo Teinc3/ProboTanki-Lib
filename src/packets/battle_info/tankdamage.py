@@ -1,6 +1,6 @@
 from packets.abstractpacket import AbstractPacket
 
-from codec.complex import VectorCodecFactory
+from codec.factory import VectorCodecFactory
 from codec.custom.tankdamagecodec import TankDamageCodec
 
 class Tank_Damage(AbstractPacket):

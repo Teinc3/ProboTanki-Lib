@@ -1,7 +1,7 @@
 from packets.abstractpacket import AbstractPacket
 
 from codec.custom.chatmessagecodec import ChatMessageCodec
-from codec.complex import VectorCodecFactory
+from codec.factory import VectorCodecFactory
 
 
 class Receive_Lobby_Chat(AbstractPacket):

@@ -1,6 +1,6 @@
 from packets.abstractpacket import AbstractPacket
 from codec.primitive import ByteCodec
-from codec.complex import VectorCodecFactory
+from codec.factory import VectorCodecFactory
 
 
 class Activate_Protection(AbstractPacket):

@@ -49,11 +49,12 @@ class TankiProxy:
                         encrypted_data += received_data
 
                 packet_data = self.protections.c2s.decrypt(encrypted_data)
-                self.parse_packet(False, packet_id, EByteArray(packet_data))
+                intercepted = self.parse_packet(False, packet_id, EByteArray(packet_data))
 
-                # Note: when forwarding, we have to re-encrypt the data
-                forwarded_data = self.protections.c2s.encrypt(packet_data)
-                self.forward(False, packet_len, packet_id, forwarded_data)
+                if not intercepted:
+                    # Note: when forwarding, we have to re-encrypt the data
+                    forwarded_data = self.protections.c2s.encrypt(packet_data)
+                    self.forward(False, packet_len, packet_id, forwarded_data)
 
             except struct.error:
                 logger.log_error("Client socket aborted")
@@ -94,16 +95,17 @@ class TankiProxy:
                 logger.log_error(f"Server socket error: {e}")
                 self.end()
 
-    def parse_packet(self, direction: bool, packet_id: int, packet_data: EByteArray):
+    def parse_packet(self, direction: bool, packet_id: int, packet_data: EByteArray) -> bool:
         """Parses a packet based on its direction"""
 
         Packet = PacketManager.get_packet(packet_id)
         if Packet is not None:
             packet = Packet(direction, self.protections, self.sockets)
             packet.unwrap(packet_data)
-            packet.process()
+            return packet.process() 
         else:
             logger.log_info(f"{'IN' if direction else 'OUT'} [{len(packet_data) + AbstractPacket.HEADER_LEN}] | ID: {packet_id} ({PacketManager.get_name(packet_id)}) | Data: {packet_data.trim()}", True)
+            return False
 
     def forward(self, direction: bool, packet_len: int, packet_id: int, encrypted_data: EByteArray):
         """Forwards an encrypted but full packet over"""
