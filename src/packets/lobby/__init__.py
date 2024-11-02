@@ -6,8 +6,9 @@ from .createbattle import Create_Battle
 from .checkbattlename import Check_Battle_Name
 from .battlecreated import Battle_Created
 from .loadbattleinfo import Load_Battle_Info
-from .updateplayerbattlepreview import Update_Player_Battle_Preview
+from .updateplayerteambattlepreview import Update_Player_Team_Battle_Preview
 from .updateteambattlepreview import Update_Team_Battle_Preview
+from .updateplayerdmbattlepreview import Update_Player_DM_Battle_Preview
 
 __all__ = [
     Select_Battle,
@@ -19,6 +20,7 @@ __all__ = [
     Check_Battle_Name,
     Battle_Created,
     Load_Battle_Info,
-    Update_Player_Battle_Preview,
+    Update_Player_DM_Battle_Preview,
+    Update_Player_Team_Battle_Preview,
     Update_Team_Battle_Preview
 ]

@@ -103,7 +103,7 @@ class TankiProxy:
             packet.unwrap(packet_data)
             packet.process()
         else:
-            logger.log_info(f"{"IN" if direction else "OUT"} [{len(packet_data) + AbstractPacket.HEADER_LEN}] | ID: {packet_id} ({PacketManager.get_name(packet_id)}) | Data: {packet_data.trim()}", True)
+            logger.log_info(f"{'IN' if direction else 'OUT'} [{len(packet_data) + AbstractPacket.HEADER_LEN}] | ID: {packet_id} ({PacketManager.get_name(packet_id)}) | Data: {packet_data.trim()}", True)
 
     def forward(self, direction: bool, packet_len: int, packet_id: int, encrypted_data: EByteArray):
         """Forwards an encrypted but full packet over"""

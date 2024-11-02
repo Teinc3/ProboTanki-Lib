@@ -65,4 +65,4 @@ class AbstractPacket():
         self.log()
     
     def log(self):
-        logger.log_info(f"[{"IN" if self.direction else "OUT"}] ({self.__class__.__name__}) | Data: {self.object}", self.shouldLog)
+        logger.log_info(f"[{'IN' if self.direction else 'OUT'}] ({self.__class__.__name__}) | Data: {self.object}", self.shouldLog)
