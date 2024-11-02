@@ -4,6 +4,7 @@ from typing import Type
 import packets
 from packets.abstractpacket import AbstractPacket
 
+
 class PacketManager:
     # Dictionary to store packet classes by their IDs
     packets = {}
@@ -26,6 +27,7 @@ class PacketManager:
     def get_name(cls, packet_id: int) -> str:
         packet_class = cls.get_packet(packet_id)
         return packet_class.__name__ if packet_class else "Unknown"
+
 
 # Load all packet classes into the PacketManager
 PacketManager.load_packets()

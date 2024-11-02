@@ -7,8 +7,9 @@ from utils.holders.socketholder import SocketHolder
 from codec.base import BaseCodec
 from utils.ebytearray import EByteArray
 
+
 # Trust me, when you automate every function it ain't abstract anymore
-class AbstractPacket():
+class AbstractPacket:
     HEADER_LEN = 8
 
     id: ClassVar[int]
@@ -39,30 +40,31 @@ class AbstractPacket():
             codec: BaseCodec = self.codecs[i](packet_data)
             self.objects.append(codec.decode())
         return self.implement()
-        
+
     def wrap(self) -> tuple[int, int, EByteArray]:
         packet_data = EByteArray()
         data_len = 0
         for i in range(0, len(self.codecs)):
             codec: BaseCodec = self.codecs[i](packet_data)
             data_len += codec.encode(self.objects[i])
-        return (data_len + AbstractPacket.HEADER_LEN, self.id, packet_data)
-    
+        return data_len + AbstractPacket.HEADER_LEN, self.id, packet_data
+
     def implement(self) -> dict:
         self.object = {}
         for i in range(0, len(self.objects)):
             self.object[self.attributes[i]] = self.objects[i]
         return self.object
-    
-    def deimplement(self) -> list:
+
+    def reimplement(self) -> list:
         self.objects = []
         for i in range(0, len(self.attributes)):
             self.objects.append(self.object[self.attributes[i]])
         return self.objects
-    
+
     def process(self):
         # Default behavior is just to log the packet
         self.log()
-    
+
     def log(self):
-        logger.log_info(f"[{"IN" if self.direction else "OUT"}] ({self.__class__.__name__}) | Data: {self.object}", self.shouldLog)
+        logger.log_info(f"[{'IN' if self.direction else 'OUT'}] ({self.__class__.__name__}) | Data: {self.object}",
+                        self.shouldLog)

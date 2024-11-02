@@ -1,5 +1,6 @@
 from codec.base import BaseCodec
 
+
 class ShortCodec(BaseCodec[int]):
 
     def decode(self):

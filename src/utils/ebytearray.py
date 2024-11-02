@@ -21,13 +21,13 @@ class EByteArray(bytearray):
 
     def read_boolean(self) -> bool:
         return self.read_byte() != 0
-    
+
     def read_short(self) -> int:
         return self._read_value('>h')
 
     def read_float(self) -> float:
         return self._read_value('>f')
-    
+
     def read_string(self, length: int) -> str:
         value = self[:length].decode('utf-8')
         del self[:length]  # Deletes the bytes read
@@ -46,11 +46,11 @@ class EByteArray(bytearray):
     def write_boolean(self, value: bool):
         self.write_byte(1 if value else 0)
         return self
-    
+
     def write_short(self, value: int):
         if value < -32768 or value > 32767:
             raise ValueError('Short value out of range')
-        
+
         bytes_short = struct.pack('>h', value)
         self.write(bytes_short)
         return self
