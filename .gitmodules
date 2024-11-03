@@ -1,0 +1,3 @@
+[submodule "submodules/ProTanki-Scripts"]
+	path = submodules/ProTanki-Scripts
+	url = https://github.com/Teinc3/ProTanki-Scripts.git
