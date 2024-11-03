@@ -1,0 +1,6 @@
+python_socks
+coloredlogs
+py-cord
+mplcyberpunk
+pandas
+matplotlib

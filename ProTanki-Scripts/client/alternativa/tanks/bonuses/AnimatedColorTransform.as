@@ -1,0 +1,22 @@
+package alternativa.tanks.bonuses
+{
+   import alternativa.tanks.animations.AnimatedValue;
+   import flash.geom.ColorTransform;
+   
+   public class AnimatedColorTransform implements AnimatedValue
+   {
+      public function AnimatedColorTransform()
+      {
+         this.colorTransform = new ColorTransform();
+         super();
+      }
+      
+      public function setAnimatedValue(param1:Number) : void
+      {
+         this.colorTransform.redOffset = param1;
+         this.colorTransform.greenOffset = param1;
+         this.colorTransform.blueOffset = param1;
+      }
+   }
+}
+
