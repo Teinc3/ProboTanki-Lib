@@ -5,5 +5,19 @@ from codec.complex import StringCodec, DoubleIntCodec
 
 
 class BattleInfoCodec(CustomBaseCodec):
-    attributes = ["battleID", "mapName", "mode", "private", "proBattle", "range", "serverNumber"]
-    codecs = [StringCodec, StringCodec, IntCodec, BoolCodec, BoolCodec, DoubleIntCodec, IntCodec]
+    attributes = [
+        "battleID",
+        "mapName",
+        "mode",
+        "private",
+        "proBattle",
+        "range",
+        "serverNumber"]
+    codecs = [
+        StringCodec,
+        StringCodec,
+        IntCodec,
+        BoolCodec,
+        BoolCodec,
+        DoubleIntCodec,
+        IntCodec]

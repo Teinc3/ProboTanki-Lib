@@ -1,54 +1,109 @@
 import sys
-import os
-from PyQt5.QtWidgets import QApplication, QMainWindow, QTextEdit, QVBoxLayout, QWidget
+from PyQt5.QtWidgets import QApplication, QMainWindow, QTextEdit, QLineEdit, QPushButton, QVBoxLayout, QWidget, \
+    QHBoxLayout
 from PyQt5.QtCore import QTimer, Qt
 
 
-class LogMonitor(QMainWindow):
-    def __init__(self, log_file):
-        super().__init__()
-        self.log_file = log_file
-        self.last_position = 0
+def parse_search_input(input_text):
+    and_conditions = input_text.split("&&")
+    processed_conditions = []
 
-        self.setWindowTitle("Log Monitor")
+    for and_condition in and_conditions:
+        or_conditions = and_condition.split("||")
+        processed_or_conditions = []
+
+        for condition in or_conditions:
+            condition = condition.strip()
+            if condition.lower().startswith("dir="):
+                direction = condition[4:].strip().upper()
+                if direction == "IN":
+                    processed_or_conditions.append("[IN]")
+                elif direction == "OUT":
+                    processed_or_conditions.append("[OUT]")
+                else:
+                    continue
+            else:
+                processed_or_conditions.append(condition)
+
+        processed_conditions.append(processed_or_conditions)
+
+    return processed_conditions
+
+
+def check_line_against_conditions(line, conditions):
+    for or_conditions in conditions:
+        if any(keyword.lower() in line.lower() for keyword in or_conditions):
+            continue
+        else:
+            return False
+    return True
+
+
+class LogViewer(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle("TCP Log Viewer")
         self.setGeometry(100, 100, 1280, 720)
 
-        self.console = QTextEdit(self)
-        self.console.setReadOnly(True)
-        self.console.setAlignment(Qt.AlignLeft)
+        self.central_widget = QWidget()
+        self.setCentralWidget(self.central_widget)
+        self.layout = QVBoxLayout()
+        self.central_widget.setLayout(self.layout)
 
-        self.console.setLineWrapMode(QTextEdit.NoWrap)
-        self.console.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.console.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.search_layout = QHBoxLayout()
+        self.search_bar = QLineEdit(self)
+        self.search_bar.setPlaceholderText("Search logs...")
+        self.search_bar.returnPressed.connect(self.search_logs)
+        self.search_layout.addWidget(self.search_bar)
 
-        layout = QVBoxLayout()
-        layout.addWidget(self.console)
+        self.search_button = QPushButton("Search", self)
+        self.search_button.clicked.connect(self.search_logs)
+        self.search_layout.addWidget(self.search_button)
 
-        container = QWidget()
-        container.setLayout(layout)
-        self.setCentralWidget(container)
+        self.layout.addLayout(self.search_layout)
+
+        self.log_display = QTextEdit(self)
+        self.log_display.setReadOnly(True)
+        self.log_display.setLineWrapMode(QTextEdit.NoWrap)
+        self.log_display.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.layout.addWidget(self.log_display)
 
         self.timer = QTimer(self)
-        self.timer.timeout.connect(self.update_log)
-        self.timer.start(1)
+        self.timer.timeout.connect(self.check_new_logs)
+        self.timer.start(25)
 
-        self.show()
+        self.log_file_path = "../logs/tcp.log"
+        self.last_position = 0
+        self.chunk_size = 200
+        self.search_keywords = []
 
-    def update_log(self):
-        if os.path.exists(self.log_file):
-            with open(self.log_file, 'r') as file:
-                file.seek(self.last_position)
-                new_lines = file.readlines()
-                self.last_position = file.tell()
+    def check_new_logs(self):
+        try:
+            with open(self.log_file_path, 'r') as log_file:
+                log_file.seek(self.last_position)
+                for _ in range(self.chunk_size):
+                    line = log_file.readline()
+                    if not line:
+                        break
+                    if "Data: {}" in line:
+                        continue
 
-                if new_lines:
-                    for line in new_lines:
-                        self.console.append(line.strip())
+                    if check_line_against_conditions(line, self.search_keywords):
+                        self.log_display.append(line.strip())
+                self.last_position = log_file.tell()
+        except FileNotFoundError:
+            self.log_display.append("Something went wrong, check the log file")
+
+    def search_logs(self):
+        raw_input = self.search_bar.text().strip()
+        self.search_keywords = parse_search_input(raw_input)
+        self.log_display.clear()
+        self.last_position = 0
+        self.check_new_logs()
 
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-
-    log_file_path = os.path.join(os.path.dirname(__file__), '../logs/tcp.log')
-    window = LogMonitor(log_file_path)
+    viewer = LogViewer()
+    viewer.show()
     sys.exit(app.exec_())

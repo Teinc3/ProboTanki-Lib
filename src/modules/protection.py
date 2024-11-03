@@ -19,7 +19,8 @@ class Protection:
             self.base ^= key
 
         for i in range(self.vector_length):
-            # If OUT, everything is flipped by 0x57, otherwise identity operation
+            # If OUT, everything is flipped by 0x57, otherwise identity
+            # operation
             xor_flip = 0x0 if self.direction else 0x57
             self.decryption_vector[i] = self.base ^ (i << 3) ^ xor_flip
             self.encryption_vector[i] = self.base ^ (i << 3) ^ xor_flip
@@ -35,28 +36,28 @@ class Protection:
 
         if not self.active:
             return encrypted_data
-        
+
         data = EByteArray(encrypted_data)
 
         for i in range(len(encrypted_data)):
             encrypted_byte = encrypted_data[i]
             self.decryption_vector[self.decryption_index] = (
-                    encrypted_byte ^ self.decryption_vector[self.decryption_index])
+                encrypted_byte ^ self.decryption_vector[self.decryption_index])
             data[i] = self.decryption_vector[self.decryption_index]
             self.decryption_index ^= self.decryption_vector[self.decryption_index] & 7
 
         return data
-    
+
     def encrypt(self, raw_data: EByteArray):
         """
         Encrypts raw data using the encryption vector
 
         Does not mutate the original (raw) data
         """
-        
+
         if not self.active:
             return raw_data
-        
+
         encrypted_data = EByteArray(raw_data)
 
         for i in range(len(raw_data)):

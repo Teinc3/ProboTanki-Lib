@@ -26,7 +26,11 @@ class AbstractPacket:
     objects: list
     object: dict = {}
 
-    def __init__(self, direction: bool, protections: ProtectionHolder, sockets: SocketHolder):
+    def __init__(
+            self,
+            direction: bool,
+            protections: ProtectionHolder,
+            sockets: SocketHolder):
         self.direction = direction
         self.protections = protections
         self.sockets = sockets
@@ -66,5 +70,6 @@ class AbstractPacket:
         self.log()
 
     def log(self):
-        logger.log_info(f"[{'IN' if self.direction else 'OUT'}] ({self.__class__.__name__}) | Data: {self.object}",
-                        self.shouldLog)
+        logger.log_info(
+            f"[{'IN' if self.direction else 'OUT'}] ({self.__class__.__name__}) | Data: {self.object}",
+            self.shouldLog)

@@ -32,8 +32,10 @@ class AbstractVectorCodec(BaseCodec[list[T]], Generic[T, C]):
         return bytes_written
 
 
-def VectorCodecFactory(element_type: Type[T], element_codec: Type[C], param_shorter=False) -> (
-        Type)[AbstractVectorCodec[T, C]]:
+def VectorCodecFactory(element_type: Type[T],
+                       element_codec: Type[C],
+                       param_shorter=False) -> (Type)[AbstractVectorCodec[T,
+                                                                          C]]:
     class VectorCodec(AbstractVectorCodec[T, C]):
         codec = element_codec
         shorter = param_shorter

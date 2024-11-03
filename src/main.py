@@ -40,9 +40,11 @@ class TankiProxy:
                 encrypted_data = EByteArray()
 
                 if abspacket_data_len > 0:
-                    # Load chunked data into the socket buffer until we have all the data to read
+                    # Load chunked data into the socket buffer until we have
+                    # all the data to read
                     while len(encrypted_data) != abspacket_data_len:
-                        remaining_size = abspacket_data_len - len(encrypted_data)
+                        remaining_size = abspacket_data_len - \
+                                         len(encrypted_data)
                         received_data = EByteArray(socx.recv(remaining_size))
                         if len(received_data) == 0:
                             raise Exception("Client Disconnected")
@@ -76,7 +78,8 @@ class TankiProxy:
 
                 if abspacket_data_len > 0:
                     while len(encrypted_data) != abspacket_data_len:
-                        remaining_size = abspacket_data_len - len(encrypted_data)
+                        remaining_size = abspacket_data_len - \
+                                         len(encrypted_data)
                         received_data = EByteArray(socx.recv(remaining_size))
                         if len(received_data) == 0:
                             raise Exception("Server Disconnected")
@@ -94,7 +97,11 @@ class TankiProxy:
                 logger.log_error(f"Server socket error: {e}")
                 self.end()
 
-    def parse_packet(self, direction: bool, packet_id: int, packet_data: EByteArray):
+    def parse_packet(
+            self,
+            direction: bool,
+            packet_id: int,
+            packet_data: EByteArray):
         """Parses a packet based on its direction"""
 
         Packet = PacketManager.get_packet(packet_id)
@@ -103,11 +110,17 @@ class TankiProxy:
             packet.unwrap(packet_data)
             packet.process()
         else:
-            logger.log_info(f"{'IN' if direction else 'OUT'} [{len(packet_data) + AbstractPacket.HEADER_LEN}] "
-                            f"| ID: {packet_id} ({PacketManager.get_name(packet_id)}) | Data: {packet_data.trim()}",
-                            True)
+            logger.log_info(
+                f"{'[IN]' if direction else '[OUT]'} [{len(packet_data) + AbstractPacket.HEADER_LEN}] "
+                f"| ID: {packet_id} ({PacketManager.get_name(packet_id)}) | Data: {packet_data.trim()}",
+                True)
 
-    def forward(self, direction: bool, packet_len: int, packet_id: int, encrypted_data: EByteArray):
+    def forward(
+            self,
+            direction: bool,
+            packet_len: int,
+            packet_id: int,
+            encrypted_data: EByteArray):
         """Forwards an encrypted but full packet over"""
 
         full_packet = (EByteArray()
@@ -122,7 +135,9 @@ class TankiProxy:
 
         try:
             self.sockets.server.settimeout(10)
-            self.sockets.server.connect((TankiProxy.TARGET_ADDRESS.host, TankiProxy.TARGET_ADDRESS.port))
+            self.sockets.server.connect(
+                (TankiProxy.TARGET_ADDRESS.host,
+                 TankiProxy.TARGET_ADDRESS.port))
 
             logger.log_info("Connected to Target Server", True)
             Thread(target=self.handle_server).start()

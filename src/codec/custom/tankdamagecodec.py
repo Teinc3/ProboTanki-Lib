@@ -6,4 +6,3 @@ from codec.complex import StringCodec
 class TankDamageCodec(CustomBaseCodec):
     attributes = ["damage", "damageType", "target"]
     codecs = [FloatCodec, IntCodec, StringCodec]
-
