@@ -1,6 +1,6 @@
-from packets.abstractpacket import AbstractPacket
 from codec.complex import StringCodec
 from codec.primitive import IntCodec
+from packets.abstractpacket import AbstractPacket
 
 
 class Load_Resources(AbstractPacket):

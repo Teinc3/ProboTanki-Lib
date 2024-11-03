@@ -1,6 +1,5 @@
-from packets.abstractpacket import AbstractPacket
-
 from codec.complex import StringCodec
+from packets.abstractpacket import AbstractPacket
 
 
 class Left_Team_Battle(AbstractPacket):

@@ -1,6 +1,5 @@
-from packets.abstractpacket import AbstractPacket
-
 from codec.complex import StringCodec
+from packets.abstractpacket import AbstractPacket
 
 
 class Load_Map_Info(AbstractPacket):

@@ -1,11 +1,10 @@
 import socket
-from threading import Thread
 import struct
+from threading import Thread
 
 from modules.logger import logger
 from modules.packetmanager import PacketManager
 from packets.abstractpacket import AbstractPacket
-
 from utils.address import Address
 from utils.ebytearray import EByteArray
 from utils.holders.protectionholder import ProtectionHolder
@@ -102,9 +101,11 @@ class TankiProxy:
         if Packet is not None:
             packet = Packet(direction, self.protections, self.sockets)
             packet.unwrap(packet_data)
-            return packet.process() 
+            return packet.process()
         else:
-            logger.log_info(f"{'IN' if direction else 'OUT'} [{len(packet_data) + AbstractPacket.HEADER_LEN}] | ID: {packet_id} ({PacketManager.get_name(packet_id)}) | Data: {packet_data.trim()}", True)
+            logger.log_info(
+                f"{'IN' if direction else 'OUT'} [{len(packet_data) + AbstractPacket.HEADER_LEN}] | ID: {packet_id} ({PacketManager.get_name(packet_id)}) | Data: {packet_data.trim()}",
+                True)
             return False
 
     def forward(self, direction: bool, packet_len: int, packet_id: int, encrypted_data: EByteArray):

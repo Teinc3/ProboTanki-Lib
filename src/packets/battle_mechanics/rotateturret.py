@@ -1,7 +1,6 @@
-from packets.abstractpacket import AbstractPacket
-
-from codec.primitive import ShortCodec, IntCodec
 from codec.custom.turretrotatecodec import TurretRotateCodec
+from codec.primitive import ShortCodec, IntCodec
+from packets.abstractpacket import AbstractPacket
 
 
 class Rotate_Turret(AbstractPacket):

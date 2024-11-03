@@ -25,7 +25,7 @@ class BaseCodec(ABC, Generic[T]):
     @abstractmethod
     def decode(self) -> T:
         raise NotImplementedError()
-    
+
     @abstractmethod
     def encode(self, value: T) -> int:
         """

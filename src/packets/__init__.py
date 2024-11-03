@@ -1,5 +1,5 @@
-import os
 import importlib
+import os
 
 # Get the directory of the current file
 packets_dir = os.path.dirname(__file__)

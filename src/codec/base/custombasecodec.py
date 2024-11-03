@@ -13,14 +13,14 @@ class CustomBaseCodec(BaseCodec[dict]):
         obj = {}
         if self.shortern and BoolCodec(self._buffer).decode():
             return obj
-        
+
         for i in range(len(self.codecs)):
             attribute_name = self.attributes[i]
             codec_instance = self.codecs[i](self._buffer)
             decoded_value = codec_instance.decode()
             obj[attribute_name] = decoded_value
         return obj
-    
+
     def encode(self, value):
         data_len = 0
         if self.shortern:

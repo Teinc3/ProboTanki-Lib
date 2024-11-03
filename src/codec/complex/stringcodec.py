@@ -25,4 +25,3 @@ class StringCodec(BaseCodec[str]):
         self._buffer.write_int(len(value))
         self._buffer.write_string(value)
         return 1 + 4 + len(value)
-        

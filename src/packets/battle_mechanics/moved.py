@@ -1,7 +1,6 @@
-from packets.abstractpacket import AbstractPacket
-
 from codec.complex import StringCodec
 from codec.custom.movecodec import MoveCodec
+from packets.abstractpacket import AbstractPacket
 
 
 class Moved(AbstractPacket):

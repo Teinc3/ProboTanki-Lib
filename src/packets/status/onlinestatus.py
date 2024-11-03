@@ -1,7 +1,6 @@
-from packets.abstractpacket import AbstractPacket
-
-from codec.primitive import IntCodec, BoolCodec
 from codec.complex import StringCodec
+from codec.primitive import IntCodec, BoolCodec
+from packets.abstractpacket import AbstractPacket
 
 
 class Online_Status(AbstractPacket):

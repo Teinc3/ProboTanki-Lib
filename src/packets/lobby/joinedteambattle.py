@@ -1,8 +1,7 @@
-from packets.abstractpacket import AbstractPacket
-
-from codec.primitive import IntCodec
 from codec.complex import StringCodec
 from codec.custom.battleinfocodec import BattleInfoCodec
+from codec.primitive import IntCodec
+from packets.abstractpacket import AbstractPacket
 
 
 class Joined_Team_Battle(AbstractPacket):

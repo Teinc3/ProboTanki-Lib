@@ -1,11 +1,11 @@
 from typing import ClassVar, Type
 
+from codec.base import BaseCodec
 from modules.logger import Logger, logger
+from utils.ebytearray import EByteArray
 from utils.holders.protectionholder import ProtectionHolder
 from utils.holders.socketholder import SocketHolder
 
-from codec.base import BaseCodec
-from utils.ebytearray import EByteArray
 
 # Trust me, when you automate every function it ain't abstract anymore
 class AbstractPacket():
@@ -39,7 +39,7 @@ class AbstractPacket():
             codec: BaseCodec = self.codecs[i](packet_data)
             self.objects.append(codec.decode())
         return self.implement()
-        
+
     def wrap(self) -> tuple[int, int, EByteArray]:
         packet_data = EByteArray()
         data_len = 0
@@ -47,26 +47,27 @@ class AbstractPacket():
             codec = self.codecs[i](packet_data)
             data_len += codec.encode(self.objects[i])
         return (data_len + AbstractPacket.HEADER_LEN, self.id, packet_data)
-    
+
     def implement(self) -> dict:
         self.object = {}
         for i in range(0, len(self.objects)):
             self.object[self.attributes[i]] = self.objects[i]
         return self.object
-    
+
     def deimplement(self) -> list:
         self.objects = []
         for i in range(0, len(self.attributes)):
             self.objects.append(self.object[self.attributes[i]])
         return self.objects
-    
+
     def process(self) -> bool:
         # Default behavior is just to log the packet and declare no packet interception
         self.log()
         return False
-    
+
     def log(self):
-        logger.log_info(f"[{'IN' if self.direction else 'OUT'}] ({self.__class__.__name__}) | Data: {self.object}", self.shouldLog)
+        logger.log_info(f"[{'IN' if self.direction else 'OUT'}] ({self.__class__.__name__}) | Data: {self.object}",
+                        self.shouldLog)
 
     # Example of packet manipulation:
 
@@ -87,7 +88,7 @@ class AbstractPacket():
 
     #     # Use the server socket to send the packet
     #     self.sockets.server.send(packet_data)
-        
+
     #     # Allow the superclass to log the modification
     #     super().process()
 

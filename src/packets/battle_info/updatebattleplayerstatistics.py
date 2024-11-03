@@ -1,6 +1,6 @@
+from codec.custom.userstatscodec import UserStatsCodec
 from packets.abstractpacket import AbstractPacket
 
-from codec.custom.userstatscodec import UserStatsCodec
 
 class Update_Battle_Player_Statistics(AbstractPacket):
     id = 696140460

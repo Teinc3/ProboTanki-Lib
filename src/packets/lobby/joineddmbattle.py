@@ -1,7 +1,6 @@
-from packets.abstractpacket import AbstractPacket
-
 from codec.complex import StringCodec
 from codec.custom.battleinfocodec import BattleInfoCodec
+from packets.abstractpacket import AbstractPacket
 
 
 class Joined_DM_Battle(AbstractPacket):

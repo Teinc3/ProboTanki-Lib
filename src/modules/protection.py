@@ -35,7 +35,7 @@ class Protection:
 
         if not self.active:
             return encrypted_data
-        
+
         data = EByteArray(encrypted_data)
 
         for i in range(len(encrypted_data)):
@@ -46,17 +46,17 @@ class Protection:
             self.decryption_index ^= self.decryption_vector[self.decryption_index] & 7
 
         return data
-    
+
     def encrypt(self, raw_data: EByteArray):
         """
         Encrypts raw data using the encryption vector
 
         Does not mutate the original (raw) data
         """
-        
+
         if not self.active:
             return raw_data
-        
+
         encrypted_data = EByteArray(raw_data)
 
         for i in range(len(raw_data)):

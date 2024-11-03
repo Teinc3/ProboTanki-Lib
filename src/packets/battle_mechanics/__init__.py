@@ -1,5 +1,5 @@
-from .moved import Moved
 from .move import Move
+from .moved import Moved
 from .rotatedturret import Rotated_Turret
 from .rotateturret import Rotate_Turret
 from .selfdestruct import Self_Destruct
