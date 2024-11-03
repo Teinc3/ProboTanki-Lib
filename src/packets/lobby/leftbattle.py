@@ -5,7 +5,7 @@ from codec.complex import StringCodec
 
 class Left_Battle(AbstractPacket):
     id = 504016996
-    description = 'A player has left the battle'
+    description = 'A player has left a battle'
     codecs = [StringCodec, StringCodec]
     attributes = ["battleID", "username"]
     shouldLog = False

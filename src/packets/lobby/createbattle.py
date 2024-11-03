@@ -20,4 +20,3 @@ class Create_Battle(AbstractPacket):
     
     # The "decode" method (s2c) does not have the noUpgrade attribute
     # But since this packet is C2S, we have to include the noUpgrade attribute in the decode method
-        

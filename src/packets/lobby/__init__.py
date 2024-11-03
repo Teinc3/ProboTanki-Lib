@@ -1,5 +1,6 @@
 from .selectbattle import Select_Battle
 from .joinbattle import Join_Battle
+from .spectatebattle import Spectate_Battle
 from .loadplayerbattlepreview import Load_Player_Battle_Preview
 from .leftbattle import Left_Battle
 from .createbattle import Create_Battle
@@ -9,10 +10,15 @@ from .loadbattleinfo import Load_Battle_Info
 from .updateplayerteambattlepreview import Update_Player_Team_Battle_Preview
 from .updateteambattlepreview import Update_Team_Battle_Preview
 from .updateplayerdmbattlepreview import Update_Player_DM_Battle_Preview
+from .swapteams import Swap_Teams
+from .startnewround import Start_New_Round
+from .removebattle import Remove_Battle
+from .serverrestart import Server_Restart
 
 __all__ = [
     Select_Battle,
     Join_Battle,
+    Spectate_Battle,
     Load_Player_Battle_Preview,
     Left_Battle,
     # 'Leave_Battle', # Technically it is "going to another page", with ID 377959142
@@ -22,5 +28,9 @@ __all__ = [
     Load_Battle_Info,
     Update_Player_DM_Battle_Preview,
     Update_Player_Team_Battle_Preview,
-    Update_Team_Battle_Preview
+    Update_Team_Battle_Preview,
+    Start_New_Round,
+    Remove_Battle,
+    Swap_Teams,
+    Server_Restart
 ]
