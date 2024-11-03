@@ -1,4 +1,4 @@
-from abstractpacket import AbstractPacket
+from packets.abstractpacket import AbstractPacket
 
 from codec.complex import StringCodec
 
