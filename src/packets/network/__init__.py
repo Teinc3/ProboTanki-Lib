@@ -1,4 +1,4 @@
-from .activate import Activate_Protection
+from .activateprotection import Activate_Protection
 from .ping import Ping
 from .pong import Pong
 

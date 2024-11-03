@@ -1,15 +1,6 @@
-from typing import Tuple
-
-from codec.base import BaseCodec
-from codec.primitive import IntCodec
+from ..primitive import IntCodec
+from ..factory import MultiTypeCodecFactory
 
 
-class DoubleIntCodec(BaseCodec[Tuple[int, int]]):
-
-    def decode(self):
-        return IntCodec(self._buffer).decode(), IntCodec(self._buffer).decode()
-
-    def encode(self, value):
-        IntCodec(self._buffer).encode(value[0])
-        IntCodec(self._buffer).encode(value[1])
-        return 8
+def DoubleIntCodecFactory(attribute1: str, attribute2: str):
+    return MultiTypeCodecFactory([attribute1, attribute2], IntCodec)

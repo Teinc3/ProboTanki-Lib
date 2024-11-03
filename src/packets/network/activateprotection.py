@@ -1,6 +1,6 @@
-from packets.abstractpacket import AbstractPacket
+from codec.factory import VectorCodecFactory
 from codec.primitive import ByteCodec
-from codec.complex import VectorCodecFactory
+from packets.abstractpacket import AbstractPacket
 
 
 class Activate_Protection(AbstractPacket):
@@ -12,4 +12,3 @@ class Activate_Protection(AbstractPacket):
     def process(self):
         super().process()
         self.protections.activate(self.object['keys'])
-        self.logger.log_warning("Protection Activated")

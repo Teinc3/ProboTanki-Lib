@@ -1,4 +1,4 @@
-from codec.base import BaseCodec
+from ..base import BaseCodec
 
 
 class StringCodec(BaseCodec[str]):
@@ -19,9 +19,9 @@ class StringCodec(BaseCodec[str]):
         return self._buffer.read_string(length)
 
     def encode(self, value):
+        self._buffer.write_boolean(not value)
         if not value:
-            self._buffer.write_byte(1)
             return 1
-        self._buffer.write_byte(len(value))
+        self._buffer.write_int(len(value))
         self._buffer.write_string(value)
         return 1 + 4 + len(value)
