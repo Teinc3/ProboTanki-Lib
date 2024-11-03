@@ -1,4 +1,5 @@
 import sys
+import os
 
 from PyQt5.QtCore import QTimer, Qt
 from PyQt5.QtWidgets import QApplication, QMainWindow, QTextEdit, QLineEdit, QPushButton, QVBoxLayout, QWidget, \
@@ -69,7 +70,7 @@ class LogViewer(QMainWindow):
         self.timer.timeout.connect(self.check_new_logs)
         self.timer.start(25)
 
-        self.log_file_path = "../logs/tcp.log"
+        self.log_file_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../logs/tcp.log'))
         self.last_position = 0
         self.chunk_size = 200
         self.search_keywords = []

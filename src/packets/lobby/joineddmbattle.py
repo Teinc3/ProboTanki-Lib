@@ -1,5 +1,5 @@
 from codec.complex import StringCodec
-from codec.custom.battleinfocodec import BattleInfoCodec
+from codec.custom.battleinfousercodec import BattleInfoUserCodec
 from packets.abstractpacket import AbstractPacket
 
 
@@ -7,5 +7,5 @@ class Joined_DM_Battle(AbstractPacket):
     id = -911626491
     description = "Sent when a player joins a DM battle."
     attributes = ["battleID", "userInfo"]
-    codecs = [StringCodec, BattleInfoCodec]
+    codecs = [StringCodec, BattleInfoUserCodec]
     shouldLog = False
