@@ -3,8 +3,8 @@ from packets.abstractpacket import AbstractPacket
 from codec.complex import StringCodec
 
 
-class Start_New_Round(AbstractPacket):
-    id = -344514517
-    description = "Starts a new round in the existing battle"
+class Round_Finish(AbstractPacket):
+    id = 1534651002
+    description = "The existing battle round has finished"
     attributes = ['battleID']
     codecs = [StringCodec]

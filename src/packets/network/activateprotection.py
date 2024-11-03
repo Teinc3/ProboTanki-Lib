@@ -12,4 +12,3 @@ class Activate_Protection(AbstractPacket):
     def process(self):
         super().process()
         self.protections.activate(self.object['keys'])
-        self.logger.log_warning("Protection Activated")
