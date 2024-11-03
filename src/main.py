@@ -1,11 +1,10 @@
 import socket
-from threading import Thread
 import struct
+from threading import Thread
 
 from modules.logger import logger
 from modules.packetmanager import PacketManager
 from packets.abstractpacket import AbstractPacket
-
 from utils.address import Address
 from utils.ebytearray import EByteArray
 from utils.holders.protectionholder import ProtectionHolder
@@ -36,26 +35,25 @@ class TankiProxy:
                 packet_len = EByteArray(socx.recv(4)).read_int()
                 packet_id = EByteArray(socx.recv(4)).read_int()
 
-                abspacket_data_len = packet_len - AbstractPacket.HEADER_LEN
+                packet_data_len = packet_len - AbstractPacket.HEADER_LEN
                 encrypted_data = EByteArray()
 
-                if abspacket_data_len > 0:
-                    # Load chunked data into the socket buffer until we have
-                    # all the data to read
-                    while len(encrypted_data) != abspacket_data_len:
-                        remaining_size = abspacket_data_len - \
-                                         len(encrypted_data)
+                if packet_data_len > 0:
+                    # Load chunked data into the socket buffer until we have all the data to read
+                    while len(encrypted_data) != packet_data_len:
+                        remaining_size = packet_data_len - len(encrypted_data)
                         received_data = EByteArray(socx.recv(remaining_size))
                         if len(received_data) == 0:
                             raise Exception("Client Disconnected")
                         encrypted_data += received_data
 
                 packet_data = self.protections.c2s.decrypt(encrypted_data)
-                self.parse_packet(False, packet_id, EByteArray(packet_data))
+                intercepted = self.parse_packet(False, packet_id, EByteArray(packet_data))
 
-                # Note: when forwarding, we have to re-encrypt the data
-                forwarded_data = self.protections.c2s.encrypt(packet_data)
-                self.forward(False, packet_len, packet_id, forwarded_data)
+                if not intercepted:
+                    # Note: when forwarding, we have to re-encrypt the data
+                    forwarded_data = self.protections.c2s.encrypt(packet_data)
+                    self.forward(False, packet_len, packet_id, forwarded_data)
 
             except struct.error:
                 logger.log_error("Client socket aborted")
@@ -73,13 +71,12 @@ class TankiProxy:
                 packet_len = EByteArray(socx.recv(4)).read_int()
                 packet_id = EByteArray(socx.recv(4)).read_int()
 
-                abspacket_data_len = packet_len - AbstractPacket.HEADER_LEN
+                packet_data_len = packet_len - AbstractPacket.HEADER_LEN
                 encrypted_data = EByteArray()
 
-                if abspacket_data_len > 0:
-                    while len(encrypted_data) != abspacket_data_len:
-                        remaining_size = abspacket_data_len - \
-                                         len(encrypted_data)
+                if packet_data_len > 0:
+                    while len(encrypted_data) != packet_data_len:
+                        remaining_size = packet_data_len - len(encrypted_data)
                         received_data = EByteArray(socx.recv(remaining_size))
                         if len(received_data) == 0:
                             raise Exception("Server Disconnected")
@@ -97,30 +94,22 @@ class TankiProxy:
                 logger.log_error(f"Server socket error: {e}")
                 self.end()
 
-    def parse_packet(
-            self,
-            direction: bool,
-            packet_id: int,
-            packet_data: EByteArray):
+    def parse_packet(self, direction: bool, packet_id: int, packet_data: EByteArray) -> bool:
         """Parses a packet based on its direction"""
 
         Packet = PacketManager.get_packet(packet_id)
         if Packet is not None:
             packet = Packet(direction, self.protections, self.sockets)
             packet.unwrap(packet_data)
-            packet.process()
+            return packet.process()
         else:
             logger.log_info(
                 f"{'[IN]' if direction else '[OUT]'} [{len(packet_data) + AbstractPacket.HEADER_LEN}] "
                 f"| ID: {packet_id} ({PacketManager.get_name(packet_id)}) | Data: {packet_data.trim()}",
                 True)
+            return False
 
-    def forward(
-            self,
-            direction: bool,
-            packet_len: int,
-            packet_id: int,
-            encrypted_data: EByteArray):
+    def forward(self, direction: bool, packet_len: int, packet_id: int, encrypted_data: EByteArray):
         """Forwards an encrypted but full packet over"""
 
         full_packet = (EByteArray()
@@ -135,9 +124,7 @@ class TankiProxy:
 
         try:
             self.sockets.server.settimeout(10)
-            self.sockets.server.connect(
-                (TankiProxy.TARGET_ADDRESS.host,
-                 TankiProxy.TARGET_ADDRESS.port))
+            self.sockets.server.connect((TankiProxy.TARGET_ADDRESS.host, TankiProxy.TARGET_ADDRESS.port))
 
             logger.log_info("Connected to Target Server", True)
             Thread(target=self.handle_server).start()

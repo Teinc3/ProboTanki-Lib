@@ -1,6 +1,5 @@
-from packets.abstractpacket import AbstractPacket
-
 from codec.custom.userstatscodec import UserStatsCodec
+from packets.abstractpacket import AbstractPacket
 
 
 class Update_Battle_Player_Statistics(AbstractPacket):
