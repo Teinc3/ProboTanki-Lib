@@ -1,17 +1,16 @@
 import sys
+
+from PyQt5.QtCore import QTimer, Qt
 from PyQt5.QtWidgets import QApplication, QMainWindow, QTextEdit, QLineEdit, QPushButton, QVBoxLayout, QWidget, \
     QHBoxLayout
-from PyQt5.QtCore import QTimer, Qt
 
 
 def parse_search_input(input_text):
     and_conditions = input_text.split("&&")
     processed_conditions = []
-
     for and_condition in and_conditions:
         or_conditions = and_condition.split("||")
         processed_or_conditions = []
-
         for condition in or_conditions:
             condition = condition.strip()
             if condition.lower().startswith("dir="):
@@ -24,9 +23,7 @@ def parse_search_input(input_text):
                     continue
             else:
                 processed_or_conditions.append(condition)
-
         processed_conditions.append(processed_or_conditions)
-
     return processed_conditions
 
 
@@ -65,7 +62,7 @@ class LogViewer(QMainWindow):
         self.log_display = QTextEdit(self)
         self.log_display.setReadOnly(True)
         self.log_display.setLineWrapMode(QTextEdit.NoWrap)
-        self.log_display.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.log_display.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
         self.layout.addWidget(self.log_display)
 
         self.timer = QTimer(self)
@@ -79,7 +76,8 @@ class LogViewer(QMainWindow):
 
     def check_new_logs(self):
         try:
-            with open(self.log_file_path, 'r') as log_file:
+            # Open the log file with UTF-8 encoding and error handling
+            with open(self.log_file_path, 'r', encoding='utf-8', errors='ignore') as log_file:
                 log_file.seek(self.last_position)
                 for _ in range(self.chunk_size):
                     line = log_file.readline()
