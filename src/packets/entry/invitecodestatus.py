@@ -1,5 +1,5 @@
-from codec.primitive import BoolCodec
 from packets.abstractpacket import AbstractPacket
+from codec.primitive import BoolCodec
 
 
 class Invite_Code_Status(AbstractPacket):

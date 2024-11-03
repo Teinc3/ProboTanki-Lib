@@ -1,5 +1,6 @@
-from codec.primitive import IntCodec
 from packets.abstractpacket import AbstractPacket
+
+from codec.primitive import IntCodec
 
 
 class Join_Battle(AbstractPacket):

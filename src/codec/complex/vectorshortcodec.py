@@ -1,4 +1,4 @@
-from ..primitive import ShortCodec
-from ..factory import VectorCodecFactory
+from codec.primitive import ShortCodec
+from codec.complex import VectorCodecFactory
 
 VectorShortCodec = VectorCodecFactory(int, ShortCodec, True)

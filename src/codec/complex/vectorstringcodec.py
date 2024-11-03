@@ -1,4 +1,3 @@
-from . import StringCodec
-from ..factory import VectorCodecFactory
+from codec.complex import VectorCodecFactory, StringCodec
 
 VectorStringCodec = VectorCodecFactory(str, StringCodec, True)

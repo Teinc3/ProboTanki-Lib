@@ -1,4 +1,8 @@
-from ..primitive import FloatCodec
-from ..factory import MultiTypeCodecFactory
+from codec.base import CustomBaseCodec
+from codec.primitive import FloatCodec
 
-Vector3DCodec = MultiTypeCodecFactory(["x", "y", "z"], FloatCodec, True)
+
+class Vector3DCodec(CustomBaseCodec):
+    attributes = ["x", "y", "z"]
+    codecs = [FloatCodec] * 3
+    shorter = True

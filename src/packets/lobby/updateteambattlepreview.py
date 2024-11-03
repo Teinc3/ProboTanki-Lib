@@ -1,6 +1,7 @@
-from codec.complex import StringCodec
-from codec.primitive import IntCodec
 from packets.abstractpacket import AbstractPacket
+
+from codec.primitive import IntCodec
+from codec.complex import StringCodec
 
 
 class Update_Team_Battle_Preview(AbstractPacket):

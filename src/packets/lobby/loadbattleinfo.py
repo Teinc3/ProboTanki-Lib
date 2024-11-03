@@ -1,5 +1,6 @@
-from codec.complex import StringCodec
 from packets.abstractpacket import AbstractPacket
+
+from codec.complex import StringCodec
 
 
 class Load_Battle_Info(AbstractPacket):

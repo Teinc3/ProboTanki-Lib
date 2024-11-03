@@ -1,15 +1,11 @@
-from .move import Move
-from .moved import Moved
-from .rotatedturret import Rotated_Turret
-from .rotateturret import Rotate_Turret
-from .selfdestruct import Self_Destruct
-from .selfdestructed import Self_Destructed
+from .movein import Move_IN
+from .moveout import Move_OUT
+from .rotateturretin import Rotate_Turret_IN
+from .rotateturretout import Rotate_Turret_OUT
 
 __all__ = [
-    Moved,
-    Move,
-    Rotated_Turret,
-    Rotate_Turret,
-    Self_Destruct,
-    Self_Destructed
+    Move_IN,
+    Move_OUT,
+    Rotate_Turret_IN,
+    Rotate_Turret_OUT
 ]

@@ -1,6 +1,7 @@
-from codec.complex import StringCodec
-from codec.primitive import BoolCodec
 from packets.abstractpacket import AbstractPacket
+
+from codec.primitive import BoolCodec
+from codec.complex import StringCodec
 
 
 class Send_Game_Chat(AbstractPacket):

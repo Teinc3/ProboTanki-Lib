@@ -1,8 +1,8 @@
-from .battlepinginfo import Battle_Ping_Info
-from .killconfirm import Kill_Confirm
-from .tankdamage import Tank_Damage
 from .tankhealth import Tank_Health
+from .tankdamage import Tank_Damage
+from .killconfirm import Kill_Confirm
 from .updatebattleplayerstatistics import Update_Battle_Player_Statistics
+from .battlepinginfo import Battle_Ping_Info
 
 __all__ = [
     Tank_Health,

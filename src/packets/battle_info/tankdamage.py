@@ -1,7 +1,7 @@
-from codec.custom.tankdamagecodec import TankDamageCodec
-from codec.factory import VectorCodecFactory
 from packets.abstractpacket import AbstractPacket
 
+from codec.complex import VectorCodecFactory
+from codec.custom.tankdamagecodec import TankDamageCodec
 
 
 class Tank_Damage(AbstractPacket):
