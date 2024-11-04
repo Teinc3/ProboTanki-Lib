@@ -1,0 +1,10 @@
+from codec.complex import StringCodec
+from packets.abstractpacket import AbstractPacket
+
+
+class Left_DM_Battle(AbstractPacket):
+    id = 504016996
+    description = 'A player has left a DM battle'
+    codecs = [StringCodec, StringCodec]
+    attributes = ["battleID", "username"]
+    shouldLog = False

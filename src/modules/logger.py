@@ -1,15 +1,6 @@
-import os
 import logging
+import os
 from logging.handlers import RotatingFileHandler
-import requests
-
-
-def send_message(message: str):
-    """Sends a message to the /send endpoint."""
-    try:
-        requests.post("http://127.0.0.1:6942/send", json={'message': message})
-    except Exception as e:
-        print(f"Error calling /send endpoint: {e}")
 
 
 class Logger:
@@ -21,14 +12,13 @@ class Logger:
             cls._instance.logger = logging.getLogger("Logger")
             cls._instance.logger.setLevel(logging.INFO)
 
-            os.makedirs("logs", exist_ok=True)
-            os.chmod("logs", 0o755)
+            log_directory = os.path.abspath(os.path.join(os.path.dirname(__file__), '../..', 'logs'))
+            log_file_path = os.path.join(log_directory, 'tcp.log')
 
-            # Clear the log file by opening it in write mode
-            log_file_path = os.path.join("logs", "tcp.log")
+            os.makedirs(log_directory, exist_ok=True)
+
             with open(log_file_path, 'w'):
                 os.chmod(log_file_path, 0o644)
-                pass
 
             if not cls._instance.logger.hasHandlers():
                 file_handler = RotatingFileHandler(
@@ -36,7 +26,9 @@ class Logger:
                 )
                 file_handler.setLevel(logging.INFO)
 
-                formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
+                formatter = logging.Formatter(
+                    "%(asctime)s - %(levelname)s - %(message)s"
+                )
                 file_handler.setFormatter(formatter)
 
                 cls._instance.logger.addHandler(file_handler)
@@ -48,17 +40,13 @@ class Logger:
         if print_console:
             print(message)
 
-        send_message(message)
-
     def log_warning(self, message: str):
         self.logger.warning(message)
         print(message)
-        send_message(message)
 
     def log_error(self, message: str):
         self.logger.error(message)
         print(message)
-        send_message(message)
 
 
 logger = Logger()

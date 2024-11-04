@@ -1,0 +1,96 @@
+from typing import ClassVar, Type
+
+from codec.base import BaseCodec
+from modules.logger import Logger, logger
+from utils.ebytearray import EByteArray
+from utils.holders.protectionholder import ProtectionHolder
+from utils.holders.socketholder import SocketHolder
+
+
+# Trust me, when you automate every function it ain't abstract anymore
+class AbstractPacket():
+    HEADER_LEN = 8
+
+    id: ClassVar[int]
+    description: ClassVar[str]
+    codecs: ClassVar[list[Type[BaseCodec]]] = []
+    attributes: ClassVar[list[str]] = []
+    shouldLog: ClassVar[bool] = True
+
+    protections: ProtectionHolder
+    sockets: SocketHolder
+    logger: Logger
+    direction: bool
+
+    objects: list
+    object: dict = {}
+
+    def __init__(self, direction: bool, protections: ProtectionHolder, sockets: SocketHolder):
+        self.direction = direction
+        self.protections = protections
+        self.sockets = sockets
+        self.logger = logger
+
+        self.objects = []
+        self.object = {}
+
+    def unwrap(self, packet_data: EByteArray) -> dict:
+        for i in range(0, len(self.codecs)):
+            codec: BaseCodec = self.codecs[i](packet_data)
+            self.objects.append(codec.decode())
+        return self.implement()
+
+    def wrap(self) -> tuple[int, int, EByteArray]:
+        packet_data = EByteArray()
+        data_len = 0
+        for i in range(0, len(self.codecs)):
+            codec = self.codecs[i](packet_data)
+            data_len += codec.encode(self.objects[i])
+        return (data_len + AbstractPacket.HEADER_LEN, self.id, packet_data)
+
+    def implement(self) -> dict:
+        self.object = {}
+        for i in range(0, len(self.objects)):
+            self.object[self.attributes[i]] = self.objects[i]
+        return self.object
+
+    def deimplement(self) -> list:
+        self.objects = []
+        for i in range(0, len(self.attributes)):
+            self.objects.append(self.object[self.attributes[i]])
+        return self.objects
+
+    def process(self) -> bool:
+        # Default behavior is just to log the packet and declare no packet interception
+        self.log()
+        return False
+
+    def log(self):
+        logger.log_info(f"[{'IN' if self.direction else 'OUT'}] ({self.__class__.__name__}) | Data: {self.object}",
+                        self.shouldLog)
+
+    # Example of packet manipulation:
+
+    # Override process() in child class for manipulation
+    # def process(self):
+    #     # Change properties in existing "Implemented" object
+    #     self.object['username'] = "New Username"
+
+    #     # Convert back to "Deimplemented" object list for encoding
+    #     self.deimplement()
+    #     packet_len, _, unencrypted_data = self.wrap()
+
+    #     # Create a new buffer and pack data into it
+    #     packet_data = EByteArray()
+    #     packet_data.write_int(packet_len)
+    #     packet_data.write_int(self.id)
+    #     packet_data.write(self.protections.c2s.encrypt(unencrypted_data))
+
+    #     # Use the server socket to send the packet
+    #     self.sockets.server.send(packet_data)
+
+    #     # Allow the superclass to log the modification
+    #     super().process()
+
+    #     # Return True if you want to avoid forwarding OG packet to server, False otherwise
+    #     return True
