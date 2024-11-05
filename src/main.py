@@ -105,8 +105,7 @@ class TankiProxy:
         else:
             logger.log_info(
                 f"<{'IN' if direction else 'OUT'}> [{len(packet_data) + AbstractPacket.HEADER_LEN}] "
-                f"| ID: {packet_id} ({packetManager.get_name(packet_id)}) | Data: {packet_data.trim()}",
-                True)
+                f"| ID: {packet_id} ({packetManager.get_name(packet_id)}) | Data: {packet_data.trim()}")
             return False
 
     def forward(self, direction: bool, packet_len: int, packet_id: int, encrypted_data: EByteArray):

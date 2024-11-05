@@ -22,8 +22,8 @@ from .updateplayerteambattlepreview import Update_Player_Team_Battle_Preview
 from .updateteambattlepreview import Update_Team_Battle_Preview
 from .acceptinvite import Accept_Invite
 from .rejectinvite import Reject_Invite
-from receivedinvite import Received_Invite
-from sendinvite import Send_Invite
+from .receivedinvite import Received_Invite
+from .sendinvite import Send_Invite
 
 __all__ = [
     Select_Battle,
