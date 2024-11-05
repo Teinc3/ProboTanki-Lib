@@ -4,37 +4,38 @@ from typing import Type
 import packets
 from packets.abstractpacket import AbstractPacket
 
-
 class PacketManager:
-    # Dictionary to store packet classes by their IDs
-    packets = {}
+    _instance = None
 
-    @classmethod
-    def load_packets(cls):
-        # Iterate over all modules in the packets package
+    packets: dict[int, Type[AbstractPacket]]
+    hidden_packets: list[Type[AbstractPacket]]
+
+    def __new__(cls):
+        if cls._instance is None:
+            cls._instance = super(PacketManager, cls).__new__(cls)
+            cls._instance.packets = {}
+            cls._instance.load_packets()
+        return cls._instance
+
+    def load_packets(self):
         for _, module in inspect.getmembers(packets, inspect.ismodule):
-            # Iterate over all attributes in the module
             for _, obj in inspect.getmembers(module, inspect.isclass):
-                # Check if the class has an 'id' attribute
                 if hasattr(obj, 'id'):
-                    cls.packets[obj.id] = obj
+                    self.packets[obj.id] = obj
 
-    @classmethod
-    def get_packet(cls, packet_id: int) -> Type[AbstractPacket] | None:
-        return cls.packets.get(packet_id, None)
+        self.hidden_packets = [packet for packet in self.packets.values() if not packet.shouldLog]
 
-    @classmethod
-    def get_packet_by_name(cls, packet_name: str) -> Type[AbstractPacket] | None:
-        for packet in cls.packets.values():
+    def get_packet(self, packet_id: int) -> Type[AbstractPacket] | None:
+        return self.packets.get(packet_id)
+
+    def get_packet_by_name(self, packet_name: str) -> Type[AbstractPacket] | None:
+        for packet in self.packets.values():
             if packet.__name__ == packet_name:
                 return packet
         return None
 
-    @classmethod
-    def get_name(cls, packet_id: int) -> str:
-        packet_class = cls.get_packet(packet_id)
+    def get_name(self, packet_id: int) -> str:
+        packet_class = self.get_packet(packet_id)
         return packet_class.__name__ if packet_class else "Unknown"
-
-
-# Load all packet classes into the PacketManager
-PacketManager.load_packets()
+    
+packetManager = PacketManager()

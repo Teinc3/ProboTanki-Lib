@@ -1,6 +1,8 @@
 import importlib
 import os
 
+from .abstractpacket import AbstractPacket
+
 # Get the directory of the current file
 packets_dir = os.path.dirname(__file__)
 
@@ -16,12 +18,10 @@ for root, dirs, files in os.walk(packets_dir):
         package_name = f"packets.{relative_path.replace(os.sep, '.')}"
 
         # Import the package dynamically
-        importlib.import_module(package_name)
+        try:
+            importlib.import_module(package_name)
+        except ImportError as e:
+            print(f"Error importing {package_name}: {e}")
 
-        # # Import all modules within the package
-        # package_dir = os.path.join(root, dir_name)
-        # for filename in os.listdir(package_dir):
-        #     if filename.endswith('.py') and filename not in ['abstractpacket.py', 'packets.py'] and not filename.startswith('__'):
-        #         module_name, _ = os.path.splitext(filename)
-        #         full_module_name = f"{package_name}.{module_name}"
-        #         importlib.import_module(full_module_name)
+# Also make AbstractPacket available at package level
+__all__ = [AbstractPacket]

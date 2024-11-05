@@ -66,8 +66,7 @@ class AbstractPacket():
         return False
 
     def log(self):
-        logger.log_info(f"[{'IN' if self.direction else 'OUT'}] ({self.__class__.__name__}) | Data: {self.object}",
-                        self.shouldLog)
+        logger.log_info(f"<{'IN' if self.direction else 'OUT'}> ({self.__class__.__name__}){'' if self.shouldLog else ' - NoDisp'} | Data: {self.object}", self.shouldLog)
 
     # Example of packet manipulation:
 

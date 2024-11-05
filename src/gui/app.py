@@ -7,6 +7,9 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QTextEdit, QLineEdit, QPu
 
 
 def parse_search_input(input_text):
+    if not input_text:
+        return []  # Return an empty list if there's no input
+
     and_conditions = input_text.split("&&")
     processed_conditions = []
     for and_condition in and_conditions:
@@ -17,14 +20,15 @@ def parse_search_input(input_text):
             if condition.lower().startswith("dir="):
                 direction = condition[4:].strip().upper()
                 if direction == "IN":
-                    processed_or_conditions.append("[IN]")
+                    processed_or_conditions.append("<IN>")
                 elif direction == "OUT":
-                    processed_or_conditions.append("[OUT]")
+                    processed_or_conditions.append("<OUT>")
                 else:
                     continue
             else:
                 processed_or_conditions.append(condition)
-        processed_conditions.append(processed_or_conditions)
+        if processed_or_conditions:  # Ensure no empty lists are added
+            processed_conditions.append(processed_or_conditions)
     return processed_conditions
 
 
@@ -40,7 +44,7 @@ def check_line_against_conditions(line, conditions):
 class LogViewer(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("TCP Log Viewer")
+        self.setWindowTitle("ProTanki TCP Log Viewer")
         self.setGeometry(100, 100, 1280, 720)
 
         self.central_widget = QWidget()
@@ -77,16 +81,21 @@ class LogViewer(QMainWindow):
 
     def check_new_logs(self):
         try:
-            # Open the log file with UTF-8 encoding and error handling
             with open(self.log_file_path, 'r', encoding='utf-8', errors='ignore') as log_file:
                 log_file.seek(self.last_position)
                 for _ in range(self.chunk_size):
                     line = log_file.readline()
                     if not line:
                         break
-                    if "Data: {}" in line:
+                    
+                    # Skip lines that contain "NoDisp" and do not contain any of the search keywords (If they contain a search keyword, then we still disp them)
+                    if "NoDisp" in line and not any(
+                        keyword in line and keyword not in ["IN", "OUT"]
+                        for conditions in self.search_keywords 
+                        for keyword in conditions
+                    ):
                         continue
-
+    
                     if check_line_against_conditions(line, self.search_keywords):
                         self.log_display.append(line.strip())
                 self.last_position = log_file.tell()
