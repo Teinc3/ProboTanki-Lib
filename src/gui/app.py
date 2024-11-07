@@ -17,16 +17,7 @@ def parse_search_input(input_text):
         processed_or_conditions = []
         for condition in or_conditions:
             condition = condition.strip()
-            if condition.lower().startswith("dir="):
-                direction = condition[4:].strip().upper()
-                if direction == "IN":
-                    processed_or_conditions.append("<IN>")
-                elif direction == "OUT":
-                    processed_or_conditions.append("<OUT>")
-                else:
-                    continue
-            else:
-                processed_or_conditions.append(condition)
+            processed_or_conditions.append(condition)
         if processed_or_conditions:  # Ensure no empty lists are added
             processed_conditions.append(processed_or_conditions)
     return processed_conditions
@@ -88,9 +79,10 @@ class LogViewer(QMainWindow):
                     if not line:
                         break
                     
-                    # Skip lines that contain "NoDisp" and do not contain any of the search keywords (If they contain a search keyword, then we still disp them)
+                    # Skip lines that contain "NoDisp" and do not contain any of the search keywords 
+                    # If they contain a search keyword, then we still disp them - with the exception of "IN" and "OUT"
                     if "NoDisp" in line and not any(
-                        keyword in line and keyword not in ["IN", "OUT"]
+                        keyword in line and keyword not in ["<IN>", "<OUT>"]
                         for conditions in self.search_keywords 
                         for keyword in conditions
                     ):
