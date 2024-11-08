@@ -4,6 +4,7 @@ from threading import Thread
 
 from modules.logger import logger
 from modules.packetmanager import packetManager
+from modules.processor import Processor
 from packets.abstractpacket import AbstractPacket
 from utils.address import Address
 from utils.ebytearray import EByteArray
@@ -23,6 +24,7 @@ class TankiProxy:
     def __init__(self, protections: ProtectionHolder, sockets: SocketHolder):
         self.protections = protections
         self.sockets = sockets
+        self.processor = Processor()
 
         self.start_client_proxy()
 
@@ -82,7 +84,9 @@ class TankiProxy:
                             raise Exception("Server Disconnected")
                         encrypted_data += received_data
 
+                # Decrypt the packet data
                 packet_data = self.protections.s2c.decrypt(encrypted_data)
+
                 self.parse_packet(True, packet_id, EByteArray(packet_data))
 
                 self.forward(True, packet_len, packet_id, encrypted_data)
@@ -96,6 +100,7 @@ class TankiProxy:
 
     def parse_packet(self, direction: bool, packet_id: int, packet_data: EByteArray) -> bool:
         """Parses a packet based on its direction"""
+        self.processor.process_packets(str(packet_data))
 
         Packet = packetManager.get_packet(packet_id)
         if Packet is not None:
@@ -103,9 +108,8 @@ class TankiProxy:
             packet.unwrap(packet_data)
             return packet.process()
         else:
-            logger.log_info(
-                f"<{'IN' if direction else 'OUT'}> [{len(packet_data) + AbstractPacket.HEADER_LEN}] "
-                f"| ID: {packet_id} ({packetManager.get_name(packet_id)}) | Data: {packet_data.trim()}")
+            logger.log_info(f"<{'IN' if direction else 'OUT'}> [{len(packet_data) + AbstractPacket.HEADER_LEN}] "
+                            f"| ID: {packet_id} ({packetManager.get_name(packet_id)}) | Data: {packet_data.trim()}")
             return False
 
     def forward(self, direction: bool, packet_len: int, packet_id: int, encrypted_data: EByteArray):

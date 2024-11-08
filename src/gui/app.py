@@ -80,7 +80,7 @@ class LogViewer(QMainWindow):
                         break
                     
                     # Skip lines that contain "NoDisp" and do not contain any of the search keywords 
-                    # If they contain a search keyword, then we still disp them - with the exception of "IN" and "OUT"
+                    # If they contain a search keyword, then we still disp them - except "IN" and "OUT"
                     if "NoDisp" in line and not any(
                         keyword in line and keyword not in ["<IN>", "<OUT>"]
                         for conditions in self.search_keywords 

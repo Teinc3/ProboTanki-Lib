@@ -5,6 +5,7 @@ from logging.handlers import RotatingFileHandler
 
 class Logger:
     _instance = None
+    packet_array = []
 
     def __new__(cls):
         if cls._instance is None:
@@ -40,13 +41,17 @@ class Logger:
         if print_console:
             print(message)
 
+        self.packet_array.append(message)
+
     def log_warning(self, message: str):
         self.logger.warning(message)
         print(message)
+        self.packet_array.append(message)
 
     def log_error(self, message: str):
         self.logger.error(message)
         print(message)
+        self.packet_array.append(message)
 
 
 logger = Logger()

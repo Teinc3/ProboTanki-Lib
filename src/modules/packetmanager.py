@@ -4,6 +4,7 @@ from typing import Type
 import packets
 from packets.abstractpacket import AbstractPacket
 
+
 class PacketManager:
     _instance = None
 
@@ -37,5 +38,6 @@ class PacketManager:
     def get_name(self, packet_id: int) -> str:
         packet_class = self.get_packet(packet_id)
         return packet_class.__name__ if packet_class else "Unknown"
-    
+
+
 packetManager = PacketManager()
