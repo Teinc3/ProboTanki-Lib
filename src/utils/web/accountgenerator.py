@@ -46,7 +46,7 @@ all_credentials = []
 for _ in range(65):
     nickname = generate_gamer_name()
     password = generate_password()
-    email = f"{nickname.lower()}@example.com"
+    email = f"{nickname.lower()}@gmail.com"
     payload = {
         "token": "",
         "name": "referral_register",
