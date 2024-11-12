@@ -19,7 +19,7 @@ class Processor:
                 username = match.group(1)
                 if username not in user_data:
                     user_data[username] = 1
-                    print(dict(user_data))
+                    # print(dict(user_data))
 
         elif "Load_Battle_Info" in packet_data:
             json_match = re.search(r"'json': '([^']*)'", packet_data)
@@ -30,13 +30,13 @@ class Processor:
                 self.item_id = battle_info.get("itemId")
                 if battle_mode != "DM":
                     return
-                print(f"ItemId: {self.item_id}")
+                # print(f"ItemId: {self.item_id}")
                 user_data.clear()
                 for user_info in battle_info.get("users", []):
                     user = user_info.get("user")
                     if user and user not in user_data:
                         user_data[user] = 1
-                print(dict(user_data))
+                # print(dict(user_data))
 
         elif "Left_Battle_Status" in packet_data:
             match = re.search(r"'username': '([^']*)'", packet_data)
@@ -44,7 +44,7 @@ class Processor:
                 username = match.group(1)
                 if username in user_data:
                     del user_data[username]
-                    print(dict(user_data))
+                    # print(dict(user_data))
 
         elif "Update_Battle_Player_Statistics" in packet_data:
             match = re.search(r"'userStats': \{'deaths': (\d+), 'kills': \d+, 'score': \d+, 'username': '([^']*)'}",
@@ -54,4 +54,4 @@ class Processor:
                 username = match.group(2)
                 if username in user_data:
                     user_data[username] = deaths + 1
-                print(dict(user_data))
+                # print(dict(user_data))
