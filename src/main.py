@@ -100,16 +100,20 @@ class TankiProxy:
 
     def parse_packet(self, direction: bool, packet_id: int, packet_data: EByteArray) -> bool:
         """Parses a packet based on its direction"""
-        self.processor.process_packets(str(packet_data))
 
         Packet = packetManager.get_packet(packet_id)
         if Packet is not None:
             packet = Packet(direction, self.protections, self.sockets)
             packet.unwrap(packet_data)
+            self.processor.process_packets(str(f"<{'IN' if packet.direction else 'OUT'}> "
+                                               f"({packet.__class__.__name__}){'' if packet.shouldLog else ' - NoDisp'}"
+                                               f" | Data: {packet.object}"))
+
             return packet.process()
         else:
             logger.log_info(f"<{'IN' if direction else 'OUT'}> [{len(packet_data) + AbstractPacket.HEADER_LEN}] "
                             f"| ID: {packet_id} ({packetManager.get_name(packet_id)}) | Data: {packet_data.trim()}")
+
             return False
 
     def forward(self, direction: bool, packet_len: int, packet_id: int, encrypted_data: EByteArray):

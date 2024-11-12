@@ -46,7 +46,7 @@ class AbstractPacket():
         for i in range(0, len(self.codecs)):
             codec = self.codecs[i](packet_data)
             data_len += codec.encode(self.objects[i])
-        return (data_len + AbstractPacket.HEADER_LEN, self.id, packet_data)
+        return data_len + AbstractPacket.HEADER_LEN, self.id, packet_data
 
     def implement(self) -> dict:
         self.object = {}
@@ -66,7 +66,8 @@ class AbstractPacket():
         return False
 
     def log(self):
-        logger.log_info(f"<{'IN' if self.direction else 'OUT'}> ({self.__class__.__name__}){'' if self.shouldLog else ' - NoDisp'} | Data: {self.object}")
+        logger.log_info(
+            f"<{'IN' if self.direction else 'OUT'}> ({self.__class__.__name__}){'' if self.shouldLog else ' - NoDisp'} | Data: {self.object}")
 
     # Example of packet manipulation:
 
