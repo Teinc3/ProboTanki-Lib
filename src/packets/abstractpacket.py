@@ -2,9 +2,11 @@ from typing import ClassVar, Type
 
 from codec.base import BaseCodec
 from modules.logger import Logger, logger
-from utils.ebytearray import EByteArray
+from modules.protection import Protection
+
 from utils.holders.protectionholder import ProtectionHolder
 from utils.holders.socketholder import SocketHolder
+from utils.ebytearray import EByteArray
 
 
 # Trust me, when you automate every function it ain't abstract anymore
@@ -17,19 +19,24 @@ class AbstractPacket():
     attributes: ClassVar[list[str]] = []
     shouldLog: ClassVar[bool] = True
 
-    protections: ProtectionHolder
-    sockets: SocketHolder
-    logger: Logger
-    direction: bool
+
+    proxy: bool
+    direction: bool | None
+    protections: ProtectionHolder | None
+    sockets: SocketHolder | None
+    logger: Logger | None
 
     objects: list
     object: dict = {}
 
-    def __init__(self, direction: bool, protections: ProtectionHolder, sockets: SocketHolder):
-        self.direction = direction
-        self.protections = protections
-        self.sockets = sockets
-        self.logger = logger
+    def __init__(self, proxy: bool = False, direction: bool = None, protections: ProtectionHolder = None, sockets: SocketHolder = None):
+        self.proxy = proxy
+        
+        if proxy:
+            self.direction = direction
+            self.protections = protections
+            self.sockets = sockets
+            self.logger = logger
 
         self.objects = []
         self.object = {}
@@ -40,13 +47,16 @@ class AbstractPacket():
             self.objects.append(codec.decode())
         return self.implement()
 
-    def wrap(self) -> tuple[int, int, EByteArray]:
+    def wrap(self, protection: Protection = None) -> EByteArray:
         packet_data = EByteArray()
-        data_len = 0
+        data_len = AbstractPacket.HEADER_LEN
         for i in range(0, len(self.codecs)):
             codec = self.codecs[i](packet_data)
             data_len += codec.encode(self.objects[i])
-        return data_len + AbstractPacket.HEADER_LEN, self.id, packet_data
+        
+        encrypted_data = (self.protections.c2s if self.proxy else protection).encrypt(packet_data)
+        packet_data = EByteArray().write_int(data_len).write_int(self.id).write(encrypted_data)
+        return packet_data
 
     def implement(self) -> dict:
         self.object = {}
@@ -54,20 +64,21 @@ class AbstractPacket():
             self.object[self.attributes[i]] = self.objects[i]
         return self.object
 
-    def deimplement(self) -> list:
+    def deimplement(self, object: dict = None) -> list:
         self.objects = []
         for i in range(0, len(self.attributes)):
-            self.objects.append(self.object[self.attributes[i]])
+            self.objects.append((object if object else self.object)[self.attributes[i]])
         return self.objects
 
     def process(self) -> bool:
+        """Process the packet, then indicates if the packet should no longer be forwarded to the server"""
         # Default behavior is just to log the packet and declare no packet interception
-        self.log()
+        if self.proxy:
+            self.log()
         return False
 
     def log(self):
-        logger.log_info(
-            f"<{'IN' if self.direction else 'OUT'}> ({self.__class__.__name__}){'' if self.shouldLog else ' - NoDisp'} | Data: {self.object}")
+        logger.log_info(f"<{'IN' if self.direction else 'OUT'}> ({self.__class__.__name__}){'' if self.shouldLog else ' - NoDisp'} | Data: {self.object}")
 
     # Example of packet manipulation:
 

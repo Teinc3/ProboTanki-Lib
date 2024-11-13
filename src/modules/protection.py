@@ -4,9 +4,22 @@ from utils.ebytearray import EByteArray
 class Protection:
     vector_length = 8
 
-    def __init__(self, direction: bool) -> None:
+    active: bool
+    proxy: bool
+    direction: bool | None
+
+    base: int
+    decryption_vector: list[int]
+    encryption_vector: list[int]
+    decryption_index: int
+    encryption_index: int
+
+    def __init__(self, proxy: bool = False, direction: bool = None) -> None:
         self.active = False
-        self.direction = direction
+        self.proxy = proxy
+        
+        if proxy:
+            self.direction = direction
 
         self.base = 0
         self.decryption_vector = [0] * self.vector_length
@@ -18,12 +31,14 @@ class Protection:
         for key in keys:
             self.base ^= key
 
-        for i in range(self.vector_length):
-            # If OUT, everything is flipped by 0x57, otherwise identity operation
+        if self.proxy:
             xor_flip = 0x0 if self.direction else 0x57
-            self.decryption_vector[i] = self.base ^ (i << 3) ^ xor_flip
-            self.encryption_vector[i] = self.base ^ (i << 3) ^ xor_flip
 
+        for i in range(self.vector_length):
+            base_xor = self.base ^ (i << 3)
+            self.decryption_vector[i] = base_xor ^ (0x0 if not self.proxy else xor_flip)
+            self.encryption_vector[i] = base_xor ^ (0x57 if not self.proxy else xor_flip)
+        
         self.active = True
 
     def decrypt(self, encrypted_data: EByteArray):

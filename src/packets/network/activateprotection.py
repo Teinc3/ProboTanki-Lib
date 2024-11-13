@@ -11,4 +11,6 @@ class Activate_Protection(AbstractPacket):
 
     def process(self):
         super().process()
-        self.protections.activate(self.object['keys'])
+        if self.proxy:
+            self.protections.activate(self.object['keys'])
+            return False

@@ -103,7 +103,7 @@ class TankiProxy:
 
         Packet = packetManager.get_packet(packet_id)
         if Packet is not None:
-            packet = Packet(direction, self.protections, self.sockets)
+            packet = Packet(proxy=True, direction=direction, protections=self.protections, sockets=self.sockets)
             packet.unwrap(packet_data)
             self.processor.process_packets(str(f"<{'IN' if packet.direction else 'OUT'}> "
                                                f"({packet.__class__.__name__}){'' if packet.shouldLog else ' - NoDisp'}"
