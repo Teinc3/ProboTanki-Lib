@@ -1,9 +1,9 @@
-from codec.complex import StringCodec
+from codec.complex import JsonCodec
 from packets.abstractpacket import AbstractPacket
 
 
 class Load_Battle_Info(AbstractPacket):
     id = 546722394
     description = "Loads detailed battle information"
-    codecs = [StringCodec]
+    codecs = [JsonCodec]
     attributes = ['json']
