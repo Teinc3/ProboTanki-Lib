@@ -1,5 +1,9 @@
+import os
+import sys
 import inspect
 from typing import Type
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 import packets
 from packets.abstractpacket import AbstractPacket

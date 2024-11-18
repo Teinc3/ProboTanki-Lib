@@ -3,7 +3,7 @@ import random
 
 from codec.complex import Vector3DCodec, VectorVector3DCodec, VectorStringCodec, VectorShortCodec
 from codec.primitive import IntCodec
-from modules.processor import user_data
+from proxy.processor import user_data
 from packets.abstractpacket import AbstractPacket
 from utils.ebytearray import EByteArray
 

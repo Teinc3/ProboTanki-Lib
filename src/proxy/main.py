@@ -1,15 +1,20 @@
 import socket
 import struct
 from threading import Thread
+import os
+import sys
 
-from modules.logger import logger
-from modules.packetmanager import packetManager
-from modules.processor import Processor
-from packets.abstractpacket import AbstractPacket
-from utils.address import Address
-from utils.ebytearray import EByteArray
-from utils.holders.protectionholder import ProtectionHolder
-from utils.holders.socketholder import SocketHolder
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))) # src/
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'lib'))) # src/lib/
+
+from lib.modules.logger import logger
+from lib.modules.packetmanager import packetManager
+from lib.packets.abstractpacket import AbstractPacket
+from lib.utils.address import Address
+from lib.utils.ebytearray import EByteArray
+from lib.utils.holders.protectionholder import ProtectionHolder
+from lib.utils.holders.socketholder import SocketHolder
+from processor import Processor
 
 
 class TankiProxy:
@@ -159,8 +164,7 @@ class TankiProxy:
 
     def end(self):
         self.sockets.close()
-        exit(0)
-
+        sys.exit(0)
 
 if __name__ == "__main__":
     TankiProxy(ProtectionHolder(), SocketHolder())
