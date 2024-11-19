@@ -2,8 +2,8 @@ import os
 import sys
 import socket as Socket
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))) # src/
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'lib'))) # src/lib/
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))) # To access src/
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'lib'))) # To access modules within src/lib/
 
 from lib.modules.protection import Protection
 from lib.packets import AbstractPacket

@@ -1,4 +1,4 @@
-from codec.custom.turretrotatecodec import TurretRotateCodec
+from codec.custom import TurretRotateCodec
 from codec.primitive import ShortCodec, IntCodec
 from packets.abstractpacket import AbstractPacket
 

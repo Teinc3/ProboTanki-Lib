@@ -6,6 +6,8 @@ import re
 class NameScraper:
     _instance = None
 
+    names_set: set
+
     def __new__(cls):
         if cls._instance is None:
             cls._instance = super(NameScraper, cls).__new__(cls)
@@ -36,5 +38,9 @@ class NameScraper:
                     cleaned_name = self.bracket_pattern.sub("", name).strip()
                     self.names_set.add(cleaned_name)
 
-# scraper = NameScraper()
-# scraper.names_set
+    def get_names(self):
+        return list(self.names_set)
+
+if __name__ == "__main__":
+    scraper = NameScraper()
+    print(scraper.get_names())

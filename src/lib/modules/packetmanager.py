@@ -1,19 +1,16 @@
-import os
-import sys
 import inspect
-from typing import Type
-
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from typing import Type, TYPE_CHECKING
 
 import packets
-from packets.abstractpacket import AbstractPacket
+if TYPE_CHECKING:
+    from packets import AbstractPacket
 
 
 class PacketManager:
     _instance = None
 
-    packets: dict[int, Type[AbstractPacket]]
-    hidden_packets: list[Type[AbstractPacket]]
+    packets: dict[int, Type['AbstractPacket']]
+    hidden_packets: list[Type['AbstractPacket']]
 
     def __new__(cls):
         if cls._instance is None:
@@ -30,10 +27,13 @@ class PacketManager:
 
         self.hidden_packets = [packet for packet in self.packets.values() if not packet.shouldLog]
 
-    def get_packet(self, packet_id: int) -> Type[AbstractPacket] | None:
+        if len(self.packets) == 0:
+            raise Exception("No packets loaded")
+
+    def get_packet(self, packet_id: int) -> Type['AbstractPacket'] | None:
         return self.packets.get(packet_id)
 
-    def get_packet_by_name(self, packet_name: str) -> Type[AbstractPacket] | None:
+    def get_packet_by_name(self, packet_name: str) -> Type['AbstractPacket'] | None:
         for packet in self.packets.values():
             if packet.__name__ == packet_name:
                 return packet

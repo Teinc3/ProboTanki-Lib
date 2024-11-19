@@ -1,4 +1,4 @@
-from codec.custom.chatmessagecodec import ChatMessageCodec
+from codec.custom import ChatMessageCodec
 from codec.factory import VectorCodecFactory
 from packets.abstractpacket import AbstractPacket
 

@@ -1,4 +1,4 @@
-from codec.custom.userstatscodec import UserStatsCodec
+from codec.custom import UserStatsCodec
 from packets.abstractpacket import AbstractPacket
 
 

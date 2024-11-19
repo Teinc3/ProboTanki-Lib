@@ -1,8 +1,8 @@
 from packets.abstractpacket import AbstractPacket
 
 from codec.factory import VectorCodecFactory
-from codec.custom.missioncodec import MissionCodec
-from codec.custom.missionstreakcodec import MissionStreakCodec
+from codec.custom import MissionCodec
+from codec.custom import MissionStreakCodec
 
 
 class Show_Missions(AbstractPacket):

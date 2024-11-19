@@ -1,7 +1,7 @@
 from codec.base import CustomBaseCodec
-from codec.complex import StringCodec
-from codec.custom.userstatuscodec import UserStatusCodec
 from codec.primitive import BoolCodec
+from codec.complex import StringCodec
+from .userstatuscodec import UserStatusCodec
 
 
 class ChatMessageCodec(CustomBaseCodec):

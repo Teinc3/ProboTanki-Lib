@@ -1,5 +1,5 @@
 from codec.complex import StringCodec
-from codec.custom.battleinfousercodec import BattleInfoUserCodec
+from codec.custom import BattleInfoUserCodec
 from packets.abstractpacket import AbstractPacket
 
 
