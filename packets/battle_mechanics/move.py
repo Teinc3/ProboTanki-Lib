@@ -1,4 +1,4 @@
-from codec.custom.movecodec import MoveCodec
+from codec.custom import MoveCodec
 from codec.primitive import IntCodec, ShortCodec
 from packets.abstractpacket import AbstractPacket
 

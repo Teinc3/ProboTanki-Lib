@@ -1,5 +1,5 @@
 from codec.complex import StringCodec
-from codec.custom.turretrotatecodec import TurretRotateCodec
+from codec.custom import TurretRotateCodec
 from packets.abstractpacket import AbstractPacket
 
 

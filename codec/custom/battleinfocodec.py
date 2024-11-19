@@ -1,7 +1,7 @@
 from codec.base import CustomBaseCodec
-from codec.complex import StringCodec
-from codec.custom.rankrangecodec import RankRangeCodec
 from codec.primitive import BoolCodec, IntCodec
+from codec.complex import StringCodec
+from .rankrangecodec import RankRangeCodec
 
 
 class BattleInfoCodec(CustomBaseCodec):

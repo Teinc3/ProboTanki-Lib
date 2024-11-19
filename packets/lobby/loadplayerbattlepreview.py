@@ -1,4 +1,4 @@
-from codec.custom.battlenotifiercodec import BattleNotifierCodec
+from codec.custom import BattleNotifierCodec
 from packets.abstractpacket import AbstractPacket
 
 

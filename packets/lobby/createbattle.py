@@ -1,6 +1,5 @@
 from codec.complex import StringCodec
-from codec.custom.battlelimitscodec import BattleLimitsCodec
-from codec.custom.rankrangecodec import RankRangeCodec
+from codec.custom import BattleLimitsCodec, RankRangeCodec
 from codec.primitive import BoolCodec, IntCodec
 from packets.abstractpacket import AbstractPacket
 

@@ -1,5 +1,5 @@
 from codec.complex import StringCodec
-from codec.custom.movecodec import MoveCodec
+from codec.custom import MoveCodec
 from packets.abstractpacket import AbstractPacket
 
 

@@ -1,7 +1,7 @@
 from packets.abstractpacket import AbstractPacket
 
 from codec.primitive import IntCodec, ShortCodec
-from codec.custom.movecodec import MoveCodec
+from codec.custom import MoveCodec
 
 
 class Tank_Move_Info(AbstractPacket):

@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import TypeVar, Generic, Any
 
-from utils.ebytearray import EByteArray
+from utils import EByteArray
 
 T = TypeVar("T", bound=Any)
 

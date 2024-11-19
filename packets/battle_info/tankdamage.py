@@ -1,4 +1,4 @@
-from codec.custom.tankdamagecodec import TankDamageCodec
+from codec.custom import TankDamageCodec
 from codec.factory import VectorCodecFactory
 from packets.abstractpacket import AbstractPacket
 
