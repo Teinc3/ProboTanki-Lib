@@ -3,7 +3,7 @@ from threading import Thread
 from .abstractprocessor import AbstractProcessor
 from bot.enums import ProcessorCodes, ProcessorIDs
 from lib.modules.packetmanager import packetManager
-from lib.utils.scraper import StaffScraper
+from lib.utils.web import StaffScraper
 
 
 class LobbyProcessor(AbstractProcessor):
