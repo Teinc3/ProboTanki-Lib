@@ -27,8 +27,8 @@ class PacketManager:
 
         self.hidden_packets = [packet for packet in self.packets.values() if not packet.shouldLog]
 
-        if len(self.packets) == 0:
-            raise Exception("No packets loaded")
+        # if len(self.packets) == 0:
+        #     raise Exception("No packets loaded")
 
     def get_packet(self, packet_id: int) -> Type['AbstractPacket'] | None:
         return self.packets.get(packet_id)

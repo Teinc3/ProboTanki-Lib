@@ -1,9 +1,11 @@
 from .abstractprocessor import AbstractProcessor
-from bot.enums import ProcessorCodes
+from bot.enums import ProcessorCodes, ProcessorIDs
 from lib.modules.packetmanager import packetManager
 
 
 class EntryProcessor(AbstractProcessor):
+    processorID = ProcessorIDs.P_ENTRY
+
     def process_packets(self):
         packet_object = self.current_packet.object
 
@@ -31,10 +33,15 @@ class EntryProcessor(AbstractProcessor):
         elif self.compare_packet('Login_Ready'):
             self.login()
 
-    
+        elif self.compare_packet('Login_Success'):
+            self.holder.swap_processor(ProcessorIDs.P_LOBBY)
+
+        elif self.compare_packet('Login_Failed'):
+            self.holder.close_socket(ProcessorCodes.WRONG_CREDENTIALS)
+
     def login(self):
         if 'credentials' not in self.holder.storage:
-            self.holder.close_socket("No account credentials found in storage!")
+            self.holder.close_socket(ProcessorCodes.WRONG_CREDENTIALS)
         
         login_data: dict = self.holder.storage['credentials'].copy()
         login_data['rememberMe'] = False

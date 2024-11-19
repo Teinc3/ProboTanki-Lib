@@ -10,7 +10,7 @@ from lib.packets import AbstractPacket
 from lib.utils.address import Address
 from lib.utils.ebytearray import EByteArray
 
-from processors import EntryProcessor
+import processors
 from enums import ProcessorCodes, ProcessorIDs
 from callbackholder import CallbackHolder
 
@@ -29,11 +29,12 @@ class TankiSocket:
                     'password': password
                 }
             },
+            swap_processor = self.swap_processor,
             close_socket = self.close_socket,
             watchdog = watchdog
         )
 
-        self.processor = EntryProcessor(self.holder)
+        self.processor = processors.EntryProcessor(self.holder)
 
         # Connect to server
         self.holder.socket.connect(self.TARGET_ADDRESS.split_args)
@@ -66,9 +67,16 @@ class TankiSocket:
                 self.close_socket(ProcessorCodes.SOCKET_ERROR)
                 print(f"Error: {e}")
 
-    def swap_processor(self, id: ProcessorIDs):
-        if id == ProcessorIDs.P_ENTRY:
-            self.processor = EntryProcessor(self.holder)
+    def swap_processor(self, p_id: ProcessorIDs):
+        def enum_compare(processor: processors.AbstractProcessor):
+            return repr(processor.processorID) == repr(p_id)
+        
+        if enum_compare(processors.EntryProcessor):
+            self.processor = processors.EntryProcessor(self.holder)
+        elif enum_compare(processors.LobbyProcessor):
+            self.processor = processors.LobbyProcessor(self.holder)
+        elif enum_compare(processors.BattleProcessor):
+            self.processor = processors.BattleProcessor(self.holder)
         pass
 
     def close_socket(self, code: ProcessorCodes):

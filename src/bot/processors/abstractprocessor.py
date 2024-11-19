@@ -1,13 +1,16 @@
 from abc import ABC, abstractmethod
-from typing import Type
-
+from typing import Type, ClassVar
 
 from lib.packets import AbstractPacket
 from lib.modules.packetmanager import packetManager
 from lib.utils.ebytearray import EByteArray
+
 from bot.callbackholder import CallbackHolder
+from bot.enums import ProcessorIDs
+
 
 class AbstractProcessor(ABC):
+    processorID: ClassVar[ProcessorIDs]
 
     current_packet: AbstractPacket
     current_packet_class: Type[AbstractPacket]
@@ -26,7 +29,7 @@ class AbstractProcessor(ABC):
         packet_len = len(packet_data)
         data = self.current_packet.unwrap(packet_data)
 
-        print(f"{Packet.__name__} [{packet_len}]: {str(data)[0:min(300, len(str(data)))]}")
+        # print(f"{Packet.__name__} [{packet_len}]: {str(data)[0:min(300, len(str(data)))]}")
 
         self.process_packets()
     
