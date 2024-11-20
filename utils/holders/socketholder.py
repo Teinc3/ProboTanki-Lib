@@ -1,13 +1,13 @@
-import socket
+import socks
 from typing import Optional
 
 
 class SocketHolder:
-    server: socket.socket
-    client: Optional[socket.socket]
+    server: socks.socksocket
+    client: Optional[socks.socksocket]
 
     def __init__(self):
-        self.server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.server = socks.socksocket(socks.socket.AF_INET, socks.socket.SOCK_STREAM)
         self.client = None  # Listen for client connection
 
     def close(self):
