@@ -1,6 +1,7 @@
 import os
 import sys
 import socket as Socket
+from threading import Thread
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))) # To access src/
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'lib'))) # To access modules within src/lib/
@@ -18,27 +19,19 @@ from callbackholder import CallbackHolder
 class TankiSocket:
     TARGET_ADDRESS = Address("146.59.110.146", 1337)  # core-protanki.com
 
-    def __init__(self, username: str, password: str, watchdog: bool = False):
+    def __init__(self, holder: CallbackHolder):
 
-        self.holder = CallbackHolder(
-            protection = Protection(),
-            socket = Socket.socket(Socket.AF_INET, Socket.SOCK_STREAM), 
-            storage = {
-                'credentials': {
-                    'username': username,
-                    'password': password
-                }
-            },
-            swap_processor = self.swap_processor,
-            close_socket = self.close_socket,
-            watchdog = watchdog
-        )
+        self.holder = holder
+        self.holder.protection = Protection()
+        self.holder.socket = Socket.socket(Socket.AF_INET, Socket.SOCK_STREAM)
+        self.holder.swap_processor = self.swap_processor
+        self.holder.close_socket = self.close_socket
 
         self.processor = processors.EntryProcessor(self.holder)
 
         # Connect to server
         self.holder.socket.connect(self.TARGET_ADDRESS.split_args)
-        self.loop()
+        Thread(target=self.loop).start()
 
     def loop(self):
         socx = self.holder.socket
@@ -85,4 +78,8 @@ class TankiSocket:
         sys.exit(0)
 
 if __name__ == "__main__":
-    TankiSocket("SavageReaper623", "QzeDyzEBF1CF", True)
+
+    TankiSocket(CallbackHolder(
+        storage = { "credentials": { "username": "SavageReaper623", "password": "QzeDyzEBF1CF" } },
+        watchdog = True
+    ))

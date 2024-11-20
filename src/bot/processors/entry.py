@@ -43,8 +43,13 @@ class EntryProcessor(AbstractProcessor):
         if 'credentials' not in self.holder.storage:
             self.holder.close_socket(ProcessorCodes.WRONG_CREDENTIALS)
         
-        login_data: dict = self.holder.storage['credentials'].copy()
-        login_data['rememberMe'] = False
+        # Prune everything except username and password and add rememberMe False
+        credentials: dict = self.holder.storage['credentials'].copy()
+        login_data = {
+            'username': credentials['username'],
+            'password': credentials['password'],
+            'rememberMe': False
+        }
 
         login_packet = packetManager.get_packet_by_name('Login')()
         login_packet.deimplement(login_data)
