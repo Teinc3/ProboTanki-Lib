@@ -1,4 +1,4 @@
-import socket as Socket
+import socks
 from typing import Callable
 from threading import Lock
 from pyee import EventEmitter
@@ -11,7 +11,7 @@ class CallbackHolder:
     def __init__(
         self, 
         protection: Protection = None, 
-        socket: Socket.socket = None, 
+        socket: socks.socksocket = None, 
         storage: dict = None, 
         close_socket: Callable[[ProcessorCodes], None] = None,
         swap_processor: Callable[[ProcessorIDs], None] = None,

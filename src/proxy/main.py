@@ -1,4 +1,4 @@
-import socket
+import socks
 import struct
 from threading import Thread
 import os
@@ -141,17 +141,17 @@ class TankiProxy:
             logger.log_info("Connected to Target Server", True)
             Thread(target=self.handle_server).start()
 
-        except socket.timeout:
+        except socks.socket.timeout:
             logger.log_error("Server Connection Timeout")
             self.end()
-        except socket.error as e:
+        except socks.socket.error as e:
             logger.log_error(f"Server Connection Error: {e}")
             self.end()
 
     def start_client_proxy(self):
         """Starts a server to listen for the client to connect to us"""
 
-        local_proxy = socket.socket()
+        local_proxy = socks.socksocket()
         local_proxy.bind(TankiProxy.PROXY_ADDRESS.split_args)
         logger.log_info("Proxy Server Started", True)
         local_proxy.listen(TankiProxy.MAX_CONNECTIONS)

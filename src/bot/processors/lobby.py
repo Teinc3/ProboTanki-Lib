@@ -85,7 +85,7 @@ class LobbyProcessor(AbstractProcessor):
 
     def create_battle(self):
         packet = packetManager.get_packet_by_name('Create_Battle')()
-        packet.object = {'autoBalance': True, 'battleMode': 0, 'format': 0, 'friendlyFire': False, 'battleLimits': {'scoreLimit': 0, 'timeLimit': 900}, 'mapID': 'map_serpuhov', 'maxPeopleCount': 4, 'name': 'Serpuhov DM', 'parkourMode': False, 'privateBattle': False, 'proBattle': False, 'rankRange': {'maxRank': 7, 'minRank': 1}, 'rearm': False, 'theme': 0, 'noSupplyBoxes': False, 'noCrystalBoxes': False, 'noSupplies': False, 'noUpgrade': False}
+        packet.object = {'autoBalance': True, 'battleMode': 0, 'format': 0, 'friendlyFire': False, 'battleLimits': {'scoreLimit': 0, 'timeLimit': 900}, 'mapID': 'map_serpuhov', 'maxPeopleCount': 20, 'name': 'Serpuhov DM', 'parkourMode': False, 'privateBattle': False, 'proBattle': False, 'rankRange': {'maxRank': 7, 'minRank': 1}, 'rearm': False, 'theme': 0, 'noSupplyBoxes': False, 'noCrystalBoxes': False, 'noSupplies': False, 'noUpgrade': False}
         packet.deimplement()
         self.holder.socket.sendall(packet.wrap(self.holder.protection))    
 

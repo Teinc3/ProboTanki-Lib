@@ -1,6 +1,6 @@
 import os
 import sys
-import socket as Socket
+import socks
 from threading import Thread
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))) # To access src/
@@ -17,24 +17,32 @@ from callbackholder import CallbackHolder
 
 
 class TankiSocket:
+    PROXY_USERNAME = "dvkiyjwt"
+    PROXY_PASSWORD = "qm1jlakn7pfy"
     TARGET_ADDRESS = Address("146.59.110.146", 1337)  # core-protanki.com
 
     def __init__(self, holder: CallbackHolder):
 
         self.holder = holder
         self.holder.protection = Protection()
-        self.holder.socket = Socket.socket(Socket.AF_INET, Socket.SOCK_STREAM)
+        self.holder.socket = socks.socksocket(socks.socket.AF_INET, socks.socket.SOCK_STREAM)
+        # Check if credentials come with Proxy and Port
+        credentials = self.holder.storage['credentials']
+        if 'proxy' in credentials and 'port' in credentials:
+            self.holder.socket.set_proxy(socks.PROXY_TYPE_SOCKS5, credentials['proxy'], credentials['port'], username=self.PROXY_USERNAME, password=self.PROXY_PASSWORD)
+
         self.holder.swap_processor = self.swap_processor
         self.holder.close_socket = self.close_socket
 
         self.processor = processors.EntryProcessor(self.holder)
 
         # Connect to server
-        self.holder.socket.connect(self.TARGET_ADDRESS.split_args)
         Thread(target=self.loop).start()
 
     def loop(self):
         socx = self.holder.socket
+        socx.connect(self.TARGET_ADDRESS.split_args)
+
         
         while True:
             try:
@@ -57,8 +65,8 @@ class TankiSocket:
                 self.processor.parse_packets(packet_id, EByteArray(packet_data))
 
             except Exception as e:
-                self.close_socket(ProcessorCodes.SOCKET_ERROR)
                 print(f"Error: {e}")
+                self.close_socket(ProcessorCodes.SOCKET_ERROR)
 
     def swap_processor(self, p_id: ProcessorIDs):
         def enum_compare(processor: processors.AbstractProcessor):

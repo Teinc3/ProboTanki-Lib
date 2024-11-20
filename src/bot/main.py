@@ -34,6 +34,8 @@ class TankiBot:
         if 'username' not in watchdog_credentials or 'password' not in watchdog_credentials:
             raise Exception("Invalid credentials format")
         
+        # available_accounts = len(filter(lambda account: 'proxy' in account and 'port' in account, self.credentials['accounts']))
+        
         self.watchdog = TankiSocket(CallbackHolder(
             storage = { 'credentials': watchdog_credentials },
             event_emitter = self.event_emitter,
