@@ -9,6 +9,7 @@ from .leftdmbattle import Left_DM_Battle
 from .leftteambattle import Left_Team_Battle
 from .loadallbattles import Load_All_Battles
 from .loadbattleinfo import Load_Battle_Info
+from .loadlobby import Load_Lobby
 from .loadplayerbattlepreview import Load_Player_Battle_Preview
 from .removebattle import Remove_Battle
 from .roundfinish import Round_Finish
@@ -52,5 +53,6 @@ __all__ = [
     Reject_Invite,
     Received_Invite,
     Send_Invite,
-    Server_Restart
+    Server_Restart,
+    Load_Lobby
 ]
