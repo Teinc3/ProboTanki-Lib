@@ -56,6 +56,13 @@ class LobbyProcessor(AbstractProcessor):
                     packet.objects = [2]
                     self.holder.socket.sendall(packet.wrap(self.holder.protection))
 
+        elif self.compare_packet('Load_Battle_Info'):
+            packet_object = packet_object['json']
+
+            if 'proBattleTimeLeftInSec' in packet_object and packet_object['proBattleTimeLeftInSec'] == -1:
+                self.buy_pro_pass()
+                print("Pro Pass bought successfully for:", self.holder.storage['credentials']['username'])
+
     def watchdog_thread(self):
         # Subscribe to mods online status, if not already subscribed
         if 'modsOnlineStatus' not in self.holder.storage:
@@ -108,3 +115,9 @@ class LobbyProcessor(AbstractProcessor):
         if not self.holder.storage['allModsStatusReceived']:
             self.holder.storage['allModsStatusReceived'] = True
             self.create_battle()
+
+    def buy_pro_pass(self):
+        packet = packetManager.get_packet_by_name('Buy_Multiple_Items')()
+        packet.object = {'item_id': 'pro_battle_m0', 'count': 1, 'base_cost': 500}
+        packet.deimplement()
+        self.holder.socket.sendall(packet.wrap(self.holder.protection))
