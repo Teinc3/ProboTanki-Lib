@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 from typing import Type, ClassVar
+from threading import Lock
 
 from lib.packets import AbstractPacket
 from lib.modules.packetmanager import packetManager
@@ -12,30 +13,55 @@ from bot.enums import ProcessorIDs
 class AbstractProcessor(ABC):
     processorID: ClassVar[ProcessorIDs]
 
-    current_packet: AbstractPacket
-    current_packet_class: Type[AbstractPacket]
-
+    _current_packet: AbstractPacket
+    
     def __init__(self, callback_holder: CallbackHolder):
         self.holder = callback_holder
+
+        self._lock = Lock()
 
     def parse_packets(self, packet_id: int, packet_data: EByteArray):
         Packet = packetManager.get_packet(packet_id)
         if Packet is None:
             return
         
-        self.current_packet_class = Packet
         self.current_packet = Packet()
 
-        packet_len = len(packet_data)
-        data = self.current_packet.unwrap(packet_data)
+        self.current_packet.unwrap(packet_data)
+        if self.holder.watchdog:
+            print(f"Received packet {self.current_packet.__class__.__name__}: ", str(self.current_packet.object)[0:200])
 
-        # print(f"{Packet.__name__} [{packet_len}]: {str(data)[0:min(300, len(str(data)))]}")
+        if self.compare_packet('Ping'):
+            pong_packet = packetManager.get_packet_by_name('Pong')()
+            self.send_packet(pong_packet)
 
-        self.process_packets()
+        elif self.compare_packet('Load_Resources'):
+            loaded_packet = packetManager.get_packet_by_name('Resources_Loaded')()
+            loaded_packet.objects = [self.current_packet.object['callbackID']] # Lazy deimplement
+            self.send_packet(loaded_packet)
+        
+        else:
+            self.process_packets()
     
     def compare_packet(self, name: str):
-        return packetManager.get_packet_by_name(name) == self.current_packet_class
+        return packetManager.get_packet_by_name(name) == self.current_packet.__class__
+
+    # Debugging method
+    def send_packet(self, packet: AbstractPacket):
+        if self.holder.watchdog:
+            print(f"Sent packet {packet.__class__.__name__}: ", str(packet.object)[0:200])
+        return self.holder.socket.sendall(packet.wrap(self.holder.protection))
 
     @abstractmethod
     def process_packets(self):
         raise NotImplementedError
+    
+    @property
+    def current_packet(self) -> AbstractPacket:
+        with self._lock:
+            return self._current_packet
+    
+    @current_packet.setter
+    def current_packet(self, packet: AbstractPacket):
+        with self._lock:
+            self._current_packet = packet

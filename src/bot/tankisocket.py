@@ -15,21 +15,19 @@ import processors
 from enums import ProcessorCodes, ProcessorIDs
 from callbackholder import CallbackHolder
 
-
 class TankiSocket:
-    PROXY_USERNAME = "dvkiyjwt"
-    PROXY_PASSWORD = "qm1jlakn7pfy"
-    TARGET_ADDRESS = Address("146.59.110.146", 1337)  # core-protanki.com
+    ENDPOINT = Address("146.59.110.146", 1337)  # core-protanki.com
 
     def __init__(self, holder: CallbackHolder):
 
         self.holder = holder
         self.holder.protection = Protection()
         self.holder.socket = socks.socksocket(socks.socket.AF_INET, socks.socket.SOCK_STREAM)
+
         # Check if credentials come with Proxy and Port
-        credentials = self.holder.storage['credentials']
-        if 'proxy' in credentials and 'port' in credentials:
-            self.holder.socket.set_proxy(socks.PROXY_TYPE_SOCKS5, credentials['proxy'], credentials['port'], username=self.PROXY_USERNAME, password=self.PROXY_PASSWORD)
+        proxy: Address | None = self.holder.storage['proxy']
+        if proxy:
+            self.holder.socket.set_proxy(socks.PROXY_TYPE_SOCKS5, proxy.host, proxy.port, username=proxy.username, password=proxy.password)
 
         self.holder.swap_processor = self.swap_processor
         self.holder.close_socket = self.close_socket
@@ -41,14 +39,20 @@ class TankiSocket:
 
     def loop(self):
         socx = self.holder.socket
-        socx.connect(self.TARGET_ADDRESS.split_args)
+        socx.connect(self.ENDPOINT.split_args)
+        # We will check the specific error related to the proxy later
 
-        
         while True:
             try:
-                packet_len = EByteArray(socx.recv(4)).read_int()
-                packet_id = EByteArray(socx.recv(4)).read_int()
-
+                packet_len_bytes = EByteArray(socx.recv(4))
+                if len(packet_len_bytes) == 0:
+                    raise Exception("Disconnected")
+                packet_len = packet_len_bytes.read_int()
+                packet_id_bytes = EByteArray(socx.recv(4))
+                if len(packet_id_bytes) == 0:
+                    raise Exception("Disconnected")
+                packet_id = packet_id_bytes.read_int()
+                
                 packet_data_len = packet_len - AbstractPacket.HEADER_LEN
                 encrypted_data = EByteArray()
 
@@ -58,14 +62,14 @@ class TankiSocket:
                         remaining_size = packet_data_len - len(encrypted_data)
                         received_data = EByteArray(socx.recv(remaining_size))
                         if len(received_data) == 0:
-                            raise Exception("Client Disconnected")
+                            raise Exception("Disconnected")
                         encrypted_data += received_data
 
                 packet_data = self.holder.protection.decrypt(encrypted_data)
                 self.processor.parse_packets(packet_id, EByteArray(packet_data))
 
             except Exception as e:
-                print(f"Error: {e}")
+                print(f"Error: {e} | {e.args} | {self.holder.storage}")
                 self.close_socket(ProcessorCodes.SOCKET_ERROR)
 
     def swap_processor(self, p_id: ProcessorIDs):
@@ -83,11 +87,5 @@ class TankiSocket:
     def close_socket(self, code: ProcessorCodes):
         print(f"Socket closed: {code}")
         self.holder.socket.close()
+        # Close thread
         sys.exit(0)
-
-if __name__ == "__main__":
-
-    TankiSocket(CallbackHolder(
-        storage = { "credentials": { "username": "SavageReaper623", "password": "QzeDyzEBF1CF" } },
-        watchdog = True
-    ))

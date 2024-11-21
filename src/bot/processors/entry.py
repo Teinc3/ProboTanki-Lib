@@ -11,20 +11,11 @@ class EntryProcessor(AbstractProcessor):
 
         if self.compare_packet('Activate_Protection'):
             self.holder.protection.activate(packet_object['keys'])
-            
-        elif self.compare_packet('Ping'):
-            pong_packet = packetManager.get_packet_by_name('Pong')()
-            self.holder.socket.sendall(pong_packet.wrap(self.holder.protection))
         
         elif self.compare_packet('Set_Captcha_Keys'):
             client_lang_packet = packetManager.get_packet_by_name('Set_Client_Lang')()
             client_lang_packet.objects = ['en']
-            self.holder.socket.sendall(client_lang_packet.wrap(self.holder.protection))
-
-        elif self.compare_packet('Load_Resources'):
-            loaded_packet = packetManager.get_packet_by_name('Resources_Loaded')()
-            loaded_packet.objects = [packet_object['callbackID']] # Lazy deimplement
-            self.holder.socket.sendall(loaded_packet.wrap(self.holder.protection))
+            self.send_packet(client_lang_packet)
 
         elif self.compare_packet('Invite_Code_Status'):
             if packet_object['inviteEnabled']:
@@ -53,5 +44,4 @@ class EntryProcessor(AbstractProcessor):
 
         login_packet = packetManager.get_packet_by_name('Login')()
         login_packet.deimplement(login_data)
-        packet_data = login_packet.wrap(self.holder.protection)
-        self.holder.socket.sendall(packet_data)
+        self.send_packet(login_packet)
