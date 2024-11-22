@@ -14,7 +14,6 @@ class LobbyProcessor(AbstractProcessor):
 
         if self.holder.watchdog:  # Enable watchdog thread
             self.holder.event_emitter.on('all_sheep_ready', self.create_battle)
-
             Thread(target=self.watchdog_thread).start()
 
         else:  # Reports sheep presence through emitter
@@ -29,7 +28,7 @@ class LobbyProcessor(AbstractProcessor):
         if self.compare_packet('Load_Account_Stats'):
             # Load Rank
             self.holder.storage['credentials']['rank'] = packet_object['rank']
-            print("Account Connected: ", self.holder.storage['credentials'])
+            print(f"{'Watchdog' if self.holder.watchdog else 'Sheep ' + str(self.holder.storage['sheep_id'])} Connected: ", self.holder.storage['credentials'], self.holder.storage['proxy'])
 
         elif self.compare_packet('Online_Status'):
             if self.holder.watchdog:
@@ -43,16 +42,16 @@ class LobbyProcessor(AbstractProcessor):
             if 'selected_battle' not in self.holder.storage:
                 return
             if self.holder.watchdog:
-                # Server auto selects the new battle for us
-                self.holder.storage['selected_battle'] = packet_object['battleID']
-                self.holder.event_emitter.emit('sheep_join_battle', self.holder.storage['selected_battle'])
+                # Server autoselects the newly created battle for us
+                self.holder.storage['selected_battle']['battleID'] = packet_object['battleID']
+                self.holder.event_emitter.emit('sheep_join_battle', self.holder.storage['selected_battle'].copy())
                 print("Battle ID selected:", packet_object['battleID'])
             else:
-                # Sheep selected the battle, it's time to join this shit!
-                if self.holder.storage['selected_battle'] != packet_object['battleID']:
+                # Sheep selected the battle, its time to join this shit!
+                if self.holder.storage['selected_battle']['battleID'] != packet_object['battleID']:
                     return
                 join_packet = packetManager.get_packet_by_name('Join_Battle')()
-                join_packet.objects = [self.holder.storage['sheep_id'] % 2]  # No Team (Green)
+                join_packet.objects = [2 if self.holder.storage['selected_battle']['battleMode'] == 0 else self.holder.storage['sheep_id'] % 2]
                 self.send_packet(join_packet)
 
         # elif self.compare_packet('Load_Battle_Info'):
@@ -68,25 +67,27 @@ class LobbyProcessor(AbstractProcessor):
             self.subscribe_mods()
 
     def manual_select_battle(self):
-        if 'selected_battle' not in self.holder.storage:
+        if not 'selected_battle' in self.holder.storage or not 'battleID' in self.holder.storage['selected_battle']:
             print("Could not find selected battle")
 
         select_packet = packetManager.get_packet_by_name('Select_Battle')()
-        select_packet.objects = [self.holder.storage['selected_battle']]
+        select_packet.objects = [self.holder.storage['selected_battle']['battleID']]
         self.send_packet(select_packet)
-
-    def sheep_select_battle(self, battleID: str):
+    
+    def sheep_select_battle(self, battleInfo: dict):
         if self.holder.watchdog:
             return
-        self.holder.storage['selected_battle'] = battleID
+        self.holder.storage['selected_battle'] = battleInfo
         self.manual_select_battle()
 
-    def create_battle(self, data: dict):
-        self.holder.storage['selected_battle'] = True
-
+    def create_battle(self, data: dict):        
+        self.holder.storage['selected_battle'] = {
+            'battleMode': data['battleMode'],
+        }
+        
         create_packet = packetManager.get_packet_by_name('Create_Battle')()
-        create_packet.object = {'autoBalance': False, 'battleMode': data['battleMode'], 'format': 0,
-                                'friendlyFire': False, 'battleLimits': {'scoreLimit': 0, 'timeLimit': 90},
+        create_packet.object = {'autoBalance': True, 'battleMode': data['battleMode'], 'format': 0,
+                                'friendlyFire': False, 'battleLimits': {'scoreLimit': 0, 'timeLimit': 60},
                                 'mapID': data['mapID'], 'maxPeopleCount': data['maxPeopleCount'], 'name': data['name'],
                                 'parkourMode': False, 'privateBattle': False, 'proBattle': True,
                                 'rankRange': {'maxRank': 3, 'minRank': 1}, 'rearm': True, 'theme': 0,
