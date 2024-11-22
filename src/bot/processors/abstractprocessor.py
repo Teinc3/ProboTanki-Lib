@@ -28,8 +28,8 @@ class AbstractProcessor(ABC):
         self.current_packet = Packet()
 
         self.current_packet.unwrap(packet_data)
-        if self.holder.watchdog:
-            print(f"Received packet {self.current_packet.__class__.__name__}: ", str(self.current_packet.object)[0:200])
+        # if self.holder.watchdog:
+        #     print(f"Received packet {self.current_packet.__class__.__name__}: ", str(self.current_packet.object)[0:200])
 
         if self.compare_packet('Ping'):
             pong_packet = packetManager.get_packet_by_name('Pong')()
@@ -48,8 +48,8 @@ class AbstractProcessor(ABC):
 
     # Debugging method
     def send_packet(self, packet: AbstractPacket):
-        if self.holder.watchdog:
-            print(f"Sent packet {packet.__class__.__name__}: ", str(packet.object)[0:200])
+        #if self.holder.watchdog:
+            #print(f"Sent packet {packet.__class__.__name__}: ", str(packet.object)[0:200])
         return self.holder.socket.sendall(packet.wrap(self.holder.protection))
 
     @abstractmethod

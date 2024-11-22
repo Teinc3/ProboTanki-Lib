@@ -44,6 +44,8 @@ class TankiSocket:
 
         while True:
             try:
+                packet_len = 0
+                packet_id = 0
                 packet_len_bytes = EByteArray(socx.recv(4))
                 if len(packet_len_bytes) == 0:
                     raise Exception("Disconnected")
@@ -69,7 +71,7 @@ class TankiSocket:
                 self.processor.parse_packets(packet_id, EByteArray(packet_data))
 
             except Exception as e:
-                print(f"Error: {e} | {e.args} | {self.holder.storage}")
+                print(f"Error: {e} | {packet_len} {packet_id} | {self.holder.storage}")
                 self.close_socket(ProcessorCodes.SOCKET_ERROR)
 
     def swap_processor(self, p_id: ProcessorIDs):

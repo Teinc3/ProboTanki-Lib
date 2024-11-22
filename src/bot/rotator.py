@@ -12,7 +12,8 @@ class ProxyManager:
         Proxy("198.23.239.134", 6540),
         Proxy("107.172.163.27", 6543),
         Proxy("207.244.217.165", 6712),
-        Proxy("64.137.42.112", 5157)
+        Proxy("64.137.42.112", 5157),
+        Proxy("173.211.0.148", 6641) # Unreliable
     ]
 
     def __init__(self, proxies: list[Proxy] = []):

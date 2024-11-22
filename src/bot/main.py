@@ -21,9 +21,9 @@ class TankiBot:
         "map_serpuhov": 20,
         "map_madness": 32,
     }
-    BATTLE_MODE = 0 # DM, 1 = TDM
+    BATTLE_MODE = 1 # DM, 1 = TDM
     SELECTED_MAP = "map_serpuhov"
-    SOCKET_FAILURE_BUFFER_COUNT = 2
+    SOCKET_FAILURE_BUFFER_COUNT = 5
 
     def __init__(self):
         self.proxy_manager = ProxyManager()
