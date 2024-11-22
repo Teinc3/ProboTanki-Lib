@@ -19,7 +19,7 @@ from callbackholder import CallbackHolder
 class TankiSocket:
     ENDPOINT = Address("146.59.110.146", 1337)  # core-protanki.com
 
-    MAX_RETRIES_POSSIBLE = 5
+    MAX_RETRIES_POSSIBLE = 3
 
     def __init__(self, holder: CallbackHolder):
 
