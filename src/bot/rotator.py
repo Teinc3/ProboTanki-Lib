@@ -13,7 +13,7 @@ class ProxyManager:
         Proxy("107.172.163.27", 6543),
         Proxy("207.244.217.165", 6712),
         Proxy("64.137.42.112", 5157),
-        Proxy("173.211.0.148", 6641) # Unreliable
+        Proxy("161.123.152.115", 6360)
     ]
 
     def __init__(self, proxies: list[Proxy] = []):
@@ -62,7 +62,7 @@ class ProxyManager:
         proxy_repr = proxy.__repr__()
         with self.lock:
             if proxy_repr in self.proxy_usage:
-                self.all_proxies.remove(proxy)
+                self.all_proxies.remove(next(p for p in self.all_proxies if p.__repr__() == proxy_repr))
                 del self.proxy_usage[proxy_repr]
     
     def fetch_proxies(self):
@@ -88,7 +88,7 @@ class ProxyManager:
 
         self.renew_proxies(fetched_proxies)
 
-        print(f"Fetched and Renewed {len(fetched_proxies)} Proxies.")
+        print(f"Fetched and Renewed {len(fetched_proxies)} Proxies, Total Usable: {len(self.all_proxies)}")
 
     @staticmethod
     def remove_banned_proxies(proxies: list[Proxy]):

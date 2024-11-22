@@ -1,7 +1,8 @@
 import os
 import sys
 import socks
-from threading import Thread
+import time
+from threading import Thread, Event, Lock
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))) # To access src/
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'lib'))) # To access modules within src/lib/
@@ -17,6 +18,8 @@ from callbackholder import CallbackHolder
 
 class TankiSocket:
     ENDPOINT = Address("146.59.110.146", 1337)  # core-protanki.com
+
+    MAX_RETRIES_POSSIBLE = 5
 
     def __init__(self, holder: CallbackHolder):
 
@@ -35,14 +38,24 @@ class TankiSocket:
         self.processor = processors.EntryProcessor(self.holder)
 
         # Connect to server
-        Thread(target=self.loop).start()
+        self.retries = 0
+        self.thread_lock = Lock()
+        self.thread = Thread(target=self.loop, name='TankiSocket - ' + 'Watchdog' if self.holder.watchdog else ('Sheep ' + str(self.holder.storage['sheep_id'])))
+        self.stop_thread = Event()
+        self.thread.start()
 
     def loop(self):
         socx = self.holder.socket
-        socx.connect(self.ENDPOINT.split_args)
-        # We will check the specific error related to the proxy later
+        try:
+            socx.connect(self.ENDPOINT.split_args)
+        except Exception:
+            # Purge proxy
+            self.holder.event_emitter.emit('purge_proxy', self.holder.storage['proxy'])
+            self.retries = self.MAX_RETRIES_POSSIBLE
+            self.close_socket(ProcessorCodes.PROXY_ERROR)
+            return
 
-        while True:
+        while not self.stop_thread.is_set():
             try:
                 packet_len = 0
                 packet_id = 0
@@ -73,6 +86,7 @@ class TankiSocket:
             except Exception as e:
                 print(f"Error: {e} | {packet_len} {packet_id} | {self.holder.storage}")
                 self.close_socket(ProcessorCodes.SOCKET_ERROR)
+                return
 
     def swap_processor(self, p_id: ProcessorIDs):
         def enum_compare(processor: processors.AbstractProcessor):
@@ -87,7 +101,23 @@ class TankiSocket:
         pass
 
     def close_socket(self, code: ProcessorCodes):
-        print(f"Socket closed: {code}")
+        print(f"{'Watchdog' if self.holder.watchdog else self.holder.storage['sheep_id']} Socket closed: {code}")
+        self.stop_thread.set()
         self.holder.socket.close()
-        # Close thread
-        sys.exit(0)
+        try:
+            self.thread.join()
+        except Exception:
+            pass
+
+        # Broadcast sheep not ready
+        if not self.holder.watchdog:
+            self.holder.event_emitter.emit('sheep_ready', self.holder.storage['sheep_id'], False)
+
+        # Reinstantiate the socket if below retry threshold
+        if self.holder.watchdog or self.retries < self.MAX_RETRIES_POSSIBLE:
+            self.retries += 1
+            self.holder.event_emitter.emit('retry_socket', self.holder, self.retries)
+
+        else:
+            print(f"Max {self.retries} retries reached, exiting {self.holder.storage['sheep_id']}")
+            self.holder.event_emitter.emit('delete_sheep', self.holder.storage['sheep_id'])
