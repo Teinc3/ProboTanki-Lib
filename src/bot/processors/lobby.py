@@ -132,6 +132,7 @@ class LobbyProcessor(AbstractProcessor):
         if not mods_obj['all_mods_status_recv']:
             mods_obj['all_mods_status_recv'] = True
             # First time recv all actions (Can add return)
+            self.holder.event_emitter.emit('watchdog_ready')
 
         # Second time recv all actions
 

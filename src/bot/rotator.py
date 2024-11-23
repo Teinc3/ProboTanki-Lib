@@ -91,7 +91,9 @@ class ProxyManager:
 
         self.renew_proxies(fetched_proxies)
 
-        print(f"Fetched and Renewed {len(fetched_proxies)} Proxies.")
+        print(f"Fetched and Renewed {len(fetched_proxies)} Proxies, Total Usable: {len(self.all_proxies)}")
+        if len(self.all_proxies) <= 10:
+            print(' | '.join(proxy.__repr__() for proxy in self.all_proxies))
 
     @staticmethod
     def remove_banned_proxies(proxies: list[Proxy]):

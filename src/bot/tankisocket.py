@@ -39,7 +39,11 @@ class TankiSocket:
         self.processor = processors.EntryProcessor(self.holder)
 
         # Connect to server
-        Thread(target=self.loop).start()
+        self.retries = 0
+        self.thread_lock = Lock()
+        self.thread = Thread(target=self.loop, name='TankiSocket - ' + ('Watchdog' if self.holder.watchdog else ('Sheep ' + str(self.holder.storage['sheep_id']))))
+        self.stop_thread = Event()
+        self.thread.start()
 
     def loop(self):
         socx = self.holder.socket
