@@ -1,4 +1,4 @@
-from codec.base import BaseCodec
+from lib.codec.base import BaseCodec
 
 
 class FloatCodec(BaseCodec[float]):

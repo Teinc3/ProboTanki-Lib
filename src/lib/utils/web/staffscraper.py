@@ -1,6 +1,7 @@
+import re
+
 import requests
 from bs4 import BeautifulSoup
-import re
 
 
 class NameScraper:
@@ -40,6 +41,7 @@ class NameScraper:
 
     def get_names(self):
         return list(self.names_set)
+
 
 if __name__ == "__main__":
     scraper = NameScraper()

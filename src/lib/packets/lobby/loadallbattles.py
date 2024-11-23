@@ -1,6 +1,5 @@
-from packets.abstractpacket import AbstractPacket
-
 from codec.complex import StringCodec
+from packets.abstractpacket import AbstractPacket
 
 
 class Load_All_Battles(AbstractPacket):
@@ -8,4 +7,3 @@ class Load_All_Battles(AbstractPacket):
     description = "Loads all current battles"
     attributes = ['battlesJson']
     codecs = [StringCodec]
-    

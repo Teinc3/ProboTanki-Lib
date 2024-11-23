@@ -1,6 +1,6 @@
-from .abstractprocessor import AbstractProcessor
 from bot.enums import ProcessorCodes, ProcessorIDs
 from lib.modules.packetmanager import packetManager
+from .abstractprocessor import AbstractProcessor
 
 
 class EntryProcessor(AbstractProcessor):
@@ -11,7 +11,7 @@ class EntryProcessor(AbstractProcessor):
 
         if self.compare_packet('Activate_Protection'):
             self.holder.protection.activate(packet_object['keys'])
-        
+
         elif self.compare_packet('Set_Captcha_Keys'):
             client_lang_packet = packetManager.get_packet_by_name('Set_Client_Lang')()
             client_lang_packet.objects = ['en']
@@ -33,7 +33,7 @@ class EntryProcessor(AbstractProcessor):
     def login(self):
         if 'credentials' not in self.holder.storage:
             self.holder.close_socket(ProcessorCodes.WRONG_CREDENTIALS)
-        
+
         # Prune everything except username and password and add rememberMe False
         credentials: dict = self.holder.storage['credentials'].copy()
         login_data = {

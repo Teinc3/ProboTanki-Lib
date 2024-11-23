@@ -1,8 +1,9 @@
-import requests
 import json
+import os
 import random
 import string
-import os
+
+import requests
 
 url = 'https://s.pro-tanki.com/api'
 headers = {
@@ -35,6 +36,7 @@ def generate_gamer_name():
     else:
         return random.choice(adjectives) + random.choice(nouns) + ''.join(random.choices(string.digits, k=3))
 
+
 def generate_random_name():
     # A-Za-z0-9\._- allowed, symbols not allowed as 1st char, 2 symbols cannot be together
     allowed_chars = string.ascii_letters + string.digits + "._-"
@@ -45,24 +47,24 @@ def generate_random_name():
         if i == 0 and name[i] in "._-":
             name = ""
             continue
-        elif name[i] in "._-" and name[i-1] in "._-":
+        elif name[i] in "._-" and name[i - 1] in "._-":
             name = name[:-1]
             continue
         i += 1
-    
+
     return name
-        
+
 
 def generate_password():
     return "skibiditoilet"
-    #return ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(12))
+    # return ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(12))
 
 
 credentials_file_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../data/credentials.json'))
 all_credentials = []
 
 for _ in range(65):
-    nickname = generate_random_name()#generate_gamer_name()
+    nickname = generate_random_name()  # generate_gamer_name()
     password = generate_password()
     email = f"{nickname.lower()}@gmail.com"
     payload = {

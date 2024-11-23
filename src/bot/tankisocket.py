@@ -1,10 +1,12 @@
 import os
 import sys
-import socks
 from threading import Thread
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))) # To access src/
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'lib'))) # To access modules within src/lib/
+import socks
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))  # To access src/
+sys.path.append(
+    os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'lib')))  # To access modules within src/lib/
 
 from lib.modules.protection import Protection
 from lib.packets import AbstractPacket
@@ -14,6 +16,7 @@ from lib.utils.ebytearray import EByteArray
 import processors
 from enums import ProcessorCodes, ProcessorIDs
 from callbackholder import CallbackHolder
+
 
 class TankiSocket:
     ENDPOINT = Address("146.59.110.146", 1337)  # core-protanki.com
@@ -27,7 +30,8 @@ class TankiSocket:
         # Check if credentials come with Proxy and Port
         proxy: Address | None = self.holder.storage['proxy']
         if proxy:
-            self.holder.socket.set_proxy(socks.PROXY_TYPE_SOCKS5, proxy.host, proxy.port, username=proxy.username, password=proxy.password)
+            self.holder.socket.set_proxy(socks.PROXY_TYPE_SOCKS5, proxy.host, proxy.port, username=proxy.username,
+                                         password=proxy.password)
 
         self.holder.swap_processor = self.swap_processor
         self.holder.close_socket = self.close_socket
@@ -54,7 +58,7 @@ class TankiSocket:
                 if len(packet_id_bytes) == 0:
                     raise Exception("Disconnected")
                 packet_id = packet_id_bytes.read_int()
-                
+
                 packet_data_len = packet_len - AbstractPacket.HEADER_LEN
                 encrypted_data = EByteArray()
 
@@ -77,7 +81,7 @@ class TankiSocket:
     def swap_processor(self, p_id: ProcessorIDs):
         def enum_compare(processor: processors.AbstractProcessor):
             return repr(processor.processorID) == repr(p_id)
-        
+
         if enum_compare(processors.EntryProcessor):
             self.processor = processors.EntryProcessor(self.holder)
         elif enum_compare(processors.LobbyProcessor):

@@ -1,6 +1,6 @@
 from .abstractprocessor import AbstractProcessor
-from .entry import EntryProcessor
 from .battle import BattleProcessor
+from .entry import EntryProcessor
 from .lobby import LobbyProcessor
 
 __all__ = [

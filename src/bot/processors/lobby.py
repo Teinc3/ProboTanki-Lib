@@ -1,9 +1,9 @@
 from threading import Thread
 
-from .abstractprocessor import AbstractProcessor
 from bot.enums import ProcessorCodes, ProcessorIDs
 from lib.modules.packetmanager import packetManager
 from lib.utils.web import StaffScraper
+from .abstractprocessor import AbstractProcessor
 
 
 class LobbyProcessor(AbstractProcessor):
@@ -11,13 +11,13 @@ class LobbyProcessor(AbstractProcessor):
 
     def __init__(self, holder):
         super().__init__(holder)
-        
-        if self.holder.watchdog: # Enable watchdog thread
+
+        if self.holder.watchdog:  # Enable watchdog thread
             self.holder.event_emitter.on('all_sheep_ready', self.create_battle)
 
             Thread(target=self.watchdog_thread).start()
 
-        else: # Reports sheep presence through emitter
+        else:  # Reports sheep presence through emitter
             self.holder.event_emitter.emit('sheep_ready', self.holder.storage['sheep_id'], True)
 
             # Set listener to auto select battle
@@ -43,16 +43,16 @@ class LobbyProcessor(AbstractProcessor):
             if 'selected_battle' not in self.holder.storage:
                 return
             if self.holder.watchdog:
-                # Server autoselects the new battle for us
+                # Server auto selects the new battle for us
                 self.holder.storage['selected_battle'] = packet_object['battleID']
                 self.holder.event_emitter.emit('sheep_join_battle', self.holder.storage['selected_battle'])
                 print("Battle ID selected:", packet_object['battleID'])
             else:
-                # Sheep selected the battle, its time to join this shit!
+                # Sheep selected the battle, it's time to join this shit!
                 if self.holder.storage['selected_battle'] != packet_object['battleID']:
                     return
                 join_packet = packetManager.get_packet_by_name('Join_Battle')()
-                join_packet.objects = [self.holder.storage['sheep_id'] % 2] # No Team (Green)
+                join_packet.objects = [self.holder.storage['sheep_id'] % 2]  # No Team (Green)
                 self.send_packet(join_packet)
 
         # elif self.compare_packet('Load_Battle_Info'):
@@ -68,13 +68,13 @@ class LobbyProcessor(AbstractProcessor):
             self.subscribe_mods()
 
     def manual_select_battle(self):
-        if not 'selected_battle' in self.holder.storage:
+        if 'selected_battle' not in self.holder.storage:
             print("Could not find selected battle")
 
         select_packet = packetManager.get_packet_by_name('Select_Battle')()
         select_packet.objects = [self.holder.storage['selected_battle']]
         self.send_packet(select_packet)
-    
+
     def sheep_select_battle(self, battleID: str):
         if self.holder.watchdog:
             return
@@ -83,9 +83,14 @@ class LobbyProcessor(AbstractProcessor):
 
     def create_battle(self, data: dict):
         self.holder.storage['selected_battle'] = True
-        
+
         create_packet = packetManager.get_packet_by_name('Create_Battle')()
-        create_packet.object = {'autoBalance': False, 'battleMode': data['battleMode'], 'format': 0, 'friendlyFire': False, 'battleLimits': {'scoreLimit': 0, 'timeLimit': 90}, 'mapID': data['mapID'], 'maxPeopleCount': data['maxPeopleCount'], 'name': data['name'], 'parkourMode': False, 'privateBattle': False, 'proBattle': True, 'rankRange': {'maxRank': 3, 'minRank': 1}, 'rearm': True, 'theme': 0, 'noSupplyBoxes': True, 'noCrystalBoxes': True, 'noSupplies': True, 'noUpgrade': False}
+        create_packet.object = {'autoBalance': False, 'battleMode': data['battleMode'], 'format': 0,
+                                'friendlyFire': False, 'battleLimits': {'scoreLimit': 0, 'timeLimit': 90},
+                                'mapID': data['mapID'], 'maxPeopleCount': data['maxPeopleCount'], 'name': data['name'],
+                                'parkourMode': False, 'privateBattle': False, 'proBattle': True,
+                                'rankRange': {'maxRank': 3, 'minRank': 1}, 'rearm': True, 'theme': 0,
+                                'noSupplyBoxes': True, 'noCrystalBoxes': True, 'noSupplies': True, 'noUpgrade': False}
         create_packet.deimplement()
         self.send_packet(create_packet)
 
@@ -109,18 +114,20 @@ class LobbyProcessor(AbstractProcessor):
     def process_mod_online_status(self, username: str, status: bool):
         if not 'mods_info' in self.holder.storage:
             return
-        
+
         mods_obj = self.holder.storage['mods_info']
-                
+
         mods_online_status = mods_obj['mods_online_status']
         mod_count = len(mods_obj['mods_list'])
         mods_online_status[username] = status
 
         if len(mods_online_status) != mod_count:
-            return # Wait for data for all mods to arrive
-        
+            return  # Wait for data for all mods to arrive
+
         online_count = sum(mods_online_status.values())
-        print(f"Mods Online: {online_count}/{mod_count} ({', '.join(mod_name for mod_name, is_online in mods_online_status.items() if is_online)})")
+        print(
+            f"Mods Online: {online_count}/{mod_count} "
+            f"({', '.join(mod_name for mod_name, is_online in mods_online_status.items() if is_online)})")
 
         if not mods_obj['all_mods_status_recv']:
             mods_obj['all_mods_status_recv'] = True

@@ -1,4 +1,4 @@
-from modules.protection import Protection
+from lib.modules.protection import Protection
 
 
 class ProtectionHolder:

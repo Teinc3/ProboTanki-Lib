@@ -1,5 +1,6 @@
-import socks
 from typing import Optional
+
+import socks
 
 
 class SocketHolder:

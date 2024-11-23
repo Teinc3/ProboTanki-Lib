@@ -1,6 +1,6 @@
-from codec.base import CustomBaseCodec
-from codec.complex import StringCodec
-from codec.primitive import BoolCodec, IntCodec
+from lib.codec.base import CustomBaseCodec
+from lib.codec.complex import StringCodec
+from lib.codec.primitive import BoolCodec, IntCodec
 
 
 class BattleInfoUserCodec(CustomBaseCodec):

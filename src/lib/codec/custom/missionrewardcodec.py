@@ -1,6 +1,6 @@
-from codec.base import CustomBaseCodec
-from codec.primitive import IntCodec
-from codec.complex import StringCodec
+from lib.codec.base import CustomBaseCodec
+from lib.codec.complex import StringCodec
+from lib.codec.primitive import IntCodec
 
 
 class MissionRewardCodec(CustomBaseCodec):

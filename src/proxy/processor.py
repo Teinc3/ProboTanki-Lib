@@ -1,5 +1,5 @@
-import re
 import json
+import re
 from collections import defaultdict
 
 # Define user_data as a global variable

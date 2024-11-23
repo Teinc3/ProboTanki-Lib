@@ -1,11 +1,12 @@
-import socks
-import struct
-from threading import Thread
 import os
+import struct
 import sys
+from threading import Thread
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))) # src/
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'lib'))) # src/lib/
+import socks
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))  # src/
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'lib')))  # src/lib/
 
 from lib.modules.logger import logger
 from lib.modules.packetmanager import packetManager
@@ -165,6 +166,7 @@ class TankiProxy:
     def end(self):
         self.sockets.close()
         sys.exit(0)
+
 
 if __name__ == "__main__":
     TankiProxy(ProtectionHolder(), SocketHolder())

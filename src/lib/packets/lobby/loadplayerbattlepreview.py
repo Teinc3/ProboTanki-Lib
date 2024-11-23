@@ -1,5 +1,5 @@
-from codec.custom import BattleNotifierCodec
-from packets.abstractpacket import AbstractPacket
+from lib.codec.custom import BattleNotifierCodec
+from lib.packets.abstractpacket import AbstractPacket
 
 
 class Load_Player_Battle_Preview(AbstractPacket):

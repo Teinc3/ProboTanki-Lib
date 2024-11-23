@@ -1,5 +1,5 @@
-import sys
 import os
+import sys
 
 from PyQt5.QtCore import QTimer, Qt
 from PyQt5.QtWidgets import QApplication, QMainWindow, QTextEdit, QLineEdit, QPushButton, QVBoxLayout, QWidget, \
@@ -78,16 +78,16 @@ class LogViewer(QMainWindow):
                     line = log_file.readline()
                     if not line:
                         break
-                    
+
                     # Skip lines that contain "NoDisp" and do not contain any of the search keywords 
                     # If they contain a search keyword, then we still disp them - except "IN" and "OUT"
                     if "NoDisp" in line and not any(
-                        keyword in line and keyword not in ["<IN>", "<OUT>"]
-                        for conditions in self.search_keywords 
-                        for keyword in conditions
+                            keyword in line and keyword not in ["<IN>", "<OUT>"]
+                            for conditions in self.search_keywords
+                            for keyword in conditions
                     ):
                         continue
-    
+
                     if check_line_against_conditions(line, self.search_keywords):
                         self.log_display.append(line.strip())
                 self.last_position = log_file.tell()
