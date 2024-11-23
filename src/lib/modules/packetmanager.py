@@ -22,14 +22,13 @@ class PacketManager:
 
     def load_packets(self):
         for _, module in inspect.getmembers(packets, inspect.ismodule):
-            for _, obj in inspect.getmembers(module, inspect.isclass):
-                if hasattr(obj, 'id'):
-                    self.packets[obj.id] = obj
+            for _, cls in inspect.getmembers(module, inspect.isclass):
+                if hasattr(cls, 'id') and hasattr(cls, 'description'):
+                    self.packets[cls.id] = cls
 
         self.hidden_packets = [packet for packet in self.packets.values() if not packet.shouldLog]
 
-        # if len(self.packets) == 0:
-        #     raise Exception("No packets loaded")
+        print(f"Loaded {len(self.packets)} packets")
 
     def get_packet(self, packet_id: int) -> Type['AbstractPacket'] | None:
         return self.packets.get(packet_id)
