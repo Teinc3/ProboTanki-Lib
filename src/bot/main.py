@@ -24,7 +24,7 @@ class TankiBot:
         "map_serpuhov": 20,
         "map_madness": 32,
     }
-    BATTLE_MODE = 0 # DM, 1 = TDM
+    BATTLE_MODE = 1 # DM, 1 = TDM
     SELECTED_MAP = "map_serpuhov"
     SOCKET_FAILURE_BUFFER_COUNT = 4
     MAX_BATTLE_SIZE = MAX_PLAYER_COUNTS[SELECTED_MAP] * (1 if BATTLE_MODE == 0 else 2 )
