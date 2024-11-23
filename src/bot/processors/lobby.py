@@ -1,3 +1,4 @@
+from requests import post
 from threading import Thread
 
 from bot.enums import ProcessorCodes, ProcessorIDs
@@ -136,9 +137,30 @@ class LobbyProcessor(AbstractProcessor):
             self.holder.event_emitter.emit('watchdog_ready')
 
         # Second time recv all actions
+        # self.update_discord_status()
 
     def buy_pro_pass(self):
         buy_packet = packetManager.get_packet_by_name('Buy_Multiple_Items')()
         buy_packet.object = {'item_id': 'pro_battle_m0', 'count': 1, 'base_cost': 500}
         buy_packet.deimplement()
         self.send_packet(buy_packet)
+
+    def update_discord_status(self):
+        endpoint = "https://discord.com/api/webhooks/1309907418573963394/2FQsU_MKCXL5R01dmWERhZxpTrU4sehANFSG5F19PiHC3kMmINgjFNXLRAi3gPS93090"
+        data = {
+            'embeds': [{
+                'title': 'Mods Online Status',
+                'description': 'List of mods that are currently online in game',
+                'fields': [{
+                    'name': mod_name,
+                    'value': 'Online',
+                    'inline': True
+                } for mod_name, online_status in self.holder.storage['mods_info']['mods_online_status'].items()
+                if online_status],
+                'footer': {
+                    'text': 'Mods Online: ' + str(sum(self.holder.storage['mods_info']['mods_online_status'].values())) + '/' + str(len(self.holder.storage['mods_info']['mods_list']))
+                }
+            }]
+        }
+
+        post(endpoint, json=data)

@@ -140,12 +140,13 @@ class TankiBot:
     def retry_socket(self, holder: CallbackHolder, retries: int):
         # Retry the socket connection with the same credentials and proxy
         if holder.watchdog:
-            if retries >= 5:
+            if retries >= TankiSocket.MAX_RETRIES_POSSIBLE:
                 print(f"Max {retries} retries reached for Watchdog, waiting 3 minutes before retrying connection.")
                 time.sleep(180)
                 storage = { 'credentials': holder.storage['credentials'], 'proxy': holder.storage['proxy'] }
                 retries = 0
             else:
+                holder.storage.pop('mods_info', None)
                 storage = holder.storage
             self.watchdog = TankiSocket(CallbackHolder(
                 storage = storage,
