@@ -1,5 +1,5 @@
-from codec.complex import StringCodec
-from packets.abstractpacket import AbstractPacket
+from lib.codec.complex import StringCodec
+from lib.packets.abstractpacket import AbstractPacket
 
 
 class Subscribe_Status(AbstractPacket):
@@ -13,9 +13,9 @@ class Subscribe_Status(AbstractPacket):
     # def process(self):
     #     if Subscribe_Status._has_called:
     #         return
-        
+
     #     Subscribe_Status._has_called = True
-    
+
     #     # Otherwise, we craft a packet to subscribe to all fucking mods and admins in the game! hehehehaw
     #     mods = ['CreatorTheGreat', 'Mode', 'Bananza1337', 'Kyanq', 'R.e', 'Profiler', '2wham', 'Sashga', 'Jhz', 'Armor', '20matar70correr', 'dexth', 'debug', 'Hayro', 'MaJor', 'Dont_Break_My_Heart', 'ladraodegold', 'Kokory', 'Capita', 'kl_nazariy', 'Mr.Soyer', 'kapodelimao', 'Nan', 'M0Gz', 'Specter', 'RIOT', 'RERO', 'Anestesic', 'kamusk', 'Eyes', 'target', 'CaMyCb', 'Lead', 'New.Day', 'Brave', 'test', 'supermegaomega', 'STAFF.BR', 'Samo', 'JhowJhow', 'FearIess', 'SNX', 'AndreyZT', 'xakep33rus', 'Dream']
 
@@ -28,5 +28,5 @@ class Subscribe_Status(AbstractPacket):
     #         self.log()
 
     #         sleep(0.05)
-        
+
     #     return True

@@ -1,9 +1,10 @@
 import inspect
 from typing import Type, TYPE_CHECKING
 
-import packets
+import lib.packets as packets
+
 if TYPE_CHECKING:
-    from packets import AbstractPacket
+    from lib.packets import AbstractPacket
 
 
 class PacketManager:

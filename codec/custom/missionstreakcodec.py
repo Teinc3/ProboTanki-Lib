@@ -1,5 +1,5 @@
-from codec.base import CustomBaseCodec
-from codec.primitive import IntCodec, BoolCodec
+from lib.codec.base import CustomBaseCodec
+from lib.codec.primitive import IntCodec, BoolCodec
 
 
 class MissionStreakCodec(CustomBaseCodec):

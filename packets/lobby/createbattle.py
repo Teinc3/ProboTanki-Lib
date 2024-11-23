@@ -1,7 +1,7 @@
-from codec.complex import StringCodec
-from codec.custom import BattleLimitsCodec, RankRangeCodec
-from codec.primitive import BoolCodec, IntCodec
-from packets.abstractpacket import AbstractPacket
+from lib.codec.complex import StringCodec
+from lib.codec.custom import BattleLimitsCodec, RankRangeCodec
+from lib.codec.primitive import BoolCodec, IntCodec
+from lib.packets.abstractpacket import AbstractPacket
 
 
 class Create_Battle(AbstractPacket):

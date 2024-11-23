@@ -1,7 +1,8 @@
 import json
 
-from ..base import BaseCodec
 from . import StringCodec
+from ..base import BaseCodec
+
 
 class JsonCodec(BaseCodec[dict]):
     """Codec for JSON objects"""

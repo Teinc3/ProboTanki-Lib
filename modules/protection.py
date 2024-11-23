@@ -1,4 +1,4 @@
-from utils.ebytearray import EByteArray
+from lib.utils.ebytearray import EByteArray
 
 
 class Protection:
@@ -17,7 +17,7 @@ class Protection:
     def __init__(self, proxy: bool = False, direction: bool = None) -> None:
         self.active = False
         self.proxy = proxy
-        
+
         if proxy:
             self.direction = direction
 
@@ -38,7 +38,7 @@ class Protection:
             base_xor = self.base ^ (i << 3)
             self.decryption_vector[i] = base_xor ^ (0x0 if not self.proxy else xor_flip)
             self.encryption_vector[i] = base_xor ^ (0x57 if not self.proxy else xor_flip)
-        
+
         self.active = True
 
     def decrypt(self, encrypted_data: EByteArray):

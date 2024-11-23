@@ -1,12 +1,12 @@
 from typing import ClassVar, Type
 
-from codec.base import BaseCodec
-from modules.logger import Logger, logger
-from modules.protection import Protection
+from lib.codec.base import BaseCodec
+from lib.modules.logger import Logger, logger
+from lib.modules.protection import Protection
 
-from utils.holders.protectionholder import ProtectionHolder
-from utils.holders.socketholder import SocketHolder
-from utils.ebytearray import EByteArray
+from lib.utils.holders.protectionholder import ProtectionHolder
+from lib.utils.holders.socketholder import SocketHolder
+from lib.utils.ebytearray import EByteArray
 
 
 # Trust me, when you automate every function it ain't abstract anymore
@@ -31,7 +31,7 @@ class AbstractPacket():
 
     def __init__(self, proxy: bool = False, direction: bool = None, protections: ProtectionHolder = None, sockets: SocketHolder = None):
         self.proxy = proxy
-        
+
         if proxy:
             self.direction = direction
             self.protections = protections
@@ -53,7 +53,7 @@ class AbstractPacket():
         for i in range(0, len(self.codecs)):
             codec = self.codecs[i](packet_data)
             data_len += codec.encode(self.objects[i])
-        
+
         encrypted_data = (self.protections.c2s if self.proxy else protection).encrypt(packet_data)
         packet_data = EByteArray().write_int(data_len).write_int(self.id).write(encrypted_data)
         return packet_data

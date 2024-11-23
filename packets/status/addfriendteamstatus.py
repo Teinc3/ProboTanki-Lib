@@ -1,6 +1,6 @@
-from codec.complex import StringCodec
-from codec.primitive import IntCodec
-from packets.abstractpacket import AbstractPacket
+from lib.codec.complex import StringCodec
+from lib.codec.primitive import IntCodec
+from lib.packets.abstractpacket import AbstractPacket
 
 
 class Add_Friends_Team_Status(AbstractPacket):

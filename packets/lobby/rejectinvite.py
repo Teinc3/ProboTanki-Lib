@@ -1,6 +1,5 @@
-from packets.abstractpacket import AbstractPacket
-
-from codec.complex import StringCodec
+from lib.codec.complex import StringCodec
+from lib.packets.abstractpacket import AbstractPacket
 
 
 class Reject_Invite(AbstractPacket):

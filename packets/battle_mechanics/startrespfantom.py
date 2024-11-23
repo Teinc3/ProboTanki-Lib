@@ -1,7 +1,6 @@
-from packets.abstractpacket import AbstractPacket
-
-from codec.primitive import ShortCodec, IntCodec
-from codec.complex import StringCodec, Vector3DCodec
+from lib.codec.complex import StringCodec, Vector3DCodec
+from lib.codec.primitive import ShortCodec, IntCodec
+from lib.packets.abstractpacket import AbstractPacket
 
 
 class Start_Resp_Fantom(AbstractPacket):
@@ -9,4 +8,3 @@ class Start_Resp_Fantom(AbstractPacket):
     description = "Information about fantom status of a player"
     attributes = ["username", "team", "position", "orientation", "health", "incarnationID"]
     codecs = [StringCodec, IntCodec, Vector3DCodec, Vector3DCodec, ShortCodec, ShortCodec]
-    

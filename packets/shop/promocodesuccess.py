@@ -1,4 +1,4 @@
-from packets.abstractpacket import AbstractPacket
+from lib.packets.abstractpacket import AbstractPacket
 
 
 class Promocode_Success(AbstractPacket):
