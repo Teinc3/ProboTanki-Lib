@@ -1,3 +1,4 @@
+from .email import Email
 from .setcaptchakeys import Set_Captcha_Keys
 from .setclientlang import Set_Client_Lang
 from .loadresources import Load_Resources
@@ -25,5 +26,6 @@ __all__ = [
     Load_Map_Info,
     Load_Newbie_Rewards,
     Load_Account_Stats,
-    Load_Friends_List
+    Load_Friends_List,
+    Email
 ]

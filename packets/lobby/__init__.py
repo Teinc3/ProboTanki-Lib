@@ -12,6 +12,7 @@ from .loadallbattles import Load_All_Battles
 from .loadbattleinfo import Load_Battle_Info
 from .loadlobby import Load_Lobby
 from .loadplayerbattlepreview import Load_Player_Battle_Preview
+from .openfriendslist import Open_Friends_List
 from .playerbattleratings import Player_Battle_Stats
 from .receivedinvite import Received_Invite
 from .rejectinvite import Reject_Invite
@@ -56,5 +57,6 @@ __all__ = [
     Send_Invite,
     Server_Restart,
     Load_Lobby,
-    Player_Battle_Stats
+    Player_Battle_Stats,
+    Open_Friends_List
 ]

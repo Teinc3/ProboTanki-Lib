@@ -1,5 +1,6 @@
 from .battlestats import Battle_User_Team_Stats
 from .battleusercontrol import Battle_User_Control
+from .changedequipment import User_Changed_Equipment
 from .deathdelayend import Death_Delay_End
 from .effectaftermath import Effect_Aftermath
 from .endrespfantom import End_Resp_Fantom
@@ -8,6 +9,8 @@ from .loadcurrentsupplyeffect import Load_Supply_Effect
 from .loadmaplights import Load_Map_Lights
 from .loadownedgarageitems import Load_Owned_Garage_Items
 from .loadpurchasableitems import Load_Purchasable_Items
+from .minelocation import Mine_Location
+from .mineplace import Mine_Place
 from .move import Move
 from .movecommand import Move_Command
 from .moved import Moved
@@ -22,12 +25,14 @@ from .shotdirection import Shot_Direction
 from .shoteffect import Shot_Effect
 from .shoteffectapplied import Shot_Effect_Applied
 from .startrespfantom import Start_Resp_Fantom
+from .suicidedelay import Suicide_Delay
 from .supplybonusid import Supply_Box_Drop_Bonus_id
 from .bonusboxexistinglocations import Bonus_Box_Existing_Locations
 from .bonusboxdropped import Bonus_Box_Dropped
 from .collectbonusbox import Collect_Bonus_Box
 from .tankmoveinfo import Tank_Stat_Synced
 from .tankstatsync import Tank_Move_Info
+from .turretcontrol import Turret_Control
 from .turretrotated import Turret_Rotated
 from .turretrotation import Turret_Rotation
 from .usersuppliesinfo import User_Supplies_info
@@ -65,5 +70,10 @@ __all__ = [
     Load_Owned_Garage_Items,
     Load_Map_Lights,
     Load_Supply_Effect,
-    Load_Bonus_Box_Resources
+    Load_Bonus_Box_Resources,
+    Mine_Location,
+    Mine_Place,
+    Turret_Control,
+    User_Changed_Equipment,
+    Suicide_Delay
 ]
