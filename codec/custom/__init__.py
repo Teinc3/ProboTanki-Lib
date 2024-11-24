@@ -1,7 +1,9 @@
 from .battleinfocodec import BattleInfoCodec
-from .battleinfousercodec import BattleInfoUserCodec
+from .battleimfouserpreviewcodec import BattleInfoUserCodec
 from .battlelimitscodec import BattleLimitsCodec
 from .battlenotifiercodec import BattleNotifierCodec
+from .battleuserrewardscodec import BattleUserRewardsCodec
+from .battleuserstatscodec import BattleUserStatsCodec
 from .chatmessagecodec import ChatMessageCodec
 from .missioncodec import MissionCodec
 from .missionrewardcodec import MissionRewardCodec
@@ -28,4 +30,6 @@ __all__ = [
     TurretRotateCodec,
     UserStatsCodec,
     UserStatusCodec,
+    BattleUserStatsCodec,
+    BattleUserRewardsCodec,
 ]
