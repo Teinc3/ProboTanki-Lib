@@ -16,7 +16,9 @@ from .shotdirection import Shot_Direction
 from .shoteffect import Shot_Effect
 from .startrespfantom import Start_Resp_Fantom
 from .supplybonusid import Supply_Box_Drop_Bonus_id
-from .crystaldropbox import Crystal_Box_Drop_Location
+from .bonusboxexistinglocations import Bonus_Box_Existing_Locations
+from .bonusboxdropped import Bonus_Box_Dropped
+from .collectbonusbox import Collect_Bonus_Box
 from .tankmoveinfo import Tank_Stat_Synced
 from .tankstatsync import Tank_Move_Info
 from .turretrotated import Turret_Rotated
@@ -34,8 +36,10 @@ __all__ = [
     Death_Delay_End,
     Start_Resp_Fantom,
     End_Resp_Fantom,
-    Crystal_Box_Drop_Location,
+    Bonus_Box_Dropped,
+    Collect_Bonus_Box,
     Supply_Box_Drop_Bonus_id,
+    Bonus_Box_Existing_Locations,
     Battle_User_Control,
     Move_Command,
     Player_Shot,
