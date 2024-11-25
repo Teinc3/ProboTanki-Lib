@@ -1,6 +1,7 @@
 [
   {
     "name": "A.X.Y",
+    "email": "osamagoonerskibid.i@gmail.com",
     "locale": "english/generic",
     "proxy": {
       "location": "cz", 
@@ -10,6 +11,7 @@
   },
   {
     "name": "The.Chosen.One",
+    "email": "osamagoonerskibi.di@gmail.com",
     "locale": "english/generic",
     "proxy": {
       "location": "cz", 
@@ -19,6 +21,7 @@
   },
   {
     "name": "Runway",
+    "email": "osamagoonerskibi.d.i@gmail.com",
     "locale": "english/generic",
     "proxy": {
       "location": "cz", 
@@ -28,6 +31,7 @@
   },
   {
     "name": "vvita26",
+    "email": "osamagoonerskib.idi@gmail.com",
     "locale": "english/generic",
     "proxy": {
       "location": "cz", 
@@ -37,6 +41,7 @@
   },
   {
     "name": "Grobnik",
+    "email": "osamagoonerskib.id.i@gmail.com",
     "locale": "russian",
     "proxy": {
       "location": "cz", 
