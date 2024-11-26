@@ -96,8 +96,7 @@ class LobbyProcessor(AbstractProcessor):
                                 'parkourMode': False, 'privateBattle': False, 'proBattle': True,
                                 'rankRange': {'maxRank': 3, 'minRank': 1}, 'rearm': False, 'theme': 0,
                                 'noSupplyBoxes': False, 'noCrystalBoxes': False, 'noSupplies': False, 'noUpgrade': False}
-        # Hardcode
-        create_packet.object['maxPeopleCount'] = 3
+
         create_packet.deimplement()
         self.send_packet(create_packet)
 
