@@ -3,7 +3,7 @@ from lib.packets.abstractpacket import AbstractPacket
 from lib.codec.primitive import IntCodec
 
 
-class Smokey_Shot_OUT(AbstractPacket):
+class Smoky_Shoot_Wall_OUT(AbstractPacket):
     id = 1470597926
     description = "Smokey Shoot out"
     attributes = ["clientTime", "hitPoint"]

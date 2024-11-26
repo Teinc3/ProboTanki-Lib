@@ -91,7 +91,7 @@ class LobbyProcessor(AbstractProcessor):
         
         create_packet = packetManager.get_packet_by_name('Create_Battle')()
         create_packet.object = {'autoBalance': False, 'battleMode': data['battleMode'], 'format': 0,
-                                'friendlyFire': False, 'battleLimits': {'scoreLimit': 0, 'timeLimit': 90},
+                                'friendlyFire': False, 'battleLimits': {'scoreLimit': 0, 'timeLimit': 45},
                                 'mapID': data['mapID'], 'maxPeopleCount': data['maxPeopleCount'], 'name': data['name'],
                                 'parkourMode': False, 'privateBattle': False, 'proBattle': True,
                                 'rankRange': {'maxRank': 3, 'minRank': 1}, 'rearm': False, 'theme': 0,
