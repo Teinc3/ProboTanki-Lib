@@ -12,6 +12,7 @@ from .timeleftinseconds import Battle_Time_Left
 from .updatebattleplayerstatistics import Update_Battle_Player_Statistics
 from .userrewards import Battle_User_Rewards
 from .userstats import Battle_User_Stats
+from .goldboxdroptext import Gold_Box_Drop_Text
 
 __all__ = [
     Tank_Health,
@@ -28,4 +29,5 @@ __all__ = [
     Player_Start_Position,
     Battle_User_Stats,
     Battle_User_Rewards,
+    Gold_Box_Drop_Text
 ]
