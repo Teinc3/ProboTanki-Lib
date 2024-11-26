@@ -49,10 +49,9 @@ class TankiSocket:
         socx = self.holder.socket
         try:
             socx.connect(self.ENDPOINT.split_args)
-        except Exception:
-            # Purge proxy
-            self.holder.event_emitter.emit('purge_proxy', self.holder.storage['proxy'])
+        except Exception as e:
             self.retries = self.MAX_RETRIES_POSSIBLE
+            print(f"Proxy Error: {e} | {self.holder.storage}")
             self.close_socket(ProcessorCodes.PROXY_ERROR)
             return
 

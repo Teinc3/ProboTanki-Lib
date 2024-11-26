@@ -8,7 +8,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))) 
 sys.path.append(
     os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'lib')))  # To access modules within src/lib/
 
-from rotator import ProxyManager, CredentialManager
+from bot.accountmanager import AccountManager
 from tankisocket import TankiSocket
 from callbackholder import CallbackHolder
 
@@ -19,41 +19,39 @@ class TankiBot:
     sheeps_ready: set[int]
     battle_size: int
 
-    CREDENTIALS_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "data", "credentials.json"))
     MAX_PLAYER_COUNTS = {
         "map_serpuhov": 20,
         "map_madness": 32,
     }
     BATTLE_MODE = 1 # DM, 1 = TDM
     SELECTED_MAP = "map_serpuhov"
-    SOCKET_FAILURE_BUFFER_COUNT = 4
+    SOCKET_FAILURE_BUFFER_COUNT = 0
     MAX_BATTLE_SIZE = MAX_PLAYER_COUNTS[SELECTED_MAP] * (1 if BATTLE_MODE == 0 else 2 )
 
     def __init__(self):
-        self.proxy_manager = ProxyManager()
-        self.credential_manager = CredentialManager()
+        self.account_manager = AccountManager()
         self.event_emitter = EventEmitter()
 
         self.sheep_lock = Lock()
 
-        self.load_data()
         self.set_event_listeners()
+        self.init_watchdog()
         
+    def init_watchdog(self):
+        watchdog_account = self.account_manager.get_next_account()
         self.watchdog = TankiSocket(CallbackHolder(
-            storage = { 'credentials': self.credential_manager.get_next_credentials(), 'proxy': self.proxy_manager.assign_proxy() },
+            storage = { 
+                'credentials': AccountManager.get_account_credentials(watchdog_account),
+                'proxy': AccountManager.get_account_proxy(watchdog_account)
+            },
             event_emitter = self.event_emitter,
             watchdog = True
         ))
-
-    def load_data(self):
-        self.proxy_manager.fetch_proxies()
-        self.credential_manager.load_credentials(self.CREDENTIALS_PATH)
 
     def set_event_listeners(self):
         self.event_emitter.on('watchdog_ready', self.start_sheep)
         self.event_emitter.on('sheep_ready', self.sheep_ready)
         self.event_emitter.on('delete_sheep', self.delete_sheep)
-        self.event_emitter.on('purge_proxy', self.proxy_manager.purge_proxy)
         self.event_emitter.on('retry_socket', self.retry_socket)
     
     def start_sheep(self):
@@ -61,14 +59,17 @@ class TankiBot:
         if hasattr(self, 'sheep') and len(self.sheep) > 0:
             return
         self.sheep = []
-        max_sheep = min(self.credential_manager.remaining_accounts_count, self.proxy_manager.remaining_connections_count)
-        sheep_needed = min(max_sheep, self.MAX_BATTLE_SIZE + self.SOCKET_FAILURE_BUFFER_COUNT)
+        sheep_needed = min(self.account_manager.accounts_remaining, self.MAX_BATTLE_SIZE + self.SOCKET_FAILURE_BUFFER_COUNT)
         self.battle_size = min(sheep_needed - self.SOCKET_FAILURE_BUFFER_COUNT, self.MAX_BATTLE_SIZE)
 
         for i in range(sheep_needed):
+            sheep_account = self.account_manager.get_next_account()
             self.sheep.append(TankiSocket(CallbackHolder(
-                storage={'sheep_id': i, 'credentials': self.credential_manager.get_next_credentials(),
-                         'proxy': self.proxy_manager.assign_proxy()},
+                storage={
+                    'sheep_id': i, 
+                    'credentials': AccountManager.get_account_credentials(sheep_account),
+                    'proxy': AccountManager.get_account_proxy(sheep_account),
+                },
                 event_emitter=self.event_emitter,
                 watchdog=False
             )))

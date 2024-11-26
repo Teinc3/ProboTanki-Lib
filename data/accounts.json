@@ -1,0 +1,69 @@
+[
+  {
+    "username": "SavageReaper623",
+    "password": "QzeDyzEBF1CF",
+    "info": {
+      "rank": 3
+    },
+    "proxy": {
+      "location": "tr",
+      "host": "206.41.168.253",
+      "port": 6918
+    }
+  },
+  {
+    "username": "A.X.Y",
+    "info": {
+      "rank": 1
+    },
+    "proxy": {
+      "location": "cz", 
+      "host": "104.239.86.133",
+      "port": 6043
+    }
+  },
+  {
+    "username": "The.Chosen.One",
+    "info": {
+      "rank": 1
+    },
+    "proxy": {
+      "location": "cz", 
+      "host": "216.173.109.223",
+      "port": 6454
+    }
+  },
+  {
+    "username": "Runway",
+    "info": {
+      "rank": 1
+    },
+    "proxy": {
+      "location": "cz", 
+      "host": "92.112.238.54",
+      "port": 6933
+    }
+  },
+  {
+    "username": "vvita26",
+    "info": {
+      "rank": 1
+    },
+    "proxy": {
+      "location": "cz", 
+      "host": "92.112.227.45",
+      "port": 6217
+    }
+  },
+  {
+    "username": "Grobnik",
+    "info": {
+      "rank": 1
+    },
+    "proxy": {
+      "location": "cz", 
+      "host": "92.112.227.84",
+      "port": 6256
+    }
+  }
+]

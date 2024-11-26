@@ -46,7 +46,6 @@ class LobbyProcessor(AbstractProcessor):
                 # Server autoselects the newly created battle for us
                 self.holder.storage['selected_battle']['battleID'] = packet_object['battleID']
                 self.holder.event_emitter.emit('sheep_join_battle', self.holder.storage['selected_battle'].copy())
-                print("Battle ID selected:", packet_object['battleID'])
             else:
                 # Sheep selected the battle, its time to join this shit!
                 if self.holder.storage['selected_battle']['battleID'] != packet_object['battleID']:
@@ -54,6 +53,10 @@ class LobbyProcessor(AbstractProcessor):
                 join_packet = packetManager.get_packet_by_name('Join_Battle')()
                 join_packet.objects = [2 if self.holder.storage['selected_battle']['battleMode'] == 0 else self.holder.storage['sheep_id'] % 2]
                 self.send_packet(join_packet)
+
+        elif self.compare_packet('Change_Layout'):
+            if packet_object['layout'] == 3:
+                self.holder.swap_processor(ProcessorIDs.P_BATTLE)
 
         # elif self.compare_packet('Load_Battle_Info'):
         #     packet_object = packet_object['json']
@@ -87,12 +90,14 @@ class LobbyProcessor(AbstractProcessor):
         }
         
         create_packet = packetManager.get_packet_by_name('Create_Battle')()
-        create_packet.object = {'autoBalance': True, 'battleMode': data['battleMode'], 'format': 0,
-                                'friendlyFire': False, 'battleLimits': {'scoreLimit': 0, 'timeLimit': 60},
+        create_packet.object = {'autoBalance': False, 'battleMode': data['battleMode'], 'format': 0,
+                                'friendlyFire': False, 'battleLimits': {'scoreLimit': 0, 'timeLimit': 90},
                                 'mapID': data['mapID'], 'maxPeopleCount': data['maxPeopleCount'], 'name': data['name'],
                                 'parkourMode': False, 'privateBattle': False, 'proBattle': True,
-                                'rankRange': {'maxRank': 3, 'minRank': 1}, 'rearm': True, 'theme': 0,
-                                'noSupplyBoxes': True, 'noCrystalBoxes': True, 'noSupplies': True, 'noUpgrade': False}
+                                'rankRange': {'maxRank': 3, 'minRank': 1}, 'rearm': False, 'theme': 0,
+                                'noSupplyBoxes': False, 'noCrystalBoxes': False, 'noSupplies': False, 'noUpgrade': False}
+        # Hardcode
+        create_packet.object['maxPeopleCount'] = 3
         create_packet.deimplement()
         self.send_packet(create_packet)
 

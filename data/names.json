@@ -3,6 +3,9 @@
     "name": "A.X.Y",
     "email": "osamagoonerskibid.i@gmail.com",
     "locale": "english/generic",
+    "info": {
+      "rank": 1
+    },
     "proxy": {
       "location": "cz", 
       "host": "104.239.86.133",
@@ -13,6 +16,9 @@
     "name": "The.Chosen.One",
     "email": "osamagoonerskibi.di@gmail.com",
     "locale": "english/generic",
+    "info": {
+      "rank": 1
+    },
     "proxy": {
       "location": "cz", 
       "host": "216.173.109.223",
@@ -23,6 +29,9 @@
     "name": "Runway",
     "email": "osamagoonerskibi.d.i@gmail.com",
     "locale": "english/generic",
+    "info": {
+      "rank": 1
+    },
     "proxy": {
       "location": "cz", 
       "host": "92.112.238.54",
@@ -33,16 +42,22 @@
     "name": "vvita26",
     "email": "osamagoonerskib.idi@gmail.com",
     "locale": "english/generic",
+    "info": {
+      "rank": 1
+    },
     "proxy": {
       "location": "cz", 
       "host": "92.112.227.45",
-      "port": 6454
+      "port": 6217
     }
   },
   {
     "name": "Grobnik",
     "email": "osamagoonerskib.id.i@gmail.com",
     "locale": "russian",
+    "info": {
+      "rank": 1
+    },
     "proxy": {
       "location": "cz", 
       "host": "92.112.227.84",
