@@ -12,6 +12,7 @@ from .loadmapinfo import Load_Map_Info
 from .loadnewbierewards import Load_Newbie_Rewards
 from .loadaccountstats import Load_Account_Stats
 from .loadfriendslist import Load_Friends_List
+from .changelayout import Change_Layout
 
 __all__ = [
     Set_Captcha_Keys,
@@ -27,5 +28,6 @@ __all__ = [
     Load_Newbie_Rewards,
     Load_Account_Stats,
     Load_Friends_List,
-    Email
+    Email,
+    Change_Layout
 ]
