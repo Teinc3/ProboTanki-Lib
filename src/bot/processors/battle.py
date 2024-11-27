@@ -151,12 +151,13 @@ class BattleProcessor(AbstractProcessor):
             packet.object['incarnationID'] = enemy.incarnation_id
 
             # We do some trolling here
-            packet.object['targetBodyPosition'] = {'x': 0, 'y': 0, 'z': 0}
-            packet.object['localHitPoint'] = {'x': 0, 'y': 0, 'z': 0}
-            packet.object['globalHitPoint'] = {'x': 0, 'y': 0, 'z': 0}
+            packet.object['targetBodyPosition'] = enemy.position
+            packet.object['localHitPoint'] = Player.generate_vector_offset(100)
+            packet.object['globalHitPoint'] = enemy.generate_global_position(Player.generate_vector_offset(100))
             
             packet.deimplement()
             self.send_packet(packet)
+            print(self.holder.storage['credentials']['username'], "tries to shoot:", packet.object)
 
             # Wait 2 seconds
             time.sleep(2)
