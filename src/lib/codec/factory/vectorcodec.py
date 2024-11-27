@@ -11,7 +11,7 @@ class AbstractVectorCodec(BaseCodec[list[T]], Generic[T, C]):
     codec: Type[C]
 
     def decode(self) -> list[T]:
-        if self.shortern and BoolCodec(self._buffer).decode():
+        if self.boolshortern and BoolCodec(self._buffer).decode():
             return []
 
         list_len = IntCodec(self._buffer).decode()
@@ -19,7 +19,7 @@ class AbstractVectorCodec(BaseCodec[list[T]], Generic[T, C]):
 
     def encode(self, value: list[T]) -> int:
         bytes_written = 0
-        if self.shortern:
+        if self.boolshortern:
             bytes_written += BoolCodec(self._buffer).encode(len(value) == 0)
             if len(value) == 0:
                 return bytes_written
@@ -30,11 +30,11 @@ class AbstractVectorCodec(BaseCodec[list[T]], Generic[T, C]):
         return bytes_written
 
 
-def VectorCodecFactory(element_type: Type[T], element_codec: Type[C], param_shortern=False) -> Type[
+def VectorCodecFactory(element_type: Type[T], element_codec: Type[C], param_boolshortern=False) -> Type[
     AbstractVectorCodec[T, C]]:
     class VectorCodec(AbstractVectorCodec[T, C]):
         codec = element_codec
-        shortern = param_shortern
+        boolshortern = param_boolshortern
 
     VectorCodec.__name__ = f"VectorCodec[{element_type.__name__}, {element_codec.__name__}]"
     return VectorCodec

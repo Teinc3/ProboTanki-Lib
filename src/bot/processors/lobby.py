@@ -2,7 +2,6 @@ from requests import post
 from threading import Thread
 
 from bot.enums import ProcessorCodes, ProcessorIDs
-from lib.modules.packetmanager import packetManager
 from lib.utils.web import StaffScraper
 from .abstractprocessor import AbstractProcessor
 
@@ -43,27 +42,35 @@ class LobbyProcessor(AbstractProcessor):
             if 'selected_battle' not in self.holder.storage:
                 return
             if self.holder.watchdog:
+                # There is a possibility that the battle was not created by the watchdog but selected by the server
+                # We will figure out a way later
                 # Server autoselects the newly created battle for us
                 self.holder.storage['selected_battle']['battleID'] = packet_object['battleID']
                 self.holder.event_emitter.emit('sheep_join_battle', self.holder.storage['selected_battle'].copy())
+            # For sheep, we use Load_Battle_Info instead
+
+        elif self.compare_packet('Load_Battle_Info'):
+            packet_object = packet_object['json']
+
+            if self.holder.watchdog or not 'selected_battle' in self.holder.storage:
+                return
+            
+            # Sheep selected the battle, its time to join this shit!
+            if self.holder.storage['selected_battle']['battleID'] != packet_object['itemId']:
+                return
+            join_packet = self.packetManager.get_packet_by_name('Join_Battle')()
+            join_packet.objects = [2 if self.holder.storage['selected_battle']['battleMode'] == 0 else self.holder.storage['sheep_id'] % 2]
+
+            # We don't quite have pro battle pass rn, so we buy it first before joining the battle
+            if 'proBattleTimeLeftInSec' in packet_object and packet_object['proBattleTimeLeftInSec'] == -1:
+                self.buy_pro_pass()
+                self.create_timer(1, join_packet) # 1 second margin
+
             else:
-                # Sheep selected the battle, its time to join this shit!
-                if self.holder.storage['selected_battle']['battleID'] != packet_object['battleID']:
-                    return
-                join_packet = packetManager.get_packet_by_name('Join_Battle')()
-                join_packet.objects = [2 if self.holder.storage['selected_battle']['battleMode'] == 0 else self.holder.storage['sheep_id'] % 2]
                 self.send_packet(join_packet)
 
-        elif self.compare_packet('Change_Layout'):
-            if packet_object['layout'] == 3:
-                self.holder.swap_processor(ProcessorIDs.P_BATTLE)
-
-        # elif self.compare_packet('Load_Battle_Info'):
-        #     packet_object = packet_object['json']
-
-        #     if 'proBattleTimeLeftInSec' in packet_object and packet_object['proBattleTimeLeftInSec'] == -1:
-        #         self.buy_pro_pass()
-        #         print("Pro Pass bought successfully for:", self.holder.storage['credentials']['username'])
+            # Remove this battle from storage, otherwise we might keep rejoining even after AC kicks us
+            del self.holder.storage['selected_battle']
 
     def watchdog_thread(self):
         # Subscribe to mods online status, if not already subscribed
@@ -74,7 +81,7 @@ class LobbyProcessor(AbstractProcessor):
         if not 'selected_battle' in self.holder.storage or not 'battleID' in self.holder.storage['selected_battle']:
             print("Could not find selected battle")
 
-        select_packet = packetManager.get_packet_by_name('Select_Battle')()
+        select_packet = self.packetManager.get_packet_by_name('Select_Battle')()
         select_packet.objects = [self.holder.storage['selected_battle']['battleID']]
         self.send_packet(select_packet)
     
@@ -89,12 +96,12 @@ class LobbyProcessor(AbstractProcessor):
             'battleMode': data['battleMode'],
         }
         
-        create_packet = packetManager.get_packet_by_name('Create_Battle')()
+        create_packet = self.packetManager.get_packet_by_name('Create_Battle')()
         create_packet.object = {'autoBalance': False, 'battleMode': data['battleMode'], 'format': 0,
-                                'friendlyFire': False, 'battleLimits': {'scoreLimit': 0, 'timeLimit': 45},
+                                'friendlyFire': False, 'battleLimits': {'scoreLimit': 0, 'timeLimit': 90},
                                 'mapID': data['mapID'], 'maxPeopleCount': data['maxPeopleCount'], 'name': data['name'],
                                 'parkourMode': False, 'privateBattle': False, 'proBattle': True,
-                                'rankRange': {'maxRank': 3, 'minRank': 1}, 'rearm': False, 'theme': 0,
+                                'rankRange': {'maxRank': 3, 'minRank': 1}, 'noRearm': False, 'theme': 0,
                                 'noSupplyBoxes': False, 'noCrystalBoxes': False, 'noSupplies': False, 'noUpgrade': False}
 
         create_packet.deimplement()
@@ -111,7 +118,7 @@ class LobbyProcessor(AbstractProcessor):
         if len(mods_obj['mods_list']) == 0:
             self.holder.close_socket(ProcessorCodes.STAFF_SCRAPER_ERROR)
 
-        Subscribe_Packet = packetManager.get_packet_by_name('Subscribe_Status')
+        Subscribe_Packet = self.packetManager.get_packet_by_name('Subscribe_Status')
         for mod_name in mods_obj['mods_list']:
             packet = Subscribe_Packet()
             packet.objects = [mod_name]
@@ -144,10 +151,11 @@ class LobbyProcessor(AbstractProcessor):
         # self.update_discord_status()
 
     def buy_pro_pass(self):
-        buy_packet = packetManager.get_packet_by_name('Buy_Multiple_Items')()
+        buy_packet = self.packetManager.get_packet_by_name('Buy_Multiple_Items')()
         buy_packet.object = {'item_id': 'pro_battle_m0', 'count': 1, 'base_cost': 500}
         buy_packet.deimplement()
         self.send_packet(buy_packet)
+        print(self.holder.storage['sheep_id'], "purchasing pro battle pass")
 
     def update_discord_status(self):
         endpoint = "https://discord.com/api/webhooks/1309907418573963394/2FQsU_MKCXL5R01dmWERhZxpTrU4sehANFSG5F19PiHC3kMmINgjFNXLRAi3gPS93090"

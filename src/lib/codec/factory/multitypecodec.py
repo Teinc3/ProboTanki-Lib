@@ -4,13 +4,13 @@ from ..base import BaseCodec
 from ..primitive import BoolCodec
 
 
-def MultiTypeCodecFactory(attributes: list[str], element_codec: Type[BaseCodec], param_shortern=False):
+def MultiTypeCodecFactory(attributes: list[str], element_codec: Type[BaseCodec], param_boolshortern=False):
     class MultiTypeCodec(BaseCodec[dict]):
-        shortern = param_shortern
+        boolshortern = param_boolshortern
 
         def decode(self):
             obj = {}
-            if self.shortern and BoolCodec(self._buffer).decode():
+            if self.boolshortern and BoolCodec(self._buffer).decode():
                 return obj
             for attribute in attributes:
                 obj[attribute] = element_codec(self._buffer).decode()
@@ -18,7 +18,7 @@ def MultiTypeCodecFactory(attributes: list[str], element_codec: Type[BaseCodec],
 
         def encode(self, value):
             data_len = 0
-            if self.shortern:
+            if self.boolshortern:
                 data_len += BoolCodec(self._buffer).encode(not value)
                 if not value:
                     return data_len

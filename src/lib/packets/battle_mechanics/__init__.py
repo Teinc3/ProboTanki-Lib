@@ -1,4 +1,4 @@
-from .battlestats import Battle_User_Team_Stats
+from .battleuserteamstats import Battle_User_Team_Stats
 from .battleusercontrol import Battle_User_Control
 from .changedequipment import User_Changed_Equipment
 from .deathdelayend import Death_Delay_End
@@ -30,7 +30,7 @@ from .supplybonusid import Supply_Box_Drop_Bonus_id
 from .bonusboxexistinglocations import Bonus_Box_Existing_Locations
 from .bonusboxdropped import Bonus_Box_Dropped
 from .collectbonusbox import Collect_Bonus_Box
-from .tankmoveinfo import Tank_Stat_Synced
+from .tankstatsynced import Tank_Stat_Synced
 from .tankstatsync import Tank_Move_Info
 from .turretcontrol import Turret_Control
 from .turretrotated import Turret_Rotated

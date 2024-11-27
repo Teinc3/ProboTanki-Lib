@@ -9,7 +9,7 @@ class Create_Battle(AbstractPacket):
     description = 'Creates a new battle'
     attributes = ["autoBalance", "battleMode", "format", "friendlyFire", "battleLimits", "mapID",
                   "maxPeopleCount", "name", "parkourMode", "privateBattle", "proBattle", "rankRange",
-                  "rearm", "theme", "noSupplyBoxes", "noCrystalBoxes", "noSupplies", "noUpgrade"]
+                  "noRearm", "theme", "noSupplyBoxes", "noCrystalBoxes", "noSupplies", "noUpgrade"]
     codecs = [BoolCodec, IntCodec, IntCodec, BoolCodec, BattleLimitsCodec, StringCodec,
               IntCodec, StringCodec, BoolCodec, BoolCodec, BoolCodec, RankRangeCodec,
               BoolCodec, IntCodec, BoolCodec, BoolCodec, BoolCodec, BoolCodec]

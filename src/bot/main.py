@@ -79,17 +79,14 @@ class TankiBot:
             self.sheeps_ready = set()
         if ready_state:
             self.sheeps_ready.add(sheep_id)
-            print(f"Current Threshold: {len(self.sheeps_ready)}/{self.battle_size}")
         elif sheep_id in self.sheeps_ready:
             self.sheeps_ready.remove(sheep_id)
-            print(f"Current Threshold: {len(self.sheeps_ready)}/{self.battle_size}")
+        
+        print(f"Current Threshold: {len(self.sheeps_ready)}/{self.battle_size}")
 
         if len(self.sheeps_ready) == self.battle_size and ('selected_battle' not in self.watchdog.holder.storage or 'battleID' not in self.watchdog.holder.storage['selected_battle']):
-            print("Most Sheep ready, waiting for battle creation...")
-            print(f"Current Threshold: {len(self.sheeps_ready)}/{self.battle_size}")
-
-        if len(self.sheeps_ready) == self.battle_size and ('selected_battle' not in self.watchdog.holder.storage or 'battleID' not in self.watchdog.holder.storage['selected_battle']):
-            print("Most Sheep ready, waiting for battle creation...")
+            print("Sheep ready, waiting for battle creation...")
+            time.sleep(0.5)
             self.event_emitter.emit('all_sheep_ready', { 
                 'mapID': self.SELECTED_MAP,
                 'battleMode': self.BATTLE_MODE,

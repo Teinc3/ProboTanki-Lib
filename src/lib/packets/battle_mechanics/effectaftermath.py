@@ -6,5 +6,5 @@ from lib.packets.abstractpacket import AbstractPacket
 class Effect_Aftermath(AbstractPacket):
     id = -1639713644
     description = "Effect Aftermath"
-    attributes = ['tankId', 'effectId', 'duration', 'activeAfterDeath', 'effectLevel']
+    attributes = ['username', 'effectId', 'duration', 'activeAfterDeath', 'effectLevel']
     codecs = [StringCodec, IntCodec, IntCodec, BoolCodec, ByteCodec]

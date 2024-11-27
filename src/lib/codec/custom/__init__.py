@@ -1,5 +1,6 @@
 from .battleinfocodec import BattleInfoCodec
 from .battleimfouserpreviewcodec import BattleInfoUserCodec
+from .battleusercodec import BattleUserCodec
 from .battlelimitscodec import BattleLimitsCodec
 from .battlenotifiercodec import BattleNotifierCodec
 from .battleuserrewardscodec import BattleUserRewardsCodec
@@ -19,6 +20,7 @@ __all__ = [
     BattleInfoCodec,
     BattleInfoUserCodec,
     BattleLimitsCodec,
+    BattleUserCodec,
     BattleNotifierCodec,
     ChatMessageCodec,
     MissionCodec,

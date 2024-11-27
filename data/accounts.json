@@ -54,16 +54,5 @@
       "host": "92.112.227.45",
       "port": 6217
     }
-  },
-  {
-    "username": "Grobnik",
-    "info": {
-      "rank": 1
-    },
-    "proxy": {
-      "location": "cz", 
-      "host": "92.112.227.84",
-      "port": 6256
-    }
   }
 ]
