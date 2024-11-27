@@ -5,9 +5,8 @@ from .createbattle import Create_Battle
 from .joinbattle import Join_Battle
 from .joineddmbattle import Joined_DM_Battle
 from .joinedteambattle import Joined_Team_Battle
-from .leftbattle import Left_Battle
-from .leftdmbattle import Left_DM_Battle
-from .leftteambattle import Left_Team_Battle
+from .leftpreview import Left_Preview
+from .leftdmpreview import Left_DM_Preview
 from .loadallbattles import Load_All_Battles
 from .loadbattleinfo import Load_Battle_Info
 from .loadlobby import Load_Lobby
@@ -34,9 +33,8 @@ __all__ = [
     Spectate_Battle,
     Joined_DM_Battle,
     Joined_Team_Battle,
-    Left_Battle,
-    Left_DM_Battle,
-    Left_Team_Battle,
+    Left_Preview,
+    Left_DM_Preview,
     # 'Leave_Battle', # Technically it is "going to another page", with ID 377959142
     Create_Battle,
     Check_Battle_Name,

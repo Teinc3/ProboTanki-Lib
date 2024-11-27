@@ -6,5 +6,5 @@ from lib.packets.abstractpacket import AbstractPacket
 class Shot_Effect(AbstractPacket):
     id = -1994318624
     description = "Shot effect packet"
-    attributes = ['tankId', 'effectId']
+    attributes = ['username', 'effectId']
     codecs = [StringCodec, IntCodec]

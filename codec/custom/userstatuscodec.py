@@ -6,4 +6,4 @@ from lib.codec.primitive import IntCodec
 class UserStatusCodec(CustomBaseCodec):
     attributes = ['modLevel', 'ip', 'rank', 'username']
     codecs = [IntCodec, StringCodec, IntCodec, StringCodec]
-    shortern = True
+    boolshortern = True
