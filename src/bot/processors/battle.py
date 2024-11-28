@@ -1,6 +1,6 @@
 from datetime import datetime as Datetime
 from enum import Enum
-from threading import Thread
+from threading import Thread, Lock
 import random
 import time
 
@@ -19,12 +19,37 @@ class BattleProcessor(AbstractProcessor):
 
         self._client_time = 0
         self._last_client_time = Datetime.now().timestamp()
+        # self._client_time_mod = -1
 
         self.time_left = 0
-        self.players: list[Player] = []
-        self.status: Alive_Status = None
+        
+        self._players: list[Player] = []
+        self._players_lock = Lock()
+
+        self._status: Alive_Status = None
+        self._status_lock = Lock()
 
         self.battle_loop: Thread = None
+
+    @property
+    def players(self):
+        with self._players_lock:
+            return self._players
+        
+    @players.setter
+    def players(self, value):
+        with self._players_lock:
+            self._players = value
+
+    @property
+    def status(self):
+        with self._status_lock:
+            return self._status
+        
+    @status.setter
+    def status(self, value):
+        with self._status_lock:
+            self._status = value
 
     @property
     def client_time(self):
@@ -33,8 +58,16 @@ class BattleProcessor(AbstractProcessor):
 
         self._client_time += int(self.CLIENT_TIME_SPOOF_FACTOR * elapsed_time)
         self._last_client_time = current_time
+        
+        # Note: _client_time differences must have a modulus of 33
 
         return self._client_time
+    
+    @property
+    def modded_client_time(self):
+        # We also access the client_time property function so that its updated to the latest
+        client_time = self.client_time
+        return client_time + (33 - (client_time % 33))
     
     @client_time.setter
     def client_time(self, value):
@@ -44,7 +77,16 @@ class BattleProcessor(AbstractProcessor):
     def process_packets(self):
         packet_obj = self.current_packet.object
 
-        if self.compare_packet("Init_Battle_Stats"):
+        if self.compare_packet("Battle_Ping_Info"):
+            packet = self.packetManager.get_packet_by_name("Battle_Ping_Sync")()
+            packet.object['latencyInfo'] = {
+                'clientTime': self.client_time,
+                'serverSessionTime': packet_obj['latencyInfo']['serverSessionTime']
+            }
+            packet.deimplement()
+            self.send_packet(packet)
+
+        elif self.compare_packet("Init_Battle_Stats"):
             self.time_left = packet_obj['timeLeft']
 
             # Check if we can spawn now
@@ -65,6 +107,7 @@ class BattleProcessor(AbstractProcessor):
         elif self.compare_packet("Player_Start_Position"):
             # We have our new spawn, create a Send_Respawn packet after timer
             self.status = Alive_Status.CHANGING_SPAWN
+            print(self.holder.storage['credentials']['username'] + " has a new spawn point:", packet_obj['position'])
             self.create_timer(self.status.value, self.packetManager.get_packet_by_name("Send_Respawn")()) # Has no data
 
         elif self.compare_packet("Start_Resp_Fantom"):
@@ -117,23 +160,23 @@ class BattleProcessor(AbstractProcessor):
                 print(f"{packet_obj['username']} has {packet_obj['health']} health left.")
 
         elif self.compare_packet("Kill_Confirm") or self.compare_packet("Self_Destructed"):
-            user = next((player for player in self.players if player.name == packet_obj['username']), None)
-            if not user:
+            username = packet_obj['target'] if 'target' in packet_obj else packet_obj['username']
+            target = next((player for player in self.players if player.name == username), None)
+            if not target:
                 return
             
-            user.inresp = True
+            target.inresp = True
             
-            if user == self.holder.storage['credentials']['username']:
+            if target == self.holder.storage['credentials']['username']:
                 self.status = Alive_Status.DEAD_DELAY
                 self.create_timer(self.status.value, self.packetManager.get_packet_by_name("Death_Delay_End")())
-
-            if self.holder.storage['credentials']['username'] == packet_obj['username']:
-                print(packet_obj['username'] + " has been killed" + (f" by " + packet_obj['killer'] if 'killer' in packet_obj else "."))
+                print(username + " has been killed" + (f" by " + packet_obj['killer'] if 'killer' in packet_obj else "."))
 
     def exec_battle_loop(self):
+        # Hold your horses, after we spawn we wait a second so that every player should have spawned in
+        time.sleep(1)
+        
         while self.status == Alive_Status.ALIVE:
-            # Every 2 seconds we shoot at an enemy with smoky
-
             # Find my instance
             me = next((player for player in self.players if player.name == self.holder.storage['credentials']['username']), None)
             if not me:
@@ -146,30 +189,51 @@ class BattleProcessor(AbstractProcessor):
             
             # Shoot at the enemy
             packet = self.packetManager.get_packet_by_name("Smoky_Shoot_Target_OUT")()
-            packet.object['clientTime'] = self.client_time
+            packet.object['clientTime'] = self.modded_client_time
             packet.object['target'] = enemy.name
             packet.object['incarnationID'] = enemy.incarnation_id
 
             # We do some trolling here
-            packet.object['targetBodyPosition'] = enemy.position
+            packet.object['targetBodyPosition'] = me.position
             packet.object['localHitPoint'] = Player.generate_vector_offset(100)
-            packet.object['globalHitPoint'] = enemy.generate_global_position(Player.generate_vector_offset(100))
+            packet.object['globalHitPoint'] = me.generate_global_position(Player.generate_vector_offset(100))
             
             packet.deimplement()
             self.send_packet(packet)
-            print(self.holder.storage['credentials']['username'], "tries to shoot:", packet.object)
+            print(me, "tries to shoot", enemy)
 
-            # Wait 2 seconds
-            time.sleep(2)
+            # Smoky recharge
+            time.sleep(1.85)
+            
         
 class Player:
     def __init__(self, name: str, team: int, inresp: bool, incarnation_id: int = None, position: dict[str, float] = None, health: float = 10000):
+        object.__setattr__(self, '_lock', Lock())
+        
         self.name = name
         self.team = team
         self.inresp = inresp
         self.incarnation_id = incarnation_id
         self.position = position
         self.health = health
+
+
+    def __setattr__(self, name, value):
+        if name == '_lock':
+            # Directly set the internal '_lock' attribute without locking
+            object.__setattr__(self, name, value)
+        else:
+            # Acquire the lock before setting any other attribute
+            with self._lock:
+                object.__setattr__(self, name, value)
+
+    def __getattr__(self, name):
+        # This method is only called if normal attribute access fails
+        # To avoid recursion, use object.__getattribute__ directly
+        if name == '_lock':
+            return object.__getattribute__(self, name)
+        with self._lock:
+            return object.__getattribute__(self, name)
 
     def __eq__(self, other):
         return self.__repr__() == other.__repr__()
