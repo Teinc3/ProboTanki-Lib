@@ -31,7 +31,7 @@ from .bonusboxexistinglocations import Bonus_Box_Existing_Locations
 from .bonusboxdropped import Bonus_Box_Dropped
 from .collectbonusbox import Collect_Bonus_Box
 from .tankstatsynced import Tank_Stat_Synced
-from .tankstatsync import Tank_Move_Info
+from .tankmovementinfo import Tank_Movement_Info
 from .turretcontrol import Turret_Control
 from .turretrotated import Turret_Rotated
 from .turretrotation import Turret_Rotation
@@ -45,7 +45,7 @@ __all__ = [
     Self_Destruct,
     Self_Destructed,
     Tank_Stat_Synced,
-    Tank_Move_Info,
+    Tank_Movement_Info,
     Death_Delay_End,
     Start_Resp_Fantom,
     End_Resp_Fantom,

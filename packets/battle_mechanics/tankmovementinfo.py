@@ -3,7 +3,7 @@ from lib.codec.primitive import IntCodec, ShortCodec
 from lib.packets.abstractpacket import AbstractPacket
 
 
-class Tank_Move_Info(AbstractPacket):
+class Tank_Movement_Info(AbstractPacket):
     id = -1683279062
     description = "Client moved passively"
     attributes = ["someRandomTime", "specificationID", "movement", "turretDirection"]
