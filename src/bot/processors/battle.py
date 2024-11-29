@@ -167,43 +167,49 @@ class BattleProcessor(AbstractProcessor):
             
             target.inresp = True
             
-            if target == self.holder.storage['credentials']['username']:
+            if target.name == self.holder.storage['credentials']['username']:
                 self.status = Alive_Status.DEAD_DELAY
                 self.create_timer(self.status.value, self.packetManager.get_packet_by_name("Death_Delay_End")())
                 print(username + " has been killed" + (f" by " + packet_obj['killer'] if 'killer' in packet_obj else "."))
 
     def exec_battle_loop(self):
-        # Hold your horses, after we spawn we wait a second so that every player should have spawned in
-        time.sleep(1)
-        
+        # Hold your horses, after we spawn we wait a second so that every player should have spawned in        
         while self.status == Alive_Status.ALIVE:
+            packet = self.packetManager.get_packet_by_name("Railgun_Shot_Init_OUT")()
+            packet.object['clientTime'] = self.modded_client_time
+            packet.deimplement()
+            self.send_packet(packet)
+
+            time.sleep(1.17)
+
             # Find my instance
             me = next((player for player in self.players if player.name == self.holder.storage['credentials']['username']), None)
             if not me:
                 return
             
-            # Find the enemy with the lowest health that is still alive
-            enemy = min([player for player in self.players if player.team != me.team and not player.inresp], key=lambda x: x.health, default=None)
-            if not enemy:
+            # Randomize enemy order
+            enemies: list[Player] = [player for player in self.players if player.team != me.team and not player.inresp]
+            enemies_len = len(enemies)
+            if enemies_len == 0:
                 return
+            random.shuffle(enemies)
             
-            # Shoot at the enemy
-            packet = self.packetManager.get_packet_by_name("Smoky_Shoot_Target_OUT")()
+            # Shoot at all enemies
+            packet = self.packetManager.get_packet_by_name("Railgun_Shot_OUT")()
             packet.object['clientTime'] = self.modded_client_time
-            packet.object['target'] = enemy.name
-            packet.object['incarnationID'] = enemy.incarnation_id
-
-            # We do some trolling here
-            packet.object['targetBodyPosition'] = me.position
-            packet.object['localHitPoint'] = Player.generate_vector_offset(100)
-            packet.object['globalHitPoint'] = me.generate_global_position(Player.generate_vector_offset(100))
+            packet.object["incarnationIDs"] = [player.incarnation_id for player in enemies]
+            packet.object["targets"] = [player.name for player in enemies]
+            packet.object["staticHitPoint"] = {"x": 0, "y": 0, "z": 0}
+            packet.object["targetHitPoints"] = [{"x": 0, "y": 0, "z": 0}] * enemies_len
+            packet.object["targetBodyPositions"] = [{"x": 0, "y": 0, "z": 0}] * enemies_len
+            packet.object["globalHitPoints"] = [{"x": 0, "y": 0, "z": 0}] * enemies_len
             
             packet.deimplement()
             self.send_packet(packet)
-            print(me, "tries to shoot", enemy)
+            print(me, "tries to shoot", enemies)
 
             # Smoky recharge
-            time.sleep(1.85)
+            time.sleep(5.9)
             
         
 class Player:

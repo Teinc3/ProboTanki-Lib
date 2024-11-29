@@ -79,7 +79,10 @@ class AbstractProcessor(ABC):
     def create_timer(self, time: int, packet: AbstractPacket):
         def timer_thread():
             Time.sleep(time)
-            self.send_packet(packet)
+            try:
+                self.send_packet(packet)
+            except Exception as e:
+                print(f"Error: {e}")
         
         timer = Thread(target=timer_thread)
         timer.daemon = True

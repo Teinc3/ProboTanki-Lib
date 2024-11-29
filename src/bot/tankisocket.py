@@ -112,12 +112,8 @@ class TankiSocket:
         # Broadcast sheep not ready
         if not self.holder.watchdog:
             self.holder.event_emitter.emit('sheep_ready', self.holder.storage['sheep_id'], False)
-
-        # Reinstantiate the socket if below retry threshold
-        if self.holder.watchdog or self.retries < self.MAX_RETRIES_POSSIBLE:
-            self.retries += 1
-            self.holder.event_emitter.emit('retry_socket', self.holder, self.retries)
-
         else:
-            print(f"Max {self.retries} retries reached, exiting {self.holder.storage['sheep_id']}")
-            self.holder.event_emitter.emit('delete_sheep', self.holder.storage['sheep_id'])
+            self.retries += 1
+
+        # Reinstantiate the socket
+        self.holder.event_emitter.emit('retry_socket', self.holder, self.retries)

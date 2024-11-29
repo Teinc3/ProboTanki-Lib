@@ -1,6 +1,6 @@
 [
   {
-    "name": "A.X.Y",
+    "username": "A.X.Y",
     "email": "osamagoonerskibid.i@gmail.com",
     "locale": "english/generic",
     "info": {
@@ -13,7 +13,7 @@
     }
   },
   {
-    "name": "The.Chosen.One",
+    "username": "The.Chosen.One",
     "email": "osamagoonerskibi.di@gmail.com",
     "locale": "english/generic",
     "info": {
@@ -26,7 +26,7 @@
     }
   },
   {
-    "name": "Runway",
+    "username": "Runway",
     "email": "osamagoonerskibi.d.i@gmail.com",
     "locale": "english/generic",
     "info": {
@@ -39,7 +39,7 @@
     }
   },
   {
-    "name": "vvita26",
+    "username": "vvita26",
     "email": "osamagoonerskib.idi@gmail.com",
     "locale": "english/generic",
     "info": {
@@ -52,7 +52,7 @@
     }
   },
   {
-    "name": "Grobnik",
+    "username": "Grobnik",
     "email": "osamagoonerskib.id.i@gmail.com",
     "locale": "russian",
     "info": {
@@ -65,7 +65,7 @@
     }
   },
   {
-    "name": "oboneo",
+    "username": "oboneo",
     "locale": "english/generic",
     "proxy": {
       "location": "de",
@@ -74,7 +74,7 @@
     }
   },
   {
-    "name": "ragertyp",
+    "username": "ragertyp",
     "locale": "english/generic",
     "proxy": {
       "location": "de",
@@ -83,7 +83,7 @@
     }
   },
   {
-    "name": "1cespark",
+    "username": "1cespark",
     "locale": "english/generic",
     "proxy": {
       "location": "de",
@@ -92,7 +92,7 @@
     }
   },
   {
-    "name": "AlSha3er",
+    "username": "AlSha3er",
     "locale": "arabic",
     "proxy": {
       "location": "de",
@@ -101,7 +101,7 @@
     }
   },
   {
-    "name": "MeTJlaB",
+    "username": "MeTJlaB",
     "locale": "russian",
     "proxy": {
       "location": "de",
@@ -110,7 +110,7 @@
     }
   },
   {
-    "name": "Gravestone",
+    "username": "Gravestone",
     "locale": "english/generic",
     "proxy": {
       "location": "ee",
@@ -119,7 +119,7 @@
     }
   },
   {
-    "name": "ruskimafia",
+    "username": "ruskimafia",
     "locale": "russian",
     "proxy": {
       "location": "ee",
@@ -128,7 +128,7 @@
     }
   },
   {
-    "name": "M.E.X.A.H.U.K",
+    "username": "M.E.X.A.H.U.K",
     "locale": "russian",
     "proxy": {
       "location": "ee",
@@ -137,7 +137,7 @@
     }
   },
   {
-    "name": "TToJlHoTa",
+    "username": "TToJlHoTa",
     "locale": "russian",
     "proxy": {
       "location": "ee",
@@ -146,7 +146,7 @@
     }
   },
   {
-    "name": "Jla3yPb",
+    "username": "Jla3yPb",
     "locale": "russian",
     "proxy": {
       "location": "ee",
@@ -155,7 +155,7 @@
     }
   },
   {
-    "name": "Cerbere",
+    "username": "Cerbere",
     "locale": "english/generic",
     "proxy": {
       "location": "fr",
@@ -164,7 +164,7 @@
     }
   },
   {
-    "name": "probond",
+    "username": "probond",
     "locale": "english/generic",
     "proxy": {
       "location": "fr",
@@ -173,7 +173,7 @@
     }
   },
   {
-    "name": "Shadix",
+    "username": "Shadix",
     "locale": "english/generic",
     "proxy": {
       "location": "fr",
@@ -182,7 +182,7 @@
     }
   },
   {
-    "name": "Fraternity",
+    "username": "Fraternity",
     "locale": "english/generic",
     "proxy": {
       "location": "fr",
@@ -191,7 +191,7 @@
     }
   },
   {
-    "name": "7abooba",
+    "username": "7abooba",
     "locale": "arabic",
     "proxy": {
       "location": "fr",
@@ -200,7 +200,7 @@
     }
   },
   {
-    "name": "dont_eat_me",
+    "username": "dont_eat_me",
     "locale": "english/generic",
     "proxy": {
       "location": "gb",
@@ -209,7 +209,7 @@
     }
   },
   {
-    "name": "P0ggers",
+    "username": "P0ggers",
     "locale": "english/generic",
     "proxy": {
       "location": "gb",
@@ -218,7 +218,7 @@
     }
   },
   {
-    "name": "Vinlager",
+    "username": "Vinlager",
     "locale": "english/generic",
     "proxy": {
       "location": "gb",
@@ -227,7 +227,7 @@
     }
   },
   {
-    "name": "Muddypaws",
+    "username": "Muddypaws",
     "locale": "english/generic",
     "proxy": {
       "location": "gb",
@@ -236,7 +236,7 @@
     }
   },
   {
-    "name": "AaronDash",
+    "username": "AaronDash",
     "locale": "english/generic",
     "proxy": {
       "location": "gb",
@@ -245,7 +245,7 @@
     }
   },
   {
-    "name": "Binoculars",
+    "username": "Binoculars",
     "locale": "english/generic",
     "proxy": {
       "location": "gb",
@@ -254,7 +254,7 @@
     }
   },
   {
-    "name": "Extrusion",
+    "username": "Extrusion",
     "locale": "english/generic",
     "proxy": {
       "location": "gb",
@@ -263,7 +263,7 @@
     }
   },
   {
-    "name": "Pseudonym",
+    "username": "Pseudonym",
     "locale": "english/generic",
     "proxy": {
       "location": "gb",
@@ -272,7 +272,7 @@
     }
   },
   {
-    "name": "5aleeji",
+    "username": "5aleeji",
     "locale": "arabic",
     "proxy": {
       "location": "gb",
@@ -281,7 +281,7 @@
     }
   },
   {
-    "name": "3.O.M.D.A",
+    "username": "3.O.M.D.A",
     "locale": "arabic",
     "proxy": {
       "location": "gb",
@@ -290,7 +290,7 @@
     }
   },
   {
-    "name": "Laserbean",
+    "username": "Laserbean",
     "locale": "english/generic",
     "proxy": {
       "location": "gr",
@@ -299,7 +299,7 @@
     }
   },
   {
-    "name": "Windchill",
+    "username": "Windchill",
     "locale": "english/generic",
     "proxy": {
       "location": "gr",
@@ -308,7 +308,7 @@
     }
   },
   {
-    "name": "Bop_3oJLoTa",
+    "username": "Bop_3oJLoTa",
     "locale": "russian",
     "proxy": {
       "location": "gr",
@@ -317,7 +317,7 @@
     }
   },
   {
-    "name": "CMePTHblN_BepKuJl",
+    "username": "CMePTHblN_BepKuJl",
     "locale": "russian",
     "proxy": {
       "location": "gr",
@@ -326,7 +326,7 @@
     }
   },
   {
-    "name": "4au_c_XJle6oM",
+    "username": "4au_c_XJle6oM",
     "locale": "russian",
     "proxy": {
       "location": "gr",
@@ -335,7 +335,7 @@
     }
   },
   {
-    "name": "shabi666",
+    "username": "shabi666",
     "locale": "chinese",
     "proxy": {
       "location": "hk",
@@ -344,7 +344,7 @@
     }
   },
   {
-    "name": "N_M_S_L",
+    "username": "N_M_S_L",
     "locale": "chinese",
     "proxy": {
       "location": "hk",
@@ -353,7 +353,7 @@
     }
   },
   {
-    "name": "933936651",
+    "username": "933936651",
     "locale": "chinese",
     "proxy": {
       "location": "hk",
@@ -362,7 +362,7 @@
     }
   },
   {
-    "name": "on9",
+    "username": "on9",
     "locale": "chinese",
     "proxy": {
       "location": "hk",
@@ -371,7 +371,7 @@
     }
   },
   {
-    "name": "tamadebiefengwohao",
+    "username": "tamadebiefengwohao",
     "locale": "chinese",
     "proxy": {
       "location": "hk",
@@ -380,7 +380,7 @@
     }
   },
   {
-    "name": "Opposite",
+    "username": "Opposite",
     "locale": "english/generic",
     "proxy": {
       "location": "hr",
@@ -389,7 +389,7 @@
     }
   },
   {
-    "name": "Sardine",
+    "username": "Sardine",
     "locale": "english/generic",
     "proxy": {
       "location": "hr",
@@ -398,7 +398,7 @@
     }
   },
   {
-    "name": "v_nekit_v",
+    "username": "v_nekit_v",
     "locale": "russian",
     "proxy": {
       "location": "hr",
@@ -407,7 +407,7 @@
     }
   },
   {
-    "name": "x.X.x_FAHT0M_x.X.x",
+    "username": "x.X.x_FAHT0M_x.X.x",
     "locale": "russian",
     "proxy": {
       "location": "hr",
@@ -416,7 +416,7 @@
     }
   },
   {
-    "name": "6eccoHHuLla",
+    "username": "6eccoHHuLla",
     "locale": "russian",
     "proxy": {
       "location": "hr",
@@ -425,7 +425,7 @@
     }
   },
   {
-    "name": "Trovvie",
+    "username": "Trovvie",
     "locale": "english/generic",
     "proxy": {
       "location": "hu",
@@ -434,7 +434,7 @@
     }
   },
   {
-    "name": "Envelope",
+    "username": "Envelope",
     "locale": "english/generic",
     "proxy": {
       "location": "hu",
@@ -443,7 +443,7 @@
     }
   },
   {
-    "name": "mocz",
+    "username": "mocz",
     "locale": "hungarian",
     "proxy": {
       "location": "hu",
@@ -452,7 +452,7 @@
     }
   },
   {
-    "name": "Neodymium",
+    "username": "Neodymium",
     "locale": "english/generic",
     "proxy": {
       "location": "hu",
@@ -461,7 +461,7 @@
     }
   },
   {
-    "name": "CoKaJI",
+    "username": "CoKaJI",
     "locale": "russian",
     "proxy": {
       "location": "hu",
@@ -470,7 +470,7 @@
     }
   },
   {
-    "name": "iStealthy",
+    "username": "iStealthy",
     "locale": "english/generic",
     "proxy": {
       "location": "lt",
@@ -479,7 +479,7 @@
     }
   },
   {
-    "name": "Zemaitis",
+    "username": "Zemaitis",
     "locale": "lithuanian",
     "proxy": {
       "location": "lt",
@@ -488,7 +488,7 @@
     }
   },
   {
-    "name": "baltas_wolf",
+    "username": "baltas_wolf",
     "locale": "lithuanian",
     "proxy": {
       "location": "lt",
@@ -497,7 +497,7 @@
     }
   },
   {
-    "name": "Perkunas9",
+    "username": "Perkunas9",
     "locale": "lithuanian",
     "proxy": {
       "location": "lt",
@@ -506,7 +506,7 @@
     }
   },
   {
-    "name": "LaisveX",
+    "username": "LaisveX",
     "locale": "lithuanian",
     "proxy": {
       "location": "lt",
@@ -515,7 +515,7 @@
     }
   },
   {
-    "name": "Sauletekis",
+    "username": "Sauletekis",
     "locale": "lithuanian",
     "proxy": {
       "location": "lt",
@@ -524,7 +524,7 @@
     }
   },
   {
-    "name": "The_Eternal_King",
+    "username": "The_Eternal_King",
     "locale": "english/generic",
     "proxy": {
       "location": "lt",
@@ -533,7 +533,7 @@
     }
   },
   {
-    "name": "Indulge",
+    "username": "Indulge",
     "locale": "english/generic",
     "proxy": {
       "location": "lt",
@@ -542,7 +542,7 @@
     }
   },
   {
-    "name": "IlyasXT",
+    "username": "IlyasXT",
     "locale": "russian",
     "proxy": {
       "location": "lt",
@@ -551,7 +551,7 @@
     }
   },
   {
-    "name": "MblcJluTeJlb",
+    "username": "MblcJluTeJlb",
     "locale": "russian",
     "proxy": {
       "location": "lt",
@@ -560,7 +560,7 @@
     }
   },
   {
-    "name": "faro2",
+    "username": "faro2",
     "locale": "english/generic",
     "proxy": {
       "location": "nl",
@@ -569,7 +569,7 @@
     }
   },
   {
-    "name": "thekevingdom2",
+    "username": "thekevingdom2",
     "locale": "english/generic",
     "proxy": {
       "location": "nl",
@@ -578,7 +578,7 @@
     }
   },
   {
-    "name": "osama_gooner_skibidi",
+    "username": "osama_gooner_skibidi",
     "locale": "english/generic",
     "proxy": {
       "location": "nl",
@@ -587,7 +587,7 @@
     }
   },
   {
-    "name": "Multiverse",
+    "username": "Multiverse",
     "locale": "english/generic",
     "proxy": {
       "location": "nl",
@@ -596,7 +596,7 @@
     }
   },
   {
-    "name": "Vasya_DirokoI",
+    "username": "Vasya_DirokoI",
     "locale": "russian",
     "proxy": {
       "location": "nl",
@@ -605,7 +605,7 @@
     }
   },
   {
-    "name": "KrissuToNieJa",
+    "username": "KrissuToNieJa",
     "locale": "polish",
     "proxy": {
       "location": "pl",
@@ -614,7 +614,7 @@
     }
   },
   {
-    "name": "2-1-3-7",
+    "username": "2-1-3-7",
     "locale": "polish",
     "proxy": {
       "location": "pl",
@@ -623,7 +623,7 @@
     }
   },
   {
-    "name": "Matematyk",
+    "username": "Matematyk",
     "locale": "polish",
     "proxy": {
       "location": "pl",
@@ -632,7 +632,7 @@
     }
   },
   {
-    "name": "Kartofel420",
+    "username": "Kartofel420",
     "locale": "polish",
     "proxy": {
       "location": "pl",
@@ -641,7 +641,7 @@
     }
   },
   {
-    "name": "zjadacz_cebuli",
+    "username": "zjadacz_cebuli",
     "locale": "polish",
     "proxy": {
       "location": "pl",
@@ -650,7 +650,7 @@
     }
   },
   {
-    "name": "barti",
+    "username": "barti",
     "locale": "english/generic",
     "proxy": {
       "location": "pl",
@@ -659,7 +659,7 @@
     }
   },
   {
-    "name": "Synthom",
+    "username": "Synthom",
     "locale": "english/generic",
     "proxy": {
       "location": "pl",
@@ -668,7 +668,7 @@
     }
   },
   {
-    "name": "Diameter",
+    "username": "Diameter",
     "locale": "english/generic",
     "proxy": {
       "location": "pl",
@@ -677,7 +677,7 @@
     }
   },
   {
-    "name": "czeta13",
+    "username": "czeta13",
     "locale": "english/generic",
     "proxy": {
       "location": "pl",
@@ -686,7 +686,7 @@
     }
   },
   {
-    "name": "Jly4uHa",
+    "username": "Jly4uHa",
     "locale": "russian",
     "proxy": {
       "location": "pl",
@@ -695,7 +695,7 @@
     }
   },
   {
-    "name": "O.Tankista.Rico",
+    "username": "O.Tankista.Rico",
     "locale": "portuguese",
     "proxy": {
       "location": "pt",
@@ -704,7 +704,7 @@
     }
   },
   {
-    "name": "Respirar",
+    "username": "Respirar",
     "locale": "portuguese",
     "proxy": {
       "location": "pt",
@@ -713,7 +713,7 @@
     }
   },
   {
-    "name": "Bazuquinha",
+    "username": "Bazuquinha",
     "locale": "portuguese",
     "proxy": {
       "location": "pt",
@@ -722,7 +722,7 @@
     }
   },
   {
-    "name": "Holandesa",
+    "username": "Holandesa",
     "locale": "portuguese",
     "proxy": {
       "location": "pt",
@@ -731,7 +731,7 @@
     }
   },
   {
-    "name": "Fungos",
+    "username": "Fungos",
     "locale": "portuguese",
     "proxy": {
       "location": "pt",
@@ -740,7 +740,7 @@
     }
   },
   {
-    "name": "Greenbiscuit",
+    "username": "Greenbiscuit",
     "locale": "english/generic",
     "proxy": {
       "location": "ro",
@@ -749,7 +749,7 @@
     }
   },
   {
-    "name": "Andesite",
+    "username": "Andesite",
     "locale": "english/generic",
     "proxy": {
       "location": "ro",
@@ -758,7 +758,7 @@
     }
   },
   {
-    "name": "Dysentery",
+    "username": "Dysentery",
     "locale": "english/generic",
     "proxy": {
       "location": "ro",
@@ -767,7 +767,7 @@
     }
   },
   {
-    "name": "God.Of.Lemons",
+    "username": "God.Of.Lemons",
     "locale": "english/generic",
     "proxy": {
       "location": "ro",
@@ -776,7 +776,7 @@
     }
   },
   {
-    "name": "andrei_ot_kishinev",
+    "username": "andrei_ot_kishinev",
     "locale": "russian",
     "proxy": {
       "location": "ro",
@@ -785,7 +785,7 @@
     }
   },
   {
-    "name": "BPAHTE",
+    "username": "BPAHTE",
     "locale": "russian",
     "proxy": {
       "location": "ro",
@@ -794,7 +794,7 @@
     }
   },
   {
-    "name": "TTocJleDHuu_CaMyPau",
+    "username": "TTocJleDHuu_CaMyPau",
     "locale": "russian",
     "proxy": {
       "location": "ro",
@@ -803,7 +803,7 @@
     }
   },
   {
-    "name": "HeKpo3",
+    "username": "HeKpo3",
     "locale": "russian",
     "proxy": {
       "location": "ro",
@@ -812,7 +812,7 @@
     }
   },
   {
-    "name": "1.B.A.M.TT.U.P.1",
+    "username": "1.B.A.M.TT.U.P.1",
     "locale": "russian",
     "proxy": {
       "location": "ro",
@@ -821,7 +821,7 @@
     }
   },
   {
-    "name": "TTyJIu_oT_6a6yJIu",
+    "username": "TTyJIu_oT_6a6yJIu",
     "locale": "russian",
     "proxy": {
       "location": "ro",
@@ -830,7 +830,7 @@
     }
   },
   {
-    "name": "Microscope",
+    "username": "Microscope",
     "locale": "english/generic",
     "proxy": {
       "location": "rs",
@@ -839,7 +839,7 @@
     }
   },
   {
-    "name": "PyCcKuU_Xaoc",
+    "username": "PyCcKuU_Xaoc",
     "locale": "russian",
     "proxy": {
       "location": "rs",
@@ -848,7 +848,7 @@
     }
   },
   {
-    "name": "Entangle",
+    "username": "Entangle",
     "locale": "english/generic",
     "proxy": {
       "location": "rs",
@@ -857,7 +857,7 @@
     }
   },
   {
-    "name": "gomidik_turbo_gt",
+    "username": "gomidik_turbo_gt",
     "locale": "russian",
     "proxy": {
       "location": "rs",
@@ -866,7 +866,7 @@
     }
   },
   {
-    "name": "KpblJl",
+    "username": "KpblJl",
     "locale": "russian",
     "proxy": {
       "location": "rs",
@@ -875,7 +875,7 @@
     }
   },
   {
-    "name": "aze_power",
+    "username": "aze_power",
     "locale": "turkish",
     "proxy": {
       "location": "tr",
@@ -884,7 +884,7 @@
     }
   },
   {
-    "name": "MD_Boss77",
+    "username": "MD_Boss77",
     "locale": "turkish",
     "proxy": {
       "location": "tr",
@@ -893,7 +893,7 @@
     }
   },
   {
-    "name": "hisham_2004",
+    "username": "hisham_2004",
     "locale": "turkish",
     "proxy": {
       "location": "tr",
@@ -902,7 +902,7 @@
     }
   },
   {
-    "name": "PRO_HunterJRX",
+    "username": "PRO_HunterJRX",
     "locale": "english/generic",
     "proxy": {
       "location": "tr",
@@ -911,7 +911,7 @@
     }
   },
   {
-    "name": "KPul3u3Ha",
+    "username": "KPul3u3Ha",
     "locale": "russian",
     "proxy": {
       "location": "tr",

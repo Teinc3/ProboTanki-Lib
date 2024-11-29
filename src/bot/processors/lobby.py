@@ -5,6 +5,7 @@ from bot.enums import ProcessorCodes, ProcessorIDs
 from lib.utils.web import StaffScraper
 from .abstractprocessor import AbstractProcessor
 
+import time
 
 class LobbyProcessor(AbstractProcessor):
     processorID = ProcessorIDs.P_LOBBY
@@ -29,6 +30,14 @@ class LobbyProcessor(AbstractProcessor):
             # Load Rank
             self.holder.storage['credentials']['rank'] = packet_object['rank']
             print(f"{'Watchdog' if self.holder.watchdog else 'Sheep ' + str(self.holder.storage['sheep_id'])} Connected: ", self.holder.storage['credentials'], self.holder.storage['proxy'])
+            
+            # if packet_object['rank'] == 2:
+            #     # Go to garage
+            #     self.send_packet(self.packetManager.get_packet_by_name('Load_Garage')())
+            #     time.sleep(1)
+            #     self.buy_rail_kit()
+            #     time.sleep(0.5)
+            #     self.mount()
 
         elif self.compare_packet('Online_Status'):
             if self.holder.watchdog:
@@ -71,6 +80,15 @@ class LobbyProcessor(AbstractProcessor):
 
             # Remove this battle from storage, otherwise we might keep rejoining even after AC kicks us
             del self.holder.storage['selected_battle']
+        
+        elif self.compare_packet("Check_Item_Mounted"):
+            print("Checking item mount")
+            if packet_object['item_id'] == "railgun_m0":
+                if not packet_object['mounted']:
+                    print(self.holder.storage['sheep_id'], "railgun m0 not mounted, buying rail kit")
+                    self.buy_rail_kit()
+                else:
+                    print(self.holder.storage['sheep_id'], "railgun m0 mounted")
 
     def watchdog_thread(self):
         # Subscribe to mods online status, if not already subscribed
@@ -98,13 +116,11 @@ class LobbyProcessor(AbstractProcessor):
         
         create_packet = self.packetManager.get_packet_by_name('Create_Battle')()
         create_packet.object = {'autoBalance': False, 'battleMode': data['battleMode'], 'format': 0,
-                                'friendlyFire': False, 'battleLimits': {'scoreLimit': 0, 'timeLimit': 240},
+                                'friendlyFire': False, 'battleLimits': {'scoreLimit': 0, 'timeLimit': 0},
                                 'mapID': data['mapID'], 'maxPeopleCount': data['maxPeopleCount'], 'name': data['name'],
                                 'parkourMode': False, 'privateBattle': False, 'proBattle': True,
                                 'rankRange': {'maxRank': 3, 'minRank': 1}, 'noRearm': False, 'theme': 0,
                                 'noSupplyBoxes': False, 'noCrystalBoxes': False, 'noSupplies': False, 'noUpgrade': False}
-
-        create_packet.object['maxPeopleCount'] = 3
 
         create_packet.deimplement()
         self.send_packet(create_packet)
@@ -152,12 +168,29 @@ class LobbyProcessor(AbstractProcessor):
         # Second time recv all actions
         # self.update_discord_status()
 
+    def mount(self, item_id='railgun_m0'):
+        mount_packet = self.packetManager.get_packet_by_name('Mount_Item')()
+        mount_packet.object = {'item_id': item_id }
+        mount_packet.deimplement()
+        self.send_packet(mount_packet)
+        print(self.holder.storage['sheep_id'], "mounting", item_id)
+
     def buy_pro_pass(self):
         buy_packet = self.packetManager.get_packet_by_name('Buy_Multiple_Items')()
         buy_packet.object = {'item_id': 'pro_battle_m0', 'count': 1, 'base_cost': 500}
         buy_packet.deimplement()
         self.send_packet(buy_packet)
         print(self.holder.storage['sheep_id'], "purchasing pro battle pass")
+
+    def buy_rail_kit(self):
+        buy_packet = self.packetManager.get_packet_by_name('Buy_Kit')()
+        buy_packet.object = {'item_id': 'decree_m0', 'base_cost': 850}
+        buy_packet.deimplement()
+        self.send_packet(buy_packet)
+
+        self.mount()
+        self.mount('hunter_m0')
+        
 
     def update_discord_status(self):
         endpoint = "https://discord.com/api/webhooks/1309907418573963394/2FQsU_MKCXL5R01dmWERhZxpTrU4sehANFSG5F19PiHC3kMmINgjFNXLRAi3gPS93090"

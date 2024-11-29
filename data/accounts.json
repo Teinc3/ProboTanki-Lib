@@ -6,9 +6,9 @@
       "rank": 3
     },
     "proxy": {
-      "location": "tr",
-      "host": "206.41.168.253",
-      "port": 6918
+      "location": "cz", 
+      "host": "92.112.227.84",
+      "port": 6256
     }
   },
   {
@@ -53,17 +53,6 @@
       "location": "cz", 
       "host": "92.112.227.45",
       "port": 6217
-    }
-  },
-  {
-    "username": "Grobnik",
-    "info": {
-      "rank": 1
-    },
-    "proxy": {
-      "location": "cz", 
-      "host": "92.112.227.84",
-      "port": 6256
     }
   }
 ]
