@@ -16,7 +16,7 @@ from callbackholder import CallbackHolder
 class TankiBot:
     watchdog: TankiSocket
     sheep: list[TankiSocket]
-    sheeps_ready: set[int]
+    sheep_ready: set[int]
     battle_size: int
 
     MAX_PLAYER_COUNTS = {
@@ -33,6 +33,8 @@ class TankiBot:
         self.event_emitter = EventEmitter()
 
         self.sheep_lock = Lock()
+        self.sheep = []
+        self.sheep_ready = set()
 
         self.set_event_listeners()
         self.init_watchdog()
@@ -50,49 +52,47 @@ class TankiBot:
 
     def set_event_listeners(self):
         self.event_emitter.on('watchdog_ready', self.start_sheep)
-        self.event_emitter.on('sheep_ready', self.sheep_ready)
+        self.event_emitter.on('event_sheep_ready', self.event_sheep_ready)
         self.event_emitter.on('delete_sheep', self.delete_sheep)
         self.event_emitter.on('retry_socket', self.retry_socket)
     
     def start_sheep(self):
-        # Instantiate sheeps for Serpuhovs
-        if hasattr(self, 'sheep') and len(self.sheep) > 0:
-            return
-        self.sheep = []
-        sheep_needed = min(self.account_manager.accounts_remaining, self.MAX_BATTLE_SIZE + self.SOCKET_FAILURE_BUFFER_COUNT)
-        self.battle_size = min(sheep_needed - self.SOCKET_FAILURE_BUFFER_COUNT, self.MAX_BATTLE_SIZE)
+        with self.sheep_lock:
+            # Instantiate sheeps for Serpuhovs
+            if len(self.sheep) > 0:
+                return
+            sheep_needed = min(self.account_manager.accounts_remaining, self.MAX_BATTLE_SIZE + self.SOCKET_FAILURE_BUFFER_COUNT)
+            self.battle_size = min(sheep_needed - self.SOCKET_FAILURE_BUFFER_COUNT, self.MAX_BATTLE_SIZE)
 
-        for i in range(sheep_needed):
-            sheep_account = self.account_manager.get_next_account()
-            self.sheep.append(TankiSocket(CallbackHolder(
-                storage={
-                    'sheep_id': i, 
-                    'credentials': AccountManager.get_account_credentials(sheep_account),
-                    'proxy': AccountManager.get_account_proxy(sheep_account),
-                },
-                event_emitter=self.event_emitter,
-                watchdog=False
-            )))
+            for i in range(sheep_needed):
+                sheep_account = self.account_manager.get_next_account()
+                self.sheep.append(TankiSocket(CallbackHolder(
+                    storage={
+                        'sheep_id': i, 
+                        'credentials': AccountManager.get_account_credentials(sheep_account),
+                        'proxy': AccountManager.get_account_proxy(sheep_account),
+                    },
+                    event_emitter=self.event_emitter,
+                    watchdog=False
+                )))
 
-    def sheep_ready(self, sheep_id: int, ready_state: bool):
-        if not hasattr(self, 'sheeps_ready'):
-            self.sheeps_ready = set()
-        if ready_state:
-            self.sheeps_ready.add(sheep_id)
-        elif sheep_id in self.sheeps_ready:
-            self.sheeps_ready.remove(sheep_id)
-        
-        print(f"Current Threshold: {len(self.sheeps_ready)}/{self.battle_size}")
+    def event_sheep_ready(self, sheep_id: int, ready_state: bool):
+        with self.sheep_lock:
+            if ready_state:
+                self.sheep_ready.add(sheep_id)
+            elif sheep_id in self.sheep_ready:
+                self.sheep_ready.remove(sheep_id)
+            
+            print(f"Current Threshold: {len(self.sheep_ready)}/{self.battle_size}")
 
-        if len(self.sheeps_ready) == self.battle_size and ('selected_battle' not in self.watchdog.holder.storage or 'battleID' not in self.watchdog.holder.storage['selected_battle']):
-            print("Sheep ready, waiting for battle creation...")
-            time.sleep(1)
-            self.event_emitter.emit('all_sheep_ready', { 
-                'mapID': self.SELECTED_MAP,
-                'battleMode': self.BATTLE_MODE,
-                'maxPeopleCount': self.battle_size if self.BATTLE_MODE == 0 else self.battle_size // 2,
-                'name': self.SELECTED_MAP.replace("map_", "").capitalize() + " " + ("DM" if self.BATTLE_MODE == 0 else "TDM")
-            })
+            if len(self.sheep_ready) == self.battle_size and ('selected_battle' not in self.watchdog.holder.storage or 'battleID' not in self.watchdog.holder.storage['selected_battle']):
+                print("Sheep ready, waiting for battle creation...")
+                self.event_emitter.emit('all_sheep_ready', { 
+                    'mapID': self.SELECTED_MAP,
+                    'battleMode': self.BATTLE_MODE,
+                    'maxPeopleCount': self.battle_size if self.BATTLE_MODE == 0 else self.battle_size // 2,
+                    'name': self.SELECTED_MAP.replace("map_", "").capitalize() + " " + ("DM" if self.BATTLE_MODE == 0 else "TDM")
+                })
 
     def delete_sheep(self, sheep_id: int):
         # Find the sheep by ID and remove it from the list

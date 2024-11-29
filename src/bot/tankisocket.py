@@ -111,7 +111,7 @@ class TankiSocket:
 
         # Broadcast sheep not ready
         if not self.holder.watchdog:
-            self.holder.event_emitter.emit('sheep_ready', self.holder.storage['sheep_id'], False)
+            self.holder.event_emitter.emit('event_sheep_ready', self.holder.storage['sheep_id'], False)
         else:
             self.retries += 1
 

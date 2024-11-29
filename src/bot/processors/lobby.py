@@ -5,8 +5,6 @@ from bot.enums import ProcessorCodes, ProcessorIDs
 from lib.utils.web import StaffScraper
 from .abstractprocessor import AbstractProcessor
 
-import time
-
 class LobbyProcessor(AbstractProcessor):
     processorID = ProcessorIDs.P_LOBBY
 
@@ -17,11 +15,10 @@ class LobbyProcessor(AbstractProcessor):
             self.holder.event_emitter.on('all_sheep_ready', self.create_battle)
             Thread(target=self.watchdog_thread).start()
 
-        else:  # Reports sheep presence through emitter
-            self.holder.event_emitter.emit('sheep_ready', self.holder.storage['sheep_id'], True)
-
+        else:
             # Set listener to auto select battle
             self.holder.event_emitter.on('sheep_join_battle', self.sheep_select_battle)
+
 
     def process_packets(self):
         packet_object = self.current_packet.object
@@ -29,15 +26,11 @@ class LobbyProcessor(AbstractProcessor):
         if self.compare_packet('Load_Account_Stats'):
             # Load Rank
             self.holder.storage['credentials']['rank'] = packet_object['rank']
-            print(f"{'Watchdog' if self.holder.watchdog else 'Sheep ' + str(self.holder.storage['sheep_id'])} Connected: ", self.holder.storage['credentials'], self.holder.storage['proxy'])
+            #print(f"{'Watchdog' if self.holder.watchdog else 'Sheep ' + str(self.holder.storage['sheep_id'])} Connected: ", self.holder.storage['credentials'], self.holder.storage['proxy'])
             
-            # if packet_object['rank'] == 2:
-            #     # Go to garage
-            #     self.send_packet(self.packetManager.get_packet_by_name('Load_Garage')())
-            #     time.sleep(1)
-            #     self.buy_rail_kit()
-            #     time.sleep(0.5)
-            #     self.mount()
+            if not self.holder.watchdog and 'mounted_turret' not in self.holder.storage:
+                # Go to garage, check if we have mounted railgun m0
+                self.send_packet(self.packetManager.get_packet_by_name('Load_Garage')())
 
         elif self.compare_packet('Online_Status'):
             if self.holder.watchdog:
@@ -56,6 +49,7 @@ class LobbyProcessor(AbstractProcessor):
                 # Server autoselects the newly created battle for us
                 self.holder.storage['selected_battle']['battleID'] = packet_object['battleID']
                 self.holder.event_emitter.emit('sheep_join_battle', self.holder.storage['selected_battle'].copy())
+                print("Battle id: ", packet_object['battleID'])
             # For sheep, we use Load_Battle_Info instead
 
         elif self.compare_packet('Load_Battle_Info'):
@@ -79,16 +73,21 @@ class LobbyProcessor(AbstractProcessor):
                 self.send_packet(join_packet)
 
             # Remove this battle from storage, otherwise we might keep rejoining even after AC kicks us
-            del self.holder.storage['selected_battle']
+            # del self.holder.storage['selected_battle']
         
         elif self.compare_packet("Check_Item_Mounted"):
-            print("Checking item mount")
+
             if packet_object['item_id'] == "railgun_m0":
-                if not packet_object['mounted']:
-                    print(self.holder.storage['sheep_id'], "railgun m0 not mounted, buying rail kit")
-                    self.buy_rail_kit()
-                else:
-                    print(self.holder.storage['sheep_id'], "railgun m0 mounted")
+                self.holder.storage['mounted_turret'] = 'railgun_m0'
+            elif packet_object['item_id'] == "smoky_m0":
+                self.holder.storage['mounted_turret'] = 'smoky_m0'
+            else:
+                return
+            
+            # Reports sheep presence through emitter
+            self.send_packet(self.packetManager.get_packet_by_name("Load_Lobby")())
+            self.holder.event_emitter.emit('event_sheep_ready', self.holder.storage['sheep_id'], True)
+
 
     def watchdog_thread(self):
         # Subscribe to mods online status, if not already subscribed
@@ -116,11 +115,13 @@ class LobbyProcessor(AbstractProcessor):
         
         create_packet = self.packetManager.get_packet_by_name('Create_Battle')()
         create_packet.object = {'autoBalance': False, 'battleMode': data['battleMode'], 'format': 0,
-                                'friendlyFire': False, 'battleLimits': {'scoreLimit': 0, 'timeLimit': 0},
+                                'friendlyFire': False, 'battleLimits': {'scoreLimit': 0, 'timeLimit': 295},
                                 'mapID': data['mapID'], 'maxPeopleCount': data['maxPeopleCount'], 'name': data['name'],
-                                'parkourMode': False, 'privateBattle': False, 'proBattle': True,
-                                'rankRange': {'maxRank': 3, 'minRank': 1}, 'noRearm': False, 'theme': 0,
+                                'parkourMode': False, 'privateBattle': True, 'proBattle': True,
+                                'rankRange': {'maxRank': 6, 'minRank': 1}, 'noRearm': False, 'theme': 0,
                                 'noSupplyBoxes': False, 'noCrystalBoxes': False, 'noSupplies': False, 'noUpgrade': False}
+
+        # create_packet.object['maxPeopleCount'] = 10
 
         create_packet.deimplement()
         self.send_packet(create_packet)
@@ -168,12 +169,21 @@ class LobbyProcessor(AbstractProcessor):
         # Second time recv all actions
         # self.update_discord_status()
 
+    def load_garage(self):
+        credentials = self.holder.storage['credentials']
+        if 'rank' in credentials:
+            if credentials['rank'] >= 2 and credentials['railgun'] < 0:
+                # Check if we have mounted
+                self.buy_rail_kit()
+            
+            self.mount()
+            self.mount('hunter_m0')
+
     def mount(self, item_id='railgun_m0'):
         mount_packet = self.packetManager.get_packet_by_name('Mount_Item')()
         mount_packet.object = {'item_id': item_id }
         mount_packet.deimplement()
         self.send_packet(mount_packet)
-        print(self.holder.storage['sheep_id'], "mounting", item_id)
 
     def buy_pro_pass(self):
         buy_packet = self.packetManager.get_packet_by_name('Buy_Multiple_Items')()
@@ -187,9 +197,6 @@ class LobbyProcessor(AbstractProcessor):
         buy_packet.object = {'item_id': 'decree_m0', 'base_cost': 850}
         buy_packet.deimplement()
         self.send_packet(buy_packet)
-
-        self.mount()
-        self.mount('hunter_m0')
         
 
     def update_discord_status(self):

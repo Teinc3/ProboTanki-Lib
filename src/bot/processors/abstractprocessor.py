@@ -53,11 +53,13 @@ class AbstractProcessor(ABC):
 
         elif self.compare_packet('Change_Layout'):
             if packet_object['layout'] == 0:
-                self.holder.swap_processor(ProcessorIDs.P_LOBBY)
+                if self.processorID != ProcessorIDs.P_LOBBY:
+                    self.holder.swap_processor(ProcessorIDs.P_LOBBY)
+            elif packet_object['layout'] == 1:
+                # Load garage
+                self.load_garage()
             elif packet_object['layout'] == 3:
                 self.holder.swap_processor(ProcessorIDs.P_BATTLE)
-            
-            # Layout 1 is garage
 
         else:
             return False
@@ -87,6 +89,10 @@ class AbstractProcessor(ABC):
         timer = Thread(target=timer_thread)
         timer.daemon = True
         timer.start()
+
+    @abstractmethod
+    def load_garage(self):
+        raise NotImplementedError
 
     @property
     def current_packet(self) -> AbstractPacket:

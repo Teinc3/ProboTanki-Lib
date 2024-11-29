@@ -6,16 +6,17 @@
       "rank": 3
     },
     "proxy": {
-      "location": "cz", 
-      "host": "92.112.227.84",
-      "port": 6256
+      "location": "tr",
+      "host": "206.41.168.253",
+      "port": 6918
     }
   },
   {
     "username": "A.X.Y",
     "info": {
-      "rank": 1
+      "rank": 4
     },
+    "railgun": 0,
     "proxy": {
       "location": "cz", 
       "host": "104.239.86.133",
@@ -25,8 +26,9 @@
   {
     "username": "The.Chosen.One",
     "info": {
-      "rank": 1
+      "rank": 3
     },
+    "railgun": 0,
     "proxy": {
       "location": "cz", 
       "host": "216.173.109.223",
@@ -36,8 +38,9 @@
   {
     "username": "Runway",
     "info": {
-      "rank": 1
+      "rank": 3
     },
+    "railgun": 0,
     "proxy": {
       "location": "cz", 
       "host": "92.112.238.54",
@@ -47,12 +50,205 @@
   {
     "username": "vvita26",
     "info": {
-      "rank": 1
+      "rank": 4
     },
+    "railgun": 0,
     "proxy": {
       "location": "cz", 
       "host": "92.112.227.45",
       "port": 6217
+    }
+  },
+  {
+    "username": "Grobnik",
+    "info": {
+      "rank": 2
+    },
+    "railgun": 0,
+    "proxy": {
+      "location": "cz", 
+      "host": "92.112.227.84",
+      "port": 6256
+    }
+  },
+  {
+    "username": "oboneo",
+    "info": {
+      "rank": 2
+    },
+    "railgun": 0,
+    "proxy": {
+      "location": "de",
+      "host": "31.57.43.74",
+      "port": 6148
+    }
+  },
+  {
+    "username": "ragertyp",
+    "info": {
+      "rank": 2
+    },
+    "railgun": 0,
+    "proxy": {
+      "location": "de",
+      "host": "45.146.28.67",
+      "port": 6247
+    }
+  },
+  {
+    "username": "1cespark",
+    "info": {
+      "rank": 2
+    },
+    "railgun": 0,
+    "proxy": {
+      "location": "de",
+      "host": "104.239.10.116",
+      "port": 5787
+    }
+  },
+  {
+    "username": "AlSha3er",
+    "info": {
+      "rank": 2
+    },
+    "railgun": 0,
+    "proxy": {
+      "location": "de",
+      "host": "204.217.160.229",
+      "port": 7301
+    }
+  },
+  {
+    "username": "MeTJlaB",
+    "info": {
+      "rank": 2
+    },
+    "railgun": 0,
+    "proxy": {
+      "location": "de",
+      "host": "194.39.33.121",
+      "port": 5830
+    }
+  },
+  {
+    "username": "Gravestone",
+    "info": {
+      "rank": 2
+    },
+    "railgun": 0,
+    "proxy": {
+      "location": "ee",
+      "host": "103.3.227.59",
+      "port": 6612
+    }
+  },
+  {
+    "username": "ruskimafia",
+    "info": {
+      "rank": 2
+    },
+    "railgun": 0,
+    "proxy": {
+      "location": "ee",
+      "host": "103.3.226.210",
+      "port": 6486
+    }
+  },
+  {
+    "username": "M.E.X.A.H.U.K",
+    "info": {
+      "rank": 2
+    },
+    "railgun": 0,
+    "proxy": {
+      "location": "ee",
+      "host": "103.3.227.89",
+      "port": 6642
+    }
+  },
+  {
+    "username": "TToJlHoTa",
+    "info": {
+      "rank": 2
+    },
+    "railgun": 0,
+    "proxy": {
+      "location": "ee",
+      "host": "43.228.237.78",
+      "port": 6024
+    }
+  },
+  {
+    "username": "Jla3yPb",
+    "info": {
+      "rank": 2
+    },
+    "railgun": 0,
+    "proxy": {
+      "location": "ee",
+      "host": "103.3.226.165",
+      "port": 6441
+    }
+  },
+  {
+    "username": "Detergent",
+    "info": {
+      "rank": 2
+    },
+    "railgun": 0,
+    "proxy": {
+      "location": "fr",
+      "host": "206.41.175.158",
+      "port": 6371
+    }
+  },
+  {
+    "username": "probond",
+    "info": {
+      "rank": 2
+    },
+    "railgun": 0,
+    "proxy": {
+      "location": "fr",
+      "host": "193.168.222.188",
+      "port": 5873
+    }
+  },
+  {
+    "username": "Shadix",
+    "info": {
+      "rank": 2
+    },
+    "railgun": 0,
+    "proxy": {
+      "location": "fr",
+      "host": "145.223.47.32",
+      "port": 6614
+    }
+  },
+  {
+    "username": "Fraternity",
+    "info": {
+      "rank": 2
+    },
+    "railgun": 0,
+    "proxy": {
+      "location": "fr",
+      "host": "145.223.41.143",
+      "port": 6414
+    }
+  },
+  {
+    "username": "7abooba",
+    "info": {
+      "rank": 2
+    },
+    "railgun": 0,
+    "proxy": {
+      "location": "fr",
+      "host": "209.99.165.73",
+      "port": 5978
     }
   }
 ]

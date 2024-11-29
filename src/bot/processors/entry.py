@@ -43,3 +43,6 @@ class EntryProcessor(AbstractProcessor):
         login_packet = self.packetManager.get_packet_by_name('Login')()
         login_packet.deimplement(login_data)
         self.send_packet(login_packet)
+
+    def load_garage(self):
+        return None
