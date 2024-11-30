@@ -18,6 +18,7 @@ from .rejectinvite import Reject_Invite
 from .removebattle import Remove_Battle
 from .roundfinish import Round_Finish
 from .roundstart import Round_Start
+from .battlekickreason import Battle_Kick_Reason
 from .selectbattle import Select_Battle
 from .sendinvite import Send_Invite
 from .serverrestart import Server_Restart
@@ -56,5 +57,6 @@ __all__ = [
     Server_Restart,
     Load_Lobby,
     Player_Battle_Stats,
-    Open_Friends_List
+    Open_Friends_List,
+    Battle_Kick_Reason
 ]

@@ -8,6 +8,7 @@ from .loginready import Login_Ready
 from .login import Login
 from .loginfailed import Login_Failed
 from .loginsuccess import Login_Success
+from .banned import Banned
 from .loadmapinfo import Load_Map_Info
 from .loadnewbierewards import Load_Newbie_Rewards
 from .loadaccountstats import Load_Account_Stats
@@ -24,6 +25,7 @@ __all__ = [
     Login,
     Login_Success,
     Login_Failed,
+    Banned,
     Load_Map_Info,
     Load_Newbie_Rewards,
     Load_Account_Stats,
