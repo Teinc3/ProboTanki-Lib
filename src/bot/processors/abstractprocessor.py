@@ -77,18 +77,21 @@ class AbstractProcessor(ABC):
         # holder contains a lock, so there should not be race conditions
         return self.holder.socket.sendall(packet.wrap(self.holder.protection))
     
-    # Function creates a temporary timer thread that expires after a certain time and sends the packet to the server
-    def create_timer(self, time: int, packet: AbstractPacket):
+    def create_timer(self, time: int, callback: callable):
+        """Function creates a temporary timer thread that expires after a certain time and executes the callback function"""
         def timer_thread():
             Time.sleep(time)
             try:
-                self.send_packet(packet)
+                callback()
             except Exception as e:
                 print(f"Error: {e}")
         
         timer = Thread(target=timer_thread)
         timer.daemon = True
         timer.start()
+
+    def create_packet_timer(self, time: int, packet: AbstractPacket):
+        self.create_timer(time, lambda: self.send_packet(packet))
 
     @abstractmethod
     def load_garage(self):

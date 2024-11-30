@@ -23,10 +23,12 @@ class EntryProcessor(AbstractProcessor):
         elif self.compare_packet('Login_Ready'):
             self.login()
 
-        # elif self.compare_packet('Login_Success'):
-
         elif self.compare_packet('Login_Failed'):
             self.holder.close_socket(ProcessorCodes.WRONG_CREDENTIALS)
+
+        elif self.compare_packet('Banned'):
+            self.holder.close_socket(ProcessorCodes.BANNED)
+            self.holder.event_emitter.emit('delete_sheep')
 
     def login(self):
         if 'credentials' not in self.holder.storage:
@@ -45,4 +47,4 @@ class EntryProcessor(AbstractProcessor):
         self.send_packet(login_packet)
 
     def load_garage(self):
-        return None
+        return NotImplemented

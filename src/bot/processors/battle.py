@@ -92,10 +92,10 @@ class BattleProcessor(AbstractProcessor):
             # Check if we can spawn now
             if self.time_left > 0:
                 self.status = Alive_Status.NEW_ENTRY
-                self.create_timer(self.status.value, self.packetManager.get_packet_by_name("Death_Delay_End")())
+                self.create_packet_timer(self.status.value, self.packetManager.get_packet_by_name("Death_Delay_End")())
             else:
                 # Intermediary sessions are around 10 seconds, just an approximation, can be done with a more specific packet
-                self.create_timer(10, self.packetManager.get_packet_by_name("Death_Delay_End")())
+                self.create_packet_timer(10, self.packetManager.get_packet_by_name("Death_Delay_End")())
 
         elif self.compare_packet("Left_Team_Battle"):
             # Remove player from the list
@@ -107,7 +107,7 @@ class BattleProcessor(AbstractProcessor):
         elif self.compare_packet("Player_Start_Position"):
             # We have our new spawn, create a Send_Respawn packet after timer
             self.status = Alive_Status.CHANGING_SPAWN
-            self.create_timer(self.status.value, self.packetManager.get_packet_by_name("Send_Respawn")()) # Has no data
+            self.create_packet_timer(self.status.value, self.packetManager.get_packet_by_name("Send_Respawn")()) # Has no data
 
         elif self.compare_packet("Start_Resp_Fantom"):
             # Add the player to the list
@@ -130,7 +130,7 @@ class BattleProcessor(AbstractProcessor):
             # If it's us, end the phantom state after 2.5 seconds
             if packet_obj['username'] == self.holder.storage['credentials']['username']:
                 self.status = Alive_Status.FANTOM
-                self.create_timer(self.status.value, self.packetManager.get_packet_by_name("End_Resp_Fantom")())
+                self.create_packet_timer(self.status.value, self.packetManager.get_packet_by_name("End_Resp_Fantom")())
 
         elif self.compare_packet("Fully_Respawned"):
             affected_player = next((player for player in self.players if player.name == packet_obj['username']), None)
@@ -160,7 +160,7 @@ class BattleProcessor(AbstractProcessor):
             
             if target.name == self.holder.storage['credentials']['username']:
                 self.status = Alive_Status.DEAD_DELAY
-                self.create_timer(self.status.value, self.packetManager.get_packet_by_name("Death_Delay_End")())
+                self.create_packet_timer(self.status.value, self.packetManager.get_packet_by_name("Death_Delay_End")())
 
     def exec_battle_loop(self):
         # Hold your horses, after we spawn we wait a second so that every player should have spawned in        

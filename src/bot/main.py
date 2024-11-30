@@ -53,6 +53,7 @@ class TankiBot:
     def set_event_listeners(self):
         self.event_emitter.on('watchdog_ready', self.start_sheep)
         self.event_emitter.on('event_sheep_ready', self.event_sheep_ready)
+        self.event_emitter.on('emit_battle_creation', self.emit_battle_creation)
         self.event_emitter.on('delete_sheep', self.delete_sheep)
         self.event_emitter.on('retry_socket', self.retry_socket)
     
@@ -78,21 +79,33 @@ class TankiBot:
 
     def event_sheep_ready(self, sheep_id: int, ready_state: bool):
         with self.sheep_lock:
+            ready_count = len(self.sheep_ready)
             if ready_state:
+                if sheep_id not in self.sheep_ready and (ready_count + 1) % 5 == 0:
+                    print(f"Current Threshold: {ready_count + 1}/{self.battle_size} ({sheep_id} +)")
                 self.sheep_ready.add(sheep_id)
             elif sheep_id in self.sheep_ready:
                 self.sheep_ready.remove(sheep_id)
+                print(f"Current Threshold: {ready_count - 1}/{self.battle_size} ({sheep_id} -)") # Since a disconnect is rare we will always log it
             
-            print(f"Current Threshold: {len(self.sheep_ready)}/{self.battle_size}")
-
             if len(self.sheep_ready) == self.battle_size and ('selected_battle' not in self.watchdog.holder.storage or 'battleID' not in self.watchdog.holder.storage['selected_battle']):
-                print("Sheep ready, waiting for battle creation...")
-                self.event_emitter.emit('all_sheep_ready', { 
-                    'mapID': self.SELECTED_MAP,
-                    'battleMode': self.BATTLE_MODE,
-                    'maxPeopleCount': self.battle_size if self.BATTLE_MODE == 0 else self.battle_size // 2,
-                    'name': self.SELECTED_MAP.replace("map_", "").capitalize() + " " + ("DM" if self.BATTLE_MODE == 0 else "TDM")
-                })
+                self.emit_battle_creation()
+    
+    def emit_battle_creation(self):
+        battle_creation_options = { 
+            'mapID': self.SELECTED_MAP,
+            'battleMode': self.BATTLE_MODE,
+            'maxPeopleCount': self.battle_size if self.BATTLE_MODE == 0 else self.battle_size // 2,
+            'name': self.SELECTED_MAP.replace("map_", "").capitalize() + " " + ("DM" if self.BATTLE_MODE == 0 else "TDM"),
+            'timeLimit': 295,
+            'rankRange': [1, 7],
+            'autoBalance': False,
+            'privateBattle': False,
+        }
+        battle_creation_options['proBattle'] = battle_creation_options['privateBattle'] or not battle_creation_options['autoBalance']
+
+        print("All sheep ready, emitting battle creation to watchdog...")
+        self.event_emitter.emit('create_battle', battle_creation_options)
 
     def delete_sheep(self, sheep_id: int):
         # Find the sheep by ID and remove it from the list
@@ -127,6 +140,7 @@ class TankiBot:
             sheep = next((sheep for sheep in self.sheep if sheep.holder.storage['sheep_id'] == sheep_id), None)
             if sheep is not None:
                 self.sheep.remove(sheep)
+                print(f"Deleted sheep {sheep_id} from the list.")
 
 if __name__ == "__main__":
     TankiBot()

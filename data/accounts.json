@@ -12,9 +12,9 @@
     }
   },
   {
-    "username": "A.X.Y",
+    "username": "Gingermen",
     "info": {
-      "rank": 4
+      "rank": 2
     },
     "railgun": 0,
     "proxy": {
@@ -24,9 +24,9 @@
     }
   },
   {
-    "username": "The.Chosen.One",
+    "username": "Bespoke",
     "info": {
-      "rank": 3
+      "rank": 2
     },
     "railgun": 0,
     "proxy": {
@@ -38,7 +38,7 @@
   {
     "username": "Runway",
     "info": {
-      "rank": 3
+      "rank": 4
     },
     "railgun": 0,
     "proxy": {
@@ -48,9 +48,9 @@
     }
   },
   {
-    "username": "vvita26",
+    "username": "Trovvie",
     "info": {
-      "rank": 4
+      "rank": 2
     },
     "railgun": 0,
     "proxy": {
@@ -60,7 +60,7 @@
     }
   },
   {
-    "username": "Grobnik",
+    "username": "a59_rus",
     "info": {
       "rank": 2
     },
@@ -72,31 +72,31 @@
     }
   },
   {
-    "username": "oboneo",
+    "username": "munich_mapper",
+    "info": {
+      "rank": 2
+    },
+    "railgun": 0,
+    "proxy": {
+      "location": "cz",
+      "host": "92.112.227.172",
+      "port": 6344
+    }
+  },
+  {
+    "username": "Ludacris",
     "info": {
       "rank": 2
     },
     "railgun": 0,
     "proxy": {
       "location": "de",
-      "host": "31.57.43.74",
-      "port": 6148
+      "host": "64.137.66.99",
+      "port": 5684
     }
   },
   {
-    "username": "ragertyp",
-    "info": {
-      "rank": 2
-    },
-    "railgun": 0,
-    "proxy": {
-      "location": "de",
-      "host": "45.146.28.67",
-      "port": 6247
-    }
-  },
-  {
-    "username": "1cespark",
+    "username": "blakemasters",
     "info": {
       "rank": 2
     },
@@ -108,7 +108,7 @@
     }
   },
   {
-    "username": "AlSha3er",
+    "username": "irfan_335",
     "info": {
       "rank": 2
     },
@@ -120,19 +120,19 @@
     }
   },
   {
-    "username": "MeTJlaB",
+    "username": "vl_frozen",
     "info": {
       "rank": 2
     },
     "railgun": 0,
     "proxy": {
       "location": "de",
-      "host": "194.39.33.121",
-      "port": 5830
+      "host": "104.239.86.103",
+      "port": 6013
     }
   },
   {
-    "username": "Gravestone",
+    "username": "Quilt",
     "info": {
       "rank": 2
     },
@@ -144,7 +144,7 @@
     }
   },
   {
-    "username": "ruskimafia",
+    "username": "IO.TT.U.T.E.P",
     "info": {
       "rank": 2
     },
@@ -156,7 +156,7 @@
     }
   },
   {
-    "username": "M.E.X.A.H.U.K",
+    "username": "gruzia_mafia",
     "info": {
       "rank": 2
     },
@@ -168,57 +168,57 @@
     }
   },
   {
-    "username": "TToJlHoTa",
+    "username": "andrei_starodubtsev",
     "info": {
       "rank": 2
     },
     "railgun": 0,
     "proxy": {
       "location": "ee",
-      "host": "43.228.237.78",
-      "port": 6024
+      "host": "92.112.238.217",
+      "port": 7096
     }
   },
   {
-    "username": "Jla3yPb",
+    "username": "MOPO3_KA3AHb",
     "info": {
       "rank": 2
     },
     "railgun": 0,
     "proxy": {
       "location": "ee",
-      "host": "103.3.226.165",
-      "port": 6441
+      "host": "64.137.62.45",
+      "port": 5690
     }
   },
   {
-    "username": "Detergent",
+    "username": "Cereal",
     "info": {
       "rank": 2
     },
     "railgun": 0,
     "proxy": {
       "location": "fr",
-      "host": "206.41.175.158",
-      "port": 6371
+      "host": "104.239.86.44",
+      "port": 5954
     }
   },
   {
-    "username": "probond",
+    "username": "generalgamer1337",
     "info": {
       "rank": 2
     },
-    "railgun": 0,
+    "railgun": -1,
     "proxy": {
       "location": "fr",
-      "host": "193.168.222.188",
-      "port": 5873
+      "host": "64.137.66.169",
+      "port": 5754
     }
   },
   {
     "username": "Shadix",
     "info": {
-      "rank": 2
+      "rank": 4
     },
     "railgun": 0,
     "proxy": {
@@ -228,7 +228,7 @@
     }
   },
   {
-    "username": "Fraternity",
+    "username": "Egality",
     "info": {
       "rank": 2
     },
@@ -240,7 +240,7 @@
     }
   },
   {
-    "username": "7abooba",
+    "username": "mad_ahmed",
     "info": {
       "rank": 2
     },

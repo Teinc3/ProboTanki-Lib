@@ -12,21 +12,21 @@ class LobbyProcessor(AbstractProcessor):
         super().__init__(holder)
 
         if self.holder.watchdog:  # Enable watchdog thread
-            self.holder.event_emitter.on('all_sheep_ready', self.create_battle)
+            self.holder.event_emitter.on('create_battle', self.create_battle)
             Thread(target=self.watchdog_thread).start()
 
         else:
             # Set listener to auto select battle
             self.holder.event_emitter.on('sheep_join_battle', self.sheep_select_battle)
 
-
     def process_packets(self):
         packet_object = self.current_packet.object
 
         if self.compare_packet('Load_Account_Stats'):
             # Load Rank
-            self.holder.storage['credentials']['rank'] = packet_object['rank']
-            #print(f"{'Watchdog' if self.holder.watchdog else 'Sheep ' + str(self.holder.storage['sheep_id'])} Connected: ", self.holder.storage['credentials'], self.holder.storage['proxy'])
+            rank = self.holder.storage['credentials']['rank'] = packet_object['rank']
+            crystals = self.holder.storage['credentials']['crystals'] = packet_object['crystals']
+            print(f"{'Watchdog' if self.holder.watchdog else 'Sheep ' + str(self.holder.storage['sheep_id'])} Connected | Name: {packet_object['username']}, Rank: {rank}, Crystals: {crystals}")
             
             if not self.holder.watchdog and 'mounted_turret' not in self.holder.storage:
                 # Go to garage, check if we have mounted railgun m0
@@ -36,26 +36,16 @@ class LobbyProcessor(AbstractProcessor):
             if self.holder.watchdog:
                 self.process_mod_online_status(packet_object['username'], packet_object['online'])
 
-        elif self.compare_packet('Battle_Created'):
-            # Not useful for now
-            pass
-
-        elif self.compare_packet('Select_Battle'):
-            if 'selected_battle' not in self.holder.storage:
-                return
-            if self.holder.watchdog:
-                # There is a possibility that the battle was not created by the watchdog but selected by the server
-                # We will figure out a way later
-                # Server autoselects the newly created battle for us
-                self.holder.storage['selected_battle']['battleID'] = packet_object['battleID']
-                self.holder.event_emitter.emit('sheep_join_battle', self.holder.storage['selected_battle'].copy())
-                print("Battle id: ", packet_object['battleID'])
-            # For sheep, we use Load_Battle_Info instead
-
         elif self.compare_packet('Load_Battle_Info'):
             packet_object = packet_object['json']
 
-            if self.holder.watchdog or not 'selected_battle' in self.holder.storage:
+            if not 'selected_battle' in self.holder.storage:
+                return
+            
+            if self.holder.watchdog:
+                self.holder.storage['selected_battle']['battleID'] = packet_object['itemId']
+                self.holder.event_emitter.emit('sheep_join_battle', self.holder.storage['selected_battle'].copy())
+                print("New battle id:", packet_object['itemId'])
                 return
             
             # Sheep selected the battle, its time to join this shit!
@@ -67,14 +57,27 @@ class LobbyProcessor(AbstractProcessor):
             # We don't quite have pro battle pass rn, so we buy it first before joining the battle
             if 'proBattleTimeLeftInSec' in packet_object and packet_object['proBattleTimeLeftInSec'] == -1:
                 self.buy_pro_pass()
-                self.create_timer(1, join_packet) # 1 second margin
+                self.create_packet_timer(1, join_packet) # 1 second margin
 
             else:
                 self.send_packet(join_packet)
 
             # Remove this battle from storage, otherwise we might keep rejoining even after AC kicks us
-            # del self.holder.storage['selected_battle']
-        
+            del self.holder.storage['selected_battle']
+
+        elif self.compare_packet("Round_Finish"):
+            if not self.holder.watchdog:
+                return
+            
+            if 'selected_battle' in self.holder.storage and 'battleID' in self.holder.storage['selected_battle']:
+                if self.holder.storage['selected_battle']['battleID'] == packet_object['battleID']:
+                    # Our battle has ended, create a new one
+                    # Clear existing battle selection and emit battle creation
+                    self.create_timer(10, lambda: (self.holder.storage.pop('selected_battle', None), self.holder.event_emitter.emit('emit_battle_creation')))
+
+        elif self.compare_packet("Battle_Kick_Reason"):
+            print(f"Sheep {self.holder.storage['sheep_id']} ({self.holder.storage['credentials']['username']}) kicked from battle: {packet_object['reason']}")
+
         elif self.compare_packet("Check_Item_Mounted"):
 
             if packet_object['item_id'] == "railgun_m0":
@@ -87,7 +90,6 @@ class LobbyProcessor(AbstractProcessor):
             # Reports sheep presence through emitter
             self.send_packet(self.packetManager.get_packet_by_name("Load_Lobby")())
             self.holder.event_emitter.emit('event_sheep_ready', self.holder.storage['sheep_id'], True)
-
 
     def watchdog_thread(self):
         # Subscribe to mods online status, if not already subscribed
@@ -109,19 +111,18 @@ class LobbyProcessor(AbstractProcessor):
         self.manual_select_battle()
 
     def create_battle(self, data: dict):        
+        # All of these parameters must be the same for us to confirm the battle creation
         self.holder.storage['selected_battle'] = {
-            'battleMode': data['battleMode'],
+            'battleMode': data['battleMode']
         }
         
         create_packet = self.packetManager.get_packet_by_name('Create_Battle')()
-        create_packet.object = {'autoBalance': False, 'battleMode': data['battleMode'], 'format': 0,
-                                'friendlyFire': False, 'battleLimits': {'scoreLimit': 0, 'timeLimit': 295},
+        create_packet.object = {'autoBalance': data['autoBalance'], 'battleMode': data['battleMode'], 'format': 0,
+                                'friendlyFire': False, 'battleLimits': {'scoreLimit': 0, 'timeLimit': data['timeLimit']},
                                 'mapID': data['mapID'], 'maxPeopleCount': data['maxPeopleCount'], 'name': data['name'],
-                                'parkourMode': False, 'privateBattle': True, 'proBattle': True,
-                                'rankRange': {'maxRank': 6, 'minRank': 1}, 'noRearm': False, 'theme': 0,
+                                'parkourMode': False, 'privateBattle': data['privateBattle'], 'proBattle': data['proBattle'],
+                                'rankRange': {'maxRank': data['rankRange'][1], 'minRank': data['rankRange'][0]}, 'noRearm': False, 'theme': 0,
                                 'noSupplyBoxes': False, 'noCrystalBoxes': False, 'noSupplies': False, 'noUpgrade': False}
-
-        # create_packet.object['maxPeopleCount'] = 10
 
         create_packet.deimplement()
         self.send_packet(create_packet)
