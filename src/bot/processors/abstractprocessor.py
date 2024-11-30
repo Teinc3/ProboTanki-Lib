@@ -106,8 +106,6 @@ class AbstractProcessor(ABC):
         
         self.threads.clear()
         
-        print(f"Killed all threads for {self.holder.storage['sheep_id']}")
-
     @abstractmethod
     def load_garage(self):
         raise NotImplementedError

@@ -18,6 +18,8 @@ from .userrewards import Battle_User_Rewards
 from .userstats import Battle_User_Stats
 from .goldboxdroptext import Gold_Box_Drop_Text
 from .updateteambattlescore import Update_Team_Battle_Score
+from .leftinsidedmbattle import Left_Inside_DM_Battle
+from .leftinsideteambattle import Left_Inside_Team_Battle
 
 __all__ = [
     Tank_Health,
@@ -38,5 +40,7 @@ __all__ = [
     Battle_User_Stats,
     Battle_User_Rewards,
     Gold_Box_Drop_Text,
-    Update_Team_Battle_Score
+    Update_Team_Battle_Score,
+    Left_Inside_DM_Battle,
+    Left_Inside_Team_Battle
 ]

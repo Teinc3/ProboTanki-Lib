@@ -49,6 +49,16 @@ class LobbyProcessor(AbstractProcessor):
                 self.holder.storage['selected_battle']['battleID'] = packet_object['itemId']
                 self.holder.event_emitter.emit('sheep_join_battle', self.holder.storage['selected_battle'].copy())
                 print("New battle id:", packet_object['itemId'])
+
+                # Invite human checker to battle
+                # invite_packet = self.packetManager.get_packet_by_name('Send_Invite')()
+                # invite_packet.object = {
+                #     'username': "lEfkh9x5O9QOiGvAdbnM",
+                #     'battleID': packet_object['itemId']
+                # }
+                # invite_packet.deimplement()
+                
+                # self.send_packet(invite_packet)
                 return
             
             # Sheep selected the battle, its time to join this shit!
@@ -59,8 +69,15 @@ class LobbyProcessor(AbstractProcessor):
 
             # We don't quite have pro battle pass rn, so we buy it first before joining the battle
             if 'proBattleTimeLeftInSec' in packet_object and packet_object['proBattleTimeLeftInSec'] == -1:
-                self.buy_pro_pass()
-                self.create_packet_timer(1, join_packet) # 1 second margin
+                # Load garage
+                self.holder.storage['buyProPass'] = True
+                self.send_packet(self.packetManager.get_packet_by_name("Load_Garage")())
+                
+                self.create_timer(1, lambda: self.buy_pro_pass())
+                
+                self.create_packet_timer(2, self.packetManager.get_packet_by_name("Load_Lobby")())
+
+                self.create_packet_timer(3, join_packet)
 
             else:
                 self.send_packet(join_packet)
@@ -174,6 +191,9 @@ class LobbyProcessor(AbstractProcessor):
 
     def load_garage(self):
         credentials = self.holder.storage['credentials']
+        if 'buyProPass' in credentials and credentials['buyProPass']:
+            return # As we should have done 
+
         if 'rank' in credentials:
             if credentials['rank'] >= 2 and credentials['railgun'] < 0:
                 # Check if we have mounted
@@ -181,6 +201,7 @@ class LobbyProcessor(AbstractProcessor):
             
             self.mount()
             self.mount('hunter_m0')
+
 
     def mount(self, item_id='railgun_m0'):
         mount_packet = self.packetManager.get_packet_by_name('Mount_Item')()

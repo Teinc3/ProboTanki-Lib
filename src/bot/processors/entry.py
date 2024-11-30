@@ -28,7 +28,7 @@ class EntryProcessor(AbstractProcessor):
 
         elif self.compare_packet('Banned'):
             self.holder.close_socket(ProcessorCodes.BANNED)
-            self.holder.event_emitter.emit('delete_sheep')
+            self.holder.event_emitter.emit('delete_sheep', self.holder.storage['sheep_id'])
 
     def login(self):
         if 'credentials' not in self.holder.storage:

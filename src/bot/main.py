@@ -118,6 +118,7 @@ class TankiBot:
             sheep = next((sheep for sheep in self.sheep if sheep.holder.storage['sheep_id'] == sheep_id), None)
             if sheep is not None:
                 self.sheep.remove(sheep)
+                print(f"Deleted sheep {sheep_id} from the list.")
 
     def retry_socket(self, holder: CallbackHolder, retries: int):
         # Retry the socket connection with the same credentials and proxy
@@ -138,14 +139,6 @@ class TankiBot:
             watchdog = True
         ))
         self.watchdog.retries = retries
-
-    def delete_sheep(self, sheep_id: int):
-        # Find the sheep by ID and remove it from the list
-        with self.sheep_lock:
-            sheep = next((sheep for sheep in self.sheep if sheep.holder.storage['sheep_id'] == sheep_id), None)
-            if sheep is not None:
-                self.sheep.remove(sheep)
-                print(f"Deleted sheep {sheep_id} from the list.")
 
 if __name__ == "__main__":
     TankiBot()
