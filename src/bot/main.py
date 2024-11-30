@@ -81,12 +81,17 @@ class TankiBot:
         with self.sheep_lock:
             ready_count = len(self.sheep_ready)
             if ready_state:
-                if sheep_id not in self.sheep_ready and (ready_count + 1) % 5 == 0:
+                if sheep_id in self.sheep_ready:
+                    return
+                if (ready_count + 1) % 5 == 0:
                     print(f"Current Threshold: {ready_count + 1}/{self.battle_size} ({sheep_id} +)")
                 self.sheep_ready.add(sheep_id)
+
             elif sheep_id in self.sheep_ready:
                 self.sheep_ready.remove(sheep_id)
                 print(f"Current Threshold: {ready_count - 1}/{self.battle_size} ({sheep_id} -)") # Since a disconnect is rare we will always log it
+            else:
+                return
             
             if len(self.sheep_ready) == self.battle_size and ('selected_battle' not in self.watchdog.holder.storage or 'battleID' not in self.watchdog.holder.storage['selected_battle']):
                 self.emit_battle_creation()
@@ -100,7 +105,7 @@ class TankiBot:
             'timeLimit': 295,
             'rankRange': [1, 7],
             'autoBalance': False,
-            'privateBattle': False,
+            'privateBattle': True,
         }
         battle_creation_options['proBattle'] = battle_creation_options['privateBattle'] or not battle_creation_options['autoBalance']
 

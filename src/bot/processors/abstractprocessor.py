@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from threading import Thread, Lock
+from threading import Thread, Lock, Event
 from typing import ClassVar
 import time as Time
 
@@ -18,6 +18,10 @@ class AbstractProcessor(ABC):
     def __init__(self, callback_holder: CallbackHolder):
         self.holder = callback_holder
         self.packetManager = packetManager
+
+        self.thread_can_run = Event()
+        self.thread_can_run.set()
+        self.threads: set[Thread] = set()
 
         self._lock = Lock()
 
@@ -89,9 +93,20 @@ class AbstractProcessor(ABC):
         timer = Thread(target=timer_thread)
         timer.daemon = True
         timer.start()
+        self.threads.add(timer)
 
     def create_packet_timer(self, time: int, packet: AbstractPacket):
         self.create_timer(time, lambda: self.send_packet(packet))
+
+    def kill_threads(self):
+        self.thread_can_run.clear()
+
+        for thread in self.threads:
+            thread.join()
+        
+        self.threads.clear()
+        
+        print(f"Killed all threads for {self.holder.storage['sheep_id']}")
 
     @abstractmethod
     def load_garage(self):

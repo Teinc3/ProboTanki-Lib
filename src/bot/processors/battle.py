@@ -29,8 +29,6 @@ class BattleProcessor(AbstractProcessor):
         self._status: Alive_Status = None
         self._status_lock = Lock()
 
-        self.battle_loop: Thread = None
-
     @property
     def players(self):
         with self._players_lock:
@@ -141,9 +139,11 @@ class BattleProcessor(AbstractProcessor):
                 self.status = Alive_Status.ALIVE
 
                 # Now we can run the main battle loop
-                self.battle_loop = Thread(target=self.exec_battle_loop, name=f"Battle Loop {self.holder.storage['sheep_id']} ({self.holder.storage['credentials']['username']})")
-                self.battle_loop.daemon = True
-                self.battle_loop.start()
+                battle_loop = Thread(target=self.exec_battle_loop, name=f"Battle Loop {self.holder.storage['sheep_id']} ({self.holder.storage['credentials']['username']})")
+                battle_loop.daemon = True
+                battle_loop.start()
+
+                self.threads.add(battle_loop)
 
         elif self.compare_packet("Tank_Health"):
             player = next((player for player in self.players if player.name == packet_obj['username']), None)
@@ -164,7 +164,7 @@ class BattleProcessor(AbstractProcessor):
 
     def exec_battle_loop(self):
         # Hold your horses, after we spawn we wait a second so that every player should have spawned in        
-        while self.status == Alive_Status.ALIVE:
+        while self.thread_can_run.is_set() and self.status == Alive_Status.ALIVE:
             # Find my instance
             me = next((player for player in self.players if player.name == self.holder.storage['credentials']['username']), None)
             if not me:

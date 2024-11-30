@@ -13,7 +13,10 @@ class LobbyProcessor(AbstractProcessor):
 
         if self.holder.watchdog:  # Enable watchdog thread
             self.holder.event_emitter.on('create_battle', self.create_battle)
-            Thread(target=self.watchdog_thread).start()
+            
+            watchdog_thread = Thread(target=self.watchdog_thread)
+            watchdog_thread.start()
+            self.threads.add(watchdog_thread)
 
         else:
             # Set listener to auto select battle
@@ -68,15 +71,14 @@ class LobbyProcessor(AbstractProcessor):
         elif self.compare_packet("Round_Finish"):
             if not self.holder.watchdog:
                 return
-            
+                        
             if 'selected_battle' in self.holder.storage and 'battleID' in self.holder.storage['selected_battle']:
                 if self.holder.storage['selected_battle']['battleID'] == packet_object['battleID']:
                     # Our battle has ended, create a new one
                     # Clear existing battle selection and emit battle creation
-                    self.create_timer(10, lambda: (self.holder.storage.pop('selected_battle', None), self.holder.event_emitter.emit('emit_battle_creation')))
-
-        elif self.compare_packet("Battle_Kick_Reason"):
-            print(f"Sheep {self.holder.storage['sheep_id']} ({self.holder.storage['credentials']['username']}) kicked from battle: {packet_object['reason']}")
+                    print("Battle ended, creating new battle...")
+                    self.holder.storage.pop('selected_battle', None)
+                    self.create_timer(10, lambda: self.holder.event_emitter.emit('emit_battle_creation'))
 
         elif self.compare_packet("Check_Item_Mounted"):
 

@@ -92,13 +92,12 @@ class TankiSocket:
         def enum_compare(processor: processors.AbstractProcessor):
             return repr(processor.processorID) == repr(p_id)
 
-        if enum_compare(processors.EntryProcessor):
-            self.processor = processors.EntryProcessor(self.holder)
-        elif enum_compare(processors.LobbyProcessor):
+        if enum_compare(processors.LobbyProcessor):
+            self.processor.kill_threads()
             self.processor = processors.LobbyProcessor(self.holder)
         elif enum_compare(processors.BattleProcessor):
+            self.processor.kill_threads()
             self.processor = processors.BattleProcessor(self.holder)
-        pass
 
     def close_socket(self, code: ProcessorCodes):
         print(f"{'Watchdog' if self.holder.watchdog else self.holder.storage['sheep_id']} Socket closed: {code}")
