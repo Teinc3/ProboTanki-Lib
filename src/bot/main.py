@@ -58,6 +58,7 @@ class TankiBot:
         self.event_emitter.on('retry_socket', self.retry_socket)
     
     def start_sheep(self):
+        return # Temporarily disabled
         with self.sheep_lock:
             # Instantiate sheeps for Serpuhovs
             if len(self.sheep) > 0:

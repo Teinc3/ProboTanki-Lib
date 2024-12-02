@@ -37,7 +37,17 @@ class LobbyProcessor(AbstractProcessor):
 
         elif self.compare_packet('Online_Status'):
             if self.holder.watchdog:
-                self.process_mod_online_status(packet_object['username'], packet_object['online'])
+                self.process_mod_status(packet_object['username'], status=packet_object['online'])
+
+        elif self.compare_packet('In_Battle_Status'):
+            if self.holder.watchdog:
+                username = packet_object['battleNotifier']['username']
+                battleID = "Private Battle" if packet_object['battleNotifier']['battleInfo']['private'] else packet_object['battleNotifier']['battleInfo']['battleID']
+                self.process_mod_status(username ,battleID=battleID)
+
+        elif self.compare_packet('Not_In_Battle_Status'):
+            if self.holder.watchdog:
+                self.process_mod_status(packet_object['username'], battleID='')
 
         elif self.compare_packet('Load_Battle_Info'):
             packet_object = packet_object['json']
@@ -149,7 +159,7 @@ class LobbyProcessor(AbstractProcessor):
     def subscribe_mods(self):
         # Subscribe to mods online status
         mods_obj = self.holder.storage['mods_info'] = {
-            'mods_online_status': {},
+            'mods_status': {},
             'mods_list': StaffScraper().get_names(),
             'all_mods_status_recv': False
         }
@@ -163,31 +173,43 @@ class LobbyProcessor(AbstractProcessor):
             packet.objects = [mod_name]
             self.holder.socket.send(packet.wrap(self.holder.protection))
 
-    def process_mod_online_status(self, username: str, status: bool):
+    # Offline, Online, BattleID
+    def process_mod_status(self, username: str, status: bool = None, battleID: str = None):
         if not 'mods_info' in self.holder.storage:
             return
 
         mods_obj = self.holder.storage['mods_info']
 
-        mods_online_status = mods_obj['mods_online_status']
+        mods_status = mods_obj['mods_status']
         mod_count = len(mods_obj['mods_list'])
-        mods_online_status[username] = status
+        if isinstance(status, bool):
+            mods_status[username] = status
+        elif isinstance(battleID, str):
+            if mods_status[username] is True:
+                if battleID == '':
+                    mods_status[username] = True
+                else:
+                    mods_status[username] = battleID
 
-        if len(mods_online_status) != mod_count:
+        if len(mods_status) != mod_count:
             return  # Wait for data for all mods to arrive
 
-        online_count = sum(mods_online_status.values())
+        # Number of mods that are "idle" and may be moderating
+        idle_count = sum(map(lambda x: int(x) if isinstance(x, bool) else 0, mods_status.values()))
         print(
-            f"Mods Online: {online_count}/{mod_count} "
-            f"({', '.join(mod_name for mod_name, is_online in mods_online_status.items() if is_online)})")
+            f"Mods Free to Moderate: {idle_count}/{mod_count} "
+            f"({', '.join(mod_name for mod_name, is_online in mods_status.items() if is_online)})")
+
+        changed = True
 
         if not mods_obj['all_mods_status_recv']:
+            changed = False
             mods_obj['all_mods_status_recv'] = True
             # First time recv all actions (Can add return)
             self.holder.event_emitter.emit('watchdog_ready')
 
         # Second time recv all actions
-        # self.update_discord_status()
+        # self.update_discord_status(changed, username)
 
     def load_garage(self):
         credentials = self.holder.storage['credentials']
@@ -223,20 +245,20 @@ class LobbyProcessor(AbstractProcessor):
         self.send_packet(buy_packet)
         
 
-    def update_discord_status(self):
+    def update_discord_status(self, changed: bool, changed_mod_name: str):
         endpoint = "https://discord.com/api/webhooks/1309907418573963394/2FQsU_MKCXL5R01dmWERhZxpTrU4sehANFSG5F19PiHC3kMmINgjFNXLRAi3gPS93090"
         data = {
             'embeds': [{
                 'title': 'Mods Online Status',
                 'description': 'List of mods that are currently online in game',
                 'fields': [{
-                    'name': mod_name,
-                    'value': 'Online',
+                    'name': mod_name + (" (Changed)" if changed and changed_mod_name else ""),
+                    'value': ("In battle: " + status) if isinstance(status, str) else 'Online',
                     'inline': True
-                } for mod_name, online_status in self.holder.storage['mods_info']['mods_online_status'].items()
-                if online_status],
+                } for mod_name, status in self.holder.storage['mods_info']['mods_status'].items()
+                if status],
                 'footer': {
-                    'text': 'Mods Online: ' + str(sum(self.holder.storage['mods_info']['mods_online_status'].values())) + '/' + str(len(self.holder.storage['mods_info']['mods_list']))
+                    'text': 'Mods Online: ' + str(sum(map(lambda x: int(bool(x)), self.holder.storage['mods_info']['mods_status'].values()))) + '/' + str(len(self.holder.storage['mods_info']['mods_list']))
                 }
             }]
         }
