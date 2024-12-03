@@ -35,6 +35,9 @@ class LobbyProcessor(AbstractProcessor):
                 # Go to garage, check if we have mounted railgun m0
                 self.send_packet(self.packetManager.get_packet_by_name('Load_Garage')())
 
+        elif self.compare_packet('Battle_Kick_Reason'):
+            print("Battle Kick Reason:", packet_object['reason'])
+
         elif self.compare_packet('Online_Status'):
             if self.holder.watchdog:
                 self.process_mod_online_status(packet_object['username'], packet_object['online'])
@@ -137,9 +140,9 @@ class LobbyProcessor(AbstractProcessor):
         
         create_packet = self.packetManager.get_packet_by_name('Create_Battle')()
         create_packet.object = {'autoBalance': data['autoBalance'], 'battleMode': data['battleMode'], 'format': 0,
-                                'friendlyFire': False, 'battleLimits': {'scoreLimit': 0, 'timeLimit': data['timeLimit']},
+                                'friendlyFire': False, 'battleLimits': {'scoreLimit': 0, 'timeLimit': 0},
                                 'mapID': data['mapID'], 'maxPeopleCount': data['maxPeopleCount'], 'name': data['name'],
-                                'parkourMode': False, 'privateBattle': data['privateBattle'], 'proBattle': data['proBattle'],
+                                'parkourMode': False, 'privateBattle': True, 'proBattle': data['proBattle'],
                                 'rankRange': {'maxRank': data['rankRange'][1], 'minRank': data['rankRange'][0]}, 'noRearm': False, 'theme': 0,
                                 'noSupplyBoxes': False, 'noCrystalBoxes': False, 'noSupplies': False, 'noUpgrade': False}
 

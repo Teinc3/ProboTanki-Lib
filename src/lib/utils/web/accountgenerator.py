@@ -130,7 +130,7 @@ class AccountGenerator:
 
 
 if __name__ == "__main__":
-    generator = AccountGenerator(20)  # 20 new fresh skibiditoiletsigmamaleonthewallfortnitealphanogirlinlife accounts
+    generator = AccountGenerator(2)  # 20 new fresh skibiditoiletsigmamaleonthewallfortnitealphanogirlinlife accounts
     generator.collect_existing_emails()
     generator.add_missing_info()
     generator.update_json_data()
