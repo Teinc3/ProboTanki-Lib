@@ -48,8 +48,10 @@ class LobbyProcessor(AbstractProcessor):
             if not 'selected_battle' in self.holder.storage:
                 return
             
+            selected_battle = self.holder.storage['selected_battle']
+            
             if self.holder.watchdog:
-                self.holder.storage['selected_battle']['battleID'] = packet_object['itemId']
+                selected_battle['battleID'] = packet_object['itemId']
                 self.holder.event_emitter.emit('sheep_join_battle', self.holder.storage['selected_battle'].copy())
                 print("New battle id:", packet_object['itemId'])
 
@@ -65,7 +67,7 @@ class LobbyProcessor(AbstractProcessor):
                 return
             
             # Sheep selected the battle, its time to join this shit!
-            if self.holder.storage['selected_battle']['battleID'] != packet_object['itemId']:
+            if selected_battle['battleID'] != packet_object['itemId']:
                 return
             join_packet = self.packetManager.get_packet_by_name('Join_Battle')()
             join_packet.objects = [2 if self.holder.storage['selected_battle']['battleMode'] == 0 else self.holder.storage['sheep_id'] % 2]
@@ -86,11 +88,13 @@ class LobbyProcessor(AbstractProcessor):
                 self.send_packet(join_packet)
 
             # Remove this battle from storage, otherwise we might keep rejoining even after AC kicks us
-            del self.holder.storage['selected_battle']
+            # del self.holder.storage['selected_battle']
 
         elif self.compare_packet("Round_Finish"):
             if not self.holder.watchdog:
                 return
+            
+            return
                         
             if 'selected_battle' in self.holder.storage and 'battleID' in self.holder.storage['selected_battle']:
                 if self.holder.storage['selected_battle']['battleID'] == packet_object['battleID']:
@@ -140,7 +144,7 @@ class LobbyProcessor(AbstractProcessor):
         
         create_packet = self.packetManager.get_packet_by_name('Create_Battle')()
         create_packet.object = {'autoBalance': data['autoBalance'], 'battleMode': data['battleMode'], 'format': 0,
-                                'friendlyFire': False, 'battleLimits': {'scoreLimit': 0, 'timeLimit': 0},
+                                'friendlyFire': False, 'battleLimits': {'scoreLimit': 0, 'timeLimit': data['timeLimit']},
                                 'mapID': data['mapID'], 'maxPeopleCount': data['maxPeopleCount'], 'name': data['name'],
                                 'parkourMode': False, 'privateBattle': True, 'proBattle': data['proBattle'],
                                 'rankRange': {'maxRank': data['rankRange'][1], 'minRank': data['rankRange'][0]}, 'noRearm': False, 'theme': 0,

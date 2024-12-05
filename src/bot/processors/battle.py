@@ -172,70 +172,72 @@ class BattleProcessor(AbstractProcessor):
             me = next((player for player in self.players if player.name == self.holder.storage['credentials']['username']), None)
             if not me:
                 return
-
+            
+            client_time = self.modded_client_time
+            
+            # AntiAFK
             packet = self.packetManager.get_packet_by_name("Turret_Control")()
-            packet.object['clientTime'] = self.modded_client_time
+            packet.object['clientTime'] = client_time
             packet.object['specificationID'] = self.holder.storage['specificationID']
             packet.object['control'] = random.randint(-128, 127)
             packet.deimplement()
             self.send_packet(packet)
-
-            time.sleep(50)
             
-            # if self.holder.storage['mounted_turret'] == 'railgun_m0':
-            #     packet = self.packetManager.get_packet_by_name("Railgun_Shot_Init_OUT")()
-            #     packet.object['clientTime'] = self.modded_client_time
-            #     packet.deimplement()
-            #     self.send_packet(packet)
-            #
-            #     # Randomize enemy order
-            #     enemies_len = 0
-            #     while enemies_len == 0:
-            #         enemies: list[Player] = [player for player in self.players if player.team != me.team and not player.inresp]
-            #         enemies_len = len(enemies)
-            #         time.sleep(1.17)
-            #     random.shuffle(enemies)
-            #
-            #     # Shoot at all enemies
-            #     packet = self.packetManager.get_packet_by_name("Railgun_Shot_OUT")()
-            #     packet.object['clientTime'] = self.modded_client_time
-            #     packet.object["incarnationIDs"] = [player.incarnation_id for player in enemies]
-            #     packet.object["targets"] = [player.name for player in enemies]
-            #     packet.object["staticHitPoint"] = {"x": 0, "y": 0, "z": 0}
-            #     packet.object["targetHitPoints"] = [{"x": 0, "y": 0, "z": 0}] * enemies_len
-            #     packet.object["targetBodyPositions"] = [{"x": 0, "y": 0, "z": 0}] * enemies_len
-            #     packet.object["globalHitPoints"] = [{"x": 0, "y": 0, "z": 0}] * enemies_len
-            #
-            #     packet.deimplement()
-            #     self.send_packet(packet)
-            #     # print(me, "tries to shoot", enemies)
-            #
-            #     # Smoky recharge
-            #     time.sleep(5.9)
-            #
-            # elif self.holder.storage['mounted_turret'] == 'smoky_m0':
-            #     enemy = None
-            #     while enemy == None:
-            #         enemy = max([player for player in self.players if player.team != me.team and not player.inresp], key=lambda x: x.health, default=None)
-            #
-            #
-            #     # Shoot at the enemy
-            #     packet = self.packetManager.get_packet_by_name("Smoky_Shoot_Target_OUT")()
-            #     packet.object['clientTime'] = self.modded_client_time
-            #     packet.object['target'] = enemy.name
-            #     packet.object['incarnationID'] = enemy.incarnation_id
-            #
-            #     # We do some trolling here
-            #     packet.object['targetBodyPosition'] = {"x": 0, "y": 0, "z": 0}
-            #     packet.object['localHitPoint'] = {"x": 0, "y": 0, "z": 0}
-            #     packet.object['globalHitPoint'] = {"x": 0, "y": 0, "z": 0}
-            #
-            #     packet.deimplement()
-            #     self.send_packet(packet)
-            #     # print(me, "tries to shoot", enemy)
-            #
-            #     # Smoky recharge
-            #     time.sleep(1.85)
+            # Shoot at enemies
+            if self.holder.storage['mounted_turret'] == 'railgun_m0':
+                packet = self.packetManager.get_packet_by_name("Railgun_Shot_Init_OUT")()
+                packet.object['clientTime'] = client_time
+                packet.deimplement()
+                self.send_packet(packet)
+            
+                # Randomize enemy order
+                enemies_len = 0
+                while enemies_len == 0:
+                    enemies: list[Player] = [player for player in self.players if player.team != me.team and not player.inresp]
+                    enemies_len = len(enemies)
+                    time.sleep(1.17)
+                random.shuffle(enemies)
+            
+                # Shoot at all enemies
+                packet = self.packetManager.get_packet_by_name("Railgun_Shot_OUT")()
+                packet.object['clientTime'] = self.modded_client_time
+                packet.object["incarnationIDs"] = [player.incarnation_id for player in enemies]
+                packet.object["targets"] = [player.name for player in enemies]
+                packet.object["staticHitPoint"] = {"x": 0, "y": 0, "z": 0}
+                packet.object["targetHitPoints"] = [{"x": 0, "y": 0, "z": 0}] * enemies_len
+                packet.object["targetBodyPositions"] = [{"x": 0, "y": 0, "z": 0}] * enemies_len
+                packet.object["globalHitPoints"] = [{"x": 0, "y": 0, "z": 0}] * enemies_len
+            
+                packet.deimplement()
+                self.send_packet(packet)
+                # print(me, "tries to shoot", enemies)
+            
+                # Smoky recharge
+                time.sleep(5.9)
+            
+            elif self.holder.storage['mounted_turret'] == 'smoky_m0':
+                enemy = None
+                while enemy == None:
+                    enemy = max([player for player in self.players if player.team != me.team and not player.inresp], key=lambda x: x.health, default=None)
+            
+            
+                # Shoot at the enemy
+                packet = self.packetManager.get_packet_by_name("Smoky_Shoot_Target_OUT")()
+                packet.object['clientTime'] = client_time
+                packet.object['target'] = enemy.name
+                packet.object['incarnationID'] = enemy.incarnation_id
+            
+                # We do some trolling here
+                packet.object['targetBodyPosition'] = {"x": 0, "y": 0, "z": 0}
+                packet.object['localHitPoint'] = {"x": 0, "y": 0, "z": 0}
+                packet.object['globalHitPoint'] = {"x": 0, "y": 0, "z": 0}
+            
+                packet.deimplement()
+                self.send_packet(packet)
+                # print(me, "tries to shoot", enemy)
+            
+                # Smoky recharge
+                time.sleep(1.85)
 
     def load_garage(self):
         return None

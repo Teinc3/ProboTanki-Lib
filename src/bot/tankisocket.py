@@ -40,6 +40,7 @@ class TankiSocket:
 
         # Connect to server
         self.retries = 0
+        self.retries_lock = Lock()
         self.thread_lock = Lock()
         self.thread = Thread(target=self.loop, name='TankiSocket - ' + ('Watchdog' if self.holder.watchdog else ('Sheep ' + str(self.holder.storage['sheep_id']))))
         self.stop_thread = Event()

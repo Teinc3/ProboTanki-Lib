@@ -1,294 +1,122 @@
 [
   {
-    "username": "SavageReaper623",
-    "password": "QzeDyzEBF1CF",
-    "info": {
-      "rank": 3
-    },
+    "username": "Manaus",
     "proxy": {
-      "location": "tr",
-      "host": "206.41.168.253",
-      "port": 6918
-    }
-  },
-  {
-    "username": "Gingermeneater",
-    "locale": "english/generic",
+      "host": "64.137.124.168",
+      "port": 6380
+    },
     "info": {
       "rank": 1
     },
-    "proxy": {
-      "location": "cz",
-      "host": "104.239.86.133",
-      "port": 6043
-    },
-    "email": "o.samag.oonerskibidi@gmail.com",
+    "email": "osama.g.oonerskibidi@gmail.com",
     "railgun": -1
   },
   {
-    "username": "BespokenWords",
-    "locale": "english/generic",
+    "username": "goonmaster",
+    "proxy": {
+      "host": "84.33.241.82",
+      "port": 6439
+    },
     "info": {
       "rank": 1
     },
-    "proxy": {
-      "location": "cz",
-      "host": "216.173.109.223",
-      "port": 6454
-    },
-    "email": "o.samago.onerskibidi@gmail.com",
+    "email": "osam.ago.onerskibidi@gmail.com",
     "railgun": -1
   },
   {
-    "username": "RunwayToSuccess",
-    "locale": "english/generic",
+    "username": "tankist_ot_moskva",
+    "proxy": {
+      "host": "103.47.53.212",
+      "port": 8510
+    },
     "info": {
       "rank": 1
     },
-    "proxy": {
-      "location": "cz",
-      "host": "92.112.238.54",
-      "port": 6933
-    },
-    "email": "o.samagoo.nerskibidi@gmail.com",
+    "email": "osam.agoo.nerskibidi@gmail.com",
     "railgun": -1
   },
   {
-    "username": "TrovvieScuttle",
-    "locale": "english/generic",
+    "username": "zypotic",
+    "proxy": {
+      "host": "104.222.161.185",
+      "port": 6317
+    },
     "info": {
       "rank": 1
     },
-    "proxy": {
-      "location": "cz",
-      "host": "92.112.227.45",
-      "port": 6217
-    },
-    "email": "o.samagoon.erskibidi@gmail.com",
+    "email": "osam.agoon.erskibidi@gmail.com",
     "railgun": -1
   },
   {
-    "username": "a59_rus_maskov",
-    "locale": "russian",
+    "username": "Toilet",
+    "proxy": {
+      "host": "209.35.5.214",
+      "port": 6905
+    },
     "info": {
       "rank": 1
     },
-    "proxy": {
-      "location": "cz",
-      "host": "92.112.227.84",
-      "port": 6256
-    },
-    "email": "o.samagoone.rskibidi@gmail.com",
+    "email": "osam.agoone.rskibidi@gmail.com",
     "railgun": -1
   },
   {
-    "username": "munich_mapper_god",
-    "locale": "english/generic",
+    "username": "grom_gt_gx",
     "proxy": {
-      "location": "cz",
-      "host": "92.112.227.172",
-      "port": 6344
+      "host": "145.223.45.169",
+      "port": 7203
     },
     "info": {
       "rank": 1
     },
-    "email": "o.samagooner.skibidi@gmail.com",
+    "email": "osam.agooner.skibidi@gmail.com",
     "railgun": -1
   },
   {
-    "username": "Ludacris_eater",
-    "locale": "english/generic",
+    "username": "gpax_98",
     "proxy": {
-      "location": "de",
-      "host": "64.137.66.99",
-      "port": 5684
+      "host": "147.185.217.121",
+      "port": 6555
     },
     "info": {
       "rank": 1
     },
-    "email": "o.samagooners.kibidi@gmail.com",
+    "email": "osam.agooners.kibidi@gmail.com",
     "railgun": -1
   },
   {
-    "username": "blakem_destroyer",
-    "locale": "english/generic",
+    "username": "Vindel",
     "proxy": {
-      "location": "de",
-      "host": "104.239.10.116",
-      "port": 5787
+      "host": "148.135.151.44",
+      "port": 5537
     },
     "info": {
       "rank": 1
     },
-    "email": "osa.mago.onerskibidi@gmail.com",
+    "email": "osam.agoonersk.ibidi@gmail.com",
     "railgun": -1
   },
   {
-    "username": "irfan_335123",
-    "locale": "arabic",
+    "username": "A.X.E.L",
     "proxy": {
-      "location": "de",
-      "host": "204.217.160.229",
-      "port": 7301
+      "host": "184.174.43.209",
+      "port": 6749
     },
     "info": {
       "rank": 1
     },
-    "email": "o.samagoonerski.bidi@gmail.com",
+    "email": "osam.agoonerski.bidi@gmail.com",
     "railgun": -1
   },
   {
-    "username": "vl_frozen_women",
-    "locale": "russian",
+    "username": "K_O_TT_A_T_K_A",
     "proxy": {
-      "location": "de",
-      "host": "104.239.86.103",
-      "port": 6013
+      "host": "212.42.199.138",
+      "port": 5877
     },
     "info": {
       "rank": 1
     },
-    "email": "o.samagoonerskib.idi@gmail.com",
-    "railgun": -1
-  },
-  {
-    "username": "Quilt_and_Pillow",
-    "locale": "english/generic",
-    "proxy": {
-      "location": "ee",
-      "host": "103.3.227.59",
-      "port": 6612
-    },
-    "info": {
-      "rank": 1
-    },
-    "email": "o.samagoonerskibi.di@gmail.com",
-    "railgun": -1
-  },
-  {
-    "username": "I.o.t.r.a.n.s",
-    "locale": "russian",
-    "proxy": {
-      "location": "ee",
-      "host": "103.3.226.210",
-      "port": 6486
-    },
-    "info": {
-      "rank": 1
-    },
-    "email": "os.amagooner.skibidi@gmail.com",
-    "railgun": -1
-  },
-  {
-    "username": "maskov_mafia_bss",
-    "locale": "russian",
-    "proxy": {
-      "location": "ee",
-      "host": "103.3.227.89",
-      "port": 6642
-    },
-    "info": {
-      "rank": 1
-    },
-    "email": "osa.magoo.nerskibidi@gmail.com",
-    "railgun": -1
-  },
-  {
-    "username": "andrei_boxer_tarodud",
-    "locale": "russian",
-    "proxy": {
-      "location": "ee",
-      "host": "92.112.238.217",
-      "port": 7096
-    },
-    "info": {
-      "rank": 1
-    },
-    "email": "os.amagoonersk.ibidi@gmail.com",
-    "railgun": -1
-  },
-  {
-    "username": "MOPO3_TAHKE",
-    "locale": "russian",
-    "proxy": {
-      "location": "fr",
-      "host": "104.239.86.44",
-      "port": 5954
-    },
-    "info": {
-      "rank": 1
-    },
-    "email": "os.amagoonerski.bidi@gmail.com",
-    "railgun": -1
-  },
-  {
-    "username": "Cereal_123_Killer",
-    "locale": "english/generic",
-    "proxy": {
-      "location": "fr",
-      "host": "104.239.86.44",
-      "port": 5954
-    },
-    "info": {
-      "rank": 1
-    },
-    "email": "os.amagoonerskib.idi@gmail.com",
-    "railgun": -1
-  },
-  {
-    "username": "generalgamer1991",
-    "locale": "english/generic",
-    "proxy": {
-      "location": "fr",
-      "host": "64.137.66.169",
-      "port": 5754
-    },
-    "info": {
-      "rank": 1
-    },
-    "email": "os.amago.onerskibidi@gmail.com",
-    "railgun": -1
-  },
-  {
-    "username": "Shadixkakastron",
-    "locale": "english/generic",
-    "proxy": {
-      "location": "fr",
-      "host": "145.223.47.32",
-      "port": 6614
-    },
-    "info": {
-      "rank": 1
-    },
-    "email": "os.amagoo.nerskibidi@gmail.com",
-    "railgun": -1
-  },
-  {
-    "username": "Egality_promoter",
-    "locale": "english/generic",
-    "proxy": {
-      "location": "fr",
-      "host": "145.223.41.143",
-      "port": 6414
-    },
-    "info": {
-      "rank": 1
-    },
-    "email": "os.amagoon.erskibidi@gmail.com",
-    "railgun": -1
-  },
-  {
-    "username": "mad_ahmed_xdd",
-    "locale": "arabic",
-    "proxy": {
-      "location": "fr",
-      "host": "209.99.165.73",
-      "port": 5978
-    },
-    "info": {
-      "rank": 1
-    },
-    "email": "os.amagoone.rskibidi@gmail.com",
+    "email": "osam.agoonerskib.idi@gmail.com",
     "railgun": -1
   }
 ]

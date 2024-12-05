@@ -40,7 +40,7 @@ class TankiBot:
         self.init_watchdog()
         
     def init_watchdog(self):
-        watchdog_account = self.account_manager.get_next_account()
+        watchdog_account = self.account_manager.watchdog
         self.watchdog = TankiSocket(CallbackHolder(
             storage = { 
                 'credentials': AccountManager.get_account_credentials(watchdog_account),
@@ -102,7 +102,7 @@ class TankiBot:
             'battleMode': self.BATTLE_MODE,
             'maxPeopleCount': self.battle_size if self.BATTLE_MODE == 0 else self.battle_size // 2,
             'name': self.SELECTED_MAP.replace("map_", "").capitalize() + " " + ("DM" if self.BATTLE_MODE == 0 else "TDM"),
-            'timeLimit': 295,
+            'timeLimit': 900,
             'rankRange': [1, 7],
             'autoBalance': False,
             'privateBattle': True,
@@ -122,23 +122,43 @@ class TankiBot:
 
     def retry_socket(self, holder: CallbackHolder, retries: int):
         # Retry the socket connection with the same credentials and proxy
-        if not holder.watchdog:
-            return
-        if retries >= TankiSocket.MAX_RETRIES_POSSIBLE:
-            print(f"Max {retries} retries reached for Watchdog, waiting 4 minutes before retrying connection.")
-            time.sleep(240)
-            storage = { 'credentials': holder.storage['credentials'], 'proxy': holder.storage['proxy'] }
-            retries = 0
+        if holder.watchdog:
+            if retries >= TankiSocket.MAX_RETRIES_POSSIBLE:
+                print(f"Max {retries} retries reached for Watchdog, waiting 4 minutes before retrying connection.")
+                time.sleep(240)
+                storage = { 'credentials': holder.storage['credentials'], 'proxy': holder.storage['proxy'] }
+                retries = 0
+            else:
+                # Remove 'mods_info' from storage before reassigning storage to new watchdog instance
+                holder.storage.pop('mods_info', None)
+                storage = holder.storage
+            self.watchdog = TankiSocket(CallbackHolder(
+                storage = storage,
+                event_emitter = self.event_emitter,
+                watchdog = True
+            ))
+            self.watchdog.retries = retries
         else:
-            # Remove 'mods_info' from storage before reassigning storage to new watchdog instance
-            holder.storage.pop('mods_info', None)
-            storage = holder.storage
-        self.watchdog = TankiSocket(CallbackHolder(
-            storage = storage,
-            event_emitter = self.event_emitter,
-            watchdog = True
-        ))
-        self.watchdog.retries = retries
+            # Retry the socket connection with the same credentials and proxy
+            sheep_id = holder.storage['sheep_id']
+            if retries >= TankiSocket.MAX_RETRIES_POSSIBLE:
+                print(f"Max {retries} retries reached for Sheep {sheep_id}, deleting sheep.")
+                self.event_emitter.emit('delete_sheep', sheep_id)
+                return
+            socket = TankiSocket(CallbackHolder(
+                storage = holder.storage,
+                event_emitter = self.event_emitter,
+                watchdog = False
+            ))
+            with self.sheep_lock:
+                # Find the index of the sheep by ID and replace it with the new socket
+                sheep_index = next((i for i, sheep in enumerate(self.sheep) if sheep.holder.storage['sheep_id'] == sheep_id), None)
+                if sheep_index is not None:
+                    self.sheep[sheep_index] = socket
+                    print(f"Retrying connection for Sheep {sheep_id} ({retries + 1})...")
+                    socket.retries = retries
+                else:
+                    print(f"Failed to retry connection for Sheep {sheep_id}, sheep not found.")
 
 if __name__ == "__main__":
     TankiBot()
