@@ -150,6 +150,13 @@ class BattleProcessor(AbstractProcessor):
                 battle_loop.start()
                 self.threads.add(battle_loop)
 
+                if any(thread.name.startswith(f"Anti-AFK Loop {self.holder.storage['sheep_id']}") for thread in self.threads):
+                    return
+                anti_afk_loop = Thread(target=self.anti_afk_loop, name=f"Anti-AFK Loop {self.holder.storage['sheep_id']} ({self.holder.storage['credentials']['username']})")
+                anti_afk_loop.daemon = True
+                anti_afk_loop.start()
+                self.threads.add(anti_afk_loop)
+
         elif self.compare_packet("Tank_Health"):
             player = next((player for player in self.players if player.name == packet_obj['username']), None)
             if player:
@@ -176,13 +183,6 @@ class BattleProcessor(AbstractProcessor):
                 return
             
             client_time = self.modded_client_time
-
-            packet = self.packetManager.get_packet_by_name("Turret_Control")()
-            packet.object['clientTime'] = client_time
-            packet.object['specificationID'] = self.holder.storage['specificationID']
-            packet.object['control'] = random.randint(-128, 127)
-            packet.deimplement()
-            self.send_packet(packet)
             
             # Shoot at enemies
             if 'mounted_turret' in self.holder.storage and self.holder.storage['mounted_turret'] == 'smoky_m0' or 'mounted_turret' not in self.holder.storage and self.holder.storage['credentials']['railgun'] < 0:
@@ -238,7 +238,19 @@ class BattleProcessor(AbstractProcessor):
                 # print(me, "tries to shoot", enemies)
             
                 # Rail recharge
-                time.sleep(1)
+                time.sleep(5.85)
+
+    def anti_afk_loop(self):
+        while self.thread_can_run.is_set():
+            # Randomly move
+            packet = self.packetManager.get_packet_by_name("Turret_Control")()
+            packet.object['clientTime'] = self.modded_client_time
+            packet.object['specificationID'] = self.holder.storage['specificationID']
+            packet.object['control'] = random.randint(-128, 127)
+            packet.deimplement()
+            self.send_packet(packet)
+
+            time.sleep(20)
 
     def load_garage(self):
         return None

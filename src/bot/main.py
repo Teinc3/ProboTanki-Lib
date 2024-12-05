@@ -151,11 +151,15 @@ class TankiBot:
                 watchdog = False
             ))
             with self.sheep_lock:
+                if retries >= TankiSocket.MAX_RETRIES_POSSIBLE:
+                    print(f"Max {retries} retries reached for Sheep {sheep_id}, deleting sheep.")
+                    self.event_emitter.emit('delete_sheep', sheep_id)
+                    return
                 # Find the index of the sheep by ID and replace it with the new socket
                 sheep_index = next((i for i, sheep in enumerate(self.sheep) if sheep.holder.storage['sheep_id'] == sheep_id), None)
                 if sheep_index is not None:
                     self.sheep[sheep_index] = socket
-                    print(f"Retrying connection for Sheep {sheep_id} ({retries + 1})...")
+                    print(f"Retrying connection for Sheep {sheep_id} ({retries})...")
                     socket.retries = retries
                 else:
                     print(f"Failed to retry connection for Sheep {sheep_id}, sheep not found.")
