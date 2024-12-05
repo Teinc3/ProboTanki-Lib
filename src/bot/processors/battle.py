@@ -72,6 +72,9 @@ class BattleProcessor(AbstractProcessor):
         self._client_time = value
         self._last_client_time = int(Datetime.now().timestamp() * 1000)
 
+    def adjust_client_time(self, value):
+        self._client_time += value
+
     def process_packets(self):
         packet_obj = self.current_packet.object
 
@@ -147,15 +150,6 @@ class BattleProcessor(AbstractProcessor):
                 battle_loop.start()
                 self.threads.add(battle_loop)
 
-                # Also add anti afk loop    
-                # Check if threads has this thread already 
-                if any(thread.name.startswith(f"Anti AFK {self.holder.storage['sheep_id']}") for thread in self.threads):
-                    return
-                anti_afk = Thread(target=self.anti_afk, name=f"Anti AFK {self.holder.storage['sheep_id']} ({self.holder.storage['credentials']['username']})")
-                anti_afk.daemon = True
-                anti_afk.start()
-                self.threads.add(anti_afk)
-
         elif self.compare_packet("Tank_Health"):
             player = next((player for player in self.players if player.name == packet_obj['username']), None)
             if player:
@@ -182,6 +176,13 @@ class BattleProcessor(AbstractProcessor):
                 return
             
             client_time = self.modded_client_time
+
+            packet = self.packetManager.get_packet_by_name("Turret_Control")()
+            packet.object['clientTime'] = client_time
+            packet.object['specificationID'] = self.holder.storage['specificationID']
+            packet.object['control'] = random.randint(-128, 127)
+            packet.deimplement()
+            self.send_packet(packet)
             
             # Shoot at enemies
             if 'mounted_turret' in self.holder.storage and self.holder.storage['mounted_turret'] == 'smoky_m0' or 'mounted_turret' not in self.holder.storage and self.holder.storage['credentials']['railgun'] < 0:
@@ -236,25 +237,8 @@ class BattleProcessor(AbstractProcessor):
                 self.send_packet(packet)
                 # print(me, "tries to shoot", enemies)
             
-                # Smoky recharge
-                time.sleep(5.9)
-
-    def anti_afk(self):
-        while self.thread_can_run.is_set():
-            while self.status != Alive_Status.FANTOM and self.status != Alive_Status.ALIVE:
-                time.sleep(10)
-                if self.thread_can_run.is_set() == False:
-                    return
-
-            # AntiAFK
-            packet = self.packetManager.get_packet_by_name("Turret_Control")()
-            packet.object['clientTime'] = self.modded_client_time
-            packet.object['specificationID'] = self.holder.storage['specificationID']
-            packet.object['control'] = random.randint(-128, 127)
-            packet.deimplement()
-            self.send_packet(packet)
-
-            time.sleep(25)
+                # Rail recharge
+                time.sleep(1)
 
     def load_garage(self):
         return None
