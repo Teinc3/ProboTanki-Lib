@@ -156,7 +156,7 @@ class LobbyProcessor(AbstractProcessor):
         create_packet.object = {'autoBalance': data['autoBalance'], 'battleMode': data['battleMode'], 'format': 0,
                                 'friendlyFire': False, 'battleLimits': {'scoreLimit': 0, 'timeLimit': data['timeLimit']},
                                 'mapID': data['mapID'], 'maxPeopleCount': data['maxPeopleCount'], 'name': data['name'],
-                                'parkourMode': False, 'privateBattle': True, 'proBattle': data['proBattle'],
+                                'parkourMode': False, 'privateBattle': data['privateBattle'], 'proBattle': data['proBattle'],
                                 'rankRange': {'maxRank': data['rankRange'][1], 'minRank': data['rankRange'][0]}, 'noRearm': False, 'theme': 0,
                                 'noSupplyBoxes': False, 'noCrystalBoxes': False, 'noSupplies': False, 'noUpgrade': False}
 
@@ -205,7 +205,7 @@ class LobbyProcessor(AbstractProcessor):
         idle_count = sum(map(lambda x: int(x) if isinstance(x, bool) else 0, mods_status.values()))
         print(
             f"Mods Free to Moderate: {idle_count}/{mod_count} "
-            f"({', '.join(mod_name for mod_name, is_online in mods_status.items() if is_online)})")
+            f"({', '.join(mod_name for mod_name, is_online in mods_status.items() if is_online is True)})")
 
         changed = True
 
@@ -253,7 +253,7 @@ class LobbyProcessor(AbstractProcessor):
         
 
     def update_discord_status(self, changed: bool, changed_mod_name: str):
-        endpoint = "https://discord.com/api/webhooks/1309907418573963394/2FQsU_MKCXL5R01dmWERhZxpTrU4sehANFSG5F19PiHC3kMmINgjFNXLRAi3gPS93090"
+        endpoint = "https://discord.com/api/webhooks/1314034164680364065/e1v8MfC5P9eJXY9k0LmLsMh-K4tbXyMupPKYy0lW-X0kzSSZJdpeORjC7gKOsvgMq6N1"
         data = {
             'embeds': [{
                 'title': 'Mods Online Status',

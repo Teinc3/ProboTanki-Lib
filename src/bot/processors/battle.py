@@ -145,8 +145,16 @@ class BattleProcessor(AbstractProcessor):
                 battle_loop = Thread(target=self.exec_battle_loop, name=f"Battle Loop {self.holder.storage['sheep_id']} ({self.holder.storage['credentials']['username']})")
                 battle_loop.daemon = True
                 battle_loop.start()
-
                 self.threads.add(battle_loop)
+
+                # Also add anti afk loop    
+                # Check if threads has this thread already 
+                if any(thread.name.startswith(f"Anti AFK {self.holder.storage['sheep_id']}") for thread in self.threads):
+                    return
+                anti_afk = Thread(target=self.anti_afk, name=f"Anti AFK {self.holder.storage['sheep_id']} ({self.holder.storage['credentials']['username']})")
+                anti_afk.daemon = True
+                anti_afk.start()
+                self.threads.add(anti_afk)
 
         elif self.compare_packet("Tank_Health"):
             player = next((player for player in self.players if player.name == packet_obj['username']), None)
@@ -175,16 +183,32 @@ class BattleProcessor(AbstractProcessor):
             
             client_time = self.modded_client_time
             
-            # AntiAFK
-            packet = self.packetManager.get_packet_by_name("Turret_Control")()
-            packet.object['clientTime'] = client_time
-            packet.object['specificationID'] = self.holder.storage['specificationID']
-            packet.object['control'] = random.randint(-128, 127)
-            packet.deimplement()
-            self.send_packet(packet)
-            
             # Shoot at enemies
-            if self.holder.storage['mounted_turret'] == 'railgun_m0':
+            if 'mounted_turret' in self.holder.storage and self.holder.storage['mounted_turret'] == 'smoky_m0' or 'mounted_turret' not in self.holder.storage and self.holder.storage['credentials']['railgun'] < 0:
+                enemy = None
+                while enemy == None:
+                    enemy = max([player for player in self.players if player.team != me.team and not player.inresp], key=lambda x: x.health, default=None)
+            
+            
+                # Shoot at the enemy
+                packet = self.packetManager.get_packet_by_name("Smoky_Shoot_Target_OUT")()
+                packet.object['clientTime'] = client_time
+                packet.object['target'] = enemy.name
+                packet.object['incarnationID'] = enemy.incarnation_id
+            
+                # We do some trolling here
+                packet.object['targetBodyPosition'] = {"x": 0, "y": 0, "z": 0}
+                packet.object['localHitPoint'] = {"x": 0, "y": 0, "z": 0}
+                packet.object['globalHitPoint'] = {"x": 0, "y": 0, "z": 0}
+            
+                packet.deimplement()
+                self.send_packet(packet)
+                # print(me, "tries to shoot", enemy)
+            
+                # Smoky recharge
+                time.sleep(1.85)
+
+            else:
                 packet = self.packetManager.get_packet_by_name("Railgun_Shot_Init_OUT")()
                 packet.object['clientTime'] = client_time
                 packet.deimplement()
@@ -214,30 +238,21 @@ class BattleProcessor(AbstractProcessor):
             
                 # Smoky recharge
                 time.sleep(5.9)
-            
-            elif self.holder.storage['mounted_turret'] == 'smoky_m0':
-                enemy = None
-                while enemy == None:
-                    enemy = max([player for player in self.players if player.team != me.team and not player.inresp], key=lambda x: x.health, default=None)
-            
-            
-                # Shoot at the enemy
-                packet = self.packetManager.get_packet_by_name("Smoky_Shoot_Target_OUT")()
-                packet.object['clientTime'] = client_time
-                packet.object['target'] = enemy.name
-                packet.object['incarnationID'] = enemy.incarnation_id
-            
-                # We do some trolling here
-                packet.object['targetBodyPosition'] = {"x": 0, "y": 0, "z": 0}
-                packet.object['localHitPoint'] = {"x": 0, "y": 0, "z": 0}
-                packet.object['globalHitPoint'] = {"x": 0, "y": 0, "z": 0}
-            
-                packet.deimplement()
-                self.send_packet(packet)
-                # print(me, "tries to shoot", enemy)
-            
-                # Smoky recharge
-                time.sleep(1.85)
+
+    def anti_afk(self):
+        while self.thread_can_run.is_set():
+            while self.status != Alive_Status.FANTOM and self.status != Alive_Status.ALIVE:
+                time.sleep(1)
+                
+            # AntiAFK
+            packet = self.packetManager.get_packet_by_name("Turret_Control")()
+            packet.object['clientTime'] = self.modded_client_time
+            packet.object['specificationID'] = self.holder.storage['specificationID']
+            packet.object['control'] = random.randint(-128, 127)
+            packet.deimplement()
+            self.send_packet(packet)
+
+            time.sleep(50)
 
     def load_garage(self):
         return None
