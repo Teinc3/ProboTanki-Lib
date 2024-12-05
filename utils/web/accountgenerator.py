@@ -1,5 +1,6 @@
 import json
 import os
+import time
 import requests
 from bisect import bisect_left
 from itertools import combinations
@@ -98,9 +99,9 @@ class AccountGenerator:
             }
         }
         response = requests.post(self.url, headers=self.headers, json=payload)
-        status = response.status_code == 200
-        print(f"Account Creation: Username={username}, Email={email}, Password={password}, "
-              f"Status={'Success' if status else 'Failed'}")
+        status = response.json().success == True
+        print(f"Account Generation | Username: {username}, Email: {email}, Password: {password}, "
+              f"Response: {status}")
         return status
 
     def update_json_data(self):
@@ -122,6 +123,7 @@ class AccountGenerator:
                     self.existing_emails.sort()
                     self.save_new_email(email)
                     generated_count += 1
+                time.sleep(1)
 
         print(f"Generated {generated_count} new accounts.")
 
