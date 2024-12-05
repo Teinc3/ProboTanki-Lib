@@ -242,8 +242,10 @@ class BattleProcessor(AbstractProcessor):
     def anti_afk(self):
         while self.thread_can_run.is_set():
             while self.status != Alive_Status.FANTOM and self.status != Alive_Status.ALIVE:
-                time.sleep(1)
-                
+                time.sleep(10)
+                if self.thread_can_run.is_set() == False:
+                    return
+
             # AntiAFK
             packet = self.packetManager.get_packet_by_name("Turret_Control")()
             packet.object['clientTime'] = self.modded_client_time
@@ -252,7 +254,7 @@ class BattleProcessor(AbstractProcessor):
             packet.deimplement()
             self.send_packet(packet)
 
-            time.sleep(50)
+            time.sleep(25)
 
     def load_garage(self):
         return None

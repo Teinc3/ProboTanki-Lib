@@ -36,7 +36,10 @@ class LobbyProcessor(AbstractProcessor):
                 self.send_packet(self.packetManager.get_packet_by_name('Load_Garage')())
 
         elif self.compare_packet('Battle_Kick_Reason'):
-            print("Battle Kick Reason:", packet_object['reason'])
+            if 'inactive' in packet_object['reason']:
+                print(f"{self.holder.storage['credentials']['username']} ({self.holder.storage['sheep_id']}) kicked for inactivity")
+            else:
+                print(f"{self.holder.storage['credentials']['username']} ({self.holder.storage['sheep_id']}) kicked for reason: {packet_object['reason']}")
 
         elif self.compare_packet('Online_Status'):
             if self.holder.watchdog:
@@ -216,7 +219,7 @@ class LobbyProcessor(AbstractProcessor):
             self.holder.event_emitter.emit('watchdog_ready')
 
         # Second time recv all actions
-        # self.update_discord_status(changed, username)
+        self.update_discord_status(changed, username)
 
     def load_garage(self):
         credentials = self.holder.storage['credentials']
