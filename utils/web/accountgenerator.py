@@ -99,10 +99,9 @@ class AccountGenerator:
             }
         }
         response = requests.post(self.url, headers=self.headers, json=payload)
-        status = response.json().success == True
         print(f"Account Generation | Username: {username}, Email: {email}, Password: {password}, "
-              f"Response: {status}")
-        return status
+              f"Response: {response.json()}")
+        return 'success' in response.json() and response.json()['success']
 
     def update_json_data(self):
         generated_count = 0
@@ -132,7 +131,7 @@ class AccountGenerator:
 
 
 if __name__ == "__main__":
-    generator = AccountGenerator(2)  # 20 new fresh skibiditoiletsigmamaleonthewallfortnitealphanogirlinlife accounts
+    generator = AccountGenerator(1)  # 20 new fresh skibiditoiletsigmamaleonthewallfortnitealphanogirlinlife accounts
     generator.collect_existing_emails()
     generator.add_missing_info()
     generator.update_json_data()
