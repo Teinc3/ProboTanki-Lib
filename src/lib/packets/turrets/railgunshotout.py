@@ -12,7 +12,7 @@ class Railgun_Shot_OUT(AbstractPacket):
     id = -484994657
     description = "Sends server details about a released railgun shot"
     attributes = ["clientTime", "staticHitPoint", "targets", "targetHitPoints", "incarnationIDs", "targetBodyPositions",
-                  "unknown3DVectors"]
+                  "globalHitPoints"]
     codecs = [IntCodec, Vector3DCodec, VectorStringCodec, VectorVector3DCodec, VectorShortCodec, VectorVector3DCodec,
               VectorVector3DCodec]
 
@@ -23,7 +23,7 @@ class Railgun_Shot_OUT(AbstractPacket):
     #     self.object["staticHitPoint"] = {"x": 0, "y": 0, "z": 0}
     #     self.object["targetHitPoints"] = [{"x": 0, "y": 0, "z": 0}] * len(user_data)
     #     self.object["targetBodyPositions"] = [{"x": 0, "y": 0, "z": 0}] * len(user_data)
-    #     self.object["unknown3DVectors"] = [{"x": 0, "y": 0, "z": 0}] * len(user_data)
+    #     self.object["globalHitPoints"] = [{"x": 0, "y": 0, "z": 0}] * len(user_data)
     #
     #     self.deimplement()
     #     print(self.object)

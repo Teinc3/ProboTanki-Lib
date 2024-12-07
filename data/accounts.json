@@ -1,69 +1,122 @@
 [
   {
-    "username": "SavageReaper623",
-    "password": "QzeDyzEBF1CF",
+    "username": "Manaus",
+    "proxy": {
+      "host": "64.137.124.168",
+      "port": 6380
+    },
+    "info": {
+      "rank": 4
+    },
+    "email": "osama.g.oonerskibidi@gmail.com",
+    "railgun": 0
+  },
+  {
+    "username": "goonmaster",
+    "proxy": {
+      "host": "84.33.241.82",
+      "port": 6439
+    },
+    "info": {
+      "rank": 4
+    },
+    "email": "osam.ago.onerskibidi@gmail.com",
+    "railgun": 0
+  },
+  {
+    "username": "tankist_ot_moskva",
+    "proxy": {
+      "host": "103.47.53.212",
+      "port": 8510
+    },
+    "info": {
+      "rank": 4
+    },
+    "email": "osam.agoo.nerskibidi@gmail.com",
+    "railgun": 0
+  },
+  {
+    "username": "zypotic",
+    "proxy": {
+      "host": "104.222.161.185",
+      "port": 6317
+    },
+    "info": {
+      "rank": 4
+    },
+    "email": "osam.agoon.erskibidi@gmail.com",
+    "railgun": 0
+  },
+  {
+    "username": "Toilet",
+    "proxy": {
+      "host": "209.35.5.214",
+      "port": 6905
+    },
+    "info": {
+      "rank": 4
+    },
+    "email": "osam.agoone.rskibidi@gmail.com",
+    "railgun": 0
+  },
+  {
+    "username": "grom_gt_gx",
+    "proxy": {
+      "host": "145.223.45.169",
+      "port": 7203
+    },
+    "info": {
+      "rank": 4
+    },
+    "email": "osam.agooner.skibidi@gmail.com",
+    "railgun": 0
+  },
+  {
+    "username": "gpax_98",
+    "proxy": {
+      "host": "147.185.217.121",
+      "port": 6555
+    },
+    "info": {
+      "rank": 4
+    },
+    "email": "osam.agooners.kibidi@gmail.com",
+    "railgun": 0
+  },
+  {
+    "username": "Vindel",
+    "proxy": {
+      "host": "107.181.130.79",
+      "port": 5700
+    },
     "info": {
       "rank": 3
     },
-    "proxy": {
-      "location": "tr",
-      "host": "206.41.168.253",
-      "port": 6918
-    }
+    "email": "osam.agoonersk.ibidi@gmail.com",
+    "railgun": 0
   },
   {
-    "username": "A.X.Y",
-    "info": {
-      "rank": 1
-    },
+    "username": "A.X.E.L",
     "proxy": {
-      "location": "cz", 
-      "host": "104.239.86.133",
-      "port": 6043
-    }
+      "host": "184.174.43.209",
+      "port": 6749
+    },
+    "info": {
+      "rank": 4
+    },
+    "email": "osam.agoonerski.bidi@gmail.com",
+    "railgun": 0
   },
   {
-    "username": "The.Chosen.One",
-    "info": {
-      "rank": 1
-    },
+    "username": "K_O_TT_A_T_K_A",
     "proxy": {
-      "location": "cz", 
-      "host": "216.173.109.223",
-      "port": 6454
-    }
-  },
-  {
-    "username": "Runway",
-    "info": {
-      "rank": 1
+      "host": "212.42.199.138",
+      "port": 5877
     },
-    "proxy": {
-      "location": "cz", 
-      "host": "92.112.238.54",
-      "port": 6933
-    }
-  },
-  {
-    "username": "vvita26",
     "info": {
-      "rank": 1
+      "rank": 4
     },
-    "proxy": {
-      "location": "cz", 
-      "host": "92.112.227.45",
-      "port": 6217
-    }
-  },
-  {
-    "username": "Grobnik",
-    "info": {
-      "rank": 1
-    },
-    "proxy": {
-      "location": "cz", 
-      "host": "92.112.227.84",
-      "port": 6256
-    }
+    "email": "osam.agoonerskib.idi@gmail.com",
+    "railgun": 0
   }
 ]

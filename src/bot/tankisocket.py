@@ -40,6 +40,7 @@ class TankiSocket:
 
         # Connect to server
         self.retries = 0
+        self.retries_lock = Lock()
         self.thread_lock = Lock()
         self.thread = Thread(target=self.loop, name='TankiSocket - ' + ('Watchdog' if self.holder.watchdog else ('Sheep ' + str(self.holder.storage['sheep_id']))))
         self.stop_thread = Event()
@@ -92,13 +93,12 @@ class TankiSocket:
         def enum_compare(processor: processors.AbstractProcessor):
             return repr(processor.processorID) == repr(p_id)
 
-        if enum_compare(processors.EntryProcessor):
-            self.processor = processors.EntryProcessor(self.holder)
-        elif enum_compare(processors.LobbyProcessor):
+        if enum_compare(processors.LobbyProcessor):
+            self.processor.kill_threads()
             self.processor = processors.LobbyProcessor(self.holder)
         elif enum_compare(processors.BattleProcessor):
+            self.processor.kill_threads()
             self.processor = processors.BattleProcessor(self.holder)
-        pass
 
     def close_socket(self, code: ProcessorCodes):
         print(f"{'Watchdog' if self.holder.watchdog else self.holder.storage['sheep_id']} Socket closed: {code}")
@@ -111,13 +111,9 @@ class TankiSocket:
 
         # Broadcast sheep not ready
         if not self.holder.watchdog:
-            self.holder.event_emitter.emit('sheep_ready', self.holder.storage['sheep_id'], False)
+            self.holder.event_emitter.emit('event_sheep_ready', self.holder.storage['sheep_id'], False)
+        
+        self.retries += 1
 
-        # Reinstantiate the socket if below retry threshold
-        if self.holder.watchdog or self.retries < self.MAX_RETRIES_POSSIBLE:
-            self.retries += 1
-            self.holder.event_emitter.emit('retry_socket', self.holder, self.retries)
-
-        else:
-            print(f"Max {self.retries} retries reached, exiting {self.holder.storage['sheep_id']}")
-            self.holder.event_emitter.emit('delete_sheep', self.holder.storage['sheep_id'])
+        # Reinstantiate the socket
+        self.holder.event_emitter.emit('retry_socket', self.holder, self.retries)

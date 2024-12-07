@@ -3,9 +3,9 @@ from lib.codec.primitive import IntCodec
 from lib.packets.abstractpacket import AbstractPacket
 
 
-class Add_Friends_Team_Status(AbstractPacket):
+class Joined_Outside_Team_Battle(AbstractPacket):
     id = -169305322
-    description = "Add this player to the friends count in Team status"
+    description = "Sent when a player joins a global Team battle, outside from the observer's perspective."
     attributes = ['battleID', 'username', 'team']
     codecs = [StringCodec, StringCodec, IntCodec]
     shouldLog = False

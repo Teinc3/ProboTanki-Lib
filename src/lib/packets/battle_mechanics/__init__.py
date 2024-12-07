@@ -1,4 +1,4 @@
-from .battlestats import Battle_User_Team_Stats
+from .battleuserteamstats import Battle_User_Team_Stats
 from .battleusercontrol import Battle_User_Control
 from .changedequipment import User_Changed_Equipment
 from .deathdelayend import Death_Delay_End
@@ -20,18 +20,18 @@ from .playershot import Player_Shot
 from .respawndelay import Respawn_Delay
 from .selfdestruct import Self_Destruct
 from .selfdestructed import Self_Destructed
-from .shot import Shot
+from .despawnalive import Despawn_Alive
 from .shotdirection import Shot_Direction
 from .shoteffect import Shot_Effect
 from .shoteffectapplied import Shot_Effect_Applied
 from .startrespfantom import Start_Resp_Fantom
 from .suicidedelay import Suicide_Delay
-from .supplybonusid import Supply_Box_Drop_Bonus_id
+from .removebonusbox import Remove_Bonus_Box
 from .bonusboxexistinglocations import Bonus_Box_Existing_Locations
 from .bonusboxdropped import Bonus_Box_Dropped
 from .collectbonusbox import Collect_Bonus_Box
-from .tankmoveinfo import Tank_Stat_Synced
-from .tankstatsync import Tank_Move_Info
+from .tankstatsynced import Tank_Stat_Synced
+from .tankmovementinfo import Tank_Movement_Info
 from .turretcontrol import Turret_Control
 from .turretrotated import Turret_Rotated
 from .turretrotation import Turret_Rotation
@@ -45,20 +45,20 @@ __all__ = [
     Self_Destruct,
     Self_Destructed,
     Tank_Stat_Synced,
-    Tank_Move_Info,
+    Tank_Movement_Info,
     Death_Delay_End,
     Start_Resp_Fantom,
     End_Resp_Fantom,
     Bonus_Box_Dropped,
     Collect_Bonus_Box,
-    Supply_Box_Drop_Bonus_id,
+    Remove_Bonus_Box,
     Bonus_Box_Existing_Locations,
     Battle_User_Control,
     Move_Command,
     Player_Shot,
     Battle_User_Team_Stats,
     Shot_Effect,
-    Shot,
+    Despawn_Alive,
     Effect_Aftermath,
     Respawn_Delay,
     Player_Equipment,

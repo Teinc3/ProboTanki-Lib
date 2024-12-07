@@ -1,5 +1,4 @@
 from bot.enums import ProcessorCodes, ProcessorIDs
-from lib.modules.packetmanager import packetManager
 from .abstractprocessor import AbstractProcessor
 
 
@@ -13,7 +12,7 @@ class EntryProcessor(AbstractProcessor):
             self.holder.protection.activate(packet_object['keys'])
 
         elif self.compare_packet('Set_Captcha_Keys'):
-            client_lang_packet = packetManager.get_packet_by_name('Set_Client_Lang')()
+            client_lang_packet = self.packetManager.get_packet_by_name('Set_Client_Lang')()
             client_lang_packet.objects = ['en']
             self.send_packet(client_lang_packet)
 
@@ -24,11 +23,12 @@ class EntryProcessor(AbstractProcessor):
         elif self.compare_packet('Login_Ready'):
             self.login()
 
-        elif self.compare_packet('Login_Success'):
-            self.holder.swap_processor(ProcessorIDs.P_LOBBY)
-
         elif self.compare_packet('Login_Failed'):
             self.holder.close_socket(ProcessorCodes.WRONG_CREDENTIALS)
+
+        elif self.compare_packet('Banned'):
+            self.holder.close_socket(ProcessorCodes.BANNED)
+            self.holder.event_emitter.emit('delete_sheep', self.holder.storage['sheep_id'])
 
     def login(self):
         if 'credentials' not in self.holder.storage:
@@ -42,6 +42,9 @@ class EntryProcessor(AbstractProcessor):
             'rememberMe': False
         }
 
-        login_packet = packetManager.get_packet_by_name('Login')()
+        login_packet = self.packetManager.get_packet_by_name('Login')()
         login_packet.deimplement(login_data)
         self.send_packet(login_packet)
+
+    def load_garage(self):
+        return NotImplemented

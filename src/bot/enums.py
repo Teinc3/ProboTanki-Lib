@@ -10,6 +10,7 @@ class ProcessorIDs(enum.Enum):
 class ProcessorCodes(enum.Enum):
     SOCKET_ERROR = "Socket error."
     PROXY_ERROR = "Proxy error."
+    BANNED = "Account is banned."
     INVITE_CODE_REQUIRED = "Invite code is required."
     WRONG_CREDENTIALS = "Wrong credentials. Socket aborted."
     STAFF_SCRAPER_ERROR = "No staff members scraped. Socket aborted."

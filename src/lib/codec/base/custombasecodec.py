@@ -11,7 +11,7 @@ class CustomBaseCodec(BaseCodec[dict]):
     # Override these methods if necessary
     def decode(self):
         obj = {}
-        if self.shortern and BoolCodec(self._buffer).decode():
+        if self.boolshortern and BoolCodec(self._buffer).decode():
             return obj
 
         for i in range(len(self.codecs)):
@@ -23,7 +23,7 @@ class CustomBaseCodec(BaseCodec[dict]):
 
     def encode(self, value):
         data_len = 0
-        if self.shortern:
+        if self.boolshortern:
             data_len += BoolCodec(self._buffer).encode(not value)
             if not value:
                 return data_len

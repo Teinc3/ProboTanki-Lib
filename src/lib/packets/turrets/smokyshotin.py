@@ -3,7 +3,7 @@ from lib.packets.abstractpacket import AbstractPacket
 from lib.codec.primitive import FloatCodec, BoolCodec
 
 
-class Smokey_Shot_IN(AbstractPacket):
+class Smoky_Shot_IN(AbstractPacket):
     id = -1334002026
     description = "Smokey Shoot in"
     attributes = ["shooter", "target", "hitPoint", "weakeningCoeff", "isCritical"]

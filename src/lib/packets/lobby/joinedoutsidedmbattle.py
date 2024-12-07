@@ -2,9 +2,9 @@ from lib.codec.complex import StringCodec
 from lib.packets.abstractpacket import AbstractPacket
 
 
-class Remove_Friends_Team_Status(AbstractPacket):
-    id = 1447204641
-    description = "Remove this player from the friends count in team status"
+class Joined_Outside_DM_Battle(AbstractPacket):
+    id = -2133657895
+    description = "Sent when a player joins a global DM battle, outside from the observer's perspective."
     attributes = ['battleID', 'username']
     codecs = [StringCodec, StringCodec]
     shouldLog = False

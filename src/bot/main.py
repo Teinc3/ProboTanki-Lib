@@ -16,7 +16,7 @@ from callbackholder import CallbackHolder
 class TankiBot:
     watchdog: TankiSocket
     sheep: list[TankiSocket]
-    sheeps_ready: set[int]
+    sheep_ready: set[int]
     battle_size: int
 
     MAX_PLAYER_COUNTS = {
@@ -33,12 +33,14 @@ class TankiBot:
         self.event_emitter = EventEmitter()
 
         self.sheep_lock = Lock()
+        self.sheep = []
+        self.sheep_ready = set()
 
         self.set_event_listeners()
         self.init_watchdog()
         
     def init_watchdog(self):
-        watchdog_account = self.account_manager.get_next_account()
+        watchdog_account = self.account_manager.watchdog
         self.watchdog = TankiSocket(CallbackHolder(
             storage = { 
                 'credentials': AccountManager.get_account_credentials(watchdog_account),
@@ -50,52 +52,65 @@ class TankiBot:
 
     def set_event_listeners(self):
         self.event_emitter.on('watchdog_ready', self.start_sheep)
-        self.event_emitter.on('sheep_ready', self.sheep_ready)
+        self.event_emitter.on('event_sheep_ready', self.event_sheep_ready)
+        self.event_emitter.on('emit_battle_creation', self.emit_battle_creation)
         self.event_emitter.on('delete_sheep', self.delete_sheep)
         self.event_emitter.on('retry_socket', self.retry_socket)
     
     def start_sheep(self):
-        # Instantiate sheeps for Serpuhovs
-        if hasattr(self, 'sheep') and len(self.sheep) > 0:
-            return
-        self.sheep = []
-        sheep_needed = min(self.account_manager.accounts_remaining, self.MAX_BATTLE_SIZE + self.SOCKET_FAILURE_BUFFER_COUNT)
-        self.battle_size = min(sheep_needed - self.SOCKET_FAILURE_BUFFER_COUNT, self.MAX_BATTLE_SIZE)
+        with self.sheep_lock:
+            # Instantiate sheeps for Serpuhovs
+            if len(self.sheep) > 0:
+                return
+            sheep_needed = min(self.account_manager.accounts_remaining, self.MAX_BATTLE_SIZE + self.SOCKET_FAILURE_BUFFER_COUNT)
+            self.battle_size = min(sheep_needed - self.SOCKET_FAILURE_BUFFER_COUNT, self.MAX_BATTLE_SIZE)
 
-        for i in range(sheep_needed):
-            sheep_account = self.account_manager.get_next_account()
-            self.sheep.append(TankiSocket(CallbackHolder(
-                storage={
-                    'sheep_id': i, 
-                    'credentials': AccountManager.get_account_credentials(sheep_account),
-                    'proxy': AccountManager.get_account_proxy(sheep_account),
-                },
-                event_emitter=self.event_emitter,
-                watchdog=False
-            )))
+            for i in range(sheep_needed):
+                sheep_account = self.account_manager.get_next_account()
+                self.sheep.append(TankiSocket(CallbackHolder(
+                    storage={
+                        'sheep_id': i, 
+                        'credentials': AccountManager.get_account_credentials(sheep_account),
+                        'proxy': AccountManager.get_account_proxy(sheep_account),
+                    },
+                    event_emitter=self.event_emitter,
+                    watchdog=False
+                )))
 
-    def sheep_ready(self, sheep_id: int, ready_state: bool):
-        if not hasattr(self, 'sheeps_ready'):
-            self.sheeps_ready = set()
-        if ready_state:
-            self.sheeps_ready.add(sheep_id)
-            print(f"Current Threshold: {len(self.sheeps_ready)}/{self.battle_size}")
-        elif sheep_id in self.sheeps_ready:
-            self.sheeps_ready.remove(sheep_id)
-            print(f"Current Threshold: {len(self.sheeps_ready)}/{self.battle_size}")
+    def event_sheep_ready(self, sheep_id: int, ready_state: bool):
+        with self.sheep_lock:
+            ready_count = len(self.sheep_ready)
+            if ready_state:
+                if sheep_id in self.sheep_ready:
+                    return
+                if (ready_count + 1) % 5 == 0:
+                    print(f"Current Threshold: {ready_count + 1}/{self.battle_size} ({sheep_id} +)")
+                self.sheep_ready.add(sheep_id)
 
-        if len(self.sheeps_ready) == self.battle_size and ('selected_battle' not in self.watchdog.holder.storage or 'battleID' not in self.watchdog.holder.storage['selected_battle']):
-            print("Most Sheep ready, waiting for battle creation...")
-            print(f"Current Threshold: {len(self.sheeps_ready)}/{self.battle_size}")
+            elif sheep_id in self.sheep_ready:
+                self.sheep_ready.remove(sheep_id)
+                print(f"Current Threshold: {ready_count - 1}/{self.battle_size} ({sheep_id} -)") # Since a disconnect is rare we will always log it
+            else:
+                return
+            
+            if len(self.sheep_ready) == self.battle_size and ('selected_battle' not in self.watchdog.holder.storage or 'battleID' not in self.watchdog.holder.storage['selected_battle']):
+                self.emit_battle_creation()
+    
+    def emit_battle_creation(self):
+        battle_creation_options = { 
+            'mapID': self.SELECTED_MAP,
+            'battleMode': self.BATTLE_MODE,
+            'maxPeopleCount': self.battle_size if self.BATTLE_MODE == 0 else self.battle_size // 2,
+            'name': self.SELECTED_MAP.replace("map_", "").capitalize() + " " + ("DM" if self.BATTLE_MODE == 0 else "TDM"),
+            'timeLimit': 900,
+            'rankRange': [1, 7],
+            'autoBalance': False,
+            'privateBattle': True,
+        }
+        battle_creation_options['proBattle'] = battle_creation_options['privateBattle'] or not battle_creation_options['autoBalance']
 
-        if len(self.sheeps_ready) == self.battle_size and ('selected_battle' not in self.watchdog.holder.storage or 'battleID' not in self.watchdog.holder.storage['selected_battle']):
-            print("Most Sheep ready, waiting for battle creation...")
-            self.event_emitter.emit('all_sheep_ready', { 
-                'mapID': self.SELECTED_MAP,
-                'battleMode': self.BATTLE_MODE,
-                'maxPeopleCount': self.battle_size if self.BATTLE_MODE == 0 else self.battle_size // 2,
-                'name': self.SELECTED_MAP.replace("map_", "").capitalize() + " " + ("DM" if self.BATTLE_MODE == 0 else "TDM")
-            })
+        print("All sheep ready, emitting battle creation to watchdog...")
+        self.event_emitter.emit('create_battle', battle_creation_options)
 
     def delete_sheep(self, sheep_id: int):
         # Find the sheep by ID and remove it from the list
@@ -103,13 +118,14 @@ class TankiBot:
             sheep = next((sheep for sheep in self.sheep if sheep.holder.storage['sheep_id'] == sheep_id), None)
             if sheep is not None:
                 self.sheep.remove(sheep)
+                print(f"Deleted sheep {sheep_id} from the list.")
 
     def retry_socket(self, holder: CallbackHolder, retries: int):
         # Retry the socket connection with the same credentials and proxy
         if holder.watchdog:
             if retries >= TankiSocket.MAX_RETRIES_POSSIBLE:
-                print(f"Max {retries} retries reached for Watchdog, waiting 3 minutes before retrying connection.")
-                time.sleep(180)
+                print(f"Max {retries} retries reached for Watchdog, waiting 4 minutes before retrying connection.")
+                time.sleep(240)
                 storage = { 'credentials': holder.storage['credentials'], 'proxy': holder.storage['proxy'] }
                 retries = 0
             else:
@@ -123,46 +139,30 @@ class TankiBot:
             ))
             self.watchdog.retries = retries
         else:
-            # Find the sheep by ID and remove
-            self.delete_sheep(holder.storage['sheep_id'])
-
-            with self.sheep_lock:
-                new_socket = TankiSocket(holder)
-                new_socket.retries = retries
-                self.sheep.append(new_socket)
-
-    def delete_sheep(self, sheep_id: int):
-        # Find the sheep by ID and remove it from the list
-        with self.sheep_lock:
-            sheep = next((sheep for sheep in self.sheep if sheep.holder.storage['sheep_id'] == sheep_id), None)
-            if sheep is not None:
-                self.sheep.remove(sheep)
-
-    def retry_socket(self, holder: CallbackHolder, retries: int):
-        # Retry the socket connection with the same credentials and proxy
-        if holder.watchdog:
+            # Retry the socket connection with the same credentials and proxy
+            sheep_id = holder.storage['sheep_id']
             if retries >= TankiSocket.MAX_RETRIES_POSSIBLE:
-                print(f"Max {retries} retries reached for Watchdog, waiting 3 minutes before retrying connection.")
-                time.sleep(180)
-                storage = { 'credentials': holder.storage['credentials'], 'proxy': holder.storage['proxy'] }
-                retries = 0
-            else:
-                holder.storage.pop('mods_info', None)
-                storage = holder.storage
-            self.watchdog = TankiSocket(CallbackHolder(
-                storage = storage,
+                print(f"Max {retries} retries reached for Sheep {sheep_id}, deleting sheep.")
+                self.event_emitter.emit('delete_sheep', sheep_id)
+                return
+            socket = TankiSocket(CallbackHolder(
+                storage = holder.storage,
                 event_emitter = self.event_emitter,
-                watchdog = True
+                watchdog = False
             ))
-            self.watchdog.retries = retries
-        else:
-            # Find the sheep by ID and remove
-            self.delete_sheep(holder.storage['sheep_id'])
-
             with self.sheep_lock:
-                new_socket = TankiSocket(holder)
-                new_socket.retries = retries
-                self.sheep.append(new_socket)
+                if retries >= TankiSocket.MAX_RETRIES_POSSIBLE:
+                    print(f"Max {retries} retries reached for Sheep {sheep_id}, deleting sheep.")
+                    self.event_emitter.emit('delete_sheep', sheep_id)
+                    return
+                # Find the index of the sheep by ID and replace it with the new socket
+                sheep_index = next((i for i, sheep in enumerate(self.sheep) if sheep.holder.storage['sheep_id'] == sheep_id), None)
+                if sheep_index is not None:
+                    self.sheep[sheep_index] = socket
+                    print(f"Retrying connection for Sheep {sheep_id} ({retries})...")
+                    socket.retries = retries
+                else:
+                    print(f"Failed to retry connection for Sheep {sheep_id}, sheep not found.")
 
 if __name__ == "__main__":
     TankiBot()

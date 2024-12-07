@@ -5,14 +5,17 @@ from lib.utils import Address as Proxy
 
 
 class AccountManager:
+    WATCHDOG_FILE_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'watchdog.json'))
     ACCOUNTS_FILE_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'accounts.json'))
 
     def __init__(self):
         self.current_account_index = 0
-        self.accounts = []
+
+        with open(self.WATCHDOG_FILE_PATH, 'r') as f:
+            self.watchdog: dict = json.load(f)
 
         with open(self.ACCOUNTS_FILE_PATH, 'r') as f:
-            self.accounts = json.load(f)
+            self.accounts: list[dict] = json.load(f)
             print(f"Loaded {len(self.accounts)} accounts")
 
     def get_next_account(self) -> dict:
