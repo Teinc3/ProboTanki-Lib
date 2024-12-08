@@ -8,6 +8,9 @@ from .loginready import Login_Ready
 from .login import Login
 from .loginfailed import Login_Failed
 from .loginsuccess import Login_Success
+from .checknameavailability import Check_Name_Availability
+from .nameavailable import Name_Available
+from .nameunavailable import Name_Unavailable
 from .banned import Banned
 from .loadmapinfo import Load_Map_Info
 from .loadnewbierewards import Load_Newbie_Rewards
@@ -26,6 +29,9 @@ __all__ = [
     Login,
     Login_Success,
     Login_Failed,
+    Check_Name_Availability,
+    Name_Available,
+    Name_Unavailable,
     Banned,
     Load_Map_Info,
     Load_Newbie_Rewards,
