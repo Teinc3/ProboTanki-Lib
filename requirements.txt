@@ -4,3 +4,5 @@ beautifulsoup4~=4.12.3
 pyee
 pysocks
 nltk
+google-api-python-client
+google-auth-oauthlib
