@@ -1,12 +1,12 @@
 {
-    "username": "SavageReaper623",
-    "password": "QzeDyzEBF1CF",
-    "info": {
-      "rank": 3
-    },
-    "proxy": {
-      "location": "tr",
-      "host": "206.41.168.253",
-      "port": 6918
-    }
+  "username": "SavageReaper623",
+  "password": "QzeDyzEBF1CF",
+  "info": {
+    "rank": 3
+  },
+  "proxy": {
+    "location": "pt",
+    "host": "154.73.250.73",
+    "port": 5974
   }
+}

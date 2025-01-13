@@ -40,7 +40,7 @@ class NameScraper:
                     self.names_set.add(cleaned_name)
 
     def get_names(self):
-        return list(self.names_set)
+        return list(filter(lambda x: x != "Teinc3", self.names_set))
 
 
 if __name__ == "__main__":
