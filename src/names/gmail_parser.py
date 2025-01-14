@@ -10,12 +10,22 @@ from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 
+# --------------------------
+# Execution Mode
+# 0 -> Load/email registrations (old functionality)
+# 1 -> Fetch "Nickname Change Warning" emails (new functionality)
+# --------------------------
+MODE = 1
+
 # If modifying these SCOPES, delete the file token.json.
 SCOPES = ['https://www.googleapis.com/auth/gmail.modify']  # Changed scope to allow modifying emails
 
 # Paths
 CREDENTIALS_PATH = os.path.abspath(
     os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'gmail_client_secret.json')
+)
+VALUABLE_NICKS_PATH = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'valuablenicks.txt')
 )
 TOKEN_PATH = os.path.abspath(
     os.path.join(os.path.dirname(CREDENTIALS_PATH), 'token.json')
@@ -67,17 +77,21 @@ def authenticate_gmail() -> Optional[object]:
         logging.error(f"Failed to build Gmail service: {e}")
         return None
 
-def get_all_email_messages(service) -> List[Dict]:
+def get_all_email_messages(service, custom_query: str = "") -> List[Dict]:
+    """
+    Fetch all email messages matching the given query.
+    """
     results = []
     try:
-        response = service.users().messages().list(userId='me', q='from:no-reply@pro-tanki.com').execute()
+        query = f"from:no-reply@pro-tanki.com {custom_query}".strip()
+        response = service.users().messages().list(userId='me', q=query).execute()
         messages = response.get('messages', [])
         logging.info(f"Fetched {len(messages)} messages from no-reply@pro-tanki.com.")
         while 'nextPageToken' in response:
             page_token = response['nextPageToken']
             response = service.users().messages().list(
                 userId='me',
-                q='from:no-reply@pro-tanki.com',
+                q=query,
                 pageToken=page_token
             ).execute()
             fetched = response.get('messages', [])
@@ -167,48 +181,98 @@ def extract_name_link(email_body: str) -> Dict[str, str]:
     
     return {"name": name, "link": link}
 
+def extract_nickname_change_warning(email_body: str) -> Dict[str, str]:
+    """
+    Email Body:
+    ...\n\nYour account \nToilet\n has not been used to play...
+    """
+    pattern = r"Your account \n([A-Za-z]+)\n has not been"
+    match = re.search(pattern, email_body, flags=re.IGNORECASE)
+    if match:
+        return match.group(1).strip()
+    return ""
+
 def main():
     service = authenticate_gmail()
     if not service:
         logging.error("Gmail service authentication failed. Exiting script.")
         print("Authentication failed. Check the log for details.")
         return
+    
+    if MODE == 0:
+        # ==================================================
+        # OLD FUNCTIONALITY: Load and save email registrations
+        # ==================================================
 
-    messages = get_all_email_messages(service)
-    registrations = []
+        messages = get_all_email_messages(service, "after: 2024/12/17 subject: Confirmation of")
+        registrations = []
 
-    # Load existing registrations to avoid duplicates
-    if os.path.exists(OUTPUT_PATH):
+        # Load existing registrations to avoid duplicates
+        if os.path.exists(OUTPUT_PATH):
+            try:
+                with open(OUTPUT_PATH, 'r') as f:
+                    existing_registrations = json.load(f)
+                    registrations.extend(existing_registrations)
+                    logging.info(f"Loaded {len(existing_registrations)} existing registrations.")
+            except Exception as e:
+                logging.error(f"Failed to load existing registrations: {e}")
+
+        new_registrations = 0
+
+        for msg in messages:
+            content = get_email_content(service, msg['id'])
+            if not content:
+                continue
+            data = extract_name_link(content)
+            if data["name"] and data["link"]:
+                if data not in registrations:
+                    registrations.append(data)
+                    new_registrations += 1
+
+        # Save updated registrations
         try:
-            with open(OUTPUT_PATH, 'r') as f:
-                existing_registrations = json.load(f)
-                registrations.extend(existing_registrations)
-                logging.info(f"Loaded {len(existing_registrations)} existing registrations.")
+            with open(OUTPUT_PATH, 'w') as f:
+                json.dump(registrations, f, indent=4)
+            logging.info(f"Saved {len(registrations)} total registrations to {OUTPUT_PATH}.")
+            print(f"Saved {len(registrations)} total registrations to {OUTPUT_PATH}.")
+            print(f"Added {new_registrations} new registrations.")
         except Exception as e:
-            logging.error(f"Failed to load existing registrations: {e}")
+            logging.error(f"Failed to save registrations: {e}")
+            print("Failed to save registrations. Check the log for details.")
 
-    new_registrations = 0
+    elif MODE == 1:
+        # ==================================================
+        # NEW FUNCTIONALITY (MODE = 1):  
+        # Search for nickname change warnings & save potential names
+        # ==================================================
 
-    for msg in messages:
-        content = get_email_content(service, msg['id'])
-        if not content:
-            continue
-        data = extract_name_link(content)
-        if data["name"] and data["link"]:
-            if data not in registrations:
-                registrations.append(data)
-                new_registrations += 1
+        messages = get_all_email_messages(service, 'subject: Nickname Change Warning')
+        if not messages:
+            print("No 'Nickname Change Warning' emails found.")
+            return
 
-    # Save updated registrations
-    try:
-        with open(OUTPUT_PATH, 'w') as f:
-            json.dump(registrations, f, indent=4)
-        logging.info(f"Saved {len(registrations)} total registrations to {OUTPUT_PATH}.")
-        print(f"Saved {len(registrations)} total registrations to {OUTPUT_PATH}.")
-        print(f"Added {new_registrations} new registrations.")
-    except Exception as e:
-        logging.error(f"Failed to save registrations: {e}")
-        print("Failed to save registrations. Check the log for details.")
+        valuable_nicks = []
+        for msg in messages:
+            content = get_email_content(service, msg['id'])
+            if not content:
+                continue
+            nickname = extract_nickname_change_warning(content)
+            if nickname:
+                valuable_nicks.append(nickname)
+
+        # Write the discovered nicknames to valuablenicks.txt
+        if valuable_nicks:
+            try:
+                with open(VALUABLE_NICKS_PATH, 'w') as f:
+                    for nick in valuable_nicks:
+                        f.write(f"{nick}\n")
+                print(f"Saved {len(valuable_nicks)} nicknames to {VALUABLE_NICKS_PATH}.")
+            except Exception as e:
+                logging.error(f"Failed to save nicknames: {e}")
+                print("Failed to save nicknames. Check the log for details.")
+        else:
+            print("No valid nicknames found in 'Nickname Change Warning' emails.")
+
 
 if __name__ == '__main__':
     main()
