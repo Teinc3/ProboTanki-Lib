@@ -60,10 +60,9 @@ def confirm_account(index: int, link: str, proxy: str):
         'https': f'http://{proxy}',
     }
     try:
-        requests.get(link, proxies=proxies, timeout=20)
-        print(f"{index} Confirmed")        
+        _ = requests.get(link, proxies=proxies, timeout=20)
     except requests.RequestException as e:
-        print(f"Exception confirming {index} | {e}")
+        print(f"Exception when confirming {index} | Error: {e} | Link: {link})")
 
 def main():
     proxies = load_proxies()
