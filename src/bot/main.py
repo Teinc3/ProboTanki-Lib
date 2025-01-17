@@ -51,7 +51,7 @@ class TankiBot:
         ))
 
     def set_event_listeners(self):
-        self.event_emitter.on('watchdog_ready', self.start_sheep)
+        #self.event_emitter.on('watchdog_ready', self.start_sheep)
         self.event_emitter.on('event_sheep_ready', self.event_sheep_ready)
         self.event_emitter.on('emit_battle_creation', self.emit_battle_creation)
         self.event_emitter.on('delete_sheep', self.delete_sheep)

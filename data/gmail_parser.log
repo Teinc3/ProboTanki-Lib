@@ -1,0 +1,447 @@
+2025-01-14 00:42:48,366 [ERROR] Failed to refresh credentials: ('invalid_grant: Bad Request', {'error': 'invalid_grant', 'error_description': 'Bad Request'})
+2025-01-14 00:43:06,526 [INFO] "GET /?state=vvZ3UJtFxzfbjxD6G0sYjAQUgaAxjf&code=4/0AanRRrvH7ZVw25wupTmg1cPtNZJTsLbt4dO80bOpInFwVuTmZYe0eD-4RhQynr-nbtk5Ag&scope=https://www.googleapis.com/auth/gmail.modify HTTP/1.1" 200 65
+2025-01-14 00:43:06,617 [INFO] Authenticated via OAuth flow.
+2025-01-14 00:43:06,618 [INFO] Saved new credentials to token.json.
+2025-01-14 00:43:06,621 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-01-14 00:43:06,623 [INFO] Gmail service built successfully.
+2025-01-14 00:53:43,583 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-01-14 00:53:43,590 [INFO] Gmail service built successfully.
+2025-01-14 00:53:43,920 [INFO] Fetched 100 messages from no-reply@pro-tanki.com.
+2025-01-14 00:53:44,153 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:44,372 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:44,574 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:44,778 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:44,982 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:45,175 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:45,393 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:45,591 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:45,796 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:45,993 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:46,193 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:46,445 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:46,644 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:46,851 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:47,066 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:47,283 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:47,474 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:47,684 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:47,892 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:48,098 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:48,297 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:48,503 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:48,702 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:48,912 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:49,108 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:49,311 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:49,519 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:49,722 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:49,928 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:50,166 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:50,409 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:50,629 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:50,826 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:51,025 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:51,235 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:51,431 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:51,632 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:51,838 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:52,049 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:52,261 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:52,468 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:52,671 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:52,875 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:53,071 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:53,273 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:53,477 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:53,684 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:53,884 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:54,090 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:54,303 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:54,505 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:54,710 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:54,914 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:55,114 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:55,316 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:55,517 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:55,711 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:55,940 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:56,137 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:56,333 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:56,548 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:56,743 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:56,948 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:57,154 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:57,361 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:57,567 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:57,762 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:57,974 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:58,177 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:58,366 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:58,584 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:58,785 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:58,979 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:59,192 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:59,386 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:59,602 [INFO] Fetched additional 100 messages.
+2025-01-14 00:53:59,797 [INFO] Fetched additional 100 messages.
+2025-01-14 00:54:00,018 [INFO] Fetched additional 100 messages.
+2025-01-14 00:54:00,222 [INFO] Fetched additional 100 messages.
+2025-01-14 00:54:00,447 [INFO] Fetched additional 100 messages.
+2025-01-14 00:54:00,655 [INFO] Fetched additional 100 messages.
+2025-01-14 00:54:00,852 [INFO] Fetched additional 100 messages.
+2025-01-14 00:54:01,042 [INFO] Fetched additional 100 messages.
+2025-01-14 00:54:01,235 [INFO] Fetched additional 100 messages.
+2025-01-14 00:54:01,442 [INFO] Fetched additional 73 messages.
+2025-01-14 01:03:59,794 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-01-14 01:03:59,795 [INFO] Gmail service built successfully.
+2025-01-14 01:04:00,108 [INFO] Fetched 100 messages from no-reply@pro-tanki.com.
+2025-01-14 01:04:00,311 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:00,507 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:00,740 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:00,938 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:01,141 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:01,377 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:01,588 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:01,797 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:01,994 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:02,204 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:02,410 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:02,610 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:02,808 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:03,015 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:05,695 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:05,894 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:06,099 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:12,739 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:12,948 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:13,150 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:13,358 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:13,564 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:13,783 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:14,006 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:14,216 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:14,408 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:14,611 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:14,818 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:15,040 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:15,305 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:15,511 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:15,738 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:15,964 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:16,170 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:16,367 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:16,620 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:16,837 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:17,048 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:17,262 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:17,474 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:17,678 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:17,890 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:32,589 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:32,839 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:33,039 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:33,230 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:33,438 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:33,731 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:33,934 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:34,160 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:34,383 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:34,591 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:34,799 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:35,006 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:35,219 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:35,432 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:35,646 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:35,852 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:36,063 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:36,280 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:36,481 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:36,682 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:36,897 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:37,100 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:37,301 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:37,508 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:37,727 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:37,934 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:38,143 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:38,345 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:38,560 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:38,765 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:38,965 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:39,180 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:39,387 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:39,587 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:39,797 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:39,999 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:40,198 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:40,406 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:40,621 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:40,827 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:41,042 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:41,251 [INFO] Fetched additional 100 messages.
+2025-01-14 01:04:41,447 [INFO] Fetched additional 73 messages.
+2025-01-14 01:05:13,934 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-01-14 01:05:13,935 [INFO] Gmail service built successfully.
+2025-01-14 01:05:18,385 [INFO] Fetched 100 messages from no-reply@pro-tanki.com.
+2025-01-14 01:07:26,512 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-01-14 01:07:26,513 [INFO] Gmail service built successfully.
+2025-01-14 01:07:32,371 [INFO] Fetched 100 messages from no-reply@pro-tanki.com.
+2025-01-14 01:08:00,644 [INFO] Fetched additional 100 messages.
+2025-01-14 01:08:14,839 [INFO] Fetched additional 26 messages.
+2025-01-14 01:14:32,197 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-01-14 01:14:32,198 [INFO] Gmail service built successfully.
+2025-01-14 01:14:32,486 [INFO] Fetched 100 messages from no-reply@pro-tanki.com.
+2025-01-14 01:14:32,693 [INFO] Fetched additional 100 messages.
+2025-01-14 01:14:32,892 [INFO] Fetched additional 26 messages.
+2025-01-14 01:16:33,127 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-01-14 01:16:33,128 [INFO] Gmail service built successfully.
+2025-01-14 01:16:33,387 [INFO] Fetched 100 messages from no-reply@pro-tanki.com.
+2025-01-14 01:16:33,602 [INFO] Fetched additional 100 messages.
+2025-01-14 01:16:33,813 [INFO] Fetched additional 26 messages.
+2025-01-14 01:17:36,623 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-01-14 01:17:36,624 [INFO] Gmail service built successfully.
+2025-01-14 01:17:37,109 [INFO] Fetched 100 messages from no-reply@pro-tanki.com.
+2025-01-14 01:17:37,317 [INFO] Fetched additional 100 messages.
+2025-01-14 01:17:37,511 [INFO] Fetched additional 26 messages.
+2025-01-14 01:21:24,821 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-01-14 01:21:24,822 [INFO] Gmail service built successfully.
+2025-01-14 01:21:25,163 [INFO] Fetched 100 messages from no-reply@pro-tanki.com.
+2025-01-14 01:21:25,369 [INFO] Fetched additional 100 messages.
+2025-01-14 01:21:25,566 [INFO] Fetched additional 26 messages.
+2025-01-15 12:55:22,323 [INFO] Credentials refreshed successfully.
+2025-01-15 12:55:22,324 [INFO] Saved new credentials to token.json.
+2025-01-15 12:55:22,326 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-01-15 12:55:22,328 [INFO] Gmail service built successfully.
+2025-01-15 12:55:22,625 [INFO] Fetched 100 messages from no-reply@pro-tanki.com.
+2025-01-15 12:55:22,837 [INFO] Fetched additional 100 messages.
+2025-01-15 12:55:23,039 [INFO] Fetched additional 100 messages.
+2025-01-15 12:55:23,252 [INFO] Fetched additional 100 messages.
+2025-01-15 12:55:23,470 [INFO] Fetched additional 100 messages.
+2025-01-15 12:55:23,684 [INFO] Fetched additional 100 messages.
+2025-01-15 12:55:23,893 [INFO] Fetched additional 100 messages.
+2025-01-15 12:55:24,101 [INFO] Fetched additional 100 messages.
+2025-01-15 12:55:24,311 [INFO] Fetched additional 35 messages.
+2025-01-15 12:59:01,658 [INFO] Saved 835 total registrations to /Users/teinc3/Documents/Code/ProTanki/ProTanki-Crystal-Generator/data/email_registrations.json.
+2025-01-15 14:03:20,514 [INFO] Credentials refreshed successfully.
+2025-01-15 14:03:20,516 [INFO] Saved new credentials to token.json.
+2025-01-15 14:03:20,519 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-01-15 14:03:20,521 [INFO] Gmail service built successfully.
+2025-01-15 14:03:20,895 [INFO] Fetched 100 messages from no-reply@pro-tanki.com.
+2025-01-15 14:03:21,107 [INFO] Fetched additional 100 messages.
+2025-01-15 14:03:21,329 [INFO] Fetched additional 100 messages.
+2025-01-15 14:03:21,547 [INFO] Fetched additional 100 messages.
+2025-01-15 14:03:21,766 [INFO] Fetched additional 100 messages.
+2025-01-15 14:03:21,987 [INFO] Fetched additional 100 messages.
+2025-01-15 14:03:22,215 [INFO] Fetched additional 100 messages.
+2025-01-15 14:03:22,437 [INFO] Fetched additional 100 messages.
+2025-01-15 14:03:22,659 [INFO] Fetched additional 36 messages.
+2025-01-16 01:25:34,177 [INFO] Credentials refreshed successfully.
+2025-01-16 01:25:34,179 [INFO] Saved new credentials to token.json.
+2025-01-16 01:25:34,181 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-01-16 01:25:34,183 [INFO] Gmail service built successfully.
+2025-01-16 01:25:34,589 [INFO] Fetched 100 messages from no-reply@pro-tanki.com.
+2025-01-16 01:25:34,807 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:35,022 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:35,230 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:35,469 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:35,697 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:35,924 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:36,146 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:36,412 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:36,724 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:36,952 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:37,170 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:37,399 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:37,610 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:37,944 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:38,257 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:38,465 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:38,676 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:38,884 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:39,186 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:39,392 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:39,607 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:39,851 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:40,056 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:40,280 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:40,490 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:40,706 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:40,911 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:41,224 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:41,433 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:41,638 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:41,853 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:42,064 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:42,275 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:42,555 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:42,775 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:42,987 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:43,214 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:43,432 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:43,655 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:43,877 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:44,096 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:44,308 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:44,532 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:44,744 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:44,951 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:45,163 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:45,381 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:45,636 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:45,861 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:46,080 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:46,289 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:46,547 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:46,763 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:46,990 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:47,194 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:47,407 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:47,621 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:47,843 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:48,054 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:48,268 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:48,487 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:48,704 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:48,926 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:49,142 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:49,356 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:49,572 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:49,793 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:50,022 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:50,231 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:50,440 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:50,652 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:50,864 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:51,070 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:51,277 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:51,488 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:51,699 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:51,973 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:52,186 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:52,393 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:52,693 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:52,915 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:53,139 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:53,351 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:53,572 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:53,788 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:53,997 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:54,206 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:54,419 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:54,650 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:54,870 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:55,075 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:55,291 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:55,507 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:55,724 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:55,969 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:56,194 [INFO] Fetched additional 100 messages.
+2025-01-16 01:25:56,394 [INFO] Fetched additional 30 messages.
+2025-01-16 01:58:22,570 [ERROR] Failed to retrieve email 1946a59e6e19e9e3: <HttpError 503 when requesting https://gmail.googleapis.com/gmail/v1/users/me/messages/1946a59e6e19e9e3?format=full&alt=json returned "Visibility check was unavailable. Please retry the request and contact support if the problem persists". Details: "[{'message': 'Visibility check was unavailable. Please retry the request and contact support if the problem persists', 'domain': 'global', 'reason': 'backendError'}]">
+2025-01-16 01:59:42,232 [INFO] Saved 9729 total registrations to /Users/teinc3/Documents/Code/ProTanki/ProTanki-Crystal-Generator/data/email_registrations.json.
+2025-01-16 13:21:10,971 [INFO] Credentials refreshed successfully.
+2025-01-16 13:21:10,972 [INFO] Saved new credentials to token.json.
+2025-01-16 13:21:10,975 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-01-16 13:21:10,976 [INFO] Gmail service built successfully.
+2025-01-16 13:21:11,259 [INFO] Fetched 100 messages from no-reply@pro-tanki.com.
+2025-01-16 13:21:11,478 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:11,702 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:11,914 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:12,126 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:12,330 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:12,768 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:12,979 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:13,183 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:13,387 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:13,641 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:13,860 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:14,066 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:14,280 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:14,500 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:14,731 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:14,941 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:15,157 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:15,430 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:15,650 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:15,868 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:16,095 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:16,317 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:16,541 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:16,748 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:16,969 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:17,188 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:17,408 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:17,628 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:17,845 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:18,054 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:18,263 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:18,476 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:18,716 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:18,925 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:19,143 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:19,345 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:19,570 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:19,775 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:19,996 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:20,215 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:20,430 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:20,651 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:20,873 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:21,090 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:21,324 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:21,533 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:21,747 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:21,986 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:22,198 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:22,410 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:22,627 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:22,840 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:23,065 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:23,291 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:23,515 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:23,729 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:23,941 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:24,163 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:24,399 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:24,606 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:24,825 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:25,063 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:25,302 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:25,622 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:25,835 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:26,062 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:26,274 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:26,488 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:26,691 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:26,912 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:27,136 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:27,346 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:27,567 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:27,796 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:28,009 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:28,222 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:28,490 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:28,716 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:29,001 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:29,205 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:29,431 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:29,654 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:29,862 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:30,085 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:30,287 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:30,513 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:30,726 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:31,050 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:31,268 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:31,564 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:31,790 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:32,015 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:32,222 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:32,446 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:32,675 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:32,920 [INFO] Fetched additional 100 messages.
+2025-01-16 13:21:33,121 [INFO] Fetched additional 30 messages.
+2025-01-16 13:26:28,189 [ERROR] Failed to retrieve email 1946b9605d055e0d: <HttpError 400 when requesting https://gmail.googleapis.com/gmail/v1/users/me/messages/1946b9605d055e0d?format=full&alt=json returned "Precondition check failed.". Details: "[{'message': 'Precondition check failed.', 'domain': 'global', 'reason': 'failedPrecondition'}]">
+2025-01-16 13:30:34,409 [ERROR] Failed to retrieve email 1946b7f981908212: <HttpError 400 when requesting https://gmail.googleapis.com/gmail/v1/users/me/messages/1946b7f981908212?format=full&alt=json returned "Precondition check failed.". Details: "[{'message': 'Precondition check failed.', 'domain': 'global', 'reason': 'failedPrecondition'}]">
+2025-01-16 14:03:28,011 [ERROR] Failed to retrieve email 1946a6e6326c8ce8: The read operation timed out
+2025-01-16 14:08:29,652 [INFO] Saved 9727 total registrations to /Users/teinc3/Documents/Code/ProTanki/ProTanki-Crystal-Generator/data/email_registrations.json.

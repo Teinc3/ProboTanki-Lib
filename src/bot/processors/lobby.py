@@ -256,6 +256,7 @@ class LobbyProcessor(AbstractProcessor):
         
 
     def update_discord_status(self, changed: bool, changed_mod_name: str):
+        return
         endpoint = "https://discord.com/api/webhooks/1314034164680364065/e1v8MfC5P9eJXY9k0LmLsMh-K4tbXyMupPKYy0lW-X0kzSSZJdpeORjC7gKOsvgMq6N1"
         data = {
             'embeds': [{
