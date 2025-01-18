@@ -80,7 +80,7 @@ class NameSocket:
         try:
             self.socket.connect(self.ENDPOINT.split_args)
         except Exception as e:
-            print(f"{self.id} Proxy Error: {e} | {self.proxy}")
+            #print(f"{self.id} Proxy Error: {e} | {self.proxy}")
             self.checkout(True)
             return
 
@@ -113,7 +113,7 @@ class NameSocket:
                 self.parse_packet(packet_id, EByteArray(packet_data))
 
             except Exception as e:
-                print(f"{self.id} Error: {e} | {packet_len} {packet_id}")
+                #print(f"{self.id} Error: {e} | {packet_len} {packet_id}")
                 self.checkout(True)
                 return
             
@@ -168,14 +168,16 @@ class NameSocket:
     def checkout(self, failure = False):
         self.allocator.checkout(self.account, failure)        
         if failure:
-            print(f"{self.id} ({self.proxy}) could not login to {self.account}")
+            #print(f"{self.id} ({self.proxy}) could not login to {self.account}")
+            pass
         else:
-            print(f"{self.id} ({self.proxy}) logged in to {self.account}")
+            #print(f"{self.id} ({self.proxy}) logged in to {self.account}")
+            print(self.account, end="\n")
 
         self.socket.close()
 
-        time.sleep(6)
-        self.new_socket(self)
+        #time.sleep(6)
+        #self.new_socket(self)
 
     def compare_packet(self, packet_name: str):
         return self.last_processed_packet.__class__.__name__ == packet_name
@@ -205,10 +207,10 @@ if __name__ == "__main__":
     socket_lock = Lock()
 
     def new_socket(socket: NameSocket):
-        other_socket = NameSocket(socket.id + 100, socket.proxy, allocator, new_socket)
+        #other_socket = NameSocket(socket.id + 100, socket.proxy, allocator, new_socket)
         with socket_lock:
             sockets.remove(socket)
-            sockets.add(other_socket)
+            #sockets.add(other_socket)
 
     for i, proxy in enumerate(proxies):
         with socket_lock:
@@ -216,5 +218,5 @@ if __name__ == "__main__":
 
     while not allocator.check_finish:
         time.sleep(2)
-        print(f"Progress: {allocator.checkout_count}/{allocator.account_count}")
+        #print(f"Progress: {allocator.checkout_count}/{allocator.account_count}")
     print("Finished")
