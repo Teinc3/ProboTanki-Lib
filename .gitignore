@@ -6,3 +6,4 @@ logs/
 .venv
 gmail_parser.log
 token.json
+captcha.png
