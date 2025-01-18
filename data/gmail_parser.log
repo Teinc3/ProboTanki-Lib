@@ -445,3 +445,28 @@
 2025-01-16 13:30:34,409 [ERROR] Failed to retrieve email 1946b7f981908212: <HttpError 400 when requesting https://gmail.googleapis.com/gmail/v1/users/me/messages/1946b7f981908212?format=full&alt=json returned "Precondition check failed.". Details: "[{'message': 'Precondition check failed.', 'domain': 'global', 'reason': 'failedPrecondition'}]">
 2025-01-16 14:03:28,011 [ERROR] Failed to retrieve email 1946a6e6326c8ce8: The read operation timed out
 2025-01-16 14:08:29,652 [INFO] Saved 9727 total registrations to /Users/teinc3/Documents/Code/ProTanki/ProTanki-Crystal-Generator/data/email_registrations.json.
+2025-01-18 16:15:22,185 [INFO] Credentials refreshed successfully.
+2025-01-18 16:15:22,186 [INFO] Saved new credentials to token.json.
+2025-01-18 16:15:22,188 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-01-18 16:15:22,190 [INFO] Gmail service built successfully.
+2025-01-18 16:15:22,568 [INFO] Fetched 100 messages from no-reply@pro-tanki.com.
+2025-01-18 16:15:22,797 [INFO] Fetched additional 100 messages.
+2025-01-18 16:15:23,017 [INFO] Fetched additional 100 messages.
+2025-01-18 16:15:23,223 [INFO] Fetched additional 100 messages.
+2025-01-18 16:15:23,434 [INFO] Fetched additional 8 messages.
+2025-01-18 16:15:23,467 [INFO] Loaded 9727 existing registrations.
+2025-01-18 16:16:48,339 [INFO] Saved 10135 total registrations to /Users/teinc3/Documents/Code/ProTanki/ProTanki-Crystal-Generator/data/email_registrations.json.
+2025-01-18 16:19:47,782 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-01-18 16:19:47,783 [INFO] Gmail service built successfully.
+2025-01-18 16:19:48,180 [INFO] Fetched 100 messages from no-reply@pro-tanki.com.
+2025-01-18 16:19:48,416 [INFO] Fetched additional 100 messages.
+2025-01-18 16:19:48,632 [INFO] Fetched additional 100 messages.
+2025-01-18 16:19:48,865 [INFO] Fetched additional 100 messages.
+2025-01-18 16:19:49,072 [INFO] Fetched additional 5 messages.
+2025-01-18 16:46:43,103 [INFO] file_cache is only supported with oauth2client<4.0.0
+2025-01-18 16:46:43,105 [INFO] Gmail service built successfully.
+2025-01-18 16:46:43,502 [INFO] Fetched 100 messages from no-reply@pro-tanki.com.
+2025-01-18 16:46:43,711 [INFO] Fetched additional 100 messages.
+2025-01-18 16:46:43,924 [INFO] Fetched additional 100 messages.
+2025-01-18 16:46:44,169 [INFO] Fetched additional 100 messages.
+2025-01-18 16:46:44,387 [INFO] Fetched additional 6 messages.

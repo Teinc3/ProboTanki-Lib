@@ -169,8 +169,6 @@ class NameSocket:
         self.allocator.checkout(self.account, failure)        
         if failure:
             print(f"{self.id} ({self.proxy}) could not login to {self.account}")
-            self.socket.close()
-            return
         else:
             print(f"{self.id} ({self.proxy}) logged in to {self.account}")
 

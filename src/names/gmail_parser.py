@@ -15,7 +15,7 @@ from googleapiclient.discovery import build
 # 0 -> Load/email registrations (old functionality)
 # 1 -> Fetch "Nickname Change Warning" emails (new functionality)
 # --------------------------
-MODE = 0
+MODE = 1
 
 # If modifying these SCOPES, delete the file token.json.
 SCOPES = ['https://www.googleapis.com/auth/gmail.modify']  # Changed scope to allow modifying emails
@@ -204,7 +204,7 @@ def main():
         # OLD FUNCTIONALITY: Load and save email registrations
         # ==================================================
 
-        messages = get_all_email_messages(service, "after: 2025/1/14 subject: Confirmation of")
+        messages = get_all_email_messages(service, "after: 2025/1/17 subject: Confirmation of")
         registrations = []
 
         # Load existing registrations to avoid duplicates
@@ -248,7 +248,7 @@ def main():
 
         messages = get_all_email_messages(service, 'subject: Nickname Change Warning')
         if not messages:
-            print("No 'Nickname Change Warning' emails found.")
+            print("No 'Nickname Change Warning emails found.")
             return
 
         valuable_nicks = []

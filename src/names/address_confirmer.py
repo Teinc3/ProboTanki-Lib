@@ -77,7 +77,7 @@ def main():
         return
 
     # Use a thread pool to allocate proxies to each account confirmation request
-    with ThreadPoolExecutor(max_workers=25) as executor:
+    with ThreadPoolExecutor(max_workers=50) as executor:
         for i, link in enumerate(accounts):
             proxy = proxies[i % proxy_count]
             executor.submit(confirm_account, i, link, proxy)

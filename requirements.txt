@@ -6,3 +6,4 @@ pysocks
 nltk
 google-api-python-client
 google-auth-oauthlib
+python-dotenv
