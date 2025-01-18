@@ -4,3 +4,5 @@ logs/
 .vscode/
 .idea
 .venv
+gmail_parser.log
+token.json

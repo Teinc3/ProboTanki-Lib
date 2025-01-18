@@ -15,7 +15,7 @@ from googleapiclient.discovery import build
 # 0 -> Load/email registrations (old functionality)
 # 1 -> Fetch "Nickname Change Warning" emails (new functionality)
 # --------------------------
-MODE = 1
+MODE = 0
 
 # If modifying these SCOPES, delete the file token.json.
 SCOPES = ['https://www.googleapis.com/auth/gmail.modify']  # Changed scope to allow modifying emails
