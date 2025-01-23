@@ -41,6 +41,8 @@ class NameScraper:
 
     def get_names(self):
         return list(filter(lambda x: x != "Teinc3", self.names_set))
+        #return list(self.names_set)
+        #return ['Teinc3']
 
 
 if __name__ == "__main__":
