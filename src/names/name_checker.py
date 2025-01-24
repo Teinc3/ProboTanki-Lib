@@ -4,9 +4,9 @@ import time
 from threading import Thread, Lock, Event
 
 DATA_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'data'))
-NAME_FILE = os.path.join(DATA_PATH, 'natural_language_corpus_words.txt')
+NAME_FILE = os.path.join(DATA_PATH, 'names', 'list', 'natural_language_corpus_words.txt')
 PROXIES_FILE = os.path.join(DATA_PATH, 'proxies.txt')
-OUTPUT_FILE = os.path.join(DATA_PATH, 'names_available.txt')
+OUTPUT_FILE = os.path.join(DATA_PATH, 'names', 'list', 'names_available.txt')
 API_URL = "https://s.pro-tanki.com/api"
 
 names_lock = Lock()

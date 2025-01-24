@@ -21,20 +21,22 @@ MODE = 0
 SCOPES = ['https://www.googleapis.com/auth/gmail.modify']  # Changed scope to allow modifying emails
 
 # Paths
-CREDENTIALS_PATH = os.path.abspath(
-    os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'gmail_client_secret.json')
+DATA_REL_PATH = os.path.join(os.path.dirname(__file__), '..', '..', 'data')
+
+GMAIL_CREDENTIALS_PATH = os.path.abspath(
+    os.path.join(DATA_REL_PATH, 'gmail', 'gmail_client_secret.json')
 )
 VALUABLE_NICKS_PATH = os.path.abspath(
-    os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'valuablenicks.txt')
+    os.path.join(DATA_REL_PATH, 'names', 'owned', 'valuablenicks.txt')
 )
 TOKEN_PATH = os.path.abspath(
-    os.path.join(os.path.dirname(CREDENTIALS_PATH), 'token.json')
+    os.path.join(os.path.dirname(GMAIL_CREDENTIALS_PATH), 'token.json')
 )
 OUTPUT_PATH = os.path.abspath(
-    os.path.join(os.path.dirname(CREDENTIALS_PATH), 'email_registrations.json')
+    os.path.join(os.path.dirname(GMAIL_CREDENTIALS_PATH), 'registration_links.json')
 )
 LOG_PATH = os.path.abspath(
-    os.path.join(os.path.dirname(CREDENTIALS_PATH), 'gmail_parser.log')
+    os.path.join(os.path.join(os.path.dirname(__file__), '..', '..', 'logs', 'gmail_parser.log'))
 )
 
 # Configure logging
@@ -59,7 +61,7 @@ def authenticate_gmail() -> Optional[object]:
                 creds = None
         if not creds:
             try:
-                flow = InstalledAppFlow.from_client_secrets_file(CREDENTIALS_PATH, SCOPES)
+                flow = InstalledAppFlow.from_client_secrets_file(GMAIL_CREDENTIALS_PATH, SCOPES)
                 creds = flow.run_local_server(port=0)
                 logging.info("Authenticated via OAuth flow.")
             except Exception as e:

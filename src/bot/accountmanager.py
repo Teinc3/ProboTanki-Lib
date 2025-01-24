@@ -5,8 +5,9 @@ from lib.utils import Address as Proxy
 
 
 class AccountManager:
-    WATCHDOG_FILE_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'watchdog.json'))
-    ACCOUNTS_FILE_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'accounts.json'))
+    CREDENTIALS_REL_PATH = os.path.join(os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'accounts'))
+    WATCHDOG_FILE_PATH = os.path.abspath(os.path.join(CREDENTIALS_REL_PATH, 'watchdog.json'))
+    ACCOUNTS_FILE_PATH = os.path.abspath(os.path.join(CREDENTIALS_REL_PATH, 'accounts.json'))
 
     def __init__(self):
         self.current_account_index = 0
