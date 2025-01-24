@@ -1,5 +1,5 @@
 from lib.codec.complex import JsonCodec
-from lib.packets.abstractpacket import AbstractPacket
+from lib.packets import AbstractPacket
 
 
 class Battle_Created(AbstractPacket):

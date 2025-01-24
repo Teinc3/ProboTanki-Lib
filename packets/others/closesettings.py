@@ -1,5 +1,5 @@
 from lib.codec.primitive import BoolCodec
-from lib.packets.abstractpacket import AbstractPacket
+from lib.packets import AbstractPacket
 
 
 class Close_Settings(AbstractPacket):

@@ -1,7 +1,7 @@
-from packets import AbstractPacket
+from lib.packets import AbstractPacket
 
-from codec.primitive import ByteCodec, IntCodec
-from codec.factory import VectorCodecFactory
+from lib.codec.primitive import ByteCodec, IntCodec
+from lib.codec.factory import VectorCodecFactory
 
 
 class Wrong_New_Captcha(AbstractPacket):

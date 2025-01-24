@@ -1,4 +1,4 @@
-from lib.packets.abstractpacket import AbstractPacket
+from lib.packets import AbstractPacket
 from lib.codec.primitive import IntCodec
 
 

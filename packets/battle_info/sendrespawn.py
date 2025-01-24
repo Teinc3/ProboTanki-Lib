@@ -1,4 +1,4 @@
-from lib.packets.abstractpacket import AbstractPacket
+from lib.packets import AbstractPacket
 
 
 class Send_Respawn(AbstractPacket):

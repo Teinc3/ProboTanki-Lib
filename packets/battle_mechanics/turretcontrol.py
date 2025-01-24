@@ -1,5 +1,5 @@
 from lib.codec.primitive import ByteCodec, ShortCodec, IntCodec
-from lib.packets.abstractpacket import AbstractPacket
+from lib.packets import AbstractPacket
 
 
 class Turret_Control(AbstractPacket):

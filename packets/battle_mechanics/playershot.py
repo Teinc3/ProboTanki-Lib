@@ -1,6 +1,6 @@
 from lib.codec.complex import StringCodec, Vector3DCodec
 from lib.codec.primitive import IntCodec, ByteCodec
-from lib.packets.abstractpacket import AbstractPacket
+from lib.packets import AbstractPacket
 
 
 class Player_Shot(AbstractPacket):

@@ -1,4 +1,4 @@
-from lib.packets.abstractpacket import AbstractPacket
+from lib.packets import AbstractPacket
 
 
 class Open_Friends_List(AbstractPacket):

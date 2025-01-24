@@ -1,6 +1,6 @@
-from codec.complex import Vector3DCodec, VectorVector3DCodec, VectorStringCodec, VectorShortCodec
-from codec.primitive import IntCodec
-from packets.abstractpacket import AbstractPacket
+from lib.codec.complex import Vector3DCodec, VectorVector3DCodec, VectorStringCodec, VectorShortCodec
+from lib.codec.primitive import IntCodec
+from lib.packets import AbstractPacket
 
 
 class Shaft_Arcade_OUT(AbstractPacket):

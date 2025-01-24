@@ -1,5 +1,5 @@
 from lib.codec.complex import StringCodec, Vector3DCodec
-from lib.packets.abstractpacket import AbstractPacket
+from lib.packets import AbstractPacket
 from lib.codec.primitive import FloatCodec, BoolCodec
 
 

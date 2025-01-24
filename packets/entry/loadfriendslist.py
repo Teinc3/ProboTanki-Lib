@@ -1,6 +1,6 @@
-from packets.abstractpacket import AbstractPacket
+from lib.packets import AbstractPacket
 
-from codec.complex import VectorStringCodec
+from lib.codec.complex import VectorStringCodec
 
 
 class Load_Friends_List(AbstractPacket):

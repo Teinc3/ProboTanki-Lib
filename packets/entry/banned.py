@@ -1,6 +1,6 @@
-from packets import AbstractPacket
+from lib.packets import AbstractPacket
 
-from codec.complex import StringCodec
+from lib.codec.complex import StringCodec
 
 
 class Banned(AbstractPacket):

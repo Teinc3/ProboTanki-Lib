@@ -1,6 +1,6 @@
 from lib.codec.complex import StringCodec
 from lib.codec.primitive import IntCodec
-from lib.packets.abstractpacket import AbstractPacket
+from lib.packets import AbstractPacket
 
 
 class Joined_Outside_Team_Battle(AbstractPacket):

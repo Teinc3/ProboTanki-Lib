@@ -1,4 +1,4 @@
-from lib.packets.abstractpacket import AbstractPacket
+from lib.packets import AbstractPacket
 
 
 class End_Resp_Fantom(AbstractPacket):

@@ -13,7 +13,7 @@ class Logger:
             cls._instance.logger = logging.getLogger("Logger")
             cls._instance.logger.setLevel(logging.INFO)
 
-            log_directory = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../..', 'logs'))
+            log_directory = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'logs'))
             log_file_path = os.path.join(log_directory, 'tcp.log')
 
             os.makedirs(log_directory, exist_ok=True)

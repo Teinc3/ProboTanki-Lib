@@ -1,4 +1,4 @@
-from packets import AbstractPacket
+from lib.packets import AbstractPacket
 
 
 class Name_Available(AbstractPacket):

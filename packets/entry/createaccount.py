@@ -1,6 +1,6 @@
-from codec.complex import StringCodec
-from codec.primitive import BoolCodec
-from packets.abstractpacket import AbstractPacket
+from lib.codec.complex import StringCodec
+from lib.codec.primitive import BoolCodec
+from lib.packets import AbstractPacket
 
 
 class Create_Account(AbstractPacket):

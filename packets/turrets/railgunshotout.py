@@ -1,11 +1,7 @@
-import json
-import random
-
-from codec.complex import Vector3DCodec, VectorVector3DCodec, VectorStringCodec, VectorShortCodec
-from codec.primitive import IntCodec
-from proxy.processor import user_data
-from packets.abstractpacket import AbstractPacket
-from utils.ebytearray import EByteArray
+from lib.codec.complex import Vector3DCodec, VectorVector3DCodec, VectorStringCodec, VectorShortCodec
+from lib.codec.primitive import IntCodec
+from lib.packets import AbstractPacket
+from lib.utils.ebytearray import EByteArray
 
 
 class Railgun_Shot_OUT(AbstractPacket):

@@ -1,8 +1,8 @@
-from packets import AbstractPacket
+from lib.packets import AbstractPacket
 
-from codec.primitive import IntCodec, BoolCodec
-from codec.complex import StringCodec, VectorStringCodec
-from codec.custom import BattleLimitsCodec
+from lib.codec.primitive import IntCodec, BoolCodec
+from lib.codec.complex import StringCodec, VectorStringCodec
+from lib.codec.custom import BattleLimitsCodec
 
 
 class Init_Battle_Stats(AbstractPacket):

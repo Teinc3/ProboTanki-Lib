@@ -1,9 +1,9 @@
-from packets import AbstractPacket
+from lib.packets import AbstractPacket
 
-from codec.primitive import IntCodec
-from codec.complex import StringCodec
-from codec.custom import BattleUserCodec
-from codec.factory import VectorCodecFactory
+from lib.codec.primitive import IntCodec
+from lib.codec.complex import StringCodec
+from lib.codec.custom import BattleUserCodec
+from lib.codec.factory import VectorCodecFactory
 
 
 class Load_New_Player_Team(AbstractPacket):

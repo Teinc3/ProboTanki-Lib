@@ -1,6 +1,6 @@
-from packets import AbstractPacket
+from lib.packets import AbstractPacket
 
-from codec.complex import VectorStringCodec
+from lib.codec.complex import VectorStringCodec
 
 
 class Name_Unavailable(AbstractPacket):

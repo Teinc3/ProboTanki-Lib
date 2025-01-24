@@ -1,6 +1,6 @@
-from codec.complex import JsonCodec
-from codec.primitive import IntCodec
-from packets.abstractpacket import AbstractPacket
+from lib.codec.complex import JsonCodec
+from lib.codec.primitive import IntCodec
+from lib.packets import AbstractPacket
 
 
 class Load_Resources(AbstractPacket):

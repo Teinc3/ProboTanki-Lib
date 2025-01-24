@@ -1,7 +1,7 @@
-from packets import AbstractPacket
+from lib.packets import AbstractPacket
 
-from codec.primitive import IntCodec
-from codec.complex import StringCodec
+from lib.codec.primitive import IntCodec
+from lib.codec.complex import StringCodec
 
 
 class Buy_Kit(AbstractPacket):

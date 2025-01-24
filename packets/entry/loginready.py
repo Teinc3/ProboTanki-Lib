@@ -1,5 +1,5 @@
-from codec.primitive import IntCodec, BoolCodec
-from packets.abstractpacket import AbstractPacket
+from lib.codec.primitive import IntCodec, BoolCodec
+from lib.packets import AbstractPacket
 
 
 class Login_Ready(AbstractPacket):

@@ -1,6 +1,6 @@
 from lib.codec.custom import ChatMessageCodec
 from lib.codec.factory import VectorCodecFactory
-from lib.packets.abstractpacket import AbstractPacket
+from lib.packets import AbstractPacket
 
 
 class Receive_Lobby_Chat(AbstractPacket):

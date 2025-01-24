@@ -1,5 +1,5 @@
 from lib.codec.primitive import IntCodec
-from lib.packets.abstractpacket import AbstractPacket
+from lib.packets import AbstractPacket
 
 
 class Battle_Fund(AbstractPacket):

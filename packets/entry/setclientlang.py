@@ -1,6 +1,6 @@
-from packets.abstractpacket import AbstractPacket
+from lib.packets import AbstractPacket
 
-from codec.complex import StringCodec
+from lib.codec.complex import StringCodec
 
 
 class Set_Client_Lang(AbstractPacket):

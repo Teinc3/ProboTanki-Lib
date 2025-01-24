@@ -1,6 +1,6 @@
-from packets.abstractpacket import AbstractPacket
+from lib.packets import AbstractPacket
 
-from codec.primitive import IntCodec
+from lib.codec.primitive import IntCodec
 
 
 class Railgun_Shot_Init_OUT(AbstractPacket):

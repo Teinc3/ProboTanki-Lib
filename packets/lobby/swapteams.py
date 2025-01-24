@@ -1,5 +1,5 @@
 from lib.codec.complex import StringCodec
-from lib.packets.abstractpacket import AbstractPacket
+from lib.packets import AbstractPacket
 
 
 class Swap_Teams(AbstractPacket):

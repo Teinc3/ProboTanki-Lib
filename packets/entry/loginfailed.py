@@ -1,4 +1,4 @@
-from packets.abstractpacket import AbstractPacket
+from lib.packets import AbstractPacket
 
 
 class Login_Failed(AbstractPacket):

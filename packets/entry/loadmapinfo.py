@@ -1,5 +1,5 @@
-from codec.complex import JsonCodec
-from packets.abstractpacket import AbstractPacket
+from lib.codec.complex import JsonCodec
+from lib.packets import AbstractPacket
 
 
 class Load_Map_Info(AbstractPacket):
