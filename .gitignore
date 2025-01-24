@@ -1,9 +1,0 @@
-__pycache__
-.DS_Store
-logs/
-.vscode/
-.idea
-.venv
-gmail_parser.log
-token.json
-captcha.png
