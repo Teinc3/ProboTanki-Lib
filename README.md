@@ -1,25 +1,27 @@
-# ProTanki Crystal Generator
+# ProboTanki
+A collection of tools, scripts and clients for the game ProTanki. Portmantau of ProTanki and Robot.
 
 ## Features
-
-### TankiProxy
-A proxy server that can be used to intercept and modify packets sent to ProTanki servers. This is useful for debugging the protocol of the game.
+### TankiProxy X GUI
+A proxy server that can be used to intercept and modify packets sent to ProTanki servers.
+This is useful for debugging the network protocol of the game and manipulating packets to achieve desired effects.
+A GUI is provided to make logs easier to read.
 
 ### TankiBot
-A bot containing watchdog and sheep sockets that can be used to automate the process of farming madness.
+A bot containing a simple watchdog and sheep sockets, can be used to automate the process of farming multiple accounts at once.
 
+### StaffScraper / ModChecker
+A tool that scrapes the staff list from the ProTanki Wiki and checks if moderators (including admins) are online.
+Can be extended to check for other players.
 
-## Documentation
-### Statuses
+### NameStealer
+A tool that can be used to search for available usernames on the ProTanki servers, and register them if they are available.
 
-What are statuses? They are essentially global notifiers that indicate a generic status of a player that you have subscribed to.
-Statuses are always sent over. It does not matter if you are in a battle, the garage or lobby.
+## Submodules
+- ProTanki-Client-Code: Decompiled AS3 code of the ProTanki client.
+- ProboTanki-Library: A common library of packets, codecs and networking utilities for ProboTanki
 
-To subscribe to a player, and therefore receive their statuses, you must send a [`Subscribe_Status`](src/lib/packets/status/subscribestatus.py) packet to the server containing the player's username.
-This way, you will receive a barrage of Status packets, including battle status, rank, premium and online information, etc, whenever there is a change in the player's status.
-
-
-## Todo
-
-- ~~[ ] Distribute sheep to equailze number of teams using currently available spaces (instead of using index to determine team)~~
-- [ ] Watchdog invites human observer account when creating private battles
+## Information
+### Backend
+A backend server is hosted on DigitalOcean and is used to host the above tools.
+- Public IP: 34.209.240.121
