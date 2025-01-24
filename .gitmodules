@@ -1,0 +1,3 @@
+[submodule "ProTanki-Client-Code"]
+	path = ProTanki-Client-Code
+	url = git@github.com:Teinc3/ProTanki-Client-Code.git
