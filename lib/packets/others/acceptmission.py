@@ -1,9 +1,0 @@
-from lib.codec.primitive import IntCodec
-from lib.packets.abstractpacket import AbstractPacket
-
-
-class Accept_Mission(AbstractPacket):
-    id = -867767128
-    description = "Accept mission"
-    codecs = [IntCodec]
-    attributes = ['missionId']
