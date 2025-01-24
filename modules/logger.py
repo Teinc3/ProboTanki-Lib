@@ -18,6 +18,10 @@ class Logger:
 
             os.makedirs(log_directory, exist_ok=True)
 
+            if os.path.exists(log_file_path):
+                old_log_file_path = os.path.join(log_directory, 'tcp_old.log')
+                os.rename(log_file_path, old_log_file_path)
+
             with open(log_file_path, 'w'):
                 os.chmod(log_file_path, 0o644)
 
