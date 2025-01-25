@@ -79,29 +79,3 @@ class AbstractPacket():
 
     def log(self):
         logger.log_info(f"<{'IN' if self.direction else 'OUT'}> ({self.__class__.__name__}){'' if self.shouldLog else ' - NoDisp'} | Data: {self.object}")
-
-    # Example of packet manipulation:
-
-    # Override process() in child class for manipulation
-    # def process(self):
-    #     # Change properties in existing "Implemented" object
-    #     self.object['username'] = "New Username"
-
-    #     # Convert back to "Deimplemented" object list for encoding
-    #     self.deimplement()
-    #     packet_len, _, unencrypted_data = self.wrap()
-
-    #     # Create a new buffer and pack data into it
-    #     packet_data = EByteArray()
-    #     packet_data.write_int(packet_len)
-    #     packet_data.write_int(self.id)
-    #     packet_data.write(self.protections.c2s.encrypt(unencrypted_data))
-
-    #     # Use the server socket to send the packet
-    #     self.sockets.server.send(packet_data)
-
-    #     # Allow the superclass to log the modification
-    #     super().process()
-
-    #     # Return True if you want to avoid forwarding OG packet to server, False otherwise
-    #     return True
