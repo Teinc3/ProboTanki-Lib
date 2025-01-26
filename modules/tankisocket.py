@@ -25,6 +25,7 @@ class TankiSocket:
 
         self.socket = socks.socksocket(socks.socket.AF_INET, socks.socket.SOCK_STREAM)
         self.socket.set_proxy(socks.PROXY_TYPE_SOCKS5, proxy.host, proxy.port, username=proxy.username, password=proxy.password) if proxy else None
+        self.socket.settimeout(15)
 
         self.thread = Thread(target=self.loop, daemon=False) # So that the program does not halt abruptly
         self.thread.start()
