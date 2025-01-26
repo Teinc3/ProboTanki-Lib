@@ -5,7 +5,7 @@ from enum import Enum
 
 from lib.modules import packetManager, TankiSocket, Protection
 from lib.packets import AbstractPacket
-from lib.utils.ebytearray import EByteArray
+
 
 class LayoutID(Enum):
     ENTRY = -1
@@ -72,6 +72,7 @@ class AbstractProcessor(ABC):
 
         elif self.compare_packet('Change_Layout'):
             self.layout = packet_object['layout']
+            self.on_layout_change()
 
         else:
             return False
@@ -96,6 +97,9 @@ class AbstractProcessor(ABC):
         elif self.compare_packet('Login_Ready'):
             self._login()
 
+        elif self.compare_packet('Login_Success'):
+            self.on_login()
+
         elif self.compare_packet('Login_Failed'):
             self.socketinstance.on_socket_close(Exception("Login Failed"))
 
@@ -115,6 +119,14 @@ class AbstractProcessor(ABC):
         login_packet = packetManager.get_packet_by_name('Login')()
         login_packet.deimplement(login_data)
         self.send_packet(login_packet)
+
+    @abstractmethod
+    def on_layout_change(self):
+        raise NotImplementedError
+    
+    @abstractmethod
+    def on_login(self):
+        raise NotImplementedError
 
     # Helper Functions
     def compare_packet(self, name: str):

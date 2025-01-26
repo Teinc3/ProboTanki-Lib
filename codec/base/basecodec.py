@@ -1,4 +1,4 @@
-from abc import ABC#, abstractmethod
+from abc import ABC, abstractmethod
 from typing import TypeVar, Generic, Any
 
 from lib.utils import EByteArray
@@ -22,14 +22,13 @@ class BaseCodec(ABC, Generic[T]):
     def __init__(self, buffer: EByteArray):
         self._buffer = buffer
 
-    #@abstractmethod
+    @abstractmethod
     def decode(self) -> T:
-        #raise NotImplementedError()
+        raise NotImplementedError()
 
-    #@abstractmethod
+    @abstractmethod
     def encode(self, value: T) -> int:
         """
         Encodes a value to an ebytearray and returns the number of bytes written
         """
-        return 0
-        #raise NotImplementedError()
+        raise NotImplementedError()

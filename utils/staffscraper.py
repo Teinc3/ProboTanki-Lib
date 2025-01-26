@@ -39,8 +39,9 @@ class NameScraper:
                     cleaned_name = self.bracket_pattern.sub("", name).strip()
                     self.names_set.add(cleaned_name)
 
-    def get_names(self):
-        return list(filter(lambda x: x != "Teinc3", self.names_set))
+    def get_names(self) -> list[str]:
+        #return list(filter(lambda x: x != "Teinc3", self.names_set)) # Added Teinc3 just for testing
+        return list(self.names_set)
 
 
 if __name__ == "__main__":
