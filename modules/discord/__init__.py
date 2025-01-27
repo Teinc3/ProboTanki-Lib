@@ -1,5 +1,5 @@
-from .main import DiscordBot
+from .main import DiscordManager
 
 __all__ = [
-    DiscordBot
+    DiscordManager
 ]
