@@ -1,7 +1,7 @@
 import time
 from abc import ABC, abstractmethod
 from threading import Event
-from typing import ClassVar
+from typing import ClassVar, Callable
 
 from lib.modules import TankiSocket, Protection, AbstractProcessor
 
@@ -30,13 +30,14 @@ class TankiInstance(ABC):
     processor: AbstractProcessor
     tankisocket: TankiSocket
 
-    def __init__(self, id: int, credentials: dict, reconnections: list[float] = []):
+    def __init__(self, id: int, credentials: dict, handle_reconnect: Callable[[], None], reconnections: list[float] = []):
         self.id = id # Just for identification/debugging purposes
         self.credentials = credentials
 
         self.reconnections = reconnections
         self.protection = Protection()
         self.emergency_halt = Event()
+        self.handle_reconnect = handle_reconnect
         
         self.instantiate_processor()
         self.instantiate_socket()
@@ -72,8 +73,7 @@ class TankiInstance(ABC):
             break_interval += 1 / 60 # Add 1 second to the break interval to prevent instant reconnect
         time.sleep(break_interval * 60)
         
-        # Create a new Instance of TankiSocket with the same credentials.
-        self.__init__(self.id, self.credentials, self.reconnections)
+        self.handle_reconnect()
 
     def check_reconnection(self) -> float:
         """
@@ -101,3 +101,6 @@ class TankiInstance(ABC):
             
         # No break interval, instant reconnect
         return 0
+    
+    def log(self, *args):
+        print(f"Socket {self.id}:", *args)
