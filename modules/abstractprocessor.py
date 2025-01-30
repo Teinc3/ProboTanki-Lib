@@ -2,6 +2,7 @@ import time
 from abc import ABC, abstractmethod
 from threading import Thread, Lock, Event
 from enum import Enum
+from typing import Callable
 
 from lib.modules import packetManager, TankiSocket, Protection
 from lib.packets import AbstractPacket
@@ -16,10 +17,11 @@ class LayoutID(Enum):
 class AbstractProcessor(ABC):
     _current_packet: AbstractPacket
 
-    def __init__(self, socket: TankiSocket, protection: Protection, credentials: dict):
+    def __init__(self, socket: TankiSocket, protection: Protection, credentials: dict, log_msg: Callable = None):
         self.socketinstance = socket
         self.protection = protection
         self.credentials = credentials
+        self.log_msg = log_msg
 
         self.layout = LayoutID.ENTRY
 
@@ -145,7 +147,7 @@ class AbstractProcessor(ABC):
             try:
                 callback()
             except Exception as e:
-                print(f"Error: {e}")
+                self.log(f"Error: {e}")
         
         timer = Thread(target=timer_thread)
         timer.daemon = True
