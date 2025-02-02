@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 from threading import Event
 from typing import ClassVar, Callable
 
-from lib.modules import TankiSocket, Protection, AbstractProcessor
+from lib.modules import TankiSocket, Protection, AbstractProcessor, DBManager
 
 
 class ReconnectionConfig:
@@ -30,9 +30,10 @@ class TankiInstance(ABC):
     processor: AbstractProcessor
     tankisocket: TankiSocket
 
-    def __init__(self, id: int, credentials: dict, handle_reconnect: Callable[[], None], log_msg: Callable = None, reconnections: list[float] = []):
+    def __init__(self, db_manager: DBManager, id: int, credentials: dict, handle_reconnect: Callable[[], None], log_msg: Callable = None, reconnections: list[float] = []):
         self.id = id # Just for identification/debugging purposes
         self.credentials = credentials
+        self.db_manager = db_manager
 
         self.reconnections = reconnections
         self.protection = Protection()
