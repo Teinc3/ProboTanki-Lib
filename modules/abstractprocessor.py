@@ -5,6 +5,7 @@ from enum import Enum
 from typing import Callable
 
 from lib.modules import packetManager, TankiSocket, Protection
+from lib.modules.dbmanager import DBManager
 from lib.packets import AbstractPacket
 
 
@@ -17,7 +18,9 @@ class LayoutID(Enum):
 class AbstractProcessor(ABC):
     _current_packet: AbstractPacket
 
-    def __init__(self, socket: TankiSocket, protection: Protection, credentials: dict, log_msg: Callable = None):
+    def __init__(self, db_manager: DBManager, socket: TankiSocket, protection: Protection, credentials: dict, log_msg: Callable = None):
+        self.db_manager = db_manager
+
         self.socketinstance = socket
         self.protection = protection
         self.credentials = credentials
