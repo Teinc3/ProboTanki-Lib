@@ -1,5 +1,5 @@
-from lib.codec.complex import DoubleIntCodecFactory
-from lib.packets import AbstractPacket
+from ...codec.complex import DoubleIntCodecFactory
+from ...packets import AbstractPacket
 
 
 class Battle_Ping_Info(AbstractPacket):

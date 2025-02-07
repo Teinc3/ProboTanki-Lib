@@ -1,6 +1,6 @@
-from lib.codec.base import CustomBaseCodec
-from lib.codec.complex import Vector3DCodec
-from lib.codec.primitive import ByteCodec
+from ..custombasecodec import CustomBaseCodec
+from ..complex import Vector3DCodec
+from ..primitive import ByteCodec
 
 
 class MoveCodec(CustomBaseCodec):

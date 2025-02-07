@@ -1,6 +1,6 @@
-from lib.packets import AbstractPacket
+from ...packets import AbstractPacket
 
-from lib.codec.complex import StringCodec
+from ...codec.complex import StringCodec
 
 
 class Check_Name_Availability(AbstractPacket):

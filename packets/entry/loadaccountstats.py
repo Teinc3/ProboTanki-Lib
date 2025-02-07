@@ -1,6 +1,6 @@
-from lib.packets import AbstractPacket
-from lib.codec.primitive import IntCodec, BoolCodec, ByteCodec, FloatCodec
-from lib.codec.complex import StringCodec
+from ...packets import AbstractPacket
+from ...codec.primitive import IntCodec, BoolCodec, ByteCodec, FloatCodec
+from ...codec.complex import StringCodec
 
 
 class Load_Account_Stats(AbstractPacket):

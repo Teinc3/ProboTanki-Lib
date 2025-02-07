@@ -1,3 +1,3 @@
-from lib.codec.complex.doubleintcodec import DoubleIntCodecFactory
+from ..complex.doubleintcodec import DoubleIntCodecFactory
 
 BattleLimitsCodec = DoubleIntCodecFactory("scoreLimit", "timeLimit")

@@ -1,7 +1,7 @@
-from lib.codec.base import CustomBaseCodec
-from lib.codec.complex import StringCodec
-from lib.codec.factory import VectorCodecFactory
-from lib.codec.primitive import BoolCodec, IntCodec
+from ..custombasecodec import CustomBaseCodec
+from ..complex import StringCodec
+from ..factory import VectorCodecFactory
+from ..primitive import BoolCodec, IntCodec
 from .missionrewardcodec import MissionRewardCodec
 
 

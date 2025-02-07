@@ -1,6 +1,6 @@
-from lib.codec.custom import BattleUserStatsCodec
-from lib.codec.factory import VectorCodecFactory
-from lib.packets import AbstractPacket
+from ...codec.custom import BattleUserStatsCodec
+from ...codec.factory import VectorCodecFactory
+from ...packets import AbstractPacket
 
 
 class Battle_User_Stats(AbstractPacket):

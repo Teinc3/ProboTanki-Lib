@@ -3,9 +3,10 @@ from abc import ABC, abstractmethod
 from threading import Thread, Lock, Event
 from typing import Callable
 
-from lib.modules import packetManager, TankiSocket, Protection
-from lib.packets import AbstractPacket
-from lib.utils.enums import LayoutID
+from ..core import packetManager, Protection
+from ..networking import TankiSocket
+from ...packets import AbstractPacket
+from ...utils.enums import LayoutID
 
 
 class AbstractProcessor(ABC):

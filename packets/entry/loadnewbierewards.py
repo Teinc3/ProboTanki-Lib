@@ -1,7 +1,7 @@
-from lib.packets import AbstractPacket
+from ...packets import AbstractPacket
 
-from lib.codec.primitive import IntCodec
-from lib.codec.factory import VectorCodecFactory
+from ...codec.primitive import IntCodec
+from ...codec.factory import VectorCodecFactory
 
 
 class Load_Newbie_Rewards(AbstractPacket):

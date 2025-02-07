@@ -1,6 +1,6 @@
-from lib.codec.primitive.intcodec import IntCodec
-from lib.codec.complex.stringcodec import StringCodec
-from lib.packets import AbstractPacket
+from ...codec.primitive.intcodec import IntCodec
+from ...codec.complex.stringcodec import StringCodec
+from ...packets import AbstractPacket
 
 
 class Buy_Multiple_Items(AbstractPacket):

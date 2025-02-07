@@ -1,6 +1,6 @@
-from lib.codec.complex import StringCodec, Vector3DCodec
-from lib.codec.primitive import ShortCodec, IntCodec
-from lib.packets import AbstractPacket
+from ...codec.complex import StringCodec, Vector3DCodec
+from ...codec.primitive import ShortCodec, IntCodec
+from ...packets import AbstractPacket
 
 
 class Start_Resp_Fantom(AbstractPacket):

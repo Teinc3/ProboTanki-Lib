@@ -1,6 +1,6 @@
-from lib.codec.complex import StringCodec
-from lib.codec.primitive import IntCodec, BoolCodec, ByteCodec
-from lib.packets import AbstractPacket
+from ...codec.complex import StringCodec
+from ...codec.primitive import IntCodec, BoolCodec, ByteCodec
+from ...packets import AbstractPacket
 
 
 class Effect_Aftermath(AbstractPacket):

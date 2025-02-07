@@ -1,6 +1,6 @@
-from lib.codec.complex import StringCodec
-from lib.codec.primitive import IntCodec
-from lib.packets import AbstractPacket
+from ...codec.complex import StringCodec
+from ...codec.primitive import IntCodec
+from ...packets import AbstractPacket
 
 
 class Player_Rank_Up(AbstractPacket):

@@ -1,5 +1,4 @@
-from lib.codec.base import BaseCodec
-
+from ..basecodec import BaseCodec
 
 class BoolCodec(BaseCodec[bool]):
 

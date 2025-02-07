@@ -1,4 +1,4 @@
-from lib.packets import AbstractPacket
+from ...packets import AbstractPacket
 
 
 class Death_Delay_End(AbstractPacket):

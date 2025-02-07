@@ -1,5 +1,5 @@
-from lib.packets import AbstractPacket
-from lib.codec.complex import StringCodec
+from ...packets import AbstractPacket
+from ...codec.complex import StringCodec
 
 
 class Receive_Game_System_Chat(AbstractPacket):

@@ -1,5 +1,5 @@
-from lib.codec.primitive import FloatCodec, IntCodec
-from lib.packets import AbstractPacket
+from ...codec.primitive import FloatCodec, IntCodec
+from ...packets import AbstractPacket
 
 
 class Load_Rating_Stats(AbstractPacket):

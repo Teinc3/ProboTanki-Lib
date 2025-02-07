@@ -1,5 +1,5 @@
-from lib.codec.complex import Vector3DCodec
-from lib.packets import AbstractPacket
+from ...codec.complex import Vector3DCodec
+from ...packets import AbstractPacket
 
 
 class Player_Start_Position(AbstractPacket):

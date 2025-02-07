@@ -1,5 +1,5 @@
-from lib.codec.custom import BattleNotifierCodec
-from lib.packets import AbstractPacket
+from ...codec.custom import BattleNotifierCodec
+from ...packets import AbstractPacket
 
 
 class In_Battle_Status(AbstractPacket):

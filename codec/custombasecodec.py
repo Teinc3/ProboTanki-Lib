@@ -1,7 +1,7 @@
 from typing import Type, ClassVar
 
-from . import BaseCodec
-from ..primitive import BoolCodec
+from .basecodec import BaseCodec
+from .primitive import BoolCodec
 
 
 class CustomBaseCodec(BaseCodec[dict]):

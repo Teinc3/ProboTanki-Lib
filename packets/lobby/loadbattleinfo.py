@@ -1,5 +1,5 @@
-from lib.codec.complex import JsonCodec
-from lib.packets import AbstractPacket
+from ...codec.complex import JsonCodec
+from ...packets import AbstractPacket
 
 
 class Load_Battle_Info(AbstractPacket):

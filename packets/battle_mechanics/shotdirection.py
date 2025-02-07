@@ -1,6 +1,6 @@
-from lib.codec.complex import StringCodec
-from lib.codec.primitive import ShortCodec
-from lib.packets import AbstractPacket
+from ...codec.complex import StringCodec
+from ...codec.primitive import ShortCodec
+from ...packets import AbstractPacket
 
 
 class Shot_Direction(AbstractPacket):

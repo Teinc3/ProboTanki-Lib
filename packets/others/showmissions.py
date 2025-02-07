@@ -1,7 +1,7 @@
-from lib.codec.custom import MissionCodec
-from lib.codec.custom import MissionStreakCodec
-from lib.codec.factory import VectorCodecFactory
-from lib.packets import AbstractPacket
+from ...codec.custom import MissionCodec
+from ...codec.custom import MissionStreakCodec
+from ...codec.factory import VectorCodecFactory
+from ...packets import AbstractPacket
 
 
 class Show_Missions(AbstractPacket):

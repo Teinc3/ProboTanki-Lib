@@ -1,6 +1,6 @@
 from typing import Type, TypeVar, Generic
 
-from ..base import BaseCodec
+from ..basecodec import BaseCodec
 from ..primitive import IntCodec, BoolCodec
 
 T = TypeVar('T')

@@ -1,6 +1,6 @@
-from lib.codec.base import CustomBaseCodec
-from lib.codec.complex import StringCodec
-from lib.codec.primitive import BoolCodec
+from ..custombasecodec import CustomBaseCodec
+from ..complex import StringCodec
+from ..primitive import BoolCodec
 from .userstatuscodec import UserStatusCodec
 
 

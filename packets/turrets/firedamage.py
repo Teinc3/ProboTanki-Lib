@@ -1,7 +1,7 @@
-from lib.packets import AbstractPacket
+from ...packets import AbstractPacket
 
-from lib.codec.primitive import IntCodec
-from lib.codec.complex import VectorVector3DCodec, VectorStringCodec, VectorShortCodec
+from ...codec.primitive import IntCodec
+from ...codec.complex import VectorVector3DCodec, VectorStringCodec, VectorShortCodec
 
 class Fire_Damage(AbstractPacket):
     id = 1395251766

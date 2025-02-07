@@ -1,5 +1,5 @@
-from lib.packets import AbstractPacket
-from lib.codec.complex import StringCodec
+from ...packets import AbstractPacket
+from ...codec.complex import StringCodec
 
 
 class User_Changed_Equipment(AbstractPacket):

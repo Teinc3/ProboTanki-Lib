@@ -1,5 +1,5 @@
-from lib.codec.base import CustomBaseCodec
-from lib.codec.primitive import ByteCodec, FloatCodec
+from ..custombasecodec import CustomBaseCodec
+from ..primitive import ByteCodec, FloatCodec
 
 
 class TurretRotateCodec(CustomBaseCodec):

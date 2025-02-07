@@ -1,6 +1,6 @@
-from lib.codec.complex import StringCodec
-from lib.packets import AbstractPacket
-from lib.packets.status import Subscribe_Status
+from ...codec.complex import StringCodec
+from ...packets import AbstractPacket
+from ...packets.status import Subscribe_Status
 
 
 class Send_Lobby_Chat(AbstractPacket):

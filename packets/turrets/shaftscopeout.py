@@ -1,6 +1,6 @@
-from lib.codec.complex import Vector3DCodec, VectorVector3DCodec, VectorStringCodec, VectorShortCodec
-from lib.codec.primitive import IntCodec
-from lib.packets import AbstractPacket
+from ...codec.complex import Vector3DCodec, VectorVector3DCodec, VectorStringCodec, VectorShortCodec
+from ...codec.primitive import IntCodec
+from ...packets import AbstractPacket
 
 
 class Shaft_Scope_OUT(AbstractPacket):

@@ -1,6 +1,6 @@
-from lib.codec.custom import MoveCodec
-from lib.codec.primitive import IntCodec, ShortCodec
-from lib.packets import AbstractPacket
+from ...codec.custom import MoveCodec
+from ...codec.primitive import IntCodec, ShortCodec
+from ...packets import AbstractPacket
 
 
 class Move(AbstractPacket):

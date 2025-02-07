@@ -1,6 +1,6 @@
-from lib.codec.complex import StringCodec
-from lib.codec.primitive import FloatCodec
-from lib.packets import AbstractPacket
+from ...codec.complex import StringCodec
+from ...codec.primitive import FloatCodec
+from ...packets import AbstractPacket
 
 
 class Mine_Location(AbstractPacket):

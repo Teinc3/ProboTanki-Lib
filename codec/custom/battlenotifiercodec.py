@@ -1,6 +1,6 @@
-from lib.codec.base import CustomBaseCodec
-from lib.codec.complex import StringCodec
-from lib.codec.custom import BattleInfoCodec
+from ..custombasecodec import CustomBaseCodec
+from ..complex import StringCodec
+from .battleinfocodec import BattleInfoCodec
 
 
 class BattleNotifierCodec(CustomBaseCodec):

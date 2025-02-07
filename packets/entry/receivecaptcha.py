@@ -1,7 +1,7 @@
-from lib.packets import AbstractPacket
+from ...packets import AbstractPacket
 
-from lib.codec.primitive import ByteCodec, IntCodec
-from lib.codec.factory import VectorCodecFactory
+from ...codec.primitive import ByteCodec, IntCodec
+from ...codec.factory import VectorCodecFactory
 
 
 class Receive_Captcha(AbstractPacket):

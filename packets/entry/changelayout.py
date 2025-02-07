@@ -1,6 +1,6 @@
-from lib.packets import AbstractPacket
+from ...packets import AbstractPacket
 
-from lib.codec.primitive import IntCodec
+from ...codec.primitive import IntCodec
 
 
 class Change_Layout(AbstractPacket):

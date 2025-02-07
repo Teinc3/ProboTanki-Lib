@@ -1,7 +1,7 @@
-from lib.codec.complex import StringCodec
-from lib.codec.custom import MoveCodec
-from lib.codec.primitive import FloatCodec
-from lib.packets import AbstractPacket
+from ...codec.complex import StringCodec
+from ...codec.custom import MoveCodec
+from ...codec.primitive import FloatCodec
+from ...packets import AbstractPacket
 
 
 class Move_Command(AbstractPacket):

@@ -1,7 +1,7 @@
-from lib.packets import AbstractPacket
+from ...packets import AbstractPacket
 
-from lib.codec.primitive import IntCodec, ShortCodec
-from lib.codec.complex import StringCodec, Vector3DCodec
+from ...codec.primitive import IntCodec, ShortCodec
+from ...codec.complex import StringCodec, Vector3DCodec
 
 
 class Smoky_Shoot_Target_OUT(AbstractPacket):
