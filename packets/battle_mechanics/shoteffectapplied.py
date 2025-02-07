@@ -1,5 +1,5 @@
-from lib.codec.complex import StringCodec, Vector3DCodec
-from lib.packets import AbstractPacket
+from ...codec.complex import StringCodec, Vector3DCodec
+from ...packets import AbstractPacket
 
 
 class Shot_Effect_Applied(AbstractPacket):

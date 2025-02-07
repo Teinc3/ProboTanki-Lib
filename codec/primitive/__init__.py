@@ -3,11 +3,3 @@ from .bytecodec import ByteCodec
 from .floatcodec import FloatCodec
 from .intcodec import IntCodec
 from .shortcodec import ShortCodec
-
-__all__ = [
-    BoolCodec,
-    IntCodec,
-    FloatCodec,
-    ByteCodec,
-    ShortCodec,
-]

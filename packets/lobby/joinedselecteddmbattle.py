@@ -1,6 +1,6 @@
-from lib.codec.complex import StringCodec
-from lib.codec.custom import BattleInfoUserCodec
-from lib.packets import AbstractPacket
+from ...codec.complex import StringCodec
+from ...codec.custom import BattleInfoUserCodec
+from ...packets import AbstractPacket
 
 
 class Joined_Selected_DM_Battle(AbstractPacket):

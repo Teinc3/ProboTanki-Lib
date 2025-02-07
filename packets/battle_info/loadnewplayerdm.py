@@ -1,8 +1,8 @@
-from lib.packets import AbstractPacket
+from ...packets import AbstractPacket
 
-from lib.codec.complex import StringCodec
-from lib.codec.factory import VectorCodecFactory
-from lib.codec.custom import BattleUserCodec
+from ...codec.complex import StringCodec
+from ...codec.factory import VectorCodecFactory
+from ...codec.custom import BattleUserCodec
 
 
 class Load_New_Player_DM(AbstractPacket):

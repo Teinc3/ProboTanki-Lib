@@ -1,6 +1,6 @@
-from lib.codec.complex import Vector3DCodec, StringCodec
-from lib.codec.primitive import IntCodec
-from lib.packets import AbstractPacket
+from ...codec.complex import Vector3DCodec, StringCodec
+from ...codec.primitive import IntCodec
+from ...packets import AbstractPacket
 
 # from .collectbonusbox import Collect_Bonus_Box
 

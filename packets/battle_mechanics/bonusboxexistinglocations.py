@@ -1,5 +1,5 @@
-from lib.packets import AbstractPacket
-from lib.codec.complex import JsonCodec
+from ...packets import AbstractPacket
+from ...codec.complex import JsonCodec
 
 
 class Bonus_Box_Existing_Locations(AbstractPacket):

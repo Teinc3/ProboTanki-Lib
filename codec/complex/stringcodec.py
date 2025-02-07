@@ -1,4 +1,4 @@
-from ..base import BaseCodec
+from ..basecodec import BaseCodec
 
 
 class StringCodec(BaseCodec[str]):

@@ -1,6 +1,6 @@
-from lib.codec.complex import StringCodec
-from lib.codec.primitive import ByteCodec
-from lib.packets import AbstractPacket
+from ...codec.complex import StringCodec
+from ...codec.primitive import ByteCodec
+from ...packets import AbstractPacket
 
 
 class Battle_User_Control(AbstractPacket):

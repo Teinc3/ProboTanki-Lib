@@ -1,6 +1,6 @@
-from lib.codec.factory import VectorCodecFactory
-from lib.codec.primitive import ByteCodec
-from lib.packets import AbstractPacket
+from ...codec.factory import VectorCodecFactory
+from ...codec.primitive import ByteCodec
+from ...packets import AbstractPacket
 
 
 class Activate_Protection(AbstractPacket):

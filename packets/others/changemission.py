@@ -1,5 +1,5 @@
-from lib.codec.primitive import IntCodec
-from lib.packets import AbstractPacket
+from ...codec.primitive import IntCodec
+from ...packets import AbstractPacket
 
 
 class Change_Mission(AbstractPacket):

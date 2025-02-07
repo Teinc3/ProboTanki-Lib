@@ -1,8 +1,8 @@
-from lib.codec.complex import StringCodec
-from lib.codec.primitive import BoolCodec
-from lib.packets import AbstractPacket
+from ...codec.complex import StringCodec
+from ...codec.primitive import BoolCodec
+from ...packets import AbstractPacket
 
-from lib.packets.battle_mechanics.endrespfantom import End_Resp_Fantom
+from ...packets.battle_mechanics.endrespfantom import End_Resp_Fantom
 
 
 class Send_Game_Chat(AbstractPacket):

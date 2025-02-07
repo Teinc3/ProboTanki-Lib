@@ -1,4 +1,4 @@
-from lib.packets import AbstractPacket
+from ...packets import AbstractPacket
 
 
 class Login_Success(AbstractPacket):

@@ -1,7 +1,7 @@
-from lib.codec.complex import StringCodec
-from lib.codec.custom import BattleInfoUserCodec
-from lib.codec.primitive import IntCodec
-from lib.packets import AbstractPacket
+from ...codec.complex import StringCodec
+from ...codec.custom import BattleInfoUserCodec
+from ...codec.primitive import IntCodec
+from ...packets import AbstractPacket
 
 
 class Joined_Selected_Team_Battle(AbstractPacket):

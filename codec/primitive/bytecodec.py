@@ -1,4 +1,4 @@
-from lib.codec.base import BaseCodec
+from ..basecodec import BaseCodec
 
 
 class ByteCodec(BaseCodec[float]):

@@ -1,5 +1,5 @@
-from lib.codec.complex import StringCodec
-from lib.packets import AbstractPacket
+from ...codec.complex import StringCodec
+from ...packets import AbstractPacket
 
 
 class Send_Invite(AbstractPacket):

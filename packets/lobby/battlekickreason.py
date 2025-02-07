@@ -1,6 +1,6 @@
-from lib.packets import AbstractPacket
+from ...packets import AbstractPacket
 
-from lib.codec.complex import StringCodec
+from ...codec.complex import StringCodec
 
 
 class Battle_Kick_Reason(AbstractPacket):

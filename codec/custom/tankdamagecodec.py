@@ -1,6 +1,6 @@
-from lib.codec.base import CustomBaseCodec
-from lib.codec.complex import StringCodec
-from lib.codec.primitive import FloatCodec, IntCodec
+from ..custombasecodec import CustomBaseCodec
+from ..complex import StringCodec
+from ..primitive import FloatCodec, IntCodec
 
 
 class TankDamageCodec(CustomBaseCodec):

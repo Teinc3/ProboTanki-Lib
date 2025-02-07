@@ -1,6 +1,6 @@
-from lib.codec.custom import UserStatsCodec
-from lib.codec.primitive import IntCodec
-from lib.packets import AbstractPacket
+from ...codec.custom import UserStatsCodec
+from ...codec.primitive import IntCodec
+from ...packets import AbstractPacket
 
 
 class Battle_User_Team_Stats(AbstractPacket):

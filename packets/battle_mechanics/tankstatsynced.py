@@ -1,6 +1,6 @@
-from lib.codec.complex import StringCodec
-from lib.codec.primitive import FloatCodec, ShortCodec
-from lib.packets import AbstractPacket
+from ...codec.complex import StringCodec
+from ...codec.primitive import FloatCodec, ShortCodec
+from ...packets import AbstractPacket
 
 
 class Tank_Stat_Synced(AbstractPacket):

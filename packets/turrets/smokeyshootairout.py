@@ -1,5 +1,5 @@
-from lib.packets import AbstractPacket
-from lib.codec.primitive import IntCodec
+from ...packets import AbstractPacket
+from ...codec.primitive import IntCodec
 
 
 class Smoky_Shoot_Air_OUT(AbstractPacket):

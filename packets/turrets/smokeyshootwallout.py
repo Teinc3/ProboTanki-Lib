@@ -1,6 +1,6 @@
-from lib.codec.complex import Vector3DCodec
-from lib.packets import AbstractPacket
-from lib.codec.primitive import IntCodec
+from ...codec.complex import Vector3DCodec
+from ...packets import AbstractPacket
+from ...codec.primitive import IntCodec
 
 
 class Smoky_Shoot_Wall_OUT(AbstractPacket):

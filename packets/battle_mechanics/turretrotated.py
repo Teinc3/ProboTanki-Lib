@@ -1,6 +1,6 @@
-from lib.codec.complex import StringCodec
-from lib.codec.custom import TurretRotateCodec
-from lib.packets import AbstractPacket
+from ...codec.complex import StringCodec
+from ...codec.custom import TurretRotateCodec
+from ...packets import AbstractPacket
 
 
 class Turret_Rotated(AbstractPacket):

@@ -1,3 +1,6 @@
+# Again, only use the imports from this file externally
+# Internally, juse reference the file directly.
+
 from .battleinfocodec import BattleInfoCodec
 from .battleimfouserpreviewcodec import BattleInfoUserCodec
 from .battleusercodec import BattleUserCodec
@@ -15,23 +18,3 @@ from .tankdamagecodec import TankDamageCodec
 from .turretrotatecodec import TurretRotateCodec
 from .userstatscodec import UserStatsCodec
 from .userstatuscodec import UserStatusCodec
-
-__all__ = [
-    BattleInfoCodec,
-    BattleInfoUserCodec,
-    BattleLimitsCodec,
-    BattleUserCodec,
-    BattleNotifierCodec,
-    ChatMessageCodec,
-    MissionCodec,
-    MissionRewardCodec,
-    MissionStreakCodec,
-    MoveCodec,
-    RankRangeCodec,
-    TankDamageCodec,
-    TurretRotateCodec,
-    UserStatsCodec,
-    UserStatusCodec,
-    BattleUserStatsCodec,
-    BattleUserRewardsCodec,
-]

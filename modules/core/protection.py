@@ -1,4 +1,4 @@
-from lib.utils.ebytearray import EByteArray
+from ...utils import EByteArray
 
 
 class Protection:

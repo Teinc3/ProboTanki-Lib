@@ -1,6 +1,6 @@
-from lib.codec.complex import StringCodec, Vector3DCodec
-from lib.packets import AbstractPacket
-from lib.codec.primitive import FloatCodec, BoolCodec
+from ...codec.complex import StringCodec, Vector3DCodec
+from ...packets import AbstractPacket
+from ...codec.primitive import FloatCodec, BoolCodec
 
 
 class Smoky_Shot_IN(AbstractPacket):

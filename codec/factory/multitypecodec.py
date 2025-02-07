@@ -1,6 +1,6 @@
 from typing import Type
 
-from ..base import BaseCodec
+from ..basecodec import BaseCodec
 from ..primitive import BoolCodec
 
 

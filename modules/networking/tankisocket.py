@@ -2,9 +2,9 @@ import socks
 from threading import Thread, Event
 from typing import Callable
 
-from lib.modules import Protection, packetManager
-from lib.packets import AbstractPacket
-from lib.utils import Address, EByteArray
+from ..core import Protection, packetManager
+from ...packets import AbstractPacket
+from ...utils import Address, EByteArray
 
 
 class TankiSocket:

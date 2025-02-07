@@ -1,10 +1,10 @@
-from threading import Lock, Timer
-import datetime
 from abc import ABC, abstractmethod
+import datetime
+from threading import Lock, Timer
 from typing import Callable
 
-from lib.packets import AbstractPacket
-from .. import packetManager
+from ...packets import AbstractPacket
+from ..core import packetManager
 from .target import Target
 
 
