@@ -5,14 +5,15 @@ from typing import Callable
 
 from ...packets import AbstractPacket
 from ..core import packetManager
+from ..communications import LogMessage
 from .target import Target
 
 
 class BaseTracker(ABC):
     """Abstract base class for tracking different types of accounts."""
 
-    def __init__(self, send_packet: Callable[[AbstractPacket], None], log_msg_callback: Callable[[str, str, dict], None]):
-        self.log_msg_callback = log_msg_callback
+    def __init__(self, send_packet: Callable[[AbstractPacket], None], transmit: Callable[[str, str, dict], None]):
+        self.transmit = transmit
 
         self._targets: dict[str, Target] = {}
         self.targets_lock = Lock()
@@ -131,10 +132,14 @@ class BaseTracker(ABC):
 
     def log_msg(self, message_type: str, text: str = None, payload: dict = None):
         """Log a message to the Discord channel."""
-        if self.channel_type == 'mod': # If channel_type is mod then we also have to send the payload to the mod_dynamic channel
-            self.log_msg_callback('mod_dynamic', text, payload=payload)
-        self.log_msg_callback(message_type, text, payload)
 
+        message = LogMessage(message_type, text=text, payload=payload)
+        self.transmit(message)
+
+        if self.channel_type == 'mod': # If channel_type is mod then we also have to send the payload to the mod_dynamic channel
+            message.channel_type = 'mod_dynamic'
+            self.transmit(message)
+        
     @abstractmethod
     def evaluate_availability(self) -> tuple[list[Target], list[Target]]:
         """Evaluate availability based on specific criteria."""

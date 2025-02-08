@@ -6,6 +6,7 @@ from typing import ClassVar, Callable
 from ..core import Protection
 from ..processing import AbstractProcessor
 from ..networking import TankiSocket
+from ..communications import AbstractMessage, ErrorMessage, LogMessage
 from ...utils import ReconnectionConfig
 
 
@@ -15,7 +16,7 @@ class TankiInstance(ABC):
     processor: AbstractProcessor
     tankisocket: TankiSocket
 
-    def __init__(self, id: int, credentials: dict, handle_reconnect: Callable[[], None], log_msg: Callable = None, reconnections: list[float] = []):
+    def __init__(self, id: int, credentials: dict, transmit: Callable[[AbstractMessage], None], handle_reconnect: Callable[[], None], reconnections: list[float] = []):
         self.id = id # Just for identification/debugging purposes
         self.credentials = credentials
 
@@ -23,7 +24,7 @@ class TankiInstance(ABC):
         self.protection = Protection()
         self.emergency_halt = Event()
         self.handle_reconnect = handle_reconnect
-        self.log_msg = log_msg
+        self.transmit = transmit
         
         self.instantiate_processor()
         self.instantiate_socket()
@@ -40,9 +41,12 @@ class TankiInstance(ABC):
         self.tankisocket = TankiSocket(self.protection, self.credentials.get('proxy', None), self.emergency_halt, self.processor.parse_packets, self.on_socket_close)
         self.processor.socketinstance = self.tankisocket
 
-    def on_socket_close(self, e: Exception):
+    def on_socket_close(self, e: Exception | str, location: str = None, state: str = None):
         # Log the exception
-        self.log(f"Socket closed | ID: {self.id} | Credentials: {self.credentials} | Error: {e}")
+        e.add_note("Socket Closed")
+        location = "[TankiInstance]"
+        state = f"ID: {self.id} | Credentials: {self.credentials} | Reconnections: {self.reconnections}"
+        self.transmit(ErrorMessage(e, location, state))
         
         # Cleanup the existing socket
         self.emergency_halt.set()
@@ -54,7 +58,7 @@ class TankiInstance(ABC):
             return
         
         if break_interval > 0:
-            self.log(f"Reconnecting in {break_interval} minutes.")
+            self.transmit(LogMessage('system', f"Reconnecting in {break_interval} minutes"))
         else:
             break_interval += 1 / 60 # Add 1 second to the break interval to prevent instant reconnect
         time.sleep(break_interval * 60)
@@ -88,9 +92,4 @@ class TankiInstance(ABC):
         # No break interval, instant reconnect
         return 0
     
-    @abstractmethod
-    def log(self, *arg, **kwargs):
-        """
-        User-defined logging method.
-        """
-        raise NotImplementedError
+__all__ = ['TankiInstance']
