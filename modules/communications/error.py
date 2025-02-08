@@ -22,6 +22,10 @@ class ErrorMessage(AbstractMessage):
         if location is not None and state is not None:
             self.traceback_state[location] = state
 
+    def flatten_traceback_state(self):
+        """ Flattens the traceback state into a string, from the most inner to the most outer state """
+        return " -> ".join([f"{location}: {state}" for location, state in self.traceback_state.items()])
+
     @property
     def type(self):
         return MessageType.ERROR
