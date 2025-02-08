@@ -9,4 +9,5 @@ class AbstractMessage(ABC):
     @property
     @abstractmethod
     def type(self) -> MessageType:
+        """ Returns the type of the message """
         raise NotImplementedError
