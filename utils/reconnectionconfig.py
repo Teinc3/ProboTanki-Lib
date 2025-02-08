@@ -1,3 +1,6 @@
+from dataclasses import dataclass
+
+@dataclass
 class ReconnectionConfig:
     """
     Configuration for reconnection settings.
@@ -10,7 +13,6 @@ class ReconnectionConfig:
         - BREAK_INTERVAL (float): Time of socket break before reconnecting.
             Negatives: Permanent break. 0+: Break for this time in minutes.
     """
-    def __init__(self, max_reconnections: int = 3, reconnection_interval: float = 60, break_interval: float = 5):
-        self.MAX_RECONNECTIONS = max_reconnections
-        self.RECONNECTION_INTERVAL = reconnection_interval
-        self.BREAK_INTERVAL = break_interval
+    MAX_RECONNECTIONS: int = 3
+    RECONNECTION_INTERVAL: float = 60
+    BREAK_INTERVAL: float = 5

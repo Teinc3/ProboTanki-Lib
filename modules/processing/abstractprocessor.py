@@ -5,19 +5,21 @@ from typing import Callable
 
 from ..core import packetManager, Protection
 from ..networking import TankiSocket
+from ..communications import AbstractMessage, ErrorMessage
 from ...packets import AbstractPacket
-from ...utils.enums import LayoutID
+from ...utils.enums import LayoutID, AutoEnum
 
 
 class AbstractProcessor(ABC):
     _current_packet: AbstractPacket
+    command_handlers: dict[AutoEnum, Callable[[dict], None]] # Just a placeholder
 
-    def __init__(self, socket: TankiSocket, protection: Protection, credentials: dict, log_msg: Callable = None):
+    def __init__(self, socket: TankiSocket, protection: Protection, credentials: dict, transmit: Callable[[AbstractMessage], None]):
 
         self.socketinstance = socket
         self.protection = protection
         self.credentials = credentials
-        self.log_msg = log_msg
+        self.transmit = transmit
 
         self.layout = LayoutID.ENTRY
 
@@ -90,7 +92,7 @@ class AbstractProcessor(ABC):
 
         elif self.compare_packet('Invite_Code_Status'):
             if packet_object['inviteEnabled']:
-                self.socketinstance.on_socket_close(Exception("Invite code required"))
+                self.close_socket("Invite code required")
 
         elif self.compare_packet('Login_Ready'):
             self._login()
@@ -99,10 +101,10 @@ class AbstractProcessor(ABC):
             self.on_login()
 
         elif self.compare_packet('Login_Failed'):
-            self.socketinstance.on_socket_close(Exception("Login Failed"))
+            self.close_socket("Login Failed")
 
         elif self.compare_packet('Banned'):
-            self.socketinstance.on_socket_close(Exception("Banned"))
+            self.close_socket("Account Banned")
 
         else:
             return False
@@ -130,9 +132,13 @@ class AbstractProcessor(ABC):
     def compare_packet(self, name: str):
         return packetManager.get_packet_by_name(name) == self.current_packet.__class__
 
-    # Debugging method
     def send_packet(self, packet: AbstractPacket):
         return self.socketinstance.socket.sendall(packet.wrap(self.protection))
+    
+    def close_socket(self, reason: str):
+        # Form the error message
+        reason = f"Unexpected packet interaction: {reason}"
+        self.socketinstance.on_socket_close(reason, self.__class__.__name__, f"Current Packet: {self.current_packet}")
     
     def create_timer(self, delta_time: int, callback: callable):
         """Function creates a temporary timer thread that expires after a certain time and executes the callback function"""
@@ -143,8 +149,9 @@ class AbstractProcessor(ABC):
             try:
                 callback()
             except Exception as e:
-                self.log(f"Error: {e}")
-        
+                message = ErrorMessage(e, location=f"{self.__class__.__name__}.create_timer.callback", state=f"Delta Time: {delta_time} | Callback: {repr(callback)}")
+                self.transmit(message)
+                        
         timer = Thread(target=timer_thread)
         timer.daemon = True
         timer.start()
@@ -160,3 +167,5 @@ class AbstractProcessor(ABC):
             thread.join()
         
         self.threads.clear()
+
+__all__ = ['AbstractProcessor']

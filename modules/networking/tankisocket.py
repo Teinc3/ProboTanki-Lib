@@ -5,6 +5,7 @@ from typing import Callable
 from ..core import Protection, packetManager
 from ...packets import AbstractPacket
 from ...utils import Address, EByteArray
+from ..communications import ErrorMessage
 
 
 class TankiSocket:
@@ -12,7 +13,7 @@ class TankiSocket:
 
     def __init__(self,
                  protection: Protection, proxy: Address | None, emergency_halt: Event, 
-                 on_data_received: Callable[[AbstractPacket], None], on_socket_close: Callable[[Exception], None]
+                 on_data_received: Callable[[AbstractPacket], None], on_socket_close: Callable[[Exception | str], None]
                  ):
         
         self.protection = protection
@@ -33,17 +34,8 @@ class TankiSocket:
     def loop(self):
         try:
             self.socket.connect(self.ENDPOINT.split_args)
-        except socks.GeneralProxyError as e:
-            self.on_socket_close(e)
-            return
-        except socks.SOCKS5AuthError as e:
-            self.on_socket_close(e)
-            return
-        except socks.SOCKS5Error as e:
-            self.on_socket_close(e)
-            return
         except Exception as e:
-            self.on_socket_close(e)
+            self.on_socket_close(e, "TankiSocket.loop", f"Not Connected | Proxy: {self.proxy}")
             return
         
         while not self.emergency_halt.is_set():
@@ -53,12 +45,12 @@ class TankiSocket:
 
                 packet_len_bytes = EByteArray(self.socket.recv(4))
                 if len(packet_len_bytes) == 0:
-                    raise Exception("Pipe broken")
+                    raise Exception("Socket Pipe Broken")
                 
                 packet_len = packet_len_bytes.read_int()
                 packet_id_bytes = EByteArray(self.socket.recv(4))
                 if len(packet_id_bytes) == 0:
-                    raise Exception("Pipe broken")
+                    raise Exception("Socket Pipe Broken")
                 packet_id = packet_id_bytes.read_int()
 
                 packet_data_len = packet_len - AbstractPacket.HEADER_LEN
@@ -70,7 +62,7 @@ class TankiSocket:
                         remaining_size = packet_data_len - len(encrypted_data)
                         received_data = EByteArray(self.socket.recv(remaining_size))
                         if len(received_data) == 0:
-                            raise Exception("Pipe broken")
+                            raise Exception("Socket Pipe Broken")
                         encrypted_data += received_data
 
                 packet_data = self.protection.decrypt(encrypted_data)
@@ -78,7 +70,11 @@ class TankiSocket:
                 self.on_data_received(fitted_packet)
 
             except Exception as e:
-                self.on_socket_close(e)
+                state = f"Connected | Packet Length: {packet_len} | Packet ID: {packet_id}"
+                if packet_data and len(packet_data) > 0:
+                    state += f" | Data Snippet: {packet_data[0:25]}"
+
+                self.on_socket_close(e, "TankiSocket.loop", state)
                 break
 
         # When on_socket_close is called, the socket is closed before the halt is set and the loop breaks
@@ -94,3 +90,7 @@ class TankiSocket:
         current_packet = Packet()
         current_packet.unwrap(packet_data)
         return current_packet
+    
+    def close_socket(self):
+        self.emergency_halt.set()
+        self.socket.close()
