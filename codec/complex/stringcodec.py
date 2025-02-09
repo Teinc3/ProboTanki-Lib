@@ -1,4 +1,5 @@
 from ..basecodec import BaseCodec
+from ...utils import EByteArray
 
 
 class StringCodec(BaseCodec[str]):
@@ -22,6 +23,9 @@ class StringCodec(BaseCodec[str]):
         self._buffer.write_boolean(not value)
         if not value:
             return 1
-        self._buffer.write_int(len(value))
-        self._buffer.write_string(value)
-        return 1 + 4 + len(value)
+        # NOTE: len() returns the length of the string in CHARS NOT BYTES!!!
+        string_buffer = EByteArray().write_string(value)
+        string_buffer_len = len(string_buffer)
+        self._buffer.write_int(string_buffer_len)
+        self._buffer.write(string_buffer)
+        return 1 + 4 + string_buffer_len

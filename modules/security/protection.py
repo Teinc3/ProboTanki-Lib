@@ -53,8 +53,6 @@ class Protection:
             data[i] = self.decryption_vector[self.decryption_index]
             self.decryption_index ^= self.decryption_vector[self.decryption_index] & 7
 
-        print(self.decryption_vector)
-
         return data
 
     def encrypt(self, raw_data: EByteArray):
@@ -74,7 +72,5 @@ class Protection:
             encrypted_data[i] = raw_byte ^ self.encryption_vector[self.encryption_index]
             self.encryption_vector[self.encryption_index] = raw_byte
             self.encryption_index ^= raw_byte & 7
-
-        print(self.encryption_vector)
 
         return encrypted_data
