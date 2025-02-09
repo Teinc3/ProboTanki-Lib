@@ -83,12 +83,9 @@ class TankiSocket:
 
     def process_packet(self, packet_id: int, encrypted_data: EByteArray):
         """Process received packet data"""  
-        if packet_id == -1263520410:
-            pass
+
         packet_data = self.protection.decrypt(encrypted_data)
         fitted_packet = self.packet_fitter(packet_id, packet_data)
-        if 'Load' in fitted_packet.__class__.__name__ and 'Resources' not in fitted_packet.__class__.__name__ or fitted_packet.__class__.__name__ == 'Receive_Lobby_Chat':
-            pass
         self.on_data_received(fitted_packet)
 
     def loop(self):
