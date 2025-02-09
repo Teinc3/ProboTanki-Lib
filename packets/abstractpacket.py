@@ -77,5 +77,7 @@ class AbstractPacket():
 
         return False # Default behavior is just to log the packet and declare no packet interception
 
-    # def log(self):
-    #    logger.log_info(f"<{'IN' if self.direction else 'OUT'}> ({self.__class__.__name__}){'' if self.shouldLog else ' - NoDisp'} | Data: {self.object}")
+    def log_repr(self, direction: bool) -> str:
+        """Return a string representation of the packet for logging purposes"""
+
+        return f"<{'IN' if direction else 'OUT'}> ({self.__class__.__name__}){'' if self.shouldLog else ' - NoDisp'} | Data: {self.object}"
