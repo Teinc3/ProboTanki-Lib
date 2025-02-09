@@ -21,11 +21,12 @@ class TankiInstance(ABC):
         self.credentials = credentials
 
         self.reconnections = reconnections
-        if not self.protection:
-            self.protection = Protection()
         self.emergency_halt = Event()
         self.handle_reconnect = handle_reconnect
         self.transmit = transmit
+
+        if not hasattr(self, 'protection'):
+            self.protection = Protection() # Just for you, proxy
         
         self.instantiate_processor()
         self.instantiate_socket()
