@@ -3,9 +3,9 @@ import time
 from threading import Event
 from typing import ClassVar, Callable
 
-from ..core import Protection
 from ..processing import AbstractProcessor
 from ..networking import TankiSocket
+from ..security import Protection
 from ..communications import AbstractMessage, ErrorMessage, LogMessage
 from ...utils import ReconnectionConfig
 
@@ -21,7 +21,8 @@ class TankiInstance(ABC):
         self.credentials = credentials
 
         self.reconnections = reconnections
-        self.protection = Protection()
+        if not self.protection:
+            self.protection = Protection()
         self.emergency_halt = Event()
         self.handle_reconnect = handle_reconnect
         self.transmit = transmit

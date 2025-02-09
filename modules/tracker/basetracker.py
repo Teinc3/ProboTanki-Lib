@@ -4,7 +4,7 @@ from threading import Lock, Timer
 from typing import Callable
 
 from ...packets import AbstractPacket
-from ..core import packetManager
+from ..misc import packetManager
 from ..communications import LogMessage
 from .target import Target
 

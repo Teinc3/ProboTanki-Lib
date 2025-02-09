@@ -5,8 +5,7 @@ class Protection:
     vector_length = 8
 
     active: bool
-    proxy: bool
-    direction: bool | None
+    flip_direction: bool
 
     base: int
     decryption_vector: list[int]
@@ -14,12 +13,9 @@ class Protection:
     decryption_index: int
     encryption_index: int
 
-    def __init__(self, proxy: bool = False, direction: bool = None) -> None:
+    def __init__(self, flip_direction: bool = False) -> None:
         self.active = False
-        self.proxy = proxy
-
-        if proxy:
-            self.direction = direction
+        self.flip_direction = flip_direction
 
         self.base = 0
         self.decryption_vector = [0] * self.vector_length
@@ -31,13 +27,10 @@ class Protection:
         for key in keys:
             self.base ^= key
 
-        if self.proxy:
-            xor_flip = 0x0 if self.direction else 0x57
-
         for i in range(self.vector_length):
             base_xor = self.base ^ (i << 3)
-            self.decryption_vector[i] = base_xor ^ (0x0 if not self.proxy else xor_flip)
-            self.encryption_vector[i] = base_xor ^ (0x57 if not self.proxy else xor_flip)
+            self.decryption_vector[i] = base_xor ^ (0x0 if not self.flip_direction else 0x57)
+            self.encryption_vector[i] = base_xor ^ (0x57 if not self.flip_direction else 0x0)
 
         self.active = True
 
@@ -50,7 +43,7 @@ class Protection:
 
         if not self.active:
             return encrypted_data
-
+        
         data = EByteArray(encrypted_data)
 
         for i in range(len(encrypted_data)):
@@ -59,6 +52,8 @@ class Protection:
                     encrypted_byte ^ self.decryption_vector[self.decryption_index])
             data[i] = self.decryption_vector[self.decryption_index]
             self.decryption_index ^= self.decryption_vector[self.decryption_index] & 7
+
+        print(self.decryption_vector)
 
         return data
 
@@ -71,7 +66,7 @@ class Protection:
 
         if not self.active:
             return raw_data
-
+        
         encrypted_data = EByteArray(raw_data)
 
         for i in range(len(raw_data)):
@@ -79,5 +74,7 @@ class Protection:
             encrypted_data[i] = raw_byte ^ self.encryption_vector[self.encryption_index]
             self.encryption_vector[self.encryption_index] = raw_byte
             self.encryption_index ^= raw_byte & 7
+
+        print(self.encryption_vector)
 
         return encrypted_data

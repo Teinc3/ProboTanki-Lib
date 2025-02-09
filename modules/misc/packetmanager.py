@@ -1,14 +1,16 @@
 import inspect
-from typing import Type
+from typing import Type, TYPE_CHECKING
 
 from ... import packets
-from ...packets import AbstractPacket
+if TYPE_CHECKING:
+    from ...packets import AbstractPacket
+
 
 class PacketManager:
     _instance = None
 
-    packets: dict[int, Type[AbstractPacket]]
-    hidden_packets: list[Type[AbstractPacket]]
+    packets: dict[int, Type['AbstractPacket']]
+    hidden_packets: list[Type['AbstractPacket']]
 
     def __new__(cls):
         if cls._instance is None:
@@ -27,10 +29,10 @@ class PacketManager:
 
         print(f"Loaded {len(self.packets)} packets")
 
-    def get_packet(self, packet_id: int) -> Type[AbstractPacket] | None:
-        return self.packets.get(packet_id)
+    def get_packet(self, packet_id: int) -> Type['AbstractPacket'] | None:
+        return self.packets.get(packet_id, None)
 
-    def get_packet_by_name(self, packet_name: str) -> Type[AbstractPacket] | None:
+    def get_packet_by_name(self, packet_name: str) -> Type['AbstractPacket'] | None:
         for packet in self.packets.values():
             if packet.__name__ == packet_name:
                 return packet

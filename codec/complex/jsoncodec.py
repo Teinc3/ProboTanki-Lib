@@ -11,4 +11,4 @@ class JsonCodec(BaseCodec[dict]):
         return json.loads(StringCodec(self._buffer).decode())
 
     def encode(self, value):
-        return StringCodec(self._buffer).encode(json.dumps(value))
+        return StringCodec(self._buffer).encode(json.dumps(value, separators=(',', ':')))
