@@ -1,7 +1,7 @@
 from typing import ClassVar, Type
 
 from ..codec import BaseCodec
-from ..modules.core import Protection
+from ..modules.security import Protection
 from ..utils import EByteArray
 
 
@@ -41,9 +41,16 @@ class AbstractPacket():
 
         packet_data = EByteArray()
         data_len = AbstractPacket.HEADER_LEN
-        for i in range(0, len(self.codecs)):
-            codec = self.codecs[i](packet_data)
-            data_len += codec.encode(self.objects[i])
+
+        if self.__class__.__name__ == 'AbstractPacket' and len(self.objects) == 1:
+            # Unknown packet got its data fitted into an abstractpacket, so we just write back the data
+            packet_data = self.objects[0]
+            data_len += len(packet_data)
+        else:
+            # Encode the objects according to the codecs
+            for i in range(0, len(self.codecs)):
+                codec = self.codecs[i](packet_data)
+                data_len += codec.encode(self.objects[i])
 
         encrypted_data = protection.encrypt(packet_data)
         packet_data = EByteArray().write_int(data_len).write_int(self.id).write(encrypted_data)

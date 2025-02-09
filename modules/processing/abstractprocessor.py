@@ -3,11 +3,12 @@ from abc import ABC, abstractmethod
 from threading import Thread, Lock, Event
 from typing import Callable
 
-from ..core import packetManager, Protection
+from ..misc import packetManager
 from ..networking import TankiSocket
+from ..security import Protection
 from ..communications import AbstractMessage, ErrorMessage
 from ...packets import AbstractPacket
-from ...utils.enums import LayoutID, AutoEnum
+from ...utils.enums import AutoEnum
 
 
 class AbstractProcessor(ABC):
@@ -20,8 +21,6 @@ class AbstractProcessor(ABC):
         self.protection = protection
         self.credentials = credentials
         self.transmit = transmit
-
-        self.layout = LayoutID.ENTRY
 
         self.timer_thread_clearance = Event()
         self.threads: set[Thread] = set()
@@ -70,10 +69,6 @@ class AbstractProcessor(ABC):
             loaded_packet.objects = [self.current_packet.object['callbackID']]  # Lazy deimplement
             self.send_packet(loaded_packet)
 
-        elif self.compare_packet('Change_Layout'):
-            self.layout = packet_object['layout']
-            self.on_layout_change()
-
         else:
             return False
         
@@ -94,9 +89,6 @@ class AbstractProcessor(ABC):
             if packet_object['inviteEnabled']:
                 self.close_socket("Invite code required")
 
-        elif self.compare_packet('Login_Ready'):
-            self._login()
-
         elif self.compare_packet('Login_Success'):
             self.on_login()
 
@@ -110,19 +102,6 @@ class AbstractProcessor(ABC):
             return False
         
         return True
-
-    def _login(self):
-        # Prune everything except username and password and add rememberMe False
-        login_data = self.credentials.copy()
-        login_data['rememberMe'] = False
-
-        login_packet = packetManager.get_packet_by_name('Login')()
-        login_packet.deimplement(login_data)
-        self.send_packet(login_packet)
-
-    @abstractmethod
-    def on_layout_change(self):
-        raise NotImplementedError
     
     @abstractmethod
     def on_login(self):
@@ -133,7 +112,8 @@ class AbstractProcessor(ABC):
         return packetManager.get_packet_by_name(name) == self.current_packet.__class__
 
     def send_packet(self, packet: AbstractPacket):
-        return self.socketinstance.socket.sendall(packet.wrap(self.protection))
+        wrapped_data = packet.wrap(self.protection)
+        return self.socketinstance.socket.sendall(wrapped_data)
     
     def close_socket(self, reason: str):
         # Form the error message
