@@ -21,13 +21,10 @@ class AbstractPacket():
     attributes: ClassVar[list[str]] = []
     shouldLog: ClassVar[bool] = True
 
-    objects: list
-    object: dict = {}
-
     def __init__(self):
-        self.objects = []
-        self.object = {}
-
+        self.objects: list = []
+        self.object: dict = {}
+        
     def unwrap(self, packet_data: EByteArray) -> dict:
         """Decodes the binary data into individual objects"""
 
@@ -72,12 +69,10 @@ class AbstractPacket():
             self.objects.append((object if object else self.object)[self.attributes[i]])
         return self.objects
 
-    def process(self) -> bool:
-        """Process the packet, then indicates if the packet should no longer be forwarded to the server"""
-
-        return False # Default behavior is just to log the packet and declare no packet interception
-
     def log_repr(self, direction: bool) -> str:
         """Return a string representation of the packet for logging purposes"""
-
-        return f"<{'IN' if direction else 'OUT'}> ({self.__class__.__name__}){'' if self.shouldLog else ' - NoDisp'} | Data: {self.object}"
+        if self.__class__.__name__ == __class__.__name__:
+            packet_name = f"Unknown Packet - ID: {self.id})"
+        else:
+            packet_name = self.__class__.__name__
+        return f"<{'IN' if direction else 'OUT'}> ({packet_name}){'' if self.shouldLog else ' - NoDisp'} | Data: {self.object}"
