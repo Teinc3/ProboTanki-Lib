@@ -1,5 +1,5 @@
 from .acceptmission import Accept_Mission
-from .battleid import Battle_Id
+from .battleid import Last_Battle_ID
 from .buyfromshop import Change_Location
 from .changefreemission import Change_Free_Mission
 from .changemission import Change_Mission
@@ -14,7 +14,7 @@ from .showmissions import Show_Missions
 __all__ = [
     Show_Missions,
     Accept_Mission,
-    Battle_Id,
+    Last_Battle_ID,
     Buy_From_Shop,
     Change_Free_Mission,
     Change_Mission,
