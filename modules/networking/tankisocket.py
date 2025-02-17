@@ -9,7 +9,7 @@ from ...utils import Address, EByteArray
 
 
 class TankiSocket:
-    ENDPOINT = Address("146.59.110.146", 1337)  # core-protanki.com
+    ENDPOINT = Address("146.59.110.146", 25565)  # core-protanki.com
 
     def __init__(self,
                  protection: Protection, proxy: Address | None, emergency_halt: Event, 
