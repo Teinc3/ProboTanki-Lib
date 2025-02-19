@@ -11,6 +11,7 @@ from .smokyshotin import Smoky_Shot_IN
 from .smokeyshootwallout import Smoky_Shoot_Wall_OUT
 from .smokeyshootairout import Smoky_Shoot_Air_OUT
 from .smokyshoottargetout import Smoky_Shoot_Target_OUT
+from .syncturretdata import Sync_Turret_Data
 
 __all__ = [
     Fire_Start_OUT,
@@ -25,5 +26,6 @@ __all__ = [
     Smoky_Shot_IN,
     Smoky_Shoot_Wall_OUT,
     Smoky_Shoot_Air_OUT,
-    Smoky_Shoot_Target_OUT
+    Smoky_Shoot_Target_OUT,
+    'Sync_Turret_Data'
 ]
