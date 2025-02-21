@@ -45,7 +45,8 @@ class TankiInstance(ABC):
 
     def on_socket_close(self, e: Exception | str, location: str = None, state: str = None):
         # Log the exception
-        e.add_note("Socket Closed")
+        if isinstance(e, Exception):
+            e.add_note("Socket Closed")
         location = "[TankiInstance]"
         state = f"ID: {self.id} | Credentials: {self.credentials} | Reconnections: {self.reconnections}"
         self.transmit(ErrorMessage(e, location, state))
