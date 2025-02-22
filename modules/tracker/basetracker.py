@@ -1,15 +1,18 @@
 from abc import ABC, abstractmethod
 import datetime
 from threading import Lock, Timer
-from typing import Callable
+from typing import Callable, Generic, TypeVar
 
 from ...packets import AbstractPacket
 from ..misc import packetManager
 from ..communications import LogMessage
 from .target import Target
+from ...utils.enums import LogChannelType
+
+SpecificLogChannelType = TypeVar('SpecificLogChannelType', bound=LogChannelType)
 
 
-class BaseTracker(ABC):
+class BaseTracker(ABC, Generic[SpecificLogChannelType]):
     """Abstract base class for tracking different types of accounts."""
 
     def __init__(self, send_packet: Callable[[AbstractPacket], None], transmit: Callable[[str, str, dict], None]):
@@ -44,7 +47,7 @@ class BaseTracker(ABC):
         for i in range(len(names_list)):
             name = names_list[i]
             rank = rank_list[i] if rank_list and rank_list[i] else None
-            self.targets[name] = Target(name, names_mode=(self.channel_type == 'names'), rank=rank)
+            self.targets[name] = Target(name, rank=rank)
             
             packet = Packet()
             packet.objects = [name]
@@ -112,7 +115,7 @@ class BaseTracker(ABC):
 
         if push_init_status: # If this is the first time
             payload['description'] = f"<t:{round(self.get_utc_time.timestamp())}:R>: Tracker started."
-            self.log_msg(self.channel_type, payload=payload)
+            self.log_msg(payload=payload)
         return payload
     
     def push_status_update(self, username: str, online_status: bool, battle_status: str, old_online_status: bool, old_battle_status: str):
@@ -128,17 +131,13 @@ class BaseTracker(ABC):
             status_text = f"*{username}* -> Left Private/Spectator Battle"
 
         payload['description'] += f"<t:{round(self.get_utc_time.timestamp())}:R>: {status_text}"
-        self.log_msg(self.channel_type, payload=payload)
+        self.log_msg(payload=payload)
 
-    def log_msg(self, message_type: str, text: str = None, payload: dict = None):
+    def log_msg(self, text: str = None, payload: dict = None):
         """Log a message to the Discord channel."""
 
-        message = LogMessage(message_type, text=text, payload=payload)
+        message = LogMessage(channel_type=self.channel_type, text=text, payload=payload)
         self.transmit(message)
-
-        if self.channel_type == 'mod': # If channel_type is mod then we also have to send the payload to the mod_dynamic channel
-            message.channel_type = 'mod_dynamic'
-            self.transmit(message)
         
     @abstractmethod
     def evaluate_availability(self) -> tuple[list[Target], list[Target]]:
@@ -152,7 +151,7 @@ class BaseTracker(ABC):
 
     @property
     @abstractmethod
-    def channel_type(self) -> str:
+    def channel_type(self) -> SpecificLogChannelType:
         """Return the channel type for logging."""
         return NotImplementedError
     

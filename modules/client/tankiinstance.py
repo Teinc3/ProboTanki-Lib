@@ -61,7 +61,7 @@ class TankiInstance(ABC):
             return
         
         if break_interval > 0:
-            self.transmit(LogMessage('system', f"Reconnecting in {break_interval} minutes"))
+            self.transmit(LogMessage(text=f"Reconnecting in {break_interval} minutes"))
         else:
             break_interval += 1 / 60 # Add 1 second to the break interval to prevent instant reconnect
         time.sleep(break_interval * 60)
