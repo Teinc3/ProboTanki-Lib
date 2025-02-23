@@ -40,21 +40,24 @@ class BaseTracker(ABC, Generic[SpecificLogChannelType]):
     def get_utc_time(self) -> datetime.datetime:
         return datetime.datetime.now(datetime.timezone.utc)
 
-    def subscribe_names(self, names_list: list[str], rank_list: list[int] = None):
+    def subscribe_names(self, names_list: list[str]):
         """Subscribe to the list of names."""
+
         Packet = packetManager.get_packet_by_name('Subscribe_Status')
 
         for i in range(len(names_list)):
             name = names_list[i]
-            rank = rank_list[i] if rank_list and rank_list[i] else None
-            self.targets[name] = Target(name, rank=rank)
+            self.targets[name] = Target(name)
             
             packet = Packet()
             packet.objects = [name]
             self.send_packet(packet)
 
+        self.set_finalize_timer()
+
     def handle_status_change(self, username: str, online_status: bool | None = None, battle_status: str | None = None):
         """Handle incoming status changes."""
+
         target = self.targets.get(username)
         if not target:
             return
@@ -85,27 +88,34 @@ class BaseTracker(ABC, Generic[SpecificLogChannelType]):
             if all_statuses_recv:
                 # Directly finalize the list if all statuses have been received
                 self.finalize_tracker_list()
-
-            self.reset_finalize_timer(all_statuses_recv)
+                self.set_finalize_timer(True)
             return
         
         self.push_status_update(username, target.online, target.battleID, old_online_status, old_battle_status)
 
-    def reset_finalize_timer(self, cancel: bool = False):
-        """Reset the finalize timer."""
+    def set_finalize_timer(self, cancel_timer: bool = False):
+        """Set/reset the finalize timer."""
+
         if self.finalize_timer and self.finalize_timer.is_alive():
             self.finalize_timer.cancel()
 
-        if cancel:
+        if cancel_timer:
             return
         self.finalize_timer = Timer(self.timer_duration, self.finalize_tracker_list)
         self.finalize_timer.start()
 
     def finalize_tracker_list(self):
         """Finalize the list by removing invalid entries."""
-        invalid_names = [name for name, target in self.targets.items() if not target.status_recv]
+
+        invalid_names = [name for name, target in self.targets.items() if not target.online_status_recv]
         for name in invalid_names:
             self.targets.pop(name, None)
+
+        # For the rest of the names, we give them battle status of '' if nanes mode is False
+        for target in self.targets.values():
+            if not target.names_mode and not target.battleID:
+                target.battleID = ''
+
         self.craft_payload()
 
     def craft_payload(self, push_init_status: bool = True) -> dict | None:
