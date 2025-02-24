@@ -111,6 +111,8 @@ class BaseTracker(ABC, Generic[SpecificLogChannelType]):
         for name in invalid_names:
             self.targets.pop(name, None)
 
+        self.status_received_count = len(self.targets)
+
         # For the rest of the names, we give them battle status of '' if nanes mode is False
         for target in self.targets.values():
             if not target.names_mode and not target.battleID:
