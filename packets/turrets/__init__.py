@@ -7,6 +7,7 @@ from .railgunshotinitout import Railgun_Shot_Init_OUT
 from .railgunshotout import Railgun_Shot_OUT
 from .shaftarcadeout import Shaft_Arcade_OUT
 from .shaftscopeout import Shaft_Scope_OUT
+from .shaftscopeinitout import Shaft_Scope_Init_OUT
 from .smokyshotin import Smoky_Shot_IN
 from .smokeyshootwallout import Smoky_Shoot_Wall_OUT
 from .smokeyshootairout import Smoky_Shoot_Air_OUT
@@ -23,6 +24,7 @@ __all__ = [
     Railgun_Shot_OUT,
     Shaft_Arcade_OUT,
     Shaft_Scope_OUT,
+    'Shaft_Scope_Init_OUT',
     Smoky_Shot_IN,
     Smoky_Shoot_Wall_OUT,
     Smoky_Shoot_Air_OUT,
