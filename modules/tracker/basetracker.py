@@ -91,7 +91,7 @@ class BaseTracker(ABC, Generic[SpecificLogChannelType]):
                 self.set_finalize_timer(True)
             return
         
-        self.push_status_update(username, target.online, target.battleID, old_online_status, old_battle_status)
+        self.push_status_update(username, target, (old_online_status, old_battle_status))
 
     def set_finalize_timer(self, cancel_timer: bool = False):
         """Set/reset the finalize timer."""
@@ -130,17 +130,22 @@ class BaseTracker(ABC, Generic[SpecificLogChannelType]):
             self.log_msg(payload=payload)
         return payload
     
-    def push_status_update(self, username: str, online_status: bool, battle_status: str, old_online_status: bool, old_battle_status: str):
+    def push_status_update(self, username: str, target: Target, old_status: tuple[bool, str]):
         """Send a Discord embed update for status changes."""
         payload = self.craft_payload(push_init_status=False)
 
         status_text = ''
-        if online_status != old_online_status:
-            status_text = f"*{username}* -> {'Online' if online_status else 'Offline'}"
-        elif battle_status != old_battle_status:
-            status_text = f"*{username}* -> {'In Public Battle (' + battle_status + ')' if battle_status else 'Left Public Battle'}"
-        else:
+        if target.online != old_status[0]:
+            status_text = f"*{username}* -> {'Online' if target.online else 'Offline'}"
+
+        elif target.battleID != old_status[1]:
+            status_text = f"*{username}* -> {'In Public Battle (' + target.battleID + ')' if target.battleID else 'Left Public Battle'}"
+
+        elif target.online: # Thank you RIOT for spamming this not in battle status even when you are fucking offline
             status_text = f"*{username}* -> Left Private/Spectator Battle"
+
+        else: # Nth worthy to push
+            return
 
         payload['description'] += f"<t:{round(self.get_utc_time.timestamp())}:R>: {status_text}"
         self.log_msg(payload=payload)
