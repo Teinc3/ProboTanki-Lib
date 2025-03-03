@@ -36,44 +36,4 @@ from .turretcontrol import Turret_Control
 from .turretrotated import Turret_Rotated
 from .turretrotation import Turret_Rotation
 from .usersuppliesinfo import User_Supplies_info
-
-__all__ = [
-    Moved,
-    Move,
-    Turret_Rotated,
-    Turret_Rotation,
-    Self_Destruct,
-    Self_Destructed,
-    Tank_Stat_Synced,
-    Tank_Movement_Info,
-    Death_Delay_End,
-    Start_Resp_Fantom,
-    End_Resp_Fantom,
-    Bonus_Box_Dropped,
-    Collect_Bonus_Box,
-    Remove_Bonus_Box,
-    Bonus_Box_Existing_Locations,
-    Battle_User_Control,
-    Move_Command,
-    Player_Shot,
-    Battle_User_Team_Stats,
-    Shot_Effect,
-    Despawn_Alive,
-    Effect_Aftermath,
-    Respawn_Delay,
-    Player_Equipment,
-    Shot_Direction,
-    User_Supplies_info,
-    Shot_Effect_Applied,
-    Pick_Up_Supplies,
-    Load_Purchasable_Items,
-    Load_Owned_Garage_Items,
-    Load_Map_Lights,
-    Load_Supply_Effect,
-    Load_Bonus_Box_Resources,
-    Mine_Location,
-    Mine_Place,
-    Turret_Control,
-    User_Changed_Equipment,
-    Suicide_Delay
-]
+from .leavebattle import Leave_Battle
