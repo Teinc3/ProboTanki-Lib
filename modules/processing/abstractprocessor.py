@@ -27,6 +27,9 @@ class AbstractProcessor(ABC):
 
         self._packet_lock = Lock()
 
+        self._last_client_time = 0
+        self._send_lock = Lock()
+
         #Reserve for future usage(?)
         # self.packet_handlers: dict[str, Callable[['AbstractProcessor', AbstractPacket], None]] = {
         #     **UNIVERSAL_DISPATCH,
@@ -66,7 +69,7 @@ class AbstractProcessor(ABC):
 
         elif self.compare_packet('Load_Resources'):
             loaded_packet = packetManager.get_packet_by_name('Resources_Loaded')()
-            loaded_packet.objects = [self.current_packet.object['callbackID']]  # Lazy deimplement
+            loaded_packet.objects = [packet_object['callbackID']]  # Lazy deimplement
             self.send_packet(loaded_packet)
 
         else:
@@ -112,8 +115,15 @@ class AbstractProcessor(ABC):
         return packetManager.get_packet_by_name(name) == self.current_packet.__class__
 
     def send_packet(self, packet: AbstractPacket):
-        wrapped_data = packet.wrap(self.protection)
-        return self.socketinstance.socket.sendall(wrapped_data)
+        with self._send_lock:
+            if packet.object and (clientTime := packet.object.get('clientTime', 0)):
+                if clientTime < self._last_client_time:
+                    print("[AbstractProcessor.send_packet] Dropped packet due to inconsistent client time")
+                    return
+                self._last_client_time = clientTime
+
+            wrapped_data = packet.wrap(self.protection)
+            return self.socketinstance.socket.sendall(wrapped_data)
     
     def close_socket(self, reason: str):
         # Form the error message
