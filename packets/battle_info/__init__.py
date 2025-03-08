@@ -12,7 +12,7 @@ from .playerstartposition import Player_Start_Position
 from .sendrespawn import Send_Respawn
 from .tankdamage import Tank_Damage
 from .tankhealth import Tank_Health
-from .timeleftinseconds import Battle_Time_Left
+from .battletimeleft import Battle_Time_Left
 from .updatebattleplayerstatistics import Update_Battle_Player_Statistics
 from .userrewards import Battle_User_Rewards
 from .userstats import Battle_User_Stats

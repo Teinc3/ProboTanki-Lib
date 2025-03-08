@@ -14,7 +14,7 @@ from .mineplace import Mine_Place
 from .move import Move
 from .movecommand import Move_Command
 from .moved import Moved
-from .pickupbonusbox import Pick_Up_Supplies
+from .collectedbonusbox import Collected_Bonus_Box
 from .playerequipment import Player_Equipment
 from .playershot import Player_Shot
 from .respawndelay import Respawn_Delay
@@ -29,7 +29,7 @@ from .suicidedelay import Suicide_Delay
 from .removebonusbox import Remove_Bonus_Box
 from .bonusboxexistinglocations import Bonus_Box_Existing_Locations
 from .bonusboxdropped import Bonus_Box_Dropped
-from .collectbonusbox import Collect_Bonus_Box
+from .collectcrybox import Collect_Cry_Box
 from .tankstatsynced import Tank_Stat_Synced
 from .tankmovementinfo import Tank_Movement_Info
 from .turretcontrol import Turret_Control
