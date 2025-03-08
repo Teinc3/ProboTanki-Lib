@@ -118,7 +118,7 @@ class AbstractProcessor(ABC):
         with self._send_lock:
             if packet.object and (clientTime := packet.object.get('clientTime', 0)):
                 if clientTime < self._last_client_time:
-                    print("[AbstractProcessor.send_packet] Dropped packet due to inconsistent client time")
+                    #print("[AbstractProcessor.send_packet] Dropped packet due to inconsistent client time")
                     return
                 self._last_client_time = clientTime
 

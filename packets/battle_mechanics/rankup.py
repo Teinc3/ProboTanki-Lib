@@ -3,8 +3,11 @@ from ...codec.primitive import IntCodec
 from ...packets import AbstractPacket
 
 
-class Player_Rank_Up(AbstractPacket):
+class Rank_Up(AbstractPacket):
     id = 1262947513
-    description = "Player Rank Up"
-    attributes = ['userId', 'newRank']
+    description = "Player Ranked Up"
+    attributes = ['username', 'rank']
     codecs = [StringCodec, IntCodec]
+
+
+__all__ = ['Rank_Up']

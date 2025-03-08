@@ -10,6 +10,7 @@ from .loadsettings import Load_Settings
 from .notification import Settings_Notification
 from .shopinfo import Shop_Info
 from .showmissions import Show_Missions
+from .shownewmission import Show_New_Mission
 
 __all__ = [
     Show_Missions,
@@ -23,5 +24,6 @@ __all__ = [
     Load_Referral,
     Shop_Info,
     Settings_Notification,
-    Load_Settings
+    Load_Settings,
+    'Show_New_Mission'
 ]
