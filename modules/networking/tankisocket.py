@@ -1,6 +1,8 @@
 import socks
 from threading import Thread, Event
 from typing import Callable
+import time
+import socket
 
 from ..security import Protection
 from ..misc import packetManager
@@ -11,11 +13,15 @@ from ...utils import Address, EByteArray
 class TankiSocket:
     ENDPOINT = Address("146.59.110.146", 25565)  # core-protanki.com
 
-    def __init__(self,
-                 protection: Protection, proxy: Address | None, emergency_halt: Event, 
-                 on_data_received: Callable[[AbstractPacket], None], on_socket_close: Callable[[Exception | str, str, str], None],
-                 socket: socks.socksocket = None
-                 ):
+    def __init__(
+        self,
+        protection: Protection,
+        proxy: Address | None,
+        emergency_halt: Event, 
+        on_data_received: Callable[[AbstractPacket], None],
+        on_socket_close: Callable[[Exception | str, str, str, bool | None, bool | None], None],
+        socket: socks.socksocket = None
+    ):
         
         self.protection = protection
 
@@ -37,16 +43,45 @@ class TankiSocket:
         self.thread.start()
     
     def connect(self):
-        """Establish connection to endpoint"""
-        try:
-            # If already connected, then skip waiting for connection
-            if self.socket.getpeername():
+        """Establish connection to endpoint with retry and backoff"""
+
+        max_retries = 3
+        retry_delay = 2  # Start with 2 seconds
+        
+        for attempt in range(max_retries):
+            try:
+                # If already connected, skip reconnection
+                if self.socket.getpeername():
+                    return True
+                    
+                # Create a new socket for each attempt to avoid stale resources
+                if attempt > 0:
+                    self.socket.close()
+                    self.socket = socks.socksocket(socks.socket.AF_INET, socks.socket.SOCK_STREAM)
+                    self.socket.settimeout(15)
+                    if self.proxy:
+                        self.socket.set_proxy(socks.PROXY_TYPE_SOCKS5, 
+                                             self.proxy.host, self.proxy.port,
+                                             username=self.proxy.username, 
+                                             password=self.proxy.password)
+                
+                self.socket.connect(self.ENDPOINT.split_args)
                 return True
-            self.socket.connect(self.ENDPOINT.split_args)
-        except Exception as e:
-            self.on_socket_close(e, "TankiSocket.connect", f"Not Connected | Proxy: {self.proxy}")
-            return False
-        return True
+                
+            except (socks.ProxyConnectionError, TimeoutError, socks.GeneralProxyError) as e:
+                # Proxy timeout - use exponential backoff
+                if attempt < max_retries - 1:
+                    backoff_time = retry_delay * (2 ** attempt)
+                    time.sleep(backoff_time)
+
+                else:
+                    self.on_socket_close(e, "TankiSocket.connect", f"Not Connected | Proxy: {self.proxy}")
+                    return False
+                
+            except Exception as e:
+                self.on_socket_close(e, "TankiSocket.connect", f"Not Connected | Proxy: {self.proxy}")
+                
+        return False
     
     def read_packet_header(self) -> tuple[int, int]:
         """Read packet header from socket"""

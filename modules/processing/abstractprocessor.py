@@ -1,6 +1,5 @@
-import time
 from abc import ABC, abstractmethod
-from threading import Thread, Lock, Event
+from threading import Lock, Timer
 from typing import Callable
 
 from ..misc import packetManager
@@ -15,15 +14,20 @@ class AbstractProcessor(ABC):
     _current_packet: AbstractPacket
     command_handlers: dict[AutoEnum, Callable[[dict], None]] # Just a placeholder
 
-    def __init__(self, socket: TankiSocket, protection: Protection, credentials: dict, transmit: Callable[[AbstractMessage], None]):
+    def __init__(
+        self,
+        socket: TankiSocket,
+        protection: Protection,
+        credentials: dict,
+        transmit: Callable[[AbstractMessage], None]
+    ):
 
         self.socketinstance = socket
         self.protection = protection
         self.credentials = credentials
         self.transmit = transmit
 
-        self.timer_thread_clearance = Event()
-        self.threads: set[Thread] = set()
+        self.timers: set[Timer] = set()
 
         self._packet_lock = Lock()
 
@@ -96,10 +100,10 @@ class AbstractProcessor(ABC):
             self.on_login()
 
         elif self.compare_packet('Login_Failed'):
-            self.close_socket("Login Failed")
+            self.close_socket("Login Failed", add_to_reconnections=False, kill_instance=True)
 
         elif self.compare_packet('Banned'):
-            self.close_socket("Account Banned")
+            self.close_socket("Account Banned", add_to_reconnections=False, kill_instance=True)
 
         else:
             return False
@@ -118,7 +122,7 @@ class AbstractProcessor(ABC):
         with self._send_lock:
             if packet.object and (clientTime := packet.object.get('clientTime', 0)):
                 if clientTime < self._last_client_time:
-                    #print("[AbstractProcessor.send_packet] Dropped packet due to inconsistent client time")
+                    #print(f"[AbstractProcessor.send_packet] Dropped {self.credentials.get('name', 'Unknown Sheep')} packet due to inconsistent client time, {clientTime} < {self._last_client_time}")
                     return
                 self._last_client_time = clientTime
 
@@ -126,39 +130,55 @@ class AbstractProcessor(ABC):
             try:
                 return self.socketinstance.socket.sendall(wrapped_data)
             except:
-                self.close_socket("Failed to send packet")
+                #self.close_socket(f"Failed to send packet {packet.__class__.__name__} | Error: {e}")
+                pass # Don't waste our time with this shit
     
-    def close_socket(self, reason: str):
+    def close_socket(self, reason: str, add_to_reconnections: bool = True, kill_instance: bool = False):
         # Form the error message
-        reason = f"Unexpected packet interaction: {reason}"
-        self.socketinstance.on_socket_close(reason, self.__class__.__name__, f"Current Packet: {self.current_packet}")
+        reason = f"Closing socket: {reason}"
+        if add_to_reconnections:
+            reason += ", ignoring reconnections"
+        if kill_instance:
+            reason += ", killing instance"
+
+        # We just take advantage of socketinstance getting this property from callbacks
+        # This function is in TankiInstance and injected into TankiSocket
+        self.socketinstance.on_socket_close(
+            reason,
+            self.__class__.__name__,
+            f"Current Packet: {self.current_packet}",
+            add_to_reconnections,
+            kill_instance
+        )
     
-    def create_timer(self, delta_time: int, callback: callable):
+    def create_timer(self, delta_time: float, callback: Callable[[], None]):
         """Function creates a temporary timer thread that expires after a certain time and executes the callback function"""
-        def timer_thread():
-            time.sleep(delta_time)
-            if self.timer_thread_clearance.is_set():
-                return
+
+        def wrapped_callback():
             try:
                 callback()
             except Exception as e:
-                message = ErrorMessage(e, location=f"{self.__class__.__name__}.create_timer.callback", state=f"Delta Time: {delta_time} | Callback: {repr(callback)}")
-                self.transmit(message)
-                        
-        timer = Thread(target=timer_thread)
+                self.transmit(ErrorMessage(
+                    e,
+                    location=f"{self.__class__.__name__}.create_timer.callback", 
+                    state=f"Delta Time: {delta_time} | Callback: {repr(callback)}"
+                ))
+        
+        timer = Timer(delta_time, wrapped_callback)
         timer.daemon = True
+        timer.name = f"Timer-{self.__class__.__name__}-{callback.__name__}"  # Named timers help with debugging
         timer.start()
-        self.threads.add(timer)
+        self.timers.add(timer)
+        return timer  # Return to allow direct cancellation
 
     def create_packet_timer(self, delta_time: int, packet: AbstractPacket):
         self.create_timer(delta_time, lambda: self.send_packet(packet))
 
     def kill_timer_threads(self):
-        self.timer_thread_clearance.clear()
-
-        for thread in self.threads:
-            thread.join()
+        for timer in self.timers:
+            timer.cancel()
         
-        self.threads.clear()
+        self.timers.clear()
+
 
 __all__ = ['AbstractProcessor']
