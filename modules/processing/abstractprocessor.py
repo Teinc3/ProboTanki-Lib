@@ -123,7 +123,10 @@ class AbstractProcessor(ABC):
                 self._last_client_time = clientTime
 
             wrapped_data = packet.wrap(self.protection)
-            return self.socketinstance.socket.sendall(wrapped_data)
+            try:
+                return self.socketinstance.socket.sendall(wrapped_data)
+            except:
+                self.close_socket("Failed to send packet")
     
     def close_socket(self, reason: str):
         # Form the error message
