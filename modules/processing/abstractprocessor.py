@@ -7,12 +7,10 @@ from ..networking import TankiSocket
 from ..security import Protection
 from ..communications import AbstractMessage, ErrorMessage
 from ...packets import AbstractPacket
-from ...utils.enums import AutoEnum
 
 
 class AbstractProcessor(ABC):
     _current_packet: AbstractPacket
-    command_handlers: dict[AutoEnum, Callable[[dict], None]] # Just a placeholder
 
     def __init__(
         self,
