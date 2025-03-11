@@ -11,6 +11,7 @@ from .notification import Settings_Notification
 from .shopinfo import Shop_Info
 from .showmissions import Show_Missions
 from .shownewmission import Show_New_Mission
+from .loadmissions import Load_Missions # Might wanna swap show and load
 
 __all__ = [
     Show_Missions,
@@ -25,5 +26,6 @@ __all__ = [
     Shop_Info,
     Settings_Notification,
     Load_Settings,
-    'Show_New_Mission'
+    'Show_New_Mission',
+    'Load_Missions'
 ]
