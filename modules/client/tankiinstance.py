@@ -65,6 +65,7 @@ class TankiInstance(ABC):
         e: Exception | str,
         location: str = None,
         state: str = None,
+        log_error: bool = True,
         add_to_reconnections: bool = True,
         kill_instance: bool = False
     ):
@@ -91,7 +92,8 @@ class TankiInstance(ABC):
             e.add_note("Reconnecting instantly")
             
         # Now send the complete error message
-        self.transmit(ErrorMessage(e, location, state))
+        if log_error:
+            self.transmit(ErrorMessage(e, location, state))
         
         # Cleanup the existing socket
         self.emergency_halt.set()

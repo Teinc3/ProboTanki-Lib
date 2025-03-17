@@ -131,7 +131,7 @@ class AbstractProcessor(ABC):
                 #self.close_socket(f"Failed to send packet {packet.__class__.__name__} | Error: {e}")
                 pass # Don't waste our time with this shit
     
-    def close_socket(self, reason: str, add_to_reconnections: bool = True, kill_instance: bool = False):
+    def close_socket(self, reason: str, log_error: bool = True, add_to_reconnections: bool = True, kill_instance: bool = False):
         # Form the error message
         reason = f"Closing socket: {reason}"
         if add_to_reconnections:
@@ -145,6 +145,7 @@ class AbstractProcessor(ABC):
             reason,
             self.__class__.__name__,
             f"Current Packet: {self.current_packet}",
+            log_error,
             add_to_reconnections,
             kill_instance
         )
