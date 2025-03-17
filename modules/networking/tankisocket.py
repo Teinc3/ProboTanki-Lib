@@ -19,7 +19,7 @@ class TankiSocket:
         proxy: Address | None,
         emergency_halt: Event, 
         on_data_received: Callable[[AbstractPacket], None],
-        on_socket_close: Callable[[Exception | str, str, str, bool | None, bool | None], None],
+        on_socket_close: Callable[[Exception | str, str, str, bool, bool, bool], None],
         socket: socks.socksocket = None
     ):
         
