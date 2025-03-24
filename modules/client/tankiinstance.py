@@ -24,9 +24,11 @@ class TankiInstance(ABC):
         transmit: Callable[[AbstractMessage], None],
         handle_reconnect: Callable[[], None],
         on_kill_instance: Callable[[int], None],
-        reconnections: list[datetime] = []
+        reconnections: list[float] = None
     ):
         
+        if reconnections is None:
+            reconnections = []
         self.id = id # Just for identification/debugging purposes
         self.credentials = credentials
 
@@ -105,7 +107,7 @@ class TankiInstance(ABC):
             return
         
         if break_interval == 0:
-            break_interval += (self.RECONNECTION_CONFIG.INSTANT_RECONNECT_INTERVAL) / 60 # Add 5 seconds to the break interval to prevent reconnecting too fast - proxy may send shit data
+            break_interval += self.RECONNECTION_CONFIG.INSTANT_RECONNECT_INTERVAL / 60 # Add 5 seconds to the break interval to prevent reconnecting too fast - proxy may send shit data
         time.sleep(break_interval * 60)
         
         self.handle_reconnect()

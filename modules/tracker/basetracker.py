@@ -159,21 +159,21 @@ class BaseTracker(ABC, Generic[SpecificLogChannelType]):
     @abstractmethod
     def evaluate_availability(self) -> tuple[list[Target], list[Target]]:
         """Evaluate availability based on specific criteria."""
-        return NotImplementedError
+        raise NotImplementedError
 
     @abstractmethod
     def construct_payload(self, online: list[Target], available: list[Target]) -> dict:
         """Construct the Discord embed payload."""
-        return NotImplementedError
+        raise NotImplementedError
 
     @property
     @abstractmethod
     def channel_type(self) -> SpecificLogChannelType:
         """Return the channel type for logging."""
-        return NotImplementedError
+        raise NotImplementedError
     
     @property
     @abstractmethod
     def timer_duration(self) -> int:
         """Return the duration to finalize timer."""
-        return NotImplementedError
+        raise NotImplementedError

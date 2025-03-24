@@ -5,7 +5,7 @@ from ..modules.security import Protection
 from ..utils import EByteArray
 
 
-class AbstractPacket():
+class AbstractPacket:
     """
     Abstract class for packets. This class is used to define the structure of packets that are sent and received by the server.
     
