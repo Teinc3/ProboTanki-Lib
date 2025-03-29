@@ -38,16 +38,15 @@ class TankiTimer:
 
         with self._lock:
             # Allow setting time to a future or equal value
-            if value >= self._last_returned_time:
-                print(f"[TIMER] {self.name} - Setting client_time: {self._client_time} → {value}")
-                self._client_time = value
-                self._last_timestamp = int(time.time() * 1000)
-                self._last_returned_time = value
-                # Also update physics time if needed
-                if value >= self._last_physics_time:
-                    self._last_physics_time = value
-            else:
-                print(f"[TIMER] {self.name} - REJECTED time set: {value} < {self._last_returned_time}")
+            if value < self._last_returned_time:
+                return
+            
+            self._client_time = value
+            self._last_timestamp = int(time.time() * 1000)
+            self._last_returned_time = value
+            # Also update physics time if needed
+            if value >= self._last_physics_time:
+                self._last_physics_time = value
     
     def ping_time(self):
         """Get time for battle ping responses that respects monotonicity"""
