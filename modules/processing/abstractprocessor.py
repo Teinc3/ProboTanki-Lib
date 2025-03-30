@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 from threading import Lock, Timer
-from typing import Callable
+from enum import Enum
+from typing import Callable, Any
 
 from ..misc import packetManager
 from ..networking import TankiSocket
@@ -48,16 +49,29 @@ class AbstractProcessor(ABC):
         with self._packet_lock:
             self._current_packet = packet
 
+    @property
+    @abstractmethod
+    def command_handlers(self) -> dict[Enum, Callable[[dict], Any]]:
+        """Return a dict mapping commands to their handlers."""
+        raise NotImplementedError
+
+
     @abstractmethod
     def process_packets(self):
         # In the corresponding processor class, this will be for other packets
         raise NotImplementedError
+    
+    @abstractmethod
+    def on_login(self):
+        raise NotImplementedError
+
 
     def parse_packets(self, packet: AbstractPacket):
         self.current_packet = packet
 
         if not self._process_universal_packets() and not self._process_entry_packets():
             self.process_packets()
+
 
     def _process_universal_packets(self) -> bool:
         """
@@ -108,9 +122,6 @@ class AbstractProcessor(ABC):
         
         return True
     
-    @abstractmethod
-    def on_login(self):
-        raise NotImplementedError
 
     # Helper Functions
     def compare_packet(self, name: str):
@@ -149,6 +160,7 @@ class AbstractProcessor(ABC):
             add_to_reconnections,
             kill_instance
         )
+    
     
     def create_timer(self, delta_time: float, callback: Callable[[], None]):
         """Function creates a temporary timer thread that expires after a certain time and executes the callback function"""
