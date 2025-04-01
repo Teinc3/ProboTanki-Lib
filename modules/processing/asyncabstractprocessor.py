@@ -1,16 +1,22 @@
 from abc import ABC, abstractmethod
 import asyncio
-from typing import Callable, Awaitable, Any
+from typing import Callable, Awaitable, Any, TypeVar, Generic
+from enum import Enum
 
 from ..misc import packetManager
 from ..networking import AsyncTankiSocket
 from ..security import Protection
-from ..communications import AbstractMessage, ErrorMessage
+from ..communications import AbstractMessage, ErrorMessage, CommandMessage
 from ...packets import AbstractPacket
 
 
-class AsyncAbstractProcessor(ABC):
-    """Base class for all async processors"""
+CommandsType = TypeVar('CommandsType', bound=Enum)
+CommandBaseClass = TypeVar('CommandBaseClass', bound=CommandMessage)
+
+class AsyncAbstractProcessor(ABC, Generic[CommandsType, CommandBaseClass]):
+    """Asynchronous version of AbstractProcessor"""
+
+    current_packet: AbstractPacket # Its ok to not initialise this as it will always be set at the start of triaging
     
     def __init__(
         self,
@@ -24,18 +30,16 @@ class AsyncAbstractProcessor(ABC):
         self.credentials = credentials
         self.transmit = transmit
         
-        self._current_packet: AbstractPacket | None = None
         self._last_client_time = 0
         self._active_tasks: set[asyncio.Task] = set()
-    
 
-    async def parse_packet(self, packet: AbstractPacket):
-        """Parse and process incoming packet"""
-        self._current_packet = packet
-        
-        # Try universal and entry packets first
-        if not await self._process_universal_packets() and not await self._process_entry_packets():
-            await self.process_packets()
+    
+    @property
+    @abstractmethod
+    def command_handlers(self) -> dict[CommandsType, Callable[[CommandBaseClass], Awaitable[Any]]]:
+        """Return a dict mapping commands to their handlers."""
+        raise NotImplementedError
+
     
     @abstractmethod
     async def process_packets(self):
@@ -48,13 +52,22 @@ class AsyncAbstractProcessor(ABC):
         raise NotImplementedError
     
 
+    async def parse_packet(self, packet: AbstractPacket):
+        """Parse and process incoming packet"""
+        self.current_packet = packet
+        
+        # Try universal and entry packets first
+        if not await self._process_universal_packets() and not await self._process_entry_packets():
+            await self.process_packets()
+    
+
     async def _process_universal_packets(self) -> bool:
         """Process universal packets that all processors handle the same way"""
 
-        if not self._current_packet:
+        if not self.current_packet:
             return False
             
-        packet_object = self._current_packet.object
+        packet_object = self.current_packet.object
         
         if self.compare_packet('Ping'):
             pong_packet = packetManager.get_packet_by_name('Pong')()
@@ -72,10 +85,10 @@ class AsyncAbstractProcessor(ABC):
     async def _process_entry_packets(self) -> bool:
         """Process entry packets common to most processors"""
 
-        if not self._current_packet:
+        if not self.current_packet:
             return False
             
-        packet_object = self._current_packet.object
+        packet_object = self.current_packet.object
         
         if self.compare_packet('Activate_Protection'):
             self.protection.activate(packet_object['keys'])
@@ -110,9 +123,9 @@ class AsyncAbstractProcessor(ABC):
     def compare_packet(self, name: str) -> bool:
         """Check if current packet matches the given name"""
 
-        if not self._current_packet:
+        if not self.current_packet:
             return False
-        return packetManager.get_packet_by_name(name) == self._current_packet.__class__
+        return packetManager.get_packet_by_name(name) == self.current_packet.__class__
     
     async def send_packet(self, packet: AbstractPacket):
         """Send a packet to the server"""
@@ -131,7 +144,7 @@ class AsyncAbstractProcessor(ABC):
         # Wrap and send packet
         wrapped_data = packet.wrap(self.protection)
         try:
-            await self.socketinstance.send_packet(wrapped_data)
+            await self.socketinstance.send(wrapped_data)
         except Exception:
             # Silently ignore sending errors - socket will handle them
             pass
@@ -160,7 +173,7 @@ class AsyncAbstractProcessor(ABC):
         await self.socketinstance.on_socket_close(
             formatted_reason,
             self.__class__.__name__,
-            f"Current Packet: {self._current_packet}",
+            f"Current Packet: {self.current_packet}",
             log_error,
             add_to_reconnections,
             kill_instance
@@ -168,7 +181,11 @@ class AsyncAbstractProcessor(ABC):
     
 
     async def schedule_task(self, delay: float, callback_coro: Awaitable[Any]):
-        """Schedule a task to run after a delay without blocking the event loop"""
+        """
+        Schedule a task to run after a delay without blocking the event loop
+        
+        Similar in implementation to lib.utils.asynctimer, but this one includes error handling, name tracking, and task centralization
+        """
 
         # Create a wrapper that handles exceptions
         async def wrapped_task():

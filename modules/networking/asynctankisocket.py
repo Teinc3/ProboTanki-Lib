@@ -150,17 +150,18 @@ class AsyncTankiSocket:
             raise ConnectionError("Not connected")
             
         # Read packet length (4 bytes)
-        packet_len_bytes = await self.reader.readexactly(4)
-        packet_len = int.from_bytes(packet_len_bytes, byteorder='big')
+        packet_len_bytes = EByteArray(await self.reader.readexactly(4))
+        packet_len = packet_len_bytes.read_int()
         
         # Read packet ID (4 bytes)
-        packet_id_bytes = await self.reader.readexactly(4)
-        packet_id = int.from_bytes(packet_id_bytes, byteorder='big')
+        packet_id_bytes = EByteArray(await self.reader.readexactly(4))
+        packet_id = packet_id_bytes.read_int()
         
         return packet_len, packet_id
     
     async def read_packet_data(self, data_len: int) -> EByteArray:
         """Read packet data asynchronously"""
+
         if not self.reader:
             raise ConnectionError("Not connected")
             
@@ -170,12 +171,14 @@ class AsyncTankiSocket:
     
     async def process_packet(self, packet_id: int, encrypted_data: EByteArray):
         """Process received packet"""
+
         packet_data = self.protection.decrypt(encrypted_data)
         fitted_packet = self.packet_fitter(packet_id, packet_data)
         await self.on_data_received(fitted_packet)
     
     def packet_fitter(self, packet_id: int, packet_data: EByteArray) -> AbstractPacket:
         """Convert raw packet data to packet object"""
+
         Packet = packetManager.get_packet(packet_id)
         if Packet is None:
             packet = AbstractPacket()
@@ -188,16 +191,18 @@ class AsyncTankiSocket:
         current_packet.unwrap(packet_data)
         return current_packet
     
-    async def send_packet(self, packet_data: bytes):
+    async def send(self, packet_data: EByteArray):
         """Send packet data asynchronously"""
+
         if not self.writer:
             raise ConnectionError("Not connected")
             
         self.writer.write(packet_data)
         await self.writer.drain()
     
-    async def close(self):
+    async def close_socket(self):
         """Close the connection"""
+
         if self.writer:
             self.writer.close()
             await self.writer.wait_closed()
