@@ -181,11 +181,7 @@ class AsyncAbstractProcessor(ABC, Generic[CommandsType, CommandBaseClass]):
     
 
     async def schedule_task(self, delay: float, callback_coro: Awaitable[Any]):
-        """
-        Schedule a task to run after a delay without blocking the event loop
-        
-        Similar in implementation to lib.utils.asynctimer, but this one includes error handling, name tracking, and task centralization
-        """
+        """Schedule a task to run after a delay without blocking the event loop"""
 
         # Create a wrapper that handles exceptions
         async def wrapped_task():

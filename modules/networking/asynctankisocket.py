@@ -67,7 +67,7 @@ class AsyncTankiSocket:
 
         except asyncio.CancelledError:
             # Task was cancelled, clean up
-            await self.close()
+            await self.close_socket()
     
     async def connect(self):
         """Establish connection to endpoint with retry and backoff"""
