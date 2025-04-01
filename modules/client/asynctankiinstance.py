@@ -23,7 +23,7 @@ class AsyncTankiInstance(ABC):
         transmit: Callable[[AbstractMessage], Awaitable[None]],
         handle_reconnect: Callable[[], Awaitable[None]],
         on_kill_instance: Callable[[int], Awaitable[None]],
-        reconnections=None
+        reconnections: list[datetime]= None
     ):
         if reconnections is None:
             reconnections = []
@@ -44,23 +44,25 @@ class AsyncTankiInstance(ABC):
         self._reconnection_task: asyncio.Task | None = None
         
         # Instantiate processor and socket
-        self.processor = self.instantiate_processor()
-        self.tankisocket = self.instantiate_socket()
+        self.instantiate_processor()
+        self.instantiate_socket()
 
     @abstractmethod
-    def instantiate_processor(self) -> AsyncAbstractProcessor:
+    def instantiate_processor(self) -> None:
         """Instantiate the processor for this instance"""
-        raise NotImplementedError()
+        raise NotImplementedError
 
-    def instantiate_socket(self) -> AsyncTankiSocket:
+    def instantiate_socket(self) -> None:
         """Instantiate the socket for this instance"""
-        return AsyncTankiSocket(
+
+        self.tankisocket = AsyncTankiSocket(
             self.protection,
             self.credentials.get('proxy', None),
             self.emergency_halt,
             self.processor.parse_packet,
             self.on_socket_close
         )
+        self.processor.socketinstance = self.tankisocket
     
     async def on_socket_close(
         self,
@@ -100,7 +102,7 @@ class AsyncTankiInstance(ABC):
         
         # Set emergency halt to stop socket processing
         self.emergency_halt.set()
-        await self.tankisocket.close()
+        await self.tankisocket.close_socket()
         
         if kill_instance or break_interval < 0:
             # Kill instance, don't reconnect
