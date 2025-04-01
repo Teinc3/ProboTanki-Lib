@@ -1,16 +1,23 @@
 from abc import ABC, abstractmethod
 from threading import Lock, Timer
 from enum import Enum
-from typing import Callable, Any
+from typing import Callable, Any, TypeVar, Generic
 
 from ..misc import packetManager
 from ..networking import TankiSocket
 from ..security import Protection
-from ..communications import AbstractMessage, ErrorMessage
+from ..communications import AbstractMessage, ErrorMessage, CommandMessage
 from ...packets import AbstractPacket
 
 
-class AbstractProcessor(ABC):
+CommandsType = TypeVar('CommandsType', bound=Enum)
+CommandBaseClass = TypeVar('CommandBaseClass', bound=CommandMessage)
+
+class AbstractProcessor(ABC, Generic[CommandsType, CommandBaseClass]):
+    """
+    Abstract base class for all tanki processors. Will be phased out in the future.
+    """
+
     _current_packet: AbstractPacket
 
     def __init__(
@@ -51,7 +58,7 @@ class AbstractProcessor(ABC):
 
     @property
     @abstractmethod
-    def command_handlers(self) -> dict[Enum, Callable[[dict], Any]]:
+    def command_handlers(self) -> dict[CommandsType, Callable[[CommandBaseClass], Any]]:
         """Return a dict mapping commands to their handlers."""
         raise NotImplementedError
 
