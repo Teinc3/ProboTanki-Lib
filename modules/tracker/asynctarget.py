@@ -4,20 +4,19 @@ class ATarget:
     No lock needed as all access is coordinated by AsyncBaseTracker.
     """
 
-    def __init__(self, name: str, rank: int = 0, names_mode: bool = False):
+    def __init__(self, name: str):
         self.name = name
-        self.names_mode = names_mode
 
         # Status properties
         self._online = False
         self._battleID = ''
-        self._rank = rank
         self._ignore_flag = False
 
         # Status tracking flags
         self.online_status_recv = False
         self.battle_status_recv = False
-        self.rank_status_recv = False
+        self.tracked_first_time = False
+        """Indicates if the target has been tracked for the first time."""
         
 
     @property
@@ -57,8 +56,8 @@ class ATarget:
 
     @property
     def status_recv(self):
-        """Returns True if both required statuses have been received at least once"""
-        return self.online_status_recv and (self.rank_status_recv if self.names_mode else self.battle_status_recv)
+        """Returns True if all status has been received"""
+        return self.online_status_recv and self.battle_status_recv
         
 
 __all__ = ['ATarget']
