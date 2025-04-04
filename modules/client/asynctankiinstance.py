@@ -74,6 +74,7 @@ class AsyncTankiInstance(ABC):
         kill_instance: bool = False
     ):
         """Handle socket close events"""
+        
         # Setup the exception
         if isinstance(e, Exception):
             e.add_note("Socket closed")

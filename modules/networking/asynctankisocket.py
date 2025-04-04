@@ -194,18 +194,26 @@ class AsyncTankiSocket:
     async def send(self, packet_data: EByteArray):
         """Send packet data asynchronously"""
 
-        if not self.writer:
-            raise ConnectionError("Not connected")
+        if not self.writer or self.writer.is_closing():
+            self.writer = None
             
         self.writer.write(packet_data)
-        await self.writer.drain()
-    
+        if not self.emergency_halt.is_set():
+            # Only drain if not emergency halt is set
+            try:
+                await self.writer.drain()
+            except:
+                self.writer = None
+        
     async def close_socket(self):
         """Close the connection"""
 
         if self.writer:
             self.writer.close()
             await self.writer.wait_closed()
+
+            self.writer = None
+        self.reader = None
         
         # Cancel processing task if running
         if hasattr(self, 'processing_task') and not self.processing_task.done():
