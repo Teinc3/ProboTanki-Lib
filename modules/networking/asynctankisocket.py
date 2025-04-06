@@ -210,8 +210,6 @@ class AsyncTankiSocket:
 
         if self.writer:
             self.writer.close()
-            await self.writer.wait_closed()
-
             self.writer = None
         self.reader = None
         
