@@ -12,20 +12,4 @@ from .shopinfo import Shop_Info
 from .showmissions import Show_Missions
 from .shownewmission import Show_New_Mission
 from .loadmissions import Load_Missions # Might wanna swap show and load
-
-__all__ = [
-    Show_Missions,
-    Accept_Mission,
-    Last_Battle_ID,
-    Buy_From_Shop,
-    Change_Free_Mission,
-    Change_Mission,
-    Change_Location,
-    Close_Settings,
-    Load_Referral,
-    Shop_Info,
-    Settings_Notification,
-    Load_Settings,
-    'Show_New_Mission',
-    'Load_Missions'
-]
+from .completedmission import Completed_Mission

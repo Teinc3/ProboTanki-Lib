@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 import asyncio
-from typing import Callable, Awaitable, Any, TypeVar, Generic
+from typing import Callable, Awaitable, Any, TypeVar, Generic, overload
 from enum import Enum
 
 from ..misc import packetManager
@@ -180,34 +180,45 @@ class AsyncAbstractProcessor(ABC, Generic[CommandsType, CommandBaseClass]):
         )
     
 
-    async def schedule_task(self, delay: float, callback_coro: Awaitable[Any]):
-        """Schedule a task to run after a delay without blocking the event loop"""
+    @overload
+    async def schedule_task(self, delay: float, coro: Awaitable[Any]) -> asyncio.Task: ...
+    @overload
+    async def schedule_task(self, delay: float, callback: Callable[..., Awaitable[Any]], *args, **kwargs) -> asyncio.Task: ...
+    
+    async def schedule_task(self, delay: float, callback_or_coro, *args, **kwargs) -> asyncio.Task:
+        """
+        Schedule a task to run after delay without blocking the event loop.
 
-        # Create a wrapper that handles exceptions
+        When additional positional or keyword arguments are provided,
+        callback_or_coro is treated as a callback function.
+        Otherwise, it is treated as an awaitable coroutine.
+        """
+        
         async def wrapped_task():
             try:
                 await asyncio.sleep(delay)
-                await callback_coro
-
+                if callable(callback_or_coro):
+                    # Treat as a callback function
+                    result = callback_or_coro(*args, **kwargs)
+                    if asyncio.iscoroutine(result):
+                        await result
+                else:
+                    # Treat as an awaitable coroutine
+                    await callback_or_coro
             except asyncio.CancelledError:
                 pass
-
             except Exception as e:
                 await self.transmit(ErrorMessage(
                     e,
                     location=f"{self.__class__.__name__}.schedule_task",
-                    state=f"Delta Time: {delay} | Callback: {callback_coro}"
+                    state=f"Delta Time: {delay} | Callback: {callback_or_coro.__name__ if callable(callback_or_coro) else callback_or_coro}"
                 ))
-                
             finally:
-                # Remove task from active set when done
                 self._active_tasks.discard(asyncio.current_task())
         
-        # Create and track the task
-        task = asyncio.create_task(
-            wrapped_task(),
-            name=f"Task-{self.__class__.__name__}-{callback_coro.__name__ if hasattr(callback_coro, '__name__') else 'anonymous'}"
-        )
+        task_name = f"Task-{self.__class__.__name__}-"
+        task_name += callback_or_coro.__name__ if callable(callback_or_coro) else "anonymous"
+        task = asyncio.create_task(wrapped_task(), name=task_name)
         self._active_tasks.add(task)
         return task
     
