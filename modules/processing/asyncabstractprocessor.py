@@ -127,7 +127,7 @@ class AsyncAbstractProcessor(ABC, Generic[CommandsType, CommandBaseClass]):
             return False
         return packetManager.get_packet_by_name(name) == self.current_packet.__class__
     
-    async def send_packet(self, packet: AbstractPacket):
+    async def send_packet(self, packet: AbstractPacket, force_flush: bool = True):
         """Send a packet to the server"""
 
         # Check for valid socket
@@ -144,7 +144,7 @@ class AsyncAbstractProcessor(ABC, Generic[CommandsType, CommandBaseClass]):
         # Wrap and send packet
         wrapped_data = packet.wrap(self.protection)
         try:
-            await self.socketinstance.send(wrapped_data)
+            await self.socketinstance.send(wrapped_data, force_flush)
         except Exception:
             # Silently ignore sending errors - socket will handle them
             pass

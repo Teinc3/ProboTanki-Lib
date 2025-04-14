@@ -191,14 +191,14 @@ class AsyncTankiSocket:
         current_packet.unwrap(packet_data)
         return current_packet
     
-    async def send(self, packet_data: EByteArray):
+    async def send(self, packet_data: EByteArray, force_flush: bool = True):
         """Send packet data asynchronously"""
 
         if not self.writer or self.writer.is_closing():
             self.writer = None
             
         self.writer.write(packet_data)
-        if not self.emergency_halt.is_set():
+        if force_flush and not self.emergency_halt.is_set():
             # Only drain if not emergency halt is set
             try:
                 await self.writer.drain()
