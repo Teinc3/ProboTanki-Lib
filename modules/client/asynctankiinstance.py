@@ -5,7 +5,7 @@ from typing import ClassVar, Callable, Awaitable
 
 from ..processing import AsyncAbstractProcessor
 from ..networking import AsyncTankiSocket
-from ..security import Protection
+from ..security import CProtection
 from ..communications import AbstractMessage, ErrorMessage
 from ...utils import ReconnectionConfig
 
@@ -38,7 +38,7 @@ class AsyncTankiInstance(ABC):
         
         # Create the protection instance if not already provided
         if not hasattr(self, 'protection'):
-            self.protection = Protection()
+            self.protection = CProtection()
         
         # Initialize async components
         self._reconnection_task: asyncio.Task | None = None

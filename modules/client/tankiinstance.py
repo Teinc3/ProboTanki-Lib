@@ -6,7 +6,7 @@ from typing import ClassVar, Callable
 
 from ..processing import AbstractProcessor
 from ..networking import TankiSocket
-from ..security import Protection
+from ..security import CProtection
 from ..communications import AbstractMessage, ErrorMessage
 from ...utils import ReconnectionConfig
 
@@ -39,7 +39,7 @@ class TankiInstance(ABC):
         self.on_kill_instance = on_kill_instance
 
         if not hasattr(self, 'protection'):
-            self.protection = Protection() # Just for you, proxy
+            self.protection = CProtection() # Just for you, proxy
         
         self.instantiate_processor()
         self.instantiate_socket()

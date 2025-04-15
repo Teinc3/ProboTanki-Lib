@@ -1,7 +1,7 @@
 from typing import ClassVar, Type
 
 from ..codec import BaseCodec
-from ..modules.security import Protection
+from ..modules.security import CProtection
 from ..utils import EByteArray
 
 
@@ -33,7 +33,7 @@ class AbstractPacket:
             self.objects.append(codec.decode())
         return self.implement()
 
-    def wrap(self, protection: Protection = None) -> EByteArray:
+    def wrap(self, protection: CProtection = None) -> EByteArray:
         """Encodes all the objects into binary data for the packet payload"""
 
         packet_data = EByteArray()
@@ -49,8 +49,8 @@ class AbstractPacket:
                 codec = self.codecs[i](packet_data)
                 data_len += codec.encode(self.objects[i])
 
-        encrypted_data = protection.encrypt(packet_data)
-        packet_data = EByteArray().write_int(data_len).write_int(self.id).write(encrypted_data)
+        encrypted_data = protection.encrypt(bytearray(packet_data))
+        packet_data = EByteArray().write_int(data_len).write_int(self.id).write(EByteArray(encrypted_data))
         return packet_data
 
     def implement(self) -> dict:

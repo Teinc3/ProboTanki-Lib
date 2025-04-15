@@ -5,7 +5,7 @@ from typing import Callable, Any, TypeVar, Generic
 
 from ..misc import packetManager
 from ..networking import TankiSocket
-from ..security import Protection
+from ..security import CProtection
 from ..communications import AbstractMessage, ErrorMessage, CommandMessage
 from ...packets import AbstractPacket
 
@@ -23,7 +23,7 @@ class AbstractProcessor(ABC, Generic[CommandsType, CommandBaseClass]):
     def __init__(
         self,
         socket: TankiSocket,
-        protection: Protection,
+        protection: CProtection,
         credentials: dict,
         transmit: Callable[[AbstractMessage], None]
     ):

@@ -4,7 +4,7 @@ import aiosocks
 from aiosocks.errors import SocksError, SocksConnectionError
 from typing import Callable, Awaitable
 
-from ..security import Protection
+from ..security import CProtection
 from ..misc import packetManager
 from ...packets import AbstractPacket
 from ...utils import Address, EByteArray
@@ -18,7 +18,7 @@ class AsyncTankiSocket:
 
     def __init__(
         self,
-        protection: Protection,
+        protection: CProtection,
         proxy: Address | None,
         emergency_halt: asyncio.Event, 
         on_data_received: Callable[[AbstractPacket], Awaitable[None]],
@@ -172,8 +172,8 @@ class AsyncTankiSocket:
     async def process_packet(self, packet_id: int, encrypted_data: EByteArray):
         """Process received packet"""
 
-        packet_data = self.protection.decrypt(encrypted_data)
-        fitted_packet = self.packet_fitter(packet_id, packet_data)
+        packet_data = self.protection.decrypt(bytearray(encrypted_data))
+        fitted_packet = self.packet_fitter(packet_id, EByteArray(packet_data))
         await self.on_data_received(fitted_packet)
     
     def packet_fitter(self, packet_id: int, packet_data: EByteArray) -> AbstractPacket:

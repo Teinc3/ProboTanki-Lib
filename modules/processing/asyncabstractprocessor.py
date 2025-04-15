@@ -5,7 +5,7 @@ from enum import Enum
 
 from ..misc import packetManager
 from ..networking import AsyncTankiSocket
-from ..security import Protection
+from ..security import CProtection
 from ..communications import AbstractMessage, ErrorMessage, CommandMessage
 from ...packets import AbstractPacket
 
@@ -21,7 +21,7 @@ class AsyncAbstractProcessor(ABC, Generic[CommandsType, CommandBaseClass]):
     def __init__(
         self,
         socket: AsyncTankiSocket | None,
-        protection: Protection,
+        protection: CProtection,
         credentials: dict,
         transmit: Callable[[AbstractMessage], Awaitable[None]]
     ):
@@ -125,7 +125,7 @@ class AsyncAbstractProcessor(ABC, Generic[CommandsType, CommandBaseClass]):
 
         if not self.current_packet:
             return False
-        return packetManager.get_packet_by_name(name) == self.current_packet.__class__
+        return self.current_packet.__class__.__name__ == name
     
     async def send_packet(self, packet: AbstractPacket, force_flush: bool = True):
         """Send a packet to the server"""
