@@ -227,7 +227,8 @@ class AsyncAbstractProcessor(ABC, Generic[CommandsType, CommandBaseClass]):
 
         return await self.schedule_task(
             delay,
-            self.send_packet(packet)
+            self.send_packet,
+            packet
         )
     
     async def cancel_all_tasks(self):
