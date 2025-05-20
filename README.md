@@ -1,4 +1,5 @@
 # ProboTanki-Lib
+[![Latest Release](https://img.shields.io/github/v/release/Teinc3/ProboTanki-Lib?display_name=tag&sort=semver)](https://github.com/Teinc3/ProboTanki-Lib/releases/latest)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Teinc3/ProboTanki-Lib)
 
 A core library for ProboTanki providing networking modules and packet handling utilities.

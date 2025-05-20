@@ -7,8 +7,8 @@ import sys
 try:
     from Cython.Build import cythonize
 except ImportError:
-    print("ERROR: Cython is not installed. Cython is required to build the 'cprotection' extension.")
-    print("Please install Cython (e.g., 'pip install cython') and try again.")
+    print("ERROR: Cython is not installed. Cython is required to build the 'cprotection' extension.", file=sys.stderr)
+    print("Please install Cython (e.g., 'pip install cython') and try again.", file=sys.stderr)
     sys.exit(1) # Exit the setup process with an error code
 
 
