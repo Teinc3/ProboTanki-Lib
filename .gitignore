@@ -3,3 +3,8 @@ __pycache__
 
 cprotection.c
 *.pyd
+*.so
+*.dll
+*.exe
+
+*.egg-info

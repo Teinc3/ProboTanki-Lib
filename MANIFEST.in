@@ -1,0 +1,12 @@
+include README.md
+graft modules
+graft packets
+graft utils
+graft codec
+
+# Include all Cython and interface files
+global-include *.pyx *.pxd *.pyi
+
+# Exclude common unwanted files
+prune */__pycache__
+global-exclude *.py[co]
