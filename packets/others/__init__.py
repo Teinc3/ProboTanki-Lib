@@ -6,6 +6,7 @@ from .changemission import Change_Mission
 from .changeshoplocation import Buy_From_Shop
 from .closesettings import Close_Settings
 from .loadreferral import Load_Referral
+from .referraldata import Referral_Data
 from .loadsettings import Load_Settings
 from .notification import Settings_Notification
 from .shopinfo import Shop_Info

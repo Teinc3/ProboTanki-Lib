@@ -6,6 +6,8 @@ from .freezestartout import Freeze_Start_OUT
 from .hammershotout import Hammer_Shot_OUT
 from .vulcanstartout import Vulcan_Start_OUT
 from .vulcanendout import Vulcan_End_OUT
+from .multishotturretin import Multi_Shot_Turret_IN
+from .multishotturretout import Multi_Shot_Turret_OUT
 from .railgunshotinitout import Railgun_Shot_Init_OUT
 from .railgunshotout import Railgun_Shot_OUT
 from .shaftarcadeout import Shaft_Arcade_OUT
