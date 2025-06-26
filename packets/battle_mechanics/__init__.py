@@ -38,3 +38,4 @@ from .turretrotation import Turret_Rotation
 from .usersuppliesinfo import User_Supplies_info
 from .leavebattle import Leave_Battle
 from .rankup import Rank_Up
+from .usesupply import Use_Supply
