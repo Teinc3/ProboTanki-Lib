@@ -14,11 +14,13 @@ readme = "README.md"
 authors = [
     { name = "Teinc3", email = "teinc3@gmail.com" }
 ]
+license = { text="Proprietary" }
 classifiers = [
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",
-    "Development Status :: 4 - Beta", # Example
+    "Development Status :: 5 - Production/Stable",
 ]
+requires-python = ">=3.9"
 dynamic = ["dependencies"]
 
 [project.urls]

@@ -8,3 +8,7 @@ cprotection.c
 *.exe
 
 *.egg-info
+*.whl
+*.zip
+*.tar
+*.tar.gz
