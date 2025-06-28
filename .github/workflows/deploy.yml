@@ -11,24 +11,35 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
+        # It's good you included more OS options from the cibuildwheel example!
+        # Note: ubuntu-24.04-arm and windows-11-arm might require specific runner configurations
+        # or may not be directly available as GitHub-hosted runners by default for all users.
+        # Stick to ubuntu-latest, macos-latest, windows-latest for broader compatibility if unsure.
+        os: [ubuntu-latest, macos-latest, windows-latest] # Simplified for common GitHub runners
     steps:
     - uses: actions/checkout@v4
       with:
         fetch-depth: 0 # Important for cibuildwheel to detect project history correctly
 
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5 # Using v5 as per your example
       with:
         python-version: '3.11' # Use the same Python version you're targeting
 
+    - name: Install cibuildwheel
+      run: python -m pip install cibuildwheel==3.0.0 # Manual install as per your example
+
     - name: Build wheels
-      uses: pypa/cibuildwheel@v2.17.0
+      run: python -m cibuildwheel --output-dir wheelhouse
       env:
-        # Pass TWINE_USERNAME/PASSWORD here if you want cibuildwheel to upload,
-        # but it's generally better to let twine handle it in a separate step after all wheels are built.
-        # This example builds the wheels and stores them as artifacts.
         CIBW_BUILD_VERBOSITY: 1 # Optional: for more verbose output during build
+
+    # This uploads one artifact per OS/job matrix.
+    # The name is dynamic, which we'll handle in the download step.
+    - uses: actions/upload-artifact@v4
+      with:
+        name: cibw-wheels-${{ matrix.os }}-${{ strategy.job-index }}
+        path: ./wheelhouse/*.whl # Path to the generated wheels
 
   upload_all_wheels:
     name: Upload all wheels to PyPI
@@ -45,11 +56,22 @@ jobs:
       with:
         python-version: '3.11'
 
-    - name: Download all wheels
+    - name: Download all wheels artifacts
       uses: actions/download-artifact@v4
       with:
-        name: cibuildwheel # This is the default artifact name for cibuildwheel
-        path: dist
+        # By omitting 'name', this downloads ALL artifacts from the 'build_wheels' job
+        # Each artifact will be placed in a subdirectory under 'downloaded-wheels/'
+        path: downloaded-wheels/
+
+    - name: Flatten wheel directories
+      run: |
+        # Create a single 'dist' directory for all wheels
+        mkdir dist
+        # Find all .whl files (wheels) and move them to 'dist/'
+        find downloaded-wheels/ -name "*.whl" -exec mv {} dist/ \;
+        # Also move source distributions (.tar.gz) if they are present from the build step
+        find downloaded-wheels/ -name "*.gz" -exec mv {} dist/ \;
+        find downloaded-wheels/ -name "*.zip" -exec mv {} dist/ \; # For Windows sdist/wheels if applicable
 
     - name: Install Twine
       run: python -m pip install twine
@@ -57,9 +79,8 @@ jobs:
     - name: Publish to PyPI
       env:
         TWINE_USERNAME: __token__
-        TWINE_PASSWORD: ${{ secrets.PYPI_API_KEY }}
+        TWINE_PASSWORD: ${{ secrets.PYPI_API_KEY }} # Recommended to keep consistent naming: PYPI_API_TOKEN
       run: |
-        # Check if dist/ directory exists and has files
-        ls -la dist/
-        # Use --non-interactive to prevent twine from asking questions if any dists are already on PyPI
+        echo "Contents of dist/ before upload:"
+        ls -la dist/ # Check what's in dist/
         python -m twine upload --non-interactive dist/*
