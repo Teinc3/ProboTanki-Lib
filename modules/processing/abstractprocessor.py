@@ -36,8 +36,6 @@ class AbstractProcessor(ABC, Generic[CommandsType, CommandBaseClass]):
         self.timers: set[Timer] = set()
 
         self._packet_lock = Lock()
-
-        self._last_client_time = 0
         self._send_lock = Lock()
 
         #Reserve for future usage(?)
@@ -136,12 +134,6 @@ class AbstractProcessor(ABC, Generic[CommandsType, CommandBaseClass]):
 
     def send_packet(self, packet: AbstractPacket):
         with self._send_lock:
-            if packet.object and (clientTime := packet.object.get('clientTime', 0)):
-                if clientTime < self._last_client_time:
-                    #print(f"[AbstractProcessor.send_packet] Dropped {self.credentials.get('name', 'Unknown Sheep')} packet due to inconsistent client time, {clientTime} < {self._last_client_time}")
-                    return
-                self._last_client_time = clientTime
-
             wrapped_data = packet.wrap(self.protection)
             try:
                 return self.socketinstance.socket.sendall(wrapped_data)

@@ -30,7 +30,6 @@ class AsyncAbstractProcessor(ABC, Generic[CommandsType, CommandBaseClass]):
         self.credentials = credentials
         self.transmit = transmit
         
-        self._last_client_time = 0
         self._active_tasks: set[asyncio.Task] = set()
 
     
@@ -133,13 +132,6 @@ class AsyncAbstractProcessor(ABC, Generic[CommandsType, CommandBaseClass]):
         # Check for valid socket
         if not self.socketinstance:
             return
-            
-        # Check client time ordering
-        if packet.object and (client_time := packet.object.get('clientTime', 0)):
-            if client_time < self._last_client_time:
-                # Ignore packets with older client time
-                return
-            self._last_client_time = client_time
         
         # Wrap and send packet
         wrapped_data = packet.wrap(self.protection)
