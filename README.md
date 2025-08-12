@@ -6,7 +6,7 @@
 
 A core library for ProboTanki providing networking modules and packet handling utilities.
 
-*Last Updated: 28 June, 2025*
+*Last Updated: 12 August, 2025*
 
 ## Dependencies
 
