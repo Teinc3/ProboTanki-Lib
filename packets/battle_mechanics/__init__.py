@@ -16,7 +16,7 @@ from .movecommand import Move_Command
 from .moved import Moved
 from .collectedbonusbox import Collected_Bonus_Box
 from .playerequipment import Player_Equipment
-from .playershot import Player_Shot
+#from .playershot import Player_Shot
 from .respawndelay import Respawn_Delay
 from .selfdestruct import Self_Destruct
 from .selfdestructed import Self_Destructed

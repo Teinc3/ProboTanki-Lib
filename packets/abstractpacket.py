@@ -58,7 +58,6 @@ class AbstractPacket:
             # First byte wipe to 0 (Our packet length shouldn't be that long to take up this many bits anyways)
             packet_data[0] = 0x00
         packet_data = packet_data.write(EByteArray(encrypted_data))
-        print(f"[OUT] {self.__class__.__name__} | {self.id=} | {s2c_proxy=} | {data_len=} | Data: {self.object}")
         return packet_data
 
     def implement(self) -> dict:

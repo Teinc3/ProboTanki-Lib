@@ -1,8 +1,8 @@
 from ..custombasecodec import CustomBaseCodec
 from ..complex import StringCodec
-from ..primitive import IntCodec
+from ..primitive import IntCodec, ShortCodec
 
 
 class BattleUserStatsCodec(CustomBaseCodec):
     attributes = ["deaths", "kills", "score", "user"]
-    codecs = [IntCodec, IntCodec, IntCodec, StringCodec]
+    codecs = [ShortCodec, ShortCodec, IntCodec, StringCodec]
