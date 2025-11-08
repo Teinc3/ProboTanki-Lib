@@ -2,7 +2,7 @@ import socks
 from threading import Thread, Event
 from typing import Callable
 import time
-import socket
+import zlib
 
 from ..security import CProtection
 from ..misc import packetManager
@@ -82,24 +82,27 @@ class TankiSocket:
                 self.on_socket_close(e, "TankiSocket.connect", f"Not Connected | Proxy: {self.proxy}")
                 
         return False
-    
-    def read_packet_header(self) -> tuple[int, int]:
+
+    def read_packet_header(self) -> tuple[int, int, bool]:
         """Read packet header from socket"""
 
         packet_len = 0
         packet_id = 0
 
-        packet_len_bytes = EByteArray(self.socket.recv(4))
-        if len(packet_len_bytes) == 0:
+        header_bytes = EByteArray(self.socket.recv(4))
+        if len(header_bytes) == 0:
             raise Exception("Socket Pipe Broken")
-        
-        packet_len = packet_len_bytes.read_int()
+        header_data = header_bytes.read_int()
+
+        is_compressed = ((header_data >> 24) & 0x40) != 0
+        packet_len = header_data & 0x00FFFFFF
+
         packet_id_bytes = EByteArray(self.socket.recv(4))
         if len(packet_id_bytes) == 0:
             raise Exception("Socket Pipe Broken")
         packet_id = packet_id_bytes.read_int()
 
-        return packet_len, packet_id
+        return packet_len, packet_id, is_compressed
     
     def read_packet_data(self, data_len: int) -> EByteArray:
         """Loads chunked data into the socket buffer until we have all the data to read"""
@@ -116,10 +119,12 @@ class TankiSocket:
 
         return encrypted_data
 
-    def process_packet(self, packet_id: int, encrypted_data: EByteArray):
+    def process_packet(self, packet_id: int, encrypted_data: EByteArray, is_compressed: bool):
         """Process received packet data"""  
 
         packet_data = self.protection.decrypt(bytearray(encrypted_data))
+        if is_compressed:
+            packet_data = zlib.decompress(packet_data, wbits=-zlib.MAX_WBITS)
         fitted_packet = self.packet_fitter(packet_id, EByteArray(packet_data))
         self.on_data_received(fitted_packet)
 
@@ -130,7 +135,7 @@ class TankiSocket:
         while not self.emergency_halt.is_set():
             try:
                 packet_len, packet_id = 0, 0
-                packet_len, packet_id = self.read_packet_header()
+                packet_len, packet_id, is_compressed = self.read_packet_header()
                 packet_data_len = packet_len - AbstractPacket.HEADER_LEN
 
                 if packet_data_len > 0:
@@ -138,7 +143,7 @@ class TankiSocket:
                 else:
                     encrypted_data = EByteArray()
 
-                self.process_packet(packet_id, encrypted_data)
+                self.process_packet(packet_id, encrypted_data, is_compressed)
 
             except Exception as e:
                 state = f"Connected | Packet Length: {packet_len} | Packet ID: {packet_id}"

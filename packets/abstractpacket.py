@@ -33,7 +33,7 @@ class AbstractPacket:
             self.objects.append(codec.decode())
         return self.implement()
 
-    def wrap(self, protection: CProtection = None) -> EByteArray:
+    def wrap(self, protection: CProtection = None, s2c_proxy: bool = False) -> EByteArray:
         """Encodes all the objects into binary data for the packet payload"""
 
         packet_data = EByteArray()
@@ -50,7 +50,15 @@ class AbstractPacket:
                 data_len += codec.encode(self.objects[i])
 
         encrypted_data = protection.encrypt(bytearray(packet_data))
-        packet_data = EByteArray().write_int(data_len).write_int(self.id).write(EByteArray(encrypted_data))
+        packet_data = EByteArray().write_int(data_len).write_int(self.id)
+        # If proxy forwarding into a client (S2C), override the header with no compression
+        # Otherwise (C2S proxy, or no proxy), use current method (4-byte length)
+        if s2c_proxy:
+            # 1 byte 00 + 3 byte packet length + 4 byte packet ID
+            # First byte wipe to 0 (Our packet length shouldn't be that long to take up this many bits anyways)
+            packet_data[0] = 0x00
+        packet_data = packet_data.write(EByteArray(encrypted_data))
+        print(f"[OUT] {self.__class__.__name__} | {self.id=} | {s2c_proxy=} | {data_len=} | Data: {self.object}")
         return packet_data
 
     def implement(self) -> dict:

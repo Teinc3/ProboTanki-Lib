@@ -134,7 +134,7 @@ class AsyncAbstractProcessor(ABC, Generic[CommandsType, CommandBaseClass]):
             return
         
         # Wrap and send packet
-        wrapped_data = packet.wrap(self.protection)
+        wrapped_data = packet.wrap(protection=self.protection)
         try:
             await self.socketinstance.send(wrapped_data)
         except Exception:

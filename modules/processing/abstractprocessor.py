@@ -19,6 +19,7 @@ class AbstractProcessor(ABC, Generic[CommandsType, CommandBaseClass]):
     """
 
     _current_packet: AbstractPacket
+    s2c_proxy: bool = False  # Indicates if the client is a S2C proxy
 
     def __init__(
         self,
@@ -134,7 +135,7 @@ class AbstractProcessor(ABC, Generic[CommandsType, CommandBaseClass]):
 
     def send_packet(self, packet: AbstractPacket):
         with self._send_lock:
-            wrapped_data = packet.wrap(self.protection)
+            wrapped_data = packet.wrap(protection=self.protection, s2c_proxy=self.s2c_proxy)
             try:
                 return self.socketinstance.socket.sendall(wrapped_data)
             except:
