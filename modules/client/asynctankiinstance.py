@@ -83,8 +83,10 @@ class AsyncTankiInstance(ABC):
             
         location = location or "[AsyncTankiInstance.on_socket_close]"
         reconnections = [f"<t:{int(reconnection.timestamp())}:R>" for reconnection in self.reconnections]
-        state = f"{state or ''}\nID: {self.id} | Credentials: {self.credentials} | Previous reconnections: {reconnections}"
-        
+
+        username = self.credentials.get('username', 'N/A')
+        state = f"{state or ''}\n{self.id=} | {username=} | {reconnections=}"
+
         # Calculate reconnection time
         if add_to_reconnections:
             break_interval = self.check_reconnection()
