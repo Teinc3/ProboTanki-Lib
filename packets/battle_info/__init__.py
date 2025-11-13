@@ -20,6 +20,7 @@ from .goldboxdroptext import Gold_Box_Drop_Text
 from .updateteambattlescore import Update_Team_Battle_Score
 from .leftinsidedmbattle import Left_Inside_DM_Battle
 from .leftinsideteambattle import Left_Inside_Team_Battle
+from .flagsinfo import Flags_Info
 
 __all__ = [
     Tank_Health,
@@ -42,5 +43,6 @@ __all__ = [
     Gold_Box_Drop_Text,
     Update_Team_Battle_Score,
     Left_Inside_DM_Battle,
-    Left_Inside_Team_Battle
+    Left_Inside_Team_Battle,
+    Flags_Info
 ]

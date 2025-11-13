@@ -21,6 +21,9 @@ class EByteArray(bytearray):
 
     def read_boolean(self) -> bool:
         return self.read_byte() != 0
+    
+    def read_long(self) -> int:
+        return self._read_value('>q')
 
     def read_short(self) -> int:
         return self._read_value('>h')
@@ -45,6 +48,11 @@ class EByteArray(bytearray):
 
     def write_boolean(self, value: bool):
         self.write_byte(1 if value else 0)
+        return self
+    
+    def write_long(self, value: int):
+        bytes_long = struct.pack('>q', value)
+        self.write(bytes_long)
         return self
 
     def write_short(self, value: int):

@@ -21,3 +21,4 @@ from .turretrotatecodec import TurretRotateCodec
 from .userstatscodec import UserStatsCodec
 from .userstatuscodec import UserStatusCodec
 from .referraldatacodec import ReferralDataCodec
+from .flaginfocodec import FlagInfoCodec
