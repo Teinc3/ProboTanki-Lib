@@ -126,6 +126,23 @@ class AsyncAbstractProcessor(ABC, Generic[CommandsType, CommandBaseClass]):
             return False
         return self.current_packet.__class__.__name__ == name
     
+    async def send_packets(self, packets: list[AbstractPacket]):
+        """Send multiple packets to the server under a single batch"""
+
+        if not self.socketinstance:
+            return
+        
+        packets_data = []
+        for packet in packets:
+            wrapped_data = packet.wrap(protection=self.protection)
+            packets_data.append(wrapped_data)
+        
+        try:
+            await self.socketinstance.send_batch(packets_data)
+        except Exception:
+            # Silently ignore sending errors - socket will handle them
+            pass
+    
     async def send_packet(self, packet: AbstractPacket):
         """Send a packet to the server"""
 

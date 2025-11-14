@@ -2,6 +2,7 @@ import asyncio
 import ssl
 import aiosocks
 import zlib
+import socket
 from aiosocks.errors import SocksError, SocksConnectionError
 from typing import Callable, Awaitable
 
@@ -115,6 +116,11 @@ class AsyncTankiSocket:
                         self.ENDPOINT.port,
                         ssl=ssl.create_default_context() if self.ENDPOINT.port == 443 else None
                     )
+
+                if self.writer:
+                    sock: socket.socket | None = self.writer.get_extra_info('socket')
+                    if sock:
+                        sock.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
                 
                 return True
                 
@@ -196,6 +202,11 @@ class AsyncTankiSocket:
         current_packet = Packet()
         current_packet.unwrap(packet_data)
         return current_packet
+    
+    async def send_batch(self, packets_data: list[EByteArray]):
+        """Pack a batch of packets into a single send operation"""
+
+        await self.send(b''.join(packets_data))
     
     async def send(self, packet_data: EByteArray):
         """Send packet data asynchronously"""
