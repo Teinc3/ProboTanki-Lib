@@ -21,6 +21,8 @@ from .updateteambattlescore import Update_Team_Battle_Score
 from .leftinsidedmbattle import Left_Inside_DM_Battle
 from .leftinsideteambattle import Left_Inside_Team_Battle
 from .flagsinfo import Flags_Info
+from .flagtaken import Flag_Taken
+from .flagdelivered import Flag_Delivered
 
 __all__ = [
     Tank_Health,
@@ -44,5 +46,7 @@ __all__ = [
     Update_Team_Battle_Score,
     Left_Inside_DM_Battle,
     Left_Inside_Team_Battle,
-    Flags_Info
+    Flags_Info,
+    Flag_Taken,
+    Flag_Delivered
 ]

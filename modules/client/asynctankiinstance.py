@@ -37,8 +37,7 @@ class AsyncTankiInstance(ABC):
         self.on_kill_instance = on_kill_instance
         
         # Create the protection instance if not already provided
-        if not hasattr(self, 'protection'):
-            self.protection = CProtection()
+        self.protection = CProtection()
         
         # Initialize async components
         self._reconnection_task: asyncio.Task | None = None
@@ -74,6 +73,10 @@ class AsyncTankiInstance(ABC):
         kill_instance: bool = False
     ):
         """Handle socket close events"""
+
+        if self.emergency_halt.is_set():
+            # Already handling reconnection/killing
+            return
         
         # Setup the exception
         if isinstance(e, Exception):

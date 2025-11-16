@@ -39,3 +39,4 @@ from .usersuppliesinfo import User_Supplies_info
 from .leavebattle import Leave_Battle
 from .rankup import Rank_Up
 from .usesupply import Use_Supply
+from .dropflag import Drop_Flag
