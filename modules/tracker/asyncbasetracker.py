@@ -114,9 +114,6 @@ class AsyncBaseTracker(ABC, Generic[SpecificLogChannelType]):
     async def handle_status_change(self, username: str, online_status: bool | None = None, battle_status: str | None = None):
         """Handle incoming status changes."""
 
-        if username == 'Teinc3':
-            pass
-
         target = self.targets.get(username)
         if not target:
             return
