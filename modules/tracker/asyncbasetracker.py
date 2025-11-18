@@ -50,6 +50,11 @@ class AsyncBaseTracker(ABC, Generic[SpecificLogChannelType]):
     def construct_payload(self, online: list[Target], available: list[Target]) -> dict:
         """Construct the Discord embed payload."""
         raise NotImplementedError
+    
+    @property
+    def server_subscribed_names(self) -> set[str]:
+        """Get the set of names that the server has acknowledged subscription for."""
+        return { name for name, target in self.targets.items() if target.status_recv }
 
 
     async def subscribe_names(self, names_list: list[str], resubscribing: bool = False):
@@ -58,7 +63,8 @@ class AsyncBaseTracker(ABC, Generic[SpecificLogChannelType]):
         Packet = packetManager.get_packet_by_name('Subscribe_Status')
 
         subscription_tasks: list[asyncio.Task] = []
-        for name in names_list:
+        unacknowledged_names = list(filter(lambda n: n not in self.server_subscribed_names, names_list))
+        for name in unacknowledged_names:
             if name not in self.targets:
                 self.targets[name] = Target(name)
             

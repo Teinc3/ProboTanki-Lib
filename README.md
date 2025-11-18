@@ -10,7 +10,7 @@ A core library for ProboTanki providing networking modules and packet handling u
 
 ## Dependencies
 
-- Python >=3.9 (Developed in 3.11)
+- Python >=3.10, <3.12 (Developed in 3.11)
 
 ### Dev Dependencies
 - Any C++ Compiler for building native extensions
