@@ -7,7 +7,7 @@ from ..processing import AsyncAbstractProcessor
 from ..networking import AsyncTankiSocket
 from ..security import CProtection
 from ..communications import AbstractMessage, ErrorMessage
-from ...utils import ReconnectionConfig
+from ...utils import ReconnectionConfig, Address as Proxy
 
 
 class AsyncTankiInstance(ABC):
@@ -88,7 +88,11 @@ class AsyncTankiInstance(ABC):
         reconnections = [f"<t:{int(reconnection.timestamp())}:R>" for reconnection in self.reconnections]
 
         username = self.credentials.get('username', 'N/A')
-        state = f"{state or ''}\n{self.id=} | {username=} | {reconnections=}"
+        proxy: Proxy | str = self.credentials.get('proxy', 'N/A')
+        if isinstance(proxy, Proxy):
+            proxy = f"{proxy.host}:{proxy.port}"
+        
+        state = f"{state or ''}\n{self.id=} | {username=} | {reconnections=} | {proxy=}"
 
         # Calculate reconnection time
         if add_to_reconnections:
