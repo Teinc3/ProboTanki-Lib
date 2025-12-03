@@ -6,18 +6,21 @@
 
 A core library for ProboTanki providing networking modules and packet handling utilities.
 
-*Last Updated: 17 November, 2025*
+*Last Updated: 3 December, 2025*
+
 
 ## Dependencies
 
-- Python >=3.10, <3.12 (Developed in 3.11)
+### Runtime
+- Python >=3.10 (SOCKS5 functionality unavailable for versions >= 3.12)
 
-### Dev Dependencies
-- Any C++ Compiler for building native extensions
-
-### External Dependencies
+### Package Dependencies
 - `pysocks`
 - `aiosocks`
+
+### Dev Dependencies
+- Any C++ Compiler for building wheels for the cryptographic security module.
+
 
 ## Installation
 This library is available on PyPI! You can now access it at https://pypi.org/project/probotanki-lib/
@@ -55,6 +58,7 @@ pip install -e ./pbtlib
 
 This will install the library in your Python environment in Editable Mode,
 allowing you to make changes to the library without needing to reinstall it every time.
+
 
 ## License and Contributing
 This library is not licensed as it is subject to the terms of ProTanki Online. It is instead marked as "Proprietary".
