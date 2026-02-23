@@ -10,11 +10,13 @@ class ATarget:
         # Status properties
         self._online = False
         self._battleID = ''
+        self._rank = 0
         self._ignore_flag = False
 
         # Status tracking flags
         self.online_status_recv = False
         self.battle_status_recv = False
+        self.rank_status_recv = False
         self.tracked_first_time = False
         """Indicates if the target has been tracked for the first time."""
         

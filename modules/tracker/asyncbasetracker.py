@@ -117,7 +117,13 @@ class AsyncBaseTracker(ABC, Generic[SpecificLogChannelType]):
             # Task was cancelled, exit cleanly
             pass
 
-    async def handle_status_change(self, username: str, online_status: bool | None = None, battle_status: str | None = None):
+    async def handle_status_change(
+        self,
+        username: str,
+        online_status: bool | None = None,
+        battle_status: str | None = None,
+        rank_status: int | None = None
+    ):
         """Handle incoming status changes."""
 
         target = self.targets.get(username)
@@ -132,6 +138,8 @@ class AsyncBaseTracker(ABC, Generic[SpecificLogChannelType]):
             target.online = online_status
         if battle_status is not None:
             target.battleID = battle_status
+        if rank_status is not None:
+            target.rank = rank_status
 
         if not target.status_recv:
             return
