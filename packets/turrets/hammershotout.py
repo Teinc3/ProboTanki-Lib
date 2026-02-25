@@ -8,7 +8,7 @@ from ...codec.custom import TargetPositionCodec
 class Hammer_Shot_OUT(AbstractPacket):
     id = -541655881
     description = "Player fires a hammer shot"
-    codecs = [IntCodec, Vector3DCodec, VectorCodecFactory(TargetPositionCodec, dict)]
+    codecs = [IntCodec, Vector3DCodec, VectorCodecFactory(dict, TargetPositionCodec)]
     attributes = ['clientTime', 'direction', 'shots']
 
 

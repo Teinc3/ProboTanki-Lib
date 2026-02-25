@@ -1,15 +1,19 @@
 
 # ProboTanki-Lib
-[![Latest Release](https://img.shields.io/github/v/release/Teinc3/ProboTanki-Lib?display_name=tag&sort=semver)](https://github.com/Teinc3/ProboTanki-Lib/releases/latest)
+[![Github Release](https://img.shields.io/github/v/release/Teinc3/ProboTanki-Lib?display_name=tag&sort=semver)](https://github.com/Teinc3/ProboTanki-Lib/releases/latest)
 [![PyPI version](https://badge.fury.io/py/probotanki-lib.svg)](https://badge.fury.io/py/probotanki-lib)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Teinc3/ProboTanki-Lib)
 
-A core library for ProboTanki providing networking modules and packet handling utilities.
+A core networking ~~library~~ framework for ProTanki, providing packet handling modules & utilities.
 
-*Last Updated: 3 December, 2025*
+*Last Updated: 25 February, 2025*
 
 
 ## Dependencies
+Each public tagged release of this library provides pre-built wheels on Windows, Linux and macOS for supported Python versions, which when installed bundles all necessary dependencies.
+
+However, for those who wish to build the library from source or contribute to its development,
+the following dependencies are required for a local environment:
 
 ### Runtime
 - Python >=3.10 (SOCKS5 functionality unavailable for versions >= 3.12)
