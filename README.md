@@ -6,7 +6,7 @@
 
 A core networking ~~library~~ framework for ProTanki, providing packet handling modules & utilities.
 
-*Last Updated: 25 February, 2025*
+*Last Updated: 25 February, 2026*
 
 
 ## Dependencies
