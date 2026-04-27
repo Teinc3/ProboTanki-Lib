@@ -22,3 +22,4 @@ from .userstatscodec import UserStatsCodec
 from .userstatuscodec import UserStatusCodec
 from .referraldatacodec import ReferralDataCodec
 from .flaginfocodec import FlagInfoCodec
+from .bonusinfocodec import BonusInfoCodec

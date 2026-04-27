@@ -24,6 +24,8 @@ from .requestcaptcha import Request_Captcha
 from .wrongnewcaptcha import Wrong_New_Captcha
 from .captchacorrect import Captcha_Correct
 from .answercaptcha import Answer_Captcha
+from .showreturnrewards import Show_Return_Rewards
+
 
 __all__ = [
     Set_Captcha_Keys,
@@ -51,5 +53,6 @@ __all__ = [
     Request_Captcha,
     Wrong_New_Captcha,
     Captcha_Correct,
-    Answer_Captcha
+    Answer_Captcha,
+    Show_Return_Rewards
 ]

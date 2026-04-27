@@ -14,3 +14,5 @@ from .showmissions import Show_Missions
 from .shownewmission import Show_New_Mission
 from .loadmissions import Load_Missions # Might wanna swap show and load
 from .completedmission import Completed_Mission
+from .emailrequest import Email_Request
+from .updatepwemail import Update_PW_Email
