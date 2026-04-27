@@ -16,3 +16,6 @@ from .loadmissions import Load_Missions # Might wanna swap show and load
 from .completedmission import Completed_Mission
 from .emailrequest import Email_Request
 from .updatepwemail import Update_PW_Email
+from .requestpwemailchange import Request_PW_Email_Change
+from .promptpwemailchange import Prompt_PW_Email_Change
+
