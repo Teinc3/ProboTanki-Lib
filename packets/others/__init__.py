@@ -18,4 +18,5 @@ from .emailrequest import Email_Request
 from .updatepwemail import Update_PW_Email
 from .requestpwemailchange import Request_PW_Email_Change
 from .promptpwemailchange import Prompt_PW_Email_Change
+from .emailconfirming import Email_Confirming
 
