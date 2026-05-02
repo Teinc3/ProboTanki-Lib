@@ -8,3 +8,4 @@ class Login(AbstractPacket):
     description = 'Login information sent by the client'
     codecs = [StringCodec, StringCodec, BoolCodec]
     attributes = ["username", "password", "rememberMe"]
+    shouldLog = False # to hide it from the proxy

@@ -1,12 +1,10 @@
 
 # ProboTanki-Lib
-[![Github Release](https://img.shields.io/github/v/release/Teinc3/ProboTanki-Lib?display_name=tag&sort=semver)](https://github.com/Teinc3/ProboTanki-Lib/releases/latest)
+![Latest Tag](https://img.shields.io/github/v/tag/Teinc3/ProboTanki-Lib)
 [![PyPI version](https://badge.fury.io/py/probotanki-lib.svg)](https://badge.fury.io/py/probotanki-lib)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Teinc3/ProboTanki-Lib)
 
 A core networking ~~library~~ framework for ProTanki, providing packet handling modules & utilities.
-
-*Last Updated: 25 February, 2026*
 
 
 ## Dependencies
