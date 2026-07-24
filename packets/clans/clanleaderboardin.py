@@ -7,8 +7,6 @@ VectorClanElementCodec = VectorCodecFactory(dict, ClanElementCodec)
 
 
 class Clan_Leaderboard_In(AbstractPacket):
-
-
     id = 134406915
     description = 'Clan Leaderboard'
     attributes = ['startIndex', 'clans']

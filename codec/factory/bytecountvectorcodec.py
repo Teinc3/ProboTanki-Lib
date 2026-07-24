@@ -8,7 +8,6 @@ C = TypeVar('C', bound=BaseCodec)
 
 
 class AbstractByteCountVectorCodec(BaseCodec[list[T]], Generic[T, C]):
-
     codec: Type[C]
 
     def decode(self) -> list[T]:

@@ -1,11 +1,12 @@
 from ..basecodec import BaseCodec
+from ..primitive import ByteCodec
 from ...utils import EByteArray
 
 
 class PascalStringCodec(BaseCodec[str]):
 
     def decode(self):
-        length = self._buffer.read_byte()
+        length = ByteCodec(self._buffer).decode()
         if length < 0:
             length += 256
         if length == 0:
@@ -20,6 +21,6 @@ class PascalStringCodec(BaseCodec[str]):
                 f"PascalStringCodec can only encode up to 255 bytes, got {length}"
             )
 
-        self._buffer.write_byte(length if length <= 127 else length - 256)
+        bytes_written = ByteCodec(self._buffer).encode(length if length <= 127 else length - 256)
         self._buffer.write(string_buffer)
-        return 1 + length
+        return bytes_written + length

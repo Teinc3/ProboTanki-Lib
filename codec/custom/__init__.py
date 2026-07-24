@@ -1,3 +1,6 @@
+# Again, only use the imports from this file externally
+# Internally, juse reference the file directly.
+
 from .battleinfocodec import BattleInfoCodec
 from .battleimfouserpreviewcodec import BattleInfoUserCodec
 from .battleusercodec import BattleUserCodec
