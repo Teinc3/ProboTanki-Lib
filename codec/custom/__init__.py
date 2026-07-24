@@ -1,6 +1,3 @@
-# Again, only use the imports from this file externally
-# Internally, juse reference the file directly.
-
 from .battleinfocodec import BattleInfoCodec
 from .battleimfouserpreviewcodec import BattleInfoUserCodec
 from .battleusercodec import BattleUserCodec
@@ -23,3 +20,4 @@ from .userstatuscodec import UserStatusCodec
 from .referraldatacodec import ReferralDataCodec
 from .flaginfocodec import FlagInfoCodec
 from .bonusinfocodec import BonusInfoCodec
+from .clanelementcodec import ClanElementCodec
