@@ -5,3 +5,5 @@ from .vector3dcodec import Vector3DCodec
 from .vectorshortcodec import VectorShortCodec
 from .vectorstringcodec import VectorStringCodec
 from .vectorvector3dcodec import VectorVector3DCodec
+from .pascalstringcodec import PascalStringCodec
+from .clanmemberlistcodec import ClanMemberListCodec
