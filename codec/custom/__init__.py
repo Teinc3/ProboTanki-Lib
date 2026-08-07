@@ -24,3 +24,5 @@ from .referraldatacodec import ReferralDataCodec
 from .flaginfocodec import FlagInfoCodec
 from .bonusinfocodec import BonusInfoCodec
 from .clanelementcodec import ClanElementCodec
+from .clanmemberstatscodec import ClanMemberStatsCodec
+from .clanprofilecodec import ClanProfileCodec
