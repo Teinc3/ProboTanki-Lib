@@ -24,6 +24,7 @@ requires-python = ">=3.10"
 dynamic = ["dependencies"]
 
 [project.urls]
-Homepage = "https://github.com/Teinc3/ProboTanki-Lib" # Example URL
-Documentation = "https://deepwiki.com/Teinc3/ProboTanki-Lib"
-"Issue Tracker" = "https://github.com/Teinc3/ProboTanki-Lib/issues"
+Homepage = "https://github.com/ProboTanki/Lib"
+Documentation = "https://deepwiki.com/ProboTanki/Lib"
+"Issue Tracker" = "https://github.com/ProboTanki/Lib/issues"
+Repository = "https://github.com/ProboTanki/Lib.git"

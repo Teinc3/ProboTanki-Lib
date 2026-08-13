@@ -142,6 +142,24 @@ class AbstractProcessor(ABC, Generic[CommandsType, CommandBaseClass]):
                 #self.close_socket(f"Failed to send packet {packet.__class__.__name__} | Error: {e}")
                 pass # Don't waste our time with this shit
     
+    def send_packets(self, packets: list[AbstractPacket]):
+        """Send multiple packets to the server under a single batch"""
+
+        if not self.socketinstance:
+            return
+
+        with self._send_lock:
+            packets_data = []
+            for packet in packets:
+                wrapped_data = packet.wrap(protection=self.protection, s2c_proxy=self.s2c_proxy)
+                packets_data.append(wrapped_data)
+
+            try:
+                return self.socketinstance.socket.sendall(b''.join(packets_data))
+            except Exception:
+                # Silently ignore sending errors - socket will handle them
+                pass
+    
     def close_socket(self, reason: str, log_error: bool = True, add_to_reconnections: bool = True, kill_instance: bool = False):
         # Form the error message
         reason = f"Closing socket: {reason}"
